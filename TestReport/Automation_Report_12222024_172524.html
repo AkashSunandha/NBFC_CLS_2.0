@@ -1,0 +1,3539 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='EEEE, MMMM dd, yyyy, hh:mm a '('zzz')''/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Automation_Report_12222024_172524.html</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Automation_Report_12222024_172524.html</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Sunday, December 22, 2024, 05:25 PM (IST)</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>65</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>276</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer Search Module</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:25 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:25 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:25 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Application launch</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:25 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:25 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:25 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+461ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:25:30 PM</td>
+					<td class='step-details'>Firefox Driver & Application Launched successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>PC Registration</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:25 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:25 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+181ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:25:45 PM</td>
+					<td class='step-details'>Step:01 - Enter User Name in Name field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:25:45 PM</td>
+					<td class='step-details'>Step:02 - Enter PC Name in Name field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:25:54 PM</td>
+					<td class='step-details'>Step:03 - Select a Branch Name from the Dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:25:58 PM</td>
+					<td class='step-details'>Step:04 - Click on Submit Button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:00 PM</td>
+					<td class='step-details'>Expected Result: PC Registered Successfully!</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Invalid Login - Incorrect Password</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+27ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:03 PM</td>
+					<td class='step-details'>Step:01 - Eneter Valid User Name</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:03 PM</td>
+					<td class='step-details'>Step:02 - Eneter Invalid Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:08 PM</td>
+					<td class='step-details'>Step:03 - Click on Login Button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:09 PM</td>
+					<td class='step-details'>Expect Result: Error message displayed indicating incorrect password.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Valid Login</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+795ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:11 PM</td>
+					<td class='step-details'>Step:01 - Eneter valid User Name</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:11 PM</td>
+					<td class='step-details'>Step:02 - Eneter valid Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:20 PM</td>
+					<td class='step-details'>Step:03 - Click on Login Button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:20 PM</td>
+					<td class='step-details'>Expected Result: User is logged in successfully and dashboard visible</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:22 PM</td>
+					<td class='step-details'>Expected Result: User is logged in successfully and dashboard visible</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Navigate to Customer Search</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+372ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:32 PM</td>
+					<td class='step-details'>Step:01 - Expand the Customer module in the left menu bar.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:37 PM</td>
+					<td class='step-details'>Step:02 - Select Customer Search.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:26:39 PM</td>
+					<td class='step-details'>Expected Result: Customer Search Window loaded Successfully!</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Activate Deactive Customer</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:26 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:27 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+494ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:04 PM</td>
+					<td class='step-details'>Step:01 - Select a customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:09 PM</td>
+					<td class='step-details'>Step:02 - Click 'Active' button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:14 PM</td>
+					<td class='step-details'>Expected Result: Customer Active window opens showing customer details</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>Select Customer and Open Active Window</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:27 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:27 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:27 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+801ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:47 PM</td>
+					<td class='step-details'>Step:01 - Select a customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:52 PM</td>
+					<td class='step-details'>Step:02 - Click 'Active' button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:57 PM</td>
+					<td class='step-details'>Expected Result: Customer Active window opens showing customer details</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Customer Details Display</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:27 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:27 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:27 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+299ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:57 PM</td>
+					<td class='step-details'>Step:01 - Verify the Presence of Column - Customer ID.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:57 PM</td>
+					<td class='step-details'>Step:02 - Verify the Presence of Column - Name.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:57 PM</td>
+					<td class='step-details'>Step:03 - Verify the Presence of Column - Risk.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:57 PM</td>
+					<td class='step-details'>Step:04 - Verify the Presence of Column - PAN No.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:57 PM</td>
+					<td class='step-details'>Step:05 - Verify the Presence of Column - Current Age.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:57 PM</td>
+					<td class='step-details'>Step:06 - Verify the Presence of Column - Customer Type.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:27:57 PM</td>
+					<td class='step-details'>Expected Result: Grid Column Names (Customer ID, Name, Risk, PAN No., Current Age, Customer Type) are displayed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Submit Deactivation Without Date</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:27 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:27 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+214ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:02 PM</td>
+					<td class='step-details'>Step:01 - Check the Deactivate Checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:10 PM</td>
+					<td class='step-details'>Step:02 - Leave date empty</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:15 PM</td>
+					<td class='step-details'>Expected Result: Error message to select a date is displayed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Cancel Deactivation Process</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+771ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:19 PM</td>
+					<td class='step-details'>Step:01 - Click Cancel button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:20 PM</td>
+					<td class='step-details'>Expected Result: Page redirects back to the Customer Search window</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>Freeze Customer</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+903ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:47 PM</td>
+					<td class='step-details'>Step:01 - Select a customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:52 PM</td>
+					<td class='step-details'>Step:02 - Click on Freeze button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:53 PM</td>
+					<td class='step-details'>Expected Result: Freeze window opens with customer details</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Customer Details in Freeze Window</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+291ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:53 PM</td>
+					<td class='step-details'>Step:01 - Verify the Presence of Column - Customer ID.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:53 PM</td>
+					<td class='step-details'>Step:02 - Verify the Presence of Column - Name.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:53 PM</td>
+					<td class='step-details'>Step:03 - Verify the Presence of Column - Risk.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:53 PM</td>
+					<td class='step-details'>Step:04 - Verify the Presence of Column - PAN No.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:53 PM</td>
+					<td class='step-details'>Step:05 - Verify the Presence of Column - Current Age.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:53 PM</td>
+					<td class='step-details'>Step:06 - Verify the Presence of Column - Customer Type.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:53 PM</td>
+					<td class='step-details'>Expected Result: Grid Column Names (Customer ID, Name, Risk, PAN No., Current Age, Customer Type) are displayed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Attempt to Freeze Without Checkbox</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:28 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+364ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:58 PM</td>
+					<td class='step-details'>Step:01 - Click Submit button without checking the freeze checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:28:59 PM</td>
+					<td class='step-details'>Expected Result: Error message displayed: "Please select the freeze checkbox"</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Cancel Freeze Operation</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:29 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:29 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:29 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+678ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:29:09 PM</td>
+					<td class='step-details'>Step:01 - Click on Cancel button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:29:09 PM</td>
+					<td class='step-details'>Expected Result: Action is canceled, navigates back to customer search window</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Enter Valid Freeze Remark and Submit</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:29 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:29 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:29 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 43s+326ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:29:33 PM</td>
+					<td class='step-details'>Step:01 - Select a customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:29:38 PM</td>
+					<td class='step-details'>Step:02 - Click 'Freeze' button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:29:47 PM</td>
+					<td class='step-details'>Step:03 - Check the freeze checkbox.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:29:48 PM</td>
+					<td class='step-details'>Step:04 - Enter Remarks in Remarks field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:29:52 PM</td>
+					<td class='step-details'>Step:05 - Click on Submit button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:29:57 PM</td>
+					<td class='step-details'>Expected Result: Customer is updated into freeze list</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>Select Customer and Mark - Valid Data</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+791ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:29 PM</td>
+					<td class='step-details'>Step:01 - Select a customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:34 PM</td>
+					<td class='step-details'>Step:02 - Click on Mark button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:34 PM</td>
+					<td class='step-details'>Expected Result: Customer mark window opens with customer data pre-filled. Customer ID - 102000000600 Customer Name - MRS DEVAYANI KRISHNAN  Display Name - DEVAYANI KRISHNAN DOB & Age - 01/01/1978 & 41</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Customer Mark Details</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+2ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:34 PM</td>
+					<td class='step-details'>Step:01 - Verify Customer ID & Display Name.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:34 PM</td>
+					<td class='step-details'>Expected Result: All details match with selected customer from search results.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Leave Remarks Empty</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+436ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:36 PM</td>
+					<td class='step-details'>Step:01 - Verify Customer ID & Display Name.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:41 PM</td>
+					<td class='step-details'>Step:02 - Click 'Submit' button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:41 PM</td>
+					<td class='step-details'>Expected Result: Error message displayed requiring remarks.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Status Required</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+550ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:45 PM</td>
+					<td class='step-details'>Step:01 - Do not select any option in the Status drop down</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:45 PM</td>
+					<td class='step-details'>Step:02 - Enter Remarks in Remarks field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:50 PM</td>
+					<td class='step-details'>Step:03 - Click 'Submit' button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:52 PM</td>
+					<td class='step-details'>Expected Result: Error message displayed, Please select Status.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Select Valid Status</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+444ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:56 PM</td>
+					<td class='step-details'>Step:01 - Select valid status from dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:30:56 PM</td>
+					<td class='step-details'>Expected Result: Status is selected successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>Invalid Date Format</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:30 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:31 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+689ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:01 PM</td>
+					<td class='step-details'>Step:01 - Select any past or current date.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:05 PM</td>
+					<td class='step-details'>Step:02 - Click 'Submit' button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:05 PM</td>
+					<td class='step-details'>Expected Result: Error message displayed requiring correct date format.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Select Effect Date - Valid Past or Current Date</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:31 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:31 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:31 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+334ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:14 PM</td>
+					<td class='step-details'>Step:01 - Select any past or current date.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:14 PM</td>
+					<td class='step-details'>Expected Result: Date is selected successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>Submit and Close Window</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:31 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:31 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:31 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+665ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:18 PM</td>
+					<td class='step-details'>Step:01 -  Click 'Close' button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:18 PM</td>
+					<td class='step-details'>Expected Result: Customer search window is displayed, and data is not saved.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>Enter Remark and Submit</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:31 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:31 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:31 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 31s+808ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:37 PM</td>
+					<td class='step-details'>Step:01 - Select a customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:43 PM</td>
+					<td class='step-details'>Step:02 - Click 'Mark' button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:48 PM</td>
+					<td class='step-details'>Step:03 - Select valid status from dropdown.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:48 PM</td>
+					<td class='step-details'>Step:04 - Enter Remarks in Remarks field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:53 PM</td>
+					<td class='step-details'>Step:05 - Click 'Submit' button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:31:55 PM</td>
+					<td class='step-details'>Expected Result: Customer is marked with selected status, success message displayed.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Customer Expire Details</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:32 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:32 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:32 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+329ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:32:31 PM</td>
+					<td class='step-details'>Step:01 - Select a customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:32:37 PM</td>
+					<td class='step-details'>Step:02 - Click on Expired button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:32:37 PM</td>
+					<td class='step-details'>Step:01 - Verify Customer ID & Display Name.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:32:37 PM</td>
+					<td class='step-details'>Expected Result: All customer details are displayed correctly on the expired window.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Select State, Bank ID, Branch ID, Date</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:32 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:32 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+939ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:32:41 PM</td>
+					<td class='step-details'>Step:01 - Click on State drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:32:46 PM</td>
+					<td class='step-details'>Step:02 - Select a State from the drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:32:50 PM</td>
+					<td class='step-details'>Step:03 - Click on Bank ID drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:32:55 PM</td>
+					<td class='step-details'>Step:04 - Select a Bank ID from the drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:32:59 PM</td>
+					<td class='step-details'>Step:05 - Click on Branch ID drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:04 PM</td>
+					<td class='step-details'>Step:06 - Select a Branch ID from the drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:04 PM</td>
+					<td class='step-details'>Expected Result: Correct IFSC code - KLGB0040159 loads when Branch ID is selected.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify IFSC Code After Branch Selection</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+259ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:08 PM</td>
+					<td class='step-details'>Step:01 - Click on Branch ID drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:13 PM</td>
+					<td class='step-details'>Step:02 - Select a Branch ID from the drop down & Observe the IFSC code field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:17 PM</td>
+					<td class='step-details'>Step:03 - Click on Branch ID drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:22 PM</td>
+					<td class='step-details'>Step:04 - Select a Branch ID from the drop down & Observe the IFSC code field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:26 PM</td>
+					<td class='step-details'>Step:05 - Click on Branch ID drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:31 PM</td>
+					<td class='step-details'>Step:06 - Select a Branch ID from the drop down & Observe the IFSC code field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:31 PM</td>
+					<td class='step-details'>Expected Result: IFSC code updates correctly with each branch selection. Selection:01 - KLGB0040293 Selection:02 - KLGB0040611 Selection:03 - KLGB0040666</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>Add Customer Details to Grid</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+785ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:31 PM</td>
+					<td class='step-details'>Step:01 - Enter Customer Name in Cust Name field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:31 PM</td>
+					<td class='step-details'>Step:02 - Enter ADDRESS in Address field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:31 PM</td>
+					<td class='step-details'>Step:03 - Enter Bank Account number in BankAccNo field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:31 PM</td>
+					<td class='step-details'>Step:04 - Enter same Bank Account number in Retype AccNo field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:36 PM</td>
+					<td class='step-details'>Step:05 - Click on ADD button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:36 PM</td>
+					<td class='step-details'>Expected Result: Data is added to the grid upon adding.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>Validate Retype Bank Acc No</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+200ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:40 PM</td>
+					<td class='step-details'>Step:01 - Enter Bank Account number in BankAccNo field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:45 PM</td>
+					<td class='step-details'>Step:02 - Enter different values in Bank Acc No and Retype Acc No fields.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:49 PM</td>
+					<td class='step-details'>Expected Result: Error message displayed if values don't match.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>Error Handling for Empty Fields</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:33 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+645ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:58 PM</td>
+					<td class='step-details'>Step:01 -  Click 'Submit' button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:33:58 PM</td>
+					<td class='step-details'>Expected Result: Appropriate error message is displayed for empty fields.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>Cancel and Redirect to Customer Search</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:34 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:34 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:34 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+722ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:34:07 PM</td>
+					<td class='step-details'>Step:01 -  Click 'Close' button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:34:07 PM</td>
+					<td class='step-details'>Expected Result: Data is canceled and page redirects to customer search window.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>Mark Customer as Expired</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:34 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:34 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:35 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 8s+817ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:34:26 PM</td>
+					<td class='step-details'>Step:01 - Select a customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:34:32 PM</td>
+					<td class='step-details'>Step:02 - Click 'Expire' button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:34:41 PM</td>
+					<td class='step-details'>Step:03 - Enter Date in Expire Date field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:34:41 PM</td>
+					<td class='step-details'>Step:04 - Enter Remarks in Remarks field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:34:46 PM</td>
+					<td class='step-details'>Step:05 - Click on State drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:34:50 PM</td>
+					<td class='step-details'>Step:06 - Select a State from the drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:34:55 PM</td>
+					<td class='step-details'>Step:07 - Click on Bank ID drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:34:59 PM</td>
+					<td class='step-details'>Step:08 - Select a Bank ID from the drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:04 PM</td>
+					<td class='step-details'>Step:09 - Click on Branch ID drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:09 PM</td>
+					<td class='step-details'>Step:10 - Select a Branch ID from the drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:09 PM</td>
+					<td class='step-details'>Step:11 - Enter Customer Name in Cust Name field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:09 PM</td>
+					<td class='step-details'>Step:12 - Enter ADDRESS in Address field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:09 PM</td>
+					<td class='step-details'>Step:13 - Enter Bank Account number in BankAccNo field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:09 PM</td>
+					<td class='step-details'>Step:14 - Enter same Bank Account number in Retype AccNo field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:09 PM</td>
+					<td class='step-details'>Step:15 - Enter Date in Start Date field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:13 PM</td>
+					<td class='step-details'>Step:16 - Click on ADD button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:18 PM</td>
+					<td class='step-details'>Step:17 - Click on Submit button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:18 PM</td>
+					<td class='step-details'>Step:18 - Click on OK button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:21 PM</td>
+					<td class='step-details'>Expected Result: Customer is marked as expired, confirmation message is displayed.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>Delete Customer - Authorized Customer</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:35 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:35 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:36 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+475ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:50 PM</td>
+					<td class='step-details'>Step:01 - Select an authorized customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:54 PM</td>
+					<td class='step-details'>Step:02 - Click on Delete button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:36:03 PM</td>
+					<td class='step-details'>Step:03 - Accept the Alert</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:36:03 PM</td>
+					<td class='step-details'>Validation message displayed: "Cannot Delete. Authorized Customer."</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Validation Message on Delete</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:36 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:36 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:36 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+857ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:36:23 PM</td>
+					<td class='step-details'>Step:01 - Select an customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:36:28 PM</td>
+					<td class='step-details'>Step:02 - Click on Delete button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:36:28 PM</td>
+					<td class='step-details'>Expected Result: Validation Message displayed= Are you sure to delete</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>Cancel Deletion Confirmation</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:36 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:36 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:36 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+393ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:36:43 PM</td>
+					<td class='step-details'>Step:01 - Select an authorized customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:36:47 PM</td>
+					<td class='step-details'>Step:02 - Click on Delete button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:36:48 PM</td>
+					<td class='step-details'>Step:03 - Reject the Alert</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:36:48 PM</td>
+					<td class='step-details'>Expected Result: Deletion is canceled, customer remains in the list.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>Click Delete Without Selection</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:36 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:36 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:37 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+686ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:37:08 PM</td>
+					<td class='step-details'>Step:01 - Click on the Delete button without selecting any customer.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:37:08 PM</td>
+					<td class='step-details'>Expected Result: Error message displayed, e.g., "Please select a customer to delete."</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>Last Name Field - ECP Validations</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:37 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:37 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:38 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 50s+219ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:37:27 PM</td>
+					<td class='step-details'>Step:01 -  Select an existing customer.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:37:34 PM</td>
+					<td class='step-details'>Step:02 -  Click Edit button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:37:41 PM</td>
+					<td class='step-details'>Step:03 -  Enter Last Name in Last Name field (Numeric Input).</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:37:46 PM</td>
+					<td class='step-details'>Expected Result: Numeric inputs prompts error message.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:37:57 PM</td>
+					<td class='step-details'>Step:04 -  Enter Last Name in Last Name field (AlphaNumeric Input).</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:38:03 PM</td>
+					<td class='step-details'>Expected Result: AlphaNumeric inputs prompts error message.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>Invalid Data Format in Last Name</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:38 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:38 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:38 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+607ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:38:14 PM</td>
+					<td class='step-details'>Step:05 -  Enter Last Name in Last Name field (Special Characters Input).</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:38:19 PM</td>
+					<td class='step-details'>Expected Result: Special Characters inputs prompts error message.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:38:30 PM</td>
+					<td class='step-details'>Step:06 -  Enter Last Name in Last Name field (Alphabetic Input).</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:38:36 PM</td>
+					<td class='step-details'>Expected Result: Alphabetic inputs are allowed.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>View Customer Details</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:38 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:38 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+746ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:38:49 PM</td>
+					<td class='step-details'>Step:01 - Enter valid Customer Id in Customer ID field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:38:55 PM</td>
+					<td class='step-details'>Step:02 - Click on Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:38:59 PM</td>
+					<td class='step-details'>Step:03 - Select the customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:05 PM</td>
+					<td class='step-details'>Step:04 - Click on the View button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:05 PM</td>
+					<td class='step-details'>Expected Result: Customer details page displays KYC, address, and bank details.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='41'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Non-Editable Customer Details</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+36ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:05 PM</td>
+					<td class='step-details'>Expected Result: Fields are non-editable, user cannot modify details.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='42'>
+					<div class='test-heading'>
+						<span class='test-name'>Attachment Popup</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+575ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:20 PM</td>
+					<td class='step-details'>Step:01 - Enter valid Customer Id in Customer ID field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:26 PM</td>
+					<td class='step-details'>Step:02 - Click on Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:30 PM</td>
+					<td class='step-details'>Step:03 - Select the customer from the list.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:35 PM</td>
+					<td class='step-details'>Step:04 - Click on the Attachments button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:36 PM</td>
+					<td class='step-details'>Expected Result: Attachment popup window open.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='43'>
+					<div class='test-heading'>
+						<span class='test-name'>Attachment Popup Image Display</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+36ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:37 PM</td>
+					<td class='step-details'>Expected Result: Image is visible in the attachment popup</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='44'>
+					<div class='test-heading'>
+						<span class='test-name'>Rotate Button Functionality</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+403ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:43 PM</td>
+					<td class='step-details'>Step:01 - Click on Rotate button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:43 PM</td>
+					<td class='step-details'>Expected Result: Image rotates.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='45'>
+					<div class='test-heading'>
+						<span class='test-name'>Image Button Functionality</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+276ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:47 PM</td>
+					<td class='step-details'>Step:01 - Click on the image button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:47 PM</td>
+					<td class='step-details'>Expected Result: Image is displayed in a larger view</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='46'>
+					<div class='test-heading'>
+						<span class='test-name'>Close Button Functionality</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+307ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:51 PM</td>
+					<td class='step-details'>Step:01 - Click on Close button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:39:51 PM</td>
+					<td class='step-details'>Expected Result: Image popup closes.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='47'>
+					<div class='test-heading'>
+						<span class='test-name'>Zoom Image Functionality</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:39 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:40 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+696ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:00 PM</td>
+					<td class='step-details'>Step:01 - Click on Zoom button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:00 PM</td>
+					<td class='step-details'>Expected Result: Image zooms in/out as expected.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='48'>
+					<div class='test-heading'>
+						<span class='test-name'>Mobile Field - BVA Validations</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:40 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:40 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:40 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+402ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:07 PM</td>
+					<td class='step-details'>Step:01 - Enter Invlalid Mobile num in moblie field(<10 Digits)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:12 PM</td>
+					<td class='step-details'>Step:02 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:13 PM</td>
+					<td class='step-details'>Expected Result: Error message displayed for incorrect Mobile NO.(< 10 digits)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:19 PM</td>
+					<td class='step-details'>Step:03 - Click on the Clear Data</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:20 PM</td>
+					<td class='step-details'>Step:04 - Enter Invlalid Mobile num in moblie field(>10 Digits)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:24 PM</td>
+					<td class='step-details'>Step:05 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:26 PM</td>
+					<td class='step-details'>Expected Result: Error message displayed for incorrect Mobile NO.(> 10 digits)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:31 PM</td>
+					<td class='step-details'>Step:06 - Click on the Clear Data</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:31 PM</td>
+					<td class='step-details'>Step:07 - Enter Valid Mobile num in moblie field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:36 PM</td>
+					<td class='step-details'>Step:08 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:37 PM</td>
+					<td class='step-details'>Expected Result: Fetched Customer with Valid Mobile No., Successfully!</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:41 PM</td>
+					<td class='step-details'>Step:09 - Click on the Clear Data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='49'>
+					<div class='test-heading'>
+						<span class='test-name'>Name Field - ECP Validations</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:40 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:40 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+741ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:41 PM</td>
+					<td class='step-details'>Step:01 - Enter Invlalid Name in Name field(Numeric Input)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:46 PM</td>
+					<td class='step-details'>Step:02 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:47 PM</td>
+					<td class='step-details'>Expected Result: Error message displayed for incorrect Name (Numeric Input)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:51 PM</td>
+					<td class='step-details'>Step:03 - Click on the Clear Data</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:52 PM</td>
+					<td class='step-details'>Step:04 - Enter Invlalid Name in Name field(Alphanumeric Input)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:56 PM</td>
+					<td class='step-details'>Step:05 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:40:57 PM</td>
+					<td class='step-details'>Expected Result: Error message displayed for incorrect Name (Alphanumeric)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:02 PM</td>
+					<td class='step-details'>Step:06 - Click on the Clear Data</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:02 PM</td>
+					<td class='step-details'>Step:07 - Enter Valid Name in Name field(Alphabet Input)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:07 PM</td>
+					<td class='step-details'>Step:08 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:08 PM</td>
+					<td class='step-details'>Expected Result: Customer Fetched Using Name, Successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:12 PM</td>
+					<td class='step-details'>Step:09 - Click on the Clear Data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='50'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer Search - Invalid Name</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+155ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:12 PM</td>
+					<td class='step-details'>Step:01 - Enter Non-Existing Name in Name field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:17 PM</td>
+					<td class='step-details'>Step:02 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:18 PM</td>
+					<td class='step-details'>Expected Result: No results found and appropriate message displayed.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:22 PM</td>
+					<td class='step-details'>Step:03 - Click on the Clear Data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='51'>
+					<div class='test-heading'>
+						<span class='test-name'>Error Guessing - Special Characters in Name Field</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+126ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:23 PM</td>
+					<td class='step-details'>Step:13 - Enter Special Characters Name in Name field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:27 PM</td>
+					<td class='step-details'>Step:14 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:28 PM</td>
+					<td class='step-details'>Expected Result: No results found and appropriate message displayed.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:33 PM</td>
+					<td class='step-details'>Step:15 - Click on the Clear Data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='52'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer Search with No Filter</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+976ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:37 PM</td>
+					<td class='step-details'>Step:01 - Click on the Clear Data</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:42 PM</td>
+					<td class='step-details'>Step:02 - Click on the Search button without entering any filters.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:43 PM</td>
+					<td class='step-details'>Expected Result: All Availabe customer details displayed, Successfully!</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:48 PM</td>
+					<td class='step-details'>Step:03 - Click on the Clear Data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='53'>
+					<div class='test-heading'>
+						<span class='test-name'>Invalid Aadhaar Number</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+232ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:48 PM</td>
+					<td class='step-details'>Step:01 - Enter Invalid Aadhaar num in Aadhaar field</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:52 PM</td>
+					<td class='step-details'>Step:02 - Click on the Search button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:53 PM</td>
+					<td class='step-details'>Error message displayed for incorrect Aadhaar(< 12 digits)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:58 PM</td>
+					<td class='step-details'>Step:03 - Click on the Clear Data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='54'>
+					<div class='test-heading'>
+						<span class='test-name'>Clear Functionality</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:41 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:42 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+713ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:41:58 PM</td>
+					<td class='step-details'>Step:01 - Enter inputs in various fields.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:03 PM</td>
+					<td class='step-details'>Step:02 - Click on the Clear button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:05 PM</td>
+					<td class='step-details'>Expected Result: All Inputs Cleared, Successfully!</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='55'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify the field Doc Type</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:42 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:42 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:42 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+706ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:09 PM</td>
+					<td class='step-details'>Step:01 - Click on Doc Type drop down box.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:14 PM</td>
+					<td class='step-details'>Step:02 - Select a document type from the drop down.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:19 PM</td>
+					<td class='step-details'>Step:03 - Click on the Search button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:19 PM</td>
+					<td class='step-details'>Expected Result: Doc type is selecting from the dropdown successfully and details should be displayed against the given DOC type, Successfully!</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='56'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify the field Doc No</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:42 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:42 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:42 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+237ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:25 PM</td>
+					<td class='step-details'>Step:03 - Enter Document number in Doc No. field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:30 PM</td>
+					<td class='step-details'>Step:03 - Click on the Search button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:30 PM</td>
+					<td class='step-details'>Expected Result: Doc type is selecting from the dropdown successfully and details should be displayed against the given DOC type, Successfully!</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='57'>
+					<div class='test-heading'>
+						<span class='test-name'>Toggle Is Institutional Checkbox</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:42 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:42 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+514ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:45 PM</td>
+					<td class='step-details'>Step:01 - Uncheck KYC Compliant Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:50 PM</td>
+					<td class='step-details'>Step:02 - Uncheck Active Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:54 PM</td>
+					<td class='step-details'>Step:03 - Uncheck Prospects Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:42:59 PM</td>
+					<td class='step-details'>Step:04 - Check Prospects Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:05 PM</td>
+					<td class='step-details'>Step:05 - Click on the Search button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:06 PM</td>
+					<td class='step-details'>Expected Result: Grid displays only institutional customers.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='58'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify the field House Name</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+410ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:11 PM</td>
+					<td class='step-details'>Step:01 - Enter House name in House field (Alphanumeric Input)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:16 PM</td>
+					<td class='step-details'>Step:02 - Click on the Search button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:16 PM</td>
+					<td class='step-details'>Expected Result: Customer Fetched with House Name (Alphanumeric Input), Successfully!</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:23 PM</td>
+					<td class='step-details'>Step:03 - Enter House name in House field (Alphanumeric Input)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:27 PM</td>
+					<td class='step-details'>Step:04 - Click on the Search button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:27 PM</td>
+					<td class='step-details'>Expected Result: Customer Fetched with House Name(Alphabetic Input), Successfully!</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:34 PM</td>
+					<td class='step-details'>Step:05 - Enter House name in House field (Numeric Input)</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:39 PM</td>
+					<td class='step-details'>Step:06 - Click on the Search button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:39 PM</td>
+					<td class='step-details'>Expected Result: Customer Fetched with House Name(Numeric Input), Successfully!</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='59'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify the field PAN No</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+770ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:45 PM</td>
+					<td class='step-details'>Step:01 - Enter PAN number in PAN NO. field.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:50 PM</td>
+					<td class='step-details'>Step:02 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:50 PM</td>
+					<td class='step-details'>Expected Result: Customer details should be shows in the grid against the given PAN No.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='60'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer details in grid</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+565ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:01 - Verify the Presence of Column - Cust ID.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:02 - Verify the Presence of Column - Date.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:03 - Verify the Presence of Column - First Name.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:04 - Verify the Presence of Column - Last Name.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:05 - Verify the Presence of Column - Middle Name.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:06 - Verify the Presence of Column - Display Name.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:07 - Verify the Presence of Column - Parent/Spouse</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:08 - Verify the Presence of Column - Relation.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:09 - Verify the Presence of Column - House.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:10 - Verify the Presence of Column - Place</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:52 PM</td>
+					<td class='step-details'>Step:11 - Verify the Presence of Column - Mobile No.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:53 PM</td>
+					<td class='step-details'>Step:12 - Verify the Presence of Column - Status</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:43:53 PM</td>
+					<td class='step-details'>Expected Result: Customer details is showing under the grid</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='61'>
+					<div class='test-heading'>
+						<span class='test-name'>Check KYC Compliant Only Checkbox.</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:43 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:44 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+602ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:01 PM</td>
+					<td class='step-details'>Step:01 - Uncheck Active Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:06 PM</td>
+					<td class='step-details'>Step:02 - Uncheck Prospects Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:12 PM</td>
+					<td class='step-details'>Step:03 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:13 PM</td>
+					<td class='step-details'>Expected Result: Only shows the KYC completed customer details.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='62'>
+					<div class='test-heading'>
+						<span class='test-name'>Check Active Only, Checkbox</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:44 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:44 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:44 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+680ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:24 PM</td>
+					<td class='step-details'>Step:01 - Uncheck KYC Compliant Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:28 PM</td>
+					<td class='step-details'>Step:02 - Uncheck Prospects Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:34 PM</td>
+					<td class='step-details'>Step:03 - Click on the Search button.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='63'>
+					<div class='test-heading'>
+						<span class='test-name'>Check Prospects Only Checkbox</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:44 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:44 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:44 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+517ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:46 PM</td>
+					<td class='step-details'>Step:01 - Uncheck KYC Compliant Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:50 PM</td>
+					<td class='step-details'>Step:02 - Uncheck Active Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:56 PM</td>
+					<td class='step-details'>Step:03 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:44:57 PM</td>
+					<td class='step-details'>Expected Result: Only listing the customer which dont have accounts.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='64'>
+					<div class='test-heading'>
+						<span class='test-name'>Check Include Reject Checkbox</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:45 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:45 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:45 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+670ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:45:08 PM</td>
+					<td class='step-details'>Step:01 - Uncheck KYC Compliant Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:45:13 PM</td>
+					<td class='step-details'>Step:02 - Uncheck Prospects Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:45:17 PM</td>
+					<td class='step-details'>Step:03 - Uncheck Active Only checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:45:21 PM</td>
+					<td class='step-details'>Step:04 - Check the Include Reject checkbox</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:45:27 PM</td>
+					<td class='step-details'>Step:05 - Click on the Search button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:45:28 PM</td>
+					<td class='step-details'>Listing the customer include rejected customer</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='65'>
+					<div class='test-heading'>
+						<span class='test-name'>Logout</span>
+						<span class='test-time'>Sunday, December 22, 2024, 05:45 PM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sunday, December 22, 2024, 05:45 PM (IST)</span>
+	<span class='label end-time'>Sunday, December 22, 2024, 05:45 PM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+711ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:45:46 PM</td>
+					<td class='step-details'>Step:01 -  Click on 'Signout'</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:45:46 PM</td>
+					<td class='step-details'>Expected Result: User is logged out successfully, login screen is displayed.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>65</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>276</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sunday, December 22, 2024, 05:25 PM (IST)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sunday, December 22, 2024, 05:45 PM (IST)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 20m 22s+168ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>OS</td>
+								<td>Windows</td>
+							</tr>
+							<tr>
+								<td>AUT</td>
+								<td>QA</td>
+							</tr>
+							<tr>
+								<td>Author</td>
+								<td>Linita Shivalkar</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 65,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 276,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 0,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>
