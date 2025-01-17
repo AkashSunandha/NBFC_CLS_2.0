@@ -171,9 +171,10 @@ public class Base_Class {
 
 	}
 	
-	public static void SwitchToFrame(By frameName)
+	public static void SwitchToFrame(By frameName) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameName));
 	}
 	
@@ -288,7 +289,7 @@ public class Base_Class {
 
 	        } catch (SQLException e) {
 	            System.out.println("Error executing the SQL query.");
-	            e.printStackTrace();
+	            //e.printStackTrace();
 	        }
         
 

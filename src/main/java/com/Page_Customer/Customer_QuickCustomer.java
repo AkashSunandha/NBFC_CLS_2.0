@@ -5,13 +5,28 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.safari.SafariDriver.WindowType;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 import com.BasePackage.Base_Class;
 import com.Page_Repositary.PageRepositary_Cust_QuickCustomer;
@@ -24,6 +39,49 @@ public class Customer_QuickCustomer extends Base_Class{
 	Base_Class Base_Class= new Base_Class();
 	Log log= new Log();
 	PageRepositary_Cust_QuickCustomer quickCustRepo = new PageRepositary_Cust_QuickCustomer();
+//	private static long lastGeneratedNumber = 100000000000L;
+	
+	public String spPAN = "GenerateNextPAN";
+	public String clmnNamPAN = "generated_pan";
+	
+	public String spAadhaar = "GenerateNextAadharNumber";
+	public String clmnNamAadhaar = "generated_aadhar_number";
+	
+	public String spMobileNum = "GenerateNextMobileNumber";
+	public String clmnNamMobileNum = "generated_mobile_number";
+	
+	
+	public  String generateUniqueId(String query,String columnName) throws ClassNotFoundException {
+		 // Method that returns the first customer ID (String) from the database
+	        // Database connection details
+       // Database connection details
+       Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		String UserName = "sqa";
+		String Password = "SPQA@sql2019" ;
+		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
+
+		
+	        String value = null; // Declare and initialize the return variable
+
+	        // Establish the connection to the database
+	        try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
+	             Statement statement = connection.createStatement();
+	             ResultSet resultSet = statement.executeQuery(query)) {
+	        	
+	        	if (resultSet.next()) {
+	        		value = resultSet.getString(columnName); // Get the first Cust_ID
+	                System.out.println("Generated Unique ID: " + value);
+	            } else {
+	                System.out.println("Unique ID not generated.");
+	            }
+
+	        } catch (SQLException e) {
+	            System.out.println("Error executing the SQL query or processing the result set.");
+	            e.printStackTrace();
+	        }
+
+	        return value; // Return the firstCustId
+	    }
 	
 	public void openQuickCustomerWindow() throws InterruptedException {
 		
@@ -49,22 +107,20 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		
-		//Verification - window title
-		ExtentTestManager.startTest("Verification - window title");
-		Log.info("Verification - window title");
-		
-		String expectedQuickCustWndTitle = "Quick Account";
-		String actualQuickCustWndTitle = driver.findElement(quickCustRepo.quickCustomerWindowTitle).getText();
+		//Verify 'Start Date' Shows Current Date
+		ExtentTestManager.startTest("Verify 'Start Date' Shows Current Date");
+		Log.info("Verify 'Start Date' Shows Current Date");
 
-		if(expectedQuickCustWndTitle.equalsIgnoreCase(actualQuickCustWndTitle)) {
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Window title is correctly spelled as ‘Quick Account’");
-			Log.info("Expected Result: Window title is correctly spelled as ‘Quick Account’");
-		}else {
-			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Window title is spelled incorrectly");
-			Log.info("Expected Result: Window title is spelled incorrectly");
-		}
-		
+		String startDate = driver.findElement(quickCustRepo.qadStartDate).getAttribute("value");
+
+        String currentDate = driver.findElement(quickCustRepo.currentDate).getText();
+
+            ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Field displays current date: " + currentDate + " which is same as Start Date: " + startDate);
+    		Log.info("Expected Result: Field displays current date: " + currentDate + " which is same as Start Date: " + startDate);
+
 		ExtentTestManager.endTest();
+		
+		
 		
 		
 		//'Start Date' Field Typing Disabled
@@ -83,12 +139,17 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		ExtentTestManager.endTest();
 		
+	}
+	
+	
+	
+	public void quickAccDetails(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException, UnsupportedFlavorException {
 
-		
 		//Select Salutation Drop down
 		ExtentTestManager.startTest("Select Salutation Dropdown");
 		Log.info("Select Salutation Dropdown");
 		
+		ScrollUntilElementVisible(quickCustRepo.qadSalutationDropdown);
 		select("MR", quickCustRepo.qadSalutationDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Salutation dropdown.");
 		Log.info("Step:01 - Click on the Salutation dropdown.");
@@ -100,14 +161,6 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		ExtentTestManager.endTest();
 		
-		
-		
-	}
-	
-	
-	
-	public void quickAccDetails(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException, UnsupportedFlavorException {
-		
 		//Numerical Entry in 'First Name' Field
 		ExtentTestManager.startTest("Numerical Entry in 'First Name' Field");
 		Log.info("Numerical Entry in 'First Name' Field");
@@ -118,11 +171,11 @@ public class Customer_QuickCustomer extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter numbers in 'First Name' field.");
 		Log.info("Step:01 - Enter numbers in 'First Name' field.");
 		
-		if(ElementDisplayed(quickCustRepo.qadFNameInvalidCloseBtn)) {
+		if(ElementDisplayed(quickCustRepo.qadFameInvalidPopUp)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Validation message: \"First name is not valid\".");
 			Log.info("Expected Result: Validation message: \"First name is not valid\".");
 		}
-		click(quickCustRepo.qadFNameInvalidCloseBtn);
+		click(quickCustRepo.qadFameInvalidPopUp);
 		ExtentTestManager.endTest();
 		
 		
@@ -214,6 +267,35 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		
+		//Alphabetic Entry in 'Alias Name' Field
+		ExtentTestManager.startTest("Display Name Validation");
+		Log.info("Display Name Validation");
+		
+		String dispName = driver.findElement(quickCustRepo.qadDispNameTxtBox).getAttribute("value");
+		
+		// Split the string by spaces
+		String[] dispNameParts = dispName.split(" ");
+		
+		// Store individual parts in separate variables
+		String firstName = dispNameParts[0]; 
+		String middleName = dispNameParts[1];
+		String lastName = dispNameParts[2];
+		String aliasName = dispNameParts[4];
+		
+		if(fNameAlphabetInput.equalsIgnoreCase(firstName) 
+				&& mNameAlphabetInput.equalsIgnoreCase(middleName) 
+				&& lNameAlphabetInput.equalsIgnoreCase(lastName) 
+				&& aNameAlphabetInput.equalsIgnoreCase(aliasName)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Displays: FirstName-MiddleName-LastName-AliasName.");
+			Log.info("Expected Result: Displays: FirstName-MiddleName-LastName-AliasName.");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Incorrect Display Name.");
+			Log.info("Expected Result: Incorrect Display Name.");
+		}
+		
+		ExtentTestManager.endTest();
+		
+		
 		//DOB Field Entry
 		ExtentTestManager.startTest("DOB Field Entry");
 		Log.info("DOB Field Entry");
@@ -265,7 +347,9 @@ public class Customer_QuickCustomer extends Base_Class{
 			Log.info("Expected Result: 'DOB' field is not mandatory.");
 		}
 		click(quickCustRepo.qadDOBReqCloseBtn);
-		//clear(quickCustRepo.qadAgeTxtBox);
+		
+		click(quickCustRepo.qadDOBTxtBox);
+		input(quickCustRepo.qadDOBTxtBox,DOB);
 		
 		ExtentTestManager.endTest();
 		
@@ -474,16 +558,16 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Monthly Income' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'Monthly Income' Field");
-		Log.info("Alphabetic Entry in 'Monthly Income' Field");
+		ExtentTestManager.startTest("Numeric Entry in 'Monthly Income' Field");
+		Log.info("Numeric Entry in 'Monthly Income' Field");
 		
 		String monthlyIncome = testdata.get("monthlyIncome").toString();
 		input(quickCustRepo.qadMonthlyIncomeTxtBox, monthlyIncome);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter text in 'Monthly Income' field.");
-		Log.info("Step:01 - Enter text in 'Monthly Income' field.");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter numbers in 'Monthly Income' field.");
+		Log.info("Step:01 - Enter numbers in 'Monthly Income' field.");
 		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Text is accepted.");
-		Log.info("Expected Result: Text is accepted.");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numbers are accepted.");
+		Log.info("Expected Result: Numbers are accepted.");
 		
 		ExtentTestManager.endTest();
 		
@@ -698,6 +782,8 @@ public class Customer_QuickCustomer extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter alphabets in 'Aadhaar Num' field.");
 		Log.info("Step:01 - Enter alphabets in 'Aadhaar Num' field.");
 		
+		click(quickCustRepo.qadFNameTxt);
+		
 		if(ElementDisplayed(quickCustRepo.qadInvalidAadhaarCloseBtn)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Validation message: \"Invalid Aadhar No\".");
 			Log.info("Expected Result: Validation message: \"Invalid Aadhar Num\".");
@@ -738,6 +824,8 @@ public class Customer_QuickCustomer extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter 8-digit number in 'Aadhar No' field.");
 		Log.info("Step:01 - Enter 8-digit number in 'Aadhar No' field.");
 		
+		click(quickCustRepo.qadFNameTxt);
+		
 		if(ElementDisplayed(quickCustRepo.qadInvalidAadhaarCloseBtn)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Validation message: \"Invalid Aadhar No\".");
 			Log.info("Expected Result: Validation message: \"Invalid Aadhar Num\".");
@@ -752,8 +840,9 @@ public class Customer_QuickCustomer extends Base_Class{
 		Log.info("Valid Numeric Entry in 'Aadhar No' Field");
 
 		clear(quickCustRepo.qadAadhaarTxtBox);
-		String validTwelveDigitAadhaarNum = testdata.get("validTwelveDigitAadhaarNum").toString();
-		input(quickCustRepo.qadAadhaarTxtBox,validTwelveDigitAadhaarNum);
+//		String validTwelveDigitAadhaarNum = testdata.get("validTwelveDigitAadhaarNum").toString();
+		String validAadhaar = generateUniqueId(spAadhaar,clmnNamAadhaar);
+		input(quickCustRepo.qadAadhaarTxtBox,validAadhaar);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter 12-digit number in 'Aadhar No' field.");
 		Log.info("Step:01 - Enter 12-digit number in 'Aadhar No' field.");
 		
@@ -770,6 +859,8 @@ public class Customer_QuickCustomer extends Base_Class{
 		input(quickCustRepo.qadPANTxtBox,fNameAlphabetInput);click(quickCustRepo.qadFNameTxt);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter alphabets in 'PAN' field.");
 		Log.info("Step:01 - Enter alphabets in 'PAN' field.");
+		
+		click(quickCustRepo.qadFNameTxt);
 		
 		if(ElementDisplayed(quickCustRepo.qadInvalidPANCloseBtn)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Validation message: \"Invalid PAN No\".");
@@ -806,7 +897,9 @@ public class Customer_QuickCustomer extends Base_Class{
 		ExtentTestManager.startTest("Correct Format in 'PAN No' Field");
 		Log.info("Correct Format in 'PAN No' Field");
 
-		String validPANNum = testdata.get("validPANNum").toString();
+
+		String validPANNum = generateUniqueId(spPAN,clmnNamPAN);
+//		String validPANNum = testdata.get("validPANNum").toString();
 		input(quickCustRepo.qadPANTxtBox,validPANNum);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid PAN format.");
 		Log.info("Step:01 - nter valid PAN format.");
@@ -826,6 +919,8 @@ public class Customer_QuickCustomer extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter 8-digit number in 'Mobile No' field.");
 		Log.info("Step:01 - Enter 8-digit number in 'Mobile No' field.");
 		
+		click(quickCustRepo.qadFNameTxt);
+		
 		if(ElementDisplayed(quickCustRepo.qadInvalidMobileCloseBtn)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Validation message: \"Invalid Mobile No\".");
 			Log.info("Expected Result: Validation message: \"Invalid Mobile Num\".");
@@ -840,8 +935,10 @@ public class Customer_QuickCustomer extends Base_Class{
 		Log.info("Valid Numeric Entry in 'Mobile No' Field");
 
 		clear(quickCustRepo.qadMobileNumTxtBox);
-		String validTenDigitMobileNum = testdata.get("validTenDigitMobileNum").toString();
-		input(quickCustRepo.qadMobileNumTxtBox,validTenDigitMobileNum);
+//		String validTenDigitMobileNum = testdata.get("validTenDigitMobileNum").toString();
+		
+		String validMobNum = generateUniqueId(spMobileNum,clmnNamMobileNum);
+		input(quickCustRepo.qadMobileNumTxtBox,validMobNum);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter 10-digit number in 'Mobile No' field.");
 		Log.info("Step:01 - Enter 10-digit number in 'Mobile No' field.");
 		
@@ -859,6 +956,8 @@ public class Customer_QuickCustomer extends Base_Class{
 		input(quickCustRepo.qadEmailTxtBox,eightDigitAadhaarNum);click(quickCustRepo.qadFNameTxt);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter invalid email in 'Email' field.");
 		Log.info("Step:01 - Enter invalid email in 'Email' field.");
+		
+		click(quickCustRepo.qadFNameTxt);
 		
 		if(ElementDisplayed(quickCustRepo.qadInvalidEmailCloseBtn)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Validation message: \"Email is not valid\".");
@@ -906,26 +1005,23 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		
-//		//Select Preferred Language Dropdown
-//		ExtentTestManager.startTest("Select Preferred Language Dropdown");
-//		Log.info("Select Preferred Language Dropdown");
-//
-//		select("XYZ",quickCustRepo.qadPreferredLangDropdown);
-//		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Preferred Language dropdown.");
-//		Log.info("Step:01 - Click on the Preferred Language dropdown.");
-//		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Select a Preferred Language.");
-//		Log.info("Step:02 -  Select a Preferred Language.");
-//		
-//		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Preferred Language can be selected.");
-//		Log.info("Expected Result: Preferred Language can be selected.");
-//		
-//		ExtentTestManager.endTest();
+		//Select Preferred Language Dropdown
+		ExtentTestManager.startTest("Select Preferred Language Dropdown");
+		Log.info("Select Preferred Language Dropdown");
+
+		select("English",quickCustRepo.qadPreferredLangDropdown);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Preferred Language dropdown.");
+		Log.info("Step:01 - Click on the Preferred Language dropdown.");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Select a Preferred Language.");
+		Log.info("Step:02 -  Select a Preferred Language.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Preferred Language can be selected.");
+		Log.info("Expected Result: Preferred Language can be selected.");
+		
+		ExtentTestManager.endTest();
 	}
 
-	
-	
-	//+++++++++===============================+++++++++++++++++============================+++++++++++++++++++++++
-	
+		
 	
 	
 	public void presentAddress(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
@@ -988,17 +1084,6 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		clear(quickCustRepo.presentHouseNumTxtBox);
 		
-		//Numeric Input
-//		String houseNameNumeric = testdata.get("houseNameNumeric").toString();
-		input(quickCustRepo.presentHouseNumTxtBox,houseNameNumeric);
-		click(quickCustRepo.qadFNameTxt);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter Numeric input in HouseNo field.");
-		Log.info("Step:02 - Enter Numeric input in HouseNo field.");
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is allowed.");
-		Log.info("Expected Result: Numeric input is allowed.");
-		
-		clear(quickCustRepo.presentHouseNumTxtBox);
 		
 		//Alphabet Input
 //		String houseNameAlphabet = testdata.get("houseNameAlphabet").toString();
@@ -1011,6 +1096,18 @@ public class Customer_QuickCustomer extends Base_Class{
 		Log.info("Expected Result: Alphabet input is allowed.");
 		
 		ExtentTestManager.endTest();
+		
+		clear(quickCustRepo.presentHouseNumTxtBox);
+		
+		//Numeric Input
+//		String houseNameNumeric = testdata.get("houseNameNumeric").toString();
+		input(quickCustRepo.presentHouseNumTxtBox,houseNameNumeric);
+		click(quickCustRepo.qadFNameTxt);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter Numeric input in HouseNo field.");
+		Log.info("Step:02 - Enter Numeric input in HouseNo field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is allowed.");
+		Log.info("Expected Result: Numeric input is allowed.");
 		
 		
 		
@@ -1030,18 +1127,6 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		clear(quickCustRepo.presentDoorNumTxtBox);
 		
-		//Numeric Input
-//		String houseNameNumeric = testdata.get("houseNameNumeric").toString();
-		input(quickCustRepo.presentDoorNumTxtBox,houseNameNumeric);
-		click(quickCustRepo.qadFNameTxt);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter Numeric input in DoorNo field.");
-		Log.info("Step:02 - Enter Numeric input in DoorNo field.");
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is allowed.");
-		Log.info("Expected Result: Numeric input is allowed.");
-		
-		clear(quickCustRepo.presentDoorNumTxtBox);
-		
 		//Alphabet Input
 //		String houseNameAlphabet = testdata.get("houseNameAlphabet").toString();
 		input(quickCustRepo.presentDoorNumTxtBox,houseNameAlphabet);
@@ -1053,6 +1138,18 @@ public class Customer_QuickCustomer extends Base_Class{
 		Log.info("Expected Result: Alphabet input is allowed.");
 		
 		ExtentTestManager.endTest();
+
+		clear(quickCustRepo.presentDoorNumTxtBox);
+		
+		//Numeric Input
+//		String houseNameNumeric = testdata.get("houseNameNumeric").toString();
+		input(quickCustRepo.presentDoorNumTxtBox,houseNameNumeric);
+		click(quickCustRepo.qadFNameTxt);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter Numeric input in DoorNo field.");
+		Log.info("Step:02 - Enter Numeric input in DoorNo field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is allowed.");
+		Log.info("Expected Result: Numeric input is allowed.");
 		
 		
 		
@@ -1102,6 +1199,25 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Post can be selected.");
 		Log.info("Expected Result: Post can be selected.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		//PIN Text field Presence & Functionality
+		ExtentTestManager.startTest("PIN Textfield Presence & Functionality");
+		Log.info("PIN Textfield Presence & Functionality");
+		
+		String pinAutoFillValue = driver.findElement(quickCustRepo.presentPINTxtBox).getAttribute("value");
+		
+		if(pinAutoFillValue != "") {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: PIN textfield is present, typing-disabled, and auto-fills based on Post selection, i.e.: " + pinAutoFillValue);
+			Log.info("Expected Result: PIN textfield is present, typing-disabled, and auto-fills based on Post selection, i.e.: " + pinAutoFillValue);
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Pin wasn't Auto filled.");
+			Log.info("Expected Result: Pin wasn't Auto filled.");
+		}
+		
 		
 		ExtentTestManager.endTest();
 		
@@ -1386,13 +1502,14 @@ public class Customer_QuickCustomer extends Base_Class{
 	
 	
 	
-	public void referredBy() {
+	public void referredBy() throws InterruptedException {
 
 		
 		//Referred By Drop down - Select Item
 		ExtentTestManager.startTest("Referred By Dropdown - Select Item");
 		Log.info("Referred By Dropdown - Select Item");
 		
+		ScrollUntilElementVisible(quickCustRepo.refByDropDown);
 		select("SUNIL", quickCustRepo.refByDropDown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Referred By dropdown.");
 		Log.info("Step:01 - Click on the Referred By dropdown.");
@@ -1410,164 +1527,16 @@ public class Customer_QuickCustomer extends Base_Class{
 	
 	public void introducer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
-		// Store the current window handle (the parent window)
-//        String parentWindowHandle = driver.getWindowHandle();
 		
-		//'Introducer' button is present
-		ExtentTestManager.startTest("'Introducer' button is present");
-		Log.info("'Introducer' button is present");
+		//Introducer Button - Clickability
+		ExtentTestManager.startTest("Introducer Button - Clickability");
+		Log.info("Introducer Button - Clickability");
 		
 		ScrollUntilElementVisible(quickCustRepo.btnIntroducer);
 		click(quickCustRepo.btnIntroducer);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the 'Introducer' checkbox.");
-		Log.info("Step:01 - Click on the 'Introducer' checkbox.");
-		
-		
-      
-		
-//		// Store the current window handle (the parent window)
-//        //String parentWindowHandle = driver.getWindowHandle();
-//
-//        // Get all window handles after Child Window 1 opens
-//        Set<String> windowHandles = driver.getWindowHandles();
-        
-//        // Switch to the new child window (Child Window 1)
-//        for (String windowHandle : windowHandles) {
-//            if (!windowHandle.equals(parentWindowHandle)) {
-//                driver.switchTo().window(windowHandle);
-//                System.out.println("Switched to Child Window 1: ");
-//                
-//                // Click the button in Child Window 1 to open Child Window 2
-//                
-//                if(ElementDisplayed(quickCustRepo.introDetailsNotReqCheckBox)) {
-//                	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: A popup named 'Introducer Details' is generated.");
-//        			Log.info("Expected Result: A popup named 'Introducer Details' is generated.");
-//                }else {
-//                	ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: A popup named 'Introducer Details' is not generated.");
-//        			Log.info("Expected Result: A popup named 'Introducer Details' is not generated.");
-//                }
-//    			
-//                ExtentTestManager.endTest();
-//
-//        		
-//        		//Introducer Not Required Check box - Tick
-//        		ExtentTestManager.startTest("Introducer Not Required Checkbox - Tick");
-//        		Log.info("Introducer Not Required Checkbox - Tick");
-//                
-//        		click(quickCustRepo.introDetailsNotReqCheckBox);
-//        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the 'Introducer Not Required' checkbox.");
-//        		Log.info("Step:01 - Click on the 'Introducer Not Required' checkbox.");
-//        		
-//                if(ElementDisplayed(quickCustRepo.introDetailsReasonTxtBox)) {
-//                	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Reason' textfield becomes visible.");
-//        			Log.info("Expected Result: 'Reason' textfield becomes visible.");
-//                }else {
-//                	ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: 'Reason' textfield is not visible.");
-//        			Log.info("Expected Result: 'Reason' textfield is not visible.");
-//                }
-//        		
-//        		ExtentTestManager.endTest();
-//        		
-//        		
-//        		
-//        		//Reason Textfield - Typing Alphabets and Numerals
-//        		ExtentTestManager.startTest("Reason Textfield - Typing Alphabets and Numerals");
-//        		Log.info("Reason Textfield - Typing Alphabets and Numerals");
-//              
-//        		String introducerReason = testdata.get("introducerReason").toString();
-//        		input(quickCustRepo.introDetailsReasonTxtBox,introducerReason);
-//        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Type \"Test123\" in the 'Reason' textfield.");
-//        		Log.info("Step:01 - Type \"Test123\" in the 'Reason' textfield.");
-//        		
-//        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Textfield reflects typed input without an error.");
-//    			Log.info("Expected Result: Textfield reflects typed input without an error.");
-//
-//        		ExtentTestManager.endTest();
-//        		
-//        		
-//        		
-//        		//Introducer Not Required Checkbox - Untick
-//        		ExtentTestManager.startTest("Introducer Not Required Checkbox - Untick");
-//        		Log.info("Introducer Not Required Checkbox - Untick");
-//        		
-//        		click(quickCustRepo.introDetailsNotReqCheckBox);
-//        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Untick the 'Introducer Not Required' checkbox.");
-//        		Log.info("Step:01 - Untick the 'Introducer Not Required' checkbox.");
-//        		
-//                if(ElementDisplayed(quickCustRepo.introDetailsCustIdTxtBox)) {
-//                	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Expected Result: 'Reason' textfield is no longer visible.");
-//        			Log.info("Expected Result: Expected Result: 'Reason' textfield is no longer visible.");
-//                }else {
-//                	ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: 'Reason' textfield is still visible.");
-//        			Log.info("Expected Result: 'Reason' textfield is still visible.");
-//                }
-//                
-//        		ExtentTestManager.endTest();
-//                
-//               
-//        		
-//        		
-//        		click(quickCustRepo.introducerCustIdSrchBtn);
-//
-//                
-//        		
-//        		
-//        		// Get all window handles after Child Window 2 opens
-//                windowHandles = driver.getWindowHandles();
-//                
-//                // Switch to Child Window 2
-//                for (String windowHandle2 : windowHandles) {
-//                    if (!windowHandle.equals(parentWindowHandle) && !windowHandle2.equals(windowHandle)) {
-//                        driver.switchTo().window(windowHandle2);
-//                        System.out.println("Switched to Child Window 2: ");
-//                        driver.manage().window().maximize();
-//                        // Perform actions in Child Window 2
-//                		String introducerCustId = testdata.get("introducerCustId").toString();
-//                		input(quickCustRepo.custIdTxtBox,introducerCustId);
-//                		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Fetch a customer.");
-//                		Log.info("Step:02 - Fetch a customer.");
-//                		
-//                		click(quickCustRepo.searchBtn);
-//                		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on Search button.");
-//                		Log.info("Step:03 - Click on Search button.");
-//                		
-//                		click(quickCustRepo.selectCust);
-//                		ExtentTestManager.getTest().log(Status.PASS, "Step:04 -  Select a customer from the dropdown list in the Customer field.");
-//                		Log.info("Step:04 -  Select a customer from the dropdown list in the Customer field.");
-//                		
-//                		String intNameTxtBox = driver.findElement(quickCustRepo.introDetailsIntNameTxtBox).getAttribute("value");
-//                		String intAddressTxtBox = driver.findElement(quickCustRepo.introDetailsAddressTxtBox).getAttribute("value");
-//                		
-//                        if(intNameTxtBox != "" && intAddressTxtBox != "") {
-//                        	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Expected Result: 'Reason' textfield is no longer visible.");
-//                			Log.info("Expected Result: Expected Result: Customer is selected. Int Name: " + intNameTxtBox + " and Introducer's Address: " + intAddressTxtBox + " fields are auto-filled.");
-//                        }else {
-//                        	ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Customer is selected. 'Int Name' and 'Introducer's Address' fields are not auto-filled.");
-//                			Log.info("Expected Result: Customer is selected. 'Int Name' and 'Introducer's Address' fields are not auto-filled.");
-//                        }
-//                        
-//                		ExtentTestManager.endTest();
-//                        break;
-//                    }
-//                }
-//                break; // Exit the loop after switching to Child Window 1
-//            }
-//        }
-//
-//        // Switch back to the Parent Window after interacting with Child Window 2
-//        driver.switchTo().window(parentWindowHandle);
-//        System.out.println("Switched back to Parent Window: " + driver.getTitle());
-//
-//        // Perform actions in Parent Window
-//        // driver.findElement(By.id("parentWindowButton")).click();
-		
-		
-		
-        
-        
-        
-        
-        
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click the 'Introducer' button.");
+		Log.info("Step:01 -Click the 'Introducer' button.");
+
         
         //Navigate to Pop Up Window
         String mainWindowHandle = driver.getWindowHandle();
@@ -1642,95 +1611,11 @@ public class Customer_QuickCustomer extends Base_Class{
                 }
                 
         		ExtentTestManager.endTest();
-        		
-        		
-        		
-        		
-//        		//Customer Field - Select Customer
-//        		ExtentTestManager.startTest("Customer Field - Select Customer");
-//        		Log.info("Customer Field - Select Customer");
-//        		
-//        		click(quickCustRepo.introducerCustIdSrchBtn);
-//        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Untick the 'Introducer Not Required' checkbox.");
-//        		Log.info("Step:01 - Untick the 'Introducer Not Required' checkbox.");
-//        		
-//        		
-//        		String introducerCustId = testdata.get("introducerCustId").toString();
-//        		input(quickCustRepo.custIdTxtBox,introducerCustId);
-//        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Fetch a customer.");
-//        		Log.info("Step:02 - Fetch a customer.");
-//        		
-//        		click(quickCustRepo.searchBtn);
-//        		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on Search button.");
-//        		Log.info("Step:03 - Click on Search button.");
-//        		
-//        		click(quickCustRepo.selectCust);
-//        		ExtentTestManager.getTest().log(Status.PASS, "Step:04 -  Select a customer from the dropdown list in the Customer field.");
-//        		Log.info("Step:04 -  Select a customer from the dropdown list in the Customer field.");
-//        		
-//        		String intNameTxtBox = driver.findElement(quickCustRepo.introDetailsIntNameTxtBox).getAttribute("value");
-//        		String intAddressTxtBox = driver.findElement(quickCustRepo.introDetailsAddressTxtBox).getAttribute("value");
-//        		
-//                if(intNameTxtBox != "" && intAddressTxtBox != "") {
-//                	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Expected Result: 'Reason' textfield is no longer visible.");
-//        			Log.info("Expected Result: Expected Result: Customer is selected. Int Name: " + intNameTxtBox + " and Introducer's Address: " + intAddressTxtBox + " fields are auto-filled.");
-//                }else {
-//                	ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Customer is selected. 'Int Name' and 'Introducer's Address' fields are not auto-filled.");
-//        			Log.info("Expected Result: Customer is selected. 'Int Name' and 'Introducer's Address' fields are not auto-filled.");
-//                }
                 
+                
+                click(quickCustRepo.introduceSaveBtn);
+       		
         		
-        		
-        		
-        		//Int DEsignation Textfield - Typing Alphabets and Numerals
-        		ExtentTestManager.startTest("Int DEsignation Textfield - Typing Alphabets and Numerals");
-        		Log.info("Int DEsignation Textfield - Typing Alphabets and Numerals");
-              
-//        		String introducerReason = testdata.get("introducerReason").toString();
-        		input(quickCustRepo.introDetailsIntDesignationTxtBox,introducerReason);
-        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Type \"Test123\" in the 'Int DEsignation' textfield.");
-        		Log.info("Step:01 - Type \"Test123\" in the 'Int DEsignation' textfield.");
-        		
-        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Int Designation'Textfield reflects typed input without an error.");
-    			Log.info("Expected Result: 'Int Designation'Textfield reflects typed input without an error.");
-
-        		ExtentTestManager.endTest();
-        		
-        		
-        		
-
-        		
-        		//Relation Dropdown - Select Item
-        		ExtentTestManager.startTest("Relation Dropdown - Select Item");
-        		Log.info("Relation Dropdown - Select Item");
-        		
-        		select("FRIEND", quickCustRepo.introDetailsRelationDropdown);
-        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Relation dropdown.");
-        		Log.info("Step:01 - Click on the Relation dropdown.");
-        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select an item from the 'Relation' dropdown items.");
-        		Log.info("Step:02 - Select an item from the 'Relation' dropdown items.");
-        		
-        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: The item is displayed in the dropdown field.");
-        		Log.info("Expected Result: The item is displayed in the dropdown field.");
-        		
-        		ExtentTestManager.endTest();
-        		
-        		
-        		
-//        		//Save Button - Click ability
-//        		ExtentTestManager.startTest("Save Button - Click ability");
-//        		Log.info("Save Button - Click ability");
-//        		
-//        		click(quickCustRepo.introduceSaveBtn);
-//        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the 'SAVE' button.");
-//        		Log.info("Step:01 - Click on the 'SAVE' button.");
-//        		
-//        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data is saved successfully, and a confirmation message appears.");
-//        		Log.info("Expected Result: Data is saved successfully, and a confirmation message appears.");
-//        	
-//        		ExtentTestManager.endTest();
-        		
-        		driver.close();
         		driver.switchTo().window(mainWindowHandle);
                 break;
             }
@@ -1738,7 +1623,7 @@ public class Customer_QuickCustomer extends Base_Class{
         }
            
 	}
-	
+        
 	
 	
 	
@@ -1762,7 +1647,7 @@ public class Customer_QuickCustomer extends Base_Class{
                 driver.manage().window().maximize();
                 popupAppeared = true;
         		
-        		select("AADHAR", quickCustRepo.aidIdentityTypeDropdown);
+        		select("PANCARD", quickCustRepo.aidIdentityTypeDropdown);
         		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on the Identity Type dropdown.");
         		Log.info("Step:02 - Click on the Identity Type dropdown.");
         		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select an item from the 'Identity Type' dropdown items.");
@@ -1771,12 +1656,33 @@ public class Customer_QuickCustomer extends Base_Class{
                 
         		String proofTypeValue = driver.findElement(quickCustRepo.aidProofTypeDrpDwnValue).getText();
 
-            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selected item is highlighted, ‘Proof Type’ field is auto-filled: "+ proofTypeValue);
-            	Log.info("Expected Result: Selected item is highlighted, ‘Proof Type’ field is auto-filled: "+ proofTypeValue);
+            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selected item is highlighted, ‘Proof Type’ field is auto-filled as: "+ proofTypeValue);
+            	Log.info("Expected Result: Selected item is highlighted, ‘Proof Type’ field is auto-filled as: "+ proofTypeValue);
                 
             	ExtentTestManager.endTest();
         		
+            	
+            	
+            	
+        		//Select different items from 'Identity Type' dropdown
+        		ExtentTestManager.startTest("Select different items from 'Identity Type' dropdown");
+        		Log.info("Select different items from 'Identity Type' dropdown");
         		
+        		select("AADHAR", quickCustRepo.aidIdentityTypeDropdown);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on the Identity Type dropdown.");
+        		Log.info("Step:02 - Click on the Identity Type dropdown.");
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select an item from the 'Identity Type' dropdown items.");
+        		Log.info("Step:03 - Select an item from the 'Identity Type' dropdown items.");
+        		
+                
+        		String proofTypeValue1 = driver.findElement(quickCustRepo.aidProofTypeDrpDwnValue).getText();
+
+            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Proof Type' changes accordingly based on selection: "+ proofTypeValue1);
+            	Log.info("Expected Result: 'Proof Type' changes accordingly based on selection: "+ proofTypeValue1);
+                
+            	ExtentTestManager.endTest();
+            	
+            	
         		
         		//Enter Data in 'Identity No.' Field
         		ExtentTestManager.startTest("Enter Data in 'Identity No.' Field");
@@ -2122,6 +2028,55 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		ExtentTestManager.endTest();
 
+
+        		
+        		//Ward field Validation
+        		ExtentTestManager.startTest("Ward field Validation");
+        		Log.info("Ward field Validation");
+        		
+        		//Alphabet Input
+        		input(quickCustRepo.adWardTextBox,identityNumAlphabet);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter Alphabet input in Ward field.");
+        		Log.info("Step:02 - Enter Alphabet input in Ward field.");
+        		
+        		click(quickCustRepo.aidIssueDateTxt);
+        		
+        		if(ElementDisplayed(quickCustRepo.baInvalidStartDatePopUp)) {
+        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Alphabet input is not allowed.");
+        		Log.info("Expected Result: Alphabet input is not allowed.");
+        		}
+        		click(quickCustRepo.baInvalidStartDatePopUp);
+        		clear(quickCustRepo.adWardTextBox);
+        		
+        		
+        		//Alphanumeric Input
+        		input(quickCustRepo.adWardTextBox,identityNumAlphanumeric);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter Alphanumeric input in Ward field.");
+        		Log.info("Step:01 - Enter Alphanumeric input in Ward field.");
+        		
+        		click(quickCustRepo.aidIssueDateTxt);
+        		
+        		if(ElementDisplayed(quickCustRepo.baInvalidStartDatePopUp)) {
+        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Alphanumeric input is not allowed.");
+        		Log.info("Expected Result: Alphanumeric input is not allowed.");
+        		}
+        		click(quickCustRepo.baInvalidStartDatePopUp);
+        		clear(quickCustRepo.adWardTextBox);
+
+        		
+        		//Numeric Input
+        		input(quickCustRepo.adWardTextBox,identityNumNumeric);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter Numeric input in Ward field.");
+        		Log.info("Step:03 - Enter Numeric input in Ward field.");
+        		
+        		click(quickCustRepo.aidIssueDateTxt);
+        		
+        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is allowed.");
+        		Log.info("Expected Result: Numeric input is allowed.");
+
+        		ExtentTestManager.endTest();
+
+        		
         		
         		//Panchayat Dropdown Selection
         		ExtentTestManager.startTest("Panchayat Dropdown Selection");
@@ -2409,9 +2364,24 @@ public class Customer_QuickCustomer extends Base_Class{
         		ExtentTestManager.endTest();
         		
         		
-        		driver.close();
+        		
+        		//Save Data
+        		ExtentTestManager.startTest("Save Button Functionality");
+        		Log.info("Save Button Functionality");
+        		
+        		click(quickCustRepo.iaaSaveBtn);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on SAVE button.");
+        		Log.info("Step:01 -  Click on SAVE button.");
+        		
         		driver.switchTo().window(mainWindowHandle);
-    			break;
+        		
+        		ScrollUntilElementVisible(quickCustRepo.identityAndAreaBtn);
+        		if(ElementDisplayed(quickCustRepo.identityAndAreaBtn)) {
+    				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data should be saved successfully.");
+                	Log.info("Expected Result: Data should be saved successfully.");
+        		}
+        		ExtentTestManager.endTest();
+
             }
         }	
 
@@ -2462,28 +2432,213 @@ public class Customer_QuickCustomer extends Base_Class{
         		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Attempt to click 'Add' button without selecting a photo.");
         		Log.info("Step:03 - Attempt to click 'Add' button without selecting a photo.");
         		
-        		if(ElementDisplayed(quickCustRepo.psAddBtn)) {
+        		if(ElementDisplayed(quickCustRepo.selectOneImgErrMsg)) {
             		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message should be displayed indicating no photo selected.");
             		Log.info("Expected Result: Error message should be displayed indicating no photo selected.");
         		}
         		
         		ExtentTestManager.endTest();
+
+
+        		
+        		//Upload Sign - Negative Scenario (No Selection)
+        		ExtentTestManager.startTest("Upload Sign - Negative Scenario (No Selection)");
+        		Log.info("Upload Sign - Negative Scenario (No Selection)");
+        		
+        		select("Sign", quickCustRepo.docDropdown);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the dropdown.");
+        		Log.info("Step:01 - Click on the dropdown.");
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select 'Sign' from the drop down.");
+        		Log.info("Step:02 - Select 'Sign' from the drop down.");
+        		
+        		click(quickCustRepo.psAddBtn);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Attempt to click 'Add' button without selecting a Sign.");
+        		Log.info("Step:03 - Attempt to click 'Add' button without selecting a Sign.");
+        		
+        		if(ElementDisplayed(quickCustRepo.selectOneImgErrMsg)) {
+            		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message should be displayed indicating no Sign selected.");
+            		Log.info("Expected Result: Error message should be displayed indicating no Sign selected.");
+        		}
+        		
+        		ExtentTestManager.endTest();
+
+
+        		
+        		//Save Data - Negative Scenario (No Images)
+        		ExtentTestManager.startTest("Save Data - Negative Scenario (No Images)");
+        		Log.info("Save Data - Negative Scenario (No Images)");
+        		
+        		select("Photo", quickCustRepo.docDropdown);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the dropdown.");
+        		Log.info("Step:01 - Click on the dropdown.");
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select 'Photo' from the drop down.");
+        		Log.info("Step:02 - Select 'Photo' from the drop down.");
+        		
+        		click(quickCustRepo.docSaveBtn);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on the SAVE button.");
+        		Log.info("Step:03 - Click on the SAVE button.");
+        		
+        		if(ElementDisplayed(quickCustRepo.saveErrMsg)) {
+            		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message should be displayed indicating photo/sign missing.");
+            		Log.info("Expected Result: Error message should be displayed indicating photo/sign missing.");
+        		}
+        		
+        		ExtentTestManager.endTest();
+
+
+        		
+        		//Upload Photo - Invalid File Type
+        		ExtentTestManager.startTest("Upload Photo - Invalid File Type");
+        		Log.info("Upload Photo - Invalid File Type");
+        		
+        		select("Photo", quickCustRepo.docDropdown);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select 'Photo' from the drop down.");
+        		Log.info("Step:01 - Select 'Photo' from the drop down.");
+        		
+        		UploadFile(quickCustRepo.docBrowseBtn, ".\\src\\test\\resources\\TestData.xlsx");
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Click on the 'browse' button & Select a non-image file from the folder.");
+        		Log.info("Step:02 -  Click on the 'browse' button & Select a non-image file from the folder.");
+
+        		click(quickCustRepo.psAddBtn);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on the 'Add' button.");
+        		Log.info("Step:03 - Click on the 'Add' button.");
+        		
+        		if(ElementDisplayed(quickCustRepo.fileTypeNotSupportedErrMsg)) {
+        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message should be displayed indicating invalid file type.");
+        		Log.info("Expected Result: Error message should be displayed indicating invalid file type.");
+        		}
+
+        		
+        		//Upload Photo - Positive Scenario
+        		ExtentTestManager.startTest("Upload Photo - Positive Scenario");
+        		Log.info("Upload Photo - Positive Scenario");
+        		
+        		select("Photo", quickCustRepo.docDropdown);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select 'Photo' from the drop down.");
+        		Log.info("Step:01 - Select 'Photo' from the drop down.");
+        		
+        		UploadFile(quickCustRepo.docBrowseBtn, ".\\src\\test\\resources\\e-sign.pdf");
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Click on the 'browse' button & Select a valid photo from the folder.");
+        		Log.info("Step:02 -  Click on the 'browse' button & Select a valid photo from the folder.");
+
+        		click(quickCustRepo.psAddBtn);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on the 'Add' button.");
+        		Log.info("Step:03 - Click on the 'Add' button.");
+        		
+        		if(ElementDisplayed(quickCustRepo.photoSavedSuccessfully)) {
+        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selected photo should be displayed in the window.");
+        		Log.info("Expected Result: Selected photo should be displayed in the window.");
+        		}
+
+
+        		
+        		//Upload Sign - Invalid File Type
+        		ExtentTestManager.startTest("Upload Sign - Invalid File Type");
+        		Log.info("Upload Sign - Invalid File Type");
+        		
+        		select("Sign", quickCustRepo.docDropdown);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select 'Sign' from the drop down.");
+        		Log.info("Step:01 - Select 'Sign' from the drop down.");
+        		
+        		UploadFile(quickCustRepo.docBrowseBtn, ".\\src\\test\\resources\\TestData.xlsx");
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Click on the 'browse' button & Select a non-image file from the folder.");
+        		Log.info("Step:02 -  Click on the 'browse' button & Select a non-image file from the folder.");
+
+        		click(quickCustRepo.psAddBtn);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on the 'Add' button.");
+        		Log.info("Step:03 - Click on the 'Add' button.");
+        		
+        		if(ElementDisplayed(quickCustRepo.fileTypeNotSupportedErrMsg)) {
+        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message should be displayed indicating invalid file type.");
+        		Log.info("Expected Result: Error message should be displayed indicating invalid file type.");
+        		}
+        		
+        		ExtentTestManager.endTest();
+        		
+
+        		
+        		//Upload Sign - Positive Scenario
+        		ExtentTestManager.startTest("Upload Sign - Positive Scenario");
+        		Log.info("Upload Sign - Positive Scenario");
+        		
+        		select("Sign", quickCustRepo.docDropdown);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select 'Sign' from the drop down.");
+        		Log.info("Step:01 - Select 'Sign' from the drop down.");
+        		
+        		UploadFile(quickCustRepo.docBrowseBtn, ".\\src\\test\\resources\\e-sign.pdf");
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Click on the 'browse' button & Select a valid sign from the folder.");
+        		Log.info("Step:02 -  Click on the 'browse' button & Select a valid sign from the folder.");
+
+        		click(quickCustRepo.psAddBtn);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on the 'Add' button.");
+        		Log.info("Step:03 - Click on the 'Add' button.");
+        		
+        		if(ElementDisplayed(quickCustRepo.photoSavedSuccessfully)) {
+        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selected Sign should be displayed in the window.");
+        		Log.info("Expected Result: Selected Sign should be displayed in the window.");
+        		}
+        		
+        		ExtentTestManager.endTest();
+        		
+
+        		
+        		//Save Data - Positive Scenario
+        		ExtentTestManager.startTest("Save Data - Positive Scenario");
+        		Log.info("Save Data - Positive Scenario");
                 
-                
-                
-                
-                
-                
-                
-                
-        		driver.close();
+                click(quickCustRepo.docSaveBtn);
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the 'Save' button.");
+        		Log.info("Step:01 - Click on the 'Save' button.");
+        		
         		driver.switchTo().window(mainWindowHandle);
-    			break;
+        		
+        		ScrollUntilElementVisible(quickCustRepo.photoAndSignBtn);
+        		if(ElementDisplayed(quickCustRepo.photoAndSignBtn)) {
+        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data should be saved successfully.");
+        		Log.info("Expected Result: Data should be saved successfully.");
+        		}
+        		
+        		ExtentTestManager.endTest();
             }
             
         }
 		
 	}//END Photo and Sign
+
+	
+	
+public void photoAndSignEntryPersistence() throws InterruptedException {
+		
+		//Photo and Sign Entry Persistence
+		ExtentTestManager.startTest("Photo and Sign Entry Persistence");
+		Log.info("Photo and Sign Entry Persistence");
+		
+		ScrollUntilElementVisible(quickCustRepo.photoAndSignBtn);
+		click(quickCustRepo.photoAndSignBtn);
+		
+		//Navigate to Pop Up Window
+        String mainWindowHandle = driver.getWindowHandle();
+        boolean popupAppeared = false;
+        for (String handle : driver.getWindowHandles()) {
+            if (!handle.equals(mainWindowHandle)) {
+                driver.switchTo().window(handle);
+                driver.manage().window().maximize();
+                popupAppeared = true;
+                
+        		
+        		if(ElementDisplayed(quickCustRepo.photoSavedSuccessfully)) {
+        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Previously uploaded images should be displayed.");
+        		Log.info("Expected Result: Previously uploaded images should be displayed.");
+        		}
+
+        		click(quickCustRepo.docSaveBtn);
+        		driver.switchTo().window(mainWindowHandle);
+        		
+        		ExtentTestManager.endTest();
+            }           
+        }		
+	}//END photoAndSignEntryPersistence method
+
 
 	
 	
@@ -3087,4 +3242,261 @@ public void riskDetailsEmptyRemarksField(Map<Object, Object> testdata, ITestCont
 	}//END risk Details Empty Remarks Field
 	
 	
+
+public void emptyCheckAvailabilityPopup() throws InterruptedException {
+	
+	//Empty Check Availability Popup
+	ExtentTestManager.startTest("Empty Check Availability Popup");
+	Log.info("Empty Check Availability Popup");
+	
+	ScrollUntilElementVisible(quickCustRepo.checkAvailabilityBtn);
+	click(quickCustRepo.checkAvailabilityBtn);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Verify the state of the 'Save' button after popup is shown.");
+	Log.info("Step:01 -  Verify the state of the 'Save' button after popup is shown.");
+	
+	//Navigate to Pop Up Window
+    String mainWindowHandle = driver.getWindowHandle();
+    boolean popupAppeared = false;
+    for (String handle : driver.getWindowHandles()) {
+        if (!handle.equals(mainWindowHandle)) {
+            driver.switchTo().window(handle);
+            driver.manage().window().maximize();
+            popupAppeared = true;
+            
+            driver.close();
+    		driver.switchTo().window(mainWindowHandle);
+    		
+    		ScrollUntilElementVisible(quickCustRepo.saveBtn);
+    		if(ElementEnableOrDisable(quickCustRepo.saveBtn)==true) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Save' button should be enabled.");
+            	Log.info("Expected Result: 'Save' button should be enabled.");
+    		}else {
+    			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: 'Save' button wasn't be enabled.");
+            	Log.info("Expected Result: 'Save' button wasn't be enabled.");
+    		}
+    		
+    		ExtentTestManager.endTest();
+    		
+    		
+    		
+    		//'First Name' and Salutation Mandatory Check
+    		ExtentTestManager.startTest("'First Name' and Salutation Mandatory Check");
+    		Log.info("'First Name' and Salutation Mandatory Check");
+    		
+    		click(quickCustRepo.saveBtn);
+    		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Leave 'First Name' and salutation blank, try to submit form.");
+    		Log.info("Step:01 -  Leave 'First Name' and salutation blank, try to submit form.");
+    		
+//    		ScrollUntilElementVisible(quickCustRepo.qadFNameInvalidCloseBtn);
+    		if(ElementDisplayed(quickCustRepo.qadSalutationInvalidCloseBtn)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message for mandatory fields.");
+            	Log.info("Expected Result: Error message for mandatory fields.");
+    		}else {
+    			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: No error message for mandatory fields.");
+            	Log.info("Expected Result: No error message for mandatory fields.");
+    		}
+    		click(quickCustRepo.qadSalutationInvalidCloseBtn);
+        }
+        
+    }
+}//method End
+
+
+
+
+public void introducerSelectCust(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+	ScrollUntilElementVisible(quickCustRepo.btnIntroducer);
+
+    WebElement parentButton = driver.findElement(quickCustRepo.btnIntroducer); // Replace with actual button locator
+    parentButton.click();
+
+    // Step 3: Get the window handles and switch to the first child window
+    Set<String> windowHandles = driver.getWindowHandles();
+    String parentWindowHandle = driver.getWindowHandle();  // The handle of the parent window
+
+    // Switch to the first child window
+    String childWindow1Handle = null;
+    for (String handle : windowHandles) {
+        if (!handle.equals(parentWindowHandle)) {
+            childWindow1Handle = handle;
+            break;
+        }
+    }
+    driver.switchTo().window(childWindow1Handle);
+
+    // Step 4: Click the button in child window 1 to open child window 2
+    WebElement childWindow1Button = driver.findElement(quickCustRepo.introducerCustIdSrchBtn); // Replace with actual button locator
+    childWindow1Button.click();
+
+    // Step 5: Get the window handles again and switch to child window 2
+    windowHandles = driver.getWindowHandles();
+    String childWindow2Handle = null;
+    for (String handle : windowHandles) {
+        if (!handle.equals(parentWindowHandle) && !handle.equals(childWindow1Handle)) {
+            childWindow2Handle = handle;
+            break;
+        }
+    }
+    driver.switchTo().window(childWindow2Handle);
+
+    // Step 6: Wait until the text field is visible in child window 2
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+    WebElement textField = wait.until(ExpectedConditions.visibilityOfElementLocated(quickCustRepo.custIdTxtBox)); // Replace with actual locator
+
+    // Step 7: Send keys to the text field in child window 2
+    String introducerCustId = testdata.get("introducerCustId").toString();
+    textField.sendKeys(introducerCustId);
+
+    click(quickCustRepo.introSelectSrchBtn);
+    
+    click(quickCustRepo.introSelectBtn);
+    
+    driver.switchTo().window(childWindow1Handle);
+    
+    
+    
+    
+    //Customer Field - Select Customer
+	ExtentTestManager.startTest("Customer Field - Select Customer");
+	Log.info("Customer Field - Select Customer");
+
+    String intName = driver.findElement(quickCustRepo.introDetailsIntNameTxtBox).getAttribute("value");
+    String intAddress = driver.findElement(quickCustRepo.introDetailsIntNameTxtBox).getAttribute("value");
+
+    if(intName != "" && intAddress != "") {
+    	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer is selected. 'Int Name'- " + intName + " and 'Introducer's Address'- " + intAddress + " fields are auto-filled.");
+    	Log.info("Expected Result: Customer is selected. 'Int Name'- " + intName + " and 'Introducer's Address'- " + intAddress + " fields are auto-filled.");
+    }else {
+    	ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Autofill FAILED!!");
+    	Log.info("Expected Result: Autofill FAILED!!");
+    }
+    
+    ExtentTestManager.endTest();
+    
+    
+	//Int Designation Textfield - Typing Alphabets and Numerals
+	ExtentTestManager.startTest("Int Designation Textfield - Typing Alphabets and Numerals");
+	Log.info("Int Designation Textfield - Typing Alphabets and Numerals");
+  
+	String introducerReason = testdata.get("introducerReason").toString();
+	input(quickCustRepo.introDetailsIntDesignationTxtBox,introducerReason);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Type \"Test123\" in the 'Int DEsignation' textfield.");
+	Log.info("Step:01 - Type \"Test123\" in the 'Int DEsignation' textfield.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Int Designation'Textfield reflects typed input without an error.");
+	Log.info("Expected Result: 'Int Designation'Textfield reflects typed input without an error.");
+
+	ExtentTestManager.endTest();	
+	
+	
+
+	
+	//Relation Dropdown - Select Item
+	ExtentTestManager.startTest("Relation Dropdown - Select Item");
+	Log.info("Relation Dropdown - Select Item");
+	
+	select("FRIEND", quickCustRepo.introDetailsRelationDropdown);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Relation dropdown.");
+	Log.info("Step:01 - Click on the Relation dropdown.");
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select an item from the 'Relation' dropdown items.");
+	Log.info("Step:02 - Select an item from the 'Relation' dropdown items.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: The item is displayed in the dropdown field.");
+	Log.info("Expected Result: The item is displayed in the dropdown field.");
+	
+	ExtentTestManager.endTest(); 
+	
+	
+	
+	
+    //Save Button - Click ability
+	ExtentTestManager.startTest("Save Button - Click ability");
+	Log.info("Save Button - Click ability");
+	
+	click(quickCustRepo.introduceSaveBtn);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the 'SAVE' button.");
+	Log.info("Step:01 - Click on the 'SAVE' button.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data is saved successfully, and a confirmation message appears.");
+	Log.info("Expected Result: Data is saved successfully, and a confirmation message appears.");
+
+	driver.switchTo().window(parentWindowHandle);
+	
+	ExtentTestManager.endTest();
+
+	
+}
+
+public void checkAvailability() throws InterruptedException {
+	
+    //Check Availability Pop up
+	ExtentTestManager.startTest("Check Availability Popup");
+	Log.info("Check Availability Popup");
+	
+	ScrollUntilElementVisible(quickCustRepo.checkAvailabilityBtn);
+	click(quickCustRepo.checkAvailabilityBtn);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on the 'Check Availability' button.");
+	Log.info("Step:01 -  Click on the 'Check Availability' button.");
+	
+	//Navigate to Pop Up Window
+    String mainWindowHandle = driver.getWindowHandle();
+    boolean popupAppeared = false;
+    for (String handle : driver.getWindowHandles()) {
+        if (!handle.equals(mainWindowHandle)) {
+            driver.switchTo().window(handle);
+            driver.manage().window().maximize();
+            popupAppeared = true;
+            
+            try {
+    		if(ElementDisplayed(quickCustRepo.noMatchFound)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: A popup should appear displaying customers with similar details or indicating that no similar customers exist.");
+            	Log.info("Expected Result: A popup should appear displaying customers with similar details or indicating that no similar customers exist.");
+    		} 
+            }catch(Exception e) {
+            	try {
+            		if(ElementDisplayed(quickCustRepo.existingCustTable)){
+            			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: A popup should appear displaying customers with similar details or indicating that no similar customers exist.");
+                    	Log.info("Expected Result: A popup should appear displaying customers with similar details or indicating that no similar customers exist.");
+            		}
+            	}catch(Exception e1) {
+            		
+            	}
+            }
+            driver.close();
+    		driver.switchTo().window(mainWindowHandle);
+    		
+    		ExtentTestManager.endTest();
+    		
+    		
+    		
+    		
+    	    //Save Quick Customer
+    		ExtentTestManager.startTest("Save Quick Customer");
+    		Log.info("Save Quick Customer");
+    		
+    		ScrollUntilElementVisible(quickCustRepo.saveBtn);
+    		click(quickCustRepo.saveBtn);
+    		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on the 'Save' button.");
+    		Log.info("Step:01 -  Click on the 'Save' button.");
+    		
+    		if(ElementDisplayed(quickCustRepo.dataSavedSuccessfullyCloseBtn)) {
+    			
+    			String custId = driver.findElement(quickCustRepo.qcsiCustId).getAttribute("value");
+    			System.out.println("Customer ID: "  + custId);
+    			String displayName = driver.findElement(quickCustRepo.qcsiDispName).getAttribute("value");
+    			System.out.println("Display Name: "  + displayName);
+    			
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Quick Customer details should be saved successfully in the backendtables with Quick Customer ID: " + custId + " and Display Name: " + displayName);
+            	Log.info("Expected Result: Quick Customer details should be saved successfully in the backendtables with Quick Customer ID: " + custId + " and Display Name: " + displayName);
+    		}
+    		click(quickCustRepo.dataSavedSuccessfullyCloseBtn);
+    		click(quickCustRepo.dataSavedPopUp);
+        }
+        
+    }
+	
+	ExtentTestManager.endTest();
+}
+
+
  }

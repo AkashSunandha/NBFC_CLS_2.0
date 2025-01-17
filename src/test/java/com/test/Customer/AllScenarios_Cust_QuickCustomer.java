@@ -53,20 +53,26 @@ public class AllScenarios_Cust_QuickCustomer extends Base_Class{
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 				
 				quickCustomerAllMthds.openQuickCustomerWindow();
+				
+				quickCustomerAllMthds.emptyCheckAvailabilityPopup();
 
+				quickCustomerAllMthds.referredBy();
+				
 				quickCustomerAllMthds.quickAccDetails(testdata, context);
 				
 				quickCustomerAllMthds.presentAddress(testdata, context);
 				
 				quickCustomerAllMthds.permanentAddress();
 				
-				quickCustomerAllMthds.referredBy();
-
 				quickCustomerAllMthds.introducer(testdata, context);
 
+				quickCustomerAllMthds.introducerSelectCust(testdata, context);
+				
 				quickCustomerAllMthds.identityAndArea(testdata, context);
 
 				quickCustomerAllMthds.photoAndSign(testdata, context);
+				
+				quickCustomerAllMthds.photoAndSignEntryPersistence();
 				
 				quickCustomerAllMthds.bankAccounts(testdata, context);
 
@@ -74,6 +80,8 @@ public class AllScenarios_Cust_QuickCustomer extends Base_Class{
 
 				quickCustomerAllMthds.riskDetailsEmptyRemarksField(testdata, context);
 
+				quickCustomerAllMthds.checkAvailability();
+				
 				
 				
 				

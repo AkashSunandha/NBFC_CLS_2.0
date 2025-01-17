@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_Cust_QuickCustomer {
 	//Quick Customer
+	public By currentDate = By.xpath("//*[@id=\"ctl00_lblHeaderDate\"]");
 	public By customerTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/div");
 	public By quickCustomerTab = By.xpath("//a[text()='Quick Customer ']");
 	public By quickCustomerWindowTitle = By.xpath("//*[@id=\"ctl00_MasterCaption\"]");
@@ -12,8 +13,9 @@ public class PageRepositary_Cust_QuickCustomer {
 	public By qadStartDate = By.xpath("//*[@id=\"ctl00_CPH1_lstMaster_ctrl0_ctl00_CM1_txtStartDate_txt\"]");
 	public By qadSalutationDropdown = By.xpath("//*[@id=\"ctl00_CPH1_lstMaster_ctrl0_ctl00_CM1_ddlSalutation_ddl\"]");
 	public By qadSalutationDrpdwnMR = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/table[1]/tbody/tr/td/div[2]/div[2]/div[2]/div[2]/div[1]/div/select/option[6]");
-	public By qadFNameInvalidCloseBtn = By.xpath("/html/body/form/table[2]/tbody/tr[2]/td[4]/div/img");
+	public By qadSalutationInvalidCloseBtn = By.xpath("/html/body/form/table[2]/tbody/tr[2]/td[4]/div/img");
 	public By qadFNameTxtBox = By.xpath("//*[@id=\"ctl00_CPH1_lstMaster_ctrl0_ctl00_CM1_txtFirstName_txt\"]");
+	public By qadFameInvalidPopUp = By.xpath("/html/body/form/table[10]/tbody/tr[2]/td[4]/div/img");
 	public By qadMNameTxtBox = By.xpath("//*[@id=\"ctl00_CPH1_lstMaster_ctrl0_ctl00_CM1_txtMiddleName_txt\"]");
 	public By qadLNameTxtBox = By.xpath("//*[@id=\"ctl00_CPH1_lstMaster_ctrl0_ctl00_CM1_txtLastName_txt\"]");
 	public By qadAliasNameTxtBox = By.xpath("//*[@id=\"ctl00_CPH1_lstMaster_ctrl0_ctl00_CM1_txtAliasName_txt\"]");
@@ -64,10 +66,10 @@ public class PageRepositary_Cust_QuickCustomer {
 	public By qadMobileNumTxtBox = By.xpath("//*[@id=\"ctl00_CPH1_lstMaster_ctrl0_ctl00_CM1_txtMobileNo_txt\"]");
 	public By qadEmailTxtBox = By.xpath("//*[@id=\"ctl00_CPH1_lstMaster_ctrl0_ctl00_CM1_txtEMail_txt\"]");
 	public By qadPreferredLangDropdown = By.xpath("//*[@id=\"ctl00_CPH1_lstMaster_ctrl0_ctl00_CM1_ddlCustomerPreferredLanguage_ddl\"]");
-	public By qadInvalidAadhaarCloseBtn = By.xpath("/html/body/form/table[5]/tbody/tr[1]/td[4]/div/img");
-	public By qadInvalidPANCloseBtn = By.xpath("/html/body/form/table[6]/tbody/tr[1]/td[4]/div/img");
-	public By qadInvalidMobileCloseBtn = By.xpath("/html/body/form/table[7]/tbody/tr[1]/td[4]/div/img");
-	public By qadInvalidEmailCloseBtn = By.xpath("/html/body/form/table[9]/tbody/tr[1]/td[4]/div/img");
+	public By qadInvalidAadhaarCloseBtn = By.xpath("/html/body/form/table[11]/tbody/tr[1]/td[4]/div/img");
+	public By qadInvalidPANCloseBtn = By.xpath("/html/body/form/table[12]/tbody/tr[1]/td[4]/div/img");
+	public By qadInvalidMobileCloseBtn = By.xpath("/html/body/form/table[13]/tbody/tr[1]/td[4]/div/img");
+	public By qadInvalidEmailCloseBtn = By.xpath("/html/body/form/table[14]/tbody/tr[1]/td[4]/div/img");
 	
 	//Present
 	public By presentHouseTxtBox = By.xpath("//*[@id=\"ctl00_CPH1_lstMaster_ctrl0_ctl00_CM1_lstMaster_ctrl0_ctl00_AF1_txtHouse_txt\"]");
@@ -110,6 +112,9 @@ public class PageRepositary_Cust_QuickCustomer {
 	public By introducerCustIdSrchBtn = By.xpath("/html/body/form/div[3]/div/div/div/table/tbody/tr[2]/td/div/table/tbody/tr[2]/td/div/table/tbody/tr[1]/td[2]/table/tbody/tr/td[2]/a/img");
 	public By introduceSaveBtn = By.xpath("//*[@id=\"ctl00_CPHFrame_btnSave\"]");
 	public By introduceCloseBtn = By.xpath("//*[@id=\"ctl00_CPHFrame_btnCancel\"]");
+	public By introSelectSrchBtn = By.xpath("//*[@id=\"PopQuick1_btnSearch\"]");
+	public By introSelectBtn = By.xpath("//*[@id=\"PopQuick1_lst_ctrl0_linkSelect\"]");
+
 	
 	//Customer Select window
 	public By custIdTxtBox = By.xpath("//*[@id=\"PopQuick1_txtCustID\"]");
@@ -163,13 +168,12 @@ public class PageRepositary_Cust_QuickCustomer {
 	//Documents
 	public By docDropdown = By.xpath("//*[@id=\"ctl00_CPHFrame_ddlFilterDoc\"]");
 	public By psAddBtn = By.xpath("//*[@id=\"ctl00_CPHFrame_btnSave\"]");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
+	public By selectOneImgErrMsg = By.xpath("//*[@id=\"ctl00_CPHFrame_lblErrorMsg\" and text()='Select One Image']");
+	public By docSaveBtn = By.xpath("//*[@id=\"ctl00_CPHFrame_btnSaveDetails\"]");
+	public By saveErrMsg = By.xpath("//*[@id=\"ctl00_CPHFrame_lblErrorMsg\" and text()='Please Add Cust Documents Before Save']");
+	public By docBrowseBtn = By.xpath("//*[@id=\"ctl00_CPHFrame_docUpload\"]");
+	public By fileTypeNotSupportedErrMsg = By.xpath("//*[@id=\"ctl00_CPHFrame_lblErrorMsg\" and text()='Sorry..File type not supported.']");
+	public By photoSavedSuccessfully = By.xpath("//*[@id=\"ctl00_CPHFrame_lstData\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 	
@@ -211,13 +215,16 @@ public class PageRepositary_Cust_QuickCustomer {
 	public By rdActiveSpclInstructnTxtBox = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_RF1_txtActiveSpecialInstruction_txt\"]");
 	public By rdSupervisorCheckBox = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_RF1_chkSusp\"]");
 	public By rdSaveBtn = By.xpath("//*[@id=\"ctl00_CPHFrame_btnSave\"]");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
+	
+	public By saveBtn = By.xpath("//*[@id=\"ctl00_CPH1_btnSave\"]");
+	public By noMatchFound = By.xpath("//td[contains(text(),'No Matches Found.....!')]");
+	public By dataSavedSuccessfullyCloseBtn = By.xpath("//*[@id=\"ctl00_CPH1_btnClosechange\"]");
+	public By dataSavedPopUp = By.xpath("//*[@id=\"closetop\"]");
+	public By existingCustTable = By.xpath("//*[@id=\"tblCustList\"]");
+	
+	//Quick Cust saved Info
+	public By qcsiCustId = By.xpath("//*[@id=\"ctl00_CPH1_txtCustIDpopup\"]");
+	public By qcsiDispName = By.xpath("//*[@id=\"ctl00_CPH1_txtCustNamePopup\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
