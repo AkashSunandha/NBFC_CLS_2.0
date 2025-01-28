@@ -93,8 +93,9 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 		public By Mobileno=By.id("ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomMobileNo_txt");
 		public By Post=By.id("ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_ddlNomPost_ddl");
 		public By Age=By.id("ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomAge_txt");
+		public By NextbuttonNominee=By.id("ctl00_ctl00_CPH1_PRDCNT_btnNext");
 	
-	
+	//
 	
 }
 

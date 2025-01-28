@@ -94,6 +94,9 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				//TC21
 				fixeddeposit.NavigateThroughTabs();
 				
+				//TC22
+				fixeddeposit.AddNomineeandValidateAutofill(testdata);
+				
 				//Sign out
 				custSrchMthds.logout();
 				

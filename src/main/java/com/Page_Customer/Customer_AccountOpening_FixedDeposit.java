@@ -408,10 +408,98 @@ return true;
 						}
 							else {
 								ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Adharno details are not autofilled in fields");
-								Log.info("ROI and Due date are not auto-calculated and displayed");
+								Log.info("Adharno details are not autofilled in fields");
 								
 							}
+						
+						String HouseName=driver.findElement(fixeddeposit.HouseName).getAttribute("value");
+						  System.out.println(HouseName);
+								if(HouseName!="") {
+									ExtentTestManager.getTest().log(Status.PASS, "Expected Result: HouseName details autofilled in fields");
+									Log.info("HouseName details autofilled in fields");
+								}
+									else {
+										ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: HouseName details are not autofilled in fields");
+										Log.info("HouseName details are not autofilled in fields");
+										
+									}
+								
+								String District=driver.findElement(fixeddeposit.District).getAttribute("value");
+								  System.out.println(District);
+										if(District!="") {
+											ExtentTestManager.getTest().log(Status.PASS, "Expected Result: District details autofilled in fields");
+											Log.info("District details autofilled in fields");
+										}
+											else {
+												ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: District details are not autofilled in fields");
+												Log.info("District details are not autofilled in fields");
+												
+											}		
+								
+								
+										String DOB=driver.findElement(fixeddeposit.DOB).getAttribute("value");
+										  System.out.println(DOB);
+												if(DOB!="") {
+													ExtentTestManager.getTest().log(Status.PASS, "Expected Result: DOB details autofilled in fields");
+													Log.info("DOB details autofilled in fields");
+												}
+													else {
+														ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: DOB details are not autofilled in fields");
+														Log.info("DOB details are not autofilled in fields");
+														
+													}	
+												
+												String name=driver.findElement(fixeddeposit.Name).getAttribute("value");
+												  System.out.println(name);
+														if(name!="") {
+															ExtentTestManager.getTest().log(Status.PASS, "Expected Result: name details autofilled in fields");
+															Log.info("name details autofilled in fields");
+														}
+															else {
+																ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: name details are not autofilled in fields");
+																Log.info("name details are not autofilled in fields");
+																
+															}	
+																	
+														String mobileno=driver.findElement(fixeddeposit.Mobileno).getAttribute("value");
+														  System.out.println(mobileno);
+																if(mobileno!="") {
+																	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: mobileno details autofilled in fields");
+																	Log.info("mobileno details autofilled in fields");
+																}
+																	else {
+																		ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: mobileno details are not autofilled in fields");
+																		Log.info("mobileno details are not autofilled in fields");
+																		
+																	}	
+																String Post=driver.findElement(fixeddeposit.Post).getAttribute("value");
+																  System.out.println(Post);
+																		if(Post!="") {
+																			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Post details autofilled in fields");
+																			Log.info("Post details autofilled in fields");
+																		}
+																			else {
+																				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Post details are not autofilled in fields");
+																				Log.info("Post details are not autofilled in fields");
+																				
+																			}		
+																		String Age=driver.findElement(fixeddeposit.Age).getAttribute("value");
+																		  System.out.println(Age);
+																				if(Age!="") {
+																					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Age details autofilled in fields");
+																					Log.info("Age details autofilled in fields");
+																				}
+																					else {
+																						ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Age details are not autofilled in fields");
+																						Log.info("Age details are not autofilled in fields");
+																						
+																					}	
+																				
+																				click(fixeddeposit.NextbuttonNominee);
+						
+						
 				
+						
 				
       }
   }
@@ -419,6 +507,8 @@ return true;
 return true;
 	
 }
+	
+	
 }
 	
 	

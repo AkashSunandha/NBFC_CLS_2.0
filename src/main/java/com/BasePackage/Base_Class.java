@@ -84,18 +84,22 @@ public class Base_Class {
 		case "FIREFOX":
 			
 			System.setProperty("webdriver.gecko.driver","D:\\Testing\\geckodriver.exe");
-			File pathBinary = new File("C:\\Users\\akash.venkatesh\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
+			/*File pathBinary = new File("C:\\Users\\akash.venkatesh\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
 			FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);   
 			DesiredCapabilities desired = DesiredCapabilities.firefox();
 			FirefoxOptions options1 = new FirefoxOptions();
 			desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options1.setBinary(firefoxBinary));
-			driver = new FirefoxDriver(options1);
-//			FirefoxOptions options1 = new FirefoxOptions();
-//			WebDriverManager.firefoxdriver().setup();
-//			//System.setProperty("webdriver.gecko.driver", "./Drivers\\geckodriver.exe");
-//			driver = new FirefoxDriver(options1);
+			driver = new FirefoxDriver(options1);*/
+		FirefoxOptions options1 = new FirefoxOptions();
+			WebDriverManager.firefoxdriver().setup();
+		//System.setProperty("webdriver.gecko.driver", "./Drivers\\geckodriver.exe");
+		driver = new FirefoxDriver(options1);
 			ExtentTestManager.getTest().log(Status.PASS, "Firefox Driver & Application Launched successfully.");
 			break;
+			
+			
+
+			
 
 		default:
 			System.err.println("The Driver is not defined");
@@ -171,10 +175,9 @@ public class Base_Class {
 
 	}
 	
-	public static void SwitchToFrame(By frameName) throws InterruptedException
+	public static void SwitchToFrame(By frameName)
 	{
-		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameName));
 	}
 	
@@ -289,7 +292,7 @@ public class Base_Class {
 
 	        } catch (SQLException e) {
 	            System.out.println("Error executing the SQL query.");
-	            //e.printStackTrace();
+	            e.printStackTrace();
 	        }
         
 
