@@ -2420,5 +2420,12 @@ return true;
 		ExtentTestManager.endTest();
 		return true;
 	}
+	
+	public boolean signOut() throws InterruptedException {
+		click(custSearch.custSignOut);
+		ExtentTestManager.getTest().log(Status.PASS, "User SignedOut");
+		Log.info("User SignedOut");
+		return true;
+	}
 }
 
