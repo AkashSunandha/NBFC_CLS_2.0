@@ -43,7 +43,6 @@ public class Customer_CustomerSearch extends Base_Class{
 		String Password = "SPQA@sql2019" ;
 		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
 
-		
 		String query = "exec getcustomer 102;";
 	        String custID = null; // Declare and initialize the return variable
 
