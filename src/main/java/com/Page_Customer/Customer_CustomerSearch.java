@@ -47,6 +47,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		String query = "exec getcustomer 102;";
 	        String custID = null; // Declare and initialize the return variable
 
+	        
 	        // Establish the connection to the database
 	        try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
 	             Statement statement = connection.createStatement();
