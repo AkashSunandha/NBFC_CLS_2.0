@@ -73,17 +73,38 @@ public class AllScenarios_Cust_CustSearch extends Base_Class{
 				custSrchMthds.customerSearchWindow();
 	
 				
-				//TC No. - 24 --> Edit Customer Last Name - Valid Edit
-//				custSrchMthds.activateDeactiveCustomer(testdata, context);//----> Data issue (Not required)
+				
+				
+//				+++++++++=====================+++++++++++++++++++++++++=====================+++++++++++++++++++++++++=====================+++++++++++++++++++++++++=====================++++++++++++++++
+
+//				custSrchMthds.activateDeactiveCustomer(testdata, context);//---->(Not required anymore)
 				
 //				custSrchMthds.deleteUnauthorisedCust(testdata, context);//----> Data issue
 				
+//				+++++++++=====================+++++++++++++++++++++++++=====================+++++++++++++++++++++++++=====================+++++++++++++++++++++++++=====================++++++++++++++++
+	
+				
+				
+				
+				ExtentTestManager.startTest("Edit Customer Last Name - Valid Edit");
+				Log.info("Edit Customer Last Name - Valid Edit");
 				custSrchMthds.custLastNameEdit(testdata, context);//----> Data issue-- solved
 				
-				custSrchMthds.deactivateACustomerWithValidDate(testdata, context);//----> Data issue-- solved	
+				
+				custSrchMthds.expired1(testdata, context);
 
 				
-
+				ExtentTestManager.startTest("Select State, Bank ID, Branch ID, Date");
+				Log.info("Select State, Bank ID, Branch ID, Date");
+				custSrchMthds.expired(testdata, context);
+				
+				
+	        	ExtentTestManager.startTest("Mark Customer as Expired");
+	        	Log.info("Mark Customer as Expired");
+				custSrchMthds.markCustomerAsExpired(testdata, context); //Bank Details Fields are missing
+				
+				
+				custSrchMthds.deactivateACustomerWithValidDate(testdata, context);//----> Data issue-- solved	
 
 				//TC No. - 71, 72, 74, 80, 82, 88, --> Activate
 				custSrchMthds.activate(testdata, context);
@@ -93,15 +114,11 @@ public class AllScenarios_Cust_CustSearch extends Base_Class{
 				
 				custSrchMthds.freezeCustomer(testdata, context);
 				
-				//TC No. - 
 				custSrchMthds.mark(testdata, context);
 				
 				custSrchMthds.enterRemarkAndSubmit(testdata, context);
 				
-				//TC No. - 
-				custSrchMthds.expired(testdata, context);
-				
-				custSrchMthds.markCustomerAsExpired(testdata, context);
+
 				
 				//TC No. - 101, 102, 103 --> Delete Customer - Authorized Customer
 				custSrchMthds.deleteCust(testdata, context);
@@ -159,10 +176,7 @@ public class AllScenarios_Cust_CustSearch extends Base_Class{
 				
 				
 				
-				
-				
-				
-				
+		
 				
 				//Authorize
 //				custSrchMthds.updateMakerId();

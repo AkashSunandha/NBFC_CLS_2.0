@@ -166,16 +166,16 @@ public class PageRepositary_Cust_CustSearch {
 	
 	public By deleteConfirmationOkBtn = By.xpath("//*[@id=\"closeSeltio\"]");
 //	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
+	public By pdAadharNumTxtBox = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_CM1_txtUniversal_ID_txt\"]");
+	public By pdPanTxtBox = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_CM1_txtPAN_txt\"]");
+	public By pdMobileNumTxtBox = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_CM1_txtMobileNo_txt\"]");
+	public By pdCKYCIdTxtBox = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_CM1_txtCKYCID_txt\"]");
+	public By pdFirstNameTxtBox = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_CM1_txtFirstName_txt\"]");
+	public By pdAgeGroupDropdown = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_CM1_ddlAgeGroup_ID_ddl\"]");
+	public By expiredAdditionalInfoCheckBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucCustExpire_lstAccountForm_ctrl0_BAF1_chkAdditionalInfo\"]");
+	public By expiredBalanceAson = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucCustExpire_lstAccountForm_ctrl0_BAF1_dtAsOn_txt\"]");
+	public By custFirstNameTxtBox = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_CM1_txtFirstName_txt\"]");
+	public By pdAgeAsOnTxtBox = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_CM1_dtAgeAsOnDate_txt\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");

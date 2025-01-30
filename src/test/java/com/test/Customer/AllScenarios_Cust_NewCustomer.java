@@ -69,19 +69,12 @@ public class AllScenarios_Cust_NewCustomer extends Base_Class{
 
 				newCustMths.bankAccDetails(testdata, context);
 
+				newCustMths.visits(testdata, context);
 
+				newCustMths.riskAndOtherDetails(testdata, context);
 
+				newCustMths.photoSign(testdata, context);				
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				//TC No. - 105 --> Logout
-				Thread.sleep(5000);
 				custSrchMthds.logout();
 				
 				

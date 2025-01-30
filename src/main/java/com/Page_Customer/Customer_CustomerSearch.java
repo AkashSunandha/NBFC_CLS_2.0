@@ -13,6 +13,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -28,6 +29,10 @@ public class Customer_CustomerSearch extends Base_Class{
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
 	com.Utility.ExcelReader ExcelReader = new com.Utility.ExcelReader("Customer_CustSearch");
 	Base_Class Base_Class= new Base_Class();
+	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
+	
+	
+	
 	
 	public static  String generateCustId() throws ClassNotFoundException {
 		 // Method that returns the first customer ID (String) from the database
@@ -39,7 +44,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
 
 		
-		String query = "exec getcustomer;";
+		String query = "exec getcustomer 102;";
 	        String custID = null; // Declare and initialize the return variable
 
 	        // Establish the connection to the database
@@ -48,7 +53,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	             ResultSet resultSet = statement.executeQuery(query)) {
 	        	
 	        	if (resultSet.next()) {
-	        		custID = resultSet.getString("Cust_ID"); // Get the first Cust_ID
+	        		custID = resultSet.getString("CustomerID"); // Column name
 	                System.out.println("Cust_ID of customer: " + custID);
 	            } else {
 	                System.out.println("No new customers found.");
@@ -60,10 +65,53 @@ public class Customer_CustomerSearch extends Base_Class{
 	        }
 
 	        return custID; // Return the firstCustId
+	        
 	    }
 	
 	
 	
+	public static  void deleteDuplicates() throws ClassNotFoundException {
+		
+		String custId = generateCustId();
+		
+        // Database connection details
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		String UserName = "sqa";
+		String Password = "SPQA@sql2019" ;
+		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
+
+		
+		String query = "select * from custaddressdetails where  cust_id = " + custId;
+
+	        String addressID = null; // Declare and initialize the return variable
+
+	        // Establish the connection to the database
+	        try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
+	             Statement statement = connection.createStatement();
+	             ResultSet resultSet = statement.executeQuery(query)) {
+	        	
+	        	if (resultSet.next()) {
+	        		addressID = resultSet.getString("Address_ID"); // Column name
+	                System.out.println("Address_ID of customer: " + addressID);
+	                
+	        		String query1 = "delete from custaddressdetails where Address_ID = " + addressID + "and Type_ID = 2";
+
+	        		//To delete the duplicate data from custaddressdetails table
+	                DriverManager.getConnection(Url, UserName, Password);
+		            connection.createStatement();
+		            statement.executeQuery(query1);
+		             
+	            } else {
+	                System.out.println("No Duplicate found.");
+	            }
+
+	        } catch (SQLException e) {
+	            System.out.println("Error executing the SQL query or processing the result set.");
+//	            e.printStackTrace();
+	        }
+	        
+	    System.out.println("Deleted Duplicate.");    
+	}
 	public boolean pcRegistration(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		ExtentTestManager.startTest("PC Registration");
 		Log.info("PC Registration");
@@ -73,15 +121,14 @@ public class Customer_CustomerSearch extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter User Name in Name field.");
 		Log.info("Step:01 - Enter User Name in Name field.");
 		
+		select("TRIVANDRUM",custSearch.formBranchName);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select a Branch Name from the Dropdown.");
+		Log.info("Step:02 - Select a Branch Name from the Dropdown.");
+		
 		String pcRegFormPcName = testdata.get("pcRegFormPcName").toString();	
 		input(custSearch.formComputerName, pcRegFormPcName);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter PC Name in Name field.");
-		Log.info("Step:02 - Enter PC Name in Name field.");
-		
-		click(custSearch.formBranchName);
-		click(custSearch.formBranchNameKochi);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Select a Branch Name from the Dropdown.");
-		Log.info("Step:03 - Select a Branch Name from the Dropdown.");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter PC Name in Name field.");
+		Log.info("Step:03 - Enter PC Name in Name field.");
 		
 		click(custSearch.formSubmitBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Submit Button.");
@@ -867,8 +914,7 @@ return true;
 	
 	public boolean custLastNameEdit(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
-		ExtentTestManager.startTest("Edit Customer Last Name - Valid Edit");
-		Log.info("Edit Customer Last Name - Valid Edit");
+
 		
 		String generatedCustId = generateCustId();
 		
@@ -881,18 +927,62 @@ return true;
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a customer from the list.");
 		Log.info("Step:01 - Select a customer from the list.");
 		
+		try {
 		click(custSearch.custEditBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Click Edit button.");
 		Log.info("Step:02 -  Click Edit button.");
 				
 		
 		SwitchToFrame(custSearch.iframe);
+		
 		click(custSearch.custLastName);
-		driver.findElement(custSearch.custLastName).clear();
+		clear(custSearch.custLastName);
+
 		String validLastName = testdata.get("validLastName").toString();
 		input(custSearch.custLastName, validLastName);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 -  Modify the last name in customer details.");
 		Log.info("Step:03 -  Modify the last name in customer details.");
+		
+//		Remove white spaces in First name if any
+		click(custSearch.custFirstNameTxtBox);
+		String fname = driver.findElement(custSearch.custFirstNameTxtBox).getAttribute("value");
+		String modifiedValue = fname.replaceAll("\\s", "");
+		clear(custSearch.custFirstNameTxtBox);
+		input(custSearch.custFirstNameTxtBox, modifiedValue);
+		
+
+//        Actions actions = new Actions(driver);
+//        // Perform the backspace action
+//        actions.moveToElement(driver.findElement(custSearch.pdFirstNameTxtBox)).click().sendKeys(Keys.BACK_SPACE).perform();
+		
+        //Age group
+        select("Major",custSearch.pdAgeGroupDropdown);
+        
+//        //AgeAsOn
+//        clear(custSearch.pdAgeAsOnTxtBox);
+//	    click(custSearch.pdAgeAsOnTxtBox);      
+//			String AgeAsOn = testdata.get("AgeAsOn").toString();
+//			input(custSearch.pdAgeAsOnTxtBox,AgeAsOn);	
+
+		//aadhar num
+		clear(custSearch.pdAadharNumTxtBox);
+		String validAadhar = quickCust.generateUniqueId(quickCust.spAadhaar, quickCust.clmnNamAadhaar);
+		input(custSearch.pdAadharNumTxtBox,validAadhar);
+		
+		//mobile num, 
+		clear(custSearch.pdMobileNumTxtBox);
+		String validMobNum = quickCust.generateUniqueId(quickCust.spMobileNum, quickCust.clmnNamMobileNum);
+		input(custSearch.pdMobileNumTxtBox,validMobNum);
+		
+		//pan num
+		clear(custSearch.pdPanTxtBox);
+		String validPAN = quickCust.generateUniqueId(quickCust.spPAN, quickCust.clmnNamPAN);
+		input(custSearch.pdPanTxtBox,validPAN);
+		
+		//CKYC ID
+		clear(custSearch.pdCKYCIdTxtBox);
+		String CKYCId = quickCust.generateUniqueId(quickCust.spAadhaar, quickCust.clmnNamAadhaar);
+		input(custSearch.pdCKYCIdTxtBox,"69"+CKYCId);
 		
 		ScrollUntilElementVisible(custSearch.custCheckAvailabilityBtn);
 		click(custSearch.custCheckAvailabilityBtn);
@@ -905,7 +995,7 @@ return true;
 		for (String handle : driver.getWindowHandles()) {
 		    if (!handle.equals(mainWindowHandle)) {
 		        driver.switchTo().window(handle);
-		        driver.manage().window().maximize();
+//		        driver.manage().window().maximize();
 		        popupAppeared = true;
 				if(ElementDisplayed(custSearch.popWindowErrMsg)) {
 					driver.close();
@@ -919,6 +1009,7 @@ return true;
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Step:05 - Click on Save and Proceed button.");
 		Log.info("Step:05 - Click on Save and Proceed button.");
+		
 		driver.switchTo().defaultContent();
 		
 		if(ElementDisplayed(custSearch.savedPopUp)) {
@@ -931,9 +1022,23 @@ return true;
 
 		click(custSearch.custSrch);
 		click(custSearch.custClearBtn);
+		
 		ExtentTestManager.endTest();
+		
+		
+		
+		}catch(Exception e) {
+			deleteDuplicates();
+			driver.close();
+			Base_Class.SetUp();
+			pcRegistration(testdata, context);
+			userLoginValidPaswrd(testdata, context);
+			customerSearchWindow();
+			custLastNameEdit(testdata, context);
+
+		}
 		return true;
-}
+}//end
 	
 	
 	public boolean lastNameECP(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
@@ -1213,12 +1318,16 @@ return true;
 		
 		ExtentTestManager.startTest("Freeze Customer");
 		Log.info("Freeze Customer");
+		
 		//freeze window
+		
+		String generatedCustId = generateCustId();
+		
 		click(custSearch.custClearBtn);
 		click(custSearch.custProspectsOnly);
-		String validCustId3 = testdata.get("validCustId3").toString();
+//		String validCustId3 = testdata.get("validCustId3").toString();
 		click(custSearch.custId);
-		input(custSearch.custId, validCustId3);
+		input(custSearch.custId, generatedCustId);
 		click(custSearch.custSearchBtn);
 		
 		click(custSearch.custSelect);
@@ -1361,13 +1470,17 @@ return true;
 		
 		ExtentTestManager.startTest("Select Customer and Open Active Window");
 		Log.info("Select Customer and Open Active Window");
+		
 		//Select Customer and Open Active Window
 		click(custSearch.custClearBtn);
 		click(custSearch.custProspectsOnly);
 //		click(custSearch.custProspectsOnly);
-		String validCustId3 = testdata.get("validCustId3").toString();
+		
+		String generatedCustId = generateCustId();
+		
+//		String validCustId3 = testdata.get("validCustId3").toString();
 		click(custSearch.custId);
-		input(custSearch.custId, validCustId3);
+		input(custSearch.custId, generatedCustId);
 		click(custSearch.custSearchBtn);
 		
 		click(custSearch.custSelect);
@@ -1538,14 +1651,17 @@ return true;
 	
 	
 	public boolean deleteCust(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
+		
 		click(custSearch.custClearBtn);
 		
 		ExtentTestManager.startTest("Delete Customer - Authorized Customer");
 		Log.info("Delete Customer - Authorized Customer");
-		String authorizedCustomer = testdata.get("authorizedCustomer").toString();
-		input(custSearch.custId, authorizedCustomer);
 		
+		String authorizedCustomer = generateCustId();
+		input(custSearch.custId, authorizedCustomer);
+		click(custSearch.custProspectsOnly);
 		click(custSearch.custSearchBtn);
+		
 		click(custSearch.custSelect);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select an authorized customer from the list.");
 		Log.info("Step:01 - Select an authorized customer from the list.");
@@ -1561,18 +1677,27 @@ return true;
 			if(ElementDisplayed(custSearch.deleteAuthorizedPopUpOkBtn)) {
 				ExtentTestManager.getTest().log(Status.PASS, "Validation message displayed: \"Cannot Delete. Authorized Customer.\"");
 				Log.info("Validation message displayed: \"Cannot Delete. Authorized Customer.\"");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
 			}
+			
 		click(custSearch.deleteAuthorizedPopUpOkBtn);
+		
 		ExtentTestManager.endTest();
+		
+		
 		
 		//Verify Validation Message on Delete
 		
 		ExtentTestManager.startTest("Verify Validation Message on Delete");
 		Log.info("Verify Validation Message on Delete");
+		
 		click(custSearch.custClearBtn);
 		input(custSearch.custId, authorizedCustomer);
-		
+		click(custSearch.custProspectsOnly);
 		click(custSearch.custSearchBtn);
+		
 		click(custSearch.custSelect);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select an customer from the list.");
 		Log.info("Step:01 - Select an customer from the list.");
@@ -1589,13 +1714,19 @@ return true;
 		Base_Class.DismissAlert();
 		ExtentTestManager.endTest();
 		
+		
+		
+		
 		//cancel delete
 		click(custSearch.custClearBtn);
+		
 		ExtentTestManager.startTest("Cancel Deletion Confirmation");
 		Log.info("Cancel Deletion Confirmation");
-		input(custSearch.custId, authorizedCustomer);
 		
+		input(custSearch.custId, authorizedCustomer);
+		click(custSearch.custProspectsOnly);
 		click(custSearch.custSearchBtn);
+		
 		click(custSearch.custSelect);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select an authorized customer from the list.");
 		Log.info("Step:01 - Select an authorized customer from the list.");
@@ -1611,16 +1742,25 @@ return true;
 			if(ElementDisplayed(custSearch.custListTable)) {
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Deletion is canceled, customer remains in the list.");
 				Log.info("Expected Result: Deletion is canceled, customer remains in the list.");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
 			}
+			
 			ExtentTestManager.endTest();
+			
+			
 			
 
 			//Click Delete Without Selection
-			click(custSearch.custClearBtn);
-			click(custSearch.custProspectsOnly);
+
 			ExtentTestManager.startTest("Click Delete Without Selection");
 			Log.info("Click Delete Without Selection");
+			
+			click(custSearch.custClearBtn);
+			click(custSearch.custProspectsOnly);
 			click(custSearch.custSearchBtn);
+			
 			click(custSearch.custDeleteBtn);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Delete button without selecting any customer.");
 			Log.info("Step:01 - Click on the Delete button without selecting any customer.");
@@ -1628,8 +1768,13 @@ return true;
 			if(ElementDisplayed(custSearch.deleteWithoutSelectOkBtn)) {
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message displayed, e.g., \"Please select a customer to delete.\"");
 				Log.info("Expected Result: Error message displayed, e.g., \"Please select a customer to delete.\"");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
 			}
+			
 			click(custSearch.deleteWithoutSelectOkBtn);
+			
 			ExtentTestManager.endTest();
 		return true;
 	}
@@ -1641,9 +1786,12 @@ return true;
 		Log.info("Select Customer and Mark - Valid Data");
 		click(custSearch.custProspectsOnly);
 		
-		String validCustId3 = testdata.get("validCustId3").toString();
+		String generatedCustId = generateCustId();
+
+		
+//		String validCustId3 = testdata.get("validCustId3").toString();
 		click(custSearch.custId);
-		input(custSearch.custId, validCustId3);
+		input(custSearch.custId, generatedCustId);
 		
 		click(custSearch.custSearchBtn);
 		
@@ -1811,17 +1959,22 @@ return true;
 		return true;
 	}
 	
-	public boolean expired(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
+	
+	public void expired1(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 		
+		click(custSearch.custSrch);
+
 		//Verify Customer Expire Details
 		
 		ExtentTestManager.startTest("Verify Customer Expire Details");
 		Log.info("Verify Customer Expire Details");
+		
 		click(custSearch.custClearBtn);
 		
-		String validCustId3 = testdata.get("validCustId3").toString();
+		String generatedCustId = generateCustId();
+
 		click(custSearch.custId);
-		input(custSearch.custId, validCustId3);
+		input(custSearch.custId, generatedCustId);
 		click(custSearch.custProspectsOnly);
 		click(custSearch.custSearchBtn);
 		
@@ -1857,46 +2010,65 @@ return true;
 		
 		ExtentTestManager.endTest();
 		
+	}
+	
+	public boolean expired(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		
-		
-		//Select State, Bank ID, Branch ID, Date
-		
-		ExtentTestManager.startTest("Select State, Bank ID, Branch ID, Date");
-		Log.info("Select State, Bank ID, Branch ID, Date");
-		click(custSearch.bankDetailsStateDropDown);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on State drop down.");
-		Log.info("Step:01 - Click on State drop down.");
-		
-		click(custSearch.selectState);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select a State from the drop down.");
-		Log.info("Step:02 - Select a State from the drop down.");
-		
-		click(custSearch.bankDetailsBankIdDropDown);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on Bank ID drop down.");
-		Log.info("Step:03 - Click on Bank ID drop down.");
-		
-		click(custSearch.selectBankId);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Select a Bank ID from the drop down.");
-		Log.info("Step:04 - Select a Bank ID from the drop down.");
-		
-		click(custSearch.bankDetailsBranchIdDropDown);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:05 - Click on Branch ID drop down.");
-		Log.info("Step:05 - Click on Branch ID drop down.");
-		
-		click(custSearch.selectBranchId);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:06 - Select a Branch ID from the drop down.");
-		Log.info("Step:06 - Select a Branch ID from the drop down.");
-		
-		String ifsc = driver.findElement(custSearch.bankDetailsIFSC).getAttribute("value");
-		 if(ifsc.trim().isEmpty()) {
-				ExtentTestManager.getTest().log(Status.FAIL, "IFSC code didn't load");
-				Log.info("IFSC code didn't load");
-		 }
-		 else {
-				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Correct IFSC code - "+ ifsc+" loads when Branch ID is selected." );
-				Log.info("Expected Result: Correct IFSC code - "+ ifsc+" loads when Branch ID is selected." );
-		 }
-		ExtentTestManager.endTest();
+		try {
+			
+			click(custSearch.custSrch);
+			click(custSearch.custClearBtn);
+			
+			String generatedCustId = generateCustId();
+
+			click(custSearch.custId);
+			input(custSearch.custId, generatedCustId);
+			click(custSearch.custProspectsOnly);
+			click(custSearch.custSearchBtn);
+			
+			click(custSearch.custSelect);
+			click(custSearch.custExpiredBtn);
+
+			String expireCustName = driver.findElement(custSearch.expireCustName).getAttribute("value");
+
+			
+			//Select State, Bank ID, Branch ID, Date
+			
+			click(custSearch.bankDetailsStateDropDown);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on State drop down.");
+			Log.info("Step:01 - Click on State drop down.");
+			
+			click(custSearch.selectState);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select a State from the drop down.");
+			Log.info("Step:02 - Select a State from the drop down.");
+			
+			click(custSearch.bankDetailsBankIdDropDown);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on Bank ID drop down.");
+			Log.info("Step:03 - Click on Bank ID drop down.");
+			
+			click(custSearch.selectBankId);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Select a Bank ID from the drop down.");
+			Log.info("Step:04 - Select a Bank ID from the drop down.");
+			
+			click(custSearch.bankDetailsBranchIdDropDown);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:05 - Click on Branch ID drop down.");
+			Log.info("Step:05 - Click on Branch ID drop down.");
+			
+			click(custSearch.selectBranchId);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:06 - Select a Branch ID from the drop down.");
+			Log.info("Step:06 - Select a Branch ID from the drop down.");
+			
+			String ifsc = driver.findElement(custSearch.bankDetailsIFSC).getAttribute("value");
+			 if(ifsc.trim().isEmpty()) {
+					ExtentTestManager.getTest().log(Status.FAIL, "IFSC code didn't load");
+					Log.info("IFSC code didn't load");
+			 }
+			 else {
+					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Correct IFSC code - "+ ifsc+" loads when Branch ID is selected." );
+					Log.info("Expected Result: Correct IFSC code - "+ ifsc+" loads when Branch ID is selected." );
+			 }
+			ExtentTestManager.endTest();
+
 		
 		
 		//Verify IFSC Code After Branch Selection
@@ -2039,7 +2211,14 @@ return true;
 				Log.info("Expected Result: Data is canceled and page redirects to customer search window.");
 				
 				click(custSearch.custClearBtn);
+				
 				ExtentTestManager.endTest();
+				
+		}catch(Exception e) {
+			deleteDuplicates();
+			expired(testdata, context);
+		}
+		
 
 		return true;
 	
@@ -2213,13 +2392,16 @@ return true;
 	//Mark Customer as Expired
 	public void markCustomerAsExpired(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 
+		try {
+			
+		
 			 String generatedCustId = generateCustId();
 		             
-		             
+			 click(custSearch.custSrch);
+			 click(custSearch.custClearBtn);
+			 
 		             //Mark Customer as Expired
-		        	ExtentTestManager.startTest("Mark Customer as Expired");
-//		        	customerSearchWindow();
-		        	Log.info("Mark Customer as Expired");
+
 		        	input(custSearch.custId, generatedCustId);
 		       		 //click(custSearch.custActiveOnly);
 		       		 click(custSearch.custProspectsOnly);
@@ -2235,8 +2417,13 @@ return true;
 		    		
 		    		String expireCustName = driver.findElement(custSearch.expireCustName).getAttribute("value");
 
+		    		//get current transaction date
+		    		click(custSearch.expiredAdditionalInfoCheckBox);
+		    		String expireDate = driver.findElement(custSearch.expiredBalanceAson).getAttribute("value");
+		    		click(custSearch.expiredAdditionalInfoCheckBox);
+		    		
 		    		click(custSearch.expireDate);
-		    		String expireDate = testdata.get("expireDate").toString();
+//		    		String expireDate = testdata.get("expireDate").toString();
 		    		input(custSearch.expireDate, expireDate);
 		    		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter Date in Expire Date field.");
 		    		Log.info("Step:03 - Enter Date in Expire Date field.");
@@ -2246,6 +2433,7 @@ return true;
 		    		ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Enter Remarks in Remarks field.");
 		    		Log.info("Step:04 - Enter Remarks in Remarks field.");
 		    		
+//		    		select("KERALA",custSearch.bankDetailsStateDropDown);
 		    		click(custSearch.bankDetailsStateDropDown);
 		    		ExtentTestManager.getTest().log(Status.PASS, "Step:05 - Click on State drop down.");
 		    		Log.info("Step:05 - Click on State drop down.");
@@ -2254,19 +2442,20 @@ return true;
 		    		ExtentTestManager.getTest().log(Status.PASS, "Step:06 - Select a State from the drop down.");
 		    		Log.info("Step:06 - Select a State from the drop down.");
 		    		
-		    		click(custSearch.bankDetailsBankIdDropDown);
+		    		select("KERALA GRAMIN BANK",custSearch.bankDetailsBankIdDropDown);
+//		    		click(custSearch.bankDetailsBankIdDropDown);
 		    		ExtentTestManager.getTest().log(Status.PASS, "Step:07 - Click on Bank ID drop down.");
 		    		Log.info("Step:07 - Click on Bank ID drop down.");
-		    		
-		    		click(custSearch.selectBankId);
+//		    		click(custSearch.selectBankId);
 		    		ExtentTestManager.getTest().log(Status.PASS, "Step:08 - Select a Bank ID from the drop down.");
 		    		Log.info("Step:08 - Select a Bank ID from the drop down.");
 		    		
-		    		click(custSearch.bankDetailsBranchIdDropDown);
+		    		
+		    		select("ALUR",custSearch.bankDetailsBranchIdDropDown);
+//		    		click(custSearch.bankDetailsBranchIdDropDown);
 		    		ExtentTestManager.getTest().log(Status.PASS, "Step:09 - Click on Branch ID drop down.");
 		    		Log.info("Step:09 - Click on Branch ID drop down.");
-		    		
-		    		click(custSearch.selectBranchId);
+//		    		click(custSearch.selectBranchId);
 		    		ExtentTestManager.getTest().log(Status.PASS, "Step:10 - Select a Branch ID from the drop down.");
 		    		Log.info("Step:10 - Select a Branch ID from the drop down.");
 		    		
@@ -2308,13 +2497,24 @@ return true;
 		    		if(ElementDisplayed(custSearch.savedPopUp)) {
 					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer is marked as expired, confirmation message is displayed.");
 					Log.info("Expected Result: Customer is marked as expired, confirmation message is displayed.");
+					
+					click(custSearch.savedPopUp);
+					click(custSearch.expireCloseBtn);
+					click(custSearch.custClearBtn);
+					
+				}else {
+					ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+					Log.info("ERROR");
 				}
-				click(custSearch.savedPopUp);
-		    		
-				click(custSearch.expireCloseBtn);
-				click(custSearch.custClearBtn);
-		    		ExtentTestManager.endTest();
 
+				
+	    		
+
+		}catch(Exception e) {
+			deleteDuplicates();
+			markCustomerAsExpired(testdata, context);
+		}
+		ExtentTestManager.endTest();
 	}
 	
 	//Enter Remark and Submit
@@ -2409,6 +2609,9 @@ return true;
 	public boolean logout() throws InterruptedException {
 		ExtentTestManager.startTest("Logout");
 		Log.info("Logout");
+		
+		Thread.sleep(4000);
+		
 		click(custSearch.custSignOut);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on 'Signout'");
 		Log.info("Step:01 -  Click on 'Signout'");

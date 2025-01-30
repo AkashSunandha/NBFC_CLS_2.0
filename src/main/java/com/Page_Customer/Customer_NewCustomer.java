@@ -1,11 +1,15 @@
 package com.Page_Customer;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import javax.lang.model.element.Element;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.ListDocument.List;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -79,6 +83,8 @@ public class Customer_NewCustomer extends Base_Class{
 		}
 		
 		ExtentTestManager.endTest();
+
+		
 		
 		
 		
@@ -223,10 +229,19 @@ public class Customer_NewCustomer extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Observe Age field.");
 		Log.info("Step:01 - Observe Age field.");
 		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Correct age is displayed.");
-		Log.info("Expected Result: Correct age is displayed.");
+		String ageValue = driver.findElement(newCustRepo.pdAgeTxtBox).getAttribute("value");
+		System.err.println("Age: " + ageValue);
 		
+		if(!ageValue.isEmpty()) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Correct age " + ageValue +" is displayed.");
+		Log.info("Expected Result: Correct age " + ageValue +" is displayed.");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
 		ExtentTestManager.endTest();
+		
+		
 		
 		
 		//AgeAsOn Input
@@ -240,11 +255,19 @@ public class Customer_NewCustomer extends Base_Class{
 		
 		click(newCustRepo.pdPANTxt);
 		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Manual entry is accepted.");
-		Log.info("Expected Result: Manual entry is accepted.");
+		String ageAsOnValue = driver.findElement(newCustRepo.pdAgeAsOnDatePicker).getAttribute("value");
+		System.err.println("AgeAsOn: " + ageAsOnValue);
+		
+		if(!ageAsOnValue.isEmpty()) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Manual entry is accepted.");
+			Log.info("Expected Result: Manual entry is accepted.");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
 		
 		ExtentTestManager.endTest();
-		
+				
 
 		
 		
@@ -578,8 +601,11 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPopUpAadhaar)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message shown.");
 		Log.info("Expected Result: Error message shown.");
-		}
 		click(newCustRepo.invalidPopUpAadhaar);
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}		
 		
 		ExtentTestManager.endTest();
 		
@@ -620,6 +646,9 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPANNumPopUp)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message shown.");
 		Log.info("Expected Result: Error message shown.");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
 		}
 		click(newCustRepo.invalidPANNumPopUp);
 		
@@ -732,8 +761,12 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidEmailPopUp)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message shown.");
 		Log.info("Expected Result: Error message shown.");
-		}
 		click(newCustRepo.invalidEmailPopUp);
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+		
 		
 		ExtentTestManager.endTest();
 		
@@ -894,6 +927,8 @@ public class Customer_NewCustomer extends Base_Class{
 	    		
 	    		ScrollUntilElementVisible(newCustRepo.saveAndProceedBtn);
 	    		click(newCustRepo.saveAndProceedBtn);
+	    		
+	    		
 	    		ExtentTestManager.endTest();
 	    		
 	        }
@@ -909,8 +944,11 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidMobileNumPopUp)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message shown.");
 		Log.info("Expected Result: Error message shown.");
-		}
 		click(newCustRepo.invalidMobileNumPopUp);
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
 		
 		ExtentTestManager.endTest();
 		
@@ -1065,9 +1103,12 @@ public class Customer_NewCustomer extends Base_Class{
 	    		
 	    		boolean addressPage = ElementDisplayed(newCustRepo.prHouseTxtBox);
 	    		
-	    		if((presentDetailsSavedPopUp && addressPage) == true) {
+	    		if(presentDetailsSavedPopUp == true && addressPage == true ) {
 	    			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Redirected to Address Details tab.");
 	    			Log.info("Expected Result: Redirected to Address Details tab.");
+	    			}else {
+	    				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+	    				Log.info("ERROR");
 	    			}
 	    		
 	    		ExtentTestManager.endTest();
@@ -1075,16 +1116,55 @@ public class Customer_NewCustomer extends Base_Class{
 	        }
 	        
 	    }
-		
-		
-		
-
 
 	}
 	
 	
 	
 	public void alphabeticAndNumericFieldRestrictionCheck(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
+		
+		
+		
+		
+		//Verify Mandatory Field Validation Messages
+		ExtentTestManager.startTest("Verify Mandatory Field Validation Messages");
+		Log.info("Verify Mandatory Field Validation Messages");
+				
+		ScrollUntilElementVisible(newCustRepo.checkAvailabilityBtn);
+		click(newCustRepo.checkAvailabilityBtn);
+		
+		//Navigate to Pop Up Window
+	    String mainWindowHandle0 = driver.getWindowHandle();
+	    boolean popupAppeared0 = false;
+	    for (String handle : driver.getWindowHandles()) {
+	        if (!handle.equals(mainWindowHandle0)) {
+	            driver.switchTo().window(handle);
+//	            driver.manage().window().maximize();
+	            popupAppeared0 = true;
+	            
+	            driver.close();
+	    		driver.switchTo().window(mainWindowHandle0);
+	    		SwitchToFrame(newCustRepo.pdIframe);
+	    		System.out.println("Switched to main window");
+	    		
+	    		ScrollUntilElementVisible(newCustRepo.saveAndProceedBtn);
+	    		click(newCustRepo.saveAndProceedBtn);
+
+	    		if(ElementDisplayed(newCustRepo.invalidPopUpSalutation)) {
+	    			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Appropriate validation messages are displayed.");
+	    			Log.info("Expected Result: Appropriate validation messages are displayed.");
+	    			click(newCustRepo.invalidPopUpSalutation);
+	    		}else {
+	    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+	    			Log.info("ERROR");
+	    		}
+	        }
+	        
+	    }
+		
+		ExtentTestManager.endTest();
+		
+		
 		
 		
 		//Alphabetic Field Restriction Check
@@ -1103,9 +1183,13 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPopUpFirstName)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error messages shown for invalid entry.");
 			Log.info("Expected Result: Error messages shown for invalid entry.");
+			click(newCustRepo.invalidPopUpFirstName);
+			clear(newCustRepo.pdFNameTxtBox);
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
 		}
-		click(newCustRepo.invalidPopUpFirstName);
-		clear(newCustRepo.pdFNameTxtBox);
+
 
 		//Middle Name
 		input(newCustRepo.pdMNameTxtBox,num_Spcl);
@@ -1117,9 +1201,14 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPopUpMiddleName)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error messages shown for invalid entry.");
 			Log.info("Expected Result: Error messages shown for invalid entry.");
+			click(newCustRepo.invalidPopUpMiddleName);
+			clear(newCustRepo.pdMNameTxtBox);
 		}
-		click(newCustRepo.invalidPopUpMiddleName);
-		clear(newCustRepo.pdMNameTxtBox);
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
 		
 		//Last Name
 		input(newCustRepo.pdLNameTxtBox,num_Spcl);
@@ -1131,9 +1220,14 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPopUpLastName)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error messages shown for invalid entry.");
 			Log.info("Expected Result: Error messages shown for invalid entry.");
+			click(newCustRepo.invalidPopUpLastName);
+			clear(newCustRepo.pdLNameTxtBox);
 		}
-		click(newCustRepo.invalidPopUpLastName);
-		clear(newCustRepo.pdLNameTxtBox);
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
 		
 		//Alias Name
 		input(newCustRepo.pdANameTxtBox,num_Spcl);
@@ -1145,9 +1239,14 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPopUpAliasName)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error messages shown for invalid entry.");
 			Log.info("Expected Result: Error messages shown for invalid entry.");
+			click(newCustRepo.invalidPopUpAliasName);
+			clear(newCustRepo.pdANameTxtBox);
 		}
-		click(newCustRepo.invalidPopUpAliasName);
-		clear(newCustRepo.pdANameTxtBox);
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
 		
 		//Father Name
 		input(newCustRepo.pdFatherNameTxtBox,num_Spcl);
@@ -1159,9 +1258,14 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPopUpFatherName)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error messages shown for invalid entry.");
 			Log.info("Expected Result: Error messages shown for invalid entry.");
+			click(newCustRepo.invalidPopUpFatherName);
+			clear(newCustRepo.pdFatherNameTxtBox);
 		}
-		click(newCustRepo.invalidPopUpFatherName);
-		clear(newCustRepo.pdFatherNameTxtBox);
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
 		
 		//Mother Name
 		input(newCustRepo.pdMotherNameTxtBpx,num_Spcl);
@@ -1173,9 +1277,14 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPopUpMotherName)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error messages shown for invalid entry.");
 			Log.info("Expected Result: Error messages shown for invalid entry.");
+			click(newCustRepo.invalidPopUpMotherName);
+			clear(newCustRepo.pdMotherNameTxtBpx);
 		}
-		click(newCustRepo.invalidPopUpMotherName);
-		clear(newCustRepo.pdMotherNameTxtBpx);
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
 		
 		ExtentTestManager.endTest();
 		
@@ -1210,9 +1319,14 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPopUpCKYCId)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error messages shown for invalid entry.");
 			Log.info("Expected Result: Error messages shown for invalid entry.");
+			click(newCustRepo.invalidPopUpCKYCId);
+			clear(newCustRepo.pdCKYCIdTxtBox);
 		}
-		click(newCustRepo.invalidPopUpCKYCId);
-		clear(newCustRepo.pdCKYCIdTxtBox);
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
 		
 		ExtentTestManager.endTest();
 	}
@@ -1237,6 +1351,10 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.pdStartDateTxtBox)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Successfully goes back to the previous tab i.e. Persoanl details tab.");
 			Log.info("Expected Result: Successfully goes back to the previous tab i.e. Persoanl details tab.");
+		}
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
 		}
 		
 		ScrollUntilElementVisible(newCustRepo.saveAndProceedBtn);
@@ -1270,9 +1388,14 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPresentHouseName)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Special characters prompt error mesage.");
 		Log.info("Expected Result: Special characters prompt error mesage.");
-		}
 		click(newCustRepo.invalidPresentHouseName);
 		clear(newCustRepo.prHouseTxtBox);
+		}
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
 		ExtentTestManager.endTest();
 		
 		
@@ -1427,9 +1550,14 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.invalidPresentResidence)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:  Specal characters prompt error mesage.");
 		Log.info("Expected Result:  Specal characters prompt error mesage.");
-		}
 		click(newCustRepo.invalidPresentResidence);
 		clear(newCustRepo.prResidenceTxtBox);
+		}
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
 		
 		//Alpha Numeric
 		String AlphaNumericInput = testdata.get("AlphaNumericInput").toString();
@@ -1546,7 +1674,6 @@ public class Customer_NewCustomer extends Base_Class{
 		ExtentTestManager.endTest();
 		
 		
-		click(newCustRepo.prMailingAddressCheckBox);
 
 		//Use Present Checkbox Functionality
 		ExtentTestManager.startTest("Use Present Checkbox Functionality");
@@ -1563,7 +1690,38 @@ public class Customer_NewCustomer extends Base_Class{
 		if(HouseValue !="" && PINValue !="" && PhoneNumValue !="") {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data from Present is auto-loaded into Permanent section.");
 		Log.info("Expected Result: Data from Present is auto-loaded into Permanent section.");
+		}	
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
 		}
+		ExtentTestManager.endTest();
+		
+		
+
+		//Mailing Address Checkbox Unique Selection
+		ExtentTestManager.startTest("Mailing Address Checkbox Unique Selection");
+		Log.info("Mailing Address Checkbox Unique Selection");
+		
+		click(newCustRepo.prMailingAddress1CheckBox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select 'Mailing Address' in Present section.");
+		Log.info("Step:01 - Select 'Mailing Address' in Present section.");
+		
+		click(newCustRepo.prMailingAddress2CheckBox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Try selecting it in other sections.");
+		Log.info("Step:02 - Try selecting it in other sections.");
+		
+		boolean checkBox1= driver.findElement(newCustRepo.prMailingAddress1CheckBox).isSelected();
+		boolean checkBox2= driver.findElement(newCustRepo.prMailingAddress2CheckBox).isSelected();
+
+		if(checkBox1==true && checkBox2==true) {
+			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: ERROR.");
+			Log.info("Expected Result: ERROR.");
+		}else {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Checkbox can only be selected in one section at a time.");
+			Log.info("Expected Result: Checkbox can only be selected in one section at a time.");
+		}
+		
 		ExtentTestManager.endTest();
 		
 		
@@ -1583,6 +1741,7 @@ public class Customer_NewCustomer extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Buttons are visible and enabled.");
 		Log.info("Expected Result: Buttons are visible and enabled.");
 		}
+		
 		ExtentTestManager.endTest();
 		
 		
@@ -1622,6 +1781,10 @@ public class Customer_NewCustomer extends Base_Class{
 		if(addressSavedPopup==true && introducerWindow==true) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Successfully redirected to Introducer tab.");
 		Log.info("Expected Result: Successfully redirected to Introducer tab.");
+		}
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
 		}
 		
 		ExtentTestManager.endTest();
@@ -1866,6 +2029,10 @@ public class Customer_NewCustomer extends Base_Class{
     			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer details are auto-loaded with 'Int Name': " + IntNameValue1 + " 'Introducer's Address': " + IntroAddressValue1);
     			Log.info("Expected Result: Customer details are auto-loaded with 'Int Name': " + IntNameValue1 + " 'Introducer's Address': " + IntroAddressValue1); 
         		}
+        		else {
+        			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+        			Log.info("ERROR");
+        		}
         		break;
             }
         }
@@ -1921,6 +2088,10 @@ public class Customer_NewCustomer extends Base_Class{
 		if(ElementDisplayed(newCustRepo.introTable)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Active account details shown in grid.");
 			Log.info("Expected Result: Active account details shown in grid.");
+		}
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
 		}
       
 		ExtentTestManager.endTest();
@@ -2000,6 +2171,11 @@ public class Customer_NewCustomer extends Base_Class{
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Details saved, redirected to 'Identity & Area Details' tab.");
 			Log.info("Expected Result: Details saved, redirected to 'Identity & Area Details' tab.");
 		}
+		else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+		
 		ExtentTestManager.endTest();
 		
 		
@@ -2043,7 +2219,6 @@ public class Customer_NewCustomer extends Base_Class{
 		
 		SwitchToFrame(newCustRepo.pdIframe);
 		clear(newCustRepo.aidIdentityNumTxtBox);
-		
 		
 		ExtentTestManager.endTest();
 
@@ -2418,19 +2593,19 @@ public class Customer_NewCustomer extends Base_Class{
 		
 		
 		
-//		//Valid Entry in NRI Field
-//		ExtentTestManager.startTest("Valid Entry in NRI Field");
-//		Log.info("Valid Entry in NRI Field");
-//		
-//		click(newCustRepo.fmNRITxtBox);
-//		input(newCustRepo.fmNRITxtBox, ladies);
-//		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter a valid numerical count in the NRI field.");
-//		Log.info("Step:01 - Enter a valid numerical count in the NRI field.");
-//		
-//		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Field accepts numeric input.");
-//		Log.info("Expected Result: Field accepts numeric input.");
-//		
-//		ExtentTestManager.endTest();
+		//Valid Entry in NRI Field
+		ExtentTestManager.startTest("Valid Entry in NRI Field");
+		Log.info("Valid Entry in NRI Field");
+		
+		click(newCustRepo.fmNRITxtBox);
+		input(newCustRepo.fmNRITxtBox, ladies);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter a valid numerical count in the NRI field.");
+		Log.info("Step:01 - Enter a valid numerical count in the NRI field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Field accepts numeric input.");
+		Log.info("Expected Result: Field accepts numeric input.");
+		
+		ExtentTestManager.endTest();
 		
 		
 		
@@ -2558,21 +2733,6 @@ public class Customer_NewCustomer extends Base_Class{
 		//Relation Dropdown
 		ExtentTestManager.startTest("Relation Dropdown");
 		Log.info("Relation Dropdown");
-		
-		select("FRIEND",newCustRepo.fmRelationDropdown);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a relationship from the Relation dropdown menu.");
-		Log.info("Step:01 - Select a relationship from the Relation dropdown menu.");
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selection is accepted.");
-		Log.info("Expected Result: Selection is accepted.");
-		
-		ExtentTestManager.endTest();
-		
-		
-		
-		//Valid Mobile Number
-		ExtentTestManager.startTest("Valid Mobile Number");
-		Log.info("Valid Mobile Number");
 		
 		select("FRIEND",newCustRepo.fmRelationDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a relationship from the Relation dropdown menu.");
@@ -2719,6 +2879,9 @@ public class Customer_NewCustomer extends Base_Class{
 		ExtentTestManager.startTest("Add Button Functionality");
 		Log.info("Add Button Functionality");
 		
+		click(newCustRepo.fmIsNRICheckBox);
+		System.out.println("Is NRI checkbox selected.");
+		
 		click(newCustRepo.fmAddBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Give all details, Click the Add button.");
 		Log.info("Step:01 - Give all details, Click the Add button.");
@@ -2775,11 +2938,11 @@ public class Customer_NewCustomer extends Base_Class{
 		
 		click(newCustRepo.pdSavedSuccessfullyPopUp);
 		
-		SwitchToFrame(newCustRepo.badIframe);
+		SwitchToFrame(newCustRepo.bdIframe);
 		System.out.println("switched to bank acc details frame");
-		ScrollUntilElementVisible(newCustRepo.badStateDropdown);
+		ScrollUntilElementVisible(newCustRepo.bdStateDropdown);
 
-		boolean bankWndow = ElementDisplayed(newCustRepo.badStateDropdown);
+		boolean bankWndow = ElementDisplayed(newCustRepo.bdStateDropdown);
 
 		if(familySavedSuccessfully==true && bankWndow==true) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Page navigates to \\\"Bank A/c details\\\" tab.");
@@ -2792,7 +2955,7 @@ public class Customer_NewCustomer extends Base_Class{
 		ExtentTestManager.endTest();
 		
 		
-		driver.switchTo().defaultContent();
+//		driver.switchTo().defaultContent();
 	}//end
 	
 	
@@ -2800,12 +2963,65 @@ public class Customer_NewCustomer extends Base_Class{
 	public void bankAccDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 		
 		
+		//Select bank ID and verify Branch ID
+		ExtentTestManager.startTest("Select bank ID and verify Branch ID");
+		Log.info("Select bank ID and verify Branch ID");
+		
+		select("KERALA",newCustRepo.bdStateDropdown);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a state from the 'State' dropdown.");
+		Log.info("Step:01 - Select a state from the 'State' dropdown.");
+		
+		select("AXIS BANK",newCustRepo.bdBankIdDropdown);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select a bank ID from the 'Bank ID' dropdown.");
+		Log.info("Step:02 - Select a bank ID from the 'Bank ID' dropdown.");
+		
+        // Create a Select object and pass the dropdown element to it
+        Select dropdown1 = new Select(driver.findElement(newCustRepo.bdBranchID));
+
+        // Get all options in the dropdown
+        java.util.List<WebElement> options1 = dropdown1.getOptions();
+        int size1 = options1.size();
+        System.out.println("AXIS BANK dropdown size: " + size1);
+        String txt1 = options1.get(1).getText().trim();
+        System.out.println("AXIS BANK Branh ID "+txt1);
+        
+        
+		select("KERALA",newCustRepo.bdStateDropdown);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a state from the 'State' dropdown.");
+		Log.info("Step:01 - Select a state from the 'State' dropdown.");
+		
+		select("KERALA GRAMIN BANK",newCustRepo.bdBankIdDropdown);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select a bank ID from the 'Bank ID' dropdown.");
+		Log.info("Step:02 - Select a bank ID from the 'Bank ID' dropdown.");
+		
+        // Create a Select object and pass the dropdown element to it
+        Select dropdown2 = new Select(driver.findElement(newCustRepo.bdBranchID));
+
+        // Get all options in the dropdown
+        java.util.List<WebElement> options2 = dropdown2.getOptions();
+        int size2 = options2.size();
+        System.out.println("AXIS BANK dropdown size: " + size2);
+        String txt2 = options2.get(1).getText().trim();
+        System.out.println("AXIS BANK Branh ID "+txt2);
+
+		if(size1==size2 | txt1.equals(txt2)) {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}else {
+        	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Branch IDs for selected bank ID are displayed.");
+    		Log.info("Expected Result: Branch IDs for selected bank ID are displayed.");
+        }
+        
+		ExtentTestManager.endTest();
+		
+		
+		
+		
 		//Select state from dropdown 
 		ExtentTestManager.startTest("Select state from dropdown");
 		Log.info("Select state from dropdown");
-		
-//		ScrollUntilElementVisible(newCustRepo.badStateDropdown);
-		select("KERALA",newCustRepo.badStateDropdown);
+
+		select("KERALA",newCustRepo.bdStateDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a state from the 'State' dropdown.");
 		Log.info("Step:01 - Select a state from the 'State' dropdown.");
 		
@@ -2816,12 +3032,11 @@ public class Customer_NewCustomer extends Base_Class{
 		
 		
 		
-		
 		//Select bank ID 
 		ExtentTestManager.startTest("Select bank ID");
 		Log.info("Select bank ID");
 		
-		select("KERALA GRAMIN BANK",newCustRepo.badBankIdDropdown);
+		select("KERALA GRAMIN BANK",newCustRepo.bdBankIdDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a bank ID from the 'Bank ID' dropdown.");
 		Log.info("Step:01 - Select a bank ID from the 'Bank ID' dropdown.");
 		
@@ -2833,29 +3048,1377 @@ public class Customer_NewCustomer extends Base_Class{
 		
 		
 		
-		//Select branch ID 
-		ExtentTestManager.startTest("Select branch ID");
-		Log.info("Select branch ID");
+		//Select Branch ID 
+		ExtentTestManager.startTest("Select Branch ID");
+		Log.info("Select Branch ID");
 		
-		select("ALUR",newCustRepo.badBranchID);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a bank ID from the 'Bank ID' dropdown.");
-		Log.info("Step:01 - Select a bank ID from the 'Bank ID' dropdown.");
+		select("ALUR",newCustRepo.bdBranchID);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a branch ID from the 'Branch ID' dropdown.");
+		Log.info("Step:01 - Select a branch ID from the 'Branch ID' dropdown.");
 		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selected Bank Id is displayed in the field.");
-		Log.info("Expected Result: Selected Bank Id is displayed in the field.");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selected Branch Id is displayed in the field.");
+		Log.info("Expected Result: Selected Branch Id is displayed in the field.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+
+		//Select Branch ID and verify IFSC code
+		ExtentTestManager.startTest("Select Branch ID and verify IFSC code");
+		Log.info("Select Branch ID and verify IFSC code");
+		
+		String IFSCCodeAutoFillValue = driver.findElement(newCustRepo.bdIFSCTxtBox).getAttribute("value");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a branch ID from the 'Branch ID' dropdown, Observe the 'IFSC' field.");
+		Log.info("Step:01 - Select a branch ID from the 'Branch ID' dropdown, Observe the 'IFSC' field.");
+		
+		if(IFSCCodeAutoFillValue!="") {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: IFSC Code: " + IFSCCodeAutoFillValue + " is auto-loaded accurately for selected Branch ID.");
+			Log.info("Expected Result: IFSC Code: " + IFSCCodeAutoFillValue + " is auto-loaded accurately for selected Branch ID.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+
+
+		ExtentTestManager.endTest();
+		
+		
+
+		//Entering invalid data formats
+		ExtentTestManager.startTest("Entering invalid data formats");
+		Log.info("Entering invalid data formats");
+		
+		String invalidData = testdata.get("specialCharInput").toString();
+		input(newCustRepo.bdCustName,invalidData);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter invalid data in a field that requires a specific format.");
+		Log.info("Step:01 - Enter invalid data in a field that requires a specific format.");
+		
+		click(newCustRepo.bdStartDateTxt);
+		
+		if(ElementDisplayed(newCustRepo.bdInvalidCustNamePopUp)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message indicates data format issue.");
+		Log.info("Expected Result: Error message indicates data format issue.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		click(newCustRepo.bdInvalidCustNamePopUp);
+		clear(newCustRepo.bdCustName);
+		ExtentTestManager.endTest();
+		
+		
+		
+
+		//Enter customer name
+		ExtentTestManager.startTest("Enter customer name");
+		Log.info("Enter customer name");
+		
+		String custName = testdata.get("guardian").toString();
+		input(newCustRepo.bdCustName,custName);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter a customer name in the 'Cust Name' field.");
+		Log.info("Step:01 - Enter a customer name in the 'Cust Name' field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer name is accepted.");
+		Log.info("Expected Result: Customer name is accepted.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+
+		//Enter customer address
+		ExtentTestManager.startTest("Enter customer address");
+		Log.info("Enter customer address");
+		
+		String address = testdata.get("addressPresentHouse").toString();
+		input(newCustRepo.bdAddressTxtBox,address);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter an address in the 'Address' field.");
+		Log.info("Step:01 - Enter an address in the 'Address' field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Address is accepted.");
+		Log.info("Expected Result: Address is accepted.");
+		
+		ExtentTestManager.endTest();
+
+		
+		
+
+		//Enter bank account no and retype it
+		ExtentTestManager.startTest("Enter bank account no and retype it");
+		Log.info("Enter bank account no and retype it");
+		
+		String accNum = testdata.get("validBankAccNum").toString();
+		input(newCustRepo.bdBankAccNumTxtBox,accNum);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter an account number in 'BankAccNo'.");
+		Log.info("Step:01 - Enter an account number in 'BankAccNo'.");
+		
+		input(newCustRepo.bdRetypeAccNumTxtBox,accNum);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Retype the account number in 'Retype AccNo'.");
+		Log.info("Step:02 - Retype the account number in 'Retype AccNo'.");
+		
+		click(newCustRepo.bdStartDateTxt);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Both account numbers match and are accepted.");
+		Log.info("Expected Result: Both account numbers match and are accepted.");
 		
 		ExtentTestManager.endTest();
 		
 		
 		
 		
+		//Select BankAccID from dropdown
+		ExtentTestManager.startTest("Select BankAccID from dropdown");
+		Log.info("Select BankAccID from dropdown");
+		
+		select("OTHER",newCustRepo.bdBankAccIdDropdown);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select BankAccID from the dropdown menu.");
+		Log.info("Step:01 - Select BankAccID from the dropdown menu.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: BankAccID is selected.");
+		Log.info("Expected Result: BankAccID is selected.");
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		
+		//Manually enter start date
+		ExtentTestManager.startTest("Manually enter start date");
+		Log.info("Manually enter start date");
+		
+		click(newCustRepo.bdStartDate);
+		String startDate = testdata.get("issueDate").toString();
+		input(newCustRepo.bdStartDate, startDate);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Focus on 'Start Date' field, Enter a date manually.");
+		Log.info("Step:01 - Focus on 'Start Date' field, Enter a date manually.");
+		
+		click(newCustRepo.bdStartDateTxt);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Start date is accepted.");
+		Log.info("Expected Result: Start date is accepted.");
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		
+		//Select 'Additional Information' check box
+		ExtentTestManager.startTest("Select 'Additional Information' checkbox");
+		Log.info("Select 'Additional Information' checkbox");
+		
+		click(newCustRepo.bdAddInfoCheckBox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Tick the 'Additional Information' checkbox.");
+		Log.info("Step:01 - Tick the 'Additional Information' checkbox.");
+		
+		boolean balanceAsOnDisplayed = ElementDisplayed(newCustRepo.bdBalanceAsOn);
+		boolean NotMentionedDisplayed = ElementDisplayed(newCustRepo.bdNotMentionedCheckBox);		
+		boolean balanceDisplayed = ElementDisplayed(newCustRepo.bdBalanceTxtBox);
+		boolean CreditCardDisplayed = ElementDisplayed(newCustRepo.bdCreditCardCheckBox);
+		boolean CreditCardNumDisplayed = ElementDisplayed(newCustRepo.bdCreditCardNumTxtBox);
+		
+		if(balanceAsOnDisplayed==true && NotMentionedDisplayed==true 
+				&& balanceDisplayed==true && CreditCardDisplayed==true 
+				&& CreditCardNumDisplayed==true) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Additional fields are displayed: Balance As On, Balance, Credit Card, Credit Card No, Not Mentioned.");
+			Log.info("Expected Result: Additional fields are displayed: Balance As On, Balance, Credit Card, Credit Card No, Not Mentioned.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		//Verify disabling of additional fields
+		ExtentTestManager.startTest("Verify disabling of additional fields");
+		Log.info("Verify disabling of additional fields");
+		
+		
+		click(newCustRepo.bdAddInfoCheckBox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Untick the 'Additional Information' checkbox.");
+		Log.info("Step:01 - Untick the 'Additional Information' checkbox.");
+		
+
+		try {
+			boolean balanceAsOnDisplayed1 = ElementDisplayed(newCustRepo.bdBalanceAsOn);
+			if(balanceAsOnDisplayed1==true) {
+	        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+	    		Log.info("ERROR");
+			}
+		}catch(Exception e) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Additional fields are disabled.");
+			Log.info("Expected Result: Additional fields are disabled.");
+		}
+		
+		ExtentTestManager.endTest();
 		
 		
 		
 		
+		//Verify 'Add' button presence and enable state
+		ExtentTestManager.startTest("Verify 'Add' button presence and enable state");
+		Log.info("Verify 'Add' button presence and enable state");
+		
+		boolean addBtnstatus = ElementEnabled(newCustRepo.bdAddBtn);
+		System.out.println("add button status= "+addBtnstatus);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Observe 'Add' button.");
+		Log.info("Step:01 - Observe 'Add' button.");
+		
+		if(addBtnstatus==true) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Add button is present and enable.");
+		Log.info("Expected Result: Add button is present and enable.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Add details and verify reflection in grid
+		ExtentTestManager.startTest("Add details and verify reflection in grid");
+		Log.info("Add details and verify reflection in grid");
+		
+		click(newCustRepo.bdAddBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the 'Add' button, Observe the grid in 'Bank A/c Details'.");
+		Log.info("Step:01 - Click the 'Add' button, Observe the grid in 'Bank A/c Details'.");
+		
+		if(ElementDisplayed(newCustRepo.bdBankDetailsSavedGrid)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Details are correctly displayed in the grid.");
+			Log.info("Expected Result: Details are correctly displayed in the grid.");
+			}else {
+	        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+	    		Log.info("ERROR");
+	        }
+			
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Enter DPID in Demat A/c Details
+		ExtentTestManager.startTest("Enter DPID in Demat A/c Details");
+		Log.info("Enter DPID in Demat A/c Details");
+		
+		String DPID = testdata.get("pin").toString();
+		input(newCustRepo.bdDPIDTxtBox, DPID);		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter a DPID in the 'DPID' field.");
+		Log.info("Step:01 - Enter a DPID in the 'DPID' field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: DPID is accepted (non-mandatory).");
+		Log.info("Expected Result: DPID is accepted (non-mandatory).");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Enter Demat AcNo in Demat A/c Details
+		ExtentTestManager.startTest("Enter Demat AcNo in Demat A/c Details");
+		Log.info("Enter Demat AcNo in Demat A/c Details");
+		
+		String dematAccNum = testdata.get("validPhoneNum").toString();
+		input(newCustRepo.bdDematAccNumTxtBox, dematAccNum);		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter a Demat AcNo in the 'Demat AcNo' field.");
+		Log.info("Step:01 - Enter a Demat AcNo in the 'Demat AcNo' field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Demat AcNo is accepted (non-mandatory).");
+		Log.info("Expected Result: Demat AcNo is accepted (non-mandatory).");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify 'Save and Proceed' and 'Previous' button enabled
+		ExtentTestManager.startTest("Verify 'Save and Proceed' and 'Previous' button enabled");
+		Log.info("Verify 'Save and Proceed' and 'Previous' button enabled");
+		
+		boolean previousBtnstatus = ElementEnabled(newCustRepo.bdPreviousBtn);
+		System.out.println("previous button status= "+previousBtnstatus);
+		boolean saveAndProBtnstatus = ElementEnabled(newCustRepo.bdProceedBtn);
+		System.out.println("save & proceed button status= "+saveAndProBtnstatus);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Observe the 'Save and Proceed' and 'Previous' buttons.");
+		Log.info("Step:01 - Observe the 'Save and Proceed' and 'Previous' buttons.");
+		
+		if(previousBtnstatus==true && saveAndProBtnstatus==true) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Both buttons are enabled.");
+		Log.info("Expected Result: Both buttons are enabled.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Click 'Save and Proceed' and verify redirection
+		ExtentTestManager.startTest("Click 'Save and Proceed' and verify redirection");
+		Log.info("Click 'Save and Proceed' and verify redirection");
+		
+		click(newCustRepo.bdProceedBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Save and Proceed'.");
+		Log.info("Step:01 - Click 'Save and Proceed'.");
+		
+		driver.switchTo().defaultContent();
+		
+		boolean externalAccDetailsSavedSuccessfully = ElementDisplayed(newCustRepo.pdSavedSuccessfullyPopUp);
+		
+		click(newCustRepo.pdSavedSuccessfullyPopUp);
+		
+		SwitchToFrame(newCustRepo.visitsIframe);
+		System.out.println("switched to visits frame");
+		ScrollUntilElementVisible(newCustRepo.vNoVisitsCheckBox);
+
+		boolean visitsWndow = ElementDisplayed(newCustRepo.vNoVisitsCheckBox);
+
+		if(externalAccDetailsSavedSuccessfully==true && visitsWndow==true) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is redirected to the 'Visits' tab.");
+			Log.info("Expected Result: User is redirected to the 'Visits' tab.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+		
+
+		
+	}//end
+	
+	
+	
+	public void visits(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
+			
+		
+		//Checking validation
+		ExtentTestManager.startTest("Checking validation");
+		Log.info("Checking validation");
+		
+		click(newCustRepo.vProceedBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the save and proceed button without any details .");
+		Log.info("Step:01 - Click the save and proceed button without any details .");
+		
+		driver.switchTo().defaultContent();
+		
+		if(ElementDisplayed(newCustRepo.bdBnkAccNumMismatchOkBtn)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Validation mesage displayed \"Please enter the visited details\"");
+		Log.info("Expected Result: Validation mesage displayed \"Please enter the visited details\"");
+		
+		click(newCustRepo.bdBnkAccNumMismatchOkBtn);
+		}
+		else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+		}
+		
+		SwitchToFrame(newCustRepo.visitsIframe);
+
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Tick "No Visit" Checkbox
+		ExtentTestManager.startTest("Tick \"No Visit\" Checkbox");
+		Log.info("Tick \"No Visit\" Checkbox");
+		
+		click(newCustRepo.vNoVisitsCheckBox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Tick \"No Visit\" checkbox.");
+		Log.info("Step:01 - Tick \"No Visit\" checkbox.");
+		
+		try {
+		boolean addNewVisible = ElementEnabled(newCustRepo.vCountryDropdwon);
+		System.out.println("button status = "+addNewVisible);
+		
+    	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+		Log.info("ERROR");
+		}
+		catch(Exception e) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: \"Add New\" section gets disabled.");
+			Log.info("Expected Result: \"Add New\" section gets disabled.");
+		}
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Save and Proceed with "No Visit"
+		ExtentTestManager.startTest("Save and Proceed with \"No Visit\"");
+		Log.info("Save and Proceed with \"No Visit\"");
+		
+		click(newCustRepo.vProceedBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the save and proceed button.");
+		Log.info("Step:01 - Click the save and proceed button.");
+		
+		driver.switchTo().defaultContent();
+		
+		click(newCustRepo.pdSavedSuccessfullyPopUp);
+		
+		SwitchToFrame(newCustRepo.visitsIframe);
+		System.out.println("switched to risk & other details frame");
+		ScrollUntilElementVisible(newCustRepo.rdRiskIdDropdown);
+
+		boolean riskotherdetailsWndow0 = ElementDisplayed(newCustRepo.rdRiskIdDropdown);
+
+		if(riskotherdetailsWndow0==true) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Redirected to \"Risk & Other Details\" tab.");
+			Log.info("Expected Result: Redirected to \"Risk & Other Details\" tab.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ScrollUntilElementVisible(newCustRepo.rdPreviousBtn);
+		click(newCustRepo.rdPreviousBtn);
+
+//		SwitchToFrame(newCustRepo.visitsIframe);
+		System.out.println("switched back to visits frame");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//"No Visit" Check box
+		ExtentTestManager.startTest("'No Visit' Checkbox");
+		Log.info("'No Visit'Checkbox");
+		
+		ScrollUntilElementVisible(newCustRepo.vNoVisitsCheckBox);
+		click(newCustRepo.vNoVisitsCheckBox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Do not select  \"No Visit\" checkbox.");
+		Log.info("Step:01 - Do not select  \"No Visit\" checkbox.");
+		
+		boolean addNewVisible = ElementEnabled(newCustRepo.vCountryDropdwon);
+		System.out.println("button status= "+addNewVisible);
+		boolean visaDetailsVisible = ElementEnabled(newCustRepo.vVisaNumTxtBox);
+		System.out.println("button status= "+visaDetailsVisible);
+				
+		if(addNewVisible==true && visaDetailsVisible==true) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: \"Add New\" and \"Visa Details\" section gets enabled.");
+		Log.info("Expected Result: \"Add New\" and \"Visa Details\" section gets enabled.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Select Country from Dropdown
+		ExtentTestManager.startTest("Select Country from Dropdown");
+		Log.info("Select Country from Dropdown");
+		
+		select("JAPAN",newCustRepo.vCountryDropdwon);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a country from the \"Country\" dropdown.");
+		Log.info("Step:01 - Select a country from the \"Country\" dropdown.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Country is selected successfully.");
+		Log.info("Expected Result: Country is selected successfully.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Enter "No of Times" Value
+		ExtentTestManager.startTest("Enter \"No of Times\" Value");
+		Log.info("Enter \"No of Times\" Value");
+		
+		String visitingCount = testdata.get("gents").toString();
+		input(newCustRepo.vNoOfTimesTxtBox, visitingCount);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter a visiting count in \"No of Times\".");
+		Log.info("Step:01 - Enter a visiting count in \"No of Times\".");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Value is entered correctly.");
+		Log.info("Expected Result: Value is entered correctly.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Manual Entry in "Last Date" Field
+		ExtentTestManager.startTest("Manual Entry in \"Last Date\" Field");
+		Log.info("Manual Entry in \"Last Date\" Field");
+		
+		click(newCustRepo.vLastDateTxtBox);
+		String lastDate = testdata.get("DOB").toString();
+		input(newCustRepo.vLastDateTxtBox, lastDate);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Manually enter a date in \"Last Date\" field.");
+		Log.info("Step:01 - Manually enter a date in \"Last Date\" field.");
+		
+		click(newCustRepo.vPurposeTxt);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Date is entered successfully.");
+		Log.info("Expected Result: Date is entered successfully.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Enter Purpose
+		ExtentTestManager.startTest("Enter Purpose");
+		Log.info("Enter Purpose");
+		
+		String purpose = testdata.get("remark").toString();
+		input(newCustRepo.vPurposeTxtBox, purpose);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter text in \"Purpose\" field.");
+		Log.info("Step:01 - Enter text in \"Purpose\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Purpose is recorded correctly.");
+		Log.info("Expected Result: Purpose is recorded correctly.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Enter Remarks
+		ExtentTestManager.startTest("Enter Remarks");
+		Log.info("Enter Remarks");
+		
+		input(newCustRepo.vRemarksTxtBox, purpose);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter text in \"Remarks\" field.");
+		Log.info("Step:01 - Enter text in \"Remarks\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Remarks is recorded correctly.");
+		Log.info("Expected Result: Remarks is recorded correctly.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Add Details and Verify Grid Update
+		ExtentTestManager.startTest("Add Details and Verify Grid Update");
+		Log.info("Add Details and Verify Grid Update");
+		
+		click(newCustRepo.vaNewAddBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Add\" button, Verify details in grid.");
+		Log.info("Step:01 - Click \"Add\" button, Verify details in grid.");
+		
+		if(ElementDisplayed(newCustRepo.vaAddNewGrid)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Details appear in grid.");
+			Log.info("Expected Result: Details appear in grid.");
+			}else {
+	        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+	    		Log.info("ERROR");
+	        }
+			
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Enter "Visa No."
+		ExtentTestManager.startTest("Enter \"Visa No.\"");
+		Log.info("Enter \"Visa No.\"");
+		
+		input(newCustRepo.vVisaNumTxtBox, purpose);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter Visa No.");
+		Log.info("Step:01 - Enter Visa No.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Visa No. entered successfully.");
+		Log.info("Expected Result: Visa No. entered successfully.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Manual Entry in "Visa Expire Date" Field
+		ExtentTestManager.startTest("Manual Entry in \"Visa Expire Date\" Field");
+		Log.info("Manual Entry in \"Visa Expire Date\" Field");
+		
+		click(newCustRepo.vVisaExpireDate);
+		String expireDate = testdata.get("validUptoDate").toString();
+		input(newCustRepo.vVisaExpireDate, expireDate);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Manually enter a date in \"Visa Expire Date\" field.");
+		Log.info("Step:01 - Manually enter a date in \"Visa Expire Date\" field.");
+		
+		click(newCustRepo.vPurposeTxt);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Date is entered successfully.");
+		Log.info("Expected Result: Date is entered successfully.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Select Country in "Visa Details"
+		ExtentTestManager.startTest("Select Country in \"Visa Details\"");
+		Log.info("Select Country in \"Visa Details\"");
+		
+		select("JAPAN",newCustRepo.vdCountryDropdown);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a country from the \"Country\" dropdown.");
+		Log.info("Step:01 - Select a country from the \"Country\" dropdown.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Country is selected successfully.");
+		Log.info("Expected Result: Country is selected successfully.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Add Visa Details and Verify Grid Update
+		ExtentTestManager.startTest("Add Visa Details and Verify Grid Update");
+		Log.info("Add Visa Details and Verify Grid Update");
+		
+		click(newCustRepo.vdAddBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Add\" button, Verify visa details in grid.");
+		Log.info("Step:01 - Click \"Add\" button, Verify visa details in grid.");
+		
+		if(ElementDisplayed(newCustRepo.vdVisaDetailsGrid)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Visa Details appear in grid.");
+			Log.info("Expected Result: Visa Details appear in grid.");
+			}else {
+	        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+	    		Log.info("ERROR");
+	        }
+			
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Navigation Buttons Enabled
+		ExtentTestManager.startTest("Verify Navigation Buttons Enabled");
+		Log.info("Verify Navigation Buttons Enabled");
+		
+		boolean previousBtnstatus = ElementEnabled(newCustRepo.vPreviousBtn);
+		System.out.println("previous button status= "+previousBtnstatus);
+		boolean saveAndProBtnstatus = ElementEnabled(newCustRepo.vProceedBtn);
+		System.out.println("save & proceed button status= "+saveAndProBtnstatus);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Check \"Save and Proceed\" and \"Previous\" buttons.");
+		Log.info("Step:01 - Check \"Save and Proceed\" and \"Previous\" buttons.");
+		
+		if(previousBtnstatus==true && saveAndProBtnstatus==true) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Both buttons are enabled.");
+		Log.info("Expected Result: Both buttons are enabled.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Click 'Save and Proceed'
+		ExtentTestManager.startTest("Click 'Save and Proceed'");
+		Log.info("Click 'Save and Proceed'");
+		
+		click(newCustRepo.vProceedBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Save and Proceed'.");
+		Log.info("Step:01 - Click 'Save and Proceed'.");
+		
+		driver.switchTo().defaultContent();
+		
+		boolean visitDetailsSavedSuccessfully = ElementDisplayed(newCustRepo.pdSavedSuccessfullyPopUp);
+		
+		click(newCustRepo.pdSavedSuccessfullyPopUp);
+		
+		SwitchToFrame(newCustRepo.visitsIframe);
+		System.out.println("switched to risk & other details frame");
+		ScrollUntilElementVisible(newCustRepo.rdRiskIdDropdown);
+
+		boolean riskotherdetailsWndow = ElementDisplayed(newCustRepo.rdRiskIdDropdown);
+
+		if(visitDetailsSavedSuccessfully==true && riskotherdetailsWndow==true) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Redirected to \"Risk & Other Details\" tab.");
+			Log.info("Expected Result: Redirected to \"Risk & Other Details\" tab.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+
+//		driver.switchTo().defaultContent();
+
+	}//end
+	
+	
+	
+	public void riskAndOtherDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
+
+		
+		
+		//Verify Dropdown Selection for "Risk Id"
+		ExtentTestManager.startTest("Verify Dropdown Selection for \"Risk Id\"");
+		Log.info("Verify Dropdown Selection for \"Risk Id\"");
+		
+		ScrollUntilElementVisible(newCustRepo.rdRiskIdDropdown);
+		select("LOW",newCustRepo.rdRiskIdDropdown);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a Risk Id from the dropdown list.");
+		Log.info("Step:01 - Select a Risk Id from the dropdown list.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Risk Id is selectable from the list.");
+		Log.info("Expected Result: Risk Id is selectable from the list.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify "Remarks" Field Input
+		ExtentTestManager.startTest("Verify \"Remarks\" Field Input");
+		Log.info("Verify \"Remarks\" Field Input");
+		
+		String remarks = testdata.get("remark").toString();
+		input(newCustRepo.rdRemarksTxtBox, remarks);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"ABC123%%\" in the \"Remarks\" field.");
+		Log.info("Step:01 - Enter \"ABC123%%\" in the \"Remarks\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Input is accepted as entered.");
+		Log.info("Expected Result: Input is accepted as entered.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify "ActiveSpecialInstruction" Field Input
+		ExtentTestManager.startTest("Verify \"ActiveSpecialInstruction\" Field Input");
+		Log.info("Verify \"ActiveSpecialInstruction\" Field Input");
+		
+		String activeSpecialInstruction = testdata.get("activeSpecialInstr").toString();
+		input(newCustRepo.rdActiveSpecialInstrTxtBox, activeSpecialInstruction);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"qwe$55\" in the \"ActiveSpecialInstruction\" field.");
+		Log.info("Step:01 - Enter \"qwe$55\" in the \"ActiveSpecialInstruction\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Input is accepted as entered.");
+		Log.info("Expected Result: Input is accepted as entered.");
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		
+		//Toggle "Suspecious" Checkbox
+		ExtentTestManager.startTest("Toggle \"Suspecious\" Checkbox");
+		Log.info("Toggle \"Suspecious\" Checkbox");
+		
+		click(newCustRepo.rdSuspeciousCheckBox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Check/uncheck \"Suspecious\" checkbox based on conditions");
+		Log.info("Step:01 - Check/uncheck \"Suspecious\" checkbox based on conditions");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Checkbox can be toggled correctly.");
+		Log.info("Expected Result: Checkbox can be toggled correctly.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify "AML Status" Field Input
+		ExtentTestManager.startTest("Verify \"AML Status\" Field Input");
+		Log.info("Verify \"AML Status\" Field Input");
+		
+		input(newCustRepo.rdAMLStatusTxtBox, activeSpecialInstruction);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid AML Status in the field.");
+		Log.info("Step:01 - Enter valid AML Status in the field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Input is accepted as entered.");
+		Log.info("Expected Result: Input is accepted as entered.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Numeric Input in "Cibil Score" Field
+		ExtentTestManager.startTest("Verify Numeric Input in \"Cibil Score\" Field");
+		Log.info("Verify Numeric Input in \"Cibil Score\" Field");
+		
+		String cibilScore = testdata.get("invalidPhoneNum").toString();
+		input(newCustRepo.rdCibilScoreTxtBox, cibilScore);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"123\" in the \"Cibil Score\" field.");
+		Log.info("Step:01 - Enter \"123\" in the \"Cibil Score\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is accepted.");
+		Log.info("Expected Result: Numeric input is accepted.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Numeric Input in "Entity DetailsID" Field
+		ExtentTestManager.startTest("Verify Numeric Input in \"Entity DetailsID\" Field");
+		Log.info("Verify Numeric Input in \"Entity DetailsID\" Field");
+		
+		String  entityDetailsID  = testdata.get("entityDetailsID").toString();
+		input(newCustRepo.rdentityDetailsIDTxtBox, entityDetailsID);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"678\" in the \"Entity DetailsID\" field.");
+		Log.info("Step:01 - Enter \"678\" in the \"Entity DetailsID\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is accepted.");
+		Log.info("Expected Result: Numeric input is accepted.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Not Allowed Input in "Percentage Of ShareHolding" Field
+		ExtentTestManager.startTest("Verify Not Allowed Input in \"Percentage Of ShareHolding\" Field");
+		Log.info("Verify Not Allowed Input in \"Percentage Of ShareHolding\" Field");
+		
+		String  invalidInput  = testdata.get("activeSpecialInstr").toString();
+		input(newCustRepo.rdpercentageOfShareHoldingTxtBox, invalidInput);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"bccc^&%^\" in the \"Percentage Of ShareHolding\" field.");
+		Log.info("Step:01 - Enter \"bccc^&%^\" in the \"Percentage Of ShareHolding\" field.");
+		
+		click(newCustRepo.rdYearTxt); 
+		
+		if(ElementDisplayed(newCustRepo.rdInvalidPercentagePopUp)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Alphabetic/special char input is rejected, possible to enter only nmbers and not possible to enter Alphabetic/special characters.");
+			Log.info("Expected Result: Alphabetic/special char input is rejected, possible to enter only nmbers and not possible to enter Alphabetic/special characters.");
+			click(newCustRepo.rdInvalidPercentagePopUp);
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+
+		
+		clear(newCustRepo.rdpercentageOfShareHoldingTxtBox);
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Numeric Input in "Percentage Of ShareHolding" Field
+		ExtentTestManager.startTest("Verify Numeric Input in \"Percentage Of ShareHolding\" Field");
+		Log.info("Verify Numeric Input in \"Percentage Of ShareHolding\" Field");
+		
+		String  percentageOfShareHolding  = testdata.get("percentageOfShareHolding").toString();
+		input(newCustRepo.rdpercentageOfShareHoldingTxtBox, percentageOfShareHolding);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"67654\" in the \"Percentage Of ShareHolding\" field.");
+		Log.info("Step:01 - Enter \"67654\" in the \"Percentage Of ShareHolding\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is accepted.");
+		Log.info("Expected Result: Numeric input is accepted.");
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		
+		//Toggle "Declaration Marked" Checkbox
+		ExtentTestManager.startTest("Toggle \"Declaration Marked\" Checkbox");
+		Log.info("Toggle \"Declaration Marked\" Checkbox");
+		
+		click(newCustRepo.rdDeclarationMarkedCheckBox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Check/uncheck \"Declaration Marked\" checkbox based on conditions");
+		Log.info("Step:01 - Check/uncheck \"Declaration Marked\" checkbox based on conditions");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Checkbox can be toggled correctly.");
+		Log.info("Expected Result: Checkbox can be toggled correctly.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Inputs in "Award Name" Field
+		ExtentTestManager.startTest("Verify Inputs in \"Award Name\" Field");
+		Log.info("Verify Inputs in \"Award Name\" Field");
+		
+		String  awardName  = testdata.get("activeSpecialInstr").toString();
+		input(newCustRepo.rdAwardNameTxtBox, awardName);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"ghjkl\", \"655\", \"^&*\" in the \"Award Name\" field.");
+		Log.info("Step:01 - Enter \"ghjkl\", \"655\", \"^&*\" in the \"Award Name\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Inputs are accepted as per rules.");
+		Log.info("Expected Result: Inputs are accepted as per rules.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Inputs in "Award Provided By" Field
+		ExtentTestManager.startTest("Verify Inputs in \"Award Provided By\" Field");
+		Log.info("Verify Inputs in \"Award Provided By\" Field");
+		
+		input(newCustRepo.rdAwardProvidedByTxtBox, awardName);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"abc\", \"123\", \"%^&\" in the \"Award Provided By\" field.");
+		Log.info("Step:01 - Enter \"abc\", \"123\", \"%^&\" in the \"Award Provided By\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Inputs are accepted as per rules.");
+		Log.info("Expected Result: Inputs are accepted as per rules.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Numeric Input in "Year" Field
+		ExtentTestManager.startTest("Verify Numeric Input in \"Year\" Field");
+		Log.info("Verify Numeric Input in \"Year\" Field");
+		
+		String  year  = testdata.get("year").toString();
+		input(newCustRepo.rdYearTxtBox, year);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"2010\" in the \"Year\" field.");
+		Log.info("Step:01 - Enter \"2010\" in the \"Year\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is accepted.");
+		Log.info("Expected Result: Numeric input is accepted.");
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		
+		//Verify Adding Details in "Award Details" Section
+		ExtentTestManager.startTest("Verify Adding Details in \"Award Details\" Section");
+		Log.info("Verify Adding Details in \"Award Details\" Section");
+		
+		click(newCustRepo.rdAddBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Verify the grid for entered details post clicking Add.");
+		Log.info("Step:01 - Verify the grid for entered details post clicking Add.");
+		
+		if(ElementDisplayed(newCustRepo.rdAwardDetailsGrid)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Details are displayed in \"Award Details\" Section grid.");
+			Log.info("Expected Result: Details are displayed in \"Award Details\" Section grid.");
+		}
+		else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Numeric Input in "Industry Code" Field
+		ExtentTestManager.startTest("Verify Numeric Input in \"Industry Code\" Field");
+		Log.info("Verify Numeric Input in \"Industry Code\" Field");
+		
+		String industryCode  = testdata.get("industryCode").toString();
+		input(newCustRepo.rdIndustryCodeTxtBox, industryCode);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"100\" in the \"Industry Code\" field.");
+		Log.info("Step:01 - Enter \"100\" in the \"Industry Code\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is accepted.");
+		Log.info("Expected Result: Numeric input is accepted.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Numeric Input in "Business Sector Code" Field
+		ExtentTestManager.startTest("Verify Numeric Input in \"Business Sector Code\" Field");
+		Log.info("Verify Numeric Input in \"Business Sector Code\" Field");
+		
+		String  businessSectorCode  = testdata.get("businessSectorCode").toString();
+		input(newCustRepo.rdbusinessSectorCodeTxtBox, businessSectorCode);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"1001\" in the \"Business Sector Code\" field.");
+		Log.info("Step:01 - Enter \"1001\" in the \"Business Sector Code\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is accepted.");
+		Log.info("Expected Result: Numeric input is accepted.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Numeric Input in "Experience In Year" Field
+		ExtentTestManager.startTest("Verify Numeric Input in \"Experience In Year\" Field");
+		Log.info("Verify Numeric Input in \"Experience In Year\" Field");
+		
+		String  experienceInYear  = testdata.get("experienceInYear").toString();
+		input(newCustRepo.rdExperienceInYear, experienceInYear);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter \"2020\" in the \"Experience In Year\" field.");
+		Log.info("Step:01 - Enter \"2020\" in the \"Experience In Year\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is accepted.");
+		Log.info("Expected Result: Numeric input is accepted.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify "Remarks" Field Input
+		ExtentTestManager.startTest("Verify \"Remarks\" Field Input");
+		Log.info("Verify \"Remarks\" Field Input");
+		
+		String  remarks1  = testdata.get("remark").toString();
+		input(newCustRepo.rdRemarks1TxtBox, remarks1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Give the remarks as \"ghh^^&55\" in the \"Remarks\" field.");
+		Log.info("Step:01 - Give the remarks as \"ghh^^&55\" in the \"Remarks\" field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Input is accepted as entered.");
+		Log.info("Expected Result: Input is accepted as entered.");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		ScrollUntilElementVisible(newCustRepo.rdSaveAndProceedBtn);
+		
+		
+		
+		//Verify Manual Date Entry in Date Fields
+		ExtentTestManager.startTest("Verify Manual Date Entry in Date Fields");
+		Log.info("Verify Manual Date Entry in Date Fields");
+		
+		click(newCustRepo.rdStartDateTxtBox);
+		String startDate = testdata.get("issueDate").toString();
+		input(newCustRepo.rdStartDateTxtBox, startDate);
+		
+		click(newCustRepo.rdEndDateTxtBox);
+		String endDate = testdata.get("validUptoDate").toString();
+		input(newCustRepo.rdEndDateTxtBox, endDate);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter start and end dates manually.");
+		Log.info("Step:01 - Enter start and end dates manually.");
+		
+		click(newCustRepo.rdYearTxt);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Dates can be entered manually.");
+		Log.info("Expected Result: Dates can be entered manually.");
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		
+		//Verify Details in "Entrepreneur Experience" Grid
+		ExtentTestManager.startTest("Verify Details in \"Entrepreneur Experience\" Grid");
+		Log.info("Verify Details in \"Entrepreneur Experience\" Grid");
+		
+		click(newCustRepo.rdAddBtn1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Verify details in grid after clicking Add button.");
+		Log.info("Step:01 - Verify details in grid after clicking Add button.");
+		
+		ScrollUntilElementVisible(newCustRepo.rdEntrExpGrid);
+		
+		if(ElementDisplayed(newCustRepo.rdEntrExpGrid)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Details appear in grid.");
+			Log.info("Expected Result: Details appear in grid.");
+		}
+		else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Verify Save and Proceed and Previous Buttons
+		ExtentTestManager.startTest("Verify Save and Proceed and Previous Buttons");
+		Log.info("Verify Save and Proceed and Previous Buttons");
+		
+		boolean previousBtnstatus = ElementEnabled(newCustRepo.rdPreviousBtn);
+		System.out.println("previous button status= "+previousBtnstatus);
+		boolean saveAndProBtnstatus = ElementEnabled(newCustRepo.rdSaveAndProceedBtn);
+		System.out.println("save & proceed button status= "+saveAndProBtnstatus);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Verify both buttons for enablement.");
+		Log.info("Step:01 - Verify both buttons for enablement.");
+		
+		if(previousBtnstatus==true && saveAndProBtnstatus==true) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Both buttons are enabled.");
+		Log.info("Expected Result: Both buttons are enabled.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+		
+		//Navigation to "Photo/Sign" Tab via Save and Proceed
+		ExtentTestManager.startTest("Navigation to \"Photo/Sign\" Tab via Save and Proceed");
+		Log.info("Navigation to \"Photo/Sign\" Tab via Save and Proceed");
+		
+		click(newCustRepo.rdSaveAndProceedBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Save and Proceed'.");
+		Log.info("Step:01 - Click 'Save and Proceed'.");
+		
+		driver.switchTo().defaultContent();
+		
+		boolean riskDetailsSavedSuccessfully = ElementDisplayed(newCustRepo.pdSavedSuccessfullyPopUp);
+		
+		click(newCustRepo.pdSavedSuccessfullyPopUp);
+		
+		SwitchToFrame(newCustRepo.visitsIframe);
+		System.out.println("switched to Photo/Sign frame");
+		ScrollUntilElementVisible(newCustRepo.psDocDropdown);
+
+		boolean photoSignWndow = ElementDisplayed(newCustRepo.psDocDropdown);
+
+		if(riskDetailsSavedSuccessfully==true && photoSignWndow==true) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Redirected to \"Photo/Sign\" tab.");
+			Log.info("Expected Result: Redirected to \"Photo/Sign\" tab.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		
+		
+	}//end
+	
+	
+	public void photoSign(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
+
+		
+		
+		//Default Dropdown Selection
+		ExtentTestManager.startTest("Default Dropdown Selection");
+		Log.info("Default Dropdown Selection");
+		
+		String expectedDoc = "Photo";
+		String docOption = driver.findElement(newCustRepo.psPhotoOption).getText();
+		System.out.println("Should print Photo: " + docOption);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Observe the documents dropdown.");
+		Log.info("Step:01 - Observe the documents dropdown.");
+		
+		if(docOption.equals(expectedDoc)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Documents dropdown defaults to \"Photo\".");
+			Log.info("Expected Result: Documents dropdown defaults to \"Photo\".");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		//Photo Upload Error (No Selection)
+		ExtentTestManager.startTest("Photo Upload Error (No Selection)");
+		Log.info("Photo Upload Error (No Selection)");
+		
+		click(newCustRepo.psAddBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Add\" without selecting a photo.");
+		Log.info("Step:01 - Click \"Add\" without selecting a photo.");
+		
+		driver.switchTo().defaultContent();
+		
+		if(ElementDisplayed(newCustRepo.psSelect1ImgOkBtn)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message is displayed prompting to select a photo.");
+			Log.info("Expected Result: Error message is displayed prompting to select a photo.");
+			click(newCustRepo.psSelect1ImgOkBtn);
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		SwitchToFrame(newCustRepo.visitsIframe);
+
+		ExtentTestManager.endTest();
+
+		
+		
+		//Photo Upload Error (Invalid Format)
+		ExtentTestManager.startTest("Photo Upload Error (Invalid Format)");
+		Log.info("Photo Upload Error (Invalid Format)");
+		
+		UploadFile(newCustRepo.psBrowseBtn, ".\\src\\test\\resources\\TestData.xlsx");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click 'Browse', Try selecting a non-image file.");
+		Log.info("Step:01 -  Click 'Browse', Try selecting a non-image file.");
+		
+		click(newCustRepo.psAddBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Click 'Add'.");
+		Log.info("Step:02 -  Click 'Add'.");
+		
+		driver.switchTo().defaultContent();
+		
+		if(ElementDisplayed(newCustRepo.psSelect1ImgOkBtn)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Error message is displayed indicating invalid file format.");
+			Log.info("Expected Result: Error message is displayed indicating invalid file format.");
+			click(newCustRepo.psSelect1ImgOkBtn);
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		SwitchToFrame(newCustRepo.visitsIframe);
+
+		ExtentTestManager.endTest();
+
+		
+		
+		//Add First Photo
+		ExtentTestManager.startTest("Add First Photo");
+		Log.info("Add First Photo");
+		
+		UploadFile(newCustRepo.psBrowseBtn, ".\\src\\test\\resources\\Zoro.jpeg");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click \"Browse\" & Select a photo.");
+		Log.info("Step:01 -  Click \"Browse\" & Select a photo.");
+		
+		click(newCustRepo.psAddBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Click 'Add'.");
+		Log.info("Step:02 -  Click 'Add'.");
+		
+		if(ElementDisplayed(newCustRepo.psPhotoRotateBtn)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Photo is successfully added.");
+			Log.info("Expected Result: Photo is successfully added.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		//Add Second Photo with Default
+		ExtentTestManager.startTest("Add Second Photo with Default");
+		Log.info("Add Second Photo with Default");
+		
+		UploadFile(newCustRepo.psBrowseBtn, ".\\src\\test\\resources\\Zoro.jpeg");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click \"Browse\" & Select a second photo.");
+		Log.info("Step:01 -  Click \"Browse\" & Select a second photo.");
+		
+		click(newCustRepo.psIsDefaultCheckBox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Check 'IsDefault'.");
+		Log.info("Step:02 -  Check 'IsDefault'.");
+		
+		click(newCustRepo.psAddBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 -  Click 'Add'.");
+		Log.info("Step:03 -  Click 'Add'.");
+		
+		String flag = driver.findElement(newCustRepo.psPhotoIsDefaultCheckBox).getAttribute("checked");
+		System.out.println("checked status="+flag);
+		
+		String expectedStatus="true";
+		
+		if(flag.equals(expectedStatus)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Second photo is added with \"IsDefault\" checkbox ticked.");
+			Log.info("Expected Result: Second photo is added with \"IsDefault\" checkbox ticked.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		
+		//Add Signature
+		ExtentTestManager.startTest("Add Signature");
+		Log.info("Add Signature");
+		
+		select("Sign",newCustRepo.psDocDropdown);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select \"Sign\" from dropdown.");
+		Log.info("Step:01 - Select \"Sign\" from dropdown.");
+		
+		UploadFile(newCustRepo.psBrowseBtn, ".\\src\\test\\resources\\Zoro.jpeg");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Click \"Browse\" & Select a sign image.");
+		Log.info("Step:02 -  Click \"Browse\" & Select a sign image.");
+		
+		click(newCustRepo.psAddBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 -  Click 'Add'.");
+		Log.info("Step:03 -  Click 'Add'.");
+		
+		if(ElementDisplayed(newCustRepo.psPhotoRotateBtn)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Signature image is successfully added.");
+			Log.info("Expected Result: Signature image is successfully added.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		
+		//Add General Image
+		ExtentTestManager.startTest("Add General Image");
+		Log.info("Add General Image");
+		
+		select("General",newCustRepo.psDocDropdown);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select \"General\" from dropdown.");
+		Log.info("Step:01 - Select \"General\" from dropdown.");
+		
+		UploadFile(newCustRepo.psBrowseBtn, ".\\src\\test\\resources\\Zoro.jpeg");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Click \"Browse\" & Select a General image.");
+		Log.info("Step:02 -  Click \"Browse\" & Select a General image.");
+		
+		click(newCustRepo.psAddBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 -  Click 'Add'.");
+		Log.info("Step:03 -  Click 'Add'.");
+		
+		if(ElementDisplayed(newCustRepo.psPhotoRotateBtn)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: General image is successfully added.");
+			Log.info("Expected Result: General image is successfully added.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
+
+		
+		
+		
+		//Complete Process
+		ExtentTestManager.startTest("Complete Process");
+		Log.info("Complete Process");
+		
+		click(newCustRepo.psFinishBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Finish\" & Verify Customer ID, Customer Name, KYC Status, and Risk Level are displayed.");
+		Log.info("Step:01 - Click \"Finish\" & Verify Customer ID, Customer Name, KYC Status, and Risk Level are displayed.");
+		
+		String custId = driver.findElement(newCustRepo.custId).getAttribute("value");
+		String custName = driver.findElement(newCustRepo.custName).getAttribute("value");
+		String KYCStatus = driver.findElement(newCustRepo.KYCStatus).getAttribute("value");
+		String riskLevel = driver.findElement(newCustRepo.riskLevel).getAttribute("value");
+
+		if(!custId.isBlank() && !custName.isBlank()) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer ID: " + custId + " , Cust Name: " + custName +" , KYC Status: "+ KYCStatus +", and Risk Level: "+ riskLevel +" are shown correctly.");
+			Log.info("Expected Result: Customer ID: " + custId + " , Cust Name: " + custName +" , KYC Status: "+ KYCStatus +", and Risk Level: "+ riskLevel +" are shown correctly.");
+		}else {
+        	ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    		Log.info("ERROR");
+        }
+		
+		ExtentTestManager.endTest();
 		
 		
 		driver.switchTo().defaultContent();
+				
+		click(newCustRepo.pdSavedSuccessfullyPopUp);		
+		
+		SwitchToFrame(newCustRepo.visitsIframe);
+		
+		click(newCustRepo.okBtn);
+
+
+		
+		driver.switchTo().defaultContent();
+
 	}//end
 	
 	
