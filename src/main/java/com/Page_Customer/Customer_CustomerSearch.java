@@ -33,7 +33,6 @@ public class Customer_CustomerSearch extends Base_Class{
 	
 	
 	
-	
 	public static  String generateCustId() throws ClassNotFoundException {
 		 // Method that returns the first customer ID (String) from the database
 	        // Database connection details
