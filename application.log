@@ -1,10 +1,10 @@
-[ERROR] 2025-01-30 09:47:44.358 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 16:50:19.090 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
-	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3125) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3143) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3189) ~[?:?]
 	at java.net.URI.<init>(URI.java:623) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -18,46 +18,46 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustSearch.gettestdate(AllScenarios_Cust_CustSearch.java:202) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Multi_MultiFD_Opening.gettestdate(AllScenarios_Multi_MultiFD_Opening.java:96) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
 	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestRunner.run(TestRunner.java:614) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.10.1.r202404130807.jar:7.10.1]
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-01-30 09:47:44.370 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 16:50:19.106 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
-	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3125) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3143) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3189) ~[?:?]
 	at java.net.URI.<init>(URI.java:623) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -71,46 +71,46 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustSearch.gettestdate(AllScenarios_Cust_CustSearch.java:202) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Multi_MultiFD_Opening.gettestdate(AllScenarios_Multi_MultiFD_Opening.java:96) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
 	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestRunner.run(TestRunner.java:614) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.10.1.r202404130807.jar:7.10.1]
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-01-30 09:47:44.372 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 16:50:19.108 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
-	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3125) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3143) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3189) ~[?:?]
 	at java.net.URI.<init>(URI.java:623) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -124,46 +124,46 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustSearch.gettestdate(AllScenarios_Cust_CustSearch.java:202) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Multi_MultiFD_Opening.gettestdate(AllScenarios_Multi_MultiFD_Opening.java:96) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
 	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestRunner.run(TestRunner.java:614) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.10.1.r202404130807.jar:7.10.1]
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-01-30 09:47:44.378 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 16:50:19.118 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
-	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3125) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3143) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3189) ~[?:?]
 	at java.net.URI.<init>(URI.java:623) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -177,415 +177,64 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustSearch.gettestdate(AllScenarios_Cust_CustSearch.java:202) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Multi_MultiFD_Opening.gettestdate(AllScenarios_Multi_MultiFD_Opening.java:96) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.10.1.r202404130807.jar:7.10.1]
 	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestRunner.run(TestRunner.java:614) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.10.1.r202404130807.jar:7.10.1]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.10.1.r202404130807.jar:7.10.1]
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-01-30 09:47:45.032 [main] Log - *** Running test method Customer Search Module...
-[INFO ] 2025-01-30 09:47:49.873 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-01-30 09:47:51.230 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-01-30 09:47:51.692 [main] Log - PC Registration
-[INFO ] 2025-01-30 09:47:52.760 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-01-30 09:47:53.120 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-01-30 09:47:54.166 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-01-30 09:47:58.457 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-01-30 09:47:59.638 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-01-30 09:47:59.696 [main] Log - Login with Invalid Credentials
-[INFO ] 2025-01-30 09:48:00.731 [main] Log - Step:01 - Enetered Valid User Name
-[INFO ] 2025-01-30 09:48:01.773 [main] Log - Step:02 - Enetered Invalid Password
-[INFO ] 2025-01-30 09:48:06.058 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-01-30 09:48:07.127 [main] Log - Expect Result: Error message displayed for invalid credentials.
-[INFO ] 2025-01-30 09:48:10.247 [main] Log - Invalid Login - Incorrect Password
-[INFO ] 2025-01-30 09:48:11.327 [main] Log - Step:01 - Enetered Valid User Name
-[INFO ] 2025-01-30 09:48:12.378 [main] Log - Step:02 - Enetered Invalid Password
-[INFO ] 2025-01-30 09:48:16.746 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-01-30 09:48:17.816 [main] Log - Expect Result: Error message displayed indicating incorrect password.
-[INFO ] 2025-01-30 09:48:20.918 [main] Log - Valid Login
-[INFO ] 2025-01-30 09:48:21.976 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-01-30 09:48:23.038 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-01-30 09:48:44.100 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-01-30 09:48:45.176 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-01-30 09:48:46.442 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-01-30 09:48:46.478 [main] Log - Navigate to Customer Search
-[INFO ] 2025-01-30 09:48:50.811 [main] Log - Step:01 - Expand the Customer module in the left menu bar.
-[INFO ] 2025-01-30 09:48:55.554 [main] Log - Step:02 - Select Customer Search.
-[INFO ] 2025-01-30 09:48:56.638 [main] Log - Expected Result: Customer Search Window loaded Successfully!
-[INFO ] 2025-01-30 09:49:01.151 [main] Log - Edit Customer Last Name - Valid Edit
-[INFO ] 2025-01-30 09:49:15.784 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 09:49:20.317 [main] Log - Step:02 -  Click Edit button.
-[INFO ] 2025-01-30 09:51:27.758 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-01-30 09:51:28.824 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-01-30 09:51:28.824 [main] Log - PC Registration
-[INFO ] 2025-01-30 09:51:29.935 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-01-30 09:51:30.217 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-01-30 09:51:31.235 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-01-30 09:51:35.477 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-01-30 09:51:36.833 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-01-30 09:51:36.871 [main] Log - Valid Login
-[INFO ] 2025-01-30 09:51:37.922 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-01-30 09:51:38.950 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-01-30 09:51:43.233 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-01-30 09:53:45.307 [main] Log - Error Message displayed: Already Logged in another system/browser.. Do you want to log out?
-[INFO ] 2025-01-30 09:53:50.002 [main] Log - Step:01 - Click on OK button
-[INFO ] 2025-01-30 09:53:51.024 [main] Log - Step:02 - Enetered valid User Name
-[INFO ] 2025-01-30 09:53:52.075 [main] Log - Step:03 - Entered valid Password
-[INFO ] 2025-01-30 09:54:02.418 [main] Log - Step:04 - Click on Login Button
-[INFO ] 2025-01-30 09:54:03.509 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-01-30 09:54:04.545 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-01-30 09:54:04.582 [main] Log - Navigate to Customer Search
-[INFO ] 2025-01-30 09:54:08.876 [main] Log - Step:01 - Expand the Customer module in the left menu bar.
-[INFO ] 2025-01-30 09:54:13.342 [main] Log - Step:02 - Select Customer Search.
-[INFO ] 2025-01-30 09:54:14.369 [main] Log - Expected Result: Customer Search Window loaded Successfully!
-[INFO ] 2025-01-30 09:54:33.018 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 09:54:38.144 [main] Log - Step:02 -  Click Edit button.
-[INFO ] 2025-01-30 09:54:49.529 [main] Log - Step:03 -  Modify the last name in customer details.
-[INFO ] 2025-01-30 09:55:20.962 [main] Log - Step:04 - Click Check Availability Button.
-[INFO ] 2025-01-30 09:55:34.404 [main] Log - Step:05 - Click on Save and Proceed button.
-[INFO ] 2025-01-30 09:55:35.477 [main] Log - Expected Result: Customer details are updated successfully.
-[INFO ] 2025-01-30 09:55:53.235 [main] Log - Verify Customer Expire Details
-[INFO ] 2025-01-30 09:56:16.263 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 09:56:20.696 [main] Log - Step:02 - Click on Expired button.
-[INFO ] 2025-01-30 09:56:20.763 [main] Log - Expected Result: Displayed customer details doesn't match
-[INFO ] 2025-01-30 09:56:20.792 [main] Log - Select State, Bank ID, Branch ID, Date
-[INFO ] 2025-01-30 09:59:33.216 [main] Log - Step:01 - Click on State drop down.
-[INFO ] 2025-01-30 09:59:37.598 [main] Log - Step:02 - Select a State from the drop down.
-[INFO ] 2025-01-30 09:59:41.960 [main] Log - Step:03 - Click on Bank ID drop down.
-[INFO ] 2025-01-30 09:59:46.393 [main] Log - Step:04 - Select a Bank ID from the drop down.
-[INFO ] 2025-01-30 09:59:50.758 [main] Log - Step:05 - Click on Branch ID drop down.
-[INFO ] 2025-01-30 09:59:55.252 [main] Log - Step:06 - Select a Branch ID from the drop down.
-[INFO ] 2025-01-30 09:59:55.287 [main] Log - Expected Result: Correct IFSC code - KLGB0040159 loads when Branch ID is selected.
-[INFO ] 2025-01-30 09:59:55.322 [main] Log - Verify IFSC Code After Branch Selection
-[INFO ] 2025-01-30 09:59:59.716 [main] Log - Step:01 - Click on Branch ID drop down.
-[INFO ] 2025-01-30 10:00:04.193 [main] Log - Step:02 - Select a Branch ID from the drop down & Observe the IFSC code field.
-[INFO ] 2025-01-30 10:00:08.638 [main] Log - Step:03 - Click on Branch ID drop down.
-[INFO ] 2025-01-30 10:00:13.085 [main] Log - Step:04 - Select a Branch ID from the drop down & Observe the IFSC code field.
-[INFO ] 2025-01-30 10:00:17.522 [main] Log - Step:05 - Click on Branch ID drop down.
-[INFO ] 2025-01-30 10:00:22.150 [main] Log - Step:06 - Select a Branch ID from the drop down & Observe the IFSC code field.
-[INFO ] 2025-01-30 10:00:22.202 [main] Log - Expected Result: IFSC code updates correctly with each branch selection. Selection:01 - KLGB0040293 Selection:02 - KLGB0040611 Selection:03 - KLGB0040666
-[INFO ] 2025-01-30 10:00:22.255 [main] Log - Add Customer Details to Grid
-[INFO ] 2025-01-30 10:00:23.337 [main] Log - Step:01 - Enter Customer Name in Cust Name field.
-[INFO ] 2025-01-30 10:00:24.389 [main] Log - Step:02 - Enter ADDRESS in Address field.
-[INFO ] 2025-01-30 10:00:25.448 [main] Log - Step:03 - Enter Bank Account number in BankAccNo field.
-[INFO ] 2025-01-30 10:00:26.499 [main] Log - Step:04 - Enter same Account number in Retype AccNo field as BankAccNo field.
-[INFO ] 2025-01-30 10:00:31.126 [main] Log - Step:05 - Click on ADD button.
-[INFO ] 2025-01-30 10:00:32.192 [main] Log - Expected Result: Data is added to the grid upon adding.
-[INFO ] 2025-01-30 10:00:32.240 [main] Log - Validate Retype Bank Acc No
-[INFO ] 2025-01-30 10:00:37.620 [main] Log - Step:01 - Enter Bank Account number in BankAccNo field.
-[INFO ] 2025-01-30 10:00:43.045 [main] Log - Step:02 - Enter different values in Bank Acc No and Retype Acc No fields.
-[INFO ] 2025-01-30 10:00:48.450 [main] Log - Expected Result: Error message displayed if values don't match.
-[INFO ] 2025-01-30 10:00:52.799 [main] Log - Error Handling for Empty Fields
-[INFO ] 2025-01-30 10:00:57.314 [main] Log - Step:01 -  Click 'Submit' button.
-[INFO ] 2025-01-30 10:00:58.430 [main] Log - Expected Result: Appropriate error message is displayed for empty fields.
-[INFO ] 2025-01-30 10:01:02.795 [main] Log - Cancel and Redirect to Customer Search
-[INFO ] 2025-01-30 10:01:07.489 [main] Log - Step:01 -  Click 'Close' button.
-[INFO ] 2025-01-30 10:01:08.556 [main] Log - Expected Result: Data is canceled and page redirects to customer search window.
-[INFO ] 2025-01-30 10:01:13.034 [main] Log - Mark Customer as Expired
-[INFO ] 2025-01-30 10:01:36.347 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:01:41.066 [main] Log - Step:02 - Click 'Expire' button
-[INFO ] 2025-01-30 10:01:55.484 [main] Log - Step:03 - Enter Date in Expire Date field.
-[INFO ] 2025-01-30 10:01:56.556 [main] Log - Step:04 - Enter Remarks in Remarks field.
-[INFO ] 2025-01-30 10:02:00.924 [main] Log - Step:05 - Click on State drop down.
-[INFO ] 2025-01-30 10:02:05.389 [main] Log - Step:06 - Select a State from the drop down.
-[INFO ] 2025-01-30 10:02:05.951 [main] Log - Step:07 - Click on Bank ID drop down.
-[INFO ] 2025-01-30 10:02:05.952 [main] Log - Step:08 - Select a Bank ID from the drop down.
-[INFO ] 2025-01-30 10:02:06.518 [main] Log - Step:09 - Click on Branch ID drop down.
-[INFO ] 2025-01-30 10:02:06.518 [main] Log - Step:10 - Select a Branch ID from the drop down.
-[INFO ] 2025-01-30 10:02:07.604 [main] Log - Step:11 - Enter Customer Name in Cust Name field.
-[INFO ] 2025-01-30 10:02:08.661 [main] Log - Step:12 - Enter ADDRESS in Address field.
-[INFO ] 2025-01-30 10:02:09.724 [main] Log - Step:13 - Enter Bank Account number in BankAccNo field.
-[INFO ] 2025-01-30 10:02:10.793 [main] Log - Step:14 - Enter same Account number in Retype AccNo field as BankAccNo field.
-[INFO ] 2025-01-30 10:02:11.882 [main] Log - Step:15 - Enter Date in Start Date field.
-[INFO ] 2025-01-30 10:02:16.481 [main] Log - Step:16 - Click on ADD button.
-[INFO ] 2025-01-30 10:02:20.666 [main] Log - Step:17 - Click on Submit button.
-[INFO ] 2025-01-30 10:02:22.297 [main] Log - Step:18 - Click on OK button.
-[INFO ] 2025-01-30 10:02:23.469 [main] Log - Expected Result: Customer is marked as expired, confirmation message is displayed.
-[INFO ] 2025-01-30 10:02:37.225 [main] Log - Deactivate a Customer with Valid Date
-[INFO ] 2025-01-30 10:02:51.528 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:02:56.447 [main] Log - Step:02 - Click 'Active' button
-[INFO ] 2025-01-30 10:03:00.750 [main] Log - Step:03 - Check the Deactivate Checkbox
-[INFO ] 2025-01-30 10:03:01.829 [main] Log - Step:04 - Enter Remarks in Remarks field.
-[INFO ] 2025-01-30 10:03:06.130 [main] Log - Step:03 - Click on Submit Button
-[INFO ] 2025-01-30 10:03:07.211 [main] Log - Expected Result: Customer is moved to the deactivate list
-[INFO ] 2025-01-30 10:03:20.429 [main] Log - Select Customer and Open Active Window
-[INFO ] 2025-01-30 10:03:43.798 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:03:48.449 [main] Log - Step:02 - Click 'Active' button
-[INFO ] 2025-01-30 10:03:49.519 [main] Log - Expected Result: Customer Active window opens showing customer details
-[INFO ] 2025-01-30 10:03:49.555 [main] Log - Verify Customer Details Display
-[INFO ] 2025-01-30 10:03:50.624 [main] Log - Step:01 - Verify the Presence of Column - Customer ID.
-[INFO ] 2025-01-30 10:03:51.680 [main] Log - Step:02 - Verify the Presence of Column - Name.
-[INFO ] 2025-01-30 10:03:52.750 [main] Log - Step:03 - Verify the Presence of Column - Risk.
-[INFO ] 2025-01-30 10:03:53.811 [main] Log - Step:04 - Verify the Presence of Column - PAN No.
-[INFO ] 2025-01-30 10:03:54.871 [main] Log - Step:05 - Verify the Presence of Column - Current Age.
-[INFO ] 2025-01-30 10:03:55.953 [main] Log - Step:06 - Verify the Presence of Column - Customer Type.
-[INFO ] 2025-01-30 10:03:55.954 [main] Log - Expected Result: Grid Column Names (Customer ID, Name, Risk, PAN No., Current Age, Customer Type) are displayed
-[INFO ] 2025-01-30 10:03:55.997 [main] Log - Submit Deactivation Without Date
-[INFO ] 2025-01-30 10:04:00.346 [main] Log - Step:01 - Check the Deactivate Checkbox
-[INFO ] 2025-01-30 10:04:08.810 [main] Log - Step:02 - Leave date empty
-[INFO ] 2025-01-30 10:04:14.190 [main] Log - Expected Result: Error message to select a date is displayed
-[INFO ] 2025-01-30 10:04:14.250 [main] Log - Cancel Deactivation Process
-[INFO ] 2025-01-30 10:04:19.004 [main] Log - Step:01 - Click Cancel button.
-[INFO ] 2025-01-30 10:04:20.087 [main] Log - Expected Result: Page redirects back to the Customer Search window
-[INFO ] 2025-01-30 10:04:24.596 [main] Log - Freeze Customer
-[INFO ] 2025-01-30 10:04:48.065 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:04:52.391 [main] Log - Step:02 - Click on Freeze button.
-[INFO ] 2025-01-30 10:04:53.467 [main] Log - Expected Result: Freeze window opens with customer details
-[INFO ] 2025-01-30 10:04:53.503 [main] Log - Verify Customer Details in Freeze Window
-[INFO ] 2025-01-30 10:04:54.572 [main] Log - Step:01 - Verify the Presence of Column - Customer ID.
-[INFO ] 2025-01-30 10:04:55.650 [main] Log - Step:02 - Verify the Presence of Column - Name.
-[INFO ] 2025-01-30 10:04:56.723 [main] Log - Step:03 - Verify the Presence of Column - Risk.
-[INFO ] 2025-01-30 10:04:57.782 [main] Log - Step:04 - Verify the Presence of Column - PAN No.
-[INFO ] 2025-01-30 10:04:58.846 [main] Log - Step:05 - Verify the Presence of Column - Current Age.
-[INFO ] 2025-01-30 10:04:59.923 [main] Log - Step:06 - Verify the Presence of Column - Customer Type.
-[INFO ] 2025-01-30 10:04:59.923 [main] Log - Expected Result: Grid Column Names (Customer ID, Name, Risk, PAN No., Current Age, Customer Type) are displayed
-[INFO ] 2025-01-30 10:04:59.961 [main] Log - Attempt to Freeze Without Checkbox
-[INFO ] 2025-01-30 10:05:04.275 [main] Log - Step:01 - Click Submit button without checking the freeze checkbox
-[INFO ] 2025-01-30 10:05:05.357 [main] Log - Expected Result: Error message displayed: "Please select the freeze checkbox"
-[INFO ] 2025-01-30 10:05:09.708 [main] Log - Cancel
-[INFO ] 2025-01-30 10:05:14.298 [main] Log - Step:01 - Click on Cancel button.
-[INFO ] 2025-01-30 10:05:15.361 [main] Log - Expected Result: Action is canceled, navigates back to customer search window
-[INFO ] 2025-01-30 10:05:24.686 [main] Log - Enter Valid Freeze Remark and Submit
-[INFO ] 2025-01-30 10:05:38.864 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:05:43.233 [main] Log - Step:02 - Click 'Freeze' button
-[INFO ] 2025-01-30 10:05:47.575 [main] Log - Step:03 - Check the freeze checkbox.
-[INFO ] 2025-01-30 10:05:48.658 [main] Log - Step:04 - Enter Remarks in Remarks field.
-[INFO ] 2025-01-30 10:05:53.014 [main] Log - Step:05 - Click on Submit button.
-[INFO ] 2025-01-30 10:05:54.075 [main] Log - Expected Result: Customer is updated into freeze list
-[INFO ] 2025-01-30 10:06:07.608 [main] Log - Select Customer and Mark - Valid Data
-[INFO ] 2025-01-30 10:06:26.577 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:06:31.172 [main] Log - Step:02 - Click on Mark button.
-[INFO ] 2025-01-30 10:06:31.332 [main] Log - Expected Result: Customer mark window opens with customer data pre-filled. Customer ID - 102000016306 Customer Name - MR AJITHS  Display Name - AJITHS  DOB & Age - 03/02/1997 & 27
-[INFO ] 2025-01-30 10:06:31.366 [main] Log - Verify Customer Mark Details
-[INFO ] 2025-01-30 10:06:31.366 [main] Log - Expected Result: Details doesn't match with selected customer from search results.
-[INFO ] 2025-01-30 10:06:31.398 [main] Log - Leave Remarks Empty
-[INFO ] 2025-01-30 10:06:34.461 [main] Log - Step:01 - Leave 'Remark' field empty.
-[INFO ] 2025-01-30 10:06:38.798 [main] Log - Step:02 - Click 'Submit' button.
-[INFO ] 2025-01-30 10:06:39.912 [main] Log - Expected Result: Error message displayed requiring remarks.
-[INFO ] 2025-01-30 10:06:44.239 [main] Log - Status Required
-[INFO ] 2025-01-30 10:06:44.239 [main] Log - Step:01 - Do not select any option in the Status drop down
-[INFO ] 2025-01-30 10:06:45.299 [main] Log - Step:02 - Enter Remarks in Remarks field.
-[INFO ] 2025-01-30 10:06:49.706 [main] Log - Step:03 - Click 'Submit' button.
-[INFO ] 2025-01-30 10:06:50.821 [main] Log - Expected Result: Error message displayed, Please select Status.
-[INFO ] 2025-01-30 10:06:55.163 [main] Log - Select Valid Status
-[INFO ] 2025-01-30 10:06:55.478 [main] Log - Step:01 - Select valid status from dropdown.
-[INFO ] 2025-01-30 10:06:55.512 [main] Log - Expected Result: Status is selected successfully.
-[INFO ] 2025-01-30 10:06:55.512 [main] Log - Invalid Date Format
-[INFO ] 2025-01-30 10:07:00.879 [main] Log - Step:01 - Manually enter date in invalid format.
-[INFO ] 2025-01-30 10:07:05.189 [main] Log - Step:02 - Click 'Submit' button.
-[INFO ] 2025-01-30 10:07:06.269 [main] Log - Expected Result: Error message displayed requiring correct date format.
-[INFO ] 2025-01-30 10:07:10.590 [main] Log - Select Effect Date - Valid Past or Current Date
-[INFO ] 2025-01-30 10:07:15.941 [main] Log - Step:01 - Select any past or current date.
-[INFO ] 2025-01-30 10:07:15.941 [main] Log - Expected Result: Date is selected successfully.
-[INFO ] 2025-01-30 10:07:15.982 [main] Log - Submit and Close Window
-[INFO ] 2025-01-30 10:07:20.661 [main] Log - Step:01 -  Click 'Close' button.
-[INFO ] 2025-01-30 10:07:21.768 [main] Log - Expected Result: Customer search window is displayed, and data is not saved.
-[INFO ] 2025-01-30 10:07:28.130 [main] Log - Enter Remark and Submit
-[INFO ] 2025-01-30 10:07:43.520 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:07:47.929 [main] Log - Step:02 - Click 'Mark' button
-[INFO ] 2025-01-30 10:07:48.340 [main] Log - Step:03 - Select valid status from dropdown.
-[INFO ] 2025-01-30 10:07:49.402 [main] Log - Step:04 - Enter Remarks in Remarks field.
-[INFO ] 2025-01-30 10:07:55.177 [main] Log - Step:05 - Click 'Submit' button.
-[INFO ] 2025-01-30 10:07:56.319 [main] Log - Expected Result: Customer is marked with selected status, success message displayed.
-[INFO ] 2025-01-30 10:08:14.756 [main] Log - Delete Customer - Authorized Customer
-[INFO ] 2025-01-30 10:08:29.328 [main] Log - Step:01 - Select an authorized customer from the list.
-[INFO ] 2025-01-30 10:08:33.490 [main] Log - Step:02 - Click on Delete button
-[INFO ] 2025-01-30 10:08:33.524 [main] Log - Step:03 - Accept the Alert
-[INFO ] 2025-01-30 10:08:34.584 [main] Log - Validation message displayed: "Cannot Delete. Authorized Customer."
-[INFO ] 2025-01-30 10:08:38.906 [main] Log - Verify Validation Message on Delete
-[INFO ] 2025-01-30 10:08:57.614 [main] Log - Step:01 - Select an customer from the list.
-[INFO ] 2025-01-30 10:09:01.769 [main] Log - Step:02 - Click on Delete button
-[INFO ] 2025-01-30 10:09:01.777 [main] Log - Expected Result: Validation Message displayed= Are you sure to delete
-[INFO ] 2025-01-30 10:09:06.411 [main] Log - Cancel Deletion Confirmation
-[INFO ] 2025-01-30 10:09:20.568 [main] Log - Step:01 - Select an authorized customer from the list.
-[INFO ] 2025-01-30 10:09:24.786 [main] Log - Step:02 - Click on Delete button
-[INFO ] 2025-01-30 10:09:24.820 [main] Log - Step:03 - Reject the Alert
-[INFO ] 2025-01-30 10:09:25.892 [main] Log - Expected Result: Deletion is canceled, customer remains in the list.
-[INFO ] 2025-01-30 10:09:25.928 [main] Log - Click Delete Without Selection
-[INFO ] 2025-01-30 10:09:44.357 [main] Log - Step:01 - Click on the Delete button without selecting any customer.
-[INFO ] 2025-01-30 10:09:45.451 [main] Log - Expected Result: Error message displayed, e.g., "Please select a customer to delete."
-[INFO ] 2025-01-30 10:09:49.783 [main] Log - Last Name Field - ECP Validations
-[INFO ] 2025-01-30 10:10:04.140 [main] Log - Step:01 -  Select an existing customer.
-[INFO ] 2025-01-30 10:10:08.494 [main] Log - Step:02 -  Click Edit button.
-[INFO ] 2025-01-30 10:10:20.156 [main] Log - Step:03 -  Enter Last Name in Last Name field (Numeric Input).
-[INFO ] 2025-01-30 10:10:25.540 [main] Log - Expected Result: Numeric inputs prompts error message.
-[INFO ] 2025-01-30 10:10:38.308 [main] Log - Step:04 -  Enter Last Name in Last Name field (AlphaNumeric Input).
-[INFO ] 2025-01-30 10:10:43.685 [main] Log - Expected Result: AlphaNumeric inputs prompts error message.
-[INFO ] 2025-01-30 10:10:48.158 [main] Log - Invalid Data Format in Last Name
-[INFO ] 2025-01-30 10:10:56.920 [main] Log - Step:05 -  Enter Last Name in Last Name field (Special Characters Input).
-[INFO ] 2025-01-30 10:11:02.405 [main] Log - Expected Result: Special Characters inputs prompts error message.
-[INFO ] 2025-01-30 10:11:15.224 [main] Log - Step:06 -  Enter Last Name in Last Name field (Alphabetic Input).
-[INFO ] 2025-01-30 10:11:19.522 [main] Log - Expected Result: Alphabetic inputs are allowed.
-[INFO ] 2025-01-30 10:11:30.052 [main] Log - View Customer Details
-[INFO ] 2025-01-30 10:11:35.606 [main] Log - Step:01 - Enter valid Customer Id in Customer ID field.
-[INFO ] 2025-01-30 10:11:41.159 [main] Log - Step:02 - Click on Search button.
-[INFO ] 2025-01-30 10:11:45.466 [main] Log - Step:03 - Select the customer from the list.
-[INFO ] 2025-01-30 10:11:49.982 [main] Log - Step:04 - Click on the View button.
-[INFO ] 2025-01-30 10:11:51.052 [main] Log - Expected Result: Customer details page displays KYC, address, and bank details.
-[INFO ] 2025-01-30 10:11:51.089 [main] Log - Verify Non-Editable Customer Details
-[INFO ] 2025-01-30 10:11:51.105 [main] Log - Expected Result: Fields are non-editable, user cannot modify details.
-[INFO ] 2025-01-30 10:12:02.086 [main] Log - Attachment Popup
-[INFO ] 2025-01-30 10:12:07.503 [main] Log - Step:01 - Enter valid Customer Id in Customer ID field.
-[INFO ] 2025-01-30 10:12:12.045 [main] Log - Step:02 - Click on Search button.
-[INFO ] 2025-01-30 10:12:16.367 [main] Log - Step:03 - Select the customer from the list.
-[INFO ] 2025-01-30 10:12:20.850 [main] Log - Step:04 - Click on the Attachments button.
-[INFO ] 2025-01-30 10:12:21.953 [main] Log - Expected Result: Attachment popup window open.
-[INFO ] 2025-01-30 10:12:21.984 [main] Log - Attachment Popup Image Display
-[INFO ] 2025-01-30 10:12:23.072 [main] Log - Expected Result: Image is visible in the attachment popup
-[INFO ] 2025-01-30 10:12:23.100 [main] Log - Rotate Button Functionality
-[INFO ] 2025-01-30 10:12:27.410 [main] Log - Step:01 - Click on Rotate button.
-[INFO ] 2025-01-30 10:12:27.411 [main] Log - Expected Result: Image rotates.
-[INFO ] 2025-01-30 10:12:27.448 [main] Log - Image Button Functionality
-[INFO ] 2025-01-30 10:12:31.601 [main] Log - Step:01 - Click on the image button.
-[INFO ] 2025-01-30 10:12:32.760 [main] Log - Expected Result: Image is displayed in a larger view
-[INFO ] 2025-01-30 10:12:32.760 [main] Log - Close Button Functionality
-[INFO ] 2025-01-30 10:12:37.075 [main] Log - Step:01 - Click on Close button.
-[INFO ] 2025-01-30 10:12:37.075 [main] Log - Expected Result: Image popup closes.
-[INFO ] 2025-01-30 10:12:37.108 [main] Log - Zoom Image Functionality
-[INFO ] 2025-01-30 10:12:45.507 [main] Log - Step:01 - Click on Zoom button.
-[INFO ] 2025-01-30 10:12:45.793 [main] Log - Expected Result: Image zooms in/out as expected.
-[INFO ] 2025-01-30 10:12:50.354 [main] Log - Mobile Field - BVA Validations
-[INFO ] 2025-01-30 10:12:51.478 [main] Log - Step:01 - Enter Invlalid Mobile num in moblie field(<10 Digits)
-[INFO ] 2025-01-30 10:12:56.158 [main] Log - Step:02 - Click on the Search button.
-[INFO ] 2025-01-30 10:12:57.229 [main] Log - Expected Result: Error message displayed for incorrect Mobile NO.(< 10 digits)
-[INFO ] 2025-01-30 10:13:01.650 [main] Log - Step:03 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:02.760 [main] Log - Step:04 - Enter Invlalid Mobile num in moblie field(>10 Digits)
-[INFO ] 2025-01-30 10:13:07.273 [main] Log - Step:05 - Click on the Search button.
-[INFO ] 2025-01-30 10:13:08.407 [main] Log - Expected Result: Error message displayed for incorrect Mobile NO.(> 10 digits)
-[INFO ] 2025-01-30 10:13:12.867 [main] Log - Step:06 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:13.960 [main] Log - Step:07 - Enter Valid Mobile num in moblie field
-[INFO ] 2025-01-30 10:13:18.627 [main] Log - Step:08 - Click on the Search button.
-[INFO ] 2025-01-30 10:13:19.748 [main] Log - Expected Result: Fetched Customer with Valid Mobile No., Successfully!
-[INFO ] 2025-01-30 10:13:24.208 [main] Log - Step:09 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:24.234 [main] Log - Name Field - ECP Validations
-[INFO ] 2025-01-30 10:13:25.293 [main] Log - Step:01 - Enter Invlalid Name in Name field(Numeric Input)
-[INFO ] 2025-01-30 10:13:29.760 [main] Log - Step:02 - Click on the Search button.
-[INFO ] 2025-01-30 10:13:30.846 [main] Log - Expected Result: Error message displayed for incorrect Name (Numeric Input)
-[INFO ] 2025-01-30 10:13:35.331 [main] Log - Step:03 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:36.402 [main] Log - Step:04 - Enter Invlalid Name in Name field(Alphanumeric Input)
-[INFO ] 2025-01-30 10:13:40.823 [main] Log - Step:05 - Click on the Search button.
-[INFO ] 2025-01-30 10:13:41.912 [main] Log - Expected Result: Error message displayed for incorrect Name (Alphanumeric)
-[INFO ] 2025-01-30 10:13:46.363 [main] Log - Step:06 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:47.451 [main] Log - Step:07 - Enter Valid Name in Name field(Alphabet Input)
-[INFO ] 2025-01-30 10:13:52.102 [main] Log - Step:08 - Click on the Search button.
-[INFO ] 2025-01-30 10:13:53.177 [main] Log - Expected Result: Fetched Customer with Valid Name, Successfully!
-[INFO ] 2025-01-30 10:13:58.056 [main] Log - Step:09 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:58.117 [main] Log - Customer Search - Invalid Name
-[INFO ] 2025-01-30 10:13:59.258 [main] Log - Step:01 - Enter Vlalid Name in Name field(Alphabet Input)
-[INFO ] 2025-01-30 10:14:03.742 [main] Log - Step:02 - Click on the Search button.
-[INFO ] 2025-01-30 10:14:04.812 [main] Log - Expected Result: No results found and appropriate message displayed.
-[INFO ] 2025-01-30 10:14:09.210 [main] Log - Step:03 - Click on the Clear Data
-[INFO ] 2025-01-30 10:14:09.245 [main] Log - Error Guessing - Special Characters in Name Field
-[INFO ] 2025-01-30 10:14:10.326 [main] Log - Step:13 - Enter Special Characters Name in Name field
-[INFO ] 2025-01-30 10:14:14.827 [main] Log - Step:14 - Click on the Search button.
-[INFO ] 2025-01-30 10:14:15.930 [main] Log - Expected Result: No results found and appropriate message displayed.
-[INFO ] 2025-01-30 10:14:20.380 [main] Log - Step:15 - Click on the Clear Data
-[INFO ] 2025-01-30 10:14:20.409 [main] Log - Customer Search with No Filter
-[INFO ] 2025-01-30 10:14:24.820 [main] Log - Step:01 - Click on the Clear Data
-[INFO ] 2025-01-30 10:14:29.646 [main] Log - Step:02 - Click on the Search button without entering any filters.
-[INFO ] 2025-01-30 10:14:30.718 [main] Log - Expected Result: All Availabe customer details displayed, Successfully!
-[INFO ] 2025-01-30 10:14:35.211 [main] Log - Step:03 - Click on the Clear Data
-[INFO ] 2025-01-30 10:14:35.254 [main] Log - Invalid Aadhaar Number
-[INFO ] 2025-01-30 10:14:36.328 [main] Log - Step:01 - Enter Invalid Aadhaar num in Aadhaar field
-[INFO ] 2025-01-30 10:14:40.864 [main] Log - Step:02 - Click on the Search button
-[INFO ] 2025-01-30 10:14:41.949 [main] Log - Error message displayed for incorrect Aadhaar(< 12 digits)
-[INFO ] 2025-01-30 10:14:46.391 [main] Log - Step:03 - Click on the Clear Data
-[INFO ] 2025-01-30 10:14:46.422 [main] Log - Clear Functionality
-[INFO ] 2025-01-30 10:14:48.543 [main] Log - Step:01 - Enter inputs in various fields.
-[INFO ] 2025-01-30 10:14:52.962 [main] Log - Step:02 - Click on the Clear button.
-[INFO ] 2025-01-30 10:14:53.031 [main] Log - Expected Result: All Inputs Cleared, Successfully!
-[INFO ] 2025-01-30 10:14:53.086 [main] Log - Verify the field Doc Type
-[INFO ] 2025-01-30 10:14:57.448 [main] Log - Step:01 - Click on Doc Type drop down box
-[INFO ] 2025-01-30 10:15:01.909 [main] Log - Step:02 - Select a document type from the drop down.
-[INFO ] 2025-01-30 10:15:06.860 [main] Log - Step:03 - Click on the Search button
-[INFO ] 2025-01-30 10:15:08.002 [main] Log - Expected Result: Doc type is selecting from the dropdown successfully and details should be displayed against the given DOC type, Successfully!
-[INFO ] 2025-01-30 10:15:08.035 [main] Log - Verify the field Doc No
-[INFO ] 2025-01-30 10:15:13.570 [main] Log - Step:03 - Enter Document number in Doc No. field.
-[INFO ] 2025-01-30 10:15:18.102 [main] Log - Step:03 - Click on the Search button
-[INFO ] 2025-01-30 10:15:19.176 [main] Log - Expected Result: Doc type is selecting from the dropdown successfully and details should be displayed against the given DOC type, Successfully!
-[INFO ] 2025-01-30 10:15:28.143 [main] Log - Toggle Is Institutional Checkbox
-[INFO ] 2025-01-30 10:15:32.444 [main] Log - Step:01 - Uncheck KYC Compliant Only checkbox
-[INFO ] 2025-01-30 10:15:36.740 [main] Log - Step:02 - Uncheck Active Only checkbox
-[INFO ] 2025-01-30 10:15:41.045 [main] Log - Step:03 - Uncheck Prospects Only checkbox
-[INFO ] 2025-01-30 10:15:45.584 [main] Log - Step:04 - Check Prospects Only checkbox
-[INFO ] 2025-01-30 10:15:50.553 [main] Log - Step:05 - Click on the Search button
-[INFO ] 2025-01-30 10:15:51.613 [main] Log - Expected Result: Grid displays only institutional customers.
-[INFO ] 2025-01-30 10:15:56.171 [main] Log - Verify the field House Name
-[INFO ] 2025-01-30 10:15:57.293 [main] Log - Step:01 - Enter Invalid Aadhaar num in Aadhaar field
-[INFO ] 2025-01-30 10:16:02.020 [main] Log - Step:02 - Click on the Search button
-[INFO ] 2025-01-30 10:16:03.087 [main] Log - Expected Result: Customer Fetched with House Name (Alphanumeric Input), Successfully!
-[INFO ] 2025-01-30 10:16:08.660 [main] Log - Step:01 - Enter Invalid Aadhaar num in Aadhaar field
-[INFO ] 2025-01-30 10:16:13.264 [main] Log - Step:02 - Click on the Search button
-[INFO ] 2025-01-30 10:16:14.333 [main] Log - Expected Result: Customer Fetched with House Name(Alphabetic Input), Successfully!
-[INFO ] 2025-01-30 10:16:19.887 [main] Log - Step:05 - Enter House name in House field (Numeric Input)
-[INFO ] 2025-01-30 10:16:24.483 [main] Log - Step:06 - Click on the Search button
-[INFO ] 2025-01-30 10:16:25.580 [main] Log - Expected Result: Customer Fetched with House Name(Numeric Input), Successfully!
-[INFO ] 2025-01-30 10:16:30.157 [main] Log - Verify the field PAN No
-[INFO ] 2025-01-30 10:16:31.252 [main] Log - Step:01 - Enter PAN number in PAN NO. field.
-[INFO ] 2025-01-30 10:16:35.881 [main] Log - Step:02 - Click on the Search button.
-[INFO ] 2025-01-30 10:16:36.949 [main] Log - Expected Result: Customer details should be shows in the grid against the given PAN No.
-[INFO ] 2025-01-30 10:16:36.983 [main] Log - Customer details in grid
-[INFO ] 2025-01-30 10:16:38.073 [main] Log - Step:01 - Verify the Presence of Column - Cust ID.
-[INFO ] 2025-01-30 10:16:39.142 [main] Log - Step:02 - Verify the Presence of Column - Date.
-[INFO ] 2025-01-30 10:16:40.215 [main] Log - Step:03 - Verify the Presence of Column - First Name.
-[INFO ] 2025-01-30 10:16:41.298 [main] Log - Step:04 - Verify the Presence of Column - Last Name.
-[INFO ] 2025-01-30 10:16:42.368 [main] Log - Step:05 - Verify the Presence of Column - Middle Name.
-[INFO ] 2025-01-30 10:16:43.450 [main] Log - Step:06 - Verify the Presence of Column - Display Name.
-[INFO ] 2025-01-30 10:16:44.513 [main] Log - Step:07 - Verify the Presence of Column - Parent/Spouse
-[INFO ] 2025-01-30 10:16:45.587 [main] Log - Step:08 - Verify the Presence of Column - Relation.
-[INFO ] 2025-01-30 10:16:46.671 [main] Log - Step:09 - Verify the Presence of Column - House.
-[INFO ] 2025-01-30 10:16:47.734 [main] Log - Step:10 - Verify the Presence of Column - Place
-[INFO ] 2025-01-30 10:16:48.809 [main] Log - Step:11 - Verify the Presence of Column - Mobile No.
-[INFO ] 2025-01-30 10:16:49.882 [main] Log - Step:12 - Verify the Presence of Column - Status
-[INFO ] 2025-01-30 10:16:49.882 [main] Log - Expected Result: Customer details is showing under the grid
-[INFO ] 2025-01-30 10:16:54.374 [main] Log - Check KYC Compliant Only Checkbox.
-[INFO ] 2025-01-30 10:16:58.672 [main] Log - Step:01 - Uncheck Active Only checkbox
-[INFO ] 2025-01-30 10:17:02.978 [main] Log - Step:02 - Uncheck Prospects Only checkbox
-[INFO ] 2025-01-30 10:17:08.177 [main] Log - Step:03 - Click on the Search button.
-[INFO ] 2025-01-30 10:17:09.269 [main] Log - Expected Result: Only shows the KYC completed customer details.
-[INFO ] 2025-01-30 10:17:13.820 [main] Log - Check Active Only, Checkbox
-[INFO ] 2025-01-30 10:17:18.386 [main] Log - Step:01 - Uncheck KYC Compliant Only checkbox
-[INFO ] 2025-01-30 10:17:22.694 [main] Log - Step:02 - Uncheck Prospects Only checkbox
-[INFO ] 2025-01-30 10:17:27.923 [main] Log - Step:03 - Click on the Search button.
-[INFO ] 2025-01-30 10:17:33.504 [main] Log - Check Prospects Only Checkbox
-[INFO ] 2025-01-30 10:17:38.007 [main] Log - Step:01 - Uncheck KYC Compliant Only checkbox
-[INFO ] 2025-01-30 10:17:42.573 [main] Log - Step:02 - Uncheck Active Only checkbox
-[INFO ] 2025-01-30 10:17:47.408 [main] Log - Step:03 - Click on the Search button.
-[INFO ] 2025-01-30 10:17:48.574 [main] Log - Expected Result: Only listing the customer which dont have accounts.
-[INFO ] 2025-01-30 10:17:53.119 [main] Log - Check Include Reject Checkbox
-[INFO ] 2025-01-30 10:17:57.489 [main] Log - Step:01 - Uncheck KYC Compliant Only checkbox
-[INFO ] 2025-01-30 10:18:01.933 [main] Log - Step:02 - Uncheck Prospects Only checkbox
-[INFO ] 2025-01-30 10:18:06.219 [main] Log - Step:03 - Uncheck Active Only checkbox
-[INFO ] 2025-01-30 10:18:10.497 [main] Log - Step:04 - Check the Include Reject checkbox
-[INFO ] 2025-01-30 10:18:15.659 [main] Log - Step:05 - Click on the Search button.
-[INFO ] 2025-01-30 10:18:16.730 [main] Log - Listing the customer include rejected customer 
-[INFO ] 2025-01-30 10:18:21.203 [main] Log - Logout
-[INFO ] 2025-01-30 10:18:30.018 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-01-30 10:18:31.089 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-02-06 16:50:19.758 [main] Log - *** Running test method Multiple FD Opening...
+[INFO ] 2025-02-06 16:50:23.365 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-02-06 16:50:24.513 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-02-06 16:50:24.797 [main] Log - PC Registration
+[INFO ] 2025-02-06 16:50:25.864 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-02-06 16:50:26.185 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-02-06 16:50:27.221 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-02-06 16:50:31.503 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-02-06 16:50:33.119 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-02-06 16:50:33.197 [main] Log - TC_01 - Login to NBFC Application
+[INFO ] 2025-02-06 16:50:34.261 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-02-06 16:50:35.306 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-02-06 16:50:44.155 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-02-06 16:50:45.227 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-06 16:50:46.285 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-06 16:51:05.068 [main] Log - Step:01 clicking on Account opening -> Deposit opening -> Fixed deposit
+[INFO ] 2025-02-06 16:51:06.158 [main] Log - Deposit opening window is displayed
+[INFO ] 2025-02-06 16:51:10.997 [main] Log - Step:01 - Click 'Customer Search' button
+[INFO ] 2025-02-06 16:51:21.178 [main] Log - Step:02 - Select Customer from Search Popup
+[INFO ] 2025-02-06 16:51:26.254 [main] Log - Step:03 - Click 'Add' Button
+[INFO ] 2025-02-06 16:51:32.128 [main] Log - Expected Result: Selected customer details populate necessary fields
+[INFO ] 2025-02-06 16:51:33.231 [main] Log - Step:01 - Enter Valid Duration eg: 12
+[INFO ] 2025-02-06 16:51:37.891 [main] Log - Expected Result: 12 is entered in the Duration field, Month is seleced from the Duration Mode Dropdown list.
+[INFO ] 2025-02-06 16:51:43.387 [main] Log - Step 01: Select 'Referred by' from dropdown
+[INFO ] 2025-02-06 16:51:44.948 [main] Log - Expected Result: Referral is successfully selected
+[INFO ] 2025-02-06 16:51:48.003 [main] Log - Logout
+[INFO ] 2025-02-06 16:51:56.702 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-02-06 16:51:57.754 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

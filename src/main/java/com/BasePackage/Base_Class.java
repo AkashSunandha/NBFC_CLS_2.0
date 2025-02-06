@@ -83,7 +83,7 @@ public class Base_Class {
 
 		case "FIREFOX":
 			
-			System.setProperty("webdriver.gecko.driver","D:\\Testing\\geckodriver.exe");
+			/*System.setProperty("webdriver.gecko.driver","D:\\Testing\\geckodriver.exe");
 			File pathBinary = new File("C:\\Users\\akash.venkatesh\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
 			FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);   
 			DesiredCapabilities desired = DesiredCapabilities.firefox();
@@ -95,6 +95,10 @@ public class Base_Class {
 //			//System.setProperty("webdriver.gecko.driver", "./Drivers\\geckodriver.exe");
 //			driver = new FirefoxDriver(options1);
 			ExtentTestManager.getTest().log(Status.PASS, "Firefox Driver & Application Launched successfully.");
+			break;*/
+			
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 			break;
 
 		default:
