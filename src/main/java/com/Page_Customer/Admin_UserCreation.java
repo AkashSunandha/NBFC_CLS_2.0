@@ -132,7 +132,7 @@ public class Admin_UserCreation extends Base_Class {
 
 		String password=driver.findElement(puc.password).getText().toString();
 		System.out.println("The password is "+password);
-
+Thread.sleep(5000);
 		click(puc.closeBtn);
 
 		Base_Class.DatabaseConnector1();
