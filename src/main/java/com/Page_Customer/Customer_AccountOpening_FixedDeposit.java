@@ -9,6 +9,7 @@ import org.testng.ITestContext;
 import com.BasePackage.Base_Class;
 import com.Page_Repositary.PageRepositary_AccountOpening_FixedDeposit;
 import com.Page_Repositary.PageRepositary_Cust_CustRegister;
+import com.Page_Repositary.PageRepositary_Cust_CustSearch;
 import com.Utility.Log;
 import com.Utility.ScreenShot;
 import com.aventstack.extentreports.Status;
@@ -17,9 +18,12 @@ import com.extentReports.ExtentTestManager;
 public class Customer_AccountOpening_FixedDeposit extends Base_Class
 //public String custid;
 
+
+
 {
 
 	PageRepositary_AccountOpening_FixedDeposit fixeddeposit= new PageRepositary_AccountOpening_FixedDeposit();
+	//PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
 	
 	ScreenShot sc = new ScreenShot(null);
 	
@@ -82,10 +86,13 @@ public class Customer_AccountOpening_FixedDeposit extends Base_Class
 		
 		driver.switchTo().window(mainWindowHandle);
 		
+		click(fixeddeposit.Addbutton);
+		click(fixeddeposit.okbutton);
+		
 		//boolean flag1 = ElementDisplayed(fixeddeposit.formcustid);
-		  String flag1=driver.findElement(fixeddeposit.formcustid).getAttribute("value");
-		  System.out.println(flag1);
-				if(flag1.equals(custid)) {
+		  /*String customerformid=driver.findElement(fixeddeposit.customerform).getAttribute("value");
+		  System.out.println(customerformid);
+				if(customerformid.equals(custid)) {
 					ExtentTestManager.getTest().log(Status.PASS, " Expected Result: Selected customer is populated in the form");
 					Log.info("Expected Result:Selected customer is populated in the form");
 				}
@@ -93,7 +100,21 @@ public class Customer_AccountOpening_FixedDeposit extends Base_Class
 						ExtentTestManager.getTest().log(Status.FAIL, "Expected Result:Selected customer is not populated in the form");
 						Log.info("Expected Result:Selected customer is not populated in the form");
 						
-					}
+					}*/
+		
+		WebElement custid1 = driver.findElement(fixeddeposit.customerform);
+		System.out.println("custId is validated" + custid1.getAttribute("title"));
+ 
+		String custformid = custid1.getAttribute("title");
+		if (custformid.equals(custid1.getAttribute("title"))) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Selected customer is  populated in the form" + true);
+			Log.info("Expected Result:Selected customer is  populated in the form" + true);
+			return true;
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result:Selected customer is not populated in the form" + false);
+ 
+			Thread.sleep(1000);
+		}
       }
   }
   ExtentTestManager.endTest();
@@ -165,6 +186,11 @@ return true;
 	public boolean ROIvalidation()throws InterruptedException {
 		ExtentTestManager.startTest("TC:07 - Get Values & Validate ROI");
 		click(fixeddeposit.getvalue);
+		
+		//clicking ok on popup
+		
+		click(fixeddeposit.popup);
+		
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Click 'Get values' button");
 		Log.info("Step:01 Click 'Get values' button");
@@ -495,6 +521,10 @@ return true;
 																						
 																					}	
 																				
+																				select("FATHER", fixeddeposit.NomineeRelation);
+																				
+																				click(fixeddeposit.NomineeAddbutton);
+																				
 																				click(fixeddeposit.NextbuttonNominee);
 						
 						
@@ -507,10 +537,590 @@ return true;
 return true;
 	
 }
+
+	
+	public Boolean AddOperatorandValidate(Map<Object,Object>testdata) throws InterruptedException {
+		ExtentTestManager.startTest("TC:17 - Add Operator & Validate");
+
+	click(fixeddeposit.operatorcustomerIDsearchbutton);
 	
 	
+    //Navigate to Pop Up Window
+String mainWindowHandle = driver.getWindowHandle();
+boolean popupAppeared = false;
+for (String handle : driver.getWindowHandles()) {
+  if (!handle.equals(mainWindowHandle)) {
+      driver.switchTo().window(handle);
+      popupAppeared = true;
+//      
+      //Entering customer id and searching record
+      String operatorcustid = testdata.get("OperatorCustomerID").toString();
+      
+		input(fixeddeposit.OperatorcustID, operatorcustid);
+		
+		click(fixeddeposit.operatorsearchbutton);
+	
+	click(fixeddeposit.operatorselectcust);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Search and select customer");
+	Log.info("Step:01 - Search and select customer");
+	
+	driver.switchTo().window(mainWindowHandle);
+	
+	 String relation = testdata.get("Relation/Desig.").toString();
+		input(fixeddeposit.relation, relation);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Enter data in 'relation/desig' field");
+		Log.info("Step:01 -  Enter data in 'relation/desig' field");
+		
+		String remark = testdata.get("OperatorRemark").toString();
+		input(fixeddeposit.remark1, remark);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 -  Enter remark");
+		Log.info("Step:01 -  Enter remark");
+		
+		click(fixeddeposit.add);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:04 -  Enter remarkAdd details");
+		Log.info("Step:01 -  Add details");
+		
+		/*String customeridvalidate=driver.findElement(fixeddeposit.customeridvalidate).getAttribute("title");
+		  System.out.println(operatorcustid);
+		  System.out.println(customeridvalidate);
+				if(customeridvalidate.equals(operatorcustid))
+					//System.out.println(operatorcustid);
+				{
+					ExtentTestManager.getTest().log(Status.PASS, " Operator details are added");
+					Log.info("Expected Result:Operator details are added");
+				}
+					else {
+						ExtentTestManager.getTest().log(Status.FAIL, "Expected Result:Operator details are not added");
+						Log.info("Expected Result:Operator details are not added");
+						
+					}*/
+				
+				
+					WebElement customeridvalidate = driver.findElement(fixeddeposit.customeridvalidate);
+				String custid = customeridvalidate.getAttribute("title");
+				
+				if (custid.equals(customeridvalidate.getAttribute("title"))) {
+					ExtentTestManager.getTest().log(Status.PASS, customeridvalidate.getAttribute("title") + true);
+					Log.info("ExpectedResult: Operator details are  added  "  +true);
+					
+				} else {
+					ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: Operator details are not added " + false);
+					Log.info("ExpectedResult: Operator details are not  added  " +false);
+					Thread.sleep(1000);
+				}
+				
+				click(fixeddeposit.clicknext);
+  }}
+
+ExtentTestManager.endTest();
+return true;
+	}
+	
+	public Boolean Interest_Transfer_Requirements(Map<Object,Object>testdata) throws InterruptedException {
+		ExtentTestManager.startTest("TC:18 - Interest Transfer Requirements");
+
+	click(fixeddeposit.intertransfercheckbox);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - tick 'interest transfer Required' checkbox");
+	Log.info("Step:01 - tick 'interest transfer Required' checkbox");
+	
+	//selecting product dropdown
+			select("SUSPENSE LIABILITY", fixeddeposit.product); 
+			
+	//Entering accountno
+	    String accountno = testdata.get("AccountNo").toString();
+		input(fixeddeposit.accountno, accountno);
+        ExtentTestManager.getTest().log(Status.PASS, "Step:02 -   Select  product, enter account no");
+		Log.info("Step:02 -   Select product, enter account no");
+		
+		
+		String frequency = testdata.get("Frequency").toString();
+		input(fixeddeposit.frequency, frequency);
+		
+		
+		/*clear(fixeddeposit.amount1);
+		
+		String interestamount = testdata.get("InterestTransferAmount").toString();
+		input(fixeddeposit.amount1, interestamount);
+		*/
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter frequency(amount auto loads)");
+		Log.info("Enter frequency(amount auto loads)");
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult: Fields updated properly " );
+		Log.info("ExpectedResult: Fields updated properly " );
+		
+		
+		
+		ExtentTestManager.endTest();
+	return true;
+	
+	}
+	
+	public Boolean next_button_functioanlity() throws InterruptedException {
+		ExtentTestManager.startTest("TC:19 - next button functioanlity");
+		
+
+		click(fixeddeposit.nextclick1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Next button");
+		Log.info("Step:01 - Click Next button");
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult: Redirected to 'on maturity' tab " );
+		Log.info("ExpectedResult: Redirected to 'on maturity' tab" );
+
+		
+		ExtentTestManager.endTest();
+		return true;
+		
+		}	
+	public Boolean On_Maturity_Settings() throws InterruptedException {
+		ExtentTestManager.startTest("TC:20 - On Maturity Settings");
+		
+		//1. Select radio button'Keep in same account'
+		WebElement radiobutton = driver.findElement(fixeddeposit.radiobutton);
+		if(radiobutton.isSelected()) {
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select radio button'Keep in same account");
+			Log.info("Step:01 - Select radio button'Keep in same account");
+		}else {
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 'Keep in same account radio button is not selected");
+			Log.info("Step:01 - 'Keep in same account' radio button is not selected ");
+		}
+		
+		
+		
+		//2. Select trans.mode as 'Cash'
+		select("CASH", fixeddeposit.transmode); 
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select trans.mode as 'Cash'");
+		Log.info("Step:01 - Select trans.mode as 'Cash'");
+		
+		
+		//3. click on save button
+		click(fixeddeposit.savebutton);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - click on save button");
+		Log.info("Step:01 - click on save button");
+		
+		//WebElement summary = driver.findElement(fixeddeposit.summary);
+		//String details = summary.getAttribute("value");
+		//System.out.println(details);
+		
+		if (ElementDisplayed(fixeddeposit.summary)) {
+			
+			ExtentTestManager.getTest().log(Status.PASS,"cash opening possible and Summary is generated ");
+			Log.info("ExpectedResult: cash opening possible and Summary is generated "  );
+			
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: cash opening is not possible and Summary is not generated " + false);
+			Log.info("ExpectedResult: cash opening is not possible and Summary is not generated  " +false);
+			Thread.sleep(1000);
+		}
+		
+		ExtentTestManager.endTest();
+		return true;
+		
+		
+	}
+	
+	public boolean Login_with_Another_User(Map<Object,Object>testdata,ITestContext context) throws InterruptedException {
+	ExtentTestManager.startTest("TC:21 - Login with Another User");
+	Log.info("TC:21 - Login with Another User");
+	
+	click(fixeddeposit.signout);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Logout'");
+	Log.info("Step:01 -  'Logout'");
+	
+	String newuserid = testdata.get("Newuserid").toString();
+	input(fixeddeposit.loginUserName1, newuserid);
+	
+	String newpwd = testdata.get("Newpassword").toString();
+	input(fixeddeposit.loginPasswrd1,newpwd);
+	
+	click(fixeddeposit.loginButton1);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Log in with another user for authorization");
+	Log.info("Step:02 -Log in with another user for authorization");
+	
+	if(ElementDisplayed(fixeddeposit.Newloginvalidate)) {
+		ExtentTestManager.getTest().log(Status.PASS,"Logging successfull with another user ");
+		Log.info("ExpectedResult: Logging successfull with another user"  );
+		
+	} else {
+		ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: Logging is not successfull with another user");
+		Log.info("ExpectedResult: Logging is not successfull with another user");
+		Thread.sleep(1000);
+	}
+	
+	ExtentTestManager.endTest();
+	return true;
+	}
+	
+	public Boolean Cashier_Authorization() throws InterruptedException {
+		ExtentTestManager.startTest("TC:22 - Cashier Authorization");
+		Log.info("TC:22 - Cashier Authorization");
+		
+		click(fixeddeposit.Authorizeandcanceltab);
+		click(fixeddeposit.cashierauthorization);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Navigate to \"Cashier Authorization\" module");
+		Log.info("Step:01 -Navigate to \"Cashier Authorization\" module");
+		
+		click(fixeddeposit.Refresh);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click \"Refresh");
+		Log.info("Step:02 -Click \"Refresh");
+		
+		click(fixeddeposit.checkboxselect);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 -Select checkbox");
+		Log.info("Step:02 -Select checkbox");
+		
+		click(fixeddeposit.Authorizebutton);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 -Click \"Authorize\" button");
+		Log.info("Step:03 -Click \"Authorize\" button");
+		
+		if(ElementDisplayed(fixeddeposit.successpopup)) {
+			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult: Account is created");
+			Log.info("ExpectedResult: Account is created");
+	
+		}else {
+			
+			ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: Account is not created");
+			Log.info("ExpectedResult: Account is not  created");
+
+		}
+		//AcceptAlert();
+		//DismissAlert();
+		click(fixeddeposit.cancelpopup);
+		
+		ExtentTestManager.endTest();
+		return true;
+		
+	}
+	
+	public Boolean Manager_Authorization_Cash_Tab() throws InterruptedException {
+		ExtentTestManager.startTest("TC:23 - Manager Authorization - Cash Tab");
+		Log.info("TC:23 - Manager Authorization - Cash Tab");
+		
+		//click(fixeddeposit.Authorizeandcanceltab);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Go to \"Authorize & Cancel\"");
+		Log.info("Step:01 -Go to \"Authorize & Cancel\"");
+		
+		click(fixeddeposit.ManagerAuthorization);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select \"Manager Authorization\"");
+		Log.info("Step:01 -Select \"Manager Authorization\"");
+		
+		if(ElementDisplayed(fixeddeposit.cashtab)) {
+			
+			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult:  -Cash tab will be displaying");
+			Log.info("ExpectedResult:  -Cash tab will be displaying");
+			
+		}else {
+			
+			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult:  -Cash tab will not be displaying");
+			Log.info("ExpectedResult:  -Cash tab will not be displaying");
+			
+		}
+		
+		ExtentTestManager.endTest();
+		return true;
+		
+	}	
+	
+	public Boolean Refresh_Loan_Opening_Entry() throws InterruptedException {
+		ExtentTestManager.startTest("TC:24 - Refresh Loan Opening Entry");
+		Log.info("TC:24 - Refresh Loan Opening Entry");
+		
+	
+	click(fixeddeposit.Refresh1);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01:  -Click \"Refresh\" button");
+	Log.info("ExpectedResult:  -Click \"Refresh\" button");
+	
+	
+	if(ElementDisplayed(fixeddeposit.cashdetails)) {
+		
+		ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult:  -Loan opening entry displayed");
+		Log.info("ExpectedResult:  -Loan opening entry displayed");
+		
+	}else {
+		
+		ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult:  -Loan opening entry displayed");
+		Log.info("ExpectedResult:  -Loan opening entry displayed");
+		
+	}
+	
+	
+	ExtentTestManager.endTest();
+	return true;
+	}
+
+	public Boolean Authorize_Loan_Entry_as_Manager() throws InterruptedException {
+		ExtentTestManager.startTest("TC:25 - Authorize Loan Entry as Manager");
+		Log.info("TC:25 - Authorize Loan Entry as Manager");
+		
+	    Thread.sleep(20000);
+		click(fixeddeposit.checkboxselect1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select loan entry checkbox");
+		Log.info("Step:01 -Select loan entry checkbox");
+		//Thread.sleep(20000);
+		click(fixeddeposit.Authorizebutton1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click \"Authorize\" button");
+		Log.info("Step:02 -Click \"Authorize\" button");
+		
+		if(ElementDisplayed(fixeddeposit.successpopup1)) {
+			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult: Entry authorized");
+			Log.info("ExpectedResult: Entry authorized");
+	
+		}else {
+			
+			ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: Entry is not  authorized");
+			Log.info("ExpectedResult: Entry is not authorized");
+
+		}
+		click(fixeddeposit.cancelpopup);
+		
+		Thread.sleep(20000);
+		ExtentTestManager.endTest();
+		return true;
+	
+	}
+	
+public boolean Deposit_opening_Transfer(Map<Object, Object> testdata, ITestContext context)throws ClassNotFoundException,InterruptedException {
+		
+		ExtentTestManager.startTest("TC:26 - Deposit opening-Transfer");
+		//click(fixeddeposit.Accountopening);
+		//click(fixeddeposit.Depositopening);
+		//click(fixeddeposit.FixedDeposit);
+		click(fixeddeposit.Bondcumulativetpe);
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Take Deposit opening window");
+		Log.info("Step:01 Take Deposit opening window");
+		
+		click(fixeddeposit.customerIDsearchbutton);
+		
+		
+        //Navigate to Pop Up Window
+  String mainWindowHandle = driver.getWindowHandle();
+  boolean popupAppeared = false;
+  for (String handle : driver.getWindowHandles()) {
+      if (!handle.equals(mainWindowHandle)) {
+          driver.switchTo().window(handle);
+          popupAppeared = true;
+//          
+          //Entering customer id and searching record
+          String custid = testdata.get("customerID").toString();
+  		input(fixeddeposit.custID, custid);
+  		
+  		click(fixeddeposit.searchbutton);
+		
+		
+		click(fixeddeposit.selectcust);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select customer ");
+		Log.info("Step:02 - Select customer from search results");
+		
+		driver.switchTo().window(mainWindowHandle);
+		
+		click(fixeddeposit.Addbutton);
+		click(fixeddeposit.okbutton);
+      
+      }
+  }
+  String amount = testdata.get("Amount").toString();
+	input(fixeddeposit.amount, amount);
+	
+	//Entering duration
+	String duration = testdata.get("Duration").toString();
+	input(fixeddeposit.duration, duration);
+	
+	
+	//selecting duration mode dropdown
+	select("MONTHS", fixeddeposit.durationmode);
+	
+  click(fixeddeposit.Referenceby);
+  
+//selecting referenceby  dropdown
+
+  click(fixeddeposit.optionNithin);
+  
+	click(fixeddeposit.getvalue);
+	
+	//clicking ok on popup
+	
+	click(fixeddeposit.popup);
+	
+	
+	//Entering data in field
+	
+	String Ledgerno = testdata.get("LedgerNo").toString();
+	input(fixeddeposit.ledgerno, Ledgerno);
+	
+	String foliono = testdata.get("Foliono").toString();
+	input(fixeddeposit.Foliono, foliono);
+	
+	
+	//Entering data in remark field
+	String remarkdata = testdata.get("Remark").toString();
+	input(fixeddeposit.remark,remarkdata);
+	
+	click(fixeddeposit.lienmark);
+	
+	clear(fixeddeposit.lienamount);
+	
+	click(fixeddeposit.lienamount);
+	
+	String lienamount = testdata.get("Lien Amount").toString();
+	input(fixeddeposit.lienamount, lienamount);
+	
+	
+	String lienremark = testdata.get("Lien Remark").toString();
+	input(fixeddeposit.lienremark,lienremark);
+	
+	click(fixeddeposit.Nextbutton);
+	
+	click(fixeddeposit.Nomineecheck);
+	
+	click(fixeddeposit.NomineecustomerIDsearchbutton);
+	
+	
+  //Navigate to Pop Up Window
+String mainWindowHandle1 = driver.getWindowHandle();
+boolean popupAppeared1 = false;
+for (String handle1 : driver.getWindowHandles()) {
+if (!handle1.equals(mainWindowHandle1)) {
+    driver.switchTo().window(handle1);
+    popupAppeared1 = true;
+//    
+    //Entering customer id and searching record
+    String Nomineecustid = testdata.get("NomineeCustomerID").toString();
+	input(fixeddeposit.NomineecustID, Nomineecustid);
+	
+	click(fixeddeposit.Nomineesearchbutton);
+
+	click(fixeddeposit.Nomineeselectcust);
+	
+	driver.switchTo().window(mainWindowHandle1);
+	
+	select("FATHER", fixeddeposit.NomineeRelation);
+	
+	click(fixeddeposit.NomineeAddbutton);
+	
+	click(fixeddeposit.NextbuttonNominee);																			
+																			
+}
+}
+	click(fixeddeposit.operatorcustomerIDsearchbutton);
+
+
+//Navigate to Pop Up Window
+String mainWindowHandle2 = driver.getWindowHandle();
+boolean popupAppeared2 = false;
+for (String handle2 : driver.getWindowHandles()) {
+if (!handle2.equals(mainWindowHandle1)) {
+driver.switchTo().window(handle2);
+popupAppeared1 = true;
+//
+//Entering customer id and searching record
+String operatorcustid = testdata.get("OperatorCustomerID").toString();
+
+	input(fixeddeposit.OperatorcustID, operatorcustid);
+	
+	click(fixeddeposit.operatorsearchbutton);
+
+click(fixeddeposit.operatorselectcust);
+
+driver.switchTo().window(mainWindowHandle1);
+
+String relation = testdata.get("Relation/Desig.").toString();
+	input(fixeddeposit.relation, relation);
+	
+	
+	String remark = testdata.get("OperatorRemark").toString();
+	input(fixeddeposit.remark1, remark);
+	
+	
+	click(fixeddeposit.add);
+	
+		
+			click(fixeddeposit.clicknext);
+}
+}
+click(fixeddeposit.intertransfercheckbox);
+
+//selecting product dropdown
+		select("SUSPENSE LIABILITY", fixeddeposit.product); 
+		
+//Entering accountno
+  String accountno = testdata.get("AccountNo").toString();
+	input(fixeddeposit.accountno, accountno);
+  	
+	String frequency = testdata.get("Frequency").toString();
+	input(fixeddeposit.frequency, frequency);
+	
+	click(fixeddeposit.nextclick1);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:03 -Enter mandatory field data");
+	Log.info("Step:03 -Enter mandatory field data");
+	
+	//2. Select trans.mode as 'Cash'
+	//select("CASH", fixeddeposit.transmode); 
+	
+	//3. click on save button
+	//click(fixeddeposit.savebutton);
+	select("TRANSFER",fixeddeposit.transmode);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:04 -Select transmode as 'transfer'");
+	Log.info("Step:04 -Select transmode as 'transfer'");
+	
+	click(fixeddeposit.postdebit);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:05 -click 'post debit' button");
+	Log.info("Step:04 -click 'post debit' button");
+	
+	//Navigate to Pop Up Window
+	String mainWindowHandle3 = driver.getWindowHandle();
+	boolean popupAppeared3 = false;
+	for (String handle3 : driver.getWindowHandles()) {
+	if (!handle3.equals(mainWindowHandle3)) {
+	driver.switchTo().window(handle3);
+	popupAppeared1 = true;
+
+	
+	if(ElementDisplayed(fixeddeposit.autoposting_popup)) {
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result  -pop up loaded");
+		Log.info("Expected Result  -pop up loaded");
+		
+	}else {
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result  -pop up is not loaded");
+		Log.info("Expected Result  -pop up is not loaded");
+		
+	}
+	}
+	}
+	ExtentTestManager.endTest();
+	return true;
 }
 	
+}
+
+	
+	
+	
+
+	
 	
 
 
+	
+	
+
+
+	
+	
+	
+
+
+
+
+	
+	

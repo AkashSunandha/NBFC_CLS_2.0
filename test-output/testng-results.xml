@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-17T16:21:21 IST" name="Default suite" finished-at="2025-01-17T16:37:32 IST" duration-ms="971547">
+  <suite started-at="2025-02-05T17:14:14 IST" name="Default suite" finished-at="2025-02-05T17:23:44 IST" duration-ms="569199">
     <groups>
     </groups>
-    <test started-at="2025-01-17T16:21:21 IST" name="Default test" finished-at="2025-01-17T16:37:32 IST" duration-ms="971547">
-      <class name="com.test.Customer.AllScenarios_Cust_NewCustomer">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Customer.AllScenarios_Cust_NewCustomer@5b58ed3c]" started-at="2025-01-17T16:21:21 IST" name="reference" finished-at="2025-01-17T16:21:21 IST" duration-ms="16" status="PASS">
+    <test started-at="2025-02-05T17:14:14 IST" name="Default test" finished-at="2025-02-05T17:23:44 IST" duration-ms="569199">
+      <class name="com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit@3954d008]" started-at="2025-02-05T17:14:14 IST" name="reference" finished-at="2025-02-05T17:14:14 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Customer.AllScenarios_Cust_NewCustomer@5b58ed3c]" started-at="2025-01-17T16:21:22 IST" name="newCustomer" data-provider="TestData" finished-at="2025-01-17T16:37:32 IST" duration-ms="970577" status="PASS">
+        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit@3954d008]" started-at="2025-02-05T17:14:15 IST" name="customerRegister" data-provider="TestData" finished-at="2025-02-05T17:23:44 IST" duration-ms="568223" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{addressPresentCity=City123%^&, addressPresentDoorNum=Doorno123%^&, addressPresentElectricPostNum=Electric Post No123%^&, addressPresentHouse=Orkkateeri Veetil12, addressPresentHouseNum=Buidlingno123%^&, addressPresentResidence=Malol, addressPresentStreet=Street123%^&, aliasName=abc, AlphaNumericInput=asd123, CKYCId=87901234567801, DOB=10/10/2253, duplicateIdentityNum=123aa#$, familyName=one piece, fatherName=Thomas, firstName=Anu, gents=2, guardian=Jony, identityNum=123ab, introducerCustName=ajith g nair, invalidAadhar=1234#$%^, invalidPhoneNum=123, issueDate=27/10/2288, issuedAuthority=456aa#$, ladies=1, LastName=Rajput, loginUserName=akash, loginValidPassword=aka@123, max1=1234567891234, middleName=Singh, monthlyIncome=25000, motherName=Jenny, num_Spcl=!3#1, occupation=Gamer, occupOrg=Global, parent=Mother, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, pin=679302, remarks=ASD123!@#, Run=Yes, specialCharInput=!@#$%!!!, TestScenario=New Customer Module, unemployed=1, validCustId=103000015690, validEmail=zoro@gmail.com, validPhoneNum=9990003330, validUptoDate=27/10/2311, weedingDate=10/10/2145}]]>
+                <![CDATA[{AccountNo=1, Amount=200,000.00, customerID=102000015729, Duration=5, Foliono=5, Frequency=2, InterestTransferAmount=1,000.00, LedgerNo=11, Lien Amount=1,000.00, Lien Remark=test01, loginUserName=pranali, loginValidPassword=san@123, Newpassword=Test@123, Newuserid=Mhatre, NomineeCustomerID=103000012745, OperatorCustomerID=103000012519, OperatorRemark=Adding new operator, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, ReferenceBy=NITHIN, Relation/Desig.=Father, Remark=test, Run=Yes, TestScenario=AccountOpening_FixedDeposit}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@8bffb8b]]>
+                <![CDATA[org.testng.TestRunner@1ffcf674]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newCustomer -->
-      </class> <!-- com.test.Customer.AllScenarios_Cust_NewCustomer -->
+        </test-method> <!-- customerRegister -->
+      </class> <!-- com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

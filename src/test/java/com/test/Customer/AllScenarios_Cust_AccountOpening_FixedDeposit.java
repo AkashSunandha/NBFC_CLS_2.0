@@ -27,6 +27,7 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 	@BeforeSuite
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("AccountOpening_FixedDeposit");
+		
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -52,7 +53,7 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 
 				//PC Registration
 				custSrchMthds.pcRegistration(testdata, context);
-				
+			
 				//TC 01
 				//User Login
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
@@ -97,8 +98,41 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				//TC22
 				fixeddeposit.AddNomineeandValidateAutofill(testdata);
 				
+				//TC17
+				fixeddeposit.AddOperatorandValidate(testdata);
+				
+				//TC18
+				fixeddeposit.Interest_Transfer_Requirements(testdata);
+				
+				//TC19
+				fixeddeposit.next_button_functioanlity();
+				
+				//TC20
+				fixeddeposit.On_Maturity_Settings();
+				
+				
+				//TC21
+				fixeddeposit.Login_with_Another_User(testdata, context);
+				
+				//TC22
+				fixeddeposit.Cashier_Authorization();
+				
+				//TC23
+				fixeddeposit.Manager_Authorization_Cash_Tab();
+				
+				//TC24
+				fixeddeposit.Refresh_Loan_Opening_Entry();
+				
+				
+				//TC25
+				fixeddeposit.Authorize_Loan_Entry_as_Manager();
+				
+				//TC26
+				fixeddeposit.Deposit_opening_Transfer(testdata, context);
+				
 				//Sign out
 				custSrchMthds.logout();
+				
 				
 				// EndTest
 //				ExtentTestManager.endTest();
