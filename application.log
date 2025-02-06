@@ -1,4 +1,4 @@
-[ERROR] 2025-01-30 09:47:44.358 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 15:42:54.616 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustSearch.gettestdate(AllScenarios_Cust_CustSearch.java:202) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Cust_QuickCustomer.gettestdate(AllScenarios_Cust_QuickCustomer.java:110) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-01-30 09:47:44.370 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 15:42:54.630 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -71,7 +71,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustSearch.gettestdate(AllScenarios_Cust_CustSearch.java:202) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Cust_QuickCustomer.gettestdate(AllScenarios_Cust_QuickCustomer.java:110) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-01-30 09:47:44.372 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 15:42:54.631 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -124,7 +124,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustSearch.gettestdate(AllScenarios_Cust_CustSearch.java:202) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Cust_QuickCustomer.gettestdate(AllScenarios_Cust_QuickCustomer.java:110) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-01-30 09:47:44.378 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 15:42:54.638 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustSearch.gettestdate(AllScenarios_Cust_CustSearch.java:202) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Cust_QuickCustomer.gettestdate(AllScenarios_Cust_QuickCustomer.java:110) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,382 +210,590 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-01-30 09:47:45.032 [main] Log - *** Running test method Customer Search Module...
-[INFO ] 2025-01-30 09:47:49.873 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-01-30 09:47:51.230 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-01-30 09:47:51.692 [main] Log - PC Registration
-[INFO ] 2025-01-30 09:47:52.760 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-01-30 09:47:53.120 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-01-30 09:47:54.166 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-01-30 09:47:58.457 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-01-30 09:47:59.638 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-01-30 09:47:59.696 [main] Log - Login with Invalid Credentials
-[INFO ] 2025-01-30 09:48:00.731 [main] Log - Step:01 - Enetered Valid User Name
-[INFO ] 2025-01-30 09:48:01.773 [main] Log - Step:02 - Enetered Invalid Password
-[INFO ] 2025-01-30 09:48:06.058 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-01-30 09:48:07.127 [main] Log - Expect Result: Error message displayed for invalid credentials.
-[INFO ] 2025-01-30 09:48:10.247 [main] Log - Invalid Login - Incorrect Password
-[INFO ] 2025-01-30 09:48:11.327 [main] Log - Step:01 - Enetered Valid User Name
-[INFO ] 2025-01-30 09:48:12.378 [main] Log - Step:02 - Enetered Invalid Password
-[INFO ] 2025-01-30 09:48:16.746 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-01-30 09:48:17.816 [main] Log - Expect Result: Error message displayed indicating incorrect password.
-[INFO ] 2025-01-30 09:48:20.918 [main] Log - Valid Login
-[INFO ] 2025-01-30 09:48:21.976 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-01-30 09:48:23.038 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-01-30 09:48:44.100 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-01-30 09:48:45.176 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-01-30 09:48:46.442 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-01-30 09:48:46.478 [main] Log - Navigate to Customer Search
-[INFO ] 2025-01-30 09:48:50.811 [main] Log - Step:01 - Expand the Customer module in the left menu bar.
-[INFO ] 2025-01-30 09:48:55.554 [main] Log - Step:02 - Select Customer Search.
-[INFO ] 2025-01-30 09:48:56.638 [main] Log - Expected Result: Customer Search Window loaded Successfully!
-[INFO ] 2025-01-30 09:49:01.151 [main] Log - Edit Customer Last Name - Valid Edit
-[INFO ] 2025-01-30 09:49:15.784 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 09:49:20.317 [main] Log - Step:02 -  Click Edit button.
-[INFO ] 2025-01-30 09:51:27.758 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-01-30 09:51:28.824 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-01-30 09:51:28.824 [main] Log - PC Registration
-[INFO ] 2025-01-30 09:51:29.935 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-01-30 09:51:30.217 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-01-30 09:51:31.235 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-01-30 09:51:35.477 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-01-30 09:51:36.833 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-01-30 09:51:36.871 [main] Log - Valid Login
-[INFO ] 2025-01-30 09:51:37.922 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-01-30 09:51:38.950 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-01-30 09:51:43.233 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-01-30 09:53:45.307 [main] Log - Error Message displayed: Already Logged in another system/browser.. Do you want to log out?
-[INFO ] 2025-01-30 09:53:50.002 [main] Log - Step:01 - Click on OK button
-[INFO ] 2025-01-30 09:53:51.024 [main] Log - Step:02 - Enetered valid User Name
-[INFO ] 2025-01-30 09:53:52.075 [main] Log - Step:03 - Entered valid Password
-[INFO ] 2025-01-30 09:54:02.418 [main] Log - Step:04 - Click on Login Button
-[INFO ] 2025-01-30 09:54:03.509 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-01-30 09:54:04.545 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-01-30 09:54:04.582 [main] Log - Navigate to Customer Search
-[INFO ] 2025-01-30 09:54:08.876 [main] Log - Step:01 - Expand the Customer module in the left menu bar.
-[INFO ] 2025-01-30 09:54:13.342 [main] Log - Step:02 - Select Customer Search.
-[INFO ] 2025-01-30 09:54:14.369 [main] Log - Expected Result: Customer Search Window loaded Successfully!
-[INFO ] 2025-01-30 09:54:33.018 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 09:54:38.144 [main] Log - Step:02 -  Click Edit button.
-[INFO ] 2025-01-30 09:54:49.529 [main] Log - Step:03 -  Modify the last name in customer details.
-[INFO ] 2025-01-30 09:55:20.962 [main] Log - Step:04 - Click Check Availability Button.
-[INFO ] 2025-01-30 09:55:34.404 [main] Log - Step:05 - Click on Save and Proceed button.
-[INFO ] 2025-01-30 09:55:35.477 [main] Log - Expected Result: Customer details are updated successfully.
-[INFO ] 2025-01-30 09:55:53.235 [main] Log - Verify Customer Expire Details
-[INFO ] 2025-01-30 09:56:16.263 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 09:56:20.696 [main] Log - Step:02 - Click on Expired button.
-[INFO ] 2025-01-30 09:56:20.763 [main] Log - Expected Result: Displayed customer details doesn't match
-[INFO ] 2025-01-30 09:56:20.792 [main] Log - Select State, Bank ID, Branch ID, Date
-[INFO ] 2025-01-30 09:59:33.216 [main] Log - Step:01 - Click on State drop down.
-[INFO ] 2025-01-30 09:59:37.598 [main] Log - Step:02 - Select a State from the drop down.
-[INFO ] 2025-01-30 09:59:41.960 [main] Log - Step:03 - Click on Bank ID drop down.
-[INFO ] 2025-01-30 09:59:46.393 [main] Log - Step:04 - Select a Bank ID from the drop down.
-[INFO ] 2025-01-30 09:59:50.758 [main] Log - Step:05 - Click on Branch ID drop down.
-[INFO ] 2025-01-30 09:59:55.252 [main] Log - Step:06 - Select a Branch ID from the drop down.
-[INFO ] 2025-01-30 09:59:55.287 [main] Log - Expected Result: Correct IFSC code - KLGB0040159 loads when Branch ID is selected.
-[INFO ] 2025-01-30 09:59:55.322 [main] Log - Verify IFSC Code After Branch Selection
-[INFO ] 2025-01-30 09:59:59.716 [main] Log - Step:01 - Click on Branch ID drop down.
-[INFO ] 2025-01-30 10:00:04.193 [main] Log - Step:02 - Select a Branch ID from the drop down & Observe the IFSC code field.
-[INFO ] 2025-01-30 10:00:08.638 [main] Log - Step:03 - Click on Branch ID drop down.
-[INFO ] 2025-01-30 10:00:13.085 [main] Log - Step:04 - Select a Branch ID from the drop down & Observe the IFSC code field.
-[INFO ] 2025-01-30 10:00:17.522 [main] Log - Step:05 - Click on Branch ID drop down.
-[INFO ] 2025-01-30 10:00:22.150 [main] Log - Step:06 - Select a Branch ID from the drop down & Observe the IFSC code field.
-[INFO ] 2025-01-30 10:00:22.202 [main] Log - Expected Result: IFSC code updates correctly with each branch selection. Selection:01 - KLGB0040293 Selection:02 - KLGB0040611 Selection:03 - KLGB0040666
-[INFO ] 2025-01-30 10:00:22.255 [main] Log - Add Customer Details to Grid
-[INFO ] 2025-01-30 10:00:23.337 [main] Log - Step:01 - Enter Customer Name in Cust Name field.
-[INFO ] 2025-01-30 10:00:24.389 [main] Log - Step:02 - Enter ADDRESS in Address field.
-[INFO ] 2025-01-30 10:00:25.448 [main] Log - Step:03 - Enter Bank Account number in BankAccNo field.
-[INFO ] 2025-01-30 10:00:26.499 [main] Log - Step:04 - Enter same Account number in Retype AccNo field as BankAccNo field.
-[INFO ] 2025-01-30 10:00:31.126 [main] Log - Step:05 - Click on ADD button.
-[INFO ] 2025-01-30 10:00:32.192 [main] Log - Expected Result: Data is added to the grid upon adding.
-[INFO ] 2025-01-30 10:00:32.240 [main] Log - Validate Retype Bank Acc No
-[INFO ] 2025-01-30 10:00:37.620 [main] Log - Step:01 - Enter Bank Account number in BankAccNo field.
-[INFO ] 2025-01-30 10:00:43.045 [main] Log - Step:02 - Enter different values in Bank Acc No and Retype Acc No fields.
-[INFO ] 2025-01-30 10:00:48.450 [main] Log - Expected Result: Error message displayed if values don't match.
-[INFO ] 2025-01-30 10:00:52.799 [main] Log - Error Handling for Empty Fields
-[INFO ] 2025-01-30 10:00:57.314 [main] Log - Step:01 -  Click 'Submit' button.
-[INFO ] 2025-01-30 10:00:58.430 [main] Log - Expected Result: Appropriate error message is displayed for empty fields.
-[INFO ] 2025-01-30 10:01:02.795 [main] Log - Cancel and Redirect to Customer Search
-[INFO ] 2025-01-30 10:01:07.489 [main] Log - Step:01 -  Click 'Close' button.
-[INFO ] 2025-01-30 10:01:08.556 [main] Log - Expected Result: Data is canceled and page redirects to customer search window.
-[INFO ] 2025-01-30 10:01:13.034 [main] Log - Mark Customer as Expired
-[INFO ] 2025-01-30 10:01:36.347 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:01:41.066 [main] Log - Step:02 - Click 'Expire' button
-[INFO ] 2025-01-30 10:01:55.484 [main] Log - Step:03 - Enter Date in Expire Date field.
-[INFO ] 2025-01-30 10:01:56.556 [main] Log - Step:04 - Enter Remarks in Remarks field.
-[INFO ] 2025-01-30 10:02:00.924 [main] Log - Step:05 - Click on State drop down.
-[INFO ] 2025-01-30 10:02:05.389 [main] Log - Step:06 - Select a State from the drop down.
-[INFO ] 2025-01-30 10:02:05.951 [main] Log - Step:07 - Click on Bank ID drop down.
-[INFO ] 2025-01-30 10:02:05.952 [main] Log - Step:08 - Select a Bank ID from the drop down.
-[INFO ] 2025-01-30 10:02:06.518 [main] Log - Step:09 - Click on Branch ID drop down.
-[INFO ] 2025-01-30 10:02:06.518 [main] Log - Step:10 - Select a Branch ID from the drop down.
-[INFO ] 2025-01-30 10:02:07.604 [main] Log - Step:11 - Enter Customer Name in Cust Name field.
-[INFO ] 2025-01-30 10:02:08.661 [main] Log - Step:12 - Enter ADDRESS in Address field.
-[INFO ] 2025-01-30 10:02:09.724 [main] Log - Step:13 - Enter Bank Account number in BankAccNo field.
-[INFO ] 2025-01-30 10:02:10.793 [main] Log - Step:14 - Enter same Account number in Retype AccNo field as BankAccNo field.
-[INFO ] 2025-01-30 10:02:11.882 [main] Log - Step:15 - Enter Date in Start Date field.
-[INFO ] 2025-01-30 10:02:16.481 [main] Log - Step:16 - Click on ADD button.
-[INFO ] 2025-01-30 10:02:20.666 [main] Log - Step:17 - Click on Submit button.
-[INFO ] 2025-01-30 10:02:22.297 [main] Log - Step:18 - Click on OK button.
-[INFO ] 2025-01-30 10:02:23.469 [main] Log - Expected Result: Customer is marked as expired, confirmation message is displayed.
-[INFO ] 2025-01-30 10:02:37.225 [main] Log - Deactivate a Customer with Valid Date
-[INFO ] 2025-01-30 10:02:51.528 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:02:56.447 [main] Log - Step:02 - Click 'Active' button
-[INFO ] 2025-01-30 10:03:00.750 [main] Log - Step:03 - Check the Deactivate Checkbox
-[INFO ] 2025-01-30 10:03:01.829 [main] Log - Step:04 - Enter Remarks in Remarks field.
-[INFO ] 2025-01-30 10:03:06.130 [main] Log - Step:03 - Click on Submit Button
-[INFO ] 2025-01-30 10:03:07.211 [main] Log - Expected Result: Customer is moved to the deactivate list
-[INFO ] 2025-01-30 10:03:20.429 [main] Log - Select Customer and Open Active Window
-[INFO ] 2025-01-30 10:03:43.798 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:03:48.449 [main] Log - Step:02 - Click 'Active' button
-[INFO ] 2025-01-30 10:03:49.519 [main] Log - Expected Result: Customer Active window opens showing customer details
-[INFO ] 2025-01-30 10:03:49.555 [main] Log - Verify Customer Details Display
-[INFO ] 2025-01-30 10:03:50.624 [main] Log - Step:01 - Verify the Presence of Column - Customer ID.
-[INFO ] 2025-01-30 10:03:51.680 [main] Log - Step:02 - Verify the Presence of Column - Name.
-[INFO ] 2025-01-30 10:03:52.750 [main] Log - Step:03 - Verify the Presence of Column - Risk.
-[INFO ] 2025-01-30 10:03:53.811 [main] Log - Step:04 - Verify the Presence of Column - PAN No.
-[INFO ] 2025-01-30 10:03:54.871 [main] Log - Step:05 - Verify the Presence of Column - Current Age.
-[INFO ] 2025-01-30 10:03:55.953 [main] Log - Step:06 - Verify the Presence of Column - Customer Type.
-[INFO ] 2025-01-30 10:03:55.954 [main] Log - Expected Result: Grid Column Names (Customer ID, Name, Risk, PAN No., Current Age, Customer Type) are displayed
-[INFO ] 2025-01-30 10:03:55.997 [main] Log - Submit Deactivation Without Date
-[INFO ] 2025-01-30 10:04:00.346 [main] Log - Step:01 - Check the Deactivate Checkbox
-[INFO ] 2025-01-30 10:04:08.810 [main] Log - Step:02 - Leave date empty
-[INFO ] 2025-01-30 10:04:14.190 [main] Log - Expected Result: Error message to select a date is displayed
-[INFO ] 2025-01-30 10:04:14.250 [main] Log - Cancel Deactivation Process
-[INFO ] 2025-01-30 10:04:19.004 [main] Log - Step:01 - Click Cancel button.
-[INFO ] 2025-01-30 10:04:20.087 [main] Log - Expected Result: Page redirects back to the Customer Search window
-[INFO ] 2025-01-30 10:04:24.596 [main] Log - Freeze Customer
-[INFO ] 2025-01-30 10:04:48.065 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:04:52.391 [main] Log - Step:02 - Click on Freeze button.
-[INFO ] 2025-01-30 10:04:53.467 [main] Log - Expected Result: Freeze window opens with customer details
-[INFO ] 2025-01-30 10:04:53.503 [main] Log - Verify Customer Details in Freeze Window
-[INFO ] 2025-01-30 10:04:54.572 [main] Log - Step:01 - Verify the Presence of Column - Customer ID.
-[INFO ] 2025-01-30 10:04:55.650 [main] Log - Step:02 - Verify the Presence of Column - Name.
-[INFO ] 2025-01-30 10:04:56.723 [main] Log - Step:03 - Verify the Presence of Column - Risk.
-[INFO ] 2025-01-30 10:04:57.782 [main] Log - Step:04 - Verify the Presence of Column - PAN No.
-[INFO ] 2025-01-30 10:04:58.846 [main] Log - Step:05 - Verify the Presence of Column - Current Age.
-[INFO ] 2025-01-30 10:04:59.923 [main] Log - Step:06 - Verify the Presence of Column - Customer Type.
-[INFO ] 2025-01-30 10:04:59.923 [main] Log - Expected Result: Grid Column Names (Customer ID, Name, Risk, PAN No., Current Age, Customer Type) are displayed
-[INFO ] 2025-01-30 10:04:59.961 [main] Log - Attempt to Freeze Without Checkbox
-[INFO ] 2025-01-30 10:05:04.275 [main] Log - Step:01 - Click Submit button without checking the freeze checkbox
-[INFO ] 2025-01-30 10:05:05.357 [main] Log - Expected Result: Error message displayed: "Please select the freeze checkbox"
-[INFO ] 2025-01-30 10:05:09.708 [main] Log - Cancel
-[INFO ] 2025-01-30 10:05:14.298 [main] Log - Step:01 - Click on Cancel button.
-[INFO ] 2025-01-30 10:05:15.361 [main] Log - Expected Result: Action is canceled, navigates back to customer search window
-[INFO ] 2025-01-30 10:05:24.686 [main] Log - Enter Valid Freeze Remark and Submit
-[INFO ] 2025-01-30 10:05:38.864 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:05:43.233 [main] Log - Step:02 - Click 'Freeze' button
-[INFO ] 2025-01-30 10:05:47.575 [main] Log - Step:03 - Check the freeze checkbox.
-[INFO ] 2025-01-30 10:05:48.658 [main] Log - Step:04 - Enter Remarks in Remarks field.
-[INFO ] 2025-01-30 10:05:53.014 [main] Log - Step:05 - Click on Submit button.
-[INFO ] 2025-01-30 10:05:54.075 [main] Log - Expected Result: Customer is updated into freeze list
-[INFO ] 2025-01-30 10:06:07.608 [main] Log - Select Customer and Mark - Valid Data
-[INFO ] 2025-01-30 10:06:26.577 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:06:31.172 [main] Log - Step:02 - Click on Mark button.
-[INFO ] 2025-01-30 10:06:31.332 [main] Log - Expected Result: Customer mark window opens with customer data pre-filled. Customer ID - 102000016306 Customer Name - MR AJITHS  Display Name - AJITHS  DOB & Age - 03/02/1997 & 27
-[INFO ] 2025-01-30 10:06:31.366 [main] Log - Verify Customer Mark Details
-[INFO ] 2025-01-30 10:06:31.366 [main] Log - Expected Result: Details doesn't match with selected customer from search results.
-[INFO ] 2025-01-30 10:06:31.398 [main] Log - Leave Remarks Empty
-[INFO ] 2025-01-30 10:06:34.461 [main] Log - Step:01 - Leave 'Remark' field empty.
-[INFO ] 2025-01-30 10:06:38.798 [main] Log - Step:02 - Click 'Submit' button.
-[INFO ] 2025-01-30 10:06:39.912 [main] Log - Expected Result: Error message displayed requiring remarks.
-[INFO ] 2025-01-30 10:06:44.239 [main] Log - Status Required
-[INFO ] 2025-01-30 10:06:44.239 [main] Log - Step:01 - Do not select any option in the Status drop down
-[INFO ] 2025-01-30 10:06:45.299 [main] Log - Step:02 - Enter Remarks in Remarks field.
-[INFO ] 2025-01-30 10:06:49.706 [main] Log - Step:03 - Click 'Submit' button.
-[INFO ] 2025-01-30 10:06:50.821 [main] Log - Expected Result: Error message displayed, Please select Status.
-[INFO ] 2025-01-30 10:06:55.163 [main] Log - Select Valid Status
-[INFO ] 2025-01-30 10:06:55.478 [main] Log - Step:01 - Select valid status from dropdown.
-[INFO ] 2025-01-30 10:06:55.512 [main] Log - Expected Result: Status is selected successfully.
-[INFO ] 2025-01-30 10:06:55.512 [main] Log - Invalid Date Format
-[INFO ] 2025-01-30 10:07:00.879 [main] Log - Step:01 - Manually enter date in invalid format.
-[INFO ] 2025-01-30 10:07:05.189 [main] Log - Step:02 - Click 'Submit' button.
-[INFO ] 2025-01-30 10:07:06.269 [main] Log - Expected Result: Error message displayed requiring correct date format.
-[INFO ] 2025-01-30 10:07:10.590 [main] Log - Select Effect Date - Valid Past or Current Date
-[INFO ] 2025-01-30 10:07:15.941 [main] Log - Step:01 - Select any past or current date.
-[INFO ] 2025-01-30 10:07:15.941 [main] Log - Expected Result: Date is selected successfully.
-[INFO ] 2025-01-30 10:07:15.982 [main] Log - Submit and Close Window
-[INFO ] 2025-01-30 10:07:20.661 [main] Log - Step:01 -  Click 'Close' button.
-[INFO ] 2025-01-30 10:07:21.768 [main] Log - Expected Result: Customer search window is displayed, and data is not saved.
-[INFO ] 2025-01-30 10:07:28.130 [main] Log - Enter Remark and Submit
-[INFO ] 2025-01-30 10:07:43.520 [main] Log - Step:01 - Select a customer from the list.
-[INFO ] 2025-01-30 10:07:47.929 [main] Log - Step:02 - Click 'Mark' button
-[INFO ] 2025-01-30 10:07:48.340 [main] Log - Step:03 - Select valid status from dropdown.
-[INFO ] 2025-01-30 10:07:49.402 [main] Log - Step:04 - Enter Remarks in Remarks field.
-[INFO ] 2025-01-30 10:07:55.177 [main] Log - Step:05 - Click 'Submit' button.
-[INFO ] 2025-01-30 10:07:56.319 [main] Log - Expected Result: Customer is marked with selected status, success message displayed.
-[INFO ] 2025-01-30 10:08:14.756 [main] Log - Delete Customer - Authorized Customer
-[INFO ] 2025-01-30 10:08:29.328 [main] Log - Step:01 - Select an authorized customer from the list.
-[INFO ] 2025-01-30 10:08:33.490 [main] Log - Step:02 - Click on Delete button
-[INFO ] 2025-01-30 10:08:33.524 [main] Log - Step:03 - Accept the Alert
-[INFO ] 2025-01-30 10:08:34.584 [main] Log - Validation message displayed: "Cannot Delete. Authorized Customer."
-[INFO ] 2025-01-30 10:08:38.906 [main] Log - Verify Validation Message on Delete
-[INFO ] 2025-01-30 10:08:57.614 [main] Log - Step:01 - Select an customer from the list.
-[INFO ] 2025-01-30 10:09:01.769 [main] Log - Step:02 - Click on Delete button
-[INFO ] 2025-01-30 10:09:01.777 [main] Log - Expected Result: Validation Message displayed= Are you sure to delete
-[INFO ] 2025-01-30 10:09:06.411 [main] Log - Cancel Deletion Confirmation
-[INFO ] 2025-01-30 10:09:20.568 [main] Log - Step:01 - Select an authorized customer from the list.
-[INFO ] 2025-01-30 10:09:24.786 [main] Log - Step:02 - Click on Delete button
-[INFO ] 2025-01-30 10:09:24.820 [main] Log - Step:03 - Reject the Alert
-[INFO ] 2025-01-30 10:09:25.892 [main] Log - Expected Result: Deletion is canceled, customer remains in the list.
-[INFO ] 2025-01-30 10:09:25.928 [main] Log - Click Delete Without Selection
-[INFO ] 2025-01-30 10:09:44.357 [main] Log - Step:01 - Click on the Delete button without selecting any customer.
-[INFO ] 2025-01-30 10:09:45.451 [main] Log - Expected Result: Error message displayed, e.g., "Please select a customer to delete."
-[INFO ] 2025-01-30 10:09:49.783 [main] Log - Last Name Field - ECP Validations
-[INFO ] 2025-01-30 10:10:04.140 [main] Log - Step:01 -  Select an existing customer.
-[INFO ] 2025-01-30 10:10:08.494 [main] Log - Step:02 -  Click Edit button.
-[INFO ] 2025-01-30 10:10:20.156 [main] Log - Step:03 -  Enter Last Name in Last Name field (Numeric Input).
-[INFO ] 2025-01-30 10:10:25.540 [main] Log - Expected Result: Numeric inputs prompts error message.
-[INFO ] 2025-01-30 10:10:38.308 [main] Log - Step:04 -  Enter Last Name in Last Name field (AlphaNumeric Input).
-[INFO ] 2025-01-30 10:10:43.685 [main] Log - Expected Result: AlphaNumeric inputs prompts error message.
-[INFO ] 2025-01-30 10:10:48.158 [main] Log - Invalid Data Format in Last Name
-[INFO ] 2025-01-30 10:10:56.920 [main] Log - Step:05 -  Enter Last Name in Last Name field (Special Characters Input).
-[INFO ] 2025-01-30 10:11:02.405 [main] Log - Expected Result: Special Characters inputs prompts error message.
-[INFO ] 2025-01-30 10:11:15.224 [main] Log - Step:06 -  Enter Last Name in Last Name field (Alphabetic Input).
-[INFO ] 2025-01-30 10:11:19.522 [main] Log - Expected Result: Alphabetic inputs are allowed.
-[INFO ] 2025-01-30 10:11:30.052 [main] Log - View Customer Details
-[INFO ] 2025-01-30 10:11:35.606 [main] Log - Step:01 - Enter valid Customer Id in Customer ID field.
-[INFO ] 2025-01-30 10:11:41.159 [main] Log - Step:02 - Click on Search button.
-[INFO ] 2025-01-30 10:11:45.466 [main] Log - Step:03 - Select the customer from the list.
-[INFO ] 2025-01-30 10:11:49.982 [main] Log - Step:04 - Click on the View button.
-[INFO ] 2025-01-30 10:11:51.052 [main] Log - Expected Result: Customer details page displays KYC, address, and bank details.
-[INFO ] 2025-01-30 10:11:51.089 [main] Log - Verify Non-Editable Customer Details
-[INFO ] 2025-01-30 10:11:51.105 [main] Log - Expected Result: Fields are non-editable, user cannot modify details.
-[INFO ] 2025-01-30 10:12:02.086 [main] Log - Attachment Popup
-[INFO ] 2025-01-30 10:12:07.503 [main] Log - Step:01 - Enter valid Customer Id in Customer ID field.
-[INFO ] 2025-01-30 10:12:12.045 [main] Log - Step:02 - Click on Search button.
-[INFO ] 2025-01-30 10:12:16.367 [main] Log - Step:03 - Select the customer from the list.
-[INFO ] 2025-01-30 10:12:20.850 [main] Log - Step:04 - Click on the Attachments button.
-[INFO ] 2025-01-30 10:12:21.953 [main] Log - Expected Result: Attachment popup window open.
-[INFO ] 2025-01-30 10:12:21.984 [main] Log - Attachment Popup Image Display
-[INFO ] 2025-01-30 10:12:23.072 [main] Log - Expected Result: Image is visible in the attachment popup
-[INFO ] 2025-01-30 10:12:23.100 [main] Log - Rotate Button Functionality
-[INFO ] 2025-01-30 10:12:27.410 [main] Log - Step:01 - Click on Rotate button.
-[INFO ] 2025-01-30 10:12:27.411 [main] Log - Expected Result: Image rotates.
-[INFO ] 2025-01-30 10:12:27.448 [main] Log - Image Button Functionality
-[INFO ] 2025-01-30 10:12:31.601 [main] Log - Step:01 - Click on the image button.
-[INFO ] 2025-01-30 10:12:32.760 [main] Log - Expected Result: Image is displayed in a larger view
-[INFO ] 2025-01-30 10:12:32.760 [main] Log - Close Button Functionality
-[INFO ] 2025-01-30 10:12:37.075 [main] Log - Step:01 - Click on Close button.
-[INFO ] 2025-01-30 10:12:37.075 [main] Log - Expected Result: Image popup closes.
-[INFO ] 2025-01-30 10:12:37.108 [main] Log - Zoom Image Functionality
-[INFO ] 2025-01-30 10:12:45.507 [main] Log - Step:01 - Click on Zoom button.
-[INFO ] 2025-01-30 10:12:45.793 [main] Log - Expected Result: Image zooms in/out as expected.
-[INFO ] 2025-01-30 10:12:50.354 [main] Log - Mobile Field - BVA Validations
-[INFO ] 2025-01-30 10:12:51.478 [main] Log - Step:01 - Enter Invlalid Mobile num in moblie field(<10 Digits)
-[INFO ] 2025-01-30 10:12:56.158 [main] Log - Step:02 - Click on the Search button.
-[INFO ] 2025-01-30 10:12:57.229 [main] Log - Expected Result: Error message displayed for incorrect Mobile NO.(< 10 digits)
-[INFO ] 2025-01-30 10:13:01.650 [main] Log - Step:03 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:02.760 [main] Log - Step:04 - Enter Invlalid Mobile num in moblie field(>10 Digits)
-[INFO ] 2025-01-30 10:13:07.273 [main] Log - Step:05 - Click on the Search button.
-[INFO ] 2025-01-30 10:13:08.407 [main] Log - Expected Result: Error message displayed for incorrect Mobile NO.(> 10 digits)
-[INFO ] 2025-01-30 10:13:12.867 [main] Log - Step:06 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:13.960 [main] Log - Step:07 - Enter Valid Mobile num in moblie field
-[INFO ] 2025-01-30 10:13:18.627 [main] Log - Step:08 - Click on the Search button.
-[INFO ] 2025-01-30 10:13:19.748 [main] Log - Expected Result: Fetched Customer with Valid Mobile No., Successfully!
-[INFO ] 2025-01-30 10:13:24.208 [main] Log - Step:09 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:24.234 [main] Log - Name Field - ECP Validations
-[INFO ] 2025-01-30 10:13:25.293 [main] Log - Step:01 - Enter Invlalid Name in Name field(Numeric Input)
-[INFO ] 2025-01-30 10:13:29.760 [main] Log - Step:02 - Click on the Search button.
-[INFO ] 2025-01-30 10:13:30.846 [main] Log - Expected Result: Error message displayed for incorrect Name (Numeric Input)
-[INFO ] 2025-01-30 10:13:35.331 [main] Log - Step:03 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:36.402 [main] Log - Step:04 - Enter Invlalid Name in Name field(Alphanumeric Input)
-[INFO ] 2025-01-30 10:13:40.823 [main] Log - Step:05 - Click on the Search button.
-[INFO ] 2025-01-30 10:13:41.912 [main] Log - Expected Result: Error message displayed for incorrect Name (Alphanumeric)
-[INFO ] 2025-01-30 10:13:46.363 [main] Log - Step:06 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:47.451 [main] Log - Step:07 - Enter Valid Name in Name field(Alphabet Input)
-[INFO ] 2025-01-30 10:13:52.102 [main] Log - Step:08 - Click on the Search button.
-[INFO ] 2025-01-30 10:13:53.177 [main] Log - Expected Result: Fetched Customer with Valid Name, Successfully!
-[INFO ] 2025-01-30 10:13:58.056 [main] Log - Step:09 - Click on the Clear Data
-[INFO ] 2025-01-30 10:13:58.117 [main] Log - Customer Search - Invalid Name
-[INFO ] 2025-01-30 10:13:59.258 [main] Log - Step:01 - Enter Vlalid Name in Name field(Alphabet Input)
-[INFO ] 2025-01-30 10:14:03.742 [main] Log - Step:02 - Click on the Search button.
-[INFO ] 2025-01-30 10:14:04.812 [main] Log - Expected Result: No results found and appropriate message displayed.
-[INFO ] 2025-01-30 10:14:09.210 [main] Log - Step:03 - Click on the Clear Data
-[INFO ] 2025-01-30 10:14:09.245 [main] Log - Error Guessing - Special Characters in Name Field
-[INFO ] 2025-01-30 10:14:10.326 [main] Log - Step:13 - Enter Special Characters Name in Name field
-[INFO ] 2025-01-30 10:14:14.827 [main] Log - Step:14 - Click on the Search button.
-[INFO ] 2025-01-30 10:14:15.930 [main] Log - Expected Result: No results found and appropriate message displayed.
-[INFO ] 2025-01-30 10:14:20.380 [main] Log - Step:15 - Click on the Clear Data
-[INFO ] 2025-01-30 10:14:20.409 [main] Log - Customer Search with No Filter
-[INFO ] 2025-01-30 10:14:24.820 [main] Log - Step:01 - Click on the Clear Data
-[INFO ] 2025-01-30 10:14:29.646 [main] Log - Step:02 - Click on the Search button without entering any filters.
-[INFO ] 2025-01-30 10:14:30.718 [main] Log - Expected Result: All Availabe customer details displayed, Successfully!
-[INFO ] 2025-01-30 10:14:35.211 [main] Log - Step:03 - Click on the Clear Data
-[INFO ] 2025-01-30 10:14:35.254 [main] Log - Invalid Aadhaar Number
-[INFO ] 2025-01-30 10:14:36.328 [main] Log - Step:01 - Enter Invalid Aadhaar num in Aadhaar field
-[INFO ] 2025-01-30 10:14:40.864 [main] Log - Step:02 - Click on the Search button
-[INFO ] 2025-01-30 10:14:41.949 [main] Log - Error message displayed for incorrect Aadhaar(< 12 digits)
-[INFO ] 2025-01-30 10:14:46.391 [main] Log - Step:03 - Click on the Clear Data
-[INFO ] 2025-01-30 10:14:46.422 [main] Log - Clear Functionality
-[INFO ] 2025-01-30 10:14:48.543 [main] Log - Step:01 - Enter inputs in various fields.
-[INFO ] 2025-01-30 10:14:52.962 [main] Log - Step:02 - Click on the Clear button.
-[INFO ] 2025-01-30 10:14:53.031 [main] Log - Expected Result: All Inputs Cleared, Successfully!
-[INFO ] 2025-01-30 10:14:53.086 [main] Log - Verify the field Doc Type
-[INFO ] 2025-01-30 10:14:57.448 [main] Log - Step:01 - Click on Doc Type drop down box
-[INFO ] 2025-01-30 10:15:01.909 [main] Log - Step:02 - Select a document type from the drop down.
-[INFO ] 2025-01-30 10:15:06.860 [main] Log - Step:03 - Click on the Search button
-[INFO ] 2025-01-30 10:15:08.002 [main] Log - Expected Result: Doc type is selecting from the dropdown successfully and details should be displayed against the given DOC type, Successfully!
-[INFO ] 2025-01-30 10:15:08.035 [main] Log - Verify the field Doc No
-[INFO ] 2025-01-30 10:15:13.570 [main] Log - Step:03 - Enter Document number in Doc No. field.
-[INFO ] 2025-01-30 10:15:18.102 [main] Log - Step:03 - Click on the Search button
-[INFO ] 2025-01-30 10:15:19.176 [main] Log - Expected Result: Doc type is selecting from the dropdown successfully and details should be displayed against the given DOC type, Successfully!
-[INFO ] 2025-01-30 10:15:28.143 [main] Log - Toggle Is Institutional Checkbox
-[INFO ] 2025-01-30 10:15:32.444 [main] Log - Step:01 - Uncheck KYC Compliant Only checkbox
-[INFO ] 2025-01-30 10:15:36.740 [main] Log - Step:02 - Uncheck Active Only checkbox
-[INFO ] 2025-01-30 10:15:41.045 [main] Log - Step:03 - Uncheck Prospects Only checkbox
-[INFO ] 2025-01-30 10:15:45.584 [main] Log - Step:04 - Check Prospects Only checkbox
-[INFO ] 2025-01-30 10:15:50.553 [main] Log - Step:05 - Click on the Search button
-[INFO ] 2025-01-30 10:15:51.613 [main] Log - Expected Result: Grid displays only institutional customers.
-[INFO ] 2025-01-30 10:15:56.171 [main] Log - Verify the field House Name
-[INFO ] 2025-01-30 10:15:57.293 [main] Log - Step:01 - Enter Invalid Aadhaar num in Aadhaar field
-[INFO ] 2025-01-30 10:16:02.020 [main] Log - Step:02 - Click on the Search button
-[INFO ] 2025-01-30 10:16:03.087 [main] Log - Expected Result: Customer Fetched with House Name (Alphanumeric Input), Successfully!
-[INFO ] 2025-01-30 10:16:08.660 [main] Log - Step:01 - Enter Invalid Aadhaar num in Aadhaar field
-[INFO ] 2025-01-30 10:16:13.264 [main] Log - Step:02 - Click on the Search button
-[INFO ] 2025-01-30 10:16:14.333 [main] Log - Expected Result: Customer Fetched with House Name(Alphabetic Input), Successfully!
-[INFO ] 2025-01-30 10:16:19.887 [main] Log - Step:05 - Enter House name in House field (Numeric Input)
-[INFO ] 2025-01-30 10:16:24.483 [main] Log - Step:06 - Click on the Search button
-[INFO ] 2025-01-30 10:16:25.580 [main] Log - Expected Result: Customer Fetched with House Name(Numeric Input), Successfully!
-[INFO ] 2025-01-30 10:16:30.157 [main] Log - Verify the field PAN No
-[INFO ] 2025-01-30 10:16:31.252 [main] Log - Step:01 - Enter PAN number in PAN NO. field.
-[INFO ] 2025-01-30 10:16:35.881 [main] Log - Step:02 - Click on the Search button.
-[INFO ] 2025-01-30 10:16:36.949 [main] Log - Expected Result: Customer details should be shows in the grid against the given PAN No.
-[INFO ] 2025-01-30 10:16:36.983 [main] Log - Customer details in grid
-[INFO ] 2025-01-30 10:16:38.073 [main] Log - Step:01 - Verify the Presence of Column - Cust ID.
-[INFO ] 2025-01-30 10:16:39.142 [main] Log - Step:02 - Verify the Presence of Column - Date.
-[INFO ] 2025-01-30 10:16:40.215 [main] Log - Step:03 - Verify the Presence of Column - First Name.
-[INFO ] 2025-01-30 10:16:41.298 [main] Log - Step:04 - Verify the Presence of Column - Last Name.
-[INFO ] 2025-01-30 10:16:42.368 [main] Log - Step:05 - Verify the Presence of Column - Middle Name.
-[INFO ] 2025-01-30 10:16:43.450 [main] Log - Step:06 - Verify the Presence of Column - Display Name.
-[INFO ] 2025-01-30 10:16:44.513 [main] Log - Step:07 - Verify the Presence of Column - Parent/Spouse
-[INFO ] 2025-01-30 10:16:45.587 [main] Log - Step:08 - Verify the Presence of Column - Relation.
-[INFO ] 2025-01-30 10:16:46.671 [main] Log - Step:09 - Verify the Presence of Column - House.
-[INFO ] 2025-01-30 10:16:47.734 [main] Log - Step:10 - Verify the Presence of Column - Place
-[INFO ] 2025-01-30 10:16:48.809 [main] Log - Step:11 - Verify the Presence of Column - Mobile No.
-[INFO ] 2025-01-30 10:16:49.882 [main] Log - Step:12 - Verify the Presence of Column - Status
-[INFO ] 2025-01-30 10:16:49.882 [main] Log - Expected Result: Customer details is showing under the grid
-[INFO ] 2025-01-30 10:16:54.374 [main] Log - Check KYC Compliant Only Checkbox.
-[INFO ] 2025-01-30 10:16:58.672 [main] Log - Step:01 - Uncheck Active Only checkbox
-[INFO ] 2025-01-30 10:17:02.978 [main] Log - Step:02 - Uncheck Prospects Only checkbox
-[INFO ] 2025-01-30 10:17:08.177 [main] Log - Step:03 - Click on the Search button.
-[INFO ] 2025-01-30 10:17:09.269 [main] Log - Expected Result: Only shows the KYC completed customer details.
-[INFO ] 2025-01-30 10:17:13.820 [main] Log - Check Active Only, Checkbox
-[INFO ] 2025-01-30 10:17:18.386 [main] Log - Step:01 - Uncheck KYC Compliant Only checkbox
-[INFO ] 2025-01-30 10:17:22.694 [main] Log - Step:02 - Uncheck Prospects Only checkbox
-[INFO ] 2025-01-30 10:17:27.923 [main] Log - Step:03 - Click on the Search button.
-[INFO ] 2025-01-30 10:17:33.504 [main] Log - Check Prospects Only Checkbox
-[INFO ] 2025-01-30 10:17:38.007 [main] Log - Step:01 - Uncheck KYC Compliant Only checkbox
-[INFO ] 2025-01-30 10:17:42.573 [main] Log - Step:02 - Uncheck Active Only checkbox
-[INFO ] 2025-01-30 10:17:47.408 [main] Log - Step:03 - Click on the Search button.
-[INFO ] 2025-01-30 10:17:48.574 [main] Log - Expected Result: Only listing the customer which dont have accounts.
-[INFO ] 2025-01-30 10:17:53.119 [main] Log - Check Include Reject Checkbox
-[INFO ] 2025-01-30 10:17:57.489 [main] Log - Step:01 - Uncheck KYC Compliant Only checkbox
-[INFO ] 2025-01-30 10:18:01.933 [main] Log - Step:02 - Uncheck Prospects Only checkbox
-[INFO ] 2025-01-30 10:18:06.219 [main] Log - Step:03 - Uncheck Active Only checkbox
-[INFO ] 2025-01-30 10:18:10.497 [main] Log - Step:04 - Check the Include Reject checkbox
-[INFO ] 2025-01-30 10:18:15.659 [main] Log - Step:05 - Click on the Search button.
-[INFO ] 2025-01-30 10:18:16.730 [main] Log - Listing the customer include rejected customer 
-[INFO ] 2025-01-30 10:18:21.203 [main] Log - Logout
-[INFO ] 2025-01-30 10:18:30.018 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-01-30 10:18:31.089 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-02-06 15:42:55.408 [main] Log - *** Running test method Quick Customer Module...
+[INFO ] 2025-02-06 15:42:59.511 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-02-06 15:43:00.789 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-02-06 15:43:03.248 [main] Log - PC Registration
+[INFO ] 2025-02-06 15:43:04.331 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-02-06 15:43:04.678 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-02-06 15:43:05.728 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-02-06 15:43:10.028 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-02-06 15:43:11.323 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-02-06 15:43:11.390 [main] Log - Valid Login
+[INFO ] 2025-02-06 15:43:12.436 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-02-06 15:43:13.487 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-02-06 15:43:20.856 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-02-06 15:43:21.936 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-06 15:43:23.058 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-06 15:43:23.108 [main] Log - Open Quick Customer Window
+[INFO ] 2025-02-06 15:43:29.432 [main] Log - Step:01 - Expand the Customer module in the left menu bar.
+[INFO ] 2025-02-06 15:43:36.523 [main] Log - Step:02 - Click on Quick Customer.
+[INFO ] 2025-02-06 15:43:37.597 [main] Log - Expected Result: Quick Customer window is displayed.
+[INFO ] 2025-02-06 15:43:37.630 [main] Log - Verify 'Start Date' Shows Current Date
+[INFO ] 2025-02-06 15:43:37.676 [main] Log - Expected Result: Field displays current date: Monday, August 27 2300 which is same as Start Date: 27/08/2300
+[INFO ] 2025-02-06 15:43:37.711 [main] Log - 'Start Date' Field Typing Disabled
+[INFO ] 2025-02-06 15:43:37.747 [main] Log - Expected Result: Typing in the field is disabled.
+[INFO ] 2025-02-06 15:43:37.783 [main] Log - Empty Check Availability Popup
+[INFO ] 2025-02-06 15:43:43.359 [main] Log - Step:01 -  Verify the state of the 'Save' button after popup is shown.
+[INFO ] 2025-02-06 15:43:44.833 [main] Log - Expected Result: 'Save' button should be enabled.
+[INFO ] 2025-02-06 15:43:44.863 [main] Log - 'First Name' and Salutation Mandatory Check
+[INFO ] 2025-02-06 15:43:50.253 [main] Log - Step:01 -  Leave 'First Name' and salutation blank, try to submit form.
+[INFO ] 2025-02-06 15:43:51.314 [main] Log - Expected Result: Error message for mandatory fields.
+[INFO ] 2025-02-06 15:43:55.584 [main] Log - Referred By Dropdown - Select Item
+[INFO ] 2025-02-06 15:43:57.023 [main] Log - Step:01 - Click on the Referred By dropdown.
+[INFO ] 2025-02-06 15:43:57.023 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:43:57.024 [main] Log - Expected Result: Referred By, can be selected from dropdown.
+[INFO ] 2025-02-06 15:43:57.068 [main] Log - Select Salutation Dropdown
+[INFO ] 2025-02-06 15:43:58.605 [main] Log - Step:01 - Click on the Salutation dropdown.
+[INFO ] 2025-02-06 15:43:58.605 [main] Log - Step:02 - Select a Salutation.
+[INFO ] 2025-02-06 15:43:58.606 [main] Log - Expected Result: Salutation can be selected from dropdown.
+[INFO ] 2025-02-06 15:43:58.637 [main] Log - Numerical Entry in 'First Name' Field
+[INFO ] 2025-02-06 15:44:04.043 [main] Log - Step:01 - Enter numbers in 'First Name' field.
+[INFO ] 2025-02-06 15:44:05.143 [main] Log - Expected Result: Validation message: "First name is not valid".
+[INFO ] 2025-02-06 15:44:09.496 [main] Log - Clear 'First Name' Field
+[INFO ] 2025-02-06 15:44:16.922 [main] Log - Step:01 - Clear the 'First Name' field.
+[INFO ] 2025-02-06 15:44:16.960 [main] Log - Expected Result: First Name Field is cleared successfully.
+[INFO ] 2025-02-06 15:44:16.999 [main] Log - Alphabetic Entry in 'First Name' Field
+[INFO ] 2025-02-06 15:44:22.419 [main] Log - Step:01 - Enter alphabets in 'First Name' field.
+[INFO ] 2025-02-06 15:44:22.421 [main] Log - Expected Result: Alphabets accepted.
+[INFO ] 2025-02-06 15:44:22.486 [main] Log - Alphabetic Entry in 'Middle Name' Field
+[INFO ] 2025-02-06 15:44:27.885 [main] Log - Step:01 - Enter alphabets in 'Middle Name' field.
+[INFO ] 2025-02-06 15:44:27.887 [main] Log - Expected Result: Alphabets accepted.
+[INFO ] 2025-02-06 15:44:27.932 [main] Log - Alphabetic Entry in 'Last Name' Field
+[INFO ] 2025-02-06 15:44:33.322 [main] Log - Step:01 - Enter alphabets in 'Last Name' field.
+[INFO ] 2025-02-06 15:44:33.323 [main] Log - Expected Result: Alphabets accepted.
+[INFO ] 2025-02-06 15:44:33.359 [main] Log - Alphabetic Entry in 'Alias Name' Field
+[INFO ] 2025-02-06 15:44:38.748 [main] Log - Step:01 - Enter alphabets in 'Alias Name' field.
+[INFO ] 2025-02-06 15:44:38.749 [main] Log - Expected Result: Alphabets accepted.
+[INFO ] 2025-02-06 15:44:38.784 [main] Log - Display Name Validation
+[INFO ] 2025-02-06 15:44:38.820 [main] Log - Expected Result: Displays: FirstName-MiddleName-LastName-AliasName.
+[INFO ] 2025-02-06 15:44:38.861 [main] Log - DOB Field Entry
+[INFO ] 2025-02-06 15:44:44.256 [main] Log - Step:01 - Enter date in 'DOB' field.
+[INFO ] 2025-02-06 15:44:44.260 [main] Log - Expected Result: Date is accepted.
+[INFO ] 2025-02-06 15:44:44.301 [main] Log - Calculate Age After Tab
+[INFO ] 2025-02-06 15:44:44.343 [main] Log - Step:01 - Press TAB key.
+[INFO ] 2025-02-06 15:44:44.343 [main] Log - Expected Result: 'Age' field displays calculated age.
+[INFO ] 2025-02-06 15:44:44.398 [main] Log - Verify 'DOB' Field Presence
+[INFO ] 2025-02-06 15:44:56.077 [main] Log - Step:01 - Clear DOB field.
+[INFO ] 2025-02-06 15:44:57.150 [main] Log - Expected Result: 'DOB' field is present and mandatory.
+[INFO ] 2025-02-06 15:45:06.872 [main] Log - Type Date in 'AgeAsOn' Field
+[INFO ] 2025-02-06 15:45:12.286 [main] Log - Step:01 - Enter date in 'AgeAsOn' field.
+[INFO ] 2025-02-06 15:45:12.286 [main] Log - Expected Result: Date is accepted.
+[INFO ] 2025-02-06 15:45:12.319 [main] Log - Select AgeGroup Dropdown
+[INFO ] 2025-02-06 15:45:12.666 [main] Log - Step:01 - Click on the AgeGroup dropdown.
+[INFO ] 2025-02-06 15:45:12.667 [main] Log - Step:02 -  Select an AgeGroup.
+[INFO ] 2025-02-06 15:45:12.668 [main] Log - Expected Result: AgeGroup can be selected.
+[INFO ] 2025-02-06 15:45:12.718 [main] Log - Select Nationality Dropdown
+[INFO ] 2025-02-06 15:45:12.795 [main] Log - Step:01 - Click on the Nationality dropdown.
+[INFO ] 2025-02-06 15:45:12.795 [main] Log - Step:02 -  Select a Nationality.
+[INFO ] 2025-02-06 15:45:12.795 [main] Log - Expected Result: Nationality can be selected.
+[INFO ] 2025-02-06 15:45:12.821 [main] Log - Select Nativity Dropdown
+[INFO ] 2025-02-06 15:45:12.928 [main] Log - Step:01 - Click on the Nativity dropdown.
+[INFO ] 2025-02-06 15:45:12.929 [main] Log - Step:02 -  Select a Nativity.
+[INFO ] 2025-02-06 15:45:12.929 [main] Log - Expected Result: Nativity can be selected.
+[INFO ] 2025-02-06 15:45:12.964 [main] Log - Select GENDER Dropdown
+[INFO ] 2025-02-06 15:45:13.276 [main] Log - Step:01 - Click on the GENDER dropdown.
+[INFO ] 2025-02-06 15:45:13.276 [main] Log - Step:02 -  Select a GENDER.
+[INFO ] 2025-02-06 15:45:13.276 [main] Log - Expected Result: GENDER can be selected.
+[INFO ] 2025-02-06 15:45:13.310 [main] Log - Select Qualification Dropdown
+[INFO ] 2025-02-06 15:45:13.620 [main] Log - Step:01 - Click on the Qualification dropdown.
+[INFO ] 2025-02-06 15:45:13.621 [main] Log - Step:02 -  Select a Qualification.
+[INFO ] 2025-02-06 15:45:13.622 [main] Log - Expected Result: Qualification can be selected.
+[INFO ] 2025-02-06 15:45:13.662 [main] Log - Select Religion Dropdown
+[INFO ] 2025-02-06 15:45:13.982 [main] Log - Step:01 - Click on the Religion dropdown.
+[INFO ] 2025-02-06 15:45:13.983 [main] Log - Step:02 -  Select a Religion.
+[INFO ] 2025-02-06 15:45:13.985 [main] Log - Expected Result: Religion can be selected.
+[INFO ] 2025-02-06 15:45:14.030 [main] Log - Select Category Dropdown
+[INFO ] 2025-02-06 15:45:14.339 [main] Log - Step:01 - Click on the Category dropdown.
+[INFO ] 2025-02-06 15:45:14.340 [main] Log - Step:02 -  Select a Category.
+[INFO ] 2025-02-06 15:45:14.340 [main] Log - Expected Result: Category can be selected.
+[INFO ] 2025-02-06 15:45:14.376 [main] Log - Select MaritalStatus Dropdown
+[INFO ] 2025-02-06 15:45:14.685 [main] Log - Step:01 - Click on the MaritalStatus dropdown.
+[INFO ] 2025-02-06 15:45:14.686 [main] Log - Step:02 -  Select a MaritalStatus.
+[INFO ] 2025-02-06 15:45:14.687 [main] Log - Expected Result: MaritalStatus can be selected.
+[INFO ] 2025-02-06 15:45:14.733 [main] Log - Select OccupGroup Dropdown
+[INFO ] 2025-02-06 15:45:15.062 [main] Log - Step:01 - Click on the dropdown.
+[INFO ] 2025-02-06 15:45:15.063 [main] Log - Step:02 -  Select an item.
+[INFO ] 2025-02-06 15:45:15.064 [main] Log - Expected Result: OccupGroup can be selected.
+[INFO ] 2025-02-06 15:45:15.117 [main] Log - Type in 'Occupation' Field
+[INFO ] 2025-02-06 15:45:16.185 [main] Log - Step:01 - Enter text in 'Occupation' field.
+[INFO ] 2025-02-06 15:45:16.185 [main] Log - Expected Result: Text is accepted.
+[INFO ] 2025-02-06 15:45:16.217 [main] Log - Type in 'OccOrganisation' Field
+[INFO ] 2025-02-06 15:45:17.274 [main] Log - Step:01 - Enter text in 'OccOrganisation' field.
+[INFO ] 2025-02-06 15:45:17.274 [main] Log - Expected Result: Text is accepted.
+[INFO ] 2025-02-06 15:45:17.306 [main] Log - Numeric Entry in 'Monthly Income' Field
+[INFO ] 2025-02-06 15:45:18.375 [main] Log - Step:01 - Enter numbers in 'Monthly Income' field.
+[INFO ] 2025-02-06 15:45:18.375 [main] Log - Expected Result: Numbers are accepted.
+[INFO ] 2025-02-06 15:45:18.409 [main] Log - Select Income Source Dropdown
+[INFO ] 2025-02-06 15:45:22.696 [main] Log - Step:01 - Click on the Income Source dropdown.
+[INFO ] 2025-02-06 15:45:28.064 [main] Log - Step:02 -  Select an Income Source.
+[INFO ] 2025-02-06 15:45:28.065 [main] Log - Expected Result: Income Source can be selected.
+[INFO ] 2025-02-06 15:45:28.104 [main] Log - Select Salutation for Parent/Spouse Dropdown
+[INFO ] 2025-02-06 15:45:28.409 [main] Log - Step:01 - Click on the Parent/Spouse Salutation dropdown.
+[INFO ] 2025-02-06 15:45:28.410 [main] Log - Step:02 -  Select a Parent/Spouse Salutation.
+[INFO ] 2025-02-06 15:45:28.410 [main] Log - Expected Result: Parent/Spouse Salutation can be selected.
+[INFO ] 2025-02-06 15:45:28.435 [main] Log - Alphabetic Entry in 'Parent/Spouse' Field
+[INFO ] 2025-02-06 15:45:29.492 [main] Log - Step:01 - Enter text in 'Parent/Spouse' field.
+[INFO ] 2025-02-06 15:45:29.492 [main] Log - Expected Result: Alphabets accepted.
+[INFO ] 2025-02-06 15:45:29.524 [main] Log - Select Relation Dropdown
+[INFO ] 2025-02-06 15:45:29.852 [main] Log - Step:01 - Click on the Relation dropdown.
+[INFO ] 2025-02-06 15:45:29.853 [main] Log - Step:02 -  Select a Relation.
+[INFO ] 2025-02-06 15:45:29.853 [main] Log - Expected Result: Relation can be selected.
+[INFO ] 2025-02-06 15:45:29.879 [main] Log - Tick 'Ment. Retarded' Checkbox
+[INFO ] 2025-02-06 15:45:34.164 [main] Log - Step:01 - Click on the 'Ment. Retarded' checkbox.
+[INFO ] 2025-02-06 15:45:34.165 [main] Log - Expected Result: Checkbox is ticked.
+[INFO ] 2025-02-06 15:45:34.215 [main] Log - Select Salutation for Guardian Dropdown
+[INFO ] 2025-02-06 15:45:34.538 [main] Log - Step:01 - Click on the Salutation for Guardian dropdown.
+[INFO ] 2025-02-06 15:45:34.539 [main] Log - Step:02 -  Select a Salutation for Guardian.
+[INFO ] 2025-02-06 15:45:34.541 [main] Log - Expected Result: Salutation for Guardian can be selected.
+[INFO ] 2025-02-06 15:45:34.586 [main] Log - Alphabetic Entry in 'Guardian' Field
+[INFO ] 2025-02-06 15:45:35.653 [main] Log - Step:01 - Enter text in 'Guardian' field.
+[INFO ] 2025-02-06 15:45:35.653 [main] Log - Expected Result: Alphabets accepted.
+[INFO ] 2025-02-06 15:45:35.703 [main] Log - Select Guardian Relation Dropdown
+[INFO ] 2025-02-06 15:45:36.056 [main] Log - Step:01 - Click on the Guardian Relation dropdown.
+[INFO ] 2025-02-06 15:45:36.056 [main] Log - Step:02 -  Select a Guardian Relation.
+[INFO ] 2025-02-06 15:45:36.057 [main] Log - Expected Result: Guardian Relation can be selected.
+[INFO ] 2025-02-06 15:45:36.086 [main] Log - Select Salutation for Father Name Dropdown
+[INFO ] 2025-02-06 15:45:36.405 [main] Log - Step:01 - Click on the Salutation for Father Name dropdown.
+[INFO ] 2025-02-06 15:45:36.406 [main] Log - Step:02 -  Select a Salutation for Father Name.
+[INFO ] 2025-02-06 15:45:36.407 [main] Log - Expected Result: Salutation for Father Name can be selected.
+[INFO ] 2025-02-06 15:45:36.450 [main] Log - Alphabetic Entry in 'Father Name' Field
+[INFO ] 2025-02-06 15:45:37.500 [main] Log - Step:01 - Enter text in 'Father Name' field.
+[INFO ] 2025-02-06 15:45:37.500 [main] Log - Expected Result: Alphabets accepted.
+[INFO ] 2025-02-06 15:45:37.540 [main] Log - Select Salutation for Mother Name Dropdown
+[INFO ] 2025-02-06 15:45:37.865 [main] Log - Step:01 - Click on the Salutation for Mother Name dropdown.
+[INFO ] 2025-02-06 15:45:37.866 [main] Log - Step:02 -  Select a Salutation for Mother Name.
+[INFO ] 2025-02-06 15:45:37.866 [main] Log - Expected Result: Salutation for Mother Name can be selected.
+[INFO ] 2025-02-06 15:45:37.893 [main] Log - Alphabetic Entry in 'Mother Name' Field
+[INFO ] 2025-02-06 15:45:38.945 [main] Log - Step:01 - Enter text in 'Mother Name' field.
+[INFO ] 2025-02-06 15:45:38.946 [main] Log - Expected Result: Alphabets accepted.
+[INFO ] 2025-02-06 15:45:38.981 [main] Log - Alphabetic Entry in 'Aadhaar Num' Field
+[INFO ] 2025-02-06 15:45:44.343 [main] Log - Step:01 - Enter alphabets in 'Aadhaar Num' field.
+[INFO ] 2025-02-06 15:45:49.729 [main] Log - Expected Result: Validation message: "Invalid Aadhar Num".
+[INFO ] 2025-02-06 15:45:54.080 [main] Log - Clear 'Aadhaar Num' Field
+[INFO ] 2025-02-06 15:46:01.451 [main] Log - Step:01 - Clear the 'Aadhaar Num' field.
+[INFO ] 2025-02-06 15:46:01.487 [main] Log - Expected Result: Aadhaar Num Field is cleared successfully.
+[INFO ] 2025-02-06 15:46:01.520 [main] Log - Short Numeric Entry in 'Aadhar No' Field
+[INFO ] 2025-02-06 15:46:06.922 [main] Log - Step:01 - Enter 8-digit number in 'Aadhar No' field.
+[INFO ] 2025-02-06 15:46:12.310 [main] Log - Expected Result: Validation message: "Invalid Aadhar Num".
+[INFO ] 2025-02-06 15:46:16.669 [main] Log - Valid Numeric Entry in 'Aadhar No' Field
+[INFO ] 2025-02-06 15:46:21.141 [main] Log - Step:01 - Enter 12-digit number in 'Aadhar No' field.
+[INFO ] 2025-02-06 15:46:21.142 [main] Log - Expected Result: Number is accepted.
+[INFO ] 2025-02-06 15:46:21.186 [main] Log - Alphabetic Entry in 'PAN No' Field
+[INFO ] 2025-02-06 15:46:26.563 [main] Log - Step:01 - Enter alphabets in 'PAN' field.
+[INFO ] 2025-02-06 15:46:31.982 [main] Log - Expected Result: Validation message: "Invalid PAN Num".
+[INFO ] 2025-02-06 15:46:36.351 [main] Log - Clear 'PAN Num' Field
+[INFO ] 2025-02-06 15:46:43.768 [main] Log - Step:01 - Clear the 'PAN Num' field.
+[INFO ] 2025-02-06 15:46:43.834 [main] Log - Expected Result: PAN Num Field is cleared successfully.
+[INFO ] 2025-02-06 15:46:43.866 [main] Log - Correct Format in 'PAN No' Field
+[INFO ] 2025-02-06 15:46:45.181 [main] Log - Step:01 - nter valid PAN format.
+[INFO ] 2025-02-06 15:46:45.181 [main] Log - Expected Result: PAN number is accepted.
+[INFO ] 2025-02-06 15:46:45.220 [main] Log - Short Numeric Entry in 'Mobile No' Field
+[INFO ] 2025-02-06 15:46:50.562 [main] Log - Step:01 - Enter 8-digit number in 'Mobile No' field.
+[INFO ] 2025-02-06 15:46:55.967 [main] Log - Expected Result: Validation message: "Invalid Mobile Num".
+[INFO ] 2025-02-06 15:47:00.414 [main] Log - Valid Numeric Entry in 'Mobile No' Field
+[INFO ] 2025-02-06 15:47:04.799 [main] Log - Step:01 - Enter 10-digit number in 'Mobile No' field.
+[INFO ] 2025-02-06 15:47:04.800 [main] Log - Number is accepted.
+[INFO ] 2025-02-06 15:47:04.838 [main] Log - Invalid Entry in 'Email' Field
+[INFO ] 2025-02-06 15:47:10.281 [main] Log - Step:01 - Enter invalid email in 'Email' field.
+[INFO ] 2025-02-06 15:47:15.682 [main] Log - Expected Result: Validation message: "Email is not valid".
+[INFO ] 2025-02-06 15:47:20.054 [main] Log - Clear 'Email' Field
+[INFO ] 2025-02-06 15:47:27.474 [main] Log - Step:01 - Clear 'Email' field.
+[INFO ] 2025-02-06 15:47:27.501 [main] Log - Expected Result: Email Field is cleared successfully.
+[INFO ] 2025-02-06 15:47:27.530 [main] Log - Valid Entry in 'Email' Field
+[INFO ] 2025-02-06 15:47:28.616 [main] Log - Step:01 - Enter valid email address.
+[INFO ] 2025-02-06 15:47:28.616 [main] Log - Email is accepted.
+[INFO ] 2025-02-06 15:47:28.651 [main] Log - Select Preferred Language Dropdown
+[INFO ] 2025-02-06 15:47:28.976 [main] Log - Step:01 - Click on the Preferred Language dropdown.
+[INFO ] 2025-02-06 15:47:28.977 [main] Log - Step:02 -  Select a Preferred Language.
+[INFO ] 2025-02-06 15:47:28.978 [main] Log - Expected Result: Preferred Language can be selected.
+[INFO ] 2025-02-06 15:47:29.044 [main] Log - House Field - ECP Validations
+[INFO ] 2025-02-06 15:47:34.456 [main] Log - Step:01 - Enter Alphanumeric input in House field.
+[INFO ] 2025-02-06 15:47:34.456 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:47:42.906 [main] Log - Step:02 - Enter Numeric input in House field.
+[INFO ] 2025-02-06 15:47:42.907 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:47:51.447 [main] Log - Step:03 - Enter Alphabet input in House field.
+[INFO ] 2025-02-06 15:47:51.447 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:47:51.473 [main] Log - HouseNo Field - ECP Validations
+[INFO ] 2025-02-06 15:47:56.822 [main] Log - Step:01 - Enter Alphanumeric input in HouseNo field.
+[INFO ] 2025-02-06 15:47:56.823 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:48:05.276 [main] Log - Step:03 - Enter Alphabet input in HouseNo field.
+[INFO ] 2025-02-06 15:48:05.276 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:48:13.710 [main] Log - Step:02 - Enter Numeric input in HouseNo field.
+[INFO ] 2025-02-06 15:48:13.711 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:48:13.712 [main] Log - DoorNo Field - ECP Validations
+[INFO ] 2025-02-06 15:48:19.104 [main] Log - Step:01 - Enter Alphanumeric input in DoorNo field.
+[INFO ] 2025-02-06 15:48:19.105 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:48:27.602 [main] Log - Step:03 - Enter Alphabet input in DoorNo field.
+[INFO ] 2025-02-06 15:48:27.602 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:48:36.060 [main] Log - Step:02 - Enter Numeric input in DoorNo field.
+[INFO ] 2025-02-06 15:48:36.061 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:48:36.061 [main] Log - State Dropdown Functionality
+[INFO ] 2025-02-06 15:48:36.143 [main] Log - Step:01 - Click on the State dropdown.
+[INFO ] 2025-02-06 15:48:36.143 [main] Log - Step:02 -  Select a State.
+[INFO ] 2025-02-06 15:48:36.143 [main] Log - Expected Result: State can be selected.
+[INFO ] 2025-02-06 15:48:36.167 [main] Log - District Dropdown Functionality
+[INFO ] 2025-02-06 15:48:36.610 [main] Log - Step:01 - Click on the District dropdown.
+[INFO ] 2025-02-06 15:48:36.611 [main] Log - Step:02 -  Select a District.
+[INFO ] 2025-02-06 15:48:36.611 [main] Log - Expected Result: District can be selected.
+[INFO ] 2025-02-06 15:48:36.656 [main] Log - Post Dropdown Functionality
+[INFO ] 2025-02-06 15:48:37.014 [main] Log - Step:01 - Click on the Post dropdown.
+[INFO ] 2025-02-06 15:48:37.015 [main] Log - Step:02 -  Select a Post.
+[INFO ] 2025-02-06 15:48:37.015 [main] Log - Expected Result: Post can be selected.
+[INFO ] 2025-02-06 15:48:37.047 [main] Log - PIN Textfield Presence & Functionality
+[INFO ] 2025-02-06 15:48:37.079 [main] Log - Expected Result: PIN textfield is present, typing-disabled, and auto-fills based on Post selection, i.e.: 670646
+[INFO ] 2025-02-06 15:48:37.104 [main] Log - Place Field - ECP Validations
+[INFO ] 2025-02-06 15:48:42.538 [main] Log - Step:01 - Enter Alphanumeric input in Place field.
+[INFO ] 2025-02-06 15:48:42.538 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:48:50.981 [main] Log - Step:02 - Enter Numeric input in Place field.
+[INFO ] 2025-02-06 15:48:50.981 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:48:59.423 [main] Log - Step:03 - Enter Alphabet input in Place field.
+[INFO ] 2025-02-06 15:48:59.423 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:49:00.496 [main] Log - City Field - ECP Validations
+[INFO ] 2025-02-06 15:49:05.860 [main] Log - Step:01 - Enter Alphanumeric input in City field.
+[INFO ] 2025-02-06 15:49:05.861 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:49:14.318 [main] Log - Step:02 - Enter Numeric input in City field.
+[INFO ] 2025-02-06 15:49:14.320 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:49:22.795 [main] Log - Step:03 - Enter Alphabet input in City field.
+[INFO ] 2025-02-06 15:49:22.795 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:49:22.821 [main] Log - Street Field - ECP Validations
+[INFO ] 2025-02-06 15:49:28.201 [main] Log - Step:01 - Enter Alphanumeric input in Street field.
+[INFO ] 2025-02-06 15:49:28.203 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:49:36.694 [main] Log - Step:02 - Enter Numeric input in Street field.
+[INFO ] 2025-02-06 15:49:36.695 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:49:45.148 [main] Log - Step:03 - Enter Alphabet input in Street field.
+[INFO ] 2025-02-06 15:49:45.149 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:49:45.195 [main] Log - Residence Field - ECP Validations
+[INFO ] 2025-02-06 15:49:50.556 [main] Log - Step:01 - Enter Alphanumeric input in Residence field.
+[INFO ] 2025-02-06 15:49:50.558 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:49:58.988 [main] Log - Step:02 - Enter Numeric input in Residence field.
+[INFO ] 2025-02-06 15:49:58.989 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:50:07.430 [main] Log - Step:03 - Enter Alphabet input in Residence field.
+[INFO ] 2025-02-06 15:50:07.431 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:50:07.474 [main] Log - Phone NO Field - ECP Validations
+[INFO ] 2025-02-06 15:50:08.550 [main] Log - Step:01 - Enter 10-digit number in 'Phone No' field.
+[INFO ] 2025-02-06 15:50:08.550 [main] Log - Only Numbers are accepted.
+[INFO ] 2025-02-06 15:50:08.587 [main] Log - Electric Post No Field - ECP Validations
+[INFO ] 2025-02-06 15:50:13.971 [main] Log - Step:01 - Enter Alphanumeric input in Electric Post No field.
+[INFO ] 2025-02-06 15:50:13.972 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:50:22.407 [main] Log - Step:02 - Enter Numeric input in Electric Post No field.
+[INFO ] 2025-02-06 15:50:22.409 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:50:30.868 [main] Log - Step:03 - Enter Alphabet input in Electric Post No field.
+[INFO ] 2025-02-06 15:50:30.868 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:50:30.896 [main] Log - Mailing Address Checkbox Functionality
+[INFO ] 2025-02-06 15:50:35.197 [main] Log - Step:01 - Click on the 'Mailing Address' checkbox.
+[INFO ] 2025-02-06 15:50:35.197 [main] Log - Expected Result: The checkbox can be ticked and unticked.
+[INFO ] 2025-02-06 15:50:35.224 [main] Log - Use Present Checkbox Functionality
+[INFO ] 2025-02-06 15:50:39.541 [main] Log - Step:01 - Click on the 'Use Present' checkbox.
+[INFO ] 2025-02-06 15:50:39.671 [main] Log - Expected Result: Permanent tab data is auto-populated from the Present tab.
+[INFO ] 2025-02-06 15:50:39.706 [main] Log - Introducer Button - Clickability
+[INFO ] 2025-02-06 15:50:45.412 [main] Log - Step:01 -Click the 'Introducer' button.
+[INFO ] 2025-02-06 15:50:46.836 [main] Log - Expected Result: A popup named 'Introducer Details' is generated.
+[INFO ] 2025-02-06 15:50:46.861 [main] Log - Introducer Not Required Checkbox - Tick
+[INFO ] 2025-02-06 15:50:51.158 [main] Log - Step:01 - Click on the 'Introducer Not Required' checkbox.
+[INFO ] 2025-02-06 15:50:52.224 [main] Log - Expected Result: 'Reason' textfield becomes visible.
+[INFO ] 2025-02-06 15:50:52.250 [main] Log - Reason Textfield - Typing Alphabets and Numerals
+[INFO ] 2025-02-06 15:50:53.324 [main] Log - Step:01 - Type "Test123" in the 'Reason' textfield.
+[INFO ] 2025-02-06 15:50:53.327 [main] Log - Expected Result: Textfield reflects typed input without an error.
+[INFO ] 2025-02-06 15:50:53.355 [main] Log - Introducer Not Required Checkbox - Untick
+[INFO ] 2025-02-06 15:50:57.651 [main] Log - Step:01 - Untick the 'Introducer Not Required' checkbox.
+[INFO ] 2025-02-06 15:50:58.746 [main] Log - Expected Result: 'Reason' textfield is no longer visible.
+[INFO ] 2025-02-06 15:51:13.807 [main] Log - Customer Field - Select Customer
+[INFO ] 2025-02-06 15:51:13.868 [main] Log - Expected Result: Customer is selected. 'Int Name'- ZEENATH and 'Introducer's Address'- ZEENATH fields are auto-filled.
+[INFO ] 2025-02-06 15:51:13.893 [main] Log - Int Designation Textfield - Typing Alphabets and Numerals
+[INFO ] 2025-02-06 15:51:14.977 [main] Log - Step:01 - Type "Test123" in the 'Int DEsignation' textfield.
+[INFO ] 2025-02-06 15:51:14.978 [main] Log - Expected Result: 'Int Designation'Textfield reflects typed input without an error.
+[INFO ] 2025-02-06 15:51:15.006 [main] Log - Relation Dropdown - Select Item
+[INFO ] 2025-02-06 15:51:15.320 [main] Log - Step:01 - Click on the Relation dropdown.
+[INFO ] 2025-02-06 15:51:15.321 [main] Log - Step:02 - Select an item from the 'Relation' dropdown items.
+[INFO ] 2025-02-06 15:51:15.321 [main] Log - Expected Result: The item is displayed in the dropdown field.
+[INFO ] 2025-02-06 15:51:15.346 [main] Log - Save Button - Click ability
+[INFO ] 2025-02-06 15:51:19.624 [main] Log - Step:01 - Click on the 'SAVE' button.
+[INFO ] 2025-02-06 15:51:19.624 [main] Log - Expected Result: Data is saved successfully, and a confirmation message appears.
+[INFO ] 2025-02-06 15:51:19.689 [main] Log - Select Item from 'Identity Type' Dropdown
+[INFO ] 2025-02-06 15:51:25.302 [main] Log - Step:01 - Click on the Identity And Area button.
+[INFO ] 2025-02-06 15:51:26.120 [main] Log - Step:02 - Click on the Identity Type dropdown.
+[INFO ] 2025-02-06 15:51:26.120 [main] Log - Step:03 - Select an item from the 'Identity Type' dropdown items.
+[INFO ] 2025-02-06 15:51:26.145 [main] Log - Expected Result: Selected item is highlighted, ‘Proof Type’ field is auto-filled as: IDENTITY
+[INFO ] 2025-02-06 15:51:26.181 [main] Log - Select different items from 'Identity Type' dropdown
+[INFO ] 2025-02-06 15:51:26.707 [main] Log - Step:02 - Click on the Identity Type dropdown.
+[INFO ] 2025-02-06 15:51:26.707 [main] Log - Step:03 - Select an item from the 'Identity Type' dropdown items.
+[INFO ] 2025-02-06 15:51:26.738 [main] Log - Expected Result: 'Proof Type' changes accordingly based on selection: BOTH
+[INFO ] 2025-02-06 15:51:26.769 [main] Log - Enter Data in 'Identity No.' Field
+[INFO ] 2025-02-06 15:51:27.831 [main] Log - Step:01 - Enter Alphanumeric input in Identity No field.
+[INFO ] 2025-02-06 15:51:27.831 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:51:32.000 [main] Log - Step:03 - Enter Alphabet input in Identity No field.
+[INFO ] 2025-02-06 15:51:32.000 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:51:36.382 [main] Log - Step:02 - Enter Numeric input in Identity No field.
+[INFO ] 2025-02-06 15:51:36.382 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:51:36.415 [main] Log - Enter Data in 'Issued Authority' Field
+[INFO ] 2025-02-06 15:51:37.486 [main] Log - Step:01 - Enter Alphanumeric input in Issued Authority field.
+[INFO ] 2025-02-06 15:51:37.487 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:51:41.652 [main] Log - Step:02 - Enter Numeric input in Issued Authority field.
+[INFO ] 2025-02-06 15:51:41.653 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:51:45.799 [main] Log - Step:03 - Enter Alphabet input in Issued Authority field.
+[INFO ] 2025-02-06 15:51:45.799 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:51:45.832 [main] Log - Invalid Date in 'Issue Date' Field
+[INFO ] 2025-02-06 15:51:51.284 [main] Log - Step:01 - Enter an invalid date.
+[INFO ] 2025-02-06 15:51:55.596 [main] Log - Step:02 - Proceed to next step.
+[INFO ] 2025-02-06 15:51:56.671 [main] Log - Expected Result: Invalid date error message is displayed.
+[INFO ] 2025-02-06 15:52:01.086 [main] Log - Clear 'Issue Date' Field
+[INFO ] 2025-02-06 15:52:08.512 [main] Log - Step:01 - Clear date from 'Issue Date' field.
+[INFO ] 2025-02-06 15:52:08.551 [main] Log - Expected Result: Field becomes empty without errors.
+[INFO ] 2025-02-06 15:52:08.584 [main] Log - Valid Date in 'Issue Date' Field
+[INFO ] 2025-02-06 15:52:13.947 [main] Log - Step:01 - Enter a valid date.
+[INFO ] 2025-02-06 15:52:18.260 [main] Log - Step:02 - Proceed to next step.
+[INFO ] 2025-02-06 15:52:18.260 [main] Log - Expected Result: Valid date is accepted by the field.
+[INFO ] 2025-02-06 15:52:18.290 [main] Log - Invalid Date in 'Valid Up To' Field
+[INFO ] 2025-02-06 15:52:23.639 [main] Log - Step:01 - Enter an invalid date.
+[INFO ] 2025-02-06 15:52:27.970 [main] Log - Step:02 - Proceed to next step.
+[INFO ] 2025-02-06 15:52:29.058 [main] Log - Expected Result: Invalid date error message is displayed.
+[INFO ] 2025-02-06 15:52:33.410 [main] Log - Clear 'Valid Up To' Field
+[INFO ] 2025-02-06 15:52:40.814 [main] Log - Step:01 - Clear date from 'Valid Up To' field.
+[INFO ] 2025-02-06 15:52:40.875 [main] Log - Expected Result: Field becomes empty without errors.
+[INFO ] 2025-02-06 15:52:40.916 [main] Log - Valid Date in 'Valid Up To' Field
+[INFO ] 2025-02-06 15:52:46.262 [main] Log - Step:01 - Enter a valid date.
+[INFO ] 2025-02-06 15:52:50.565 [main] Log - Step:02 - Proceed to next step.
+[INFO ] 2025-02-06 15:52:50.566 [main] Log - Expected Result: Valid date is accepted by the field.
+[INFO ] 2025-02-06 15:52:50.567 [main] Log - Enter Data in 'Details' Field
+[INFO ] 2025-02-06 15:52:51.613 [main] Log - Step:01 - Enter Alphanumeric input in Details field.
+[INFO ] 2025-02-06 15:52:51.613 [main] Log - Expected Result: Alphanumeric input is allowed.
+[INFO ] 2025-02-06 15:52:55.764 [main] Log - Step:02 - Enter Numeric input in Details field.
+[INFO ] 2025-02-06 15:52:55.765 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:52:59.916 [main] Log - Step:03 - Enter Alphabet input in Details field.
+[INFO ] 2025-02-06 15:52:59.916 [main] Log - Expected Result: Alphabet input is allowed.
+[INFO ] 2025-02-06 15:52:59.950 [main] Log - Click 'ADD DOCUMENT' Button
+[INFO ] 2025-02-06 15:53:04.471 [main] Log - Step:01 - Click on the 'ADD DOCUMENT' button.
+[INFO ] 2025-02-06 15:53:05.541 [main] Log - Expected Result: Data is displayed in the grid.
+[INFO ] 2025-02-06 15:53:05.567 [main] Log - Area Dropdown Selection
+[INFO ] 2025-02-06 15:53:05.894 [main] Log - Step:01 - Click on the Area dropdown.
+[INFO ] 2025-02-06 15:53:05.895 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:53:05.896 [main] Log - Expected Result: Selected Area should be displayed.
+[INFO ] 2025-02-06 15:53:05.941 [main] Log - Amsham Dropdown Selection
+[INFO ] 2025-02-06 15:53:06.255 [main] Log - Step:01 - Click on the Amsham dropdown.
+[INFO ] 2025-02-06 15:53:06.256 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:53:06.257 [main] Log - Expected Result: Selected Amsham should be displayed.
+[INFO ] 2025-02-06 15:53:06.307 [main] Log - Desham Dropdown Selection
+[INFO ] 2025-02-06 15:53:06.629 [main] Log - Step:01 - Click on the Desham dropdown.
+[INFO ] 2025-02-06 15:53:06.630 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:53:06.630 [main] Log - Expected Result: Selected Desham should be displayed.
+[INFO ] 2025-02-06 15:53:06.657 [main] Log - Village Dropdown Selection
+[INFO ] 2025-02-06 15:53:06.969 [main] Log - Step:01 - Click on the Village dropdown.
+[INFO ] 2025-02-06 15:53:06.970 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:53:06.971 [main] Log - Expected Result: Selected Village should be displayed.
+[INFO ] 2025-02-06 15:53:07.018 [main] Log - Ward field Validation
+[INFO ] 2025-02-06 15:53:08.063 [main] Log - Step:02 - Enter Alphabet input in Ward field.
+[INFO ] 2025-02-06 15:53:13.427 [main] Log - Expected Result: Alphabet input is not allowed.
+[INFO ] 2025-02-06 15:53:21.896 [main] Log - Step:01 - Enter Alphanumeric input in Ward field.
+[INFO ] 2025-02-06 15:53:27.279 [main] Log - Expected Result: Alphanumeric input is not allowed.
+[INFO ] 2025-02-06 15:53:35.696 [main] Log - Step:03 - Enter Numeric input in Ward field.
+[INFO ] 2025-02-06 15:53:39.992 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:53:40.045 [main] Log - Panchayat Dropdown Selection
+[INFO ] 2025-02-06 15:53:40.354 [main] Log - Step:01 - Click on the Panchayat dropdown.
+[INFO ] 2025-02-06 15:53:40.355 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:53:40.356 [main] Log - Expected Result: Selected Panchayat should be displayed.
+[INFO ] 2025-02-06 15:53:40.723 [main] Log - Municipality Dropdown Selection
+[INFO ] 2025-02-06 15:53:41.028 [main] Log - Step:01 - Click on the Municipality dropdown.
+[INFO ] 2025-02-06 15:53:41.029 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:53:41.029 [main] Log - Expected Result: Selected Municipality should be displayed.
+[INFO ] 2025-02-06 15:53:41.376 [main] Log - Corporation Dropdown Selection
+[INFO ] 2025-02-06 15:53:41.710 [main] Log - Step:01 - Click on the Corporation dropdown.
+[INFO ] 2025-02-06 15:53:41.711 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:53:41.712 [main] Log - Expected Result: Selected Corporation should be displayed.
+[INFO ] 2025-02-06 15:53:41.768 [main] Log - Assembly Constituency Dropdown Selection
+[INFO ] 2025-02-06 15:53:42.087 [main] Log - Step:01 - Click on the Assembly Constituency dropdown.
+[INFO ] 2025-02-06 15:53:42.087 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:53:42.088 [main] Log - Expected Result: Selected Assembly Constituency should be displayed.
+[INFO ] 2025-02-06 15:53:42.133 [main] Log - Taluk Dropdown Selection
+[INFO ] 2025-02-06 15:53:42.447 [main] Log - Step:01 - Click on the Taluk dropdown.
+[INFO ] 2025-02-06 15:53:42.448 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:53:42.449 [main] Log - Expected Result: Selected Taluk should be displayed.
+[INFO ] 2025-02-06 15:53:42.493 [main] Log - Panchayat Ward ECP Validations
+[INFO ] 2025-02-06 15:53:43.544 [main] Log - Step:01 - Enter Alphanumeric input in Panchayat Ward field.
+[INFO ] 2025-02-06 15:53:53.080 [main] Log - Step:02 - Enter Alphabet input in Panchayat Ward field.
+[INFO ] 2025-02-06 15:54:02.648 [main] Log - Step:03 - Enter Numeric input in Panchayat Ward field.
+[INFO ] 2025-02-06 15:54:06.926 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:54:06.978 [main] Log - BankWard ECP Validations
+[INFO ] 2025-02-06 15:54:08.025 [main] Log - Step:01 - Enter Alphanumeric input in Bank Ward field.
+[INFO ] 2025-02-06 15:54:17.564 [main] Log - Step:02 - Enter Alphabet input in Bank Ward field.
+[INFO ] 2025-02-06 15:54:27.049 [main] Log - Step:03 - Enter Numeric input in Bank Ward field.
+[INFO ] 2025-02-06 15:54:31.379 [main] Log - Expected Result: Numeric input is allowed.
+[INFO ] 2025-02-06 15:54:31.415 [main] Log - Land Type Dropdown Selection
+[INFO ] 2025-02-06 15:54:31.745 [main] Log - Step:01 - Click on the Land Type dropdown.
+[INFO ] 2025-02-06 15:54:31.745 [main] Log - Step:02 - Select an option.
+[INFO ] 2025-02-06 15:54:31.745 [main] Log - Expected Result: Selected Land Type should be displayed.
+[INFO ] 2025-02-06 15:54:31.776 [main] Log - Survey No Alphanumeric Entry
+[INFO ] 2025-02-06 15:54:32.819 [main] Log - Step:01 - Enter alphabets and numerals in 'Survey No' textfield.
+[INFO ] 2025-02-06 15:54:32.819 [main] Log - Expected Result: Alphanumeric input should be entered successfully.
+[INFO ] 2025-02-06 15:54:32.854 [main] Log - ReSurvey No Alphanumeric Entry
+[INFO ] 2025-02-06 15:54:33.906 [main] Log - Step:01 - Enter alphabets and numerals in 'Survey No' textfield.
+[INFO ] 2025-02-06 15:54:33.906 [main] Log - Expected Result: Alphanumeric input should be entered successfully.
+[INFO ] 2025-02-06 15:54:33.938 [main] Log - Unit Dropdown Selection
+[INFO ] 2025-02-06 15:54:34.259 [main] Log - Step:01 - Click on the Unit dropdown.
+[INFO ] 2025-02-06 15:54:34.259 [main] Log - Step:02 - Select an item from 'Unit' dropdown.
+[INFO ] 2025-02-06 15:54:34.260 [main] Log - Expected Result: Selected Unit should be displayed.
+[INFO ] 2025-02-06 15:54:34.317 [main] Log - Wet Numeric Entry
+[INFO ] 2025-02-06 15:54:39.702 [main] Log - Step:01 - Enter numerals in 'Wet' textfield.
+[INFO ] 2025-02-06 15:54:39.703 [main] Log - Expected Result: Numerals should be entered successfully.
+[INFO ] 2025-02-06 15:54:39.730 [main] Log - Dry Numeric Entry
+[INFO ] 2025-02-06 15:54:45.075 [main] Log - Step:01 - Enter numerals in 'Dry' textfield.
+[INFO ] 2025-02-06 15:54:45.075 [main] Log - Expected Result: Numerals should be entered successfully.
+[INFO ] 2025-02-06 15:54:45.104 [main] Log - Add Button Functionality
+[INFO ] 2025-02-06 15:54:49.540 [main] Log - Step:01 - Click on the 'ADD' button.
+[INFO ] 2025-02-06 15:54:50.650 [main] Log - Expected Result: Data should be inserted into the grid.
+[INFO ] 2025-02-06 15:54:50.682 [main] Log - Save Button Functionality
+[INFO ] 2025-02-06 15:54:55.060 [main] Log - Step:01 -  Click on SAVE button.
+[INFO ] 2025-02-06 15:54:57.195 [main] Log - Expected Result: Data should be saved successfully.
+[INFO ] 2025-02-06 15:54:57.226 [main] Log - Open 'Photo and Sign' Popup - Positive Scenario
+[INFO ] 2025-02-06 15:55:02.819 [main] Log - Step:01 - Click on the 'Photo and sign' button.
+[INFO ] 2025-02-06 15:55:04.215 [main] Log - Expected Result - 'Photo and sign' popup should appear.
+[INFO ] 2025-02-06 15:55:04.244 [main] Log - Upload Photo - Negative Scenario (No Selection)
+[INFO ] 2025-02-06 15:55:04.325 [main] Log - Step:01 - Click on the dropdown.
+[INFO ] 2025-02-06 15:55:04.325 [main] Log - Step:02 - Select 'Photo' from the drop down.
+[INFO ] 2025-02-06 15:55:08.633 [main] Log - Step:03 - Attempt to click 'Add' button without selecting a photo.
+[INFO ] 2025-02-06 15:55:09.692 [main] Log - Expected Result: Error message should be displayed indicating no photo selected.
+[INFO ] 2025-02-06 15:55:09.720 [main] Log - Upload Sign - Negative Scenario (No Selection)
+[INFO ] 2025-02-06 15:55:09.965 [main] Log - Step:01 - Click on the dropdown.
+[INFO ] 2025-02-06 15:55:09.966 [main] Log - Step:02 - Select 'Sign' from the drop down.
+[INFO ] 2025-02-06 15:55:14.205 [main] Log - Step:03 - Attempt to click 'Add' button without selecting a Sign.
+[INFO ] 2025-02-06 15:55:15.274 [main] Log - Expected Result: Error message should be displayed indicating no Sign selected.
+[INFO ] 2025-02-06 15:55:15.300 [main] Log - Save Data - Negative Scenario (No Images)
+[INFO ] 2025-02-06 15:55:15.548 [main] Log - Step:01 - Click on the dropdown.
+[INFO ] 2025-02-06 15:55:15.548 [main] Log - Step:02 - Select 'Photo' from the drop down.
+[INFO ] 2025-02-06 15:55:19.809 [main] Log - Step:03 - Click on the SAVE button.
+[INFO ] 2025-02-06 15:55:20.881 [main] Log - Expected Result: Error message should be displayed indicating photo/sign missing.
+[INFO ] 2025-02-06 15:55:20.907 [main] Log - Upload Photo - Invalid File Type
+[INFO ] 2025-02-06 15:55:20.987 [main] Log - Step:01 - Select 'Photo' from the drop down.
+[INFO ] 2025-02-06 15:55:21.000 [main] Log - path is :D:\Testing\O360-AI-master\O360-AI
+[INFO ] 2025-02-06 15:55:21.023 [main] Log - Step:02 -  Click on the 'browse' button & Select a non-image file from the folder.
+[INFO ] 2025-02-06 15:55:25.482 [main] Log - Step:03 - Click on the 'Add' button.
+[INFO ] 2025-02-06 15:55:26.549 [main] Log - Expected Result: Error message should be displayed indicating invalid file type.
+[INFO ] 2025-02-06 15:55:26.549 [main] Log - Upload Photo - Positive Scenario
+[INFO ] 2025-02-06 15:55:26.621 [main] Log - Step:01 - Select 'Photo' from the drop down.
+[INFO ] 2025-02-06 15:55:26.634 [main] Log - path is :D:\Testing\O360-AI-master\O360-AI
+[INFO ] 2025-02-06 15:55:26.651 [main] Log - Step:02 -  Click on the 'browse' button & Select a valid photo from the folder.
+[INFO ] 2025-02-06 15:55:31.077 [main] Log - Step:03 - Click on the 'Add' button.
+[INFO ] 2025-02-06 15:55:32.152 [main] Log - Expected Result: Selected photo should be displayed in the window.
+[INFO ] 2025-02-06 15:55:32.152 [main] Log - Upload Sign - Invalid File Type
+[INFO ] 2025-02-06 15:55:32.392 [main] Log - Step:01 - Select 'Sign' from the drop down.
+[INFO ] 2025-02-06 15:55:32.406 [main] Log - path is :D:\Testing\O360-AI-master\O360-AI
+[INFO ] 2025-02-06 15:55:32.428 [main] Log - Step:02 -  Click on the 'browse' button & Select a non-image file from the folder.
+[INFO ] 2025-02-06 15:55:36.902 [main] Log - Step:03 - Click on the 'Add' button.
+[INFO ] 2025-02-06 15:55:37.964 [main] Log - Expected Result: Error message should be displayed indicating invalid file type.
+[INFO ] 2025-02-06 15:55:37.992 [main] Log - Upload Sign - Positive Scenario
+[INFO ] 2025-02-06 15:55:38.067 [main] Log - Step:01 - Select 'Sign' from the drop down.
+[INFO ] 2025-02-06 15:55:38.082 [main] Log - path is :D:\Testing\O360-AI-master\O360-AI
+[INFO ] 2025-02-06 15:55:38.097 [main] Log - Step:02 -  Click on the 'browse' button & Select a valid sign from the folder.
+[INFO ] 2025-02-06 15:55:42.352 [main] Log - Step:03 - Click on the 'Add' button.
+[INFO ] 2025-02-06 15:55:43.423 [main] Log - Expected Result: Selected Sign should be displayed in the window.
+[INFO ] 2025-02-06 15:55:43.453 [main] Log - Save Data - Positive Scenario
+[INFO ] 2025-02-06 15:55:47.744 [main] Log - Step:01 - Click on the 'Save' button.
+[INFO ] 2025-02-06 15:55:49.901 [main] Log - Expected Result: Data should be saved successfully.
+[INFO ] 2025-02-06 15:55:49.930 [main] Log - Photo and Sign Entry Persistence
+[INFO ] 2025-02-06 15:55:56.881 [main] Log - Expected Result: Previously uploaded images should be displayed.
+[INFO ] 2025-02-06 15:56:01.203 [main] Log - Open 'External Account' Popup
+[INFO ] 2025-02-06 15:56:06.790 [main] Log - Step:01 - Click on the 'Bank Accounts' button.
+[INFO ] 2025-02-06 15:56:08.213 [main] Log - Expected Result - 'External Account' popup appears.
+[INFO ] 2025-02-06 15:56:08.239 [main] Log - Empty Mandatory Fields
+[INFO ] 2025-02-06 15:56:12.552 [main] Log - Step:01 - Leave all mandatory fields empty & Click on the 'ADD' button.
+[INFO ] 2025-02-06 15:56:13.625 [main] Log - Expected Result: Error message displayed for mandatory fields.
+[INFO ] 2025-02-06 15:56:13.655 [main] Log - Select 'State' from Dropdown
+[INFO ] 2025-02-06 15:56:13.997 [main] Log - Step:01 - Click on 'State' dropdown.
+[INFO ] 2025-02-06 15:56:13.997 [main] Log - Step:02 - Select 'State' from the drop down.
+[INFO ] 2025-02-06 15:56:13.997 [main] Log - Expected Result: Selected item is highlighted.
+[INFO ] 2025-02-06 15:56:14.034 [main] Log - Select 'BankID' from Dropdown
+[INFO ] 2025-02-06 15:56:14.409 [main] Log - Step:01 - Click on 'BankID' dropdown.
+[INFO ] 2025-02-06 15:56:14.410 [main] Log - Step:02 - Select 'BankID' from the drop down.
+[INFO ] 2025-02-06 15:56:14.410 [main] Log - Expected Result: Selected item is highlighted.
+[INFO ] 2025-02-06 15:56:14.441 [main] Log - Select 'BranchID' from Dropdown
+[INFO ] 2025-02-06 15:56:14.879 [main] Log - Step:01 - Click on 'BranchID' dropdown.
+[INFO ] 2025-02-06 15:56:14.879 [main] Log - Step:02 - Select 'BranchID' from the drop down.
+[INFO ] 2025-02-06 15:56:14.905 [main] Log - Expected Result: Selected item is highlighted; IFSC code field is auto-filled: KLGB0040293
+[INFO ] 2025-02-06 15:56:14.937 [main] Log - Test 'Cust Name' Field
+[INFO ] 2025-02-06 15:56:16.000 [main] Log - Step:01 - Enter alphabets and numerals in 'Cust Name' textfield.
+[INFO ] 2025-02-06 15:56:16.000 [main] Log - Expected Result: Field accepts alphanumeric input.
+[INFO ] 2025-02-06 15:56:16.029 [main] Log - Test 'Address' Field
+[INFO ] 2025-02-06 15:56:17.079 [main] Log - Step:01 - Enter alphabets and numerals in 'Address' textfield.
+[INFO ] 2025-02-06 15:56:17.080 [main] Log - Expected Result: Field accepts alphanumeric input.
+[INFO ] 2025-02-06 15:56:17.109 [main] Log - Incorrect 'RetypeAccNo'
+[INFO ] 2025-02-06 15:56:19.207 [main] Log - Step:01 - Enter different numbers in 'BankAccNo' and 'RetypeAccNo'.
+[INFO ] 2025-02-06 15:56:24.579 [main] Log - Expected Result: Error message indicating mismatch.
+[INFO ] 2025-02-06 15:56:30.837 [main] Log - Test 'BankAccNo' Field
+[INFO ] 2025-02-06 15:56:31.887 [main] Log - Step:01 - Enter Special Character input in BankAccNo field.
+[INFO ] 2025-02-06 15:56:32.963 [main] Log - Step:02 - Enter Special Character input in RetypeAccNo field.
+[INFO ] 2025-02-06 15:56:37.283 [main] Log - Expected Result: Special Character input allowed.
+[INFO ] 2025-02-06 15:56:44.527 [main] Log - Step:03 - Enter Alphabet input in BankAccNo field.
+[INFO ] 2025-02-06 15:56:45.591 [main] Log - Step:04 - Enter Alphabet input in RetypeAccNo field.
+[INFO ] 2025-02-06 15:56:51.098 [main] Log - Expected Result: Alphabet input prompts error message.
+[INFO ] 2025-02-06 15:56:58.333 [main] Log - Step:05 - Enter Numeric input in BankAccNo field.
+[INFO ] 2025-02-06 15:56:59.392 [main] Log - Step:06 - Enter Numeric input in RetypeAccNo field.
+[INFO ] 2025-02-06 15:57:03.720 [main] Log - Expected Result: Field restricts to numerals.
+[INFO ] 2025-02-06 15:57:03.834 [main] Log - Select 'BankAccID' from Dropdown
+[INFO ] 2025-02-06 15:57:04.165 [main] Log - Step:01 - Click on 'BankAccID' dropdown.
+[INFO ] 2025-02-06 15:57:04.165 [main] Log - Step:02 - Select 'BankAccID' from the drop down.
+[INFO ] 2025-02-06 15:57:04.166 [main] Log - Expected Result: Selected item is highlighted.
+[INFO ] 2025-02-06 15:57:04.197 [main] Log - Invalid Date Format
+[INFO ] 2025-02-06 15:57:09.609 [main] Log - Step:01 - Enter invalid date format in 'Start Date' field.
+[INFO ] 2025-02-06 15:57:14.022 [main] Log - Step:02 - Click on the ADD button.
+[INFO ] 2025-02-06 15:57:15.084 [main] Log - Expected Result: Error message for invalid date format.
+[INFO ] 2025-02-06 15:57:19.476 [main] Log - Test 'Start Date' Field
+[INFO ] 2025-02-06 15:57:24.856 [main] Log - Step:01 - Enter date manually.
+[INFO ] 2025-02-06 15:57:24.856 [main] Log - Expected Result: Date can be entered both ways.
+[INFO ] 2025-02-06 15:57:24.886 [main] Log - Test 'Additional Information' Checkbox
+[INFO ] 2025-02-06 15:57:29.296 [main] Log - Step:01 - Check the checkbox.
+[INFO ] 2025-02-06 15:57:29.297 [main] Log - Expected Result: Checkbox is ticked.
+[INFO ] 2025-02-06 15:57:29.329 [main] Log - Verify 'Balance As on' Date Field
+[INFO ] 2025-02-06 15:57:29.329 [main] Log - Step:01 - Check the 'Balance As on' date field.
+[INFO ] 2025-02-06 15:57:29.365 [main] Log - Expected Result: Field displays current date: 27/08/2300
+[INFO ] 2025-02-06 15:57:29.396 [main] Log - Test 'Balance' Numeric Field
+[INFO ] 2025-02-06 15:57:34.787 [main] Log - Step:01 - Enter numbers in 'Balance' field.
+[INFO ] 2025-02-06 15:57:34.787 [main] Log - Expected Result: Field accepts numeric input.
+[INFO ] 2025-02-06 15:57:34.818 [main] Log - Test 'Credit Card' Checkbox
+[INFO ] 2025-02-06 15:57:39.149 [main] Log - Step:01 - Check the 'Credit Card' checkbox.
+[INFO ] 2025-02-06 15:57:39.150 [main] Log - Expected Result: Checkbox is ticked.
+[INFO ] 2025-02-06 15:57:39.255 [main] Log - Test 'Credit Card No' Field
+[INFO ] 2025-02-06 15:57:40.310 [main] Log - Step:01 - Enter numbers and alphabets in 'Credit Card No' field.
+[INFO ] 2025-02-06 15:57:40.311 [main] Log - Expected Result: Field accepts alphanumeric input.
+[INFO ] 2025-02-06 15:57:40.343 [main] Log - Add Data to Grid
+[INFO ] 2025-02-06 15:57:44.723 [main] Log - Step:01 -  Click on the ADD button.
+[INFO ] 2025-02-06 15:57:44.724 [main] Log - Expected Result: Data is displayed in the grid.
+[INFO ] 2025-02-06 15:57:44.769 [main] Log - Test 'DPID' Field
+[INFO ] 2025-02-06 15:57:45.846 [main] Log - Step:01 - Enter numbers and alphabets in 'DPID' field.
+[INFO ] 2025-02-06 15:57:45.846 [main] Log - Expected Result: Field accepts alphanumeric input.
+[INFO ] 2025-02-06 15:57:45.884 [main] Log - Test 'DematAccNo' Field
+[INFO ] 2025-02-06 15:57:46.941 [main] Log - Step:01 - Enter numbers and alphabets in 'DematAccNo' field.
+[INFO ] 2025-02-06 15:57:46.941 [main] Log - Expected Result: Field accepts alphanumeric input.
+[INFO ] 2025-02-06 15:57:46.971 [main] Log - Save Data
+[INFO ] 2025-02-06 15:57:51.369 [main] Log - Step:01 -  Click on SAVE button.
+[INFO ] 2025-02-06 15:57:53.517 [main] Log - Expected Result: Data is successfully saved.
+[INFO ] 2025-02-06 15:57:53.545 [main] Log - Open Risk Details Window
+[INFO ] 2025-02-06 15:57:59.098 [main] Log - Step:01 - Click on the 'Risk Details' button.
+[INFO ] 2025-02-06 15:58:00.508 [main] Log - Expected Result - 'Risk Details' window should open successfully.
+[INFO ] 2025-02-06 15:58:00.536 [main] Log - Select RiskID
+[INFO ] 2025-02-06 15:58:00.846 [main] Log - Step:01 - Select an item from the RiskID dropdown.
+[INFO ] 2025-02-06 15:58:00.847 [main] Log - Expected Result: Item should be selected successfully.
+[INFO ] 2025-02-06 15:58:00.897 [main] Log - Remarks Field Input
+[INFO ] 2025-02-06 15:58:01.959 [main] Log - Step:01 - Enter alphanumeric and special characters in the 'Remarks' field.
+[INFO ] 2025-02-06 15:58:01.960 [main] Log - Expected Result: Characters should be entered successfully.
+[INFO ] 2025-02-06 15:58:01.988 [main] Log - ActiveSpecialInstruction Field Input
+[INFO ] 2025-02-06 15:58:03.072 [main] Log - Step:01 - Enter alphanumeric and special characters in the 'ActiveSpecialInstruction' field.
+[INFO ] 2025-02-06 15:58:03.073 [main] Log - Expected Result: Characters should be entered successfully.
+[INFO ] 2025-02-06 15:58:03.105 [main] Log - Suspecious Checkbox Selection
+[INFO ] 2025-02-06 15:58:07.444 [main] Log - Step:01 -  Tick mark the 'Suspecious' checkbox.
+[INFO ] 2025-02-06 15:58:07.444 [main] Log - Expected Result: Checkbox should be ticked successfully.
+[INFO ] 2025-02-06 15:58:07.476 [main] Log - Save Risk Details
+[INFO ] 2025-02-06 15:58:11.744 [main] Log - Step:01 -  Click on SAVE button.
+[INFO ] 2025-02-06 15:58:13.909 [main] Log - Expected Result: 'Risk Details' window should close.
+[INFO ] 2025-02-06 15:58:13.937 [main] Log - Empty Remarks Field
+[INFO ] 2025-02-06 15:58:22.966 [main] Log - Step:01 -  Leave the 'Remarks' field empty.
+[INFO ] 2025-02-06 15:58:27.257 [main] Log - Step:02 -  Try to save the form.
+[INFO ] 2025-02-06 15:58:29.385 [main] Log - Expected Result: Possible to save the form without any error.
+[INFO ] 2025-02-06 15:58:29.414 [main] Log - Check Availability Popup
+[INFO ] 2025-02-06 15:58:34.942 [main] Log - Step:01 -  Click on the 'Check Availability' button.
+[INFO ] 2025-02-06 15:58:36.374 [main] Log - Expected Result: A popup should appear displaying customers with similar details or indicating that no similar customers exist.
+[INFO ] 2025-02-06 15:58:36.489 [main] Log - Save Quick Customer
+[INFO ] 2025-02-06 15:58:47.685 [main] Log - Step:01 -  Click on the 'Save' button.
+[INFO ] 2025-02-06 15:58:48.835 [main] Log - Expected Result: Quick Customer details should be saved successfully in the backendtables with Quick Customer ID: 102000076506 and Display Name: ZORO LUFFY SANJI ALIAS ONE
+[INFO ] 2025-02-06 15:59:02.505 [main] Log - Logout
+[INFO ] 2025-02-06 15:59:10.961 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-02-06 15:59:12.040 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

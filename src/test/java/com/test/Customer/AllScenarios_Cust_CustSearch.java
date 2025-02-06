@@ -190,7 +190,10 @@ public class AllScenarios_Cust_CustSearch extends Base_Class{
 				ExtentManager.getInstance().flush();
 			}		
 		}catch(Exception e) {
-			System.out.println(e);
+			ExtentTestManager.getTest().log(Status.FAIL, e);
+        	Log.info("Exception "+e);
+        	ExtentTestManager.endTest();
+        	
 		}
 		
 	}

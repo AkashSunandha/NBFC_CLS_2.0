@@ -13,6 +13,7 @@ import com.Page_Customer.Customer_CustomerRegister;
 import com.Page_Repositary.PageRepositary_Cust_CustRegister;
 import com.Page_Repositary.PageRepositary_Cust_CustSearch;
 import com.Utility.Log;
+import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
@@ -117,7 +118,9 @@ public class AllScenarios_Cust_CustRegister extends Base_Class{
 				ExtentManager.getInstance().flush();
 			}		
 		}catch(Exception e) {
-			System.out.println(e);
+			ExtentTestManager.getTest().log(Status.FAIL, e);
+        	Log.info("Exception "+e);
+        	ExtentTestManager.endTest();
 		}
 	}
 	

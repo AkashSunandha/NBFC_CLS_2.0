@@ -1603,8 +1603,8 @@ public class Customer_QuickCustomer extends Base_Class{
         		Log.info("Step:01 - Untick the 'Introducer Not Required' checkbox.");
         		
                 if(ElementDisplayed(quickCustRepo.introDetailsCustIdTxtBox)) {
-                	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Expected Result: 'Reason' textfield is no longer visible.");
-        			Log.info("Expected Result: Expected Result: 'Reason' textfield is no longer visible.");
+                	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Reason' textfield is no longer visible.");
+        			Log.info("Expected Result: 'Reason' textfield is no longer visible.");
                 }else {
                 	ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: 'Reason' textfield is still visible.");
         			Log.info("Expected Result: 'Reason' textfield is still visible.");
@@ -1699,18 +1699,6 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		clear(quickCustRepo.aidIdentityNumTxtBox);
         		
-        		//Numeric Input
-        		String identityNumNumeric = testdata.get("identityNumNumeric").toString();
-        		input(quickCustRepo.aidIdentityNumTxtBox,identityNumNumeric);
-        		
-        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter Numeric input in Identity No field.");
-        		Log.info("Step:02 - Enter Numeric input in Identity No field.");
-        		
-        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is allowed.");
-        		Log.info("Expected Result: Numeric input is allowed.");
-        		
-        		clear(quickCustRepo.aidIdentityNumTxtBox);
-        		
         		//Alphabet Input
         		String identityNumAlphabet = testdata.get("identityNumAlphabet").toString();
         		input(quickCustRepo.aidIdentityNumTxtBox,identityNumAlphabet);
@@ -1721,7 +1709,20 @@ public class Customer_QuickCustomer extends Base_Class{
         		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Alphabet input is allowed.");
         		Log.info("Expected Result: Alphabet input is allowed.");
         		
+        		clear(quickCustRepo.aidIdentityNumTxtBox);
+        		
+        		//Numeric Input
+        		String uniqueId = generateUniqueId(spAadhaar, clmnNamAadhaar);
+        		input(quickCustRepo.aidIdentityNumTxtBox,uniqueId);
+        		
+        		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter Numeric input in Identity No field.");
+        		Log.info("Step:02 - Enter Numeric input in Identity No field.");
+        		
+        		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Numeric input is allowed.");
+        		Log.info("Expected Result: Numeric input is allowed.");
+        		
         		ExtentTestManager.endTest();
+
         		
         		
         		
@@ -1741,7 +1742,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		clear(quickCustRepo.aidIssuedAuthorityTxtBox);
         		
         		//Numeric Input
-//        		String identityNumNumeric = testdata.get("identityNumNumeric").toString();
+        		String identityNumNumeric = testdata.get("identityNumNumeric").toString();
         		input(quickCustRepo.aidIssuedAuthorityTxtBox,identityNumNumeric);
         		
         		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter Numeric input in Issued Authority field.");
@@ -1957,8 +1958,9 @@ public class Customer_QuickCustomer extends Base_Class{
         		click(quickCustRepo.aidAddDocumentBtn);
         		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the 'ADD DOCUMENT' button.");
         		Log.info("Step:01 - Click on the 'ADD DOCUMENT' button.");
-        		
-        		ElementDisplayed(quickCustRepo.aidAddDocTable);
+        		        		
+//        		String value = driver.findElement(quickCustRepo.aidAddDocTable).getAttribute("title");
+        		ElementDisplayed(quickCustRepo.addDocValueInGrid);
         		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data is displayed in the grid.");
         		Log.info("Expected Result: Data is displayed in the grid.");
         		

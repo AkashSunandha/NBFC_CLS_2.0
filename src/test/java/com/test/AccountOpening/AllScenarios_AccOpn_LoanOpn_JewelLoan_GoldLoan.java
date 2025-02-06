@@ -1,4 +1,4 @@
-package com.test.Customer;
+package com.test.AccountOpening;
 
 import java.io.IOException;
 import java.util.Map;
@@ -9,33 +9,37 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
-import com.Page_Customer.Customer_QuickCustomer;
+import com.Page_AccountOpening.LoanOpening_JewelLoan_GoldLoan;
+import com.Page_Customer.Customer_NewCustomer;
 import com.Utility.Log;
-import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_Cust_QuickCustomer extends Base_Class{
+public class AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan {
+
+
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
 	TestListener TestListener; 
 	com.Utility.ScreenShot screenShot;
-	Customer_QuickCustomer quickCustomerAllMthds = new Customer_QuickCustomer();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-
+	Customer_NewCustomer newCustMths = new Customer_NewCustomer();
+	LoanOpening_JewelLoan_GoldLoan goaldLoan = new LoanOpening_JewelLoan_GoldLoan();
+	
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("Customer_QuickCustomer");
+		ExcelReader = new com.Utility.ExcelReader("AccOpn_JewelLoan_GoldLoan");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
 		Base_Class = new Base_Class();
 	}
 	
+	
 	@Test(dataProvider = "TestData")
-	public void quickCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
+	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
 				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
@@ -53,51 +57,36 @@ public class AllScenarios_Cust_QuickCustomer extends Base_Class{
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 				
-				quickCustomerAllMthds.openQuickCustomerWindow();
+				goaldLoan.openGoaldLoanWindow();
 				
-				quickCustomerAllMthds.emptyCheckAvailabilityPopup();
+				goaldLoan.accInfo(testdata, context);
+								
+				goaldLoan.securities(testdata, context);
 
-				quickCustomerAllMthds.referredBy();
+				goaldLoan.nominee(testdata, context);
 				
-				quickCustomerAllMthds.quickAccDetails(testdata, context);
-				
-				quickCustomerAllMthds.presentAddress(testdata, context);
-				
-				quickCustomerAllMthds.permanentAddress();
-				
-				quickCustomerAllMthds.introducer(testdata, context);
+				goaldLoan.loanDetails(testdata, context);
 
-				quickCustomerAllMthds.introducerSelectCust(testdata, context);
+
 				
-				quickCustomerAllMthds.identityAndArea(testdata, context);
-
-				quickCustomerAllMthds.photoAndSign(testdata, context);
 				
-				quickCustomerAllMthds.photoAndSignEntryPersistence();
 				
-				quickCustomerAllMthds.bankAccounts(testdata, context);
-
-				quickCustomerAllMthds.riskDetails(testdata, context);
-
-				quickCustomerAllMthds.riskDetailsEmptyRemarksField(testdata, context);
-
-				quickCustomerAllMthds.checkAvailability();
+				
+				
+//				custSrchMthds.logout();
 				
 				
 
-				Thread.sleep(5000);
-				custSrchMthds.logout();
+				
+
 
 				
 			// EndTest
 				ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();
-			}
-			
+			}		
 		}catch(Exception e) {
-			ExtentTestManager.getTest().log(Status.FAIL, e);
-        	Log.info("Exception "+e);
-        	ExtentTestManager.endTest();
+			System.out.println(e);
 		}
 	}
 	
@@ -116,6 +105,5 @@ public class AllScenarios_Cust_QuickCustomer extends Base_Class{
 		}
 		return objectarry;
 	}
-	
 	
 }

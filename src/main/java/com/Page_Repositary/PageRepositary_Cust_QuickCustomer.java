@@ -226,7 +226,7 @@ public class PageRepositary_Cust_QuickCustomer {
 	public By qcsiCustId = By.xpath("//*[@id=\"ctl00_CPH1_txtCustIDpopup\"]");
 	public By qcsiDispName = By.xpath("//*[@id=\"ctl00_CPH1_txtCustNamePopup\"]");
 //	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
+	public By addDocValueInGrid = By.xpath("//*[@id=\"ctl00_CPHFrame_lstDocumentView_ctrl2_CDV1_lbl1\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");

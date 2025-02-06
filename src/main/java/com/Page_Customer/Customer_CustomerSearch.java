@@ -1500,6 +1500,7 @@ return true;
 		//Verify Customer Details Display
 		ExtentTestManager.startTest("Verify Customer Details Display");
 		Log.info("Verify Customer Details Display");
+		
 		boolean flag1 = ElementDisplayed(custSearch.freezeCustId);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Verify the Presence of Column - Customer ID.");
 		Log.info("Step:01 - Verify the Presence of Column - Customer ID.");
