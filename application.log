@@ -1,4 +1,4 @@
-[ERROR] 2025-02-06 13:44:02.150 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 19:31:39.924 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustRating.gettestdate(AllScenarios_Cust_CustRating.java:135) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Admin_UserCreation.gettestdate(AllScenarios_Admin_UserCreation.java:112) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-02-06 13:44:02.167 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 19:31:39.942 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -71,7 +71,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustRating.gettestdate(AllScenarios_Cust_CustRating.java:135) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Admin_UserCreation.gettestdate(AllScenarios_Admin_UserCreation.java:112) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-02-06 13:44:02.169 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 19:31:39.945 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -124,7 +124,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustRating.gettestdate(AllScenarios_Cust_CustRating.java:135) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Admin_UserCreation.gettestdate(AllScenarios_Admin_UserCreation.java:112) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-02-06 13:44:02.175 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-06 19:31:39.954 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_CustRating.gettestdate(AllScenarios_Cust_CustRating.java:135) ~[test-classes/:?]
+	at com.test.Customer.AllScenarios_Admin_UserCreation.gettestdate(AllScenarios_Admin_UserCreation.java:112) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,51 +210,28 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[INFO ] 2025-02-06 13:44:03.056 [main] Log - *** Running test method TC_CustomerRatingModule...
-[INFO ] 2025-02-06 13:44:09.520 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-02-06 13:44:11.951 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-02-06 13:44:13.963 [main] Log - PC Registration
-[INFO ] 2025-02-06 13:44:15.068 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-02-06 13:44:16.147 [main] Log - Step:02 - Enter PC Name in Name field.
-[INFO ] 2025-02-06 13:44:24.834 [main] Log - Step:03 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-02-06 13:44:29.107 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-02-06 13:44:30.167 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-02-06 13:44:30.490 [main] Log - Valid Login
-[INFO ] 2025-02-06 13:44:31.527 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-02-06 13:44:32.563 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-02-06 13:44:40.021 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-02-06 13:44:41.066 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-06 13:44:42.112 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-06 13:44:46.440 [main] Log - Step 1->Click on customer
-[INFO ] 2025-02-06 13:44:51.106 [main] Log - Step 2->Click on Customer Rating
-[INFO ] 2025-02-06 13:44:52.178 [main] Log - Expected Result: Customer Rating window is displayed
-[INFO ] 2025-02-06 13:44:53.271 [main] Log - Step 1->Check module name at the top of the window
-[INFO ] 2025-02-06 13:44:53.272 [main] Log - Expected Result: Module name is visible
-[INFO ] 2025-02-06 13:44:55.446 [main] Log - Step 1->1. Look for Customer ID and Customer Name fields on the form
-[INFO ] 2025-02-06 13:44:55.447 [main] Log - Expected Result: Both fields are present
-[INFO ] 2025-02-06 13:44:59.684 [main] Log - Step 1:Look for Go, Save, Close, Cancel buttons
-[INFO ] 2025-02-06 13:44:59.684 [main] Log - Expected Result: All buttons are present
-[INFO ] 2025-02-06 13:45:04.078 [main] Log - Step 1: Check for mandatory indicators on Customer ID and Name fields
-[INFO ] 2025-02-06 13:45:05.126 [main] Log - Expected Result: Both fields are marked as mandatory
-[INFO ] 2025-02-06 13:45:09.494 [main] Log - Step 1: Observe the color of Customer ID and Name fields
-[INFO ] 2025-02-06 13:45:09.494 [main] Log - Expected Result: Fields are orange in color
-[INFO ] 2025-02-06 13:45:10.583 [main] Log - Step -1: Look for a customer search button on the right side of Customer ID
-[INFO ] 2025-02-06 13:45:10.583 [main] Log - Expected Result: Customer search button is present
-[INFO ] 2025-02-06 13:45:15.163 [main] Log - Step 1: Click the customer search button
-[INFO ] 2025-02-06 13:45:16.273 [main] Log - Expected Result: A search popup appears
-[INFO ] 2025-02-06 13:45:26.104 [main] Log - Step 1: Select a customer from the popup
-[INFO ] 2025-02-06 13:45:26.105 [main] Log - Expected Result: Customer Name is autoloaded AJITHAMOL
-[INFO ] 2025-02-06 13:45:26.192 [main] Log - TC No. - 12 --> Test Go Button Functionality
-[INFO ] 2025-02-06 13:45:35.893 [main] Log - Step 1: Click the Go button
-[INFO ] 2025-02-06 13:45:37.982 [main] Log - Expected Result: Fields such as custid, Name, Risk, PAN NO, etc., are loaded 
-[INFO ] 2025-02-06 13:45:39.071 [main] Log - Step 1: Verify the drop down arrow  option is present
-[INFO ] 2025-02-06 13:45:39.072 [main] Log - Expected Result: drop down arrow option is present
-[INFO ] 2025-02-06 13:45:41.186 [main] Log - Step 1: Check for Current Rating and Add New Rating sections
-[INFO ] 2025-02-06 13:45:41.186 [main] Log - Expected Result: Both sections are present
-[INFO ] 2025-02-06 13:45:42.278 [main] Log - Step 1: Select agency from dropdown
-[INFO ] 2025-02-06 13:45:43.341 [main] Log - Step 2: Enter rating
-[INFO ] 2025-02-06 13:45:44.405 [main] Log - Step 3: Enter date
-[INFO ] 2025-02-06 13:45:45.461 [main] Log - Step 4: Enter remarks
-[INFO ] 2025-02-06 13:45:45.462 [main] Log - Step 5: Click on save button
-[INFO ] 2025-02-06 13:45:50.892 [main] Log - Expected Result: Successfully updated
-[INFO ] 2025-02-06 13:46:08.349 [main] Log - User SignedOut
+[INFO ] 2025-02-06 19:31:41.086 [main] Log - *** Running test method TC_User_CreationModule...
+[INFO ] 2025-02-06 19:31:48.724 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-02-06 19:31:51.744 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-02-06 19:31:54.250 [main] Log - PC Registration
+[INFO ] 2025-02-06 19:31:55.362 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-02-06 19:31:56.452 [main] Log - Step:02 - Enter PC Name in Name field.
+[INFO ] 2025-02-06 19:32:05.392 [main] Log - Step:03 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-02-06 19:32:09.735 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-02-06 19:32:12.600 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-02-06 19:32:14.826 [main] Log - Step 1-> Enter admin credentials (username and password)
+[INFO ] 2025-02-06 19:32:21.599 [main] Log - Step 2-> Click on the Login button
+[INFO ] 2025-02-06 19:32:23.603 [main] Log - Expected Result: Admin is logged in successfully and directed to dashboard.
+[INFO ] 2025-02-06 19:32:39.792 [main] Log - Step 1->Go to 'User Management
+[INFO ] 2025-02-06 19:32:44.407 [main] Log - Step 2->Click on 'Add New User'
+[INFO ] 2025-02-06 19:32:45.477 [main] Log - Expected Result: Add New User' window is displayed.
+[INFO ] 2025-02-06 19:32:46.778 [main] Log - Step 1-> Enter numeric or special characters in User ID field
+[INFO ] 2025-02-06 19:33:00.882 [main] Log - Step 2-> Click Save.
+[INFO ] 2025-02-06 19:33:00.910 [main] Log - Expected Result: Error message displayed for invalid User ID.
+[INFO ] 2025-02-06 19:33:06.542 [main] Log - Step-1: Enter alphabets in User ID field
+[INFO ] 2025-02-06 19:33:19.360 [main] Log - Step-2: Click Save
+[INFO ] 2025-02-06 19:33:19.361 [main] Log - Expected Result: New user is added if all inputs are valid
+[INFO ] 2025-02-06 19:33:40.750 [main] Log - Admin SignedOut
+[INFO ] 2025-02-06 19:33:46.793 [main] Log - Username entered
+[INFO ] 2025-02-06 19:33:47.855 [main] Log - Password entered
+[INFO ] 2025-02-06 19:33:54.129 [main] Log - Clicked on login button

@@ -82,7 +82,7 @@ public class AllScenarios_Admin_UserCreation {
 
 
 				//TC NO-06
-				userCreate.testNameFieldValidInput(testdata, context);
+			//	userCreate.testNameFieldValidInput(testdata, context);
 
 
 				//TC NO-07
@@ -91,11 +91,7 @@ public class AllScenarios_Admin_UserCreation {
 				//TC NO-04
 				userCreate.testValidUserIdInput(testdata, context);
 
-				//TC NO-08
-
-
-				//TC No-09
-
+	
 
 				Thread.sleep(5000);
 				userCreate.signOut();

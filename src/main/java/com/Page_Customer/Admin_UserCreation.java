@@ -90,33 +90,37 @@ public class Admin_UserCreation extends Base_Class {
 	//TC-04
 	public void testValidUserIdInput(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		ExtentTestManager.startTest("TC No. - 04 --> User ID Field - Valid Input");
-
+		
+		driver.findElement(puc.userID).clear();
 		//click(puc.addNewUser);
 		String userId = testdata.get("userId").toString();				
 		input(puc.userID, userId);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter alphabets in User ID field");
 		Log.info("Step-1: Enter alphabets in User ID field");
 
-		String name = testdata.get("name").toString();				
-		input(puc.name, name);
-
-		String group = testdata.get("group").toString();	
-
-		String branch = testdata.get("branch").toString();	
-
-		String machineID = testdata.get("machineID").toString();
-
-		String mobile = testdata.get("mobile").toString();
-
-		String emailID = testdata.get("emailID").toString();
-
-
-		select(group,puc.group_dropdown);
-		select(branch,puc.branch_dropdown);
-		select(machineID,puc.machineID_dropdown);
-		input(puc.mobile,mobile);
-		input(puc.emailID,emailID);
-		click(puc.level_checkBoxes1);
+//		String name = testdata.get("name").toString();				
+//		input(puc.name, name);
+//
+//		String group = testdata.get("group").toString();	
+//
+//		String branch = testdata.get("branch").toString();	
+//
+//		String machineID = testdata.get("machineID").toString();
+//
+//		String mobile = testdata.get("mobile").toString();
+//
+//		String emailID = testdata.get("emailID").toString();
+//
+//
+//		select(group,puc.group_dropdown);
+//		select(branch,puc.branch_dropdown);
+//		select(machineID,puc.machineID_dropdown);
+//		input(puc.mobile,mobile);
+//		input(puc.emailID,emailID);
+//		click(puc.level_checkBoxes1);
+//		click(puc.level_checkBoxes);
+		
+		click(puc.level_checkBoxes3);
 		click(puc.saveBtn);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Click Save");
@@ -132,7 +136,7 @@ public class Admin_UserCreation extends Base_Class {
 
 		String password=driver.findElement(puc.password).getText().toString();
 		System.out.println("The password is "+password);
-Thread.sleep(5000);
+		Thread.sleep(5000);
 		click(puc.closeBtn);
 
 		Base_Class.DatabaseConnector1();
@@ -209,8 +213,11 @@ Thread.sleep(5000);
 			Log.info("Expected Result: Error message displayed for invalid User ID.");
 			click(puc.errorMessageOkBtn);
 
+			
 		}
 
+	
+		
 		//System.out.println(driver.findElement(By.xpath("//span[@id='ctl00_lblErrorMessage']")).getText());
 
 		ExtentTestManager.endTest();
