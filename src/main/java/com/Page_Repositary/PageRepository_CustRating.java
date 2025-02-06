@@ -42,5 +42,6 @@ public class PageRepository_CustRating {
 	public By successMessage=By.xpath("//*[@id=\"FloatingErrorMessageBoxTop\"]");
 	public By rating_closeBtn=By.xpath("//*[@id=\"closetop\"]");
 	
+	public By custSignOut = By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
 	
 }

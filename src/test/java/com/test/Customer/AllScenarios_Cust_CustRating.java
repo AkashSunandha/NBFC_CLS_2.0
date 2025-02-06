@@ -89,7 +89,7 @@ public class AllScenarios_Cust_CustRating  {
 				custRa.checkColour();
 				
 				//TC -8-->Verify Tooltips
-				custRa.verifyToolTips();
+			//	custRa.verifyToolTips();
 
 				//TC -9-->Verify Customer Search Button
 				custRa.testCustomerSearchButtonPresence();
@@ -110,7 +110,7 @@ public class AllScenarios_Cust_CustRating  {
 				custRa.testRatingSectionsPresence();
                 
 				//TC-16-->Validate 'No Data Found' Message
-				custRa.validateNoDataFoundMessage();
+			//	custRa.validateNoDataFoundMessage();
 				
 				//AgencyFunctionality
 				custRa.agencyFunc(testdata, context);

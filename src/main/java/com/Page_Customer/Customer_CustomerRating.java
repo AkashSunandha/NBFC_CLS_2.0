@@ -21,7 +21,12 @@ import com.extentReports.ExtentTestManager;
 public class Customer_CustomerRating extends Base_Class {
 
 	PageRepository_CustRating custRating = new PageRepository_CustRating();
+	 Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
+	
+	 String query="Exec Getcustomer";
+	 String columnName="CustomerID";
 
+	
 	//TC-02--> Access Customer Rating Window
 	@Test
 	public void testAccessCustomerRatingWindow() throws InterruptedException {
@@ -255,6 +260,10 @@ public class Customer_CustomerRating extends Base_Class {
 		Log.info("TC No. - 12 --> Test Go Button Functionality");
 		String customerID = testdata.get("custID").toString();
 
+//		String custID=quickCust.generateUniqueId(query, columnName);
+//		input(custRating.custID, custID);
+//		
+		
 		input(custRating.custID,customerID);
 
 		click(custRating.goBtn);
@@ -363,5 +372,11 @@ public class Customer_CustomerRating extends Base_Class {
 		click(custRating.rating_closeBtn);
 		ExtentTestManager.endTest();
 
+	}
+	public boolean signOut() throws InterruptedException {
+		click(custRating.custSignOut);
+		ExtentTestManager.getTest().log(Status.PASS, "User SignedOut");
+		Log.info("User SignedOut");
+		return true;
 	}
 }
