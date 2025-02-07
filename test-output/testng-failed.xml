@@ -6,7 +6,7 @@
       <class name="com.test.Customer.AllScenarios_Multi_MultiFD_Opening">
         <methods>
           <include name="reference"/>
-          <include name="Multi_MultiFD_Opening"/>
+          <include name="Multi_MultiFD_Opening" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.test.Customer.AllScenarios_Multi_MultiFD_Opening -->
     </classes>

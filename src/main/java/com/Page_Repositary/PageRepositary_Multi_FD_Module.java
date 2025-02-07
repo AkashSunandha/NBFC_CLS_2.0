@@ -41,6 +41,7 @@ public class PageRepositary_Multi_FD_Module
 		public By SelectCust = By.id("PopQuick1_lst_ctrl0_linkSelect");
 		public By AddBtn = By.id("ctl00_ctl00_CPH1_PRDCNT_lstProAccInfo_ctrl0_PAI_btnAddCustomer");
 		public By OkBtn = By.xpath("//span[@class = 'ui-button-text']");
+		public By Amount = By.xpath("//input[@id= 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_txtAcOpeningAmount_txt']");
 		public By DurationNum = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_txtDuration_txt']");
 		public By DurationDropDown = By.xpath("//select [@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_ddlDurationMode_ddl']");
 		public By ReferedBy = By.xpath("//*[@id=\"hyjackText0\"]");

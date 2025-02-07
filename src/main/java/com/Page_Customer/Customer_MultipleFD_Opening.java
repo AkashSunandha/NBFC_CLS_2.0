@@ -33,12 +33,12 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 
 		String loginUserName = testdata.get("loginUserName").toString();
 		input(multifd.loginUserName, loginUserName);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
 		Log.info("Step:01 - Enetered valid User Name");
 
 		String loginValidPassword = testdata.get("loginValidPassword").toString();
 		input(multifd.loginPasswrd, loginValidPassword);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Eneter valid Password");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");
 		Log.info("Step:02 - Enetered valid Password");
 
 		click(multifd.loginButton);
@@ -81,8 +81,8 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 		}
 
 		ElementDisplayed(multifd.home);
-		ExtentTestManager.getTest().log(Status.PASS,
-				"Expected Result: User is logged in successfully and dashboard visible");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
 		Log.info("Expected Result: User is logged in successfully and dashboard visible");
 		ExtentTestManager.endTest();
 
@@ -91,7 +91,8 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 
 	public boolean DepositOpeningWindow() throws InterruptedException {
 		ExtentTestManager.startTest("TC:02 - Access to Deposit Opening Window");
-		// Thread.sleep(3000);
+		Log.info("TC:02 - Access to Deposit Opening Window");
+		
 		click(multifd.AccOpening);
 		click(multifd.DepositOpening);
 		click(multifd.FixedDeposit);
@@ -101,17 +102,25 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 				"Step:01 clicking on Account opening -> Deposit opening -> Fixed deposit");
 		Log.info("Step:01 clicking on Account opening -> Deposit opening -> Fixed deposit");
 
-		boolean flag = ElementDisplayed(multifd.FixedType2Years);
+		boolean isDashboardVisible = ElementDisplayed(multifd.FixedType2Years);
+		
+		Assert.assertTrue(isDashboardVisible, "Deposit opening window is displayed");
+		
+		ExtentTestManager.getTest().log(Status.PASS,"Expected Result: Deposit opening window is displayed");
+		Log.info("Expected Result: Deposit opening window is displayed");
 
-		if (flag == true) {
-			ExtentTestManager.getTest().log(Status.PASS, "Deposit opening window is displayed");
-			Log.info("Deposit opening window is displayed");
 
-		} else {
-			ExtentTestManager.getTest().log(Status.FAIL, "Deposit opening window is not displayed");
-			Log.info("Deposit opening window is not displayed");
-			Assert.assertEquals(flag, true, "Element is not displayed as expected");
-		}
+		/*
+		 * if (flag == true) { ExtentTestManager.getTest().log(Status.PASS,
+		 * "Deposit opening window is displayed");
+		 * Log.info("Deposit opening window is displayed");
+		 * 
+		 * } else { ExtentTestManager.getTest().log(Status.FAIL,
+		 * "Deposit opening window is not displayed");
+		 * Log.info("Deposit opening window is not displayed");
+		 * Assert.assertEquals(flag, true, "Element is not displayed as expected");
+		 
+		}*/
 		ExtentTestManager.endTest();
 		return true;
 
@@ -120,7 +129,8 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 	public boolean customerSearchandSelectionWindow(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
 		ExtentTestManager.startTest("TC:03 - Customer Search and Selection");
-
+		Log.info("TC:03 - Customer Search and Selection");
+		
 		click(multifd.custSrch);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Customer Search' button");
 		Log.info("Step:01 - Click 'Customer Search' button");
@@ -130,17 +140,14 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 
 		for (String handle : allWindowHandles) {
 			if (!handle.equals(mainWindowHandle)) {
-				driver.switchTo().window(handle); // Switch to popup window
+				driver.switchTo().window(handle); 
 				break;
 			}
 		}
-		// Thread.sleep(2000);
-
+		
 		String CustomerName = testdata.get("CustomerName").toString();
 		input(multifd.custName1, CustomerName);
-
-		// Thread.sleep(1000);
-
+		
 		click(multifd.SearchBtn);
 		click(multifd.SelectCust);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select Customer from Search Popup.");
@@ -152,10 +159,11 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click 'Add' Button");
 		Log.info("Step:03 - Click 'Add' Button");
 
+		
 		if (ElementDisplayed(multifd.OkBtn)) {
 			click(multifd.OkBtn);
-			ExtentTestManager.getTest().log(Status.PASS,
-					"Expected Result: Selected customer details populate necessary fields");
+		
+			ExtentTestManager.getTest().log(Status.PASS,"Expected Result: Selected customer details populate necessary fields");
 			Log.info("Expected Result: Selected customer details populate necessary fields");
 
 		}
@@ -163,26 +171,53 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 		ExtentTestManager.endTest();
 		return true;
 	}
-
+	
+	public boolean EnterAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+		
+		ExtentTestManager.startTest("TC:04 - Enter Amount");
+		Log.info("TC:04 - Enter Amount");
+			click(multifd.Amount);
+			
+			String EnterAmount = testdata.get("Amount").toString();
+			input(multifd.Amount, EnterAmount);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter the Amount in the 'Amount' Field");
+			Log.info("Step:01 - Enter the Amount in the 'Amount' Field");
+			
+			
+			 if(ElementDisplayed(multifd.Amount)) {
+				 click(multifd.Amount);
+			 
+				ExtentTestManager.startTest("Expected Result:Possible to Enter the Amount");
+				Log.info("Expected Result:Possible to Enter the Amount");
+			 }
+					
+			
+		ExtentTestManager.endTest();
+		return true;
+		
+		}
+		
 	public boolean EnterValidDuration(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:04 - Enter Valid Duration"); // Duration
-
+		ExtentTestManager.startTest("TC:05 - Enter Valid Duration");
+		Log.info("TC:05 - Enter Valid Duration");
+	
 		String ValidDuration = testdata.get("Duration").toString();
 		input(multifd.DurationNum, ValidDuration);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter Valid Duration eg: 12");
 		Log.info("Step:01 - Enter Valid Duration eg: 12");
 
 		click(multifd.DurationDropDown);
-		WebElement DurationDropDown = driver.findElement(By.xpath(
-				"//select [@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_ddlDurationMode_ddl']"));
+		WebElement DurationDropDown = driver.findElement(By.xpath("//select [@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_ddlDurationMode_ddl']"));
 		Select dropdown = new Select(DurationDropDown);
 		dropdown.selectByVisibleText("MONTHS");
-
-		ExtentTestManager.getTest().log(Status.PASS,
-				"Expected Result: 12 is entered in the Duration field, Month is seleced from the Duration Mode Dropdown list.");
-		Log.info(
-				"Expected Result: 12 is entered in the Duration field, Month is seleced from the Duration Mode Dropdown list.");
+		
+		String selectedOption = dropdown.getFirstSelectedOption().getText();
+		
+	    Assert.assertEquals(selectedOption, "MONTHS", "Validation Failed: The selected duration mode should be 'MONTHS'.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 12 is entered in the Duration field, Month is seleced from the Duration Mode Dropdown list.");
+		Log.info("Expected Result: 12 is entered in the Duration field, Month is seleced from the Duration Mode Dropdown list.");
 
 		ExtentTestManager.endTest();
 		return true;
@@ -190,7 +225,9 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 	}
 
 	public boolean SelectReferral() throws InterruptedException {
-		ExtentTestManager.startTest("TC:05 - Select Referral");
+		ExtentTestManager.startTest("TC:06 - Select Referral");
+		Log.info("TC:06 - Select Referral");
+		
 		if (ElementDisplayed(multifd.ReferedBy)) {
 			click(multifd.ReferedBy);
 
@@ -200,7 +237,7 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 			WebDriverWait wait = new WebDriverWait(driver, 10);
 			WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[text()='NITHIN']")));
 			option.click();
-
+				
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Referral is successfully selected");
 			Log.info("Expected Result: Referral is successfully selected");
 

@@ -68,11 +68,14 @@ public class AllScenarios_Multi_MultiFD_Opening extends Base_Class {
 
 				// TC_03 -----> Customer Search and Selection
 				multifd.customerSearchandSelectionWindow(testdata, context);
+				
+				//TC_04 ----> EnterAmount
+				multifd.EnterAmount(testdata, context);
 
-				// TC_04 ----> EnterValidDuration
+				// TC_05 ----> EnterValidDuration
 				multifd.EnterValidDuration(testdata, context);
 
-				// TC_05 ----> SelectReferral
+				// TC_06 ----> SelectReferral
 				multifd.SelectReferral();
 
 				// Sign out
