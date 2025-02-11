@@ -27,7 +27,7 @@ public class PageRepository_AccountOpening_Otherloanoping_documentsecurity {
 	public By childSelectLink=By.xpath("//a[text()='Select ']");
 	public By selectLinkInNominee=By.xpath("//*[@id=\"PopQuick1_lst_ctrl0_linkSelect\"]");	
 	//*[@id="PopQuick1_lst_ctrl0_linkSelect"]
-	
+	public By okBtn=By.xpath("//span[text()='OK']");
 	public By addBtn=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LAI_btnAddCustomer1\"]");
 	public By accountInfoGrid=By.xpath("//*[@id=\"tblCustViewList\"]");
 	public By signOut=By.xpath("//strong[text()='Signout']/parent::a");
@@ -56,8 +56,8 @@ public class PageRepository_AccountOpening_Otherloanoping_documentsecurity {
 	public By addBtn1_document=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpSecurity_tbSecurity_tpDocuments_ucDoc_btnAddCustDoc\"]");
 	public By addBtn2_document=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpSecurity_tbSecurity_tpDocuments_ucDoc_btnDocAdd\"]");
 	
-	//public By grid1_document=By.xpath("//table[@class='DocumentCustomerList']");
-	public By grid1_document=By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[9]/div[1]/div/div[2]/div[2]/div/div[2]/div[2]/div/div/div/table/tbody/tr[5]/td/table/tbody/tr/td/table");
+	public By grid1_document=By.xpath("//table[@class='DocumentCustomerList']");
+	//public By grid1_document=By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[9]/div[1]/div/div[2]/div[2]/div/div[2]/div[2]/div/div/div/table/tbody/tr[5]/td/table/tbody/tr/td/table");
 	
 	
 	public By grid2_document=By.xpath("//table[@id='tblLAS']");
@@ -109,6 +109,18 @@ public class PageRepository_AccountOpening_Otherloanoping_documentsecurity {
 	//*[@id="ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect"]
 	public By cashier_authorizeBtn=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]");
 	public By closeIcon=By.xpath("//*[@id=\"closetop\"]");
+	
+	//Transfer
+	
+	public By postCreditBtn=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstOtherInfo_ctrl0_LIF1_btnAutoPost\"]");
+	public By transactionBased=By.xpath("//*[@id=\"ddlTrnsBased_ddl\"]");
+	public By glName=By.xpath("//*[@id=\"hyjackText0\"]");
+	public By glAccCode=By.xpath("//*[@id=\"txtGLAcCode_txt\"]");
+	public By amountInTransfer=By.xpath("//*[@id=\"txtAmountForGLHead_txt\"]");
+	public By addBtnInTransfer=By.xpath("//*[@id=\"btnAddGLAcHead\"]");
+	public By submitInTransfer=By.xpath("//*[@id=\"btnSubmit\"]");
+	
+	public By transferTab=By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
 	
 	
 }

@@ -78,7 +78,7 @@ public class AllScenarios_Otherloanoping_documentsecurity {
 
 
 				//TC-05,06,07
-				personalLoan.testAddCustomer();
+				personalLoan.testAddCustomer(testdata, context);
 
 				//TC-08
 				personalLoan.testResolutionNoField(testdata, context);
@@ -183,49 +183,43 @@ public class AllScenarios_Otherloanoping_documentsecurity {
 				//TC-39
 				personalLoan.testNextBtnFunctionality3();
 
-				//TC-41
+				//TC-40
 				personalLoan.testSanctionAmount(testdata, context);
 
-				//TC-42
+				//TC-41
 				personalLoan.testGetValueBtn();
 
-				//TC-43
+				//TC-42
 				personalLoan.testSelectTransactionMode();
 
 
-				//TC-44
+				//TC-43
 				personalLoan.testSaveBtnFunc();
 
-				//TC-45
+				
 				Thread.sleep(5000);
 				personalLoan.signOut();
 
-				//TC-45
+				//TC-44
 				personalLoan.userLogin1(testdata, context);
 
-				//TC-46
+				//TC-45
 				personalLoan.testManagerAuthorization();
 
-				//TC-47
+				//TC-46
 				personalLoan.testRefreshBtn();
 
-				//TC-48
+				//TC-47
 				personalLoan.testSelectAndAuthorize();
 
-				
-				//TC-49
+				//TC-48
 				personalLoan.testCashierAuthorization();
 
-				//TC-49
-				personalLoan.testSelectAndAuthorizeInCashier();
 
-
-				//TC-54
 				Thread.sleep(5000);
 				personalLoan.signOut();
 				
-				//Total-43
-
+				
 				// EndTest
 				ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();

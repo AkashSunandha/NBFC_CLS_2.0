@@ -10,6 +10,7 @@ public class PageRepository_Cust_InstitutionalCust {
 	public By loginButton = By.xpath("//*[@id=\"imgbtnSubmit\"]");
 	public By dashboard=By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/table/tbody/tr[1]/th/div[1]");
 
+	public By signOut=By.xpath("//strong[text()='Signout']/parent::a");
 	//div[text()='Dashboard']
 	public By customer=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/div");
 
@@ -187,6 +188,7 @@ public class PageRepository_Cust_InstitutionalCust {
 	
 	public By activeAccountGrid=By.xpath("//*[@id=\"tblintroduceActiveAccount\"]");
 	
+	public By customerID_textbox=By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_IF1_txtIntCust_ID_txt\"]");
 	//Identity
 
 	public By addIdentityDetailsLabel=By.xpath("//*[@id=\"ctl00_CPHFrame_SectionCaption2_lblCaption\"]");
@@ -297,6 +299,18 @@ public By identityPage_frame=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_CustContent_Cu
 	public By final_OKBtn=By.xpath("//*[@id=\"ctl00_CPHFrame_btnClose\"]");
 	
 	
+	public By authorizeAndCancel=By.xpath("//a[text()='Authorize & Cancel']/parent::li");
+	public By managerAuthorization=By.xpath("//a[text()='Manager Authorisation (MNAU)']/parent::li");
+	public By cashierAuthorization=By.xpath("//a[text()='Cashier Authorisation (CAAU)']/parent::li");
+	public By refreshBtn=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnRefresh\"]");
+	public By authorizeBtn=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnOtherPass\"]");	
+	public By authorizePage_checkbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect\"]");
+	
+	public By closePop=By.xpath("//*[@id=\"closetop\"]");
 
+	public By otherTab=By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers\"]");
+	public By otherTab_checkbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers_ucMAOthers_lvwOtherDetails_ctrl0_chkSelect\"]");
+	
+	
 }
 

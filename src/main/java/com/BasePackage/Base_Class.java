@@ -1,6 +1,5 @@
 package com.BasePackage;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.CallableStatement;
@@ -11,30 +10,22 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import com.Utility.Log;
-import com.aventstack.extentreports.Status;
-import com.extentReports.ExtentTestManager;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.Page_Repositary.PageRepositary_Cust_CustSearch;
+import com.Page_Customer.Customer_CustomerSearch;
 import com.Utility.Log;
-import com.extentReports.ExtentTestManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -59,9 +50,10 @@ public class Base_Class {
 		return driver;
 	}
 	
-	private static By L_username = By.id("Username");
-	private static By L_password = By.id("Password");
-	private static  By L_SignIn = By.xpath("//span[text()=' Sign In ']");
+	private static By L_username = By.id("txtUserName_txt");
+	private static By L_password = By.id("txtPassword_txt");
+	//private static  By L_SignIn = By.xpath("//span[text()=' Sign In ']");
+	private static  By L_SignIn = By.id("imgbtnSubmit");
 	private static By DesktopNot = By.xpath("//button[text()='OK']");
 	//private static By L_LogOut= By.xpath("//div[@class='user position ng-tns-c3-15 ng-star-inserted']");
 	//private static By L_LogAlert= By.xpath("//button[text()='Sign out']");
@@ -75,6 +67,8 @@ public class Base_Class {
 		return properties;
 	}
 
+	
+	
 	public void SetUp() throws IOException, InterruptedException {
 		
 		String Browser = configloader().getProperty("Browser");
@@ -131,15 +125,19 @@ public class Base_Class {
 //		Thread.sleep(9000);
 		Pagetitle = driver.getTitle();
 		Log.info("Title is displayed : "+Pagetitle);
+	
 //		input(L_username, UserName);
+//		Log.info("Username is added");
 //		input(L_password, Password);
+//		Log.info("Password is added");
 //		click(L_SignIn);
+//		Log.info("Signed In");
 //		Thread.sleep(4000);
 //		click(DesktopNot);
 //		Thread.sleep(1000);
 	}
 
-
+	
 	public static String getValue(By path) {
 		return driver.findElement(path).getText(); 
 	}
@@ -163,9 +161,7 @@ public class Base_Class {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		Select selWeekDayDropDown = new Select(driver.findElement(element));
 		//selWeekDayDropDown.selectByVisibleText(value);
-		
 		selWeekDayDropDown.selectByValue(value);
-		
 	}
 
 	public static void clear(By element)throws InterruptedException
@@ -176,12 +172,12 @@ public class Base_Class {
 		Thread.sleep(2000);
 	}
 
-
 	public static void AcceptAlert()
 	{
 		driver.switchTo().alert().accept();
 		//driver.switchTo().alert().dismiss();	
 	}
+	
 	public static void DismissAlert()
 	{
 		//driver.switchTo().alert().accept();

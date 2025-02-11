@@ -1,6 +1,11 @@
 package com.Page_Customer;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -23,6 +28,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	PageRepository_Cust_InstitutionalCust institutionalCust = new PageRepository_Cust_InstitutionalCust();
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
 
+
+	String query="Exec Getcustomer";
+	String columnName="CustomerID";
 
 	//TC-02 (3)
 	public void userLogin(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
@@ -665,7 +673,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void testCustPopupInOwnerSection(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		String parentWindow = driver.getWindowHandle();
 		String ownserDetails_custId = testdata.get("ownserDetails_custId").toString();
-		
+
 		click(institutionalCust.searchIconInOwnerSection);
 		Set<String> allWindows = driver.getWindowHandles();
 		for (String window : allWindows) {
@@ -679,7 +687,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 				System.out.println("Frame is switched");
 				break;
 			}
-			
+
 		}
 		String OwnerSectionName = driver.findElement(institutionalCust.ownerSection_nameField).getText();
 		if(OwnerSectionName=="") {
@@ -692,8 +700,8 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 		}
 	}
-	
-	
+
+
 	//TC-71(1)
 	public void testMSMEDetailsSectionPresence() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 71 --> MSME Details Section");
@@ -760,7 +768,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		Log.info("Step 1: Verify Declaration Browsing option presence.");
 
 		click(institutionalCust.yesRadioBtn);
-		UploadFile(institutionalCust.browseBtn_msme,".\\src\\test\\resources\\3.gif");
+		UploadFile(institutionalCust.browseBtn_msme,".\\src\\test\\resources\\tiger.jpg");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 2: Attempt to upload .jpeg, .jpg, .png, .gif, .pdf files.");
 		Log.info("Step 2: Attempt to upload .jpeg, .jpg, .png, .gif, .pdf files.");
@@ -819,7 +827,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Verify document browsing option presence.");
 		Log.info("Step 1:  Verify document browsing option presence.");
 
-		UploadFile(institutionalCust.browseBtm_gst,".\\\\src\\\\test\\\\resources\\\\3.gif");
+		UploadFile(institutionalCust.browseBtm_gst,".\\src\\test\\resources\\tiger.jpg");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 2: Attempt to upload .jpeg, .jpg, .png, .gif, .pdf files.");
 		Log.info("Step 2: Attempt to upload .jpeg, .jpg, .png, .gif, .pdf files.");
@@ -1087,7 +1095,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Verify MOA Document field and browsing option presence.");
 		Log.info("Step 1:   Verify MOA Document field and browsing option presence.");
 
-		UploadFile(institutionalCust.browse_MOA, ".\\src\\test\\resources\\media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png");
+		UploadFile(institutionalCust.browse_MOA, ".\\src\\test\\resources\\tiger.jpg");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 2:   Attempt file upload (.jpeg, .jpg, .png, .gif, .pdf).");
 		Log.info("Step 2:  Attempt file upload (.jpeg, .jpg, .png, .gif, .pdf).");
@@ -1720,19 +1728,20 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 
 	//TC-165 (8)
-	public void testCustomerSelection(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
+	public void testCustomerSelection1(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		String parentWindow = driver.getWindowHandle();
 
 		click(institutionalCust.introducer_custIdSearch);
 
 		Set<String> allWindows = driver.getWindowHandles();
-		String childWindow_custID = testdata.get("childWindow_custID").toString();
+		//String childWindow_custID = testdata.get("childWindow_custID").toString();
+		String custID=generateUniqueId(query, columnName);
 
 
 		for (String window : allWindows) {
 			if(!window.equals(parentWindow)) {
 				driver.switchTo().window(window);
-				input(institutionalCust.introducerWindow_custID, childWindow_custID);
+				input(institutionalCust.introducerWindow_custID, custID);
 				click(institutionalCust.introducerWindow_searchBtn);
 				click(institutionalCust.introducerWindow_select);
 				driver.switchTo().window(parentWindow);
@@ -1743,13 +1752,28 @@ public class Customer_InstitutionalCust extends Base_Class {
 			}
 		}
 	}
-			
+
+	public void testCustomerSelection(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
+
+		//		String custID=generateUniqueId(query, columnName);
+		//		input(institutionalCust.customerID_textbox, custID);
+
+		String intName = testdata.get("intName").toString();
+		input(institutionalCust.introducer_intName, intName);
+
+		String intAddress = testdata.get("intAddress").toString();
+		input(institutionalCust.introducer_intAddress, intAddress);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer ID is added");
+		Log.info("Expected Result: Customer ID is added");	
+	}
+
 
 	//TC-166 (1)
 	public void testIntNameAutofill() {
 		String intName=driver.findElement(institutionalCust.introducer_intName).getAttribute("value");
 		System.out.println("Int name is "+intName);
-		
+
 		if(intName=="") {
 			System.out.println("Field is Blank");
 
@@ -1815,21 +1839,21 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.startTest("TC No. - 170 --> Remarks' Field Functionality");
 
 		ElementDisplayed(institutionalCust.activeAccountGrid);
-		
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click 'Active Account' button.");
 		Log.info("Step 1: Click 'Active Account' button.");
-		
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step 2: Verify details of selected customer.");
 		Log.info("Step 2: Verify details of selected customer.");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Active account details displayed.");
 		Log.info("Expected Result: Active account details displayed.");
-		
+
 		ExtentTestManager.endTest();
 	}
-	
-	
-	
+
+
+
 	//TC-173 (1)
 	public void testCloseBtn() throws InterruptedException {
 
@@ -1883,9 +1907,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-179 (1)
 	public void testIdentityNoField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		ExtentTestManager.startTest("TC No. - 179 --> Input Alphabets and Numerals in 'Identity No.'");
-	//	String identityNo = testdata.get("identityNo").toString();
-		
-	
+		//	String identityNo = testdata.get("identityNo").toString();
+
+
 		String identityNo = generateUniqueId(spPAN,clmnNamPAN);
 		input(institutionalCust.identityNo_textbox, identityNo);
 
@@ -1935,7 +1959,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 			driver.findElement(institutionalCust.issueDate_textbox).clear();
 			driver.findElement(institutionalCust.issueDate_textbox).clear();
-			
+
 			//			String issueDate = testdata.get("issueDate").toString();
 			//			input(institutionalCust.issueDate_textbox, issueDate);
 		}
@@ -1944,7 +1968,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		click(institutionalCust.issueDate_textbox);
 		String issueDate = testdata.get("issueDate").toString();
 		input(institutionalCust.issueDate_textbox, issueDate);
-		
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step 3:   Enter an valid date.");
 		Log.info("Step 3:   Enter a valid date.");
 
@@ -1997,7 +2021,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		click(institutionalCust.addImageBtn);
 
 		Set<String> allWindows = driver.getWindowHandles();
-		
+
 
 		for (String window : allWindows) {
 			if(!window.equals(parentWindow)) {
@@ -2005,11 +2029,11 @@ public class Customer_InstitutionalCust extends Base_Class {
 				//click(institutionalCust.childWindow_browseBtn);
 				ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click 'Add Images' button.");
 				Log.info("Step 1: Click 'Add Images' button.");
-				
+
 				UploadFile(institutionalCust.childWindow_browseBtn, ".\\src\\test\\resources\\tiger.jpg");
 				ExtentTestManager.getTest().log(Status.PASS, "Step 2: Select an image (.jpeg, .jpg, .png, .gif, .pdf).");
 				Log.info("Step 2: Select an image (.jpeg, .jpg, .png, .gif, .pdf).");
-				
+
 				click(institutionalCust.childWindow_addBtn);
 				ExtentTestManager.getTest().log(Status.PASS, "Step 3: Add the file.");
 				Log.info("Step 3: Add the file.");
@@ -2017,8 +2041,8 @@ public class Customer_InstitutionalCust extends Base_Class {
 				driver.switchTo().window(parentWindow);
 				SwitchToFrame(institutionalCust.identityPage_frame);
 				//click(institutionalCust.validateDocumentBtn);
-				
-				
+
+
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selected image is displayed in popup, popup closes successfully.");
 				Log.info("Expected Result: Selected image is displayed in popup, popup closes successfully.");
 				break;
@@ -2773,7 +2797,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-292 (1)
 	public void testDefaultStateOfSusCheckbox() {
 		ExtentTestManager.startTest("TC No. - 292 --> Validate Default State of 'Suspecious' Checkbox");
-		
+
 		if(!driver.findElement(institutionalCust.suspecious_checkbox).isSelected()) {
 			ExtentTestManager.getTest().log(Status.PASS, "Step 1: Verify the default state of the 'suspecious' checkbox.");
 			Log.info("Step 1: Verify the default state of the 'suspecious' checkbox.");
@@ -2935,23 +2959,23 @@ public class Customer_InstitutionalCust extends Base_Class {
 		Log.info("Expected Result: Document name dropdown is present");
 		ExtentTestManager.endTest();
 	}
-	
+
 	//TC-313 (2)
 	public void testUploadGeneralDocument() {
 		ExtentTestManager.startTest("TC No. - 313 --> Upload General Document in Supported Format");
 		UploadFile(institutionalCust.selectDoc_browse,".\\src\\test\\resources\\tiger.jpg");
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click 'browse' button");
 		Log.info("Step 1: Click 'browse' button");
-		
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step 2:  Select a general image with .jpeg, .jpg, .png, .gif, or .pdf format");
 		Log.info("Step 2:  Select a general image with .jpeg, .jpg, .png, .gif, or .pdf format");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selected general file is accepted for upload");
 		Log.info("Expected Result: Selected general file is accepted for upload");
 		ExtentTestManager.endTest();
-		
+
 	}
-	
+
 	//TC-314 (1)
 	public void testAddGenDocWindow() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 314 --> Add General Document to Display Window");
@@ -2962,24 +2986,136 @@ public class Customer_InstitutionalCust extends Base_Class {
 		Log.info("Expected Result: General image displayed in the window");
 		ExtentTestManager.endTest();
 	}
-	
-	
+
+
 	//TC-316 (5)
 	public void testFinishBtn() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 316 --> Save Data Upon Proceed");
 		ScrollUntilElementVisible(institutionalCust.finishBtn);
 		click(institutionalCust.finishBtn);
 		//click(institutionalCust.finishBtn);
-		
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click 'Proceed' button");
 		Log.info("Step 1:  Click 'Proceed' button");
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data is successfully saved");
 		Log.info("Expected Result: Data is successfully saved");
-		
+
 		click(institutionalCust.final_OKBtn);
 		driver.switchTo().defaultContent();
 		ExtentTestManager.endTest();
 	}
+
+	//TC-324(3)
+	public void userLogin1(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
+		signOut();
+
+		ExtentTestManager.startTest("TC No. - 324 --> Login to LMS as another User");
+		String loginUserName1 = testdata.get("loginUserName1").toString();
+		input(institutionalCust.loginUserName, loginUserName1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
+		Log.info("Step-1: Enter valid username.");
+
+		String loginValidPassword1 = testdata.get("loginValidPassword1").toString();
+		input(institutionalCust.loginPasswrd, loginValidPassword1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Enter valid password.");
+		Log.info("Step-2: Enter valid password.");
+
+		click(institutionalCust.loginButton);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on 'Login'.");
+		Log.info("Step-3: Click on 'Login'.");
+		Thread.sleep(10000);
+		//		boolean flag1 = ElementDisplayed(institutionalCust.dashboard);
+		//		boolean flag = flag1;
+		//		if(flag == true) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Another user successfully logs in to LMS.");
+		Log.info("Expected Result: Another user successfully logs in to LMS.");
+		//}
+		ExtentTestManager.endTest();
+
+	}
+
+	//TC-325 (2)
+	public void testManagerAuthorization() throws InterruptedException {
+		ExtentTestManager.startTest("TC No. - 325 --> Manager Authorization");
+
+		click(institutionalCust.authorizeAndCancel);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on authorize and cancel tab");
+		Log.info("Step-1: Click on authorize and cancel tab");
+
+		click(institutionalCust.managerAuthorization);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Click on manager authorization tab");
+		Log.info("Step-2: Click on manager authorization tab");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Manager Authorization window should be display");
+		Log.info("Expected Result: Manager Authorization window should be display");
+
+		ExtentTestManager.endTest();	
+	}
+
 	
+	//TC-326
+	public void testOtherTabBtn() throws InterruptedException {
+		ExtentTestManager.startTest("TC No. - 327 --> Validate Others Tab");
+		click(institutionalCust.otherTab);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on Others tab");
+		Log.info("Step-1: Click on Others tab ");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Others tab load");
+		Log.info("Expected Result: Others tab load");
+		ExtentTestManager.endTest();	
+	}
+	//TC-327 (1)
+	public void testRefreshBtn() throws InterruptedException {
+		ExtentTestManager.startTest("TC No. - 327 --> Validate refresh button in manager authorization page");
+		
+		click(institutionalCust.refreshBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
+		Log.info("Step-1: Click on refresh button");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan entry should be display in the  window");
+		Log.info("Expected Result: Loan entry should be display in the  window");
+
+		ExtentTestManager.endTest();	
+	}
+
+	//TC-328 (2)
+	public void testSelectAndAuthorize() throws InterruptedException {
+		ExtentTestManager.startTest("TC No. - 328 --> Select and authorize the customer in manager authorization page");
+
+		click(institutionalCust.otherTab_checkbox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on checkbox");
+		Log.info("Step-1: Click on checkbox");
+		click(institutionalCust.authorizeBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Click on authorize button");
+		Log.info("Step-2: Click on authorize button");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry is authorized");
+		Log.info("Expected Result: Entry is authorized");
+
+		ExtentTestManager.endTest();	
+	}
+
+	public boolean signOut() throws InterruptedException {
+		ExtentTestManager.startTest(" SignOut");
+		//closePop();
+		click(institutionalCust.signOut);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on SignOut");
+		Log.info("Step-1: Click on SignOut");
+		//		ExtentTestManager.getTest().log(Status.PASS, "Admin SignedOut");
+		//		Log.info("Admin SignedOut");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is signed out successfully");
+		Log.info("Expected Result: User is signed out successfully");
+		ExtentTestManager.endTest();
+		return true;
+	}
+
+	public void closePop() throws InterruptedException {
+		click(institutionalCust.closePop);
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup is closed");
+		Log.info("Expected Result: Popup is closed");
+
+	}
+
 }
 

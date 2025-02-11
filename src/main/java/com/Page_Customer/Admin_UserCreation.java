@@ -32,12 +32,12 @@ public class Admin_UserCreation extends Base_Class {
 
 	public boolean signOut() throws InterruptedException {
 		click(puc.admin_signOutBtn);
-		//		ExtentTestManager.getTest().log(Status.PASS, "Admin SignedOut");
-		//		Log.info("Admin SignedOut");
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Admin SignedOut");
+				Log.info("Expected Result: Admin SignedOut");
 		return true;
 	}
 
-	//TC-02
+	//TC-02 (3)
 	public void adminLogin(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		ExtentTestManager.startTest("TC No. - 02 --> Login with Admin User");
 		String loginUserName = testdata.get("loginUserName").toString();
@@ -66,7 +66,7 @@ public class Admin_UserCreation extends Base_Class {
 
 
 
-	//TC-03
+	//TC-03 (3)
 	public void testNavigateToAddNewUserWindow() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 03 --> Navigate to Add New User Window");
 		System.out.println("Method getting started");
@@ -87,7 +87,7 @@ public class Admin_UserCreation extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-04
+	//TC-04 (15)
 	public void testValidUserIdInput(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		ExtentTestManager.startTest("TC No. - 04 --> User ID Field - Valid Input");
 		
@@ -171,7 +171,7 @@ public class Admin_UserCreation extends Base_Class {
 	}
 
 
-	//TC NO-05
+	//TC NO-05 (10)
 	public void testInvalidUserIdInput(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		ExtentTestManager.startTest("TC No. - 05 --> User ID Field - Invalid Input");
 

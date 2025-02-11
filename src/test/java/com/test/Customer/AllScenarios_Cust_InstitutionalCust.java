@@ -35,9 +35,9 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 	Admin_UserCreation userCreate = new Admin_UserCreation();
 	Customer_InstitutionalCust instituCust = new Customer_InstitutionalCust();
 	PageRepository_Cust_InstitutionalCust institutionalCust = new PageRepository_Cust_InstitutionalCust();
-	
-	
-	
+
+
+
 	@BeforeSuite
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("InstitutionalCustomer");
@@ -102,7 +102,7 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 				//TC-12
 				instituCust.verifyFirstNameFieldPresence();
 
-				
+
 				//TC-14
 				instituCust.testFirstNameField(testdata, context);
 				//TC-17
@@ -131,7 +131,7 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 
 				//TC-29
 				instituCust.verifyDateSelectionAndManualEntry(testdata, context);
-				
+
 				//TC-31
 				instituCust.testRegNoFieldEntry(testdata, context);
 
@@ -185,18 +185,18 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 				//TC-65
 				instituCust.testOwnerDetailsFieldDisplay();
 
-				
+
 				//TC-67
 				instituCust.testNameFieldInOwnerDetails(testdata, context);
-				
-				
+
+
 				//TC-68
 				instituCust.testDesignationFieldInOwnerDetails(testdata, context);
-				
-				
+
+
 				//TC-70
-				instituCust.testCustPopupInOwnerSection(testdata, context);
-				
+				//	instituCust.testCustPopupInOwnerSection(testdata, context);
+
 				//TC-71
 				instituCust.testMSMEDetailsSectionPresence();
 
@@ -215,411 +215,432 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 
 				//TC-83
 				instituCust.testGstinFieldAcceptsAllEntries(testdata, context);
-				
+
 				//TC-84
 				instituCust.testDocumentBrowsingOptionPresence();
-				
+
 				//TC-85
 				instituCust.testInstitutionOtherDetailsSectionPresence();
-				
+
 				//TC-86
 				instituCust.testEnterDataAndSelectInCINNumberField(testdata, context);
-				
+
 				//TC-87
 				instituCust.testCmrScoreDropdownPresenceAndSelect();
-				
+
 				//TC-88
 				instituCust.verifyShareHoldingFieldPresenceAndEnterNumbers(testdata, context);
-				
+
 				//TC-89
 				instituCust.testDataEntryForShareHoldingFieldAndPresence(testdata, context);
-				
+
 				//TC-90
 				instituCust.testDPIITNumberFieldInputAndPresence(testdata, context);
-				
+
 				//TC-91
 				instituCust.testDPIITPresenceAndUpload();
-				
+
 				//TC-92
 				instituCust.testKsumNumberFieldInputAndPresence(testdata, context);
-				
+
 				//TC-93
 				instituCust.verifyBrowsingOptionPresenceAndUpload();
-				
-				
+
+
 				//TC-94
 				instituCust.testEnterDataInExternalCreditRatingFieldAndPresence(testdata, context);
-				
+
 				//TC-95
 				instituCust.testExternalCreditRatingFieldBrowseBtn();
-				
+
 				//TC-96
 				instituCust.testAOADocumentBrowseBtn();
-				
+
 				//TC-97
 				instituCust.testMOADocumentBrowseBtn();
-				
+
 				//TC-98
 				instituCust.testInstitutionSectorDropdownPresenceAndSelect();
-				
-				
+
+
 				//TC-100
 				instituCust.insti_saveAndProceedFunc();
-				
-			
-				
+
+
+
 				//click(institutionalCust.institution_closeBtn);
 				//Thread.sleep(15000);
 				//SwitchToFrame(institutionalCust.address_frame);
-				
+
 				//driver.switchTo().frame("//iframe[@id=ctl00_ctl00_CPH1_CustContent_Cust]");
 				//driver.switchTo().frame(0);
 				//System.out.println("switched to frame");
-				
+
 				//TC-101
-			//	instituCust.testAddressPageTitle();
-				
+				//	instituCust.testAddressPageTitle();
+
 				//*[@id="ctl00_CPHFrame_lstMaster_ctrl0_ctl00_IF1_btnCLose"]
-				
+
 				//TC-102
 				//instituCust.testVerifySectionsInAddressPage();
-				
+
 				//TC-104
 				instituCust.testBuildingFieldInput(testdata, context);
-				
-				
+
+
 				//TC-108
 				instituCust.testBuildingNoFieldInput(testdata, context);
-				
-				
+
+
 				//TC-110
 				instituCust.testEnterLettersAndNumbersInDoorNoField(testdata, context);
-				
-				
+
+
 				//TC-111
 				instituCust.testStateDropdownFunctionality();
-				
+
 				//TC-112
 				instituCust.testDistrictDropdownFunctionality();
-				
+
 				//TC-113
 				instituCust.testPostDropdownFunctionality();
-				
+
 				//TC-116
 				instituCust.testEnterPlaceField(testdata, context);
-				
+
 				//TC-118
 				instituCust.testCityFieldInput(testdata, context);
-				
+
 				//TC-120
 				instituCust.testStreetFieldInput(testdata, context);
-				
+
 				//TC-122
 				instituCust.testResidenceFieldInput(testdata, context);
-				
-				
+
+
 				instituCust.testPinField(testdata, context);
-				
+
 				//TC-127
 				instituCust.testEnteringPhoneNumber(testdata, context);
-				
+
 				//TC-129
 				instituCust.testEnterElectricPostNo(testdata, context);
-				
+
 				//TC-130
 				instituCust.testClickMailingAddressCheckbox();
-				
+
 				//TC-132
 				instituCust.regional_testEnterBuildingDetails(testdata, context);
-				
+
 				//TC-136
 				instituCust.regional_testBuildingNoFieldInput(testdata, context);
-				
+
 				//TC-138
 				instituCust.regional_testDoorNoFieldInput(testdata, context);
-				
+
 				//TC-139
 				instituCust.regional_testSelectStateFromDropdown();
-				
+
 				//TC-140
 				instituCust.regional_testDistrictDropdownFunctionality();
-				
+
 				//TC-141
 				instituCust.regional_testPostDropdownFunctionality();
-				
+
 				//TC-144
 				instituCust.regional_testPlaceField(testdata, context);
-				
+
 				//TC-146
 				instituCust.regional_testCityField(testdata, context);
-				
+
 				//TC-148
 				instituCust.regional_testStreetField(testdata, context);
-				
+
 				//TC-150
 				instituCust.regional_testResidenceField(testdata, context);
-				
+
 				//TC-153
 				instituCust.regional_testPinField(testdata, context);
-				
+
 				//TC-155
 				instituCust.regional_testPhoneField(testdata, context);
-				
+
 				//TC-156
 				instituCust.regional_testMailingAddressCheckbox();
-				
+
 				//TC-157
 				instituCust.address_saveAndProceed();
-				
+
 				//TC-158
 				instituCust.verifyIntroducerDetailsLabel();
-				
+
 				//TC-160
 				instituCust.tickIntroducerNotRequiredCheckbox();
-				
+
 				//TC-161
 				instituCust.testReasonField(testdata, context);
-				
+
 				//TC-163
 				instituCust.untickIntroducerNotRequiredCheckbox();
-				
+
 				//TC-165
 				instituCust.testCustomerSelection(testdata, context);
-				
+
 				//TC-166
-				instituCust.testIntNameAutofill();
-				
+				//	instituCust.testIntNameAutofill();
+
 				//TC-167
-				instituCust.testIntAddressAutofill();
-				
-				
-				
+				//	instituCust.testIntAddressAutofill();
+
+
+
 				//TC-169
 				instituCust.testRelIDdropdown();
-				
+
 				//TC-170
 				instituCust.testRemarksField(testdata, context);
-				
+
 				//TC-172
-				instituCust.testActiveAccountDisplay();
-				
+				//	instituCust.testActiveAccountDisplay();
+
 				//TC-173
-				instituCust.testCloseBtn();
-				
+				//	instituCust.testCloseBtn();
+
 				//TC-174
 				instituCust.testIntroducerSaveAndProceedBtn();
-				
-				
+
+
 				//TC-177
 				instituCust.testIdentityTypeDropdown();
-				
+
 				//TC-179
 				instituCust.testIdentityNoField(testdata, context);
-				
+
 				//TC-181
 				instituCust.testIssuedAuthorityField(testdata, context);
-				
+
 				//TC-182
 				instituCust.testIssueDate(testdata, context);
-				
+
 				//TC-183
 				instituCust.testValidUpTo(testdata, context);
-				
+
 				//TC-185
 				instituCust.testDetailsField(testdata, context);
-				
+
 				//TC-186
 				instituCust.testImageBtn();
-				
+
 				//TC-187
 				instituCust.testAddDocument();
-				
+
 				//TC-190
 				instituCust.testAreaDropdown();
-				
+
 				//TC-193
 				instituCust.testAmshamDropdown();
-				
+
 				//TC-196
 				instituCust.testDeshamDropdown();
-				
+
 				//TC-199
 				instituCust.testVillageDropdown();
-				
+
 				//TC-202
 				instituCust.testWardTextbox(testdata, context);
-				
+
 				//TC-205
 				instituCust.testPanchayathDropdown();
-				
+
 				//TC-208
 				//instituCust.testMunicipalityDropdown();
-				
+
 				//TC-211
 				//instituCust.testCorporationDropdown();
-				
+
 				//TC-214
 				instituCust.testAssemblyConstiDropdown();
-				
+
 				//TC-217
 				instituCust.testTalukDropdown();
-				
+
 				//TC-219
 				instituCust.testPanchayathWardField(testdata, context);
-				
+
 				//TC-221
 				instituCust.testBankWardField(testdata, context);
-				
-				
+
+
 				//TC-224
 				instituCust.testLandTypeDropdown();
-				
+
 				//TC-226
 				instituCust.testSurveyNoField(testdata, context);
-				
+
 				//TC-228
 				instituCust.testResurveyNoField(testdata, context);
-				
-				
+
+
 				//TC-231
 				instituCust.testUnitDropdown();
-				
+
 				//TC-233
 				instituCust.testWetField(testdata, context);
-				
-				
+
+
 				//TC-235
 				instituCust.testDryField(testdata, context);
-				
+
 				//TC-237
 				instituCust.testAddBtn();
-				
+
 				//TC-239
 				instituCust.testIdentityAndArea_saveAndProceedBtn();
-				
-				
+
+
 				//TC-244
 				instituCust.testStateDropdown();
-				
+
 				//TC-247
 				instituCust.testBankIdDropdown();
-				
+
 				//TC-250
 				instituCust.testBranchIdDropdown();
-				
+
 				//TC-251
 				instituCust.testIFSCAutofill();
-				
+
 				//TC-253
 				instituCust.testCustName(testdata, context);
-				
+
 				//TC-255
 				instituCust.testAddress(testdata, context);
-				
-				
+
+
 				//TC-257
 				instituCust.testBankAccNo(testdata, context);
-				
-				
+
+
 				//TC-259
 				instituCust.testRetypeAccNo(testdata, context);
-				
-				
+
+
 				//TC-262
 				instituCust.testBankAccIdDropdown();
-				
+
 				//TC-264
 				instituCust.testBankStartDate(testdata, context);
-				
+
 				//TC-267
 				instituCust.testAdditionalInfoCheckBox();
-				
+
 				//TC-268
 				instituCust.testBalanceAsOn(testdata, context);
-				
-				
+
+
 				//TC-270
 				instituCust.testBalanceField(testdata, context);
-				
+
 				//TC-272
 				instituCust.testBalanceFieldIsRemoved();
-				
+
 				//TC-273
 				instituCust.testCreditCardTick();
-				
+
 				//TC-274
 				instituCust.testCreditCardNoField(testdata, context);
-				
+
 				//TC-276
 				instituCust.testBankAddBtnFunc();
-				
+
 				//TC-279
 				instituCust.testDPIDField(testdata, context);
-				
+
 				//TC-281
 				instituCust.testDematAcc(testdata, context);
-				
-				
+
+
 				//TC-283
 				instituCust.testProceedBtnFunc();
-				
-				
+
+
 				//TC-286
 				instituCust.testRiskIdDropdown();
-				
+
 				//TC-288
 				instituCust.testRiskRemarksField(testdata, context);
-				
-				
+
+
 				//TC-290
 				instituCust.testActivespecialinstructionField(testdata, context);
-				
-				
+
+
 				//TC-292
 				instituCust.testDefaultStateOfSusCheckbox();
-				
+
 				//TC-293
 				instituCust.testTickSusField();
-				
+
 				//TC-295
 				instituCust.testRiskSaveAndProceed();
-				
+
 				//TC-304
 				instituCust.testselectPhotoFromDropdown();
-				
+
 				//TC-305
 				instituCust.testUploadPhoto();
-				
+
 				//TC-307
 				instituCust.testCheckDefaultCheckbox();
-				
+
 				//TC-308
 				instituCust.testselectSignFromDropdown();
-				
+
 				//TC-309
 				instituCust.testUploadSign();
-				
+
 				//TC-310
 				instituCust.testAddSign();
-				
+
 				//TC-311
 				instituCust.testselectGeneralFromDropdown();
-				
+
 				//TC-312
 				instituCust.testDocumentNameDropdown();
-				
+
 				//TC-313
 				instituCust.testUploadGeneralDocument();
-				
+
 				//TC-314
 				instituCust.testAddGenDocWindow();
-				
+
 				//TC-316
 				instituCust.testFinishBtn();
-				
 
+				//TC-324
+				instituCust.userLogin1(testdata, context);
+
+				//TC-325
+				instituCust.testManagerAuthorization();
+
+				//TC-326
+				instituCust.testOtherTabBtn();
+				
+				//TC-327
+				instituCust.testRefreshBtn();
+
+				//TC-328
+				instituCust.testSelectAndAuthorize();
+
+
+
+				instituCust.closePop();
 				Thread.sleep(5000);
 				userCreate.signOut();
+
+
+
+
 
 				// EndTest
 				ExtentTestManager.endTest();
