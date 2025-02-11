@@ -69,14 +69,35 @@ public class AllScenarios_Multi_MultiFD_Opening extends Base_Class {
 				// TC_03 -----> Customer Search and Selection
 				multifd.customerSearchandSelectionWindow(testdata, context);
 				
-				//TC_04 ----> EnterAmount
+				//TC_04 ----> Enter Amount
 				multifd.EnterAmount(testdata, context);
 
-				// TC_05 ----> EnterValidDuration
+				// TC_05 ----> Enter Valid Duration
 				multifd.EnterValidDuration(testdata, context);
 
-				// TC_06 ----> SelectReferral
+				// TC_06 ----> Select Referral
 				multifd.SelectReferral();
+				
+				//TC_07 ----> ROI and Due Date Calculation
+				multifd.ROIandDueDateCalculation();
+				
+				//TC_08 ----> Ledger and FolioNo
+				multifd.LedgerandFolioNo(testdata, context);
+				
+				//TC_09 ----> Enter Remark
+				multifd.Remark(testdata, context);
+				
+				//TC_10 ---->  Lien Mark Checkbox
+				multifd.clickLienMarkCheckbox();
+				
+				//TC_11 ----> Lien Amount Field
+				multifd.EnterLienAmount(testdata, context);
+				
+				//TC_12 ---> Enter Lien Remark
+				multifd.EnterLienRemark(testdata, context);
+				
+				//TC_13 ---> Next Button Navigation
+				multifd.NextButtonNavigation();
 
 				// Sign out
 				Thread.sleep(3000);

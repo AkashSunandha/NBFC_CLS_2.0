@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-07T16:38:04 IST" name="Default suite" finished-at="2025-02-07T16:40:01 IST" duration-ms="116748">
+  <suite started-at="2025-02-10T21:06:24 IST" name="Default suite" finished-at="2025-02-10T21:08:59 IST" duration-ms="154657">
     <groups>
     </groups>
-    <test started-at="2025-02-07T16:38:04 IST" name="Default test" finished-at="2025-02-07T16:40:01 IST" duration-ms="116748">
+    <test started-at="2025-02-10T21:06:24 IST" name="Default test" finished-at="2025-02-10T21:08:59 IST" duration-ms="154657">
       <class name="com.test.Customer.AllScenarios_Multi_MultiFD_Opening">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Customer.AllScenarios_Multi_MultiFD_Opening@2f7a7219]" started-at="2025-02-07T16:38:04 IST" name="reference" finished-at="2025-02-07T16:38:04 IST" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Customer.AllScenarios_Multi_MultiFD_Opening@2f7a7219]" started-at="2025-02-10T21:06:24 IST" name="reference" finished-at="2025-02-10T21:06:24 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="Multi_MultiFD_Opening(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Customer.AllScenarios_Multi_MultiFD_Opening@2f7a7219]" started-at="2025-02-07T16:38:05 IST" name="Multi_MultiFD_Opening" data-provider="TestData" finished-at="2025-02-07T16:40:01 IST" duration-ms="115690" status="PASS">
+        <test-method signature="Multi_MultiFD_Opening(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Customer.AllScenarios_Multi_MultiFD_Opening@2f7a7219]" started-at="2025-02-10T21:06:25 IST" name="Multi_MultiFD_Opening" data-provider="TestData" finished-at="2025-02-10T21:08:59 IST" duration-ms="153970" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Amount=500000, CustomerName=A, Duration=12, loginUserName=shimna, loginValidPassword=adithadi@123, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Multiple FD Opening}]]>
+                <![CDATA[{Amount=500000, CustomerName=A, Duration=12, FolioNumber=630, LedgerNumber=123, LienAmount=400000, LienRemark=Test Remark, loginUserName=shimna, loginValidPassword=adithadi@123, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Remark=Test, Run=Yes, TestScenario=Multiple FD Opening}]]>
               </value>
             </param>
             <param index="1">
