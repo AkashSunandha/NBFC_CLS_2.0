@@ -36,12 +36,14 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void userLogin(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 
 		ExtentTestManager.startTest("TC No. - 02 --> User Login");
-		String loginUserName = testdata.get("loginUserName").toString();
+	//	String loginUserName = testdata.get("loginUserName").toString();
+		String loginUserName=configloader().getProperty("UserName");
 		input(institutionalCust.loginUserName, loginUserName);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
 		Log.info("Step-1: Enter valid username.");
 
-		String loginValidPassword = testdata.get("loginValidPassword").toString();
+	//	String loginValidPassword = testdata.get("loginValidPassword").toString();
+		String loginValidPassword=configloader().getProperty("Password");
 		input(institutionalCust.loginPasswrd, loginValidPassword);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Enter valid password.");
 		Log.info("Step-2: Enter valid password.");
@@ -3010,12 +3012,14 @@ public class Customer_InstitutionalCust extends Base_Class {
 		signOut();
 
 		ExtentTestManager.startTest("TC No. - 324 --> Login to LMS as another User");
-		String loginUserName1 = testdata.get("loginUserName1").toString();
+		//String loginUserName1 = testdata.get("loginUserName1").toString();
+        String loginUserName1=configloader().getProperty("Username1");
 		input(institutionalCust.loginUserName, loginUserName1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
 		Log.info("Step-1: Enter valid username.");
 
-		String loginValidPassword1 = testdata.get("loginValidPassword1").toString();
+		 String loginValidPassword1=configloader().getProperty("Password1");
+		//String loginValidPassword1 = testdata.get("loginValidPassword1").toString();
 		input(institutionalCust.loginPasswrd, loginValidPassword1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Enter valid password.");
 		Log.info("Step-2: Enter valid password.");
