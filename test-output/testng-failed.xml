@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.Customer.AllScenarios_Multi_MultiFD_Opening">
+      <class name="com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening">
         <methods>
-          <include name="reference"/>
           <include name="Multi_MultiFD_Opening" invocation-numbers="0"/>
+          <include name="reference"/>
         </methods>
-      </class> <!-- com.test.Customer.AllScenarios_Multi_MultiFD_Opening -->
+      </class> <!-- com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

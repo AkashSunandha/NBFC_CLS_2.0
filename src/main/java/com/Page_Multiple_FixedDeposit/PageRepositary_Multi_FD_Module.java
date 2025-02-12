@@ -1,4 +1,4 @@
-package com.Page_Repositary;
+package com.Page_Multiple_FixedDeposit;
 
 import org.openqa.selenium.By;
 
@@ -25,10 +25,10 @@ public class PageRepositary_Multi_FD_Module
 		
 		//Account Opening sub module
 		
-		public By AccOpening = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/div");
-		public By DepositOpening = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/ul/li[1]/div");
-		public By FixedDeposit = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/ul/li[1]/ul/li/div");
-		public By FixedType2Years = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/ul/li[1]/ul/li/ul/li[2]/a");
+		public By AccOpening = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[contains(@class,'submenu')]/ul[@id='CreateMenu']/li[6]/div[1]");
+		public By DepositOpening = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[contains(@class,'submenu')]/ul[@id='CreateMenu']/li[6]/ul[1]/li[1]/div[1]");
+		public By FixedDeposit = By.xpath("//li[contains(@class,'open')]//li[contains(@class,'open')]//div[contains(@class,'last symbol-close')]");
+		public By FixedType2Years = By.xpath("//a[contains(text(),'DEBUNTURE FIXED TYPE 2 YRS')]");
 
 		
 
@@ -39,6 +39,7 @@ public class PageRepositary_Multi_FD_Module
 		public By custName1 = By.xpath("//input[@id = 'PopQuick1_txtName']");
 		public By SearchBtn = By.id("PopQuick1_btnSearch");
 		public By SelectCust = By.id("PopQuick1_lst_ctrl0_linkSelect");
+		public By SelectCustName = By.id("PopQuick1_lst_ctrl4_linkSelect");
 		public By AddBtn = By.id("ctl00_ctl00_CPH1_PRDCNT_lstProAccInfo_ctrl0_PAI_btnAddCustomer");
 		public By OkBtn = By.xpath("//span[@class = 'ui-button-text']");
 		public By Amount = By.xpath("//input[@id= 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_txtAcOpeningAmount_txt']");
@@ -53,6 +54,26 @@ public class PageRepositary_Multi_FD_Module
 		public By LienAmount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_txtLienAmount_txt']");
 		public By LienRemark = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_txtLienRemark_txt']");
 		public By NextBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnNext']");
+		
+		//Nominee Form
+		public By NomineeCheckbox = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_chkNominee']");
+		public By SearchIcon = By.xpath("//a[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_btnPopup']");
+		public By CustomerID = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomCust_ID_txt']");
+		public By NameField = By.xpath("ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomName_txt");
+		public By RelationDropdown = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_ddlNomRelation_ddl']");
+		public By MobileNumber = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomMobileNo_txt']");
+		public By HouseName = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomHouseName_txt']");
+		public By Residence = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomResidence_txt']");
+		public By District = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_ddlNomDistrict_ddl']");
+		public By Post = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_ddlNomPost_ddl']");
+		public By DOB = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_dtDOB_txt']");
+		public By Age = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomAge_txt']");
+		public By AddNomineeBtn = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_btnAddNominee']");
+		public By NextButton = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnNext']");
+		public By OperatorSearchIcon = By.xpath("//td[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp3_OF1_tdCustAdd']");
+		public By OperatorRemark = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tp3_OF1_txtRemark_txt']");
+		public By OperatorAdd = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp3_OF1_btnAddOperator']");
+		public By OperatorNext = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnNext']");
 		//Signout
 		public By custSignOut = By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
 
