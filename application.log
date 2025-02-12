@@ -1,4 +1,4 @@
-[ERROR] 2025-02-06 15:42:54.616 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-12 12:11:42.471 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_QuickCustomer.gettestdate(AllScenarios_Cust_QuickCustomer.java:110) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.gettestdate(AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.java:98) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-06 15:42:54.630 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-12 12:11:42.483 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -71,7 +71,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_QuickCustomer.gettestdate(AllScenarios_Cust_QuickCustomer.java:110) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.gettestdate(AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.java:98) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-06 15:42:54.631 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-12 12:11:42.485 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -124,7 +124,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_QuickCustomer.gettestdate(AllScenarios_Cust_QuickCustomer.java:110) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.gettestdate(AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.java:98) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-06 15:42:54.638 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-12 12:11:42.491 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_QuickCustomer.gettestdate(AllScenarios_Cust_QuickCustomer.java:110) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.gettestdate(AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.java:98) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,590 +210,180 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-02-06 15:42:55.408 [main] Log - *** Running test method Quick Customer Module...
-[INFO ] 2025-02-06 15:42:59.511 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-02-06 15:43:00.789 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-02-06 15:43:03.248 [main] Log - PC Registration
-[INFO ] 2025-02-06 15:43:04.331 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-02-06 15:43:04.678 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-02-06 15:43:05.728 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-02-06 15:43:10.028 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-02-06 15:43:11.323 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-02-06 15:43:11.390 [main] Log - Valid Login
-[INFO ] 2025-02-06 15:43:12.436 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-02-06 15:43:13.487 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-02-06 15:43:20.856 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-02-06 15:43:21.936 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-06 15:43:23.058 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-06 15:43:23.108 [main] Log - Open Quick Customer Window
-[INFO ] 2025-02-06 15:43:29.432 [main] Log - Step:01 - Expand the Customer module in the left menu bar.
-[INFO ] 2025-02-06 15:43:36.523 [main] Log - Step:02 - Click on Quick Customer.
-[INFO ] 2025-02-06 15:43:37.597 [main] Log - Expected Result: Quick Customer window is displayed.
-[INFO ] 2025-02-06 15:43:37.630 [main] Log - Verify 'Start Date' Shows Current Date
-[INFO ] 2025-02-06 15:43:37.676 [main] Log - Expected Result: Field displays current date: Monday, August 27 2300 which is same as Start Date: 27/08/2300
-[INFO ] 2025-02-06 15:43:37.711 [main] Log - 'Start Date' Field Typing Disabled
-[INFO ] 2025-02-06 15:43:37.747 [main] Log - Expected Result: Typing in the field is disabled.
-[INFO ] 2025-02-06 15:43:37.783 [main] Log - Empty Check Availability Popup
-[INFO ] 2025-02-06 15:43:43.359 [main] Log - Step:01 -  Verify the state of the 'Save' button after popup is shown.
-[INFO ] 2025-02-06 15:43:44.833 [main] Log - Expected Result: 'Save' button should be enabled.
-[INFO ] 2025-02-06 15:43:44.863 [main] Log - 'First Name' and Salutation Mandatory Check
-[INFO ] 2025-02-06 15:43:50.253 [main] Log - Step:01 -  Leave 'First Name' and salutation blank, try to submit form.
-[INFO ] 2025-02-06 15:43:51.314 [main] Log - Expected Result: Error message for mandatory fields.
-[INFO ] 2025-02-06 15:43:55.584 [main] Log - Referred By Dropdown - Select Item
-[INFO ] 2025-02-06 15:43:57.023 [main] Log - Step:01 - Click on the Referred By dropdown.
-[INFO ] 2025-02-06 15:43:57.023 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:43:57.024 [main] Log - Expected Result: Referred By, can be selected from dropdown.
-[INFO ] 2025-02-06 15:43:57.068 [main] Log - Select Salutation Dropdown
-[INFO ] 2025-02-06 15:43:58.605 [main] Log - Step:01 - Click on the Salutation dropdown.
-[INFO ] 2025-02-06 15:43:58.605 [main] Log - Step:02 - Select a Salutation.
-[INFO ] 2025-02-06 15:43:58.606 [main] Log - Expected Result: Salutation can be selected from dropdown.
-[INFO ] 2025-02-06 15:43:58.637 [main] Log - Numerical Entry in 'First Name' Field
-[INFO ] 2025-02-06 15:44:04.043 [main] Log - Step:01 - Enter numbers in 'First Name' field.
-[INFO ] 2025-02-06 15:44:05.143 [main] Log - Expected Result: Validation message: "First name is not valid".
-[INFO ] 2025-02-06 15:44:09.496 [main] Log - Clear 'First Name' Field
-[INFO ] 2025-02-06 15:44:16.922 [main] Log - Step:01 - Clear the 'First Name' field.
-[INFO ] 2025-02-06 15:44:16.960 [main] Log - Expected Result: First Name Field is cleared successfully.
-[INFO ] 2025-02-06 15:44:16.999 [main] Log - Alphabetic Entry in 'First Name' Field
-[INFO ] 2025-02-06 15:44:22.419 [main] Log - Step:01 - Enter alphabets in 'First Name' field.
-[INFO ] 2025-02-06 15:44:22.421 [main] Log - Expected Result: Alphabets accepted.
-[INFO ] 2025-02-06 15:44:22.486 [main] Log - Alphabetic Entry in 'Middle Name' Field
-[INFO ] 2025-02-06 15:44:27.885 [main] Log - Step:01 - Enter alphabets in 'Middle Name' field.
-[INFO ] 2025-02-06 15:44:27.887 [main] Log - Expected Result: Alphabets accepted.
-[INFO ] 2025-02-06 15:44:27.932 [main] Log - Alphabetic Entry in 'Last Name' Field
-[INFO ] 2025-02-06 15:44:33.322 [main] Log - Step:01 - Enter alphabets in 'Last Name' field.
-[INFO ] 2025-02-06 15:44:33.323 [main] Log - Expected Result: Alphabets accepted.
-[INFO ] 2025-02-06 15:44:33.359 [main] Log - Alphabetic Entry in 'Alias Name' Field
-[INFO ] 2025-02-06 15:44:38.748 [main] Log - Step:01 - Enter alphabets in 'Alias Name' field.
-[INFO ] 2025-02-06 15:44:38.749 [main] Log - Expected Result: Alphabets accepted.
-[INFO ] 2025-02-06 15:44:38.784 [main] Log - Display Name Validation
-[INFO ] 2025-02-06 15:44:38.820 [main] Log - Expected Result: Displays: FirstName-MiddleName-LastName-AliasName.
-[INFO ] 2025-02-06 15:44:38.861 [main] Log - DOB Field Entry
-[INFO ] 2025-02-06 15:44:44.256 [main] Log - Step:01 - Enter date in 'DOB' field.
-[INFO ] 2025-02-06 15:44:44.260 [main] Log - Expected Result: Date is accepted.
-[INFO ] 2025-02-06 15:44:44.301 [main] Log - Calculate Age After Tab
-[INFO ] 2025-02-06 15:44:44.343 [main] Log - Step:01 - Press TAB key.
-[INFO ] 2025-02-06 15:44:44.343 [main] Log - Expected Result: 'Age' field displays calculated age.
-[INFO ] 2025-02-06 15:44:44.398 [main] Log - Verify 'DOB' Field Presence
-[INFO ] 2025-02-06 15:44:56.077 [main] Log - Step:01 - Clear DOB field.
-[INFO ] 2025-02-06 15:44:57.150 [main] Log - Expected Result: 'DOB' field is present and mandatory.
-[INFO ] 2025-02-06 15:45:06.872 [main] Log - Type Date in 'AgeAsOn' Field
-[INFO ] 2025-02-06 15:45:12.286 [main] Log - Step:01 - Enter date in 'AgeAsOn' field.
-[INFO ] 2025-02-06 15:45:12.286 [main] Log - Expected Result: Date is accepted.
-[INFO ] 2025-02-06 15:45:12.319 [main] Log - Select AgeGroup Dropdown
-[INFO ] 2025-02-06 15:45:12.666 [main] Log - Step:01 - Click on the AgeGroup dropdown.
-[INFO ] 2025-02-06 15:45:12.667 [main] Log - Step:02 -  Select an AgeGroup.
-[INFO ] 2025-02-06 15:45:12.668 [main] Log - Expected Result: AgeGroup can be selected.
-[INFO ] 2025-02-06 15:45:12.718 [main] Log - Select Nationality Dropdown
-[INFO ] 2025-02-06 15:45:12.795 [main] Log - Step:01 - Click on the Nationality dropdown.
-[INFO ] 2025-02-06 15:45:12.795 [main] Log - Step:02 -  Select a Nationality.
-[INFO ] 2025-02-06 15:45:12.795 [main] Log - Expected Result: Nationality can be selected.
-[INFO ] 2025-02-06 15:45:12.821 [main] Log - Select Nativity Dropdown
-[INFO ] 2025-02-06 15:45:12.928 [main] Log - Step:01 - Click on the Nativity dropdown.
-[INFO ] 2025-02-06 15:45:12.929 [main] Log - Step:02 -  Select a Nativity.
-[INFO ] 2025-02-06 15:45:12.929 [main] Log - Expected Result: Nativity can be selected.
-[INFO ] 2025-02-06 15:45:12.964 [main] Log - Select GENDER Dropdown
-[INFO ] 2025-02-06 15:45:13.276 [main] Log - Step:01 - Click on the GENDER dropdown.
-[INFO ] 2025-02-06 15:45:13.276 [main] Log - Step:02 -  Select a GENDER.
-[INFO ] 2025-02-06 15:45:13.276 [main] Log - Expected Result: GENDER can be selected.
-[INFO ] 2025-02-06 15:45:13.310 [main] Log - Select Qualification Dropdown
-[INFO ] 2025-02-06 15:45:13.620 [main] Log - Step:01 - Click on the Qualification dropdown.
-[INFO ] 2025-02-06 15:45:13.621 [main] Log - Step:02 -  Select a Qualification.
-[INFO ] 2025-02-06 15:45:13.622 [main] Log - Expected Result: Qualification can be selected.
-[INFO ] 2025-02-06 15:45:13.662 [main] Log - Select Religion Dropdown
-[INFO ] 2025-02-06 15:45:13.982 [main] Log - Step:01 - Click on the Religion dropdown.
-[INFO ] 2025-02-06 15:45:13.983 [main] Log - Step:02 -  Select a Religion.
-[INFO ] 2025-02-06 15:45:13.985 [main] Log - Expected Result: Religion can be selected.
-[INFO ] 2025-02-06 15:45:14.030 [main] Log - Select Category Dropdown
-[INFO ] 2025-02-06 15:45:14.339 [main] Log - Step:01 - Click on the Category dropdown.
-[INFO ] 2025-02-06 15:45:14.340 [main] Log - Step:02 -  Select a Category.
-[INFO ] 2025-02-06 15:45:14.340 [main] Log - Expected Result: Category can be selected.
-[INFO ] 2025-02-06 15:45:14.376 [main] Log - Select MaritalStatus Dropdown
-[INFO ] 2025-02-06 15:45:14.685 [main] Log - Step:01 - Click on the MaritalStatus dropdown.
-[INFO ] 2025-02-06 15:45:14.686 [main] Log - Step:02 -  Select a MaritalStatus.
-[INFO ] 2025-02-06 15:45:14.687 [main] Log - Expected Result: MaritalStatus can be selected.
-[INFO ] 2025-02-06 15:45:14.733 [main] Log - Select OccupGroup Dropdown
-[INFO ] 2025-02-06 15:45:15.062 [main] Log - Step:01 - Click on the dropdown.
-[INFO ] 2025-02-06 15:45:15.063 [main] Log - Step:02 -  Select an item.
-[INFO ] 2025-02-06 15:45:15.064 [main] Log - Expected Result: OccupGroup can be selected.
-[INFO ] 2025-02-06 15:45:15.117 [main] Log - Type in 'Occupation' Field
-[INFO ] 2025-02-06 15:45:16.185 [main] Log - Step:01 - Enter text in 'Occupation' field.
-[INFO ] 2025-02-06 15:45:16.185 [main] Log - Expected Result: Text is accepted.
-[INFO ] 2025-02-06 15:45:16.217 [main] Log - Type in 'OccOrganisation' Field
-[INFO ] 2025-02-06 15:45:17.274 [main] Log - Step:01 - Enter text in 'OccOrganisation' field.
-[INFO ] 2025-02-06 15:45:17.274 [main] Log - Expected Result: Text is accepted.
-[INFO ] 2025-02-06 15:45:17.306 [main] Log - Numeric Entry in 'Monthly Income' Field
-[INFO ] 2025-02-06 15:45:18.375 [main] Log - Step:01 - Enter numbers in 'Monthly Income' field.
-[INFO ] 2025-02-06 15:45:18.375 [main] Log - Expected Result: Numbers are accepted.
-[INFO ] 2025-02-06 15:45:18.409 [main] Log - Select Income Source Dropdown
-[INFO ] 2025-02-06 15:45:22.696 [main] Log - Step:01 - Click on the Income Source dropdown.
-[INFO ] 2025-02-06 15:45:28.064 [main] Log - Step:02 -  Select an Income Source.
-[INFO ] 2025-02-06 15:45:28.065 [main] Log - Expected Result: Income Source can be selected.
-[INFO ] 2025-02-06 15:45:28.104 [main] Log - Select Salutation for Parent/Spouse Dropdown
-[INFO ] 2025-02-06 15:45:28.409 [main] Log - Step:01 - Click on the Parent/Spouse Salutation dropdown.
-[INFO ] 2025-02-06 15:45:28.410 [main] Log - Step:02 -  Select a Parent/Spouse Salutation.
-[INFO ] 2025-02-06 15:45:28.410 [main] Log - Expected Result: Parent/Spouse Salutation can be selected.
-[INFO ] 2025-02-06 15:45:28.435 [main] Log - Alphabetic Entry in 'Parent/Spouse' Field
-[INFO ] 2025-02-06 15:45:29.492 [main] Log - Step:01 - Enter text in 'Parent/Spouse' field.
-[INFO ] 2025-02-06 15:45:29.492 [main] Log - Expected Result: Alphabets accepted.
-[INFO ] 2025-02-06 15:45:29.524 [main] Log - Select Relation Dropdown
-[INFO ] 2025-02-06 15:45:29.852 [main] Log - Step:01 - Click on the Relation dropdown.
-[INFO ] 2025-02-06 15:45:29.853 [main] Log - Step:02 -  Select a Relation.
-[INFO ] 2025-02-06 15:45:29.853 [main] Log - Expected Result: Relation can be selected.
-[INFO ] 2025-02-06 15:45:29.879 [main] Log - Tick 'Ment. Retarded' Checkbox
-[INFO ] 2025-02-06 15:45:34.164 [main] Log - Step:01 - Click on the 'Ment. Retarded' checkbox.
-[INFO ] 2025-02-06 15:45:34.165 [main] Log - Expected Result: Checkbox is ticked.
-[INFO ] 2025-02-06 15:45:34.215 [main] Log - Select Salutation for Guardian Dropdown
-[INFO ] 2025-02-06 15:45:34.538 [main] Log - Step:01 - Click on the Salutation for Guardian dropdown.
-[INFO ] 2025-02-06 15:45:34.539 [main] Log - Step:02 -  Select a Salutation for Guardian.
-[INFO ] 2025-02-06 15:45:34.541 [main] Log - Expected Result: Salutation for Guardian can be selected.
-[INFO ] 2025-02-06 15:45:34.586 [main] Log - Alphabetic Entry in 'Guardian' Field
-[INFO ] 2025-02-06 15:45:35.653 [main] Log - Step:01 - Enter text in 'Guardian' field.
-[INFO ] 2025-02-06 15:45:35.653 [main] Log - Expected Result: Alphabets accepted.
-[INFO ] 2025-02-06 15:45:35.703 [main] Log - Select Guardian Relation Dropdown
-[INFO ] 2025-02-06 15:45:36.056 [main] Log - Step:01 - Click on the Guardian Relation dropdown.
-[INFO ] 2025-02-06 15:45:36.056 [main] Log - Step:02 -  Select a Guardian Relation.
-[INFO ] 2025-02-06 15:45:36.057 [main] Log - Expected Result: Guardian Relation can be selected.
-[INFO ] 2025-02-06 15:45:36.086 [main] Log - Select Salutation for Father Name Dropdown
-[INFO ] 2025-02-06 15:45:36.405 [main] Log - Step:01 - Click on the Salutation for Father Name dropdown.
-[INFO ] 2025-02-06 15:45:36.406 [main] Log - Step:02 -  Select a Salutation for Father Name.
-[INFO ] 2025-02-06 15:45:36.407 [main] Log - Expected Result: Salutation for Father Name can be selected.
-[INFO ] 2025-02-06 15:45:36.450 [main] Log - Alphabetic Entry in 'Father Name' Field
-[INFO ] 2025-02-06 15:45:37.500 [main] Log - Step:01 - Enter text in 'Father Name' field.
-[INFO ] 2025-02-06 15:45:37.500 [main] Log - Expected Result: Alphabets accepted.
-[INFO ] 2025-02-06 15:45:37.540 [main] Log - Select Salutation for Mother Name Dropdown
-[INFO ] 2025-02-06 15:45:37.865 [main] Log - Step:01 - Click on the Salutation for Mother Name dropdown.
-[INFO ] 2025-02-06 15:45:37.866 [main] Log - Step:02 -  Select a Salutation for Mother Name.
-[INFO ] 2025-02-06 15:45:37.866 [main] Log - Expected Result: Salutation for Mother Name can be selected.
-[INFO ] 2025-02-06 15:45:37.893 [main] Log - Alphabetic Entry in 'Mother Name' Field
-[INFO ] 2025-02-06 15:45:38.945 [main] Log - Step:01 - Enter text in 'Mother Name' field.
-[INFO ] 2025-02-06 15:45:38.946 [main] Log - Expected Result: Alphabets accepted.
-[INFO ] 2025-02-06 15:45:38.981 [main] Log - Alphabetic Entry in 'Aadhaar Num' Field
-[INFO ] 2025-02-06 15:45:44.343 [main] Log - Step:01 - Enter alphabets in 'Aadhaar Num' field.
-[INFO ] 2025-02-06 15:45:49.729 [main] Log - Expected Result: Validation message: "Invalid Aadhar Num".
-[INFO ] 2025-02-06 15:45:54.080 [main] Log - Clear 'Aadhaar Num' Field
-[INFO ] 2025-02-06 15:46:01.451 [main] Log - Step:01 - Clear the 'Aadhaar Num' field.
-[INFO ] 2025-02-06 15:46:01.487 [main] Log - Expected Result: Aadhaar Num Field is cleared successfully.
-[INFO ] 2025-02-06 15:46:01.520 [main] Log - Short Numeric Entry in 'Aadhar No' Field
-[INFO ] 2025-02-06 15:46:06.922 [main] Log - Step:01 - Enter 8-digit number in 'Aadhar No' field.
-[INFO ] 2025-02-06 15:46:12.310 [main] Log - Expected Result: Validation message: "Invalid Aadhar Num".
-[INFO ] 2025-02-06 15:46:16.669 [main] Log - Valid Numeric Entry in 'Aadhar No' Field
-[INFO ] 2025-02-06 15:46:21.141 [main] Log - Step:01 - Enter 12-digit number in 'Aadhar No' field.
-[INFO ] 2025-02-06 15:46:21.142 [main] Log - Expected Result: Number is accepted.
-[INFO ] 2025-02-06 15:46:21.186 [main] Log - Alphabetic Entry in 'PAN No' Field
-[INFO ] 2025-02-06 15:46:26.563 [main] Log - Step:01 - Enter alphabets in 'PAN' field.
-[INFO ] 2025-02-06 15:46:31.982 [main] Log - Expected Result: Validation message: "Invalid PAN Num".
-[INFO ] 2025-02-06 15:46:36.351 [main] Log - Clear 'PAN Num' Field
-[INFO ] 2025-02-06 15:46:43.768 [main] Log - Step:01 - Clear the 'PAN Num' field.
-[INFO ] 2025-02-06 15:46:43.834 [main] Log - Expected Result: PAN Num Field is cleared successfully.
-[INFO ] 2025-02-06 15:46:43.866 [main] Log - Correct Format in 'PAN No' Field
-[INFO ] 2025-02-06 15:46:45.181 [main] Log - Step:01 - nter valid PAN format.
-[INFO ] 2025-02-06 15:46:45.181 [main] Log - Expected Result: PAN number is accepted.
-[INFO ] 2025-02-06 15:46:45.220 [main] Log - Short Numeric Entry in 'Mobile No' Field
-[INFO ] 2025-02-06 15:46:50.562 [main] Log - Step:01 - Enter 8-digit number in 'Mobile No' field.
-[INFO ] 2025-02-06 15:46:55.967 [main] Log - Expected Result: Validation message: "Invalid Mobile Num".
-[INFO ] 2025-02-06 15:47:00.414 [main] Log - Valid Numeric Entry in 'Mobile No' Field
-[INFO ] 2025-02-06 15:47:04.799 [main] Log - Step:01 - Enter 10-digit number in 'Mobile No' field.
-[INFO ] 2025-02-06 15:47:04.800 [main] Log - Number is accepted.
-[INFO ] 2025-02-06 15:47:04.838 [main] Log - Invalid Entry in 'Email' Field
-[INFO ] 2025-02-06 15:47:10.281 [main] Log - Step:01 - Enter invalid email in 'Email' field.
-[INFO ] 2025-02-06 15:47:15.682 [main] Log - Expected Result: Validation message: "Email is not valid".
-[INFO ] 2025-02-06 15:47:20.054 [main] Log - Clear 'Email' Field
-[INFO ] 2025-02-06 15:47:27.474 [main] Log - Step:01 - Clear 'Email' field.
-[INFO ] 2025-02-06 15:47:27.501 [main] Log - Expected Result: Email Field is cleared successfully.
-[INFO ] 2025-02-06 15:47:27.530 [main] Log - Valid Entry in 'Email' Field
-[INFO ] 2025-02-06 15:47:28.616 [main] Log - Step:01 - Enter valid email address.
-[INFO ] 2025-02-06 15:47:28.616 [main] Log - Email is accepted.
-[INFO ] 2025-02-06 15:47:28.651 [main] Log - Select Preferred Language Dropdown
-[INFO ] 2025-02-06 15:47:28.976 [main] Log - Step:01 - Click on the Preferred Language dropdown.
-[INFO ] 2025-02-06 15:47:28.977 [main] Log - Step:02 -  Select a Preferred Language.
-[INFO ] 2025-02-06 15:47:28.978 [main] Log - Expected Result: Preferred Language can be selected.
-[INFO ] 2025-02-06 15:47:29.044 [main] Log - House Field - ECP Validations
-[INFO ] 2025-02-06 15:47:34.456 [main] Log - Step:01 - Enter Alphanumeric input in House field.
-[INFO ] 2025-02-06 15:47:34.456 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:47:42.906 [main] Log - Step:02 - Enter Numeric input in House field.
-[INFO ] 2025-02-06 15:47:42.907 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:47:51.447 [main] Log - Step:03 - Enter Alphabet input in House field.
-[INFO ] 2025-02-06 15:47:51.447 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:47:51.473 [main] Log - HouseNo Field - ECP Validations
-[INFO ] 2025-02-06 15:47:56.822 [main] Log - Step:01 - Enter Alphanumeric input in HouseNo field.
-[INFO ] 2025-02-06 15:47:56.823 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:48:05.276 [main] Log - Step:03 - Enter Alphabet input in HouseNo field.
-[INFO ] 2025-02-06 15:48:05.276 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:48:13.710 [main] Log - Step:02 - Enter Numeric input in HouseNo field.
-[INFO ] 2025-02-06 15:48:13.711 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:48:13.712 [main] Log - DoorNo Field - ECP Validations
-[INFO ] 2025-02-06 15:48:19.104 [main] Log - Step:01 - Enter Alphanumeric input in DoorNo field.
-[INFO ] 2025-02-06 15:48:19.105 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:48:27.602 [main] Log - Step:03 - Enter Alphabet input in DoorNo field.
-[INFO ] 2025-02-06 15:48:27.602 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:48:36.060 [main] Log - Step:02 - Enter Numeric input in DoorNo field.
-[INFO ] 2025-02-06 15:48:36.061 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:48:36.061 [main] Log - State Dropdown Functionality
-[INFO ] 2025-02-06 15:48:36.143 [main] Log - Step:01 - Click on the State dropdown.
-[INFO ] 2025-02-06 15:48:36.143 [main] Log - Step:02 -  Select a State.
-[INFO ] 2025-02-06 15:48:36.143 [main] Log - Expected Result: State can be selected.
-[INFO ] 2025-02-06 15:48:36.167 [main] Log - District Dropdown Functionality
-[INFO ] 2025-02-06 15:48:36.610 [main] Log - Step:01 - Click on the District dropdown.
-[INFO ] 2025-02-06 15:48:36.611 [main] Log - Step:02 -  Select a District.
-[INFO ] 2025-02-06 15:48:36.611 [main] Log - Expected Result: District can be selected.
-[INFO ] 2025-02-06 15:48:36.656 [main] Log - Post Dropdown Functionality
-[INFO ] 2025-02-06 15:48:37.014 [main] Log - Step:01 - Click on the Post dropdown.
-[INFO ] 2025-02-06 15:48:37.015 [main] Log - Step:02 -  Select a Post.
-[INFO ] 2025-02-06 15:48:37.015 [main] Log - Expected Result: Post can be selected.
-[INFO ] 2025-02-06 15:48:37.047 [main] Log - PIN Textfield Presence & Functionality
-[INFO ] 2025-02-06 15:48:37.079 [main] Log - Expected Result: PIN textfield is present, typing-disabled, and auto-fills based on Post selection, i.e.: 670646
-[INFO ] 2025-02-06 15:48:37.104 [main] Log - Place Field - ECP Validations
-[INFO ] 2025-02-06 15:48:42.538 [main] Log - Step:01 - Enter Alphanumeric input in Place field.
-[INFO ] 2025-02-06 15:48:42.538 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:48:50.981 [main] Log - Step:02 - Enter Numeric input in Place field.
-[INFO ] 2025-02-06 15:48:50.981 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:48:59.423 [main] Log - Step:03 - Enter Alphabet input in Place field.
-[INFO ] 2025-02-06 15:48:59.423 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:49:00.496 [main] Log - City Field - ECP Validations
-[INFO ] 2025-02-06 15:49:05.860 [main] Log - Step:01 - Enter Alphanumeric input in City field.
-[INFO ] 2025-02-06 15:49:05.861 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:49:14.318 [main] Log - Step:02 - Enter Numeric input in City field.
-[INFO ] 2025-02-06 15:49:14.320 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:49:22.795 [main] Log - Step:03 - Enter Alphabet input in City field.
-[INFO ] 2025-02-06 15:49:22.795 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:49:22.821 [main] Log - Street Field - ECP Validations
-[INFO ] 2025-02-06 15:49:28.201 [main] Log - Step:01 - Enter Alphanumeric input in Street field.
-[INFO ] 2025-02-06 15:49:28.203 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:49:36.694 [main] Log - Step:02 - Enter Numeric input in Street field.
-[INFO ] 2025-02-06 15:49:36.695 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:49:45.148 [main] Log - Step:03 - Enter Alphabet input in Street field.
-[INFO ] 2025-02-06 15:49:45.149 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:49:45.195 [main] Log - Residence Field - ECP Validations
-[INFO ] 2025-02-06 15:49:50.556 [main] Log - Step:01 - Enter Alphanumeric input in Residence field.
-[INFO ] 2025-02-06 15:49:50.558 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:49:58.988 [main] Log - Step:02 - Enter Numeric input in Residence field.
-[INFO ] 2025-02-06 15:49:58.989 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:50:07.430 [main] Log - Step:03 - Enter Alphabet input in Residence field.
-[INFO ] 2025-02-06 15:50:07.431 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:50:07.474 [main] Log - Phone NO Field - ECP Validations
-[INFO ] 2025-02-06 15:50:08.550 [main] Log - Step:01 - Enter 10-digit number in 'Phone No' field.
-[INFO ] 2025-02-06 15:50:08.550 [main] Log - Only Numbers are accepted.
-[INFO ] 2025-02-06 15:50:08.587 [main] Log - Electric Post No Field - ECP Validations
-[INFO ] 2025-02-06 15:50:13.971 [main] Log - Step:01 - Enter Alphanumeric input in Electric Post No field.
-[INFO ] 2025-02-06 15:50:13.972 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:50:22.407 [main] Log - Step:02 - Enter Numeric input in Electric Post No field.
-[INFO ] 2025-02-06 15:50:22.409 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:50:30.868 [main] Log - Step:03 - Enter Alphabet input in Electric Post No field.
-[INFO ] 2025-02-06 15:50:30.868 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:50:30.896 [main] Log - Mailing Address Checkbox Functionality
-[INFO ] 2025-02-06 15:50:35.197 [main] Log - Step:01 - Click on the 'Mailing Address' checkbox.
-[INFO ] 2025-02-06 15:50:35.197 [main] Log - Expected Result: The checkbox can be ticked and unticked.
-[INFO ] 2025-02-06 15:50:35.224 [main] Log - Use Present Checkbox Functionality
-[INFO ] 2025-02-06 15:50:39.541 [main] Log - Step:01 - Click on the 'Use Present' checkbox.
-[INFO ] 2025-02-06 15:50:39.671 [main] Log - Expected Result: Permanent tab data is auto-populated from the Present tab.
-[INFO ] 2025-02-06 15:50:39.706 [main] Log - Introducer Button - Clickability
-[INFO ] 2025-02-06 15:50:45.412 [main] Log - Step:01 -Click the 'Introducer' button.
-[INFO ] 2025-02-06 15:50:46.836 [main] Log - Expected Result: A popup named 'Introducer Details' is generated.
-[INFO ] 2025-02-06 15:50:46.861 [main] Log - Introducer Not Required Checkbox - Tick
-[INFO ] 2025-02-06 15:50:51.158 [main] Log - Step:01 - Click on the 'Introducer Not Required' checkbox.
-[INFO ] 2025-02-06 15:50:52.224 [main] Log - Expected Result: 'Reason' textfield becomes visible.
-[INFO ] 2025-02-06 15:50:52.250 [main] Log - Reason Textfield - Typing Alphabets and Numerals
-[INFO ] 2025-02-06 15:50:53.324 [main] Log - Step:01 - Type "Test123" in the 'Reason' textfield.
-[INFO ] 2025-02-06 15:50:53.327 [main] Log - Expected Result: Textfield reflects typed input without an error.
-[INFO ] 2025-02-06 15:50:53.355 [main] Log - Introducer Not Required Checkbox - Untick
-[INFO ] 2025-02-06 15:50:57.651 [main] Log - Step:01 - Untick the 'Introducer Not Required' checkbox.
-[INFO ] 2025-02-06 15:50:58.746 [main] Log - Expected Result: 'Reason' textfield is no longer visible.
-[INFO ] 2025-02-06 15:51:13.807 [main] Log - Customer Field - Select Customer
-[INFO ] 2025-02-06 15:51:13.868 [main] Log - Expected Result: Customer is selected. 'Int Name'- ZEENATH and 'Introducer's Address'- ZEENATH fields are auto-filled.
-[INFO ] 2025-02-06 15:51:13.893 [main] Log - Int Designation Textfield - Typing Alphabets and Numerals
-[INFO ] 2025-02-06 15:51:14.977 [main] Log - Step:01 - Type "Test123" in the 'Int DEsignation' textfield.
-[INFO ] 2025-02-06 15:51:14.978 [main] Log - Expected Result: 'Int Designation'Textfield reflects typed input without an error.
-[INFO ] 2025-02-06 15:51:15.006 [main] Log - Relation Dropdown - Select Item
-[INFO ] 2025-02-06 15:51:15.320 [main] Log - Step:01 - Click on the Relation dropdown.
-[INFO ] 2025-02-06 15:51:15.321 [main] Log - Step:02 - Select an item from the 'Relation' dropdown items.
-[INFO ] 2025-02-06 15:51:15.321 [main] Log - Expected Result: The item is displayed in the dropdown field.
-[INFO ] 2025-02-06 15:51:15.346 [main] Log - Save Button - Click ability
-[INFO ] 2025-02-06 15:51:19.624 [main] Log - Step:01 - Click on the 'SAVE' button.
-[INFO ] 2025-02-06 15:51:19.624 [main] Log - Expected Result: Data is saved successfully, and a confirmation message appears.
-[INFO ] 2025-02-06 15:51:19.689 [main] Log - Select Item from 'Identity Type' Dropdown
-[INFO ] 2025-02-06 15:51:25.302 [main] Log - Step:01 - Click on the Identity And Area button.
-[INFO ] 2025-02-06 15:51:26.120 [main] Log - Step:02 - Click on the Identity Type dropdown.
-[INFO ] 2025-02-06 15:51:26.120 [main] Log - Step:03 - Select an item from the 'Identity Type' dropdown items.
-[INFO ] 2025-02-06 15:51:26.145 [main] Log - Expected Result: Selected item is highlighted, ‘Proof Type’ field is auto-filled as: IDENTITY
-[INFO ] 2025-02-06 15:51:26.181 [main] Log - Select different items from 'Identity Type' dropdown
-[INFO ] 2025-02-06 15:51:26.707 [main] Log - Step:02 - Click on the Identity Type dropdown.
-[INFO ] 2025-02-06 15:51:26.707 [main] Log - Step:03 - Select an item from the 'Identity Type' dropdown items.
-[INFO ] 2025-02-06 15:51:26.738 [main] Log - Expected Result: 'Proof Type' changes accordingly based on selection: BOTH
-[INFO ] 2025-02-06 15:51:26.769 [main] Log - Enter Data in 'Identity No.' Field
-[INFO ] 2025-02-06 15:51:27.831 [main] Log - Step:01 - Enter Alphanumeric input in Identity No field.
-[INFO ] 2025-02-06 15:51:27.831 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:51:32.000 [main] Log - Step:03 - Enter Alphabet input in Identity No field.
-[INFO ] 2025-02-06 15:51:32.000 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:51:36.382 [main] Log - Step:02 - Enter Numeric input in Identity No field.
-[INFO ] 2025-02-06 15:51:36.382 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:51:36.415 [main] Log - Enter Data in 'Issued Authority' Field
-[INFO ] 2025-02-06 15:51:37.486 [main] Log - Step:01 - Enter Alphanumeric input in Issued Authority field.
-[INFO ] 2025-02-06 15:51:37.487 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:51:41.652 [main] Log - Step:02 - Enter Numeric input in Issued Authority field.
-[INFO ] 2025-02-06 15:51:41.653 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:51:45.799 [main] Log - Step:03 - Enter Alphabet input in Issued Authority field.
-[INFO ] 2025-02-06 15:51:45.799 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:51:45.832 [main] Log - Invalid Date in 'Issue Date' Field
-[INFO ] 2025-02-06 15:51:51.284 [main] Log - Step:01 - Enter an invalid date.
-[INFO ] 2025-02-06 15:51:55.596 [main] Log - Step:02 - Proceed to next step.
-[INFO ] 2025-02-06 15:51:56.671 [main] Log - Expected Result: Invalid date error message is displayed.
-[INFO ] 2025-02-06 15:52:01.086 [main] Log - Clear 'Issue Date' Field
-[INFO ] 2025-02-06 15:52:08.512 [main] Log - Step:01 - Clear date from 'Issue Date' field.
-[INFO ] 2025-02-06 15:52:08.551 [main] Log - Expected Result: Field becomes empty without errors.
-[INFO ] 2025-02-06 15:52:08.584 [main] Log - Valid Date in 'Issue Date' Field
-[INFO ] 2025-02-06 15:52:13.947 [main] Log - Step:01 - Enter a valid date.
-[INFO ] 2025-02-06 15:52:18.260 [main] Log - Step:02 - Proceed to next step.
-[INFO ] 2025-02-06 15:52:18.260 [main] Log - Expected Result: Valid date is accepted by the field.
-[INFO ] 2025-02-06 15:52:18.290 [main] Log - Invalid Date in 'Valid Up To' Field
-[INFO ] 2025-02-06 15:52:23.639 [main] Log - Step:01 - Enter an invalid date.
-[INFO ] 2025-02-06 15:52:27.970 [main] Log - Step:02 - Proceed to next step.
-[INFO ] 2025-02-06 15:52:29.058 [main] Log - Expected Result: Invalid date error message is displayed.
-[INFO ] 2025-02-06 15:52:33.410 [main] Log - Clear 'Valid Up To' Field
-[INFO ] 2025-02-06 15:52:40.814 [main] Log - Step:01 - Clear date from 'Valid Up To' field.
-[INFO ] 2025-02-06 15:52:40.875 [main] Log - Expected Result: Field becomes empty without errors.
-[INFO ] 2025-02-06 15:52:40.916 [main] Log - Valid Date in 'Valid Up To' Field
-[INFO ] 2025-02-06 15:52:46.262 [main] Log - Step:01 - Enter a valid date.
-[INFO ] 2025-02-06 15:52:50.565 [main] Log - Step:02 - Proceed to next step.
-[INFO ] 2025-02-06 15:52:50.566 [main] Log - Expected Result: Valid date is accepted by the field.
-[INFO ] 2025-02-06 15:52:50.567 [main] Log - Enter Data in 'Details' Field
-[INFO ] 2025-02-06 15:52:51.613 [main] Log - Step:01 - Enter Alphanumeric input in Details field.
-[INFO ] 2025-02-06 15:52:51.613 [main] Log - Expected Result: Alphanumeric input is allowed.
-[INFO ] 2025-02-06 15:52:55.764 [main] Log - Step:02 - Enter Numeric input in Details field.
-[INFO ] 2025-02-06 15:52:55.765 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:52:59.916 [main] Log - Step:03 - Enter Alphabet input in Details field.
-[INFO ] 2025-02-06 15:52:59.916 [main] Log - Expected Result: Alphabet input is allowed.
-[INFO ] 2025-02-06 15:52:59.950 [main] Log - Click 'ADD DOCUMENT' Button
-[INFO ] 2025-02-06 15:53:04.471 [main] Log - Step:01 - Click on the 'ADD DOCUMENT' button.
-[INFO ] 2025-02-06 15:53:05.541 [main] Log - Expected Result: Data is displayed in the grid.
-[INFO ] 2025-02-06 15:53:05.567 [main] Log - Area Dropdown Selection
-[INFO ] 2025-02-06 15:53:05.894 [main] Log - Step:01 - Click on the Area dropdown.
-[INFO ] 2025-02-06 15:53:05.895 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:53:05.896 [main] Log - Expected Result: Selected Area should be displayed.
-[INFO ] 2025-02-06 15:53:05.941 [main] Log - Amsham Dropdown Selection
-[INFO ] 2025-02-06 15:53:06.255 [main] Log - Step:01 - Click on the Amsham dropdown.
-[INFO ] 2025-02-06 15:53:06.256 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:53:06.257 [main] Log - Expected Result: Selected Amsham should be displayed.
-[INFO ] 2025-02-06 15:53:06.307 [main] Log - Desham Dropdown Selection
-[INFO ] 2025-02-06 15:53:06.629 [main] Log - Step:01 - Click on the Desham dropdown.
-[INFO ] 2025-02-06 15:53:06.630 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:53:06.630 [main] Log - Expected Result: Selected Desham should be displayed.
-[INFO ] 2025-02-06 15:53:06.657 [main] Log - Village Dropdown Selection
-[INFO ] 2025-02-06 15:53:06.969 [main] Log - Step:01 - Click on the Village dropdown.
-[INFO ] 2025-02-06 15:53:06.970 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:53:06.971 [main] Log - Expected Result: Selected Village should be displayed.
-[INFO ] 2025-02-06 15:53:07.018 [main] Log - Ward field Validation
-[INFO ] 2025-02-06 15:53:08.063 [main] Log - Step:02 - Enter Alphabet input in Ward field.
-[INFO ] 2025-02-06 15:53:13.427 [main] Log - Expected Result: Alphabet input is not allowed.
-[INFO ] 2025-02-06 15:53:21.896 [main] Log - Step:01 - Enter Alphanumeric input in Ward field.
-[INFO ] 2025-02-06 15:53:27.279 [main] Log - Expected Result: Alphanumeric input is not allowed.
-[INFO ] 2025-02-06 15:53:35.696 [main] Log - Step:03 - Enter Numeric input in Ward field.
-[INFO ] 2025-02-06 15:53:39.992 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:53:40.045 [main] Log - Panchayat Dropdown Selection
-[INFO ] 2025-02-06 15:53:40.354 [main] Log - Step:01 - Click on the Panchayat dropdown.
-[INFO ] 2025-02-06 15:53:40.355 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:53:40.356 [main] Log - Expected Result: Selected Panchayat should be displayed.
-[INFO ] 2025-02-06 15:53:40.723 [main] Log - Municipality Dropdown Selection
-[INFO ] 2025-02-06 15:53:41.028 [main] Log - Step:01 - Click on the Municipality dropdown.
-[INFO ] 2025-02-06 15:53:41.029 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:53:41.029 [main] Log - Expected Result: Selected Municipality should be displayed.
-[INFO ] 2025-02-06 15:53:41.376 [main] Log - Corporation Dropdown Selection
-[INFO ] 2025-02-06 15:53:41.710 [main] Log - Step:01 - Click on the Corporation dropdown.
-[INFO ] 2025-02-06 15:53:41.711 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:53:41.712 [main] Log - Expected Result: Selected Corporation should be displayed.
-[INFO ] 2025-02-06 15:53:41.768 [main] Log - Assembly Constituency Dropdown Selection
-[INFO ] 2025-02-06 15:53:42.087 [main] Log - Step:01 - Click on the Assembly Constituency dropdown.
-[INFO ] 2025-02-06 15:53:42.087 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:53:42.088 [main] Log - Expected Result: Selected Assembly Constituency should be displayed.
-[INFO ] 2025-02-06 15:53:42.133 [main] Log - Taluk Dropdown Selection
-[INFO ] 2025-02-06 15:53:42.447 [main] Log - Step:01 - Click on the Taluk dropdown.
-[INFO ] 2025-02-06 15:53:42.448 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:53:42.449 [main] Log - Expected Result: Selected Taluk should be displayed.
-[INFO ] 2025-02-06 15:53:42.493 [main] Log - Panchayat Ward ECP Validations
-[INFO ] 2025-02-06 15:53:43.544 [main] Log - Step:01 - Enter Alphanumeric input in Panchayat Ward field.
-[INFO ] 2025-02-06 15:53:53.080 [main] Log - Step:02 - Enter Alphabet input in Panchayat Ward field.
-[INFO ] 2025-02-06 15:54:02.648 [main] Log - Step:03 - Enter Numeric input in Panchayat Ward field.
-[INFO ] 2025-02-06 15:54:06.926 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:54:06.978 [main] Log - BankWard ECP Validations
-[INFO ] 2025-02-06 15:54:08.025 [main] Log - Step:01 - Enter Alphanumeric input in Bank Ward field.
-[INFO ] 2025-02-06 15:54:17.564 [main] Log - Step:02 - Enter Alphabet input in Bank Ward field.
-[INFO ] 2025-02-06 15:54:27.049 [main] Log - Step:03 - Enter Numeric input in Bank Ward field.
-[INFO ] 2025-02-06 15:54:31.379 [main] Log - Expected Result: Numeric input is allowed.
-[INFO ] 2025-02-06 15:54:31.415 [main] Log - Land Type Dropdown Selection
-[INFO ] 2025-02-06 15:54:31.745 [main] Log - Step:01 - Click on the Land Type dropdown.
-[INFO ] 2025-02-06 15:54:31.745 [main] Log - Step:02 - Select an option.
-[INFO ] 2025-02-06 15:54:31.745 [main] Log - Expected Result: Selected Land Type should be displayed.
-[INFO ] 2025-02-06 15:54:31.776 [main] Log - Survey No Alphanumeric Entry
-[INFO ] 2025-02-06 15:54:32.819 [main] Log - Step:01 - Enter alphabets and numerals in 'Survey No' textfield.
-[INFO ] 2025-02-06 15:54:32.819 [main] Log - Expected Result: Alphanumeric input should be entered successfully.
-[INFO ] 2025-02-06 15:54:32.854 [main] Log - ReSurvey No Alphanumeric Entry
-[INFO ] 2025-02-06 15:54:33.906 [main] Log - Step:01 - Enter alphabets and numerals in 'Survey No' textfield.
-[INFO ] 2025-02-06 15:54:33.906 [main] Log - Expected Result: Alphanumeric input should be entered successfully.
-[INFO ] 2025-02-06 15:54:33.938 [main] Log - Unit Dropdown Selection
-[INFO ] 2025-02-06 15:54:34.259 [main] Log - Step:01 - Click on the Unit dropdown.
-[INFO ] 2025-02-06 15:54:34.259 [main] Log - Step:02 - Select an item from 'Unit' dropdown.
-[INFO ] 2025-02-06 15:54:34.260 [main] Log - Expected Result: Selected Unit should be displayed.
-[INFO ] 2025-02-06 15:54:34.317 [main] Log - Wet Numeric Entry
-[INFO ] 2025-02-06 15:54:39.702 [main] Log - Step:01 - Enter numerals in 'Wet' textfield.
-[INFO ] 2025-02-06 15:54:39.703 [main] Log - Expected Result: Numerals should be entered successfully.
-[INFO ] 2025-02-06 15:54:39.730 [main] Log - Dry Numeric Entry
-[INFO ] 2025-02-06 15:54:45.075 [main] Log - Step:01 - Enter numerals in 'Dry' textfield.
-[INFO ] 2025-02-06 15:54:45.075 [main] Log - Expected Result: Numerals should be entered successfully.
-[INFO ] 2025-02-06 15:54:45.104 [main] Log - Add Button Functionality
-[INFO ] 2025-02-06 15:54:49.540 [main] Log - Step:01 - Click on the 'ADD' button.
-[INFO ] 2025-02-06 15:54:50.650 [main] Log - Expected Result: Data should be inserted into the grid.
-[INFO ] 2025-02-06 15:54:50.682 [main] Log - Save Button Functionality
-[INFO ] 2025-02-06 15:54:55.060 [main] Log - Step:01 -  Click on SAVE button.
-[INFO ] 2025-02-06 15:54:57.195 [main] Log - Expected Result: Data should be saved successfully.
-[INFO ] 2025-02-06 15:54:57.226 [main] Log - Open 'Photo and Sign' Popup - Positive Scenario
-[INFO ] 2025-02-06 15:55:02.819 [main] Log - Step:01 - Click on the 'Photo and sign' button.
-[INFO ] 2025-02-06 15:55:04.215 [main] Log - Expected Result - 'Photo and sign' popup should appear.
-[INFO ] 2025-02-06 15:55:04.244 [main] Log - Upload Photo - Negative Scenario (No Selection)
-[INFO ] 2025-02-06 15:55:04.325 [main] Log - Step:01 - Click on the dropdown.
-[INFO ] 2025-02-06 15:55:04.325 [main] Log - Step:02 - Select 'Photo' from the drop down.
-[INFO ] 2025-02-06 15:55:08.633 [main] Log - Step:03 - Attempt to click 'Add' button without selecting a photo.
-[INFO ] 2025-02-06 15:55:09.692 [main] Log - Expected Result: Error message should be displayed indicating no photo selected.
-[INFO ] 2025-02-06 15:55:09.720 [main] Log - Upload Sign - Negative Scenario (No Selection)
-[INFO ] 2025-02-06 15:55:09.965 [main] Log - Step:01 - Click on the dropdown.
-[INFO ] 2025-02-06 15:55:09.966 [main] Log - Step:02 - Select 'Sign' from the drop down.
-[INFO ] 2025-02-06 15:55:14.205 [main] Log - Step:03 - Attempt to click 'Add' button without selecting a Sign.
-[INFO ] 2025-02-06 15:55:15.274 [main] Log - Expected Result: Error message should be displayed indicating no Sign selected.
-[INFO ] 2025-02-06 15:55:15.300 [main] Log - Save Data - Negative Scenario (No Images)
-[INFO ] 2025-02-06 15:55:15.548 [main] Log - Step:01 - Click on the dropdown.
-[INFO ] 2025-02-06 15:55:15.548 [main] Log - Step:02 - Select 'Photo' from the drop down.
-[INFO ] 2025-02-06 15:55:19.809 [main] Log - Step:03 - Click on the SAVE button.
-[INFO ] 2025-02-06 15:55:20.881 [main] Log - Expected Result: Error message should be displayed indicating photo/sign missing.
-[INFO ] 2025-02-06 15:55:20.907 [main] Log - Upload Photo - Invalid File Type
-[INFO ] 2025-02-06 15:55:20.987 [main] Log - Step:01 - Select 'Photo' from the drop down.
-[INFO ] 2025-02-06 15:55:21.000 [main] Log - path is :D:\Testing\O360-AI-master\O360-AI
-[INFO ] 2025-02-06 15:55:21.023 [main] Log - Step:02 -  Click on the 'browse' button & Select a non-image file from the folder.
-[INFO ] 2025-02-06 15:55:25.482 [main] Log - Step:03 - Click on the 'Add' button.
-[INFO ] 2025-02-06 15:55:26.549 [main] Log - Expected Result: Error message should be displayed indicating invalid file type.
-[INFO ] 2025-02-06 15:55:26.549 [main] Log - Upload Photo - Positive Scenario
-[INFO ] 2025-02-06 15:55:26.621 [main] Log - Step:01 - Select 'Photo' from the drop down.
-[INFO ] 2025-02-06 15:55:26.634 [main] Log - path is :D:\Testing\O360-AI-master\O360-AI
-[INFO ] 2025-02-06 15:55:26.651 [main] Log - Step:02 -  Click on the 'browse' button & Select a valid photo from the folder.
-[INFO ] 2025-02-06 15:55:31.077 [main] Log - Step:03 - Click on the 'Add' button.
-[INFO ] 2025-02-06 15:55:32.152 [main] Log - Expected Result: Selected photo should be displayed in the window.
-[INFO ] 2025-02-06 15:55:32.152 [main] Log - Upload Sign - Invalid File Type
-[INFO ] 2025-02-06 15:55:32.392 [main] Log - Step:01 - Select 'Sign' from the drop down.
-[INFO ] 2025-02-06 15:55:32.406 [main] Log - path is :D:\Testing\O360-AI-master\O360-AI
-[INFO ] 2025-02-06 15:55:32.428 [main] Log - Step:02 -  Click on the 'browse' button & Select a non-image file from the folder.
-[INFO ] 2025-02-06 15:55:36.902 [main] Log - Step:03 - Click on the 'Add' button.
-[INFO ] 2025-02-06 15:55:37.964 [main] Log - Expected Result: Error message should be displayed indicating invalid file type.
-[INFO ] 2025-02-06 15:55:37.992 [main] Log - Upload Sign - Positive Scenario
-[INFO ] 2025-02-06 15:55:38.067 [main] Log - Step:01 - Select 'Sign' from the drop down.
-[INFO ] 2025-02-06 15:55:38.082 [main] Log - path is :D:\Testing\O360-AI-master\O360-AI
-[INFO ] 2025-02-06 15:55:38.097 [main] Log - Step:02 -  Click on the 'browse' button & Select a valid sign from the folder.
-[INFO ] 2025-02-06 15:55:42.352 [main] Log - Step:03 - Click on the 'Add' button.
-[INFO ] 2025-02-06 15:55:43.423 [main] Log - Expected Result: Selected Sign should be displayed in the window.
-[INFO ] 2025-02-06 15:55:43.453 [main] Log - Save Data - Positive Scenario
-[INFO ] 2025-02-06 15:55:47.744 [main] Log - Step:01 - Click on the 'Save' button.
-[INFO ] 2025-02-06 15:55:49.901 [main] Log - Expected Result: Data should be saved successfully.
-[INFO ] 2025-02-06 15:55:49.930 [main] Log - Photo and Sign Entry Persistence
-[INFO ] 2025-02-06 15:55:56.881 [main] Log - Expected Result: Previously uploaded images should be displayed.
-[INFO ] 2025-02-06 15:56:01.203 [main] Log - Open 'External Account' Popup
-[INFO ] 2025-02-06 15:56:06.790 [main] Log - Step:01 - Click on the 'Bank Accounts' button.
-[INFO ] 2025-02-06 15:56:08.213 [main] Log - Expected Result - 'External Account' popup appears.
-[INFO ] 2025-02-06 15:56:08.239 [main] Log - Empty Mandatory Fields
-[INFO ] 2025-02-06 15:56:12.552 [main] Log - Step:01 - Leave all mandatory fields empty & Click on the 'ADD' button.
-[INFO ] 2025-02-06 15:56:13.625 [main] Log - Expected Result: Error message displayed for mandatory fields.
-[INFO ] 2025-02-06 15:56:13.655 [main] Log - Select 'State' from Dropdown
-[INFO ] 2025-02-06 15:56:13.997 [main] Log - Step:01 - Click on 'State' dropdown.
-[INFO ] 2025-02-06 15:56:13.997 [main] Log - Step:02 - Select 'State' from the drop down.
-[INFO ] 2025-02-06 15:56:13.997 [main] Log - Expected Result: Selected item is highlighted.
-[INFO ] 2025-02-06 15:56:14.034 [main] Log - Select 'BankID' from Dropdown
-[INFO ] 2025-02-06 15:56:14.409 [main] Log - Step:01 - Click on 'BankID' dropdown.
-[INFO ] 2025-02-06 15:56:14.410 [main] Log - Step:02 - Select 'BankID' from the drop down.
-[INFO ] 2025-02-06 15:56:14.410 [main] Log - Expected Result: Selected item is highlighted.
-[INFO ] 2025-02-06 15:56:14.441 [main] Log - Select 'BranchID' from Dropdown
-[INFO ] 2025-02-06 15:56:14.879 [main] Log - Step:01 - Click on 'BranchID' dropdown.
-[INFO ] 2025-02-06 15:56:14.879 [main] Log - Step:02 - Select 'BranchID' from the drop down.
-[INFO ] 2025-02-06 15:56:14.905 [main] Log - Expected Result: Selected item is highlighted; IFSC code field is auto-filled: KLGB0040293
-[INFO ] 2025-02-06 15:56:14.937 [main] Log - Test 'Cust Name' Field
-[INFO ] 2025-02-06 15:56:16.000 [main] Log - Step:01 - Enter alphabets and numerals in 'Cust Name' textfield.
-[INFO ] 2025-02-06 15:56:16.000 [main] Log - Expected Result: Field accepts alphanumeric input.
-[INFO ] 2025-02-06 15:56:16.029 [main] Log - Test 'Address' Field
-[INFO ] 2025-02-06 15:56:17.079 [main] Log - Step:01 - Enter alphabets and numerals in 'Address' textfield.
-[INFO ] 2025-02-06 15:56:17.080 [main] Log - Expected Result: Field accepts alphanumeric input.
-[INFO ] 2025-02-06 15:56:17.109 [main] Log - Incorrect 'RetypeAccNo'
-[INFO ] 2025-02-06 15:56:19.207 [main] Log - Step:01 - Enter different numbers in 'BankAccNo' and 'RetypeAccNo'.
-[INFO ] 2025-02-06 15:56:24.579 [main] Log - Expected Result: Error message indicating mismatch.
-[INFO ] 2025-02-06 15:56:30.837 [main] Log - Test 'BankAccNo' Field
-[INFO ] 2025-02-06 15:56:31.887 [main] Log - Step:01 - Enter Special Character input in BankAccNo field.
-[INFO ] 2025-02-06 15:56:32.963 [main] Log - Step:02 - Enter Special Character input in RetypeAccNo field.
-[INFO ] 2025-02-06 15:56:37.283 [main] Log - Expected Result: Special Character input allowed.
-[INFO ] 2025-02-06 15:56:44.527 [main] Log - Step:03 - Enter Alphabet input in BankAccNo field.
-[INFO ] 2025-02-06 15:56:45.591 [main] Log - Step:04 - Enter Alphabet input in RetypeAccNo field.
-[INFO ] 2025-02-06 15:56:51.098 [main] Log - Expected Result: Alphabet input prompts error message.
-[INFO ] 2025-02-06 15:56:58.333 [main] Log - Step:05 - Enter Numeric input in BankAccNo field.
-[INFO ] 2025-02-06 15:56:59.392 [main] Log - Step:06 - Enter Numeric input in RetypeAccNo field.
-[INFO ] 2025-02-06 15:57:03.720 [main] Log - Expected Result: Field restricts to numerals.
-[INFO ] 2025-02-06 15:57:03.834 [main] Log - Select 'BankAccID' from Dropdown
-[INFO ] 2025-02-06 15:57:04.165 [main] Log - Step:01 - Click on 'BankAccID' dropdown.
-[INFO ] 2025-02-06 15:57:04.165 [main] Log - Step:02 - Select 'BankAccID' from the drop down.
-[INFO ] 2025-02-06 15:57:04.166 [main] Log - Expected Result: Selected item is highlighted.
-[INFO ] 2025-02-06 15:57:04.197 [main] Log - Invalid Date Format
-[INFO ] 2025-02-06 15:57:09.609 [main] Log - Step:01 - Enter invalid date format in 'Start Date' field.
-[INFO ] 2025-02-06 15:57:14.022 [main] Log - Step:02 - Click on the ADD button.
-[INFO ] 2025-02-06 15:57:15.084 [main] Log - Expected Result: Error message for invalid date format.
-[INFO ] 2025-02-06 15:57:19.476 [main] Log - Test 'Start Date' Field
-[INFO ] 2025-02-06 15:57:24.856 [main] Log - Step:01 - Enter date manually.
-[INFO ] 2025-02-06 15:57:24.856 [main] Log - Expected Result: Date can be entered both ways.
-[INFO ] 2025-02-06 15:57:24.886 [main] Log - Test 'Additional Information' Checkbox
-[INFO ] 2025-02-06 15:57:29.296 [main] Log - Step:01 - Check the checkbox.
-[INFO ] 2025-02-06 15:57:29.297 [main] Log - Expected Result: Checkbox is ticked.
-[INFO ] 2025-02-06 15:57:29.329 [main] Log - Verify 'Balance As on' Date Field
-[INFO ] 2025-02-06 15:57:29.329 [main] Log - Step:01 - Check the 'Balance As on' date field.
-[INFO ] 2025-02-06 15:57:29.365 [main] Log - Expected Result: Field displays current date: 27/08/2300
-[INFO ] 2025-02-06 15:57:29.396 [main] Log - Test 'Balance' Numeric Field
-[INFO ] 2025-02-06 15:57:34.787 [main] Log - Step:01 - Enter numbers in 'Balance' field.
-[INFO ] 2025-02-06 15:57:34.787 [main] Log - Expected Result: Field accepts numeric input.
-[INFO ] 2025-02-06 15:57:34.818 [main] Log - Test 'Credit Card' Checkbox
-[INFO ] 2025-02-06 15:57:39.149 [main] Log - Step:01 - Check the 'Credit Card' checkbox.
-[INFO ] 2025-02-06 15:57:39.150 [main] Log - Expected Result: Checkbox is ticked.
-[INFO ] 2025-02-06 15:57:39.255 [main] Log - Test 'Credit Card No' Field
-[INFO ] 2025-02-06 15:57:40.310 [main] Log - Step:01 - Enter numbers and alphabets in 'Credit Card No' field.
-[INFO ] 2025-02-06 15:57:40.311 [main] Log - Expected Result: Field accepts alphanumeric input.
-[INFO ] 2025-02-06 15:57:40.343 [main] Log - Add Data to Grid
-[INFO ] 2025-02-06 15:57:44.723 [main] Log - Step:01 -  Click on the ADD button.
-[INFO ] 2025-02-06 15:57:44.724 [main] Log - Expected Result: Data is displayed in the grid.
-[INFO ] 2025-02-06 15:57:44.769 [main] Log - Test 'DPID' Field
-[INFO ] 2025-02-06 15:57:45.846 [main] Log - Step:01 - Enter numbers and alphabets in 'DPID' field.
-[INFO ] 2025-02-06 15:57:45.846 [main] Log - Expected Result: Field accepts alphanumeric input.
-[INFO ] 2025-02-06 15:57:45.884 [main] Log - Test 'DematAccNo' Field
-[INFO ] 2025-02-06 15:57:46.941 [main] Log - Step:01 - Enter numbers and alphabets in 'DematAccNo' field.
-[INFO ] 2025-02-06 15:57:46.941 [main] Log - Expected Result: Field accepts alphanumeric input.
-[INFO ] 2025-02-06 15:57:46.971 [main] Log - Save Data
-[INFO ] 2025-02-06 15:57:51.369 [main] Log - Step:01 -  Click on SAVE button.
-[INFO ] 2025-02-06 15:57:53.517 [main] Log - Expected Result: Data is successfully saved.
-[INFO ] 2025-02-06 15:57:53.545 [main] Log - Open Risk Details Window
-[INFO ] 2025-02-06 15:57:59.098 [main] Log - Step:01 - Click on the 'Risk Details' button.
-[INFO ] 2025-02-06 15:58:00.508 [main] Log - Expected Result - 'Risk Details' window should open successfully.
-[INFO ] 2025-02-06 15:58:00.536 [main] Log - Select RiskID
-[INFO ] 2025-02-06 15:58:00.846 [main] Log - Step:01 - Select an item from the RiskID dropdown.
-[INFO ] 2025-02-06 15:58:00.847 [main] Log - Expected Result: Item should be selected successfully.
-[INFO ] 2025-02-06 15:58:00.897 [main] Log - Remarks Field Input
-[INFO ] 2025-02-06 15:58:01.959 [main] Log - Step:01 - Enter alphanumeric and special characters in the 'Remarks' field.
-[INFO ] 2025-02-06 15:58:01.960 [main] Log - Expected Result: Characters should be entered successfully.
-[INFO ] 2025-02-06 15:58:01.988 [main] Log - ActiveSpecialInstruction Field Input
-[INFO ] 2025-02-06 15:58:03.072 [main] Log - Step:01 - Enter alphanumeric and special characters in the 'ActiveSpecialInstruction' field.
-[INFO ] 2025-02-06 15:58:03.073 [main] Log - Expected Result: Characters should be entered successfully.
-[INFO ] 2025-02-06 15:58:03.105 [main] Log - Suspecious Checkbox Selection
-[INFO ] 2025-02-06 15:58:07.444 [main] Log - Step:01 -  Tick mark the 'Suspecious' checkbox.
-[INFO ] 2025-02-06 15:58:07.444 [main] Log - Expected Result: Checkbox should be ticked successfully.
-[INFO ] 2025-02-06 15:58:07.476 [main] Log - Save Risk Details
-[INFO ] 2025-02-06 15:58:11.744 [main] Log - Step:01 -  Click on SAVE button.
-[INFO ] 2025-02-06 15:58:13.909 [main] Log - Expected Result: 'Risk Details' window should close.
-[INFO ] 2025-02-06 15:58:13.937 [main] Log - Empty Remarks Field
-[INFO ] 2025-02-06 15:58:22.966 [main] Log - Step:01 -  Leave the 'Remarks' field empty.
-[INFO ] 2025-02-06 15:58:27.257 [main] Log - Step:02 -  Try to save the form.
-[INFO ] 2025-02-06 15:58:29.385 [main] Log - Expected Result: Possible to save the form without any error.
-[INFO ] 2025-02-06 15:58:29.414 [main] Log - Check Availability Popup
-[INFO ] 2025-02-06 15:58:34.942 [main] Log - Step:01 -  Click on the 'Check Availability' button.
-[INFO ] 2025-02-06 15:58:36.374 [main] Log - Expected Result: A popup should appear displaying customers with similar details or indicating that no similar customers exist.
-[INFO ] 2025-02-06 15:58:36.489 [main] Log - Save Quick Customer
-[INFO ] 2025-02-06 15:58:47.685 [main] Log - Step:01 -  Click on the 'Save' button.
-[INFO ] 2025-02-06 15:58:48.835 [main] Log - Expected Result: Quick Customer details should be saved successfully in the backendtables with Quick Customer ID: 102000076506 and Display Name: ZORO LUFFY SANJI ALIAS ONE
-[INFO ] 2025-02-06 15:59:02.505 [main] Log - Logout
-[INFO ] 2025-02-06 15:59:10.961 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-02-06 15:59:12.040 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-02-12 12:11:43.249 [main] Log - *** Running test method New Customer Module...
+[INFO ] 2025-02-12 12:11:47.298 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-02-12 12:11:48.960 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-02-12 12:11:51.366 [main] Log - PC Registration
+[INFO ] 2025-02-12 12:11:52.471 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-02-12 12:11:52.879 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-02-12 12:11:53.937 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-02-12 12:11:58.275 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-02-12 12:11:59.917 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-02-12 12:12:00.018 [main] Log - Valid Login
+[INFO ] 2025-02-12 12:12:01.121 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-02-12 12:12:02.183 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-02-12 12:12:09.297 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-02-12 12:12:10.444 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-12 12:12:11.560 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-12 12:12:11.680 [main] Log - Access Gold Loan Opening Window
+[INFO ] 2025-02-12 12:12:16.027 [main] Log - Step:01 - Navigate to account opening
+[INFO ] 2025-02-12 12:12:20.390 [main] Log - Step:02 - Select loan opening.
+[INFO ] 2025-02-12 12:12:24.802 [main] Log - Step:03 - Select Jewel Loan.
+[INFO ] 2025-02-12 12:12:30.342 [main] Log - Step:04 - Open gold loan opening window.
+[INFO ] 2025-02-12 12:12:31.440 [main] Log - Expected Result: Gold loan opening window is displayed.
+[INFO ] 2025-02-12 12:12:31.529 [main] Log - Name Field Validation
+[INFO ] 2025-02-12 12:12:36.089 [main] Log - Step:01 -  Click on search icon.
+[INFO ] 2025-02-12 12:12:37.498 [main] Log - Step:02 - Enter customer Name or alphabet.
+[INFO ] 2025-02-12 12:12:37.499 [main] Log - Expected Result: Possible to give the name or alphabets in the customer search popu window.
+[INFO ] 2025-02-12 12:12:37.573 [main] Log - Search and Select a Customer
+[INFO ] 2025-02-12 12:12:41.908 [main] Log - Step:01 - Click on Search button
+[INFO ] 2025-02-12 12:12:46.056 [main] Log - Step:02 - Select the customer
+[INFO ] 2025-02-12 12:12:46.138 [main] Log - Expected Result: Customer id should be display in the custid feild.
+[INFO ] 2025-02-12 12:12:46.321 [main] Log - Add Selected Customer
+[INFO ] 2025-02-12 12:12:51.686 [main] Log - Step:01 - Click 'Add Customer' button
+[INFO ] 2025-02-12 12:12:57.142 [main] Log - Expected Result: Customer details are added.
+[INFO ] 2025-02-12 12:12:57.240 [main] Log - Enter Resolution Information
+[INFO ] 2025-02-12 12:12:58.290 [main] Log - Step:01 - Enter Resolution No.
+[INFO ] 2025-02-12 12:12:58.291 [main] Log - Expected Result: Information is accepted.
+[INFO ] 2025-02-12 12:12:58.355 [main] Log - Enter Resolution Date
+[INFO ] 2025-02-12 12:13:03.769 [main] Log - Step:01 - Enter Resolution Date.
+[INFO ] 2025-02-12 12:13:03.769 [main] Log - Expected Result: Information is accepted.
+[INFO ] 2025-02-12 12:13:03.835 [main] Log - Select Refered By from Dropdown
+[INFO ] 2025-02-12 12:13:04.212 [main] Log - Step:01 - Open 'Purpose' dropdown, Select an entry
+[INFO ] 2025-02-12 12:13:04.224 [main] Log - Expected Result: Entry is selected.
+[INFO ] 2025-02-12 12:13:04.368 [main] Log - Enter Reference No.
+[INFO ] 2025-02-12 12:13:05.433 [main] Log - Step:01 - Enter Reference No.
+[INFO ] 2025-02-12 12:13:05.433 [main] Log - Expected Result: Information is accepted.
+[INFO ] 2025-02-12 12:13:05.491 [main] Log - Select Source Of Loan
+[INFO ] 2025-02-12 12:13:05.797 [main] Log - Step:01 - Open 'Source Of Loan'' dropdown, Select an entry
+[INFO ] 2025-02-12 12:13:05.798 [main] Log - Expected Result: Entry is selected.
+[INFO ] 2025-02-12 12:13:05.879 [main] Log - Enter Remarks
+[INFO ] 2025-02-12 12:13:06.974 [main] Log - Step:01 - Enter the Remarks.
+[INFO ] 2025-02-12 12:13:06.975 [main] Log - Expected Result: Information is accepted.
+[INFO ] 2025-02-12 12:13:07.475 [main] Log - Navigate to Security Details Tab
+[INFO ] 2025-02-12 12:13:11.809 [main] Log - Step:01 - Click 'Next' button
+[INFO ] 2025-02-12 12:13:12.940 [main] Log - Expected Result: Security details tab is open.
+[INFO ] 2025-02-12 12:13:13.021 [main] Log - Enter Jewelry Details - Select Item Group
+[INFO ] 2025-02-12 12:13:13.117 [main] Log - Step:01 - Select Item Group
+[INFO ] 2025-02-12 12:13:13.117 [main] Log - Expected Result: Details are accepted
+[INFO ] 2025-02-12 12:13:13.203 [main] Log - Enter Jewelry Details - Select Item Name
+[INFO ] 2025-02-12 12:13:13.596 [main] Log - Step:01 - Select Item Name
+[INFO ] 2025-02-12 12:13:13.597 [main] Log - Expected Result: Details are accepted
+[INFO ] 2025-02-12 12:13:13.695 [main] Log - Enter Jewelry Details - Item Description
+[INFO ] 2025-02-12 12:13:14.764 [main] Log - Step:01 -  Enter Item Description.
+[INFO ] 2025-02-12 12:13:14.764 [main] Log - Expected Result: Details are accepted.
+[INFO ] 2025-02-12 12:13:14.807 [main] Log - Enter Jewelry Details - Item Qty
+[INFO ] 2025-02-12 12:13:15.860 [main] Log - Step:01 -  Enter Item Qty.
+[INFO ] 2025-02-12 12:13:15.861 [main] Log - Expected Result: Details are accepted.
+[INFO ] 2025-02-12 12:13:15.904 [main] Log - Enter Jewelry Details - Item Weight
+[INFO ] 2025-02-12 12:13:21.304 [main] Log - Step:01 -  Enter Item Weight.
+[INFO ] 2025-02-12 12:13:21.305 [main] Log - Expected Result: Details are accepted.
+[INFO ] 2025-02-12 12:13:21.375 [main] Log - Enter Jewelry Details - Stone Weight
+[INFO ] 2025-02-12 12:13:26.806 [main] Log - Step:01 -  Enter Stone Weight.
+[INFO ] 2025-02-12 12:13:26.808 [main] Log - Expected Result: Details are accepted.
+[INFO ] 2025-02-12 12:13:26.878 [main] Log - Enter Jewelry Details - Dirt Weight
+[INFO ] 2025-02-12 12:13:32.306 [main] Log - Step:01 -  Enter Dirt Weight.
+[INFO ] 2025-02-12 12:13:32.307 [main] Log - Expected Result: Details are accepted.
+[INFO ] 2025-02-12 12:13:32.388 [main] Log - Enter Jewelry Details - Purity
+[INFO ] 2025-02-12 12:13:33.444 [main] Log - Step:01 -  Enter Purity.
+[INFO ] 2025-02-12 12:13:33.444 [main] Log - Expected Result: Details are accepted.
+[INFO ] 2025-02-12 12:13:33.491 [main] Log - Add Jewelry Item to Grid
+[INFO ] 2025-02-12 12:13:37.979 [main] Log - Step:01 -  Click 'Add' button.
+[INFO ] 2025-02-12 12:13:39.095 [main] Log - Expected Result: Jewelry item is added to grid.
+[INFO ] 2025-02-12 12:13:39.171 [main] Log - Upload Security Ornament Image - Pop Window Opened
+[INFO ] 2025-02-12 12:13:44.828 [main] Log - Step:01 -  Click 'Image' button.
+[INFO ] 2025-02-12 12:13:46.203 [main] Log - Expected Result: Jewel images popup window will be opened.
+[INFO ] 2025-02-12 12:13:46.272 [main] Log - Upload Security Ornament Image - Select Item
+[INFO ] 2025-02-12 12:13:46.611 [main] Log - Step:01 - Select Item Name
+[INFO ] 2025-02-12 12:13:46.629 [main] Log - path is :D:\Testing\O360-AI-master\O360-AI
+[INFO ] 2025-02-12 12:13:46.652 [main] Log - Step:02 - Browse the image
+[INFO ] 2025-02-12 12:13:46.652 [main] Log - Expected Result: Possible to browse the image
+[INFO ] 2025-02-12 12:13:46.698 [main] Log - Upload Security Ornament Image - Add Item
+[INFO ] 2025-02-12 12:13:51.254 [main] Log - Step:01 - Click add button in the jewel images popup window
+[INFO ] 2025-02-12 12:13:52.334 [main] Log - Expected Result: Possible to add the image
+[INFO ] 2025-02-12 12:13:52.418 [main] Log - Upload Security Ornament Image - Submit Button
+[INFO ] 2025-02-12 12:13:56.748 [main] Log - Step:01 - Click submit button in the jewel images popup window
+[INFO ] 2025-02-12 12:13:57.859 [main] Log - Expected Result: Jewel images popup window will be closed
+[INFO ] 2025-02-12 12:13:57.910 [main] Log - Navigate to Nominee Tab
+[INFO ] 2025-02-12 12:14:03.338 [main] Log - Step:01 - Click 'Next' button
+[INFO ] 2025-02-12 12:14:04.442 [main] Log - Expected Result: Nominee tab is open.
+[INFO ] 2025-02-12 12:14:04.505 [main] Log - Add Nominee - Untick 'Nominee Not Required'
+[INFO ] 2025-02-12 12:14:08.887 [main] Log - Step:01 - Untick 'Nominee Not Required'
+[INFO ] 2025-02-12 12:14:10.005 [main] Log - Expected Result: Nominee details feild will be display.
+[INFO ] 2025-02-12 12:14:10.085 [main] Log - Click the customer search icon
+[INFO ] 2025-02-12 12:14:14.693 [main] Log - Step:01 - Click the customer search icon
+[INFO ] 2025-02-12 12:14:16.072 [main] Log - Expected Result: Customer serach popup will be display.
+[INFO ] 2025-02-12 12:14:16.146 [main] Log - Add Nominee - Search Cust
+[INFO ] 2025-02-12 12:14:21.540 [main] Log - Step:01 - Give the name of the customer or alphabet, Click the search button
+[INFO ] 2025-02-12 12:14:22.663 [main] Log - Expected Result: Customer should be dispayed against the given details.
+[INFO ] 2025-02-12 12:14:22.738 [main] Log - Select a Customer
+[INFO ] 2025-02-12 12:14:26.860 [main] Log - Step:01 - Select the customer
+[INFO ] 2025-02-12 12:14:26.910 [main] Log - Expected Result: Popup will be closed and the selected customer details should be autolads.
+[INFO ] 2025-02-12 12:14:26.978 [main] Log - Navigate to Loan Details Tab - Relation drop down
+[INFO ] 2025-02-12 12:14:27.359 [main] Log - Step:01 - Select the "Relation" drop down
+[INFO ] 2025-02-12 12:14:27.360 [main] Log - Expected Result: Details can be selected
+[INFO ] 2025-02-12 12:14:27.423 [main] Log - Navigate to Loan Details Tab - Add button
+[INFO ] 2025-02-12 12:14:31.843 [main] Log - Step:01 - Click add button
+[INFO ] 2025-02-12 12:14:32.925 [main] Log - Expected Result: Given details will be displays in the grid.
+[INFO ] 2025-02-12 12:14:32.967 [main] Log - Navigate to Loan Details Tab - Next button
+[INFO ] 2025-02-12 12:14:38.457 [main] Log - Step:01 - Click 'Next' button
+[INFO ] 2025-02-12 12:14:39.544 [main] Log - Expected Result: Loan details tab is open.
+[INFO ] 2025-02-12 12:14:39.601 [main] Log - Enter and Verify Loan Details
+[INFO ] 2025-02-12 12:14:45.057 [main] Log - Step:01 -  Enter sanctioned amount.
+[INFO ] 2025-02-12 12:14:45.057 [main] Log - Expected Result: Possible to give the sanctioned amount in the field (less than and equal to).
+[INFO ] 2025-02-12 12:14:45.115 [main] Log - Enter and Verify Loan Details - Get values
+[INFO ] 2025-02-12 12:14:49.461 [main] Log - Step:01 - Click the get values.
+[INFO ] 2025-02-12 12:14:49.533 [main] Log - Expected Result: ROI, duration, duedate will be autoloads.
+[INFO ] 2025-02-12 12:14:49.594 [main] Log - Select Transaction Mode - Select Trans. Mode 'Cash'.
+[INFO ] 2025-02-12 12:14:49.951 [main] Log - Step:01 - Select Trans. Mode 'Cash'
+[INFO ] 2025-02-12 12:14:49.951 [main] Log - Expected Result: Possible to select the trans mode as cash
+[INFO ] 2025-02-12 12:14:50.025 [main] Log - Select Transaction Mode - Save.
+[INFO ] 2025-02-12 12:14:54.434 [main] Log - Step:01 - Click 'save'
+[INFO ] 2025-02-12 12:14:59.925 [main] Log - Expected Result: Loan is submitted, summary displayed
+[INFO ] 2025-02-12 12:15:00.027 [main] Log - Verify Loan Submission with Transfer Mode - Select Trans. Mode 'Transfer'
+[INFO ] 2025-02-12 12:16:18.619 [main] Log - Step:01 - Select Trans. Mode 'Transfer'
+[INFO ] 2025-02-12 12:16:18.619 [main] Log - Expected Result: Possible to select the trans mode as transfer
+[INFO ] 2025-02-12 12:16:18.668 [main] Log - Verify Loan Submission with Transfer Mode - Click on Post credit button
+[INFO ] 2025-02-12 12:16:23.274 [main] Log - Step:01 - Click on Post credit button
+[INFO ] 2025-02-12 12:16:24.694 [main] Log - Expected Result: Auto posting popup window will be opened
+[INFO ] 2025-02-12 12:16:24.760 [main] Log - Verify Loan Submission with Transfer Mode - Click on Post credit button
+[INFO ] 2025-02-12 12:16:25.093 [main] Log - Step:01 - Give transaction based as 'GL Code'
+[INFO ] 2025-02-12 12:16:26.154 [main] Log - Expected Result: GL code related field will be display (GL name,GL code)
+[INFO ] 2025-02-12 12:16:26.212 [main] Log - Verify Loan Submission with Transfer Mode - Select the 'GL Name'
+[INFO ] 2025-02-12 12:16:34.935 [main] Log - Step:01 - Select the "GL Name" from the drop down
+[INFO ] 2025-02-12 12:16:35.008 [main] Log - Expected Result: GL code will be autoloads 463 while selecting the GL Name
+[INFO ] 2025-02-12 12:16:35.134 [main] Log - Verify Loan Submission with Transfer Mode - Add Amount & Click Add
+[INFO ] 2025-02-12 12:16:40.495 [main] Log - Step:01 - Give the amount in "Amount" field
+[INFO ] 2025-02-12 12:16:44.960 [main] Log - Step:02 - Click add button
+[INFO ] 2025-02-12 12:16:46.089 [main] Log - Expected Result: Given details will be displays in the grid
+[INFO ] 2025-02-12 12:16:46.218 [main] Log - Verify Loan Submission with Transfer Mode - Click Submit
+[INFO ] 2025-02-12 12:16:50.516 [main] Log - Step:01 - Click Submit button
+[INFO ] 2025-02-12 12:16:51.649 [main] Log - Expected Result: Popup window will be closed
+[INFO ] 2025-02-12 12:16:51.709 [main] Log - Verify Loan Submission with Transfer Mode - Click Save
+[INFO ] 2025-02-12 12:16:56.115 [main] Log - Step:01 - Click Save button after giving the post credit details
+[INFO ] 2025-02-12 12:17:01.742 [main] Log - Expected Result: Summary will be generated
+[INFO ] 2025-02-12 12:17:01.892 [main] Log - Login with Another User
+[INFO ] 2025-02-12 12:17:06.489 [main] Log - Step:01 - Log out
+[INFO ] 2025-02-12 12:17:15.119 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-02-12 12:17:15.215 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-02-12 12:17:15.272 [main] Log - Manager Authorization - Cash Tab
+[INFO ] 2025-02-12 12:17:19.612 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-02-12 12:17:24.081 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-02-12 12:17:28.415 [main] Log - Step:03 - Click "Cash" tab
+[INFO ] 2025-02-12 12:17:28.416 [main] Log - Expected Result: Cash tab load
+[INFO ] 2025-02-12 12:17:28.475 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-02-12 12:17:32.790 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-02-12 12:17:39.300 [main] Log - Expected Result: Loan opening entry displayed
+[INFO ] 2025-02-12 12:17:39.373 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-02-12 12:17:43.705 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-02-12 12:17:48.033 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-02-12 12:17:48.034 [main] Log - Expected Result: Entry authorized
+[INFO ] 2025-02-12 12:17:48.109 [main] Log - Cashier Authorization
+[INFO ] 2025-02-12 12:17:52.545 [main] Log - Step:01 - Navigate to Cashier Authorization
+[INFO ] 2025-02-12 12:17:56.860 [main] Log - Step:02 - Click Refresh Button
+[INFO ] 2025-02-12 12:18:06.739 [main] Log - Step:03 - Select checkbox
+[INFO ] 2025-02-12 12:18:11.111 [main] Log - Step:04 - Click Authorize Button
+[INFO ] 2025-02-12 12:18:12.242 [main] Log - Expected Result: Account is created
+[INFO ] 2025-02-12 12:18:16.685 [main] Log - Logout
+[INFO ] 2025-02-12 12:18:25.247 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-02-12 12:18:26.310 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

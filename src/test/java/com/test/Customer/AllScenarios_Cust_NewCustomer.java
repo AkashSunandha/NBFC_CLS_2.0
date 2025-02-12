@@ -74,7 +74,9 @@ public class AllScenarios_Cust_NewCustomer extends Base_Class{
 
 				newCustMths.riskAndOtherDetails(testdata, context);
 
-				newCustMths.photoSign(testdata, context);				
+				newCustMths.photoSign(testdata, context);
+				
+				newCustMths.authorize();				
 				
 				custSrchMthds.logout();
 				

@@ -82,10 +82,12 @@ public class AllScenarios_Cust_QuickCustomer extends Base_Class{
 				quickCustomerAllMthds.riskDetailsEmptyRemarksField(testdata, context);
 
 				quickCustomerAllMthds.checkAvailability();
-				
+
+				quickCustomerAllMthds.authorize();
+
 				
 
-				Thread.sleep(5000);
+				Thread.sleep(4000);
 				custSrchMthds.logout();
 
 				

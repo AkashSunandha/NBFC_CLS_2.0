@@ -202,14 +202,16 @@ public class Customer_CustomerSearch extends Base_Class{
 		ExtentTestManager.startTest("Valid Login");
 		Log.info("Valid Login");
 			
-		
-					String loginUserName = testdata.get("loginUserName").toString();
-					input(custSearch.loginUserName, loginUserName);
+			
+					String UserName = configloader().getProperty("UserName");
+//					String loginUserName = testdata.get("loginUserName").toString();
+					input(custSearch.loginUserName,UserName );
 					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");
 					Log.info("Step:01 - Enetered valid User Name");
 					
-					String loginValidPassword = testdata.get("loginValidPassword").toString();
-					input(custSearch.loginPasswrd, loginValidPassword);
+					String Password = configloader().getProperty("Password");
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+					input(custSearch.loginPasswrd, Password);
 					ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Eneter valid Password");
 					Log.info("Step:02 - Enetered valid Password");
 					
@@ -232,12 +234,12 @@ public class Customer_CustomerSearch extends Base_Class{
 						Log.info("Step:01 - Click on OK button");
 						
 	//					String loginUserName = testdata.get("loginUserName").toString();
-						input(custSearch.loginUserName, loginUserName);
+						input(custSearch.loginUserName, UserName);
 						ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
 						Log.info("Step:02 - Enetered valid User Name");
 						
 	//					String loginValidPassword = testdata.get("loginValidPassword").toString();
-						input(custSearch.loginPasswrd, loginValidPassword);
+						input(custSearch.loginPasswrd, Password);
 						ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
 						Log.info("Step:03 - Entered valid Password");
 						

@@ -29,6 +29,8 @@ import java.util.Date;
 import java.util.List;
 
 import com.BasePackage.Base_Class;
+import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
+import com.Page_Repositary.PageRepositary_Cust_CustSearch;
 import com.Page_Repositary.PageRepositary_Cust_QuickCustomer;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
@@ -40,6 +42,9 @@ public class Customer_QuickCustomer extends Base_Class{
 	Log log= new Log();
 	PageRepositary_Cust_QuickCustomer quickCustRepo = new PageRepositary_Cust_QuickCustomer();
 //	private static long lastGeneratedNumber = 100000000000L;
+	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
+	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
+
 	
 	public String spPAN = "GenerateNextPAN";
 	public String clmnNamPAN = "generated_pan";
@@ -3499,6 +3504,153 @@ public void checkAvailability() throws InterruptedException {
 	
 	ExtentTestManager.endTest();
 }
+
+
+public void authorize() throws InterruptedException, IOException {
+	
+	
+    //Logout Functionality - Basic
+	ExtentTestManager.startTest("Logout Functionality - Basic");
+	Log.info("Logout Functionality - Basic");
+	
+	click(custSearch.custSignOut);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to the logout option & Click on the logout button.");
+	Log.info("Step:01 - Navigate to the logout option & Click on the logout button.");
+	
+	if(ElementDisplayed(custSearch.loginUserName)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is successfully logged out and redirected to the login page.");
+		Log.info("Expected Result: User is successfully logged out and redirected to the login page.");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+	
+	ExtentTestManager.endTest();
+	
+	
+	
+
+	//Login with Valid Credentials
+	ExtentTestManager.startTest("Login with Valid Credentials");
+	Log.info("Login with Valid Credentials");
+	
+	String UserName = configloader().getProperty("UserName2");
+	input(custSearch.loginUserName,UserName );
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid user ID.");
+	Log.info("Step:01 - Enter valid user ID.");
+
+	String Password = configloader().getProperty("Password2");
+	input(custSearch.loginPasswrd, Password);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid password.");
+	Log.info("Step:02 - Enter valid password.");
+	
+	click(custSearch.loginButton);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click the login button.");
+	Log.info("Step:03 - Click the login button.");
+
+	String userName = driver.findElement(goaldLoanRepo.userName).getText();
+	System.out.println(userName);
+	
+	String flag = "akash";
+	
+	if(!userName.equalsIgnoreCase(flag)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is successfully logged in and taken to the dashboard.");
+		Log.info("Expected Result: User is successfully logged in and taken to the dashboard.");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+	
+	ExtentTestManager.endTest();
+	
+	
+	
+
+	//Manager Authorization Window Access
+	ExtentTestManager.startTest("Manager Authorization Window Access");
+	Log.info("Manager Authorization Window Access");
+	
+	click(goaldLoanRepo.autorizeAndCancelTab);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to the 'Authorise & Cancel' section.");
+	Log.info("Step:01 - Navigate to the 'Authorise & Cancel' section.");
+	
+	click(goaldLoanRepo.managerAuthoTab);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on 'Manager Authorisation'.");
+	Log.info("Step:02 - Click on 'Manager Authorisation'.");
+	
+	if(ElementDisplayed(goaldLoanRepo.othersTab)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Manager Authorisation window opens successfully.");
+		Log.info("Expected Result: Manager Authorisation window opens successfully.");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+	
+	ExtentTestManager.endTest();
+	
+	
+	
+
+	//Accessing 'Others' Tab
+	ExtentTestManager.startTest("Accessing 'Others' Tab");
+	Log.info("Accessing 'Others' Tab");
+	
+	click(goaldLoanRepo.othersTab);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the 'Others' tab.");
+	Log.info("Step:01 - Click on the 'Others' tab.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Others' tab opens.");
+	Log.info("Expected Result: 'Others' tab opens.");
+
+	
+	ExtentTestManager.endTest();
+	
+	
+
+	//Accessing 'Refresh' Tab
+	ExtentTestManager.startTest("Accessing 'Refresh' Tab");
+	Log.info("Accessing 'Refresh' Tab");
+	
+	click(goaldLoanRepo.cashierRefreshBtn);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Refresh Button");
+	Log.info("Step:01 - Click Refresh Button");
+	
+	if(ElementDisplayed(goaldLoanRepo.othersCheckBox)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data will be displayed.");
+		Log.info("Expected Result: Data will be displayed.");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+	
+	ExtentTestManager.endTest();
+	
+	
+
+	//Customer Creation Data Selection & Authorize Customer Creation
+	ExtentTestManager.startTest("Customer Creation Data Selection & Authorize Customer Creation");
+	Log.info("Customer Creation Data Selection & Authorize Customer Creation");
+	
+	click(goaldLoanRepo.othersCheckBox);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select available customer creation data displayed below the tab.");
+	Log.info("Step:01 - Select available customer creation data displayed below the tab.");
+
+	click(goaldLoanRepo.otherAuthorizeBtn);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on the AUTHORISE button.");
+	Log.info("Step:02 - Click on the AUTHORISE button.");
+	
+	if(ElementDisplayed(goaldLoanRepo.confirmationPopUp)) {
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selected customer creation data is highlighted & Customer creation is authorised successfully without errors.");
+	Log.info("Expected Result: Selected customer creation data is highlighted & Customer creation is authorised successfully without errors.");
+	click(goaldLoanRepo.confirmationPopUp);
+	}else {
+		ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+		Log.info("ERROR");
+	}
+	
+	ExtentTestManager.endTest();
+	
+}//end
 
 
  }

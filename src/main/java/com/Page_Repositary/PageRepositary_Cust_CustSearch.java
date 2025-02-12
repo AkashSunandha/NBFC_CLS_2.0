@@ -216,6 +216,28 @@ public class PageRepositary_Cust_CustSearch {
 	public By custGridItem = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[2]/div[2]/table/tbody/tr");
 	public By custListTable = By.xpath("//*[@id=\"tblCustList\"]");
 	
+	//Authorize
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+	
 	//Signout
 	public By custSignOut = By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
 }

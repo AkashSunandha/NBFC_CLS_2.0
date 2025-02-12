@@ -66,14 +66,13 @@ public class AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan {
 				goaldLoan.nominee(testdata, context);
 				
 				goaldLoan.loanDetails(testdata, context);
+				
+				goaldLoan.transfer(testdata, context);
 
+				goaldLoan.authorize(testdata, context);
 
 				
-				
-				
-				
-				
-//				custSrchMthds.logout();
+				custSrchMthds.logout();
 				
 				
 
