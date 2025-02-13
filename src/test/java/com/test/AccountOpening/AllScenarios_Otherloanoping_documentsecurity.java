@@ -204,16 +204,16 @@ public class AllScenarios_Otherloanoping_documentsecurity {
 				personalLoan.userLogin1(testdata, context);
 
 				//TC-45
-				personalLoan.testManagerAuthorization();
+				personalLoan.testManagerAuthorization(testdata, context);
 
 				//TC-46
-				personalLoan.testRefreshBtn();
+				//personalLoan.testRefreshBtn();
 
 				//TC-47
 				personalLoan.testSelectAndAuthorize();
 
 				//TC-48
-				personalLoan.testCashierAuthorization();
+				personalLoan.testCashierAuthorization(testdata, context);
 
 
 				Thread.sleep(5000);

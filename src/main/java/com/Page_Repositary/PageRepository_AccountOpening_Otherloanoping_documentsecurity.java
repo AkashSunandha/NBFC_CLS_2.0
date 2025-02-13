@@ -104,11 +104,16 @@ public class PageRepository_AccountOpening_Otherloanoping_documentsecurity {
 	public By refreshBtn=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnRefresh\"]");
 	public By authorizeBtn=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnOtherPass\"]");	
 	public By authorizePage_checkbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect\"]");
+
 	
-	public By cashierAuthorize_checkbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect\"]");
+	
+	public By checkboxInTransfer=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect\"]");
+
+public By cashierAuthorize_checkbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect\"]");
 	//*[@id="ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect"]
 	public By cashier_authorizeBtn=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]");
 	public By closeIcon=By.xpath("//*[@id=\"closetop\"]");
+	
 	
 	//Transfer
 	
@@ -121,6 +126,13 @@ public class PageRepository_AccountOpening_Otherloanoping_documentsecurity {
 	public By submitInTransfer=By.xpath("//*[@id=\"btnSubmit\"]");
 	
 	public By transferTab=By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
+	
+	public By yesBtnInTransfer=By.xpath("//span[text()='YES']/parent::button");
+	public By makerID=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_txtMakerID_txt\"]");
+	public By goBtn=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnGo\"]");
+	public By OkBtn=By.xpath("//*[@id=\"close\"]");
+	
+	public By authorizeCheckbox=By.xpath("//span[contains(@title,\"102000015930 \")]/parent::*/parent::*/td[@class='chk']/input");
 	
 	
 }

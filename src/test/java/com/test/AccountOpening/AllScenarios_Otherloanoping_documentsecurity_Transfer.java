@@ -73,150 +73,153 @@ public class AllScenarios_Otherloanoping_documentsecurity_Transfer {
 				//TC-02
 				personalLoan.userLogin(testdata, context);
 
-				//TC-04
+				//TC-03
 				personalLoan.testSelectActiveLoanProduct();
 
 
-				//TC-05,06,07
+				//TC-04,05
 				personalLoan.testAddCustomer(testdata, context);
 
-				//TC-08
+				//TC-06
 				personalLoan.testResolutionNoField(testdata, context);
 
 
-				//TC-09
+				//TC-07
 				personalLoan.testResolutionDateField(testdata, context);
 
 
-				//TC-11
+				//TC-09
 				personalLoan.testEquiMortRegNoField(testdata, context);
 
-				//TC-12
+				//TC-10
 				personalLoan.testSelectEMRDate(testdata, context);
 
-				//TC-13
+				//TC-11
 				personalLoan.testAgentCode(testdata, context);
 
-				//TC-14
+				//TC-12
 				personalLoan.testDSACode(testdata, context);
 
-				//TC-15
+				
 				//personalLoan.testAreaField(testdata, context);
 
-				//TC-16
+				//TC-13
 				personalLoan.testRemarksField(testdata, context);
 
-				//TC-17
+				//TC-14
 				personalLoan.testNextBtnFunctionality1();
 
 
-				//TC-18
+				//TC-15
 				personalLoan.testDocumentTab();
 				
 				personalLoan.testAddBtn();
 
-				//TC-19
+				//TC-16
 				personalLoan.testSROfficeField();
 
-				//TC-20
+				//TC-17
 				personalLoan.testRegYear(testdata, context);
 
-				//TC-21
+				//TC-18
 				personalLoan.testDocNo(testdata, context);
 
-				//TC-24
+				//TC-20
 				personalLoan.testRegDate(testdata, context);
 
 
-				//TC-22
+				//TC-19
 				personalLoan.testSurveyNo(testdata, context);
 
 
-
-				//TC-25
+				//TC-21
 				personalLoan.testWorth(testdata, context);
 
-				//TC-26
+				//TC-22
 				personalLoan.testMarketGahanVal(testdata, context);
 
-				//TC-27
+				//TC-23
 				personalLoan.testAddBtnInDocSection();
 
-				//TC-29
+				//TC-24
 				personalLoan.testNextBtnFunc();
 
 
-				//TC-30
+				//TC-25
 				personalLoan.testCheckboxFunctioanlity();
 
 
 				//	personalLoan.testAddCustomer1(testdata, context);
 
 
-				//TC-31
+				//TC-26
 				personalLoan.testAadharNo();
 
-				//TC-32
+				//TC-27
 				personalLoan.testNameInNominee(testdata, context);
 				
-				//TC-33
+				//TC-28
 				personalLoan.testSelectRelation();
 
-				//TC-34
+				//TC-29
 				personalLoan.testDistrictDropdown();
 
-				//TC-35
+				//TC-30
 				personalLoan.testPostDropdown();
 
-				//TC-37
+				//TC-32
 				personalLoan.testDOBField(testdata, context);
 
 
-				//TC-38
+				//TC-33
 				personalLoan.testAddBtnFunctionality2();
 
-				//TC-39
+				//TC-34
 				personalLoan.testNextBtnFunctionality3();
 
-				//TC-41
+				//TC-35
 				personalLoan.testSanctionAmount(testdata, context);
 
-				//TC-42
+				//TC-36
 				personalLoan.testGetValueBtn();
 
-				//TC-43
+				//TC-37
 				personalLoan.testSelectTransactionMode1();
 
-				
+				//TC-38
 				personalLoan.testPostCredit();
 				
+				//TC-39
 				personalLoan.testTransactionBased(testdata, context);
 				
+				//TC-40
 				personalLoan.testGLName(testdata, context);
 				
+				//TC-41
 				personalLoan.testAmount(testdata, context);
 				
+				//TC-42
 				personalLoan.testSubmit();
 
-				//TC-44
+				//TC-43
 				personalLoan.testSaveBtnFunc();
 
-				//TC-45
+				
 				Thread.sleep(5000);
 				personalLoan.signOut();
 
-				//TC-45
+				//TC-44
 				personalLoan.userLogin1(testdata, context);
 
+				//TC-45
+				personalLoan.testManagerAuthorizationInTransfer(testdata, context);
+
 				//TC-46
-				personalLoan.testManagerAuthorizationInTransfer();
+				//personalLoan.testRefreshBtn();
 
 				//TC-47
-				personalLoan.testRefreshBtn();
-
-				//TC-48
 				personalLoan.testSelectAndAuthorize();
-
+                
 				
 				personalLoan.testCloseMessagePopup();
 				//TC-54

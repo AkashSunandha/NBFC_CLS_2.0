@@ -34,12 +34,14 @@ public class AccountOpening_Otherloanopening_jewelsecurity extends Base_Class {
 
 
 		ExtentTestManager.startTest("TC No. - 02 --> Login to LMS as User");
-		String loginUserName = testdata.get("loginUserName").toString();
+		//String loginUserName = testdata.get("loginUserName").toString();
+		String loginUserName=configloader().getProperty("UserName");
 		input(loanOpen.loginUserName, loginUserName);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
 		Log.info("Step-1: Enter valid username.");
 
-		String loginValidPassword = testdata.get("loginValidPassword").toString();
+		//String loginValidPassword = testdata.get("loginValidPassword").toString();
+		String loginValidPassword=configloader().getProperty("Password");
 		input(loanOpen.loginPasswrd, loginValidPassword);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Enter valid password.");
 		Log.info("Step-2: Enter valid password.");

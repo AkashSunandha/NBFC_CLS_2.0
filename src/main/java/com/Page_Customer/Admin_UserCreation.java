@@ -40,9 +40,12 @@ public class Admin_UserCreation extends Base_Class {
 	//TC-02 (3)
 	public void adminLogin(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		ExtentTestManager.startTest("TC No. - 02 --> Login with Admin User");
-		String loginUserName = testdata.get("loginUserName").toString();
+		//String loginUserName = testdata.get("loginUserName").toString();
+		String loginUserName=configloader().getProperty("adminUser");
 		input(custSearch.loginUserName, loginUserName);
-		String loginValidPassword = testdata.get("loginValidPassword").toString();
+		
+		//String loginValidPassword = testdata.get("loginValidPassword").toString();
+		String loginValidPassword=configloader().getProperty("adminPassword");
 		input(custSearch.loginPasswrd, loginValidPassword);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1-> Enter admin credentials (username and password)");

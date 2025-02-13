@@ -18,13 +18,11 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	PageRepository_AccountOpening_Otherloanoping_documentsecurity loanOpen = new PageRepository_AccountOpening_Otherloanoping_documentsecurity();
 	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
 
-	String query="Exec Getcustomer";
+	String query="Exec Getcustomer 102";
 	String columnName="CustomerID";
 
 	String parentWindow;
 	Set<String> allWindows;
-
-
 
 	public boolean signOut() throws InterruptedException {
 		ExtentTestManager.startTest(" SignOut");
@@ -44,12 +42,14 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 
 
 		ExtentTestManager.startTest("TC No. - 02 --> Login to LMS as User");
-		String loginUserName = testdata.get("loginUserName").toString();
+		//String loginUserName = testdata.get("loginUserName").toString();
+		String loginUserName=configloader().getProperty("UserName");
 		input(loanOpen.loginUserName, loginUserName);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
 		Log.info("Step-1: Enter valid username.");
 
-		String loginValidPassword = testdata.get("loginValidPassword").toString();
+	//	String loginValidPassword = testdata.get("loginValidPassword").toString();
+		String loginValidPassword=configloader().getProperty("Password");
 		input(loanOpen.loginPasswrd, loginValidPassword);
 
 
@@ -71,9 +71,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 
-	//TC-04 (4)
+	//TC-03 (4)
 	public void testSelectActiveLoanProduct() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 04 --> Select Active Loan Product");
+		ExtentTestManager.startTest("TC No. - 03 --> Select Active Loan Product");
 		click(loanOpen.accountOpening);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on account openong tab");
 		Log.info("Step-1: Click on account openong tab");
@@ -126,11 +126,11 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	//		ExtentTestManager.endTest();
 	//	}
 
-	//TC-05,6,7 (3)
+	//TC-04,05 (3)
 	public void testAddCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException   {
-		ExtentTestManager.startTest("TC No. - 05 --> Add Customer from Search");
-		//	String custID=quickCust.generateUniqueId(query, columnName);
-		String custID = testdata.get("custID").toString();
+		ExtentTestManager.startTest("TC No. - 04 --> Add Customer from Search");
+			String custID=quickCust.generateUniqueId(query, columnName);
+		//String custID = testdata.get("custID").toString();
 		input(loanOpen.custID_textbox, custID);
 		System.out.println(custID);
 		click(loanOpen.addBtn);
@@ -177,9 +177,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	//	}
 
 
-	//TC-08 (1)
+	//TC-06 (1)
 	public void testResolutionNoField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 08 --> Enter Resolution No");
+		ExtentTestManager.startTest("TC No. - 06 --> Enter Resolution No");
 		String resolutionNo = testdata.get("resolutionNo").toString();
 		input(loanOpen.resolutionNo, resolutionNo);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Resolution No");
@@ -189,9 +189,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-09 (2)
+	//TC-07 (2)
 	public void testResolutionDateField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 09 --> Enter Resolution Date");
+		ExtentTestManager.startTest("TC No. - 07 --> Enter Resolution Date");
 		String resolutionDate = testdata.get("resolutionDate").toString();
 		click(loanOpen.resolutionDate);
 		input(loanOpen.resolutionDate, resolutionDate);
@@ -207,9 +207,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 
 
 
-	//TC-11 (1)
+	//TC-09 (1)
 	public void testEquiMortRegNoField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 11 --> Enter Equitable Mort Reg.No");
+		ExtentTestManager.startTest("TC No. - 09 --> Enter Equitable Mort Reg.No");
 		String equitableMortRegNo = testdata.get("equitableMortRegNo").toString();
 		input(loanOpen.equitableMort, equitableMortRegNo);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Equitable Mort Reg.No");
@@ -219,9 +219,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-12 (2)
+	//TC-10 (2)
 	public void testSelectEMRDate(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 12 --> Select EMR Date");
+		ExtentTestManager.startTest("TC No. - 10 --> Select EMR Date");
 		String emrDate = testdata.get("emrDate").toString();
 		click(loanOpen.emrDate);
 		input(loanOpen.emrDate, emrDate);
@@ -232,9 +232,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();	
 	}
 
-	//TC-13 (1)
+	//TC-11 (1)
 	public void testAgentCode(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 13 --> Agent code are entered successfully.");
+		ExtentTestManager.startTest("TC No. - 11 --> Agent code are entered successfully.");
 		String agentCode = testdata.get("agentCode").toString();
 		input(loanOpen.agentCode, agentCode);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter Agent Code.");
@@ -244,9 +244,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-14 (1)
+	//TC-12 (1)
 	public void testDSACode(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 14 --> Enter DSA codes");
+		ExtentTestManager.startTest("TC No. - 12 --> Enter DSA codes");
 		String dsaCode = testdata.get("dsaCode").toString();
 		input(loanOpen.dsaCode, dsaCode);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter DSA Code.");
@@ -257,9 +257,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 
-	//TC-15 (1)
+	// (1)
 	public void testAreaField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 15 --> Enter Area");
+		ExtentTestManager.startTest("TC No. - 12 --> Enter Area");
 		String area = testdata.get("area").toString();
 		//input(loanOpen.area, area);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Area are entered successfully.");
@@ -267,9 +267,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-16 (1)
+	//TC-13 (1)
 	public void testRemarksField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 16 --> Give Remarks");
+		ExtentTestManager.startTest("TC No. - 13 --> Give Remarks");
 		String remark = testdata.get("remark").toString();
 		input(loanOpen.remark, remark);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Give Remarks in \"Remarks\" field");
@@ -279,9 +279,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 	//------------
-	//TC-17 (1)
+	//TC-14 (1)
 	public void testNextBtnFunctionality1() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 17 --> Next Button Functionality");
+		ExtentTestManager.startTest("TC No. - 14 --> Next Button Functionality");
 		click(loanOpen.nextBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: .Click the next button after giving all details");
 		Log.info("Step-1:  .Click the next button after giving all details");
@@ -300,9 +300,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		}
 	}
 
-	//TC-18 (2)
+	//TC-15 (2)
 	public void testDocumentTab() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 18 --> Validate document tab");
+		ExtentTestManager.startTest("TC No. - 15 --> Validate document tab");
 		//	testAddBtn();
 		click(loanOpen.documentLabel);
 
@@ -317,9 +317,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 
-	//TC-19 (3)
+	//TC-16 (3)
 	public void testSROfficeField() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 19 --> Validate SR Office dropdown");
+		ExtentTestManager.startTest("TC No. - 16 --> Validate SR Office dropdown");
 		select("1",loanOpen.srOfficeDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select SR Office option from drop down");
@@ -332,9 +332,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-20 (2)
+	//TC-17 (2)
 	public void testRegYear(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 20 --> Validate Reg Year Field");
+		ExtentTestManager.startTest("TC No. - 17 --> Validate Reg Year Field");
 
 		click(loanOpen.regYear);
 		String regYear = testdata.get("regYear").toString();
@@ -351,10 +351,11 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-21 (1)
+	//TC-18 (1)
 	public void testDocNo(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 21 --> Validate Doc No Field");
-		String docNo = testdata.get("docNo").toString();
+		ExtentTestManager.startTest("TC No. - 18 --> Validate Doc No Field");
+		//String docNo = testdata.get("docNo").toString();
+		String docNo=generateUniqueId(spPAN, clmnNamPAN);
 		input(loanOpen.docNo,docNo);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Doc No");
@@ -370,9 +371,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 
 
 
-	//TC-24 (2)
+	//TC-20 (2)
 	public void testRegDate(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 24 --> Validate Reg Date Field");
+		ExtentTestManager.startTest("TC No. - 20 --> Validate Reg Date Field");
 		click(loanOpen.regDate);
 		//Thread.sleep(5000);
 		String regDate = testdata.get("regDate").toString();
@@ -388,11 +389,12 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-22 (1)
+	//TC-19 (1)
 	public void testSurveyNo(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 22 --> Validate Survey No Field");
+		ExtentTestManager.startTest("TC No. - 19 --> Validate Survey No Field");
 		Thread.sleep(5000);
-		String surveyNo = testdata.get("surveyNo").toString();
+	//	String surveyNo = testdata.get("surveyNo").toString();
+		String surveyNo=generateUniqueId(spPAN, clmnNamPAN);
 		input(loanOpen.surveyNo, surveyNo);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Survey No.");
 		Log.info("Step-1:   Enter Survey No.");
@@ -404,9 +406,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-25 (1)
+	//TC-21 (1)
 	public void testWorth(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 25 --> Validate worth Field");
+		ExtentTestManager.startTest("TC No. - 21 --> Validate worth Field");
 
 		String worth = testdata.get("worth").toString();
 		input(loanOpen.worth, worth);
@@ -421,9 +423,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-26 (1)
+	//TC-22 (1)
 	public void testMarketGahanVal(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 26 --> Validate market gahan val Field");
+		ExtentTestManager.startTest("TC No. - 22 --> Validate market gahan val Field");
 
 		String marketGahanVal = testdata.get("marketGahanVal").toString();
 		input(loanOpen.marketGahanVal, marketGahanVal);
@@ -438,9 +440,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 
-	//TC-27 (2)
+	//TC-23 (2)
 	public void testAddBtnInDocSection() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 27 --> Validate market gahan val Field");
+		ExtentTestManager.startTest("TC No. - 23 --> Validate market gahan val Field");
 		click(loanOpen.addBtn2_document);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Click \"Add\" button");
@@ -456,9 +458,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 
 
 
-	//TC-29 (2)
+	//TC-24 (2)
 	public void testNextBtnFunc() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 29 --> Navigate to Nominee Tab");
+		ExtentTestManager.startTest("TC No. - 24 --> Navigate to Nominee Tab");
 		click(loanOpen.nextBtn_document);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Click 'Next' button");
@@ -474,9 +476,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 
 
 
-	//TC-30 (1)
+	//TC-25 (1)
 	public void testCheckboxFunctioanlity() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 30 --> Checkbox functionality");
+		ExtentTestManager.startTest("TC No. - 25 --> Checkbox functionality");
 		click(loanOpen.nomineeNotRequired_checkbox);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Untick \"Nominee not required\"");
@@ -520,9 +522,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	//			ExtentTestManager.endTest();
 	//		}
 
-	//TC-31(1)
+	//TC-26(1)
 	public void testAadharNo() throws ClassNotFoundException, InterruptedException {
-		ExtentTestManager.startTest("TC No. - 31 --> Validate aadhar no");
+		ExtentTestManager.startTest("TC No. - 26 --> Validate aadhar no");
 		String aadharNo = generateUniqueId(spAadhaar,clmnNamAadhaar);
 		input(loanOpen.aadharNo, aadharNo);
 
@@ -532,9 +534,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-32(1)
+	//TC-27(1)
 	public void testNameInNominee(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 32 --> Validate nominee name field");
+		ExtentTestManager.startTest("TC No. - 27 --> Validate nominee name field");
 
 		String nameInNominee = testdata.get("nameInNominee").toString();
 		input(loanOpen.nameInNominee, nameInNominee);
@@ -546,9 +548,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-TC-34(2)
+	//TC-29(2)
 	public void testDistrictDropdown() {
-		ExtentTestManager.startTest("TC No. - 34 --> Validate district dropdown");
+		ExtentTestManager.startTest("TC No. - 29 --> Validate district dropdown");
 
 		select("89",loanOpen.district_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Able to select option in district dropdown");
@@ -558,9 +560,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 
-	//TC-35(2)
+	//TC-30(2)
 	public void testPostDropdown() {
-		ExtentTestManager.startTest("TC No. - 35 --> Validate post dropdown");
+		ExtentTestManager.startTest("TC No. - 30 --> Validate post dropdown");
 
 		select("13406",loanOpen.post_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Able to select option in post dropdown");
@@ -569,9 +571,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-	//TC-37(1)
+	//TC-32(1)
 	public void testDOBField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 37 --> Validate post dropdown");
+		ExtentTestManager.startTest("TC No. - 32 --> Validate post dropdown");
 		click(loanOpen.dob_textbox);
 		String dob = testdata.get("dob").toString();
 		input(loanOpen.dob_textbox, dob);
@@ -584,7 +586,7 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 	//-----
-	//TC-33 (2)
+	//TC-28 (2)
 	public void testSelectRelation() throws InterruptedException  {
 		ExtentTestManager.startTest("TC No. - 33 --> Select relation");
 		select("15",loanOpen.relation_dropdown);
@@ -596,9 +598,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 
-	//TC-38 (2)
+	//TC-33 (2)
 	public void testAddBtnFunctionality2() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 38 --> Add Button functionality");
+		ExtentTestManager.startTest("TC No. - 33 --> Add Button functionality");
 		click(loanOpen.addBtn_nominee);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Click add button");
 		Log.info("Step-1:  Click add button");
@@ -616,9 +618,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 
-	//TC-39 (2)
+	//TC-34 (2)
 	public void testNextBtnFunctionality3() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 39 --> Next Button Functionality");
+		ExtentTestManager.startTest("TC No. - 34 --> Next Button Functionality");
 		click(loanOpen.nextBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Click the next button after giving all details in nominee tab");
 		Log.info("Step-1:  Click the next button after giving all details in nominee tab");
@@ -630,9 +632,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 
-	//TC-40 (1)
+	//TC-35 (1)
 	public void testSanctionAmount(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 40 -->  Enter sanction amount.");
+		ExtentTestManager.startTest("TC No. - 35 -->  Enter sanction amount.");
 		String sanctioned = testdata.get("sanctioned").toString();
 		input(loanOpen.sanctioned, sanctioned);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Enter sanction amount.");
@@ -643,9 +645,9 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 
-	//TC-41 (2)
+	//TC-36 (2)
 	public void testGetValueBtn() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. -41 --> Validate get value button");
+		ExtentTestManager.startTest("TC No. -36 --> Validate get value button");
 		click(loanOpen.getValuesBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Click get values button");
 		Log.info("Step-1:  Click get values button");
@@ -656,9 +658,10 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-
+	
+//TC-37
 	public void testSelectTransactionMode1() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 40 --> Select Transaction Mode");
+		ExtentTestManager.startTest("TC No. - 37 --> Select Transaction Mode");
 		select("2",loanOpen.transModeDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select transaction mode as cash.");
 		Log.info("Step-1:  Select transaction mode as cash.");
@@ -669,57 +672,119 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();
 	}
 
-
+//TC-38
 	public void testPostCredit() throws InterruptedException {
+		ExtentTestManager.startTest("TC No. - 38 --> Validate post credit button");
 		parentWindow=driver.getWindowHandle();
 		click(loanOpen.postCreditBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select Post credit button");
+		Log.info("Step-1:  Select Post credit button");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Auto posting popup window will be opened");
+		Log.info("Expected Result: Auto posting popup window will be opened");
 		allWindows=driver.getWindowHandles();
+		ExtentTestManager.endTest();
 	}
 
+	//TC-39
 	public void testTransactionBased(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
+		ExtentTestManager.startTest("TC No. - 39 --> Validate transaction based field");
 		for (String window : allWindows) {
 			if(!window.equalsIgnoreCase(parentWindow)) {
 				driver.switchTo().window(window);
 			}
 		}
 		select("2",loanOpen.transactionBased);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Give transaction based as \"GL Code\"");
+		Log.info("Step-1:   Give transaction based as \"GL Code\"");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: GL code related field will be display (GL name,GL code)");
+		Log.info("Expected Result: GL code related field will be display (GL name,GL code)");
 
 		String glACCCode = testdata.get("glACCCode").toString();
 		input(loanOpen.glAccCode, glACCCode);
+		ExtentTestManager.endTest();
 	}
 
+	//TC-40
 	public void testGLName(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
+		ExtentTestManager.startTest("TC No. - 40 --> Validate GL name field");
 		String glName = testdata.get("glName").toString();
 		input(loanOpen.glName, glName);
 		driver.findElement(loanOpen.glName).sendKeys(Keys.DOWN);
 		driver.findElement(loanOpen.glName).sendKeys(Keys.ENTER);
-
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Select the \"GL Name\" from the drop down");
+		Log.info("Step-1:   Select the \"GL Name\" from the drop down");
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: GL Name is added");
 		Log.info("Expected Result: GL Name is added");		
-
+		ExtentTestManager.endTest();
 	}
 
+	//TC-41
 	public void testAmount(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
+		ExtentTestManager.startTest("TC No. - 41 --> Validate amount field");
 		String amount = testdata.get("amount").toString();
 
 		click(loanOpen.amountInTransfer);
 		//driver.findElement(loanOpen.amountInTransfer).clear();
 		clear(loanOpen.amountInTransfer);
 		input(loanOpen.amountInTransfer, amount);
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Give the amount in \"Amount\" field");
+		Log.info("Step-1:   Give the amount in \"Amount\" field");
 		click(loanOpen.addBtnInTransfer);
-
+		ExtentTestManager.getTest().log(Status.PASS, "Step-2:   Click add button");
+		Log.info("Step-2:   Click add button");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Given details will be displays in the grid");
+		Log.info("Expected Result: Given details will be displays in the grid");
+		ExtentTestManager.endTest();
 	}
 
+	//TC-42
 	public void testSubmit() throws InterruptedException {
+		ExtentTestManager.startTest("TC No. - 42 --> Validate submit button");
 		click(loanOpen.submitInTransfer);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Click submit button after adding the details in the auto posting popup window");
+		Log.info("Step-1:   Click submit button after adding the details in the auto posting popup window");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup window will be closed");
+		Log.info("Expected Result: Popup window will be closed");
 		driver.switchTo().window(parentWindow);
+		ExtentTestManager.endTest();
 	}
 
 	//TC-43 (2)
 	public void testSaveBtnFunc() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 43 --> Select Transaction Mode");
-
 		click(loanOpen.saveBtn);
+		try {
+			click(loanOpen.yesBtnInTransfer);
+			if(ElementDisplayed(loanOpen.signOut)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Signout is present");
+				Log.info("Expected Result: Signout is present");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
+			}
+
+		}catch(Exception e) {
+
+			// click(loanOpen.okBtn);
+
+			if(ElementDisplayed(loanOpen.signOut)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Signout is present");
+				Log.info("Expected Result: Signout is present");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
+			}
+
+		}
+		
+	//	click(loanOpen.saveBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Click save button.");
 		Log.info("Step-1:  Click save button.");
 		if(driver.findElement(loanOpen.newAccountOpenedLabel).isDisplayed()) {
@@ -730,16 +795,18 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 	//TC-44 (3)
-	public void userLogin1(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
+	public void userLogin1(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		//signOut();
 
 		ExtentTestManager.startTest("TC No. - 44 --> Login to LMS as another User");
-		String loginUserName1 = testdata.get("loginUserName1").toString();
+		//String loginUserName1 = testdata.get("loginUserName1").toString();
+		String loginUserName1=configloader().getProperty("UserName1");
 		input(loanOpen.loginUserName, loginUserName1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
 		Log.info("Step-1: Enter valid username.");
 
-		String loginValidPassword1 = testdata.get("loginValidPassword1").toString();
+	//	String loginValidPassword1 = testdata.get("loginValidPassword1").toString();
+		String loginValidPassword1=configloader().getProperty("Password1");
 		input(loanOpen.loginPasswrd, loginValidPassword1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Enter valid password.");
 		Log.info("Step-2: Enter valid password.");
@@ -755,13 +822,11 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		Log.info("Expected Result: Another user successfully logs in to LMS.");
 		//}
 		ExtentTestManager.endTest();
-
 	}
 
-
-	//TC-50 (3)-Transfer----------------------------------------------------------------------
-	public void testManagerAuthorizationInTransfer() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 50 --> Manager Authorization");
+	//TC-45 (3)-Transfer----------------------------------------------------------------------
+	public void testManagerAuthorizationInTransfer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
+		ExtentTestManager.startTest("TC No. - 45 --> Manager Authorization");
 
 		click(loanOpen.authorizeAndCancel);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on authorize and cancel tab");
@@ -772,7 +837,16 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		Log.info("Step-2: Click on manager authorization tab");
 
 		click(loanOpen.transferTab);
-
+		ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on transfer tab");
+		Log.info("Step-3: Click on transfer tab");
+		String makerId = testdata.get("makerId").toString();
+		
+		input(loanOpen.makerID, makerId);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-4: Enter makerid ");
+		Log.info("Step-4: Enter makerid");
+		click(loanOpen.goBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-5: Click on go button");
+		Log.info("Step-5: Click on go button");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Manager Authorization window should be display");
 		Log.info("Expected Result: Manager Authorization window should be display");
@@ -780,14 +854,7 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		ExtentTestManager.endTest();	
 	}
 
-
-
-
-
-
 	//signout (1)
-
-
 
 	//TC-46 (1)
 	public void testRefreshBtn() throws InterruptedException {
@@ -807,12 +874,12 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	public void testSelectAndAuthorize() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 47 --> Select and authorize the customer in manager authorization page");
 
-		click(loanOpen.authorizePage_checkbox);
-		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
-		Log.info("Step-1: Click on refresh button");
+		click(loanOpen.checkboxInTransfer);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on checkbox");
+		Log.info("Step-1: Click on checkbox");
 		click(loanOpen.authorizeBtn);
-		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
-		Log.info("Step-1: Click on refresh button");
+		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Click on authorize button");
+		Log.info("Step-2: Click on authorize button");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry is authorized");
 		Log.info("Expected Result: Entry is authorized");
@@ -823,6 +890,8 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 
 	public void testCloseMessagePopup() throws InterruptedException {
 		click(loanOpen.closeIcon);
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Message popup is closed");
+		Log.info("Expected Result: Message popup is closed");
 	}
 
 	//	//TC-53 (1)
