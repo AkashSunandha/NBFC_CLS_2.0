@@ -9,14 +9,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
-import com.Page_Customer.AccountOpening_Otherloanopening_jewelsecurity;
+import com.Page_Customer.AccountOpening_Otherloanopening_jewelsecurity_Transfer;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_PersonalLoan {
+public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 
 		com.Utility.ExcelReader ExcelReader;
 		Base_Class Base_Class;
@@ -32,11 +32,11 @@ public class AllScenarios_PersonalLoan {
 		//PageRepository_Cust_InstitutionalCust institutionalCust = new PageRepository_Cust_InstitutionalCust();
 
 
-		AccountOpening_Otherloanopening_jewelsecurity personalLoan = new AccountOpening_Otherloanopening_jewelsecurity();
+		AccountOpening_Otherloanopening_jewelsecurity_Transfer personalLoan = new AccountOpening_Otherloanopening_jewelsecurity_Transfer();
 
 		@BeforeSuite
 		public void reference() {
-			ExcelReader = new com.Utility.ExcelReader("LoanOpening");
+			ExcelReader = new com.Utility.ExcelReader("Otherloanopening_jewelsecurity");
 			log = new Log();
 			TestListener = new TestListener();
 			screenShot = new com.Utility.ScreenShot(null);
@@ -128,26 +128,45 @@ public class AllScenarios_PersonalLoan {
 					//TC-21
 					personalLoan.testCheckboxFunctioanlity();
 					
+					
+					//personalLoan.testAddCustomer1(testdata, context);
+					
 					//TC-22
-					personalLoan.testAddCustomer1(testdata, context);
+					personalLoan.testAadharNo();
 					
 					//TC-23
-					personalLoan.testSelectRelation();
+					personalLoan.testNameInNominee(testdata, context);
+					
 					
 					//TC-24
-					personalLoan.testAddBtnFunctionality2();
+					personalLoan.testSelectRelation();
 					
 					//TC-25
-					personalLoan.testNextBtnFunctionality3();
+					personalLoan.testDistrictDropdown();
 					
 					//TC-26
-					personalLoan.testSanctionAmount(testdata, context);
-					
-					//TC-27
-					personalLoan.testGetValueBtn();
+					personalLoan.testPostDropdown();
 					
 					//TC-28
-					personalLoan.testSelectTransactionMode();
+					personalLoan.testDOBField(testdata, context);
+					
+					
+	
+					
+					//TC-29
+					personalLoan.testAddBtnFunctionality2();
+					
+					//TC-30
+					personalLoan.testNextBtnFunctionality3();
+					
+					//TC-31
+					personalLoan.testSanctionAmount(testdata, context);
+					
+					//TC-32
+					personalLoan.testGetValueBtn();
+					
+					//TC-34
+					personalLoan.testSelectTransactionMode1();
 					
 					//TC-29
 					Thread.sleep(5000);
@@ -157,19 +176,14 @@ public class AllScenarios_PersonalLoan {
 					personalLoan.userLogin1(testdata, context);
 					
 					//TC-31
-					personalLoan.testManagerAuthorization();
+					personalLoan.testManagerAuthorization(testdata, context);
 					
 					//TC-32
-					personalLoan.testRefreshBtn();
+					//personalLoan.testRefreshBtn();
 					
 					//TC-33
 					personalLoan.testSelectAndAuthorize();
 					
-					//TC-35
-					personalLoan.testCashierAuthorization();
-					
-					//TC-36
-					personalLoan.testSelectAndAuthorizeInCashier();
 					
 					
 					Thread.sleep(5000);

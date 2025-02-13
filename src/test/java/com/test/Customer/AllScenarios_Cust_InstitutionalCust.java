@@ -75,7 +75,6 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 				custSrchMthds.pcRegistration(testdata, context);
 
 
-
 				//TC-02
 				instituCust.userLogin(testdata, context);
 
@@ -625,30 +624,27 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 
 				//TC-326
 				instituCust.testOtherTabBtn();
-				
+
 				//TC-327
 				instituCust.testRefreshBtn();
 
 				//TC-328
 				instituCust.testSelectAndAuthorize();
 
-
-
 				instituCust.closePop();
 				Thread.sleep(5000);
 				userCreate.signOut();
-
-
-
-
 
 				// EndTest
 				ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();
 			}		
 		}catch(Exception e) {
-			System.out.println(e);
+			ExtentTestManager.getTest().log(Status.FAIL, e);
+			Log.info("Exception "+e);
+			ExtentTestManager.endTest();            
 		}
+
 	}
 
 	@DataProvider(name = "TestData")

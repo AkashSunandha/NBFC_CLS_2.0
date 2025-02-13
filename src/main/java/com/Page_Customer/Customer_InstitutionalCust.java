@@ -86,6 +86,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.startTest("TC No. - 05 --> Verify Module Name");
 
 		ElementDisplayed(institutionalCust.firstName);
+	
 		ExtentTestManager.getTest().log(Status.PASS, "Step1: Check module name displayed at the top.");
 		Log.info("Step1: Check module name displayed at the top.");
 
@@ -3013,7 +3014,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 		ExtentTestManager.startTest("TC No. - 324 --> Login to LMS as another User");
 		//String loginUserName1 = testdata.get("loginUserName1").toString();
-        String loginUserName1=configloader().getProperty("Username1");
+        String loginUserName1=configloader().getProperty("UserName1");
 		input(institutionalCust.loginUserName, loginUserName1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
 		Log.info("Step-1: Enter valid username.");

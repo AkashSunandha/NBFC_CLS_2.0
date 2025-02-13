@@ -27,7 +27,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	Set<String> allWindows;
 
 
-	//TC-49,54 (1)
+	// (1)
 	public boolean signOut() throws InterruptedException {
 		ExtentTestManager.startTest(" SignOut");
 		click(loanOpen.signOut);
