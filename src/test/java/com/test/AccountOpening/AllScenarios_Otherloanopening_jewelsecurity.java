@@ -128,64 +128,64 @@ public class AllScenarios_Otherloanopening_jewelsecurity {
 					//TC-21
 					personalLoan.testCheckboxFunctioanlity();
 					
-					//TC-22
+					
 					//personalLoan.testAddCustomer1(testdata, context);
 					
+					//TC-22
 					personalLoan.testAadharNo();
 					
+					//TC-23
 					personalLoan.testNameInNominee(testdata, context);
 					
 					
-					//TC-23
+					//TC-24
 					personalLoan.testSelectRelation();
 					
-					
+					//TC-25
 					personalLoan.testDistrictDropdown();
 					
-					
+					//TC-26
 					personalLoan.testPostDropdown();
 					
-					
-					personalLoan.testDOBField(testdata, context);
-					
-					
-	
-					
-					//TC-24
-					personalLoan.testAddBtnFunctionality2();
-					
-					//TC-25
-					personalLoan.testNextBtnFunctionality3();
-					
-					//TC-26
-					personalLoan.testSanctionAmount(testdata, context);
-					
-					//TC-27
-					personalLoan.testGetValueBtn();
-					
 					//TC-28
-					personalLoan.testSelectTransactionMode();
+					personalLoan.testDOBField(testdata, context);
+				
 					
 					//TC-29
+					personalLoan.testAddBtnFunctionality2();
+					
+					//TC-30
+					personalLoan.testNextBtnFunctionality3();
+					
+					//TC-31
+					personalLoan.testSanctionAmount(testdata, context);
+					
+					//TC-32
+					personalLoan.testGetValueBtn();
+					
+					//TC-33
+					personalLoan.testSelectTransactionMode();
+					
+					//TC-34
 					Thread.sleep(5000);
 					personalLoan.signOut();
 
-					//TC-30
+					//TC-35
 					personalLoan.userLogin1(testdata, context);
 					
-					//TC-31
+					//TC-36
 					personalLoan.testManagerAuthorization(testdata, context);
 					
-					//TC-32
+					//TC-37
 					//personalLoan.testRefreshBtn();
 					
-					//TC-33
+					//TC-38
 					personalLoan.testSelectAndAuthorize();
 					
-					//TC-35
+					//TC-40
 					personalLoan.testCashierAuthorization();
 					
-					//TC-36
+					//TC-41
 					personalLoan.testSelectAndAuthorizeInCashier(testdata, context);
 					
 					
@@ -198,7 +198,9 @@ public class AllScenarios_Otherloanopening_jewelsecurity {
 					ExtentManager.getInstance().flush();
 				}		
 			}catch(Exception e) {
-				System.out.println(e);
+				ExtentTestManager.getTest().log(Status.FAIL, e);
+				Log.info("Exception "+e);
+				ExtentTestManager.endTest();            
 			}
 		}
 

@@ -724,7 +724,7 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	//TC-41
 	public void testAmount(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		ExtentTestManager.startTest("TC No. - 41 --> Validate amount field");
-		String amount = testdata.get("amount").toString();
+		String amount = testdata.get("amountInCashMode").toString();
 
 		click(loanOpen.amountInTransfer);
 		//driver.findElement(loanOpen.amountInTransfer).clear();

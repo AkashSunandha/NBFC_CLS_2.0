@@ -151,8 +151,6 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					personalLoan.testDOBField(testdata, context);
 					
 					
-	
-					
 					//TC-29
 					personalLoan.testAddBtnFunctionality2();
 					
@@ -168,23 +166,43 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					//TC-34
 					personalLoan.testSelectTransactionMode1();
 					
-					//TC-29
+					
+					//TC-35
+					personalLoan.testPostCredit();
+					
+					//TC-36
+					personalLoan.testTransactionBased(testdata, context);
+					
+					//TC-37
+					personalLoan.testGLName(testdata, context);
+					
+					//TC-38
+					personalLoan.testAmount(testdata, context);
+					
+					//TC-39
+					personalLoan.testSubmit();
+					
+					//TC-40
+					personalLoan.testSaveBtnFunc();
+					
+				
 					Thread.sleep(5000);
 					personalLoan.signOut();
 
-					//TC-30
+					//TC-41
 					personalLoan.userLogin1(testdata, context);
 					
-					//TC-31
+					//TC-42
 					personalLoan.testManagerAuthorization(testdata, context);
 					
-					//TC-32
+					//TC-43
 					//personalLoan.testRefreshBtn();
 					
-					//TC-33
+					//TC-44
 					personalLoan.testSelectAndAuthorize();
 					
-					
+			
+					personalLoan.testCloseMessagePopup();
 					
 					Thread.sleep(5000);
 					personalLoan.signOut();
@@ -195,7 +213,9 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					ExtentManager.getInstance().flush();
 				}		
 			}catch(Exception e) {
-				System.out.println(e);
+				ExtentTestManager.getTest().log(Status.FAIL, e);
+				Log.info("Exception "+e);
+				ExtentTestManager.endTest();            
 			}
 		}
 

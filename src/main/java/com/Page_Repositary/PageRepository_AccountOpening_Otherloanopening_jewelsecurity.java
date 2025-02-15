@@ -128,7 +128,7 @@ public class PageRepository_AccountOpening_Otherloanopening_jewelsecurity {
 	public By submitInTransfer=By.xpath("//*[@id=\"btnSubmit\"]");
 	
 	public By transferTab=By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
-	
+	public By transfer_checkbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect\"]");
 	public By yesBtnInTransfer=By.xpath("//span[text()='YES']/parent::button");
 	
 	

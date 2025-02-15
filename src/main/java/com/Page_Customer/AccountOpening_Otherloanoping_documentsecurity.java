@@ -20,7 +20,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	PageRepository_AccountOpening_Otherloanoping_documentsecurity loanOpen = new PageRepository_AccountOpening_Otherloanoping_documentsecurity();
 	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
 
-	String query="Exec Getcustomer";
+	String query="Exec Getcustomer 102";
 	String columnName="CustomerID";
 
 	String parentWindow;
@@ -358,7 +358,8 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	//TC-21 (1)
 	public void testDocNo(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		ExtentTestManager.startTest("TC No. - 21 --> Validate Doc No Field");
-		String docNo = testdata.get("docNo").toString();
+		//String docNo = testdata.get("docNo").toString();
+		String docNo=generateUniqueId(spPAN, clmnNamPAN);
 		input(loanOpen.docNo,docNo);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Doc No");
@@ -396,7 +397,8 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 		public void testSurveyNo(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 			ExtentTestManager.startTest("TC No. - 22 --> Validate Survey No Field");
 			Thread.sleep(5000);
-			String surveyNo = testdata.get("surveyNo").toString();
+		//	String surveyNo = testdata.get("surveyNo").toString();
+			String surveyNo=generateUniqueId(spPAN, clmnNamPAN);
 			input(loanOpen.surveyNo, surveyNo);
 			ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Survey No.");
 			Log.info("Step-1:   Enter Survey No.");
@@ -444,7 +446,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 
 	//TC-27 (2)
 	public void testAddBtnInDocSection() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 27 --> Validate market gahan val Field");
+		ExtentTestManager.startTest("TC No. - 27 --> Validate add button");
 		click(loanOpen.addBtn2_document);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Click \"Add\" button");

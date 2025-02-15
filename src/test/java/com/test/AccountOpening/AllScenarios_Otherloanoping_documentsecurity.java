@@ -226,7 +226,9 @@ public class AllScenarios_Otherloanoping_documentsecurity {
 				
 			}		
 		}catch(Exception e) {
-			System.out.println(e);
+			ExtentTestManager.getTest().log(Status.FAIL, e);
+			Log.info("Exception "+e);
+			ExtentTestManager.endTest();            
 		}
 	}
 
