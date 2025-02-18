@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -15,6 +16,7 @@ import org.testng.Assert;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
+import com.Page_Customer.Customer_CustomerSearch;
 import com.Page_Repositary.PageRepositary_Cust_CustRegister;
 import com.Utility.Log;
 import com.Utility.ScreenShot;
@@ -23,6 +25,7 @@ import com.extentReports.ExtentTestManager;
 
 public class Customer_MultipleFD_Opening extends Base_Class {
 	PageRepositary_Multi_FD_Module multifd = new PageRepositary_Multi_FD_Module();
+	
 	ScreenShot sc = new ScreenShot(null);
 
 //Customer Login Window
@@ -486,8 +489,10 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 		ExtentTestManager.startTest("TC:15 - Enter customer ID in customer");
 		Log.info("TC:15 - Enter customer ID in customer");
 
-		if (ElementDisplayed(multifd.SearchIcon)) {
 			click(multifd.SearchIcon);
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Customer ID Search button.");
+			Log.info("Step:01 - Click on the Customer ID Search button.");
 
 			String mainWindowHandle = driver.getWindowHandle();
 			Set<String> allWindowHandles = driver.getWindowHandles();
@@ -498,20 +503,14 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 					break;
 				}
 			}
-
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Customer ID Search button.");
-			Log.info("Step:01 - Click on the Customer ID Search button.");
-
+		
 			driver.close();
+			
 			driver.switchTo().window(mainWindowHandle);
 			Log.info("Switched back to the main window.");
-
-			Assert.assertTrue(ElementDisplayed(multifd.SearchIcon),
-					"Validation Failed: Customer ID popup is not display.");
-
+			
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer Search popoup is visible.");
 			Log.info("Expected Result: Customer Search popoup is visible.");
-		}
 
 		ExtentTestManager.endTest();
 		return true;
@@ -522,7 +521,6 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 		ExtentTestManager.startTest("TC:16 - Enter customer ID in customer");
 		Log.info("TC:16 - Enter customer ID in customer");
 
-		if (ElementDisplayed(multifd.SearchIcon)) {
 			click(multifd.SearchIcon);
 
 			String mainWindowHandle = driver.getWindowHandle();
@@ -556,7 +554,6 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 					"Expected Result: Customer is listing similar to the entered Customer name");
 			Log.info("Expected Result: Customer is listing similar to the entered Customer name");
 
-		}
 
 		ExtentTestManager.endTest();
 		return true;
@@ -568,9 +565,6 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 		ExtentTestManager.startTest("TC:17 - Customer Nominee Search");
 		Log.info("TC:17 - Customer Nominee Search");
 
-		//CustomerID(testdata, context);
-
-		if (ElementDisplayed(multifd.SearchIcon)) {
 			click(multifd.SearchIcon);
 
 			String mainWindowHandle = driver.getWindowHandle();
@@ -603,11 +597,10 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Nominee details auto-fill upon selection");
 			Log.info("Expected Result: Nominee details auto-fill upon selection");
 
-		}
-
 		ExtentTestManager.endTest();
 		return true;
 	}
+	
 	public boolean MandatoryNameField(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
 		
@@ -770,6 +763,7 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 			
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Next' button");
 		Log.info("Step:01 - Click 'Next' button");
+		
 
 		boolean NextPageVisible = ElementDisplayed(multifd.NextButton);
 
@@ -783,6 +777,552 @@ public class Customer_MultipleFD_Opening extends Base_Class {
 		ExtentTestManager.endTest();
 		return true;
 	}
+	
+	public boolean OperatorCustomerID() throws InterruptedException {
+
+		ExtentTestManager.startTest("TC:25 - Operator Search and Selection");
+		Log.info("TC:25 - Operator Search and Selection");
+
+			click(multifd.OperatorSearchIcon);
+
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Search button aligned near to Customer ID Field.");
+			Log.info("Step:01 - Click on the Search button aligned near to Customer ID Field.");
+			
+			 String mainWindowHandle = driver.getWindowHandle(); 
+			 Set<String> allWindowHandles = driver.getWindowHandles();
+			 
+			  
+			 for (String handle : allWindowHandles) { 
+				 if(!handle.equals(mainWindowHandle)) {
+			  driver.switchTo().window(handle); 
+			  break;
+			 } 
+				 }
+						
+			driver.close();
+			
+			driver.switchTo().window(mainWindowHandle);
+			Log.info("Switched back to the main window.");
+
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer Search popup page is opened.");
+			Log.info("Expected Result: Customer Search popup page is opened.");
+		
+
+		ExtentTestManager.endTest();
+		return true;
+	}
+	
+	public boolean OperatorCustomerIDSearch(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+
+		ExtentTestManager.startTest("TC:26 - Enter customer ID in customer");
+		Log.info("TC:26 - Enter customer ID in customer");
+
+			click(multifd.OperatorSearchIcon);
+
+			String mainWindowHandle = driver.getWindowHandle();
+			Set<String> allWindowHandles = driver.getWindowHandles();
+
+			for (String handle : allWindowHandles) {
+				if (!handle.equals(mainWindowHandle)) {
+					driver.switchTo().window(handle);
+					break;
+				}
+			}
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter Name ");
+			Log.info("Step:01 - Enter Name ");
+
+			if (testdata.get("CustomerName") != null) {
+				String CustomerName = testdata.get("CustomerName").toString();
+				input(multifd.custName1, CustomerName);
+			} else {
+				throw new IllegalArgumentException("CustomerName is missing in the test data.");
+			}
+
+			click(multifd.SearchBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - click on search button");
+			Log.info("Step:02 - click on search button");
+
+			driver.close();
+			driver.switchTo().window(mainWindowHandle);
+			Log.info("Switched back to the main window.");
+
+			ExtentTestManager.getTest().log(Status.PASS,
+					"Expected Result: Customer is listing similar to the entered Customer name");
+			Log.info("Expected Result: Customer is listing similar to the entered Customer name");
+
+
+		ExtentTestManager.endTest();
+		return true;
+	}
+	
+	public boolean OperatorCustomerIDSelection(Map<Object, Object> testdata, ITestContext context)
+			throws InterruptedException {
+
+		ExtentTestManager.startTest("TC:27 - Customer Nominee Search");
+		Log.info("TC:27 - Customer Nominee Search");
+		
+			click(multifd.OperatorSearchIcon);
+
+			String mainWindowHandle = driver.getWindowHandle();
+			Set<String> allWindowHandles = driver.getWindowHandles();
+
+			for (String handle : allWindowHandles) {
+				if (!handle.equals(mainWindowHandle)) {
+					driver.switchTo().window(handle);
+					break;
+				}
+			}
+			if (testdata.get("CustomerName") != null) {
+				String CustomerName = testdata.get("CustomerName").toString();
+				input(multifd.custName1, CustomerName);
+			} 
+			else {
+				throw new IllegalArgumentException("CustomerName is missing in the test data.");
+			}
+
+			click(multifd.SearchBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Search for nominee");
+			Log.info("Step:01 -  Search for nominee");
+
+			click(multifd.SelectCustName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select a nominee from search results");
+			Log.info("Step:02 - Select a nominee from search results");
+
+			driver.switchTo().window(mainWindowHandle);
+			Log.info("Switched back to the main window.");
+
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Nominee details auto-fill upon selection");
+			Log.info("Expected Result: Nominee details auto-fill upon selection");
+
+		ExtentTestManager.endTest();
+		return true;
+	}
+	
+	public boolean OperatorRelationDesig(Map<Object, Object> testdata, ITestContext context)
+			throws InterruptedException {
+
+		ExtentTestManager.startTest("TC:28 - Operator Relation Entry");
+		Log.info("TC:28 - Operator Relation Entry");
+				
+			click(multifd.RelationDesig);
+			
+			String EnterOperatorRelation = testdata.get("OperatorRelation").toString();
+			input(multifd.RelationDesig, EnterOperatorRelation);
+
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter relation in Relation Field.");
+			Log.info("Step:01 - Enter relation in Relation Field.");
+
+			Assert.assertTrue(ElementDisplayed(multifd.RelationDesig), "Validation Failed: Relation is not entered.");
+
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Relation is validly entered");
+			Log.info("Expected Result: Relation is validly entered");
+
+			ExtentTestManager.endTest();
+			return true;
+		}
+	
+	
+	public boolean OperatorRemarkEntry(Map<Object, Object> testdata, ITestContext context)
+			throws InterruptedException {
+
+		ExtentTestManager.startTest("TC:29 - Operator Remark Entry");
+		Log.info("TC:29 - Operator Remark Entry");
+				
+			click(multifd.OperatorRemark);
+			
+			String EnterOperatorRemark = testdata.get("OperatorRemark").toString();
+			input(multifd.OperatorRemark, EnterOperatorRemark);
+
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter remark in Remark Field.");
+			Log.info("Step:01 - Enter remark in Remark Field.");
+
+			Assert.assertTrue(ElementDisplayed(multifd.OperatorRemark), "Validation Failed: Remark is not entered.");
+
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Remark is validly entered");
+			Log.info("Expected Result: Remark is validly entered");
+
+			ExtentTestManager.endTest();
+			return true;
+		}
+	
+public boolean AddOperatorBtn() throws InterruptedException {
+		
+		ExtentTestManager.startTest("TC:30 - Operator Details Addition");
+		Log.info("TC:30 - Operator Details Addition");
+		
+		if(ElementDisplayed(multifd.OperatorAdd)) {
+			click(multifd.OperatorAdd);
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Add' button");
+		Log.info("Step:01 - Click 'Add' button");
+
+		boolean AddOperatorDetailsVisible = ElementDisplayed(multifd.OperatorAdd);
+
+		Assert.assertTrue(AddOperatorDetailsVisible, "Validation Failed: Operator details are not added successful.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Operator details are added to the record");
+		Log.info("Expected Result: Operator details are added to the record");
+		
+		}
+		
+		ExtentTestManager.endTest();
+		return true;
+			
+		}
+		
+	public boolean InterestTransferTabPresence() throws InterruptedException {
+		
+		ExtentTestManager.startTest("TC:31 - Interest Transfer Tab Presence");
+		Log.info("TC:31 - Interest Transfer Tab Presence");
+		
+		if(ElementDisplayed(multifd.OperatorNext)) {
+			click(multifd.OperatorNext);
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Next' button");
+		Log.info("Step:01 - Click 'Next' button");
+		
+
+		boolean NextPageNavigation = ElementDisplayed(multifd.OperatorNext);
+
+		Assert.assertTrue(NextPageNavigation, "Validation Failed: Operator Tab Navigation is not successful.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Interest transfer tab is present");
+		Log.info("Expected Result: Interest transfer tab is present");
+		
+		}
+		
+		ExtentTestManager.endTest();
+		return true;
+	}
+	
+	public boolean InterestTransferRequiredCheckbox() throws InterruptedException {
+
+		ExtentTestManager.startTest("TC:32 - Interest Transfer Requirements");
+		Log.info("TC:32 - Interest Transfer Requirements");
+
+		try {
+
+			WebElement IntrestTransferCheckbox = driver
+					.findElement(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_chkStandInst']"));
+
+			ExtentTestManager.getTest().log(Status.PASS,
+					"Step:01 - Add a tick on the checkbox aligned to Interest Transfer Required");
+			Log.info("Step:01 - Add a tick on the checkbox aligned to Interest Transfer Required");
+
+			if (ElementDisplayed(multifd.IntrestTransferCheckbox)) {
+			click(multifd.IntrestTransferCheckbox);
+
+				ExtentTestManager.getTest().log(Status.PASS,
+						"Expected Result : Interest Transfer adding fields are visible on adding  a tick on the checkbox.");
+				Log.info("Expected Result : Interest Transfer adding fields are visible on adding  a tick on the checkbox.");
+			} 
+			else {
+				ExtentTestManager.getTest().log(Status.INFO, "Tick is already selected.");
+				Log.info("Tick is already selected.");
+			}
+
+			Assert.assertTrue(IntrestTransferCheckbox.isSelected(), "Validation Failed: Checkbox is selected.");
+		} 
+		catch (Exception e) {
+			
+			ExtentTestManager.getTest().log(Status.FAIL, "Exception occurred: " + e.getMessage());
+			Log.error("Exception occurred: " + e.getMessage());
+			Assert.fail("Test failed due to an unexpected error.");
+		}
+
+		ExtentTestManager.endTest();
+		return true;
+
+	}
+	
+public boolean ProductDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+		
+		ExtentTestManager.startTest("TC:33 - Interest Transfer Data Entry");
+		Log.info("TC:33 - Interest Transfer Data Entry");
+		
+		if (ElementDisplayed(multifd.SelectProduct)) {
+			click(multifd.SelectProduct);
+
+			ExtentTestManager.getTest().log(Status.PASS, "Step 01: Select a Product from the product Dropdown list. Eg: Suspense Liability");
+			Log.info("Step 01: Select a Product from the product Dropdown list. Eg: Suspense Liability");
+			
+
+			WebDriverWait wait = new WebDriverWait(driver, 10);
+			WebElement option = wait
+					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[2]/div/div[2]/div[4]/div/div/table/tbody/tr[1]/td[4]/div/select/optgroup/option")));
+			option.click();
+			
+			Assert.assertTrue(true, "The Product should be successfully selected");
+			
+			click(multifd.AccountNumber);
+			
+			WebElement accountNumberField = driver.findElement(multifd.AccountNumber);
+			
+			String EnterAccountNumber = testdata.get("Account No.").toString();
+			input(multifd.AccountNumber, EnterAccountNumber);
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter an account numbr Eg: 1");
+			Log.info("Step:02 - Enter an account numbr Eg: 1");
+		
+				
+			Assert.assertTrue(ElementDisplayed(multifd.AccountNumber), "Validation Failed: Acount Number is not entered.");
+						
+			accountNumberField.sendKeys(Keys.TAB);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on TAB button in the keyboard");
+			Log.info("Step:03 - Click on TAB button in the keyboard");
+			
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account Details is autoloaded.");
+			Log.info("Expected Result: Account Details is autoloaded.");
+
+		}
+		
+		ExtentTestManager.endTest();
+		return true;
+	}
+
+public boolean EnterFrequency(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:34 - Interest Transfer Data Entry");
+	Log.info("TC:34 - Interest Transfer Data Entry");
+	
+	
+		click(multifd.Frequency);
+
+		WebElement FrequencyField = driver.findElement(multifd.Frequency);
+		
+		String EnterFrequency = testdata.get("Frequency").toString();
+		input(multifd.Frequency, EnterFrequency);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter the Frequency as 1");
+		Log.info("Step:01 - Enter the Frequency as 1");
+	
+			
+		Assert.assertTrue(ElementDisplayed(multifd.Frequency), "Validation Failed: Frequency Field is not entered.");
+					
+		FrequencyField.sendKeys(Keys.TAB);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on TAB button in the keyboard");
+		Log.info("Step:02 - Click on TAB button in the keyboard");
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Amount,  Startdate and End date are autoloaded.");
+		Log.info("Expected Result: Amount,  Startdate and End date are autoloaded.");
+
+	ExtentTestManager.endTest();
+	return true;
+}
+
+public boolean OnMaturityTabNavigation() throws InterruptedException {
+	
+	ExtentTestManager.startTest("TC:35 - On Maturity Tab Navigation");
+	Log.info("TC:35 - On Maturity Tab Navigation");
+	
+	if(ElementDisplayed(multifd.IntrestNextButton)) {
+		click(multifd.IntrestNextButton);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Next' button");
+	Log.info("Step:01 - Click 'Next' button");
+	
+
+	boolean OnMaturityNextPageNavigation = ElementDisplayed(multifd.IntrestNextButton);
+
+	Assert.assertTrue(OnMaturityNextPageNavigation, "Validation Failed: Operator Tab Navigation is not successful.");
+
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'On Maturity' tab is present");
+	Log.info("Expected Result: 'On Maturity' tab is present");
+	
+	}
+	
+	ExtentTestManager.endTest();
+	return true;
+}
+
+public boolean MaturityActionSelection() throws InterruptedException {
+	
+	ExtentTestManager.startTest("TC:36 - Maturity Action Selection");
+	Log.info("TC:36 - Maturity Action Selection");
+	
+		WebElement KeepSameAccountCheckbox = driver
+				.findElement(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpAutoRenewal_MATFM_rdbSameAccount']"));
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - select. 'Keep in same account'");
+		Log.info("Step:01 - select. 'Keep in same account'");
+
+		if (KeepSameAccountCheckbox.isSelected()) {
+			KeepSameAccountCheckbox.click();
+
+			ExtentTestManager.getTest().log(Status.PASS,
+					"Expected Result : clicked on the radio aligend against 'Keep in Same Account.'");
+			Log.info("Expected Result : clicked on the radio aligend against 'Keep in Same Account.'");
+		} 
+		else {
+			
+			ExtentTestManager.getTest().log(Status.INFO, "Tick is already selected.");
+			Log.info("Tick is already selected.");
+		}
+
+		Assert.assertTrue(KeepSameAccountCheckbox.isSelected(), "Validation Failed: Checkbox is selected.");
+
+	ExtentTestManager.endTest();
+	return true;
+}
+
+public boolean MultipleAccountCheckbox() throws InterruptedException {
+	
+	ExtentTestManager.startTest("TC:37 - Multiple Account Checkbox");
+	Log.info("TC:37 - Multiple Account Checkbox");
+	
+	WebElement MultipleAccountCheckbox = driver.findElement(By.xpath("//input[@id ='chkIsMultipleAc']"));
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", MultipleAccountCheckbox);
+
+		Thread.sleep(1000);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Make a tick on the checkbox aligned newar to 'Is Multiple A/C'");
+		Log.info("Step:01 - Make a tick on the checkbox aligned newar to 'Is Multiple A/C'");
+
+			MultipleAccountCheckbox.click();
+			
+			Assert.assertTrue(MultipleAccountCheckbox.isSelected(), "Validation Failed: Checkbox is selected.");
+			
+			ExtentTestManager.getTest().log(Status.INFO, "Tick is already selected.");
+			Log.info("Tick is already selected.");
+
+			ExtentTestManager.getTest().log(Status.PASS, "Text field is enabled on adding the Tick");
+			Log.info("Expected Result : Text field is enabled on adding the Tcick");
+		
+
+	ExtentTestManager.endTest();
+	return true;
+}
+
+public boolean IsMultipleAccount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:38 - Multiple Account Checkbox");
+	Log.info("TC:38 - Multiple Account Checkbox");
+	
+	
+		click(multifd.MutipleAccountText);
+
+		WebElement MutipleAccountTxtField = driver.findElement(multifd.MutipleAccountText);
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", MutipleAccountTxtField);
+
+		Thread.sleep(1000);
+		
+		clear(multifd.MutipleAccountText);
+		
+		String EnterAccountNumber = testdata.get("IsMultipleAccountText").toString();
+		input(multifd.MutipleAccountText, EnterAccountNumber);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter 5 as the count visible on the Text box appered near to the Checbox");
+		Log.info("Step:01 - Enter 5 as the count visible on the Text box appered near to the Checbox");
+	
+			
+		Assert.assertTrue(ElementDisplayed(multifd.MutipleAccountText), "Validation Failed: Is Multiple Account Field is not entered.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 5 is entred Successfully.");
+		Log.info("Expected Result: 5 is entred Successfully.");
+
+	ExtentTestManager.endTest();
+	return true;
+}
+
+//Cash Trans. Mode
+
+public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:39 - Final Deposit Configuration");
+	Log.info("TC:39 - Final Deposit Configuration");
+	
+	WebElement TransMode = driver.findElement(multifd.MutipleAccountText);
+
+	
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", TransMode);
+	
+	if (ElementDisplayed(multifd.TransMode)) {
+		click(multifd.TransMode);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step 01: Select 'Trans.mode'as Cash.");
+		Log.info("Step 01: Select 'Trans.mode'as Cash.");
+		
+
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement option = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/table/tbody/tr[2]/td[2]/div/table/tbody/tr/td[3]/div/select/option[2]")));
+		option.click();
+		
+		Assert.assertTrue(true, "The Cash Mode should be successfully selected");
+		
+		Thread.sleep(1000);
+		
+		click(multifd.SaveBtn);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step 02: click save");
+		Log.info("Step 02: click save");
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Deposit opening is saved, results in summary");
+		Log.info("Expected Result: Deposit opening is saved, results in summary");
+
+	
+	}
+	ExtentTestManager.endTest();
+	return true;
+}
+
+	public boolean CashierAuthorization(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:40 - Cashier Authorization");
+	Log.info("TC:40 - Cashier Authorization");
+	
+	ExtentTestManager.startTest("Logout");
+	Log.info("Logout");
+	
+	Thread.sleep(2000);
+	
+	click(multifd.custSignOut);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on 'Signout'");
+	Log.info("Step:01 -  Click on 'Signout'");
+	if(ElementDisplayed(multifd.loginButton)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
+		Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
+	}
+	driver.close();
+
+	
+			String loginNewUserName = testdata.get("LoginNewUserName").toString();
+			input(multifd.loginUserName, loginNewUserName);
+			
+			String loginNewValidPassword = testdata.get("LoginNewPassword").toString();
+			input(multifd.loginPasswrd, loginNewValidPassword);
+
+			click(multifd.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Login as another user.");
+			Log.info("Step:01 - Login as another user.");
+			
+			if(ElementDisplayed(multifd.CashAuthorisation)) {
+				click(multifd.CashAuthorisation);
+				
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Navigate to Authorize&cancel -> Cashier authorization window.");
+			Log.info("Step:02 - Navigate to Authorize&cancel -> Cashier authorization window.");
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Cashier authorization window opens");
+			Log.info("Expected Result: Cashier authorization window opens");
+
+				
+			}
+	
+
+	ExtentTestManager.endTest();
+	return true;
+	
+}
+
 	private WebElement visibilityOfElementLocated(By xpath) {
 		// TODO Auto-generated method stub
 		return null;

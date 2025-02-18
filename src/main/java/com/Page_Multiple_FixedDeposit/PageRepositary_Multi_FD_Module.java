@@ -72,8 +72,32 @@ public class PageRepositary_Multi_FD_Module
 		public By NextButton = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnNext']");
 		public By OperatorSearchIcon = By.xpath("//td[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp3_OF1_tdCustAdd']");
 		public By OperatorRemark = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tp3_OF1_txtRemark_txt']");
+		public By RelationDesig = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp3_OF1_txtRelation_txt']");
 		public By OperatorAdd = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp3_OF1_btnAddOperator']");
 		public By OperatorNext = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnNext']");
+		public By IntrestTransferCheckbox = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_chkStandInst']");
+		public By IntrestNextBtn = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnNext']");
+		public By KeepSameAccount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpAutoRenewal_MATFM_rdbSameAccount']");
+		public By IsMultipleAccount = By.xpath("//input[@id ='chkIsMultipleAc']");
+		public By MutipleAccountText = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstAcInfo_ctrl0_AIF1_txtMultipleAc']");
+		public By TransMode = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_lstAcInfo_ctrl0_AIF1_ddlTransMode_ddl']");
+		public By SaveBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnSave']");
+		public By SelectProduct = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_ddlFromProduct_ddl']");
+		public By AccountNumber = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtStandAcNoF_txt']");
+		public By Frequency = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtExeFrequency_txt']");
+		public By Amount1 = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtStandAmount_txt']");
+		public By IntrestNextButton = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnNext']");
+		public By AuthorizeCancel = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[@class='submenu']/ul[@id='CreateMenu']/li[10]/div[1]");
+		public By ManagerAuthorization = By.xpath("//a[normalize-space()='Manager Authorisation (MNAU)']");
+		public By Transfer = By.xpath("//span[@id = '__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer']");
+		public By Refresh = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnRefresh']");
+		public By OpeningEntryTransferCheckbox = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect']");
+		public By TransferAuthorizeBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnOtherPass']");
+		public By Cash = By.xpath("//span[@id ='__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash']");
+		public By CashAuthorisation = By.xpath("//a[normalize-space()='Cashier Authorisation (CAAU)']");
+		public By OpeningEntryCashCheckbox = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect']");
+		public By CashAuthorizeBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnSubmit']");
+		public By CashSectionEntry = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect']");
 		//Signout
 		public By custSignOut = By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
 

@@ -126,7 +126,55 @@ public class AllScenarios_Multi_MultiFD_Opening extends Base_Class {
 				
 				//TC_24 ---> Operator Tab Navigation
 				multifd.OperatorTabNavigation();
-
+				
+				//TC_25 ---> Operator Search and Selection
+				multifd.OperatorCustomerID();
+				
+				//TC_26 ---> Enter customer ID in customer 
+				multifd.OperatorCustomerIDSearch(testdata, context);
+				
+				//TC_27 ---> Operator Customer Search and Selection
+				multifd.OperatorCustomerIDSelection(testdata, context);
+				
+				//TC_28 ---> Operator Relation Entry
+				multifd.OperatorRelationDesig(testdata, context);
+				
+				//TC_29 ---> Operator Remark Entry
+				multifd.OperatorRemarkEntry(testdata, context);
+				
+				//TC_30 ---> Operator Details Addition
+				multifd.AddOperatorBtn();
+				
+				//TC_31 ---> Interest Transfer Tab Presence
+				multifd.InterestTransferTabPresence();
+				
+				//TC_32 ---> Interest Transfer Requirements
+				multifd.InterestTransferRequiredCheckbox();
+				
+				//TC_33 ----> Interest Transfer Data Entry
+				multifd.ProductDropdown(testdata, context);
+				
+				//TC_34 ---> Interest Transfer Data Entry
+				multifd.EnterFrequency(testdata, context);
+				
+				//TC_35 ---> On Maturity Tab Navigation
+				multifd.OnMaturityTabNavigation();
+				
+				//TC_36 ----> Maturity Action Selection
+				multifd.MaturityActionSelection();
+				
+				//TC_37 ---> Multiple Account Checkbox
+				multifd.MultipleAccountCheckbox();
+				
+				//TC_38 ----> Multiple Account Checkbox
+				multifd.IsMultipleAccount(testdata, context);
+				
+				//TC_39 ---> Final Deposit Configuration
+				multifd.FinalDepositConfiguration(testdata, context);
+				
+				//TC_40 ---> Cashier Authorization
+				multifd.CashierAuthorization(testdata, context);
+				
 				// Sign out
 				Thread.sleep(3000);
 				custSrchMthds.logout();
