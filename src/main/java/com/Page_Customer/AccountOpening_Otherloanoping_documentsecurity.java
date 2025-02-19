@@ -1,12 +1,12 @@
 package com.Page_Customer;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Map;
 import java.util.Set;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -379,7 +379,10 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	public void testRegDate(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		ExtentTestManager.startTest("TC No. - 24 --> Validate Reg Date Field");
 		click(loanOpen.regDate);
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
+		WebDriverWait wait = new WebDriverWait(driver,120);
+		wait.until(ExpectedConditions.presenceOfElementLocated(loanOpen.regDate));
+		
 		String regDate = testdata.get("regDate").toString();
 		input(loanOpen.regDate, regDate);
 		
