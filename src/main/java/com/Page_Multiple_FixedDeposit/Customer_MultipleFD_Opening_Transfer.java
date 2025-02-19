@@ -23,8 +23,8 @@ import com.Utility.ScreenShot;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
-public class Customer_MultipleFD_Opening extends Base_Class {
-	PageRepositary_Multi_FD_Module multifd = new PageRepositary_Multi_FD_Module();
+public class Customer_MultipleFD_Opening_Transfer extends Base_Class {
+	Pages_Multi_FD_Module multifd = new Pages_Multi_FD_Module();
 	
 	ScreenShot sc = new ScreenShot(null);
 
@@ -1231,8 +1231,6 @@ public boolean IsMultipleAccount(Map<Object, Object> testdata, ITestContext cont
 	return true;
 }
 
-//Cash Trans. Mode
-
 public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
 	ExtentTestManager.startTest("TC:39 - Final Deposit Configuration");
@@ -1288,12 +1286,10 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 	click(multifd.custSignOut);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on 'Signout'");
 	Log.info("Step:01 -  Click on 'Signout'");
-	if(ElementDisplayed(multifd.loginButton)) {
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
-		Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
-	}
-	driver.close();
-
+	
+	Assert.assertTrue(ElementDisplayed(multifd.loginButton), "Validation Failed: User is not logged out successfully.");
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
+	Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 	
 			String loginNewUserName = testdata.get("LoginNewUserName").toString();
 			input(multifd.loginUserName, loginNewUserName);
@@ -1305,24 +1301,187 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Login as another user.");
 			Log.info("Step:01 - Login as another user.");
 			
-			if(ElementDisplayed(multifd.CashAuthorisation)) {
+			Thread.sleep(4000);
+			
+			WebElement CashMode = driver.findElement(multifd.AuthorizeCancel);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView(true);", CashMode);
+			
+			Assert.assertTrue(ElementDisplayed(multifd.AuthorizeCancel), "Validation Failed: 'Authorize & Cancel' option is not displayed.");
+			
+				click(multifd.AuthorizeCancel);
 				click(multifd.CashAuthorisation);
 				
 			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Navigate to Authorize&cancel -> Cashier authorization window.");
 			Log.info("Step:02 - Navigate to Authorize&cancel -> Cashier authorization window.");
 			
+			Assert.assertTrue(ElementDisplayed(multifd.CashAuthorisation), "Validation Failed: Cashier authorization window did not open.");
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Cashier authorization window opens");
 			Log.info("Expected Result: Cashier authorization window opens");
-
-				
-			}
 	
-
 	ExtentTestManager.endTest();
 	return true;
 	
 }
 
+	public boolean CashierAuthorizationRefresh() throws InterruptedException{
+		
+		ExtentTestManager.startTest("TC:41 - Cashier Authorization");
+		Log.info("TC:41 - Cashier Authorization");
+		
+		click(multifd.Refresh);
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Refresh' button.");
+		Log.info("Step:01 - Click 'Refresh' button.");
+		
+		Assert.assertTrue(ElementDisplayed(multifd.Refresh), "Validation Failed: 'Refresh' button is not displayed.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry will be display");
+		Log.info("Expected Result: Entry will be display");
+			
+		ExtentTestManager.endTest();
+		return true;
+		
+	}
+	
+	public boolean CashierAuthorizationSelectCheckBox() throws InterruptedException{
+		
+		ExtentTestManager.startTest("TC:42 - Cashier Authorization");
+		Log.info("TC:42 - Cashier Authorization");
+		
+		if(ElementDisplayed(multifd.OpeningEntryCashCheckbox)) {
+		click(multifd.OpeningEntryCashCheckbox);
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Select check box of opening entry.");
+		Log.info("Step:01 -  Select check box of opening entry.");
+		
+		Assert.assertTrue(ElementDisplayed(multifd.OpeningEntryCashCheckbox), "Validation Failed: 'Checkbox' is not Selected.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the entry");
+		Log.info("Expected Result: Possible to select the entry");
+			
+		}
+		
+		ExtentTestManager.endTest();
+		return true;
+		
+	}
+	
+	public boolean CashierAuthorizationAuthorize() throws InterruptedException{
+		
+		ExtentTestManager.startTest("TC:43 - Cashier Authorization");
+		Log.info("TC:43 - Cashier Authorization");
+		
+		if(ElementDisplayed(multifd.CashAuthorizeBtn)) {
+		click(multifd.CashAuthorizeBtn);
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Authorize button");
+		Log.info("Step:01 - Click Authorize button");
+		
+		Assert.assertTrue(ElementDisplayed(multifd.CashAuthorizeBtn), "Validation Failed: 'Authorize' button is not Clicked.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction is authorized by Cashier.");
+		Log.info("Expected Result: Transaction is authorized by Cashier.");
+			
+		}
+		
+		ExtentTestManager.endTest();
+		return true;
+		
+	}
+	
+	public boolean ManagerAuthorization() throws InterruptedException{
+		
+		ExtentTestManager.startTest("TC:44 - Manager Authorization");
+		Log.info("TC:44 - Manager Authorization");
+		
+		WebElement ManagerCashMode = driver.findElement(multifd.ManagerAuthorization);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", ManagerCashMode);
+		
+		click(multifd.ManagerAuthorization);
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Authorize&cancel -> Manager authorization window.");
+		Log.info("Step:01 - Navigate to Authorize&cancel -> Manager authorization window.");
+		
+		Assert.assertTrue(ElementDisplayed(multifd.ManagerAuthorization), "Validation Failed: Manager authorization window not opens");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Manager authorization window opens");
+		Log.info("Expected Result: Manager authorization window opens");	
+			
+		ExtentTestManager.endTest();
+		return true;
+		
+	}
+	
+	public boolean ManagerAuthorizationRefresh() throws InterruptedException{
+		
+		ExtentTestManager.startTest("TC:45 - Manager Authorization");
+		Log.info("TC:45 - Manager Authorization");
+		
+		click(multifd.Refresh);
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Refresh' button.");
+		Log.info("Step:01 - Click 'Refresh' button.");
+		
+		Assert.assertTrue(ElementDisplayed(multifd.Refresh), "Validation Failed: 'Refresh' button is not displayed.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry will be display");
+		Log.info("Expected Result: Entry will be display");
+			
+		ExtentTestManager.endTest();
+		return true;
+		
+	}
+	
+	public boolean ManagerAuthorizationSelectCheckBox() throws InterruptedException{
+		
+		ExtentTestManager.startTest("TC:46 - Manager Authorization");
+		Log.info("TC:46 - Manager Authorization");
+		
+		if(ElementDisplayed(multifd.ManagerCheckBox)) {
+		click(multifd.ManagerCheckBox);
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select transaction entry from the cash section.");
+		Log.info("Step:01 - Select transaction entry from the cash section.");
+		
+		Assert.assertTrue(ElementDisplayed(multifd.ManagerCheckBox), "Validation Failed: Transaction entry from the cash section not selected.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the entry");
+		Log.info("Expected Result: Possible to select the entry");
+			
+		}
+		
+		ExtentTestManager.endTest();
+		return true;
+		
+	}
+	
+	public boolean ManagerAuthorizationAuthorize() throws InterruptedException{
+		
+		ExtentTestManager.startTest("TC:47 - Manager Authorization");
+		Log.info("TC:47 - Manager Authorization");
+		
+		if(ElementDisplayed(multifd.ManagerAuthorizen)) {
+		click(multifd.ManagerAuthorizen);
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Authorize button");
+		Log.info("Step:01 - Click Authorize button");
+		
+		Assert.assertTrue(ElementDisplayed(multifd.ManagerAuthorizen), "Validation Failed: 'Authorize' button is not Clicked.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction is authorized by Manager.");
+		Log.info("Expected Result: Transaction is authorized by Manager.");
+		
+		click(multifd.ClosePopup);
+			
+		}
+		
+		ExtentTestManager.endTest();
+		return true;
+		
+	}
+		
 	private WebElement visibilityOfElementLocated(By xpath) {
 		// TODO Auto-generated method stub
 		return null;

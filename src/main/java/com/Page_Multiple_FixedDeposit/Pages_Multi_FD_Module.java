@@ -3,7 +3,7 @@ package com.Page_Multiple_FixedDeposit;
 import org.openqa.selenium.By;
 
 
-public class PageRepositary_Multi_FD_Module
+public class Pages_Multi_FD_Module
 {
 	//PC Registration
 		public By formName = By.xpath("//*[@id='Username']");
@@ -95,9 +95,12 @@ public class PageRepositary_Multi_FD_Module
 		public By TransferAuthorizeBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnOtherPass']");
 		public By Cash = By.xpath("//span[@id ='__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash']");
 		public By CashAuthorisation = By.xpath("//a[normalize-space()='Cashier Authorisation (CAAU)']");
-		public By OpeningEntryCashCheckbox = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect']");
+		public By OpeningEntryCashCheckbox = By.xpath("//input[@id='ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl5_chkSelect']");
+		public By ManagerAuthorizen = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnOtherPass']");
 		public By CashAuthorizeBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnSubmit']");
 		public By CashSectionEntry = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect']");
+		public By ManagerCheckBox = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl4_chkSelect']");
+		public By ClosePopup = By.xpath("//img[@id = 'closetop']");
 		//Signout
 		public By custSignOut = By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
 

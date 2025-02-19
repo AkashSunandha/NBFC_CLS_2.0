@@ -10,7 +10,8 @@ import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
 import com.Page_Customer.Customer_CustomerRegister;
-import com.Page_Multiple_FixedDeposit.Customer_MultipleFD_Opening;
+//import com.Page_Multiple_FixedDeposit.Customer_MultipleFD_Opening;
+import com.Page_Multiple_FixedDeposit.Customer_MultipleFD_Opening_Cash;
 import com.Page_Repositary.PageRepositary_Cust_CustRegister;
 import com.Page_Repositary.PageRepositary_Cust_CustSearch;
 import com.Utility.Log;
@@ -18,19 +19,19 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_Multi_MultiFD_Opening extends Base_Class {
+public class AllScenarios_Multi_MultiFD_Opening_Cash extends Base_Class {
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 
-	Customer_MultipleFD_Opening multifd = new Customer_MultipleFD_Opening();
+	Customer_MultipleFD_Opening_Cash multifd = new Customer_MultipleFD_Opening_Cash();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("Multiple_FD");
+		ExcelReader = new com.Utility.ExcelReader("Multiple_FD_Cash");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -174,6 +175,28 @@ public class AllScenarios_Multi_MultiFD_Opening extends Base_Class {
 				
 				//TC_40 ---> Cashier Authorization
 				multifd.CashierAuthorization(testdata, context);
+				
+				//TC_41 ---> Cashier Authorization
+				multifd.CashierAuthorizationRefresh();
+				
+				//TC_42 ---> Cashier Authorization
+				multifd.CashierAuthorizationSelectCheckBox();
+				
+				//TC_43 ---> Cashier Authorization
+				multifd.CashierAuthorizationAuthorize();
+				
+				//TC_44 ---> Manager Authorization
+				multifd.ManagerAuthorization();
+				
+				//TC_45 ---> Manager Authorization
+				multifd.ManagerAuthorizationRefresh();
+				
+				//TC_46 ---> Manager Authorization
+				multifd.ManagerAuthorizationSelectCheckBox();
+				
+				//TC_47 ---> Manager Authorization
+				multifd.ManagerAuthorizationAuthorize();
+				
 				
 				// Sign out
 				Thread.sleep(3000);
