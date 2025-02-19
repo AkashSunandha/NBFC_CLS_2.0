@@ -174,9 +174,6 @@ public class AllScenarios_Otherloanoping_documentsecurity {
 				personalLoan.testDOBField(testdata, context);
 
 
-				
-
-
 				//TC-38
 				personalLoan.testAddBtnFunctionality2();
 

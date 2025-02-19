@@ -1,4 +1,4 @@
-[ERROR] 2025-02-15 13:13:33.992 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-19 11:44:54.489 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_Otherloanoping_documentsecurity.gettestdate(AllScenarios_Otherloanoping_documentsecurity.java:239) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_Otherloanoping_documentsecurity.gettestdate(AllScenarios_Otherloanoping_documentsecurity.java:236) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-02-15 13:13:34.018 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-19 11:44:54.506 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -71,7 +71,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_Otherloanoping_documentsecurity.gettestdate(AllScenarios_Otherloanoping_documentsecurity.java:239) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_Otherloanoping_documentsecurity.gettestdate(AllScenarios_Otherloanoping_documentsecurity.java:236) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-02-15 13:13:34.021 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-19 11:44:54.509 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -124,7 +124,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_Otherloanoping_documentsecurity.gettestdate(AllScenarios_Otherloanoping_documentsecurity.java:239) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_Otherloanoping_documentsecurity.gettestdate(AllScenarios_Otherloanoping_documentsecurity.java:236) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-02-15 13:13:34.031 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-19 11:44:54.515 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_Otherloanoping_documentsecurity.gettestdate(AllScenarios_Otherloanoping_documentsecurity.java:239) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_Otherloanoping_documentsecurity.gettestdate(AllScenarios_Otherloanoping_documentsecurity.java:236) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,102 +210,102 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[INFO ] 2025-02-15 13:13:35.116 [main] Log - *** Running test method TC_Otherloanoping_documentsecurityModule...
-[INFO ] 2025-02-15 13:13:35.122 [main] Log - Step-1: Launch NBFC application.
-[INFO ] 2025-02-15 13:13:43.259 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-02-15 13:13:47.029 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-02-15 13:13:49.644 [main] Log - PC Registration
-[INFO ] 2025-02-15 13:13:50.745 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-02-15 13:13:51.811 [main] Log - Step:02 - Enter PC Name in Name field.
-[INFO ] 2025-02-15 13:14:00.553 [main] Log - Step:03 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-02-15 13:14:04.840 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-02-15 13:14:06.206 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-02-15 13:14:07.331 [main] Log - Step-1: Enter valid username.
-[INFO ] 2025-02-15 13:14:08.383 [main] Log - Step-2: Enter valid password.
-[INFO ] 2025-02-15 13:14:17.819 [main] Log - Step-3: Click on 'Login'.
-[INFO ] 2025-02-15 13:14:27.824 [main] Log - Expected Result: User successfully logs in to LMS.
-[INFO ] 2025-02-15 13:14:32.275 [main] Log - Step-1: Click on account openong tab
-[INFO ] 2025-02-15 13:14:36.565 [main] Log - Step-2: Click on loan openong tab
-[INFO ] 2025-02-15 13:14:40.886 [main] Log - Step-3: Click on loan and advances tab
-[INFO ] 2025-02-15 13:14:47.344 [main] Log - Step-4: Click on persoanl loan weekly tab
-[INFO ] 2025-02-15 13:14:47.347 [main] Log - Expected Result: The user can successfully select an active loan product i.e .. Personal loan Weekly.
-[INFO ] 2025-02-15 13:16:57.779 [main] Log - Expected Result: Customer is added successfully.
-[INFO ] 2025-02-15 13:16:58.936 [main] Log - Step-1:  Enter Resolution No
-[INFO ] 2025-02-15 13:16:58.937 [main] Log - Expected Result: Resolution No are entered successfully.
-[INFO ] 2025-02-15 13:17:04.433 [main] Log - Step-1:  Open the date picker
-[INFO ] 2025-02-15 13:17:04.434 [main] Log - Step-2:   Select Resolution Date
-[INFO ] 2025-02-15 13:17:04.435 [main] Log - Expected Result: Resolution date are entered successfully.
-[INFO ] 2025-02-15 13:17:05.561 [main] Log - Step-1:  Enter Equitable Mort Reg.No
-[INFO ] 2025-02-15 13:17:05.562 [main] Log - Expected Result: Equitable Mort Reg.No are entered successfully
-[INFO ] 2025-02-15 13:17:11.027 [main] Log - Step-1:  Selet the EMR Date from date picker
-[INFO ] 2025-02-15 13:17:11.027 [main] Log - Expected Result: EMR Date are selected successfully
-[INFO ] 2025-02-15 13:17:12.167 [main] Log - Step-1:  Enter Agent Code.
-[INFO ] 2025-02-15 13:17:12.167 [main] Log - Expected Result: Agent code are entered successfully.
-[INFO ] 2025-02-15 13:17:13.372 [main] Log - Step-1:  Enter DSA Code.
-[INFO ] 2025-02-15 13:17:13.373 [main] Log - Expected Result: DSA code are entered successfully.
-[INFO ] 2025-02-15 13:17:14.571 [main] Log - Step-1:  Give Remarks in "Remarks" field
-[INFO ] 2025-02-15 13:17:14.572 [main] Log - Expected Result: Remarks are entered successfully.
-[INFO ] 2025-02-15 13:17:18.998 [main] Log - Step-1:  .Click the next button after giving all details
-[INFO ] 2025-02-15 13:17:18.999 [main] Log - Expected Result: Redirected to the securitis tab
-[INFO ] 2025-02-15 13:17:23.421 [main] Log - Step-1:  Click Document tab
-[INFO ] 2025-02-15 13:17:24.496 [main] Log - Expected Result: Document tab is displayed
-[INFO ] 2025-02-15 13:17:29.995 [main] Log - Expected Result: Customer is added
-[INFO ] 2025-02-15 13:17:30.346 [main] Log - Step-1:   Select SR Office option from drop down
-[INFO ] 2025-02-15 13:17:30.347 [main] Log - Expected Result: Possible to select the option
-[INFO ] 2025-02-15 13:17:35.830 [main] Log - Step-1:   Enter year in "Reg Year"
-[INFO ] 2025-02-15 13:17:35.830 [main] Log - Expected Result: Possible to give the date
-[INFO ] 2025-02-15 13:17:37.210 [main] Log - Step-1:   Enter Doc No
-[INFO ] 2025-02-15 13:17:37.210 [main] Log - Expected Result: Possible to give the detail
-[INFO ] 2025-02-15 13:17:42.699 [main] Log - Step-1:   Enter Reg Date manually
-[INFO ] 2025-02-15 13:17:42.700 [main] Log - Expected Result: Possible to enter the date manually 
-[INFO ] 2025-02-15 13:17:49.016 [main] Log - Step-1:   Enter Survey No.
-[INFO ] 2025-02-15 13:17:49.016 [main] Log - Expected Result: Possible to give the detail
-[INFO ] 2025-02-15 13:17:50.142 [main] Log - Step-1:   Enter Worth
-[INFO ] 2025-02-15 13:17:50.143 [main] Log - Expected Result: Given details accepted
-[INFO ] 2025-02-15 13:17:51.281 [main] Log - Step-1:   Enter Market Value
-[INFO ] 2025-02-15 13:17:51.281 [main] Log - Expected Result: Given details accepted
-[INFO ] 2025-02-15 13:17:57.637 [main] Log - Step-1:   Click "Add" button
-[INFO ] 2025-02-15 13:17:58.712 [main] Log - Expected Result: Document entry added and details visible in grid
-[INFO ] 2025-02-15 13:18:03.112 [main] Log - Step-1:   Click 'Next' button
-[INFO ] 2025-02-15 13:18:04.183 [main] Log - Expected Result: Nominee tab is open
-[INFO ] 2025-02-15 13:18:08.607 [main] Log - Step-1: Untick "Nominee not required"
-[INFO ] 2025-02-15 13:18:08.608 [main] Log - Expected Result: Nominee details fields should be display
-[INFO ] 2025-02-15 13:18:10.074 [main] Log - Expected Result: AadharNo able to add
-[INFO ] 2025-02-15 13:18:16.234 [main] Log - Expected Result: Nominee name able to add
-[INFO ] 2025-02-15 13:18:16.725 [main] Log - Step-1:  Select relation from the drop down 
-[INFO ] 2025-02-15 13:18:16.726 [main] Log - Expected Result: Relation are selected successfully from the drop down
-[INFO ] 2025-02-15 13:18:17.109 [main] Log - Expected Result: Able to select option in district dropdown
-[INFO ] 2025-02-15 13:18:17.469 [main] Log - Expected Result: Able to select option in post dropdown
-[INFO ] 2025-02-15 13:18:22.926 [main] Log - Expected Result: Able to enter DOB
-[INFO ] 2025-02-15 13:18:27.454 [main] Log - Step-1:  Click add button
-[INFO ] 2025-02-15 13:18:28.506 [main] Log - Expected Result: Details are added and displayed in the grid
-[INFO ] 2025-02-15 13:18:32.872 [main] Log - Step-1:  Click the next button after giving all details in nominee tab
-[INFO ] 2025-02-15 13:18:33.947 [main] Log - Expected Result: Redirected to the Loan details tab
-[INFO ] 2025-02-15 13:18:35.090 [main] Log - Step-1:   Enter sanction amount.
-[INFO ] 2025-02-15 13:18:35.091 [main] Log - Expected Result: Redirected to the Nominee tab
-[INFO ] 2025-02-15 13:18:39.511 [main] Log - Step-1:  Click get values button
-[INFO ] 2025-02-15 13:18:39.539 [main] Log - Expected Result: Autoloaded values are displayed correctly  (ROI, Amount, Repay Start Date, Due Date, Pay Amount will be autoloaded, Net Payable).
-[INFO ] 2025-02-15 13:18:39.921 [main] Log - Step-1:  Select transaction mode as cash.
-[INFO ] 2025-02-15 13:18:39.921 [main] Log - Expected Result: Possible to select the trans mode as cash
-[INFO ] 2025-02-15 13:20:47.449 [main] Log - Expected Result: Signout is present
-[INFO ] 2025-02-15 13:20:47.449 [main] Log - Step-1:  Click save button.
-[INFO ] 2025-02-15 13:20:47.494 [main] Log - Expected Result: Loan is submitted, summary displayed
-[INFO ] 2025-02-15 13:20:57.191 [main] Log - Step-1: Click on SignOut
-[INFO ] 2025-02-15 13:20:57.192 [main] Log - Expected Result: User is signed out successfully
-[INFO ] 2025-02-15 13:20:58.317 [main] Log - Step-1: Enter valid username.
-[INFO ] 2025-02-15 13:20:59.340 [main] Log - Step-2: Enter valid password.
-[INFO ] 2025-02-15 13:21:08.626 [main] Log - Step-3: Click on 'Login'.
-[INFO ] 2025-02-15 13:21:18.629 [main] Log - Expected Result: Another user successfully logs in to LMS.
-[INFO ] 2025-02-15 13:21:22.993 [main] Log - Step-1: Click on authorize and cancel tab
-[INFO ] 2025-02-15 13:21:27.382 [main] Log - Step-2: Click on manager authorization tab
-[INFO ] 2025-02-15 13:21:32.766 [main] Log - Expected Result: Manager Authorization window should be display
-[INFO ] 2025-02-15 13:21:37.155 [main] Log - Step-1: Click on refresh button
-[INFO ] 2025-02-15 13:21:41.481 [main] Log - Step-1: Click on refresh button
-[INFO ] 2025-02-15 13:21:41.482 [main] Log - Expected Result: Entry is authorized
-[INFO ] 2025-02-15 13:21:45.932 [main] Log - Step-1: Click on cashier authorization
-[INFO ] 2025-02-15 13:21:55.641 [main] Log - Step-2: Select the customer using checkbox
-[INFO ] 2025-02-15 13:21:59.934 [main] Log - Step-3: Click on authorize button
-[INFO ] 2025-02-15 13:22:04.251 [main] Log - Step-4: Click on close icon in popup
-[INFO ] 2025-02-15 13:22:04.251 [main] Log - Expected Result: Account is authorized
-[INFO ] 2025-02-15 13:22:14.040 [main] Log - Step-1: Click on SignOut
-[INFO ] 2025-02-15 13:22:14.041 [main] Log - Expected Result: User is signed out successfully
+[INFO ] 2025-02-19 11:44:57.496 [main] Log - *** Running test method TC_Otherloanoping_documentsecurityModule...
+[INFO ] 2025-02-19 11:44:57.505 [main] Log - Step-1: Launch NBFC application.
+[INFO ] 2025-02-19 11:45:26.916 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-02-19 11:45:32.638 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-02-19 11:45:35.046 [main] Log - PC Registration
+[INFO ] 2025-02-19 11:45:36.648 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-02-19 11:45:37.840 [main] Log - Step:02 - Enter PC Name in Name field.
+[INFO ] 2025-02-19 11:45:48.959 [main] Log - Step:03 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-02-19 11:45:53.226 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-02-19 11:45:54.951 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-02-19 11:45:56.235 [main] Log - Step-1: Enter valid username.
+[INFO ] 2025-02-19 11:45:57.289 [main] Log - Step-2: Enter valid password.
+[INFO ] 2025-02-19 11:46:04.606 [main] Log - Step-3: Click on 'Login'.
+[INFO ] 2025-02-19 11:46:14.611 [main] Log - Expected Result: User successfully logs in to LMS.
+[INFO ] 2025-02-19 11:46:18.982 [main] Log - Step-1: Click on account openong tab
+[INFO ] 2025-02-19 11:46:23.654 [main] Log - Step-2: Click on loan openong tab
+[INFO ] 2025-02-19 11:46:27.943 [main] Log - Step-3: Click on loan and advances tab
+[INFO ] 2025-02-19 11:46:33.780 [main] Log - Step-4: Click on persoanl loan weekly tab
+[INFO ] 2025-02-19 11:46:33.780 [main] Log - Expected Result: The user can successfully select an active loan product i.e .. Personal loan Weekly.
+[INFO ] 2025-02-19 11:48:44.234 [main] Log - Expected Result: Customer is added successfully.
+[INFO ] 2025-02-19 11:48:45.357 [main] Log - Step-1:  Enter Resolution No
+[INFO ] 2025-02-19 11:48:45.358 [main] Log - Expected Result: Resolution No are entered successfully.
+[INFO ] 2025-02-19 11:48:50.788 [main] Log - Step-1:  Open the date picker
+[INFO ] 2025-02-19 11:48:50.788 [main] Log - Step-2:   Select Resolution Date
+[INFO ] 2025-02-19 11:48:50.788 [main] Log - Expected Result: Resolution date are entered successfully.
+[INFO ] 2025-02-19 11:48:51.887 [main] Log - Step-1:  Enter Equitable Mort Reg.No
+[INFO ] 2025-02-19 11:48:52.029 [main] Log - Expected Result: Equitable Mort Reg.No are entered successfully
+[INFO ] 2025-02-19 11:48:57.667 [main] Log - Step-1:  Selet the EMR Date from date picker
+[INFO ] 2025-02-19 11:48:57.668 [main] Log - Expected Result: EMR Date are selected successfully
+[INFO ] 2025-02-19 11:48:58.759 [main] Log - Step-1:  Enter Agent Code.
+[INFO ] 2025-02-19 11:48:58.759 [main] Log - Expected Result: Agent code are entered successfully.
+[INFO ] 2025-02-19 11:48:59.930 [main] Log - Step-1:  Enter DSA Code.
+[INFO ] 2025-02-19 11:48:59.931 [main] Log - Expected Result: DSA code are entered successfully.
+[INFO ] 2025-02-19 11:49:01.091 [main] Log - Step-1:  Give Remarks in "Remarks" field
+[INFO ] 2025-02-19 11:49:01.091 [main] Log - Expected Result: Remarks are entered successfully.
+[INFO ] 2025-02-19 11:49:05.444 [main] Log - Step-1:  .Click the next button after giving all details
+[INFO ] 2025-02-19 11:49:05.447 [main] Log - Expected Result: Redirected to the securitis tab
+[INFO ] 2025-02-19 11:49:09.829 [main] Log - Step-1:  Click Document tab
+[INFO ] 2025-02-19 11:49:10.917 [main] Log - Expected Result: Document tab is displayed
+[INFO ] 2025-02-19 11:49:16.328 [main] Log - Expected Result: Customer is added
+[INFO ] 2025-02-19 11:49:16.617 [main] Log - Step-1:   Select SR Office option from drop down
+[INFO ] 2025-02-19 11:49:16.617 [main] Log - Expected Result: Possible to select the option
+[INFO ] 2025-02-19 11:49:22.056 [main] Log - Step-1:   Enter year in "Reg Year"
+[INFO ] 2025-02-19 11:49:22.056 [main] Log - Expected Result: Possible to give the date
+[INFO ] 2025-02-19 11:49:23.396 [main] Log - Step-1:   Enter Doc No
+[INFO ] 2025-02-19 11:49:23.396 [main] Log - Expected Result: Possible to give the detail
+[INFO ] 2025-02-19 11:49:33.826 [main] Log - Step-1:   Enter Reg Date manually
+[INFO ] 2025-02-19 11:49:33.826 [main] Log - Expected Result: Possible to enter the date manually 
+[INFO ] 2025-02-19 11:49:40.102 [main] Log - Step-1:   Enter Survey No.
+[INFO ] 2025-02-19 11:49:40.103 [main] Log - Expected Result: Possible to give the detail
+[INFO ] 2025-02-19 11:49:41.211 [main] Log - Step-1:   Enter Worth
+[INFO ] 2025-02-19 11:49:41.211 [main] Log - Expected Result: Given details accepted
+[INFO ] 2025-02-19 11:49:42.295 [main] Log - Step-1:   Enter Market Value
+[INFO ] 2025-02-19 11:49:42.296 [main] Log - Expected Result: Given details accepted
+[INFO ] 2025-02-19 11:49:48.218 [main] Log - Step-1:   Click "Add" button
+[INFO ] 2025-02-19 11:49:49.249 [main] Log - Expected Result: Document entry added and details visible in grid
+[INFO ] 2025-02-19 11:49:53.577 [main] Log - Step-1:   Click 'Next' button
+[INFO ] 2025-02-19 11:49:54.649 [main] Log - Expected Result: Nominee tab is open
+[INFO ] 2025-02-19 11:49:59.004 [main] Log - Step-1: Untick "Nominee not required"
+[INFO ] 2025-02-19 11:49:59.005 [main] Log - Expected Result: Nominee details fields should be display
+[INFO ] 2025-02-19 11:50:00.343 [main] Log - Expected Result: AadharNo able to add
+[INFO ] 2025-02-19 11:50:06.435 [main] Log - Expected Result: Nominee name able to add
+[INFO ] 2025-02-19 11:50:06.815 [main] Log - Step-1:  Select relation from the drop down 
+[INFO ] 2025-02-19 11:50:06.816 [main] Log - Expected Result: Relation are selected successfully from the drop down
+[INFO ] 2025-02-19 11:50:07.161 [main] Log - Expected Result: Able to select option in district dropdown
+[INFO ] 2025-02-19 11:50:07.492 [main] Log - Expected Result: Able to select option in post dropdown
+[INFO ] 2025-02-19 11:50:12.892 [main] Log - Expected Result: Able to enter DOB
+[INFO ] 2025-02-19 11:50:17.285 [main] Log - Step-1:  Click add button
+[INFO ] 2025-02-19 11:50:18.337 [main] Log - Expected Result: Details are added and displayed in the grid
+[INFO ] 2025-02-19 11:50:22.662 [main] Log - Step-1:  Click the next button after giving all details in nominee tab
+[INFO ] 2025-02-19 11:50:23.745 [main] Log - Expected Result: Redirected to the Loan details tab
+[INFO ] 2025-02-19 11:50:24.850 [main] Log - Step-1:   Enter sanction amount.
+[INFO ] 2025-02-19 11:50:24.850 [main] Log - Expected Result: Redirected to the Nominee tab
+[INFO ] 2025-02-19 11:50:29.219 [main] Log - Step-1:  Click get values button
+[INFO ] 2025-02-19 11:50:29.243 [main] Log - Expected Result: Autoloaded values are displayed correctly  (ROI, Amount, Repay Start Date, Due Date, Pay Amount will be autoloaded, Net Payable).
+[INFO ] 2025-02-19 11:50:29.584 [main] Log - Step-1:  Select transaction mode as cash.
+[INFO ] 2025-02-19 11:50:29.584 [main] Log - Expected Result: Possible to select the trans mode as cash
+[INFO ] 2025-02-19 11:52:37.547 [main] Log - Expected Result: Signout is present
+[INFO ] 2025-02-19 11:52:37.548 [main] Log - Step-1:  Click save button.
+[INFO ] 2025-02-19 11:52:37.580 [main] Log - Expected Result: Loan is submitted, summary displayed
+[INFO ] 2025-02-19 11:52:47.069 [main] Log - Step-1: Click on SignOut
+[INFO ] 2025-02-19 11:52:47.070 [main] Log - Expected Result: User is signed out successfully
+[INFO ] 2025-02-19 11:52:48.196 [main] Log - Step-1: Enter valid username.
+[INFO ] 2025-02-19 11:52:49.222 [main] Log - Step-2: Enter valid password.
+[INFO ] 2025-02-19 11:52:55.773 [main] Log - Step-3: Click on 'Login'.
+[INFO ] 2025-02-19 11:53:05.788 [main] Log - Expected Result: Another user successfully logs in to LMS.
+[INFO ] 2025-02-19 11:53:10.149 [main] Log - Step-1: Click on authorize and cancel tab
+[INFO ] 2025-02-19 11:53:14.869 [main] Log - Step-2: Click on manager authorization tab
+[INFO ] 2025-02-19 11:53:20.273 [main] Log - Expected Result: Manager Authorization window should be display
+[INFO ] 2025-02-19 11:53:24.665 [main] Log - Step-1: Click on refresh button
+[INFO ] 2025-02-19 11:53:28.969 [main] Log - Step-1: Click on refresh button
+[INFO ] 2025-02-19 11:53:28.970 [main] Log - Expected Result: Entry is authorized
+[INFO ] 2025-02-19 11:53:33.458 [main] Log - Step-1: Click on cashier authorization
+[INFO ] 2025-02-19 11:53:43.092 [main] Log - Step-2: Select the customer using checkbox
+[INFO ] 2025-02-19 11:53:47.360 [main] Log - Step-3: Click on authorize button
+[INFO ] 2025-02-19 11:53:51.650 [main] Log - Step-4: Click on close icon in popup
+[INFO ] 2025-02-19 11:53:51.650 [main] Log - Expected Result: Account is authorized
+[INFO ] 2025-02-19 11:54:01.176 [main] Log - Step-1: Click on SignOut
+[INFO ] 2025-02-19 11:54:01.177 [main] Log - Expected Result: User is signed out successfully

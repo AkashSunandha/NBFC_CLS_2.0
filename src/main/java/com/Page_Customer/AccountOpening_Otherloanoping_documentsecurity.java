@@ -379,7 +379,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	public void testRegDate(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		ExtentTestManager.startTest("TC No. - 24 --> Validate Reg Date Field");
 		click(loanOpen.regDate);
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		String regDate = testdata.get("regDate").toString();
 		input(loanOpen.regDate, regDate);
 		

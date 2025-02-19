@@ -185,7 +185,6 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					//TC-40
 					personalLoan.testSaveBtnFunc();
 					
-				
 					Thread.sleep(5000);
 					personalLoan.signOut();
 
