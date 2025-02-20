@@ -1,110 +1,4 @@
-[ERROR] 2025-02-12 12:11:42.471 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
-java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
-	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
-	at java.net.URI.<init>(URI.java:623) ~[?:?]
-	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:160) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:130) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:565) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:751) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:322) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
-	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.gettestdate(AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.java:98) ~[test-classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-12 12:11:42.483 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
-java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
-	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
-	at java.net.URI.<init>(URI.java:623) ~[?:?]
-	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:160) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:130) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:565) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:751) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:322) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
-	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.gettestdate(AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.java:98) ~[test-classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-12 12:11:42.485 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-20 00:58:28.488 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -124,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.gettestdate(AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.java:98) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly.gettestdate(AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly.java:121) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +51,113 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-12 12:11:42.491 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-20 00:58:28.507 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
+	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
+	at java.net.URI.<init>(URI.java:623) ~[?:?]
+	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:160) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:130) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:565) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:751) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:322) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
+	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly.gettestdate(AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly.java:121) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+[ERROR] 2025-02-20 00:58:28.509 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
+	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
+	at java.net.URI.<init>(URI.java:623) ~[?:?]
+	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:160) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:130) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:565) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:751) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:322) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
+	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
+	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly.gettestdate(AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly.java:121) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+[ERROR] 2025-02-20 00:58:28.514 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.gettestdate(AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan.java:98) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly.gettestdate(AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly.java:121) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,180 +210,245 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-02-12 12:11:43.249 [main] Log - *** Running test method New Customer Module...
-[INFO ] 2025-02-12 12:11:47.298 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-02-12 12:11:48.960 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-02-12 12:11:51.366 [main] Log - PC Registration
-[INFO ] 2025-02-12 12:11:52.471 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-02-12 12:11:52.879 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-02-12 12:11:53.937 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-02-12 12:11:58.275 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-02-12 12:11:59.917 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-02-12 12:12:00.018 [main] Log - Valid Login
-[INFO ] 2025-02-12 12:12:01.121 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-02-12 12:12:02.183 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-02-12 12:12:09.297 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-02-12 12:12:10.444 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-12 12:12:11.560 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-12 12:12:11.680 [main] Log - Access Gold Loan Opening Window
-[INFO ] 2025-02-12 12:12:16.027 [main] Log - Step:01 - Navigate to account opening
-[INFO ] 2025-02-12 12:12:20.390 [main] Log - Step:02 - Select loan opening.
-[INFO ] 2025-02-12 12:12:24.802 [main] Log - Step:03 - Select Jewel Loan.
-[INFO ] 2025-02-12 12:12:30.342 [main] Log - Step:04 - Open gold loan opening window.
-[INFO ] 2025-02-12 12:12:31.440 [main] Log - Expected Result: Gold loan opening window is displayed.
-[INFO ] 2025-02-12 12:12:31.529 [main] Log - Name Field Validation
-[INFO ] 2025-02-12 12:12:36.089 [main] Log - Step:01 -  Click on search icon.
-[INFO ] 2025-02-12 12:12:37.498 [main] Log - Step:02 - Enter customer Name or alphabet.
-[INFO ] 2025-02-12 12:12:37.499 [main] Log - Expected Result: Possible to give the name or alphabets in the customer search popu window.
-[INFO ] 2025-02-12 12:12:37.573 [main] Log - Search and Select a Customer
-[INFO ] 2025-02-12 12:12:41.908 [main] Log - Step:01 - Click on Search button
-[INFO ] 2025-02-12 12:12:46.056 [main] Log - Step:02 - Select the customer
-[INFO ] 2025-02-12 12:12:46.138 [main] Log - Expected Result: Customer id should be display in the custid feild.
-[INFO ] 2025-02-12 12:12:46.321 [main] Log - Add Selected Customer
-[INFO ] 2025-02-12 12:12:51.686 [main] Log - Step:01 - Click 'Add Customer' button
-[INFO ] 2025-02-12 12:12:57.142 [main] Log - Expected Result: Customer details are added.
-[INFO ] 2025-02-12 12:12:57.240 [main] Log - Enter Resolution Information
-[INFO ] 2025-02-12 12:12:58.290 [main] Log - Step:01 - Enter Resolution No.
-[INFO ] 2025-02-12 12:12:58.291 [main] Log - Expected Result: Information is accepted.
-[INFO ] 2025-02-12 12:12:58.355 [main] Log - Enter Resolution Date
-[INFO ] 2025-02-12 12:13:03.769 [main] Log - Step:01 - Enter Resolution Date.
-[INFO ] 2025-02-12 12:13:03.769 [main] Log - Expected Result: Information is accepted.
-[INFO ] 2025-02-12 12:13:03.835 [main] Log - Select Refered By from Dropdown
-[INFO ] 2025-02-12 12:13:04.212 [main] Log - Step:01 - Open 'Purpose' dropdown, Select an entry
-[INFO ] 2025-02-12 12:13:04.224 [main] Log - Expected Result: Entry is selected.
-[INFO ] 2025-02-12 12:13:04.368 [main] Log - Enter Reference No.
-[INFO ] 2025-02-12 12:13:05.433 [main] Log - Step:01 - Enter Reference No.
-[INFO ] 2025-02-12 12:13:05.433 [main] Log - Expected Result: Information is accepted.
-[INFO ] 2025-02-12 12:13:05.491 [main] Log - Select Source Of Loan
-[INFO ] 2025-02-12 12:13:05.797 [main] Log - Step:01 - Open 'Source Of Loan'' dropdown, Select an entry
-[INFO ] 2025-02-12 12:13:05.798 [main] Log - Expected Result: Entry is selected.
-[INFO ] 2025-02-12 12:13:05.879 [main] Log - Enter Remarks
-[INFO ] 2025-02-12 12:13:06.974 [main] Log - Step:01 - Enter the Remarks.
-[INFO ] 2025-02-12 12:13:06.975 [main] Log - Expected Result: Information is accepted.
-[INFO ] 2025-02-12 12:13:07.475 [main] Log - Navigate to Security Details Tab
-[INFO ] 2025-02-12 12:13:11.809 [main] Log - Step:01 - Click 'Next' button
-[INFO ] 2025-02-12 12:13:12.940 [main] Log - Expected Result: Security details tab is open.
-[INFO ] 2025-02-12 12:13:13.021 [main] Log - Enter Jewelry Details - Select Item Group
-[INFO ] 2025-02-12 12:13:13.117 [main] Log - Step:01 - Select Item Group
-[INFO ] 2025-02-12 12:13:13.117 [main] Log - Expected Result: Details are accepted
-[INFO ] 2025-02-12 12:13:13.203 [main] Log - Enter Jewelry Details - Select Item Name
-[INFO ] 2025-02-12 12:13:13.596 [main] Log - Step:01 - Select Item Name
-[INFO ] 2025-02-12 12:13:13.597 [main] Log - Expected Result: Details are accepted
-[INFO ] 2025-02-12 12:13:13.695 [main] Log - Enter Jewelry Details - Item Description
-[INFO ] 2025-02-12 12:13:14.764 [main] Log - Step:01 -  Enter Item Description.
-[INFO ] 2025-02-12 12:13:14.764 [main] Log - Expected Result: Details are accepted.
-[INFO ] 2025-02-12 12:13:14.807 [main] Log - Enter Jewelry Details - Item Qty
-[INFO ] 2025-02-12 12:13:15.860 [main] Log - Step:01 -  Enter Item Qty.
-[INFO ] 2025-02-12 12:13:15.861 [main] Log - Expected Result: Details are accepted.
-[INFO ] 2025-02-12 12:13:15.904 [main] Log - Enter Jewelry Details - Item Weight
-[INFO ] 2025-02-12 12:13:21.304 [main] Log - Step:01 -  Enter Item Weight.
-[INFO ] 2025-02-12 12:13:21.305 [main] Log - Expected Result: Details are accepted.
-[INFO ] 2025-02-12 12:13:21.375 [main] Log - Enter Jewelry Details - Stone Weight
-[INFO ] 2025-02-12 12:13:26.806 [main] Log - Step:01 -  Enter Stone Weight.
-[INFO ] 2025-02-12 12:13:26.808 [main] Log - Expected Result: Details are accepted.
-[INFO ] 2025-02-12 12:13:26.878 [main] Log - Enter Jewelry Details - Dirt Weight
-[INFO ] 2025-02-12 12:13:32.306 [main] Log - Step:01 -  Enter Dirt Weight.
-[INFO ] 2025-02-12 12:13:32.307 [main] Log - Expected Result: Details are accepted.
-[INFO ] 2025-02-12 12:13:32.388 [main] Log - Enter Jewelry Details - Purity
-[INFO ] 2025-02-12 12:13:33.444 [main] Log - Step:01 -  Enter Purity.
-[INFO ] 2025-02-12 12:13:33.444 [main] Log - Expected Result: Details are accepted.
-[INFO ] 2025-02-12 12:13:33.491 [main] Log - Add Jewelry Item to Grid
-[INFO ] 2025-02-12 12:13:37.979 [main] Log - Step:01 -  Click 'Add' button.
-[INFO ] 2025-02-12 12:13:39.095 [main] Log - Expected Result: Jewelry item is added to grid.
-[INFO ] 2025-02-12 12:13:39.171 [main] Log - Upload Security Ornament Image - Pop Window Opened
-[INFO ] 2025-02-12 12:13:44.828 [main] Log - Step:01 -  Click 'Image' button.
-[INFO ] 2025-02-12 12:13:46.203 [main] Log - Expected Result: Jewel images popup window will be opened.
-[INFO ] 2025-02-12 12:13:46.272 [main] Log - Upload Security Ornament Image - Select Item
-[INFO ] 2025-02-12 12:13:46.611 [main] Log - Step:01 - Select Item Name
-[INFO ] 2025-02-12 12:13:46.629 [main] Log - path is :D:\Testing\O360-AI-master\O360-AI
-[INFO ] 2025-02-12 12:13:46.652 [main] Log - Step:02 - Browse the image
-[INFO ] 2025-02-12 12:13:46.652 [main] Log - Expected Result: Possible to browse the image
-[INFO ] 2025-02-12 12:13:46.698 [main] Log - Upload Security Ornament Image - Add Item
-[INFO ] 2025-02-12 12:13:51.254 [main] Log - Step:01 - Click add button in the jewel images popup window
-[INFO ] 2025-02-12 12:13:52.334 [main] Log - Expected Result: Possible to add the image
-[INFO ] 2025-02-12 12:13:52.418 [main] Log - Upload Security Ornament Image - Submit Button
-[INFO ] 2025-02-12 12:13:56.748 [main] Log - Step:01 - Click submit button in the jewel images popup window
-[INFO ] 2025-02-12 12:13:57.859 [main] Log - Expected Result: Jewel images popup window will be closed
-[INFO ] 2025-02-12 12:13:57.910 [main] Log - Navigate to Nominee Tab
-[INFO ] 2025-02-12 12:14:03.338 [main] Log - Step:01 - Click 'Next' button
-[INFO ] 2025-02-12 12:14:04.442 [main] Log - Expected Result: Nominee tab is open.
-[INFO ] 2025-02-12 12:14:04.505 [main] Log - Add Nominee - Untick 'Nominee Not Required'
-[INFO ] 2025-02-12 12:14:08.887 [main] Log - Step:01 - Untick 'Nominee Not Required'
-[INFO ] 2025-02-12 12:14:10.005 [main] Log - Expected Result: Nominee details feild will be display.
-[INFO ] 2025-02-12 12:14:10.085 [main] Log - Click the customer search icon
-[INFO ] 2025-02-12 12:14:14.693 [main] Log - Step:01 - Click the customer search icon
-[INFO ] 2025-02-12 12:14:16.072 [main] Log - Expected Result: Customer serach popup will be display.
-[INFO ] 2025-02-12 12:14:16.146 [main] Log - Add Nominee - Search Cust
-[INFO ] 2025-02-12 12:14:21.540 [main] Log - Step:01 - Give the name of the customer or alphabet, Click the search button
-[INFO ] 2025-02-12 12:14:22.663 [main] Log - Expected Result: Customer should be dispayed against the given details.
-[INFO ] 2025-02-12 12:14:22.738 [main] Log - Select a Customer
-[INFO ] 2025-02-12 12:14:26.860 [main] Log - Step:01 - Select the customer
-[INFO ] 2025-02-12 12:14:26.910 [main] Log - Expected Result: Popup will be closed and the selected customer details should be autolads.
-[INFO ] 2025-02-12 12:14:26.978 [main] Log - Navigate to Loan Details Tab - Relation drop down
-[INFO ] 2025-02-12 12:14:27.359 [main] Log - Step:01 - Select the "Relation" drop down
-[INFO ] 2025-02-12 12:14:27.360 [main] Log - Expected Result: Details can be selected
-[INFO ] 2025-02-12 12:14:27.423 [main] Log - Navigate to Loan Details Tab - Add button
-[INFO ] 2025-02-12 12:14:31.843 [main] Log - Step:01 - Click add button
-[INFO ] 2025-02-12 12:14:32.925 [main] Log - Expected Result: Given details will be displays in the grid.
-[INFO ] 2025-02-12 12:14:32.967 [main] Log - Navigate to Loan Details Tab - Next button
-[INFO ] 2025-02-12 12:14:38.457 [main] Log - Step:01 - Click 'Next' button
-[INFO ] 2025-02-12 12:14:39.544 [main] Log - Expected Result: Loan details tab is open.
-[INFO ] 2025-02-12 12:14:39.601 [main] Log - Enter and Verify Loan Details
-[INFO ] 2025-02-12 12:14:45.057 [main] Log - Step:01 -  Enter sanctioned amount.
-[INFO ] 2025-02-12 12:14:45.057 [main] Log - Expected Result: Possible to give the sanctioned amount in the field (less than and equal to).
-[INFO ] 2025-02-12 12:14:45.115 [main] Log - Enter and Verify Loan Details - Get values
-[INFO ] 2025-02-12 12:14:49.461 [main] Log - Step:01 - Click the get values.
-[INFO ] 2025-02-12 12:14:49.533 [main] Log - Expected Result: ROI, duration, duedate will be autoloads.
-[INFO ] 2025-02-12 12:14:49.594 [main] Log - Select Transaction Mode - Select Trans. Mode 'Cash'.
-[INFO ] 2025-02-12 12:14:49.951 [main] Log - Step:01 - Select Trans. Mode 'Cash'
-[INFO ] 2025-02-12 12:14:49.951 [main] Log - Expected Result: Possible to select the trans mode as cash
-[INFO ] 2025-02-12 12:14:50.025 [main] Log - Select Transaction Mode - Save.
-[INFO ] 2025-02-12 12:14:54.434 [main] Log - Step:01 - Click 'save'
-[INFO ] 2025-02-12 12:14:59.925 [main] Log - Expected Result: Loan is submitted, summary displayed
-[INFO ] 2025-02-12 12:15:00.027 [main] Log - Verify Loan Submission with Transfer Mode - Select Trans. Mode 'Transfer'
-[INFO ] 2025-02-12 12:16:18.619 [main] Log - Step:01 - Select Trans. Mode 'Transfer'
-[INFO ] 2025-02-12 12:16:18.619 [main] Log - Expected Result: Possible to select the trans mode as transfer
-[INFO ] 2025-02-12 12:16:18.668 [main] Log - Verify Loan Submission with Transfer Mode - Click on Post credit button
-[INFO ] 2025-02-12 12:16:23.274 [main] Log - Step:01 - Click on Post credit button
-[INFO ] 2025-02-12 12:16:24.694 [main] Log - Expected Result: Auto posting popup window will be opened
-[INFO ] 2025-02-12 12:16:24.760 [main] Log - Verify Loan Submission with Transfer Mode - Click on Post credit button
-[INFO ] 2025-02-12 12:16:25.093 [main] Log - Step:01 - Give transaction based as 'GL Code'
-[INFO ] 2025-02-12 12:16:26.154 [main] Log - Expected Result: GL code related field will be display (GL name,GL code)
-[INFO ] 2025-02-12 12:16:26.212 [main] Log - Verify Loan Submission with Transfer Mode - Select the 'GL Name'
-[INFO ] 2025-02-12 12:16:34.935 [main] Log - Step:01 - Select the "GL Name" from the drop down
-[INFO ] 2025-02-12 12:16:35.008 [main] Log - Expected Result: GL code will be autoloads 463 while selecting the GL Name
-[INFO ] 2025-02-12 12:16:35.134 [main] Log - Verify Loan Submission with Transfer Mode - Add Amount & Click Add
-[INFO ] 2025-02-12 12:16:40.495 [main] Log - Step:01 - Give the amount in "Amount" field
-[INFO ] 2025-02-12 12:16:44.960 [main] Log - Step:02 - Click add button
-[INFO ] 2025-02-12 12:16:46.089 [main] Log - Expected Result: Given details will be displays in the grid
-[INFO ] 2025-02-12 12:16:46.218 [main] Log - Verify Loan Submission with Transfer Mode - Click Submit
-[INFO ] 2025-02-12 12:16:50.516 [main] Log - Step:01 - Click Submit button
-[INFO ] 2025-02-12 12:16:51.649 [main] Log - Expected Result: Popup window will be closed
-[INFO ] 2025-02-12 12:16:51.709 [main] Log - Verify Loan Submission with Transfer Mode - Click Save
-[INFO ] 2025-02-12 12:16:56.115 [main] Log - Step:01 - Click Save button after giving the post credit details
-[INFO ] 2025-02-12 12:17:01.742 [main] Log - Expected Result: Summary will be generated
-[INFO ] 2025-02-12 12:17:01.892 [main] Log - Login with Another User
-[INFO ] 2025-02-12 12:17:06.489 [main] Log - Step:01 - Log out
-[INFO ] 2025-02-12 12:17:15.119 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-02-12 12:17:15.215 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-02-12 12:17:15.272 [main] Log - Manager Authorization - Cash Tab
-[INFO ] 2025-02-12 12:17:19.612 [main] Log - Step:01 - Click "Authorize & Cancel"
-[INFO ] 2025-02-12 12:17:24.081 [main] Log - Step:02 - Select "Manager Authorization"
-[INFO ] 2025-02-12 12:17:28.415 [main] Log - Step:03 - Click "Cash" tab
-[INFO ] 2025-02-12 12:17:28.416 [main] Log - Expected Result: Cash tab load
-[INFO ] 2025-02-12 12:17:28.475 [main] Log - Refresh Loan Opening Entry
-[INFO ] 2025-02-12 12:17:32.790 [main] Log - Step:01 - Click Refresh Button
-[INFO ] 2025-02-12 12:17:39.300 [main] Log - Expected Result: Loan opening entry displayed
-[INFO ] 2025-02-12 12:17:39.373 [main] Log - Authorize Loan Entry as Manager
-[INFO ] 2025-02-12 12:17:43.705 [main] Log - Step:01 - Select loan entry checkbox
-[INFO ] 2025-02-12 12:17:48.033 [main] Log - Step:02 - Click Authorize Button
-[INFO ] 2025-02-12 12:17:48.034 [main] Log - Expected Result: Entry authorized
-[INFO ] 2025-02-12 12:17:48.109 [main] Log - Cashier Authorization
-[INFO ] 2025-02-12 12:17:52.545 [main] Log - Step:01 - Navigate to Cashier Authorization
-[INFO ] 2025-02-12 12:17:56.860 [main] Log - Step:02 - Click Refresh Button
-[INFO ] 2025-02-12 12:18:06.739 [main] Log - Step:03 - Select checkbox
-[INFO ] 2025-02-12 12:18:11.111 [main] Log - Step:04 - Click Authorize Button
-[INFO ] 2025-02-12 12:18:12.242 [main] Log - Expected Result: Account is created
-[INFO ] 2025-02-12 12:18:16.685 [main] Log - Logout
-[INFO ] 2025-02-12 12:18:25.247 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-02-12 12:18:26.310 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-02-20 00:58:29.248 [main] Log - *** Running test method New Customer Module...
+[INFO ] 2025-02-20 00:58:33.081 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-02-20 00:58:34.093 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-02-20 00:58:36.406 [main] Log - PC Registration
+[INFO ] 2025-02-20 00:58:37.478 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-02-20 00:58:37.827 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-02-20 00:58:38.883 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-02-20 00:58:43.170 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-02-20 00:58:44.246 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-02-20 00:58:44.305 [main] Log - Valid Login
+[INFO ] 2025-02-20 00:58:45.382 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-02-20 00:58:46.452 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-02-20 00:58:53.595 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-02-20 00:58:54.698 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-20 00:58:55.819 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-20 00:58:55.867 [main] Log - Open Personal Loan Weekly window
+[INFO ] 2025-02-20 00:59:00.187 [main] Log - Step:01 - Navigate to account opening
+[INFO ] 2025-02-20 00:59:04.483 [main] Log - Step:02 - Select loan opening.
+[INFO ] 2025-02-20 00:59:08.767 [main] Log - Step:03 - Select Loan & Advances.
+[INFO ] 2025-02-20 00:59:14.622 [main] Log - Step:04 - Select Personal Loan Weekly.
+[INFO ] 2025-02-20 00:59:15.703 [main] Log - Expected Result: Personal Loan Weekly window is displayed.
+[INFO ] 2025-02-20 00:59:15.738 [main] Log - Select Customer from Customer pop up - Pop up displayed
+[INFO ] 2025-02-20 00:59:20.248 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-20 00:59:21.631 [main] Log - Expected Result: Pop up is opened.
+[INFO ] 2025-02-20 00:59:21.663 [main] Log - Select Customer from Customer pop up - Customer Search
+[INFO ] 2025-02-20 00:59:22.761 [main] Log - Step:01 - Enter customer Name or alphabet.
+[INFO ] 2025-02-20 00:59:27.078 [main] Log - Step:02 -  Click on Search button.
+[INFO ] 2025-02-20 00:59:28.147 [main] Log - Expected Result: Customer is listing.
+[INFO ] 2025-02-20 00:59:28.178 [main] Log - Select Customer from Customer pop up
+[INFO ] 2025-02-20 00:59:32.303 [main] Log - Step:01 - Click on the select button
+[INFO ] 2025-02-20 00:59:32.358 [main] Log - Expected Result: Customer ID is autoloaded in the Customer ID field.
+[INFO ] 2025-02-20 00:59:32.391 [main] Log - Add Button functionality
+[INFO ] 2025-02-20 00:59:38.061 [main] Log - Step:01 - Click on Add button
+[INFO ] 2025-02-20 00:59:42.382 [main] Log - Step:02 - Click ok button in the 'previous active loan' pop up
+[INFO ] 2025-02-20 00:59:43.474 [main] Log - Expected Result: Pop up is closed.
+[INFO ] 2025-02-20 00:59:43.510 [main] Log - Resolution No Field - BVA Validations
+[INFO ] 2025-02-20 00:59:44.560 [main] Log - Step:01 - Enter alphanumeric data  in the 'Resolution No' field in the account info tab.
+[INFO ] 2025-02-20 00:59:44.561 [main] Log - Expected Result: Resolution No. entered successfully.
+[INFO ] 2025-02-20 00:59:44.600 [main] Log - Enter Resolution Date
+[INFO ] 2025-02-20 00:59:50.010 [main] Log - Step:01 - Enter valid  dates from date picker in the Resolution Date field.
+[INFO ] 2025-02-20 00:59:50.010 [main] Log - Expected Result: Resolution Date are entered successfully.
+[INFO ] 2025-02-20 00:59:50.047 [main] Log - Referred By Dropdown Selection
+[INFO ] 2025-02-20 00:59:58.736 [main] Log - Step:01 - Select an item from Referred By dropdown.
+[INFO ] 2025-02-20 00:59:58.790 [main] Log - Expected Result: Selected item is displayed.
+[INFO ] 2025-02-20 00:59:58.828 [main] Log - Enter Equitable Mort Reg.No
+[INFO ] 2025-02-20 00:59:59.936 [main] Log - Step:01 - Enter Equitable Mort Reg.No.
+[INFO ] 2025-02-20 00:59:59.937 [main] Log - Expected Result: Equitable Mort Reg.No are entered successfully.
+[INFO ] 2025-02-20 00:59:59.969 [main] Log - EMR Date Field - BVA Validations
+[INFO ] 2025-02-20 01:00:05.391 [main] Log - Step:01 - Enter invalid dates in EMR Date field.
+[INFO ] 2025-02-20 01:00:10.817 [main] Log - Expected Result: Error on invalid dates.
+[INFO ] 2025-02-20 01:00:19.241 [main] Log - Step:02 - Enter valid dates in EMR Date field.
+[INFO ] 2025-02-20 01:00:19.241 [main] Log - Expected Result: Valid date accepted.
+[INFO ] 2025-02-20 01:00:19.277 [main] Log - Agent Code Field - ECP Validations
+[INFO ] 2025-02-20 01:00:20.341 [main] Log - Step:01 - Enter invalid numeric data in Agent code field
+[INFO ] 2025-02-20 01:00:25.778 [main] Log - Expected Result: Error on invalid Code.
+[INFO ] 2025-02-20 01:00:34.234 [main] Log - Step:02 - Enter valid numeric data in Agent code field
+[INFO ] 2025-02-20 01:00:38.617 [main] Log - Expected Result: Agent name autoloads.
+[INFO ] 2025-02-20 01:00:38.659 [main] Log - DSA Code Field - ECP Validations
+[INFO ] 2025-02-20 01:00:39.729 [main] Log - Step:01 - Enter invalid numeric data in DSA code field
+[INFO ] 2025-02-20 01:00:45.169 [main] Log - Expected Result: Error on invalid Code.
+[INFO ] 2025-02-20 01:00:53.621 [main] Log - Step:02 - Enter valid numeric data in DSA code field
+[INFO ] 2025-02-20 01:00:58.050 [main] Log - Expected Result: DSA name autoloads.
+[INFO ] 2025-02-20 01:00:58.086 [main] Log - Remarks Field
+[INFO ] 2025-02-20 01:00:59.139 [main] Log - Step:01 - Enter alphanumeric data in Remarks field
+[INFO ] 2025-02-20 01:00:59.139 [main] Log - Expected Result: Text is saved without issues
+[INFO ] 2025-02-20 01:00:59.179 [main] Log - Move to Securities Tab
+[INFO ] 2025-02-20 01:01:03.519 [main] Log - Step:01 - Click NEXT button
+[INFO ] 2025-02-20 01:01:04.609 [main] Log - Expected Result: Securities tab is displayed
+[INFO ] 2025-02-20 01:01:04.638 [main] Log - Select Personal Sureties Tab
+[INFO ] 2025-02-20 01:01:08.973 [main] Log - Step:01 - Click personal surety tab
+[INFO ] 2025-02-20 01:01:10.080 [main] Log - Expected Result: Personal Sureties tab is displayed
+[INFO ] 2025-02-20 01:01:10.108 [main] Log - Customer added in security tab
+[INFO ] 2025-02-20 01:01:14.590 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-20 01:01:15.982 [main] Log - Step:02 - Enter any alphabets in the   Name Field(not applicant name).
+[INFO ] 2025-02-20 01:01:20.314 [main] Log - Step:03 -  Click on Search button.
+[INFO ] 2025-02-20 01:01:24.485 [main] Log - Step:04 - Click on the select button
+[INFO ] 2025-02-20 01:01:24.542 [main] Log - Expected Result: Customer is added in security tab.
+[INFO ] 2025-02-20 01:01:24.575 [main] Log - Security Addition Process
+[INFO ] 2025-02-20 01:01:28.901 [main] Log - Step:01 - Select Salary Certificate
+[INFO ] 2025-02-20 01:01:38.060 [main] Log - Step:02 - Enter details in OffName, DEpt Head, Designation, Place fields
+[INFO ] 2025-02-20 01:01:38.060 [main] Log - Expected Result: Possible to give the detail
+[INFO ] 2025-02-20 01:01:38.102 [main] Log - Enter Basic Pay, Net salary, Retd. Date & Remark
+[INFO ] 2025-02-20 01:01:48.895 [main] Log - Step:01 - Enter basic pay and  net salary  details
+[INFO ] 2025-02-20 01:01:54.332 [main] Log - Step:02 - Enter date in Retd. Date field
+[INFO ] 2025-02-20 01:01:55.394 [main] Log - Step:03 - Enter alphanumeric data in Remarks field
+[INFO ] 2025-02-20 01:01:55.394 [main] Log - Expected Result: Possible to give the detail
+[INFO ] 2025-02-20 01:01:55.433 [main] Log - Add Button functionality
+[INFO ] 2025-02-20 01:02:01.347 [main] Log - Step:01 - Click ADD button
+[INFO ] 2025-02-20 01:02:06.743 [main] Log - Expected Result: Security details are saved in grid
+[INFO ] 2025-02-20 01:02:06.768 [main] Log - Navigate to Nominee Tab
+[INFO ] 2025-02-20 01:02:12.180 [main] Log - Step:01 - Click NEXT button
+[INFO ] 2025-02-20 01:02:13.247 [main] Log - Expected Result: Nominee tab is displayed
+[INFO ] 2025-02-20 01:02:13.274 [main] Log - Add Nominee - Untick 'Nominee Not Required'
+[INFO ] 2025-02-20 01:02:17.604 [main] Log - Step:01 - Untick 'Nominee Not Required'
+[INFO ] 2025-02-20 01:02:18.662 [main] Log - Expected Result: Nominee details field will be display
+[INFO ] 2025-02-20 01:02:18.693 [main] Log - Add Nominee
+[INFO ] 2025-02-20 01:02:23.159 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-20 01:02:24.589 [main] Log - Step:02 - Enter any alphabets in the   Name Field(not applicant name).
+[INFO ] 2025-02-20 01:02:28.921 [main] Log - Step:03 -  Click on Search button.
+[INFO ] 2025-02-20 01:02:33.055 [main] Log - Step:04 - Click on the select button
+[INFO ] 2025-02-20 01:02:33.159 [main] Log - Expected Result: Customer is added in security tab.
+[INFO ] 2025-02-20 01:02:33.186 [main] Log - Relation drop down selection
+[INFO ] 2025-02-20 01:02:33.511 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-20 01:02:33.511 [main] Log - Expected Result: Possible to select the relation from the drop down.
+[INFO ] 2025-02-20 01:02:33.550 [main] Log - Add Button functionality
+[INFO ] 2025-02-20 01:02:37.949 [main] Log - Step:01 - Click add button.
+[INFO ] 2025-02-20 01:02:39.020 [main] Log - Expected Result: Given details will be displays in the grid.
+[INFO ] 2025-02-20 01:02:39.048 [main] Log - Move to Loan Details Tab
+[INFO ] 2025-02-20 01:02:43.366 [main] Log - Step:01 - Click NEXT button.
+[INFO ] 2025-02-20 01:02:44.449 [main] Log - Expected Result: Given details will be displays in the grid.
+[INFO ] 2025-02-20 01:02:44.475 [main] Log - Limit/Sanctioned Field - ECP Validations
+[INFO ] 2025-02-20 01:02:45.541 [main] Log - Step:01 - Enter numeric data in Limit/Sanctioned field.
+[INFO ] 2025-02-20 01:02:45.542 [main] Log - Expected Result: Numeric data accepted.
+[INFO ] 2025-02-20 01:02:45.569 [main] Log - Get Values button functionality
+[INFO ] 2025-02-20 01:02:49.950 [main] Log - Step:01 - Click GET VALUES button.
+[INFO ] 2025-02-20 01:02:50.082 [main] Log - Expected Result: Valid data fetched.
+[INFO ] 2025-02-20 01:02:50.106 [main] Log - Transmode Selection and Save
+[INFO ] 2025-02-20 01:02:51.477 [main] Log - Step:01 - Select Transmode as CASH.
+[INFO ] 2025-02-20 01:02:51.478 [main] Log - Expected Result: Transmode CASH can be selected.
+[INFO ] 2025-02-20 01:02:51.522 [main] Log - Save functionality Trans. Mode - CASH
+[INFO ] 2025-02-20 01:02:55.868 [main] Log - Step:01 - Click 'save'
+[INFO ] 2025-02-20 01:03:01.286 [main] Log - Expected Result: Summary page is displayed
+[INFO ] 2025-02-20 01:03:01.336 [main] Log - Login with Another User
+[INFO ] 2025-02-20 01:03:05.814 [main] Log - Step:01 - Log out
+[INFO ] 2025-02-20 01:03:14.143 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-02-20 01:03:14.186 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-02-20 01:03:14.215 [main] Log - Manager Authorization - Cash Tab
+[INFO ] 2025-02-20 01:03:18.531 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-02-20 01:03:22.981 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-02-20 01:03:27.284 [main] Log - Step:03 - Click "Cash" tab
+[INFO ] 2025-02-20 01:03:27.285 [main] Log - Expected Result: Cash tab load
+[INFO ] 2025-02-20 01:03:27.348 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-02-20 01:03:31.703 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-02-20 01:03:38.198 [main] Log - Expected Result: Loan opening entry displayed
+[INFO ] 2025-02-20 01:03:38.225 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-02-20 01:03:42.550 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-02-20 01:03:46.856 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-02-20 01:03:46.856 [main] Log - Expected Result: Entry authorized
+[INFO ] 2025-02-20 01:03:46.892 [main] Log - Cashier Authorization
+[INFO ] 2025-02-20 01:03:51.281 [main] Log - Step:01 - Navigate to Cashier Authorization
+[INFO ] 2025-02-20 01:03:55.623 [main] Log - Step:02 - Click Refresh Button
+[INFO ] 2025-02-20 01:04:05.363 [main] Log - Step:03 - Select checkbox
+[INFO ] 2025-02-20 01:04:09.671 [main] Log - Step:04 - Click Authorize Button
+[INFO ] 2025-02-20 01:04:10.784 [main] Log - Expected Result: Account is created
+[INFO ] 2025-02-20 01:04:15.132 [main] Log - Logout
+[INFO ] 2025-02-20 01:04:23.532 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-02-20 01:04:24.599 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-02-20 01:04:28.341 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-02-20 01:04:29.647 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-02-20 01:04:29.647 [main] Log - PC Registration
+[INFO ] 2025-02-20 01:04:30.725 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-02-20 01:04:31.022 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-02-20 01:04:32.063 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-02-20 01:04:36.327 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-02-20 01:04:37.181 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-02-20 01:04:37.214 [main] Log - Valid Login
+[INFO ] 2025-02-20 01:04:38.234 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-02-20 01:04:39.256 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-02-20 01:04:46.588 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-02-20 01:04:47.647 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-20 01:04:48.700 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-20 01:04:48.729 [main] Log - Open Personal Loan Weekly window
+[INFO ] 2025-02-20 01:04:53.057 [main] Log - Step:01 - Navigate to account opening
+[INFO ] 2025-02-20 01:04:57.295 [main] Log - Step:02 - Select loan opening.
+[INFO ] 2025-02-20 01:05:01.548 [main] Log - Step:03 - Select Loan & Advances.
+[INFO ] 2025-02-20 01:05:07.351 [main] Log - Step:04 - Select Personal Loan Weekly.
+[INFO ] 2025-02-20 01:05:08.398 [main] Log - Expected Result: Personal Loan Weekly window is displayed.
+[INFO ] 2025-02-20 01:05:08.422 [main] Log - Select Customer from Customer pop up - Pop up displayed
+[INFO ] 2025-02-20 01:05:12.867 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-20 01:05:14.210 [main] Log - Expected Result: Pop up is opened.
+[INFO ] 2025-02-20 01:05:14.234 [main] Log - Select Customer from Customer pop up - Customer Search
+[INFO ] 2025-02-20 01:05:15.274 [main] Log - Step:01 - Enter customer Name or alphabet.
+[INFO ] 2025-02-20 01:05:19.521 [main] Log - Step:02 -  Click on Search button.
+[INFO ] 2025-02-20 01:05:20.574 [main] Log - Expected Result: Customer is listing.
+[INFO ] 2025-02-20 01:05:20.600 [main] Log - Select Customer from Customer pop up
+[INFO ] 2025-02-20 01:05:24.708 [main] Log - Step:01 - Click on the select button
+[INFO ] 2025-02-20 01:05:24.740 [main] Log - Expected Result: Customer ID is autoloaded in the Customer ID field.
+[INFO ] 2025-02-20 01:05:24.767 [main] Log - Add Button functionality
+[INFO ] 2025-02-20 01:05:29.902 [main] Log - Step:01 - Click on Add button
+[INFO ] 2025-02-20 01:05:34.207 [main] Log - Step:02 - Click ok button in the 'previous active loan' pop up
+[INFO ] 2025-02-20 01:05:35.251 [main] Log - Expected Result: Pop up is closed.
+[INFO ] 2025-02-20 01:05:35.279 [main] Log - Resolution No Field - BVA Validations
+[INFO ] 2025-02-20 01:05:36.306 [main] Log - Step:01 - Enter alphanumeric data  in the 'Resolution No' field in the account info tab.
+[INFO ] 2025-02-20 01:05:36.306 [main] Log - Expected Result: Resolution No. entered successfully.
+[INFO ] 2025-02-20 01:05:36.342 [main] Log - Enter Resolution Date
+[INFO ] 2025-02-20 01:05:41.653 [main] Log - Step:01 - Enter valid  dates from date picker in the Resolution Date field.
+[INFO ] 2025-02-20 01:05:41.653 [main] Log - Expected Result: Resolution Date are entered successfully.
+[INFO ] 2025-02-20 01:05:41.680 [main] Log - Referred By Dropdown Selection
+[INFO ] 2025-02-20 01:05:50.272 [main] Log - Step:01 - Select an item from Referred By dropdown.
+[INFO ] 2025-02-20 01:05:50.304 [main] Log - Expected Result: Selected item is displayed.
+[INFO ] 2025-02-20 01:05:50.334 [main] Log - Enter Equitable Mort Reg.No
+[INFO ] 2025-02-20 01:05:51.414 [main] Log - Step:01 - Enter Equitable Mort Reg.No.
+[INFO ] 2025-02-20 01:05:51.415 [main] Log - Expected Result: Equitable Mort Reg.No are entered successfully.
+[INFO ] 2025-02-20 01:05:51.439 [main] Log - EMR Date Field - BVA Validations
+[INFO ] 2025-02-20 01:05:56.757 [main] Log - Step:01 - Enter invalid dates in EMR Date field.
+[INFO ] 2025-02-20 01:06:02.072 [main] Log - Expected Result: Error on invalid dates.
+[INFO ] 2025-02-20 01:06:10.413 [main] Log - Step:02 - Enter valid dates in EMR Date field.
+[INFO ] 2025-02-20 01:06:10.413 [main] Log - Expected Result: Valid date accepted.
+[INFO ] 2025-02-20 01:06:10.439 [main] Log - Agent Code Field - ECP Validations
+[INFO ] 2025-02-20 01:06:11.464 [main] Log - Step:01 - Enter invalid numeric data in Agent code field
+[INFO ] 2025-02-20 01:06:16.823 [main] Log - Expected Result: Error on invalid Code.
+[INFO ] 2025-02-20 01:06:25.185 [main] Log - Step:02 - Enter valid numeric data in Agent code field
+[INFO ] 2025-02-20 01:06:29.563 [main] Log - Expected Result: Agent name autoloads.
+[INFO ] 2025-02-20 01:06:29.588 [main] Log - DSA Code Field - ECP Validations
+[INFO ] 2025-02-20 01:06:30.650 [main] Log - Step:01 - Enter invalid numeric data in DSA code field
+[INFO ] 2025-02-20 01:06:36.014 [main] Log - Expected Result: Error on invalid Code.
+[INFO ] 2025-02-20 01:06:44.389 [main] Log - Step:02 - Enter valid numeric data in DSA code field
+[INFO ] 2025-02-20 01:06:48.749 [main] Log - Expected Result: DSA name autoloads.
+[INFO ] 2025-02-20 01:06:48.777 [main] Log - Remarks Field
+[INFO ] 2025-02-20 01:06:49.826 [main] Log - Step:01 - Enter alphanumeric data in Remarks field
+[INFO ] 2025-02-20 01:06:49.827 [main] Log - Expected Result: Text is saved without issues
+[INFO ] 2025-02-20 01:06:49.853 [main] Log - Move to Securities Tab
+[INFO ] 2025-02-20 01:06:54.157 [main] Log - Step:01 - Click NEXT button
+[INFO ] 2025-02-20 01:06:55.204 [main] Log - Expected Result: Securities tab is displayed
+[INFO ] 2025-02-20 01:06:55.229 [main] Log - Select Personal Sureties Tab
+[INFO ] 2025-02-20 01:06:59.542 [main] Log - Step:01 - Click personal surety tab
+[INFO ] 2025-02-20 01:07:00.576 [main] Log - Expected Result: Personal Sureties tab is displayed
+[INFO ] 2025-02-20 01:07:00.603 [main] Log - Customer added in security tab
+[INFO ] 2025-02-20 01:07:05.108 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-20 01:07:06.483 [main] Log - Step:02 - Enter any alphabets in the   Name Field(not applicant name).
+[INFO ] 2025-02-20 01:07:10.769 [main] Log - Step:03 -  Click on Search button.
+[INFO ] 2025-02-20 01:07:14.875 [main] Log - Step:04 - Click on the select button
+[INFO ] 2025-02-20 01:07:14.898 [main] Log - Expected Result: Customer is added in security tab.
+[INFO ] 2025-02-20 01:07:14.930 [main] Log - Security Addition Process
+[INFO ] 2025-02-20 01:07:19.196 [main] Log - Step:01 - Select Salary Certificate
+[INFO ] 2025-02-20 01:07:28.218 [main] Log - Step:02 - Enter details in OffName, DEpt Head, Designation, Place fields
+[INFO ] 2025-02-20 01:07:28.219 [main] Log - Expected Result: Possible to give the detail
+[INFO ] 2025-02-20 01:07:28.270 [main] Log - Enter Basic Pay, Net salary, Retd. Date & Remark
+[INFO ] 2025-02-20 01:07:38.910 [main] Log - Step:01 - Enter basic pay and  net salary  details
+[INFO ] 2025-02-20 01:07:44.233 [main] Log - Step:02 - Enter date in Retd. Date field
+[INFO ] 2025-02-20 01:07:45.271 [main] Log - Step:03 - Enter alphanumeric data in Remarks field
+[INFO ] 2025-02-20 01:07:45.271 [main] Log - Expected Result: Possible to give the detail
+[INFO ] 2025-02-20 01:07:45.309 [main] Log - Add Button functionality
+[INFO ] 2025-02-20 01:07:51.815 [main] Log - Step:01 - Click ADD button
+[INFO ] 2025-02-20 01:08:28.408 [main] Log - Expected Result: Security details are saved in grid
+[INFO ] 2025-02-20 01:08:28.434 [main] Log - Navigate to Nominee Tab
+[INFO ] 2025-02-20 01:08:31.525 [main] Log - Exception org.openqa.selenium.ElementClickInterceptedException: Element <input id="ctl00_ctl00_CPH1_PRDCNT_btnNext" class="Button" name="ctl00$ctl00$CPH1$PRDCNT$btnNext" type="button"> is not clickable at point (618,296) because another element <div id="divOverDueLoanExistPopup" class="ui-dialog-content ui-widget-content"> obscures it
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SPTVMLAP-2124', ip: '10.212.136.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 135.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250130195129, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2856, moz:profile: C:\Users\AKASH~1.VEN\AppDat..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 02c79077-ebfc-4a85-a4a7-2f3bcc009732

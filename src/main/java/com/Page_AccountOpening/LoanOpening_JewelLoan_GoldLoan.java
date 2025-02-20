@@ -21,6 +21,11 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	String transIdCash;
 	String transIdTransfer;
 	
+	public void fetchWithTransId(String transId) throws InterruptedException {
+		input(goaldLoanRepo.transIdTxtBox,transId);
+		click(goaldLoanRepo.goBtn);
+	}
+	
 	public void openGoaldLoanWindow() throws InterruptedException {
 		
 		ExtentTestManager.startTest("Access Gold Loan Opening Window");
@@ -1079,7 +1084,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	
 	
 	
-	public void authorize(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
+	public void authorizeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
 		ExtentTestManager.startTest("Login with Another User");
@@ -1196,8 +1201,8 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click Refresh Button");
 		Log.info("Step:02 - Click Refresh Button");
 		
-		input(goaldLoanRepo.transIdTxtBox,transIdCash);
-		click(goaldLoanRepo.goBtn);
+		fetchWithTransId(transIdCash);
+
 		
 		click(goaldLoanRepo.cashierCheckBox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Select checkbox");
@@ -1218,10 +1223,113 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		ExtentTestManager.endTest();
 		
+
+	}//end
+	
+	
+	
+	public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
+
+		//Login with Another User
+		ExtentTestManager.startTest("Login with Another User");
+		Log.info("Login with Another User");
+		
+		click(custSearch.custSignOut);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Log out");
+		Log.info("Step:01 - Log out");
+		
+		String UserName = configloader().getProperty("UserName2");
+		input(custSearch.loginUserName,UserName );
+		String Password = configloader().getProperty("Password2");
+		input(custSearch.loginPasswrd, Password);
+		click(custSearch.loginButton);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
+		Log.info("Step:02 - Log in with another user for authorization");
+	
+		String userName = driver.findElement(goaldLoanRepo.userName).getText();
+		System.out.println(userName);
+		
+		String flag = "akash";
+		
+		if(!userName.equalsIgnoreCase(flag)) {
+    		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
+    		Log.info("Expected Result: Logging successfull with another user");
+    		}else {
+    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    			Log.info("ERROR");
+    		}
+		
+		ExtentTestManager.endTest();
 		
 		
 		
+
+		//Manager Authorization - Transfer Tab
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		Log.info("Manager Authorization - Transfer Tab");
+		
+		click(goaldLoanRepo.autorizeAndCancelTab);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
+		Log.info("Step:01 - Click \"Authorize & Cancel\"");
+		
+		click(goaldLoanRepo.managerAuthoTab);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select \"Manager Authorization\"");
+		Log.info("Step:02 - Select \"Manager Authorization\"");
+		
+		click(goaldLoanRepo.sTransferTab);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click \"Transfer\" tab");
+		Log.info("Step:03 - Click \"Transfer\" tab");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transfer tab load");
+		Log.info("Expected Result: Transfer tab load");
+		
+		ExtentTestManager.endTest();
+		
+		
+		
+
+		//Refresh Loan Opening Entry
+		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		Log.info("Refresh Loan Opening Entry");
+		
+		click(goaldLoanRepo.refreshBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Refresh Button");
+		Log.info("Step:01 - Click Refresh Button");
+		
+		System.out.println("transIdTransferPersonal "+transIdTransfer);
+		fetchWithTransId(transIdTransfer);
+		
+		if(ElementDisplayed(goaldLoanRepo.approveCheckBoxTransfer)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan opening entry displayed");
+		Log.info("Expected Result: Loan opening entry displayed");
+	}else {
+		ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+		Log.info("ERROR");
+	}
+		ExtentTestManager.endTest();
+		
+		
+		
+
+		//Authorize Loan Entry as Manager
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		Log.info("Authorize Loan Entry as Manager");
+		
+		click(goaldLoanRepo.approveCheckBoxTransfer);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select loan entry checkbox");
+		Log.info("Step:01 - Select loan entry checkbox");
+		
+		click(goaldLoanRepo.authorizeBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click Authorize Button");
+		Log.info("Step:02 - Click Authorize Button");		
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry authorized");
+		Log.info("Expected Result: Entry authorized");
+
+		ExtentTestManager.endTest();
 		
 	}//end
+	
+	
 	
 }

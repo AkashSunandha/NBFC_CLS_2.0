@@ -28,7 +28,8 @@ public class Customer_NewCustomer extends Base_Class{
 	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
-
+	String transIdCash;
+	String transIdTransfer;
 //	String spPAN = "GenerateNextPAN";
 //	String clmnNamPAN = "generated_pan";
 //	
@@ -4571,15 +4572,6 @@ public class Customer_NewCustomer extends Base_Class{
 		ExtentTestManager.startTest("Customer Creation Data Selection & Authorize Customer Creation");
 		Log.info("Customer Creation Data Selection & Authorize Customer Creation");
 		
-//		try {
-//		while(true) {
-//			click(goaldLoanRepo.othersCheckBox);
-//			click(goaldLoanRepo.otherAuthorizeBtn);
-//		}
-//		}catch(Exception e) {
-//			System.out.println("No new approval request.");
-//		}
-			
 		click(goaldLoanRepo.othersCheckBox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select available customer creation data displayed below the tab.");
 		Log.info("Step:01 - Select available customer creation data displayed below the tab.");

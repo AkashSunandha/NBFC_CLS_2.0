@@ -10,14 +10,16 @@ import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
 import com.Page_AccountOpening.LoanOpening_JewelLoan_GoldLoan;
+import com.Page_AccountOpening.LoanOpening_LoanAndAdvances_PersonalLoanWeekly;
 import com.Page_Customer.Customer_NewCustomer;
+import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan {
+public class AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly extends Base_Class{
 
 
 	com.Utility.ExcelReader ExcelReader;
@@ -26,12 +28,12 @@ public class AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan {
 	TestListener TestListener; 
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	Customer_NewCustomer newCustMths = new Customer_NewCustomer();
-	LoanOpening_JewelLoan_GoldLoan goaldLoan = new LoanOpening_JewelLoan_GoldLoan();
-	
+	LoanOpening_JewelLoan_GoldLoan goldLoanMths = new LoanOpening_JewelLoan_GoldLoan();
+	LoanOpening_LoanAndAdvances_PersonalLoanWeekly prsnlLoanWeeklyMthds = new LoanOpening_LoanAndAdvances_PersonalLoanWeekly();
+
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("AccOpn_JewelLoan_GoldLoan");
+		ExcelReader = new com.Utility.ExcelReader("AccOpn_LoanAdva_PersnlLoanWeek");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -55,29 +57,47 @@ public class AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan {
 				
 				
 				custSrchMthds.pcRegistration(testdata, context);
+				
+				
+				
+				//Tran.Mode - CASH
+				custSrchMthds.userLoginValidPaswrd(testdata, context);
+				
+				prsnlLoanWeeklyMthds.openPersonalLoanWindow();
+				
+				prsnlLoanWeeklyMthds.accInfo(testdata, context);
+
+				prsnlLoanWeeklyMthds.personalSureties(testdata, context);
+				
+				prsnlLoanWeeklyMthds.nominee(testdata, context);
+				
+				prsnlLoanWeeklyMthds.loanDetailsCash(testdata, context);
+
+				prsnlLoanWeeklyMthds.authorizeCash(testdata, context);			
+				
+				custSrchMthds.logout();
+
+				
+				//Tran.Mode - TRANSFER
+				Base_Class.SetUp();
+				
+				custSrchMthds.pcRegistration(testdata, context);
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 				
-				goaldLoan.openGoaldLoanWindow();
+				prsnlLoanWeeklyMthds.openPersonalLoanWindow();
 				
-				goaldLoan.accInfo(testdata, context);
-								
-				goaldLoan.securities(testdata, context);
+				prsnlLoanWeeklyMthds.accInfo(testdata, context);
 
-				goaldLoan.nominee(testdata, context);
+				prsnlLoanWeeklyMthds.personalSureties(testdata, context);
 				
-				goaldLoan.loanDetails(testdata, context);
+				prsnlLoanWeeklyMthds.nominee(testdata, context);
 				
-				goaldLoan.transfer(testdata, context);
+				prsnlLoanWeeklyMthds.loanDetailsTransfer(testdata, context);
 
-				goaldLoan.authorizeCash(testdata, context);
+				prsnlLoanWeeklyMthds.authorizeTransfer(testdata, context);
 				
-				goaldLoan.authorizeTransfer(testdata, context);
-
-
 				custSrchMthds.logout();
-				
-			
 
 				
 			// EndTest
@@ -87,8 +107,9 @@ public class AllScenarios_AccOpn_LoanOpn_JewelLoan_GoldLoan {
 		}catch(Exception e) {
 			ExtentTestManager.getTest().log(Status.FAIL, e);
         	Log.info("Exception "+e);
-        	ExtentTestManager.endTest();		
-        	}
+        	ExtentTestManager.endTest();
+        	
+		}
 	}
 	
 	
