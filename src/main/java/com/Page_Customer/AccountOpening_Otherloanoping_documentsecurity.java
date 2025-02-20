@@ -53,11 +53,11 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
 		Log.info("Step-1: Enter valid username.");
 
-	//	String loginValidPassword = testdata.get("loginValidPassword").toString();
+		//	String loginValidPassword = testdata.get("loginValidPassword").toString();
 		String loginValidPassword=configloader().getProperty("Password");
 		input(loanOpen.loginPasswrd, loginValidPassword);
-		
-		
+
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Enter valid password.");
 		Log.info("Step-2: Enter valid password.");
 
@@ -140,35 +140,35 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 		System.out.println(custID);
 		click(loanOpen.addBtn);
 
-        try {
-        	click(loanOpen.okBtn);
-            if(ElementDisplayed(loanOpen.accountInfoGrid)) {
-            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer is added successfully.");
-    			Log.info("Expected Result: Customer is added successfully.");
-            }else {
-                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-                  Log.info("ERROR");
-            }
-                                
-     }catch(Exception e) {
-            
-           // click(loanOpen.okBtn);
-            
-            
-            if(ElementDisplayed(loanOpen.accountInfoGrid)) {
-            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer is added successfully.");
-    			Log.info("Expected Result: Customer is added successfully.");
-            }else {
-                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-                  Log.info("ERROR");
-            }
-            
-     }
-		
-//		if(ElementDisplayed(loanOpen.accountInfoGrid)) {
-//			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer is added successfully.");
-//			Log.info("Expected Result: Customer is added successfully.");
-//		}
+		try {
+			click(loanOpen.okBtn);
+			if(ElementDisplayed(loanOpen.accountInfoGrid)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer is added successfully.");
+				Log.info("Expected Result: Customer is added successfully.");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
+			}
+
+		}catch(Exception e) {
+
+			// click(loanOpen.okBtn);
+
+
+			if(ElementDisplayed(loanOpen.accountInfoGrid)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer is added successfully.");
+				Log.info("Expected Result: Customer is added successfully.");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
+			}
+
+		}
+
+		//		if(ElementDisplayed(loanOpen.accountInfoGrid)) {
+		//			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer is added successfully.");
+		//			Log.info("Expected Result: Customer is added successfully.");
+		//		}
 
 
 		ExtentTestManager.endTest();
@@ -374,7 +374,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 		ExtentTestManager.endTest();
 	}
 
-	
+
 
 	//TC-24 (2)
 	public void testRegDate(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
@@ -383,10 +383,10 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 		//Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver,120);
 		wait.until(ExpectedConditions.presenceOfElementLocated(loanOpen.regDate));
-		
+
 		String regDate = testdata.get("regDate").toString();
 		input(loanOpen.regDate, regDate);
-		
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Reg Date manually");
 		Log.info("Step-1:   Enter Reg Date manually");
 
@@ -398,26 +398,26 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	}
 
 	//TC-22 (1)
-		public void testSurveyNo(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-			ExtentTestManager.startTest("TC No. - 22 --> Validate Survey No Field");
-			Thread.sleep(5000);
+	public void testSurveyNo(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
+		ExtentTestManager.startTest("TC No. - 22 --> Validate Survey No Field");
+		Thread.sleep(5000);
 		//	String surveyNo = testdata.get("surveyNo").toString();
-			String surveyNo=generateUniqueId(spPAN, clmnNamPAN);
-			input(loanOpen.surveyNo, surveyNo);
-			ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Survey No.");
-			Log.info("Step-1:   Enter Survey No.");
+		String surveyNo=generateUniqueId(spPAN, clmnNamPAN);
+		input(loanOpen.surveyNo, surveyNo);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Survey No.");
+		Log.info("Step-1:   Enter Survey No.");
 
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to give the detail");
-			Log.info("Expected Result: Possible to give the detail");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to give the detail");
+		Log.info("Expected Result: Possible to give the detail");
 
 
-			ExtentTestManager.endTest();
-		}
-	
+		ExtentTestManager.endTest();
+	}
+
 	//TC-25 (1)
 	public void testWorth(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		ExtentTestManager.startTest("TC No. - 25 --> Validate worth Field");
-		
+
 		String worth = testdata.get("worth").toString();
 		input(loanOpen.worth, worth);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Worth");
@@ -686,11 +686,11 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 		ExtentTestManager.startTest("TC No. - 43 --> Select Transaction Mode");
 
 		click(loanOpen.saveBtn);
-		
+
 		try {
 			click(loanOpen.yesBtnInTransfer);
 			if(ElementDisplayed(loanOpen.signOut)) {
-				
+
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Signout is present");
 				Log.info("Expected Result: Signout is present");
 			}else {
@@ -713,7 +713,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 		}
 		transactionID=driver.findElement(loanOpen.transactionID).getText();
 		System.out.println(transactionID);
-		
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Click save button.");
 		Log.info("Step-1:  Click save button.");
 		if(driver.findElement(loanOpen.newAccountOpenedLabel).isDisplayed()) {
@@ -728,10 +728,10 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 
 	//TC-44 (3)
 	public void userLogin1(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-//signOut();
+		//signOut();
 
 		ExtentTestManager.startTest("TC No. - 44 --> Login to LMS as another User");
-	//String loginUserName1 = testdata.get("loginUserName1").toString();
+		//String loginUserName1 = testdata.get("loginUserName1").toString();
 		String loginUserName1=configloader().getProperty("UserName1");
 		input(loanOpen.loginUserName, loginUserName1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
@@ -744,36 +744,36 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 		Log.info("Step-2: Enter valid password.");
 
 		click(loanOpen.loginButton);
-		
-		  try {
-	        	click(loanOpen.OkBtn_loginStatusFailed);
-	            if(ElementDisplayed(loanOpen.loginUserName)) {
-	            	input(loanOpen.loginUserName, loginUserName1);
-	            	input(loanOpen.loginPasswrd, loginValidPassword1);
-	            	click(loanOpen.loginButton);
-	            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull");
-	    			Log.info("Expected Result: Login is successfull");
-	            }else {
-	                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-	                  Log.info("ERROR");
-	            }
-	                                
-	     }catch(Exception e) {
-	            
-	           // click(loanOpen.okBtn);
-	            
-	            if(ElementDisplayed(loanOpen.signOut)) {
-	            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull directly");
-	    			Log.info("Expected Result: Login is successfull directly");
-	            }else {
-	                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-	                  Log.info("ERROR");
-	            }
-	            
-	     }
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on 'Login'.");
-		Log.info("Step-3: Click on 'Login'.");
+
+		try {
+			click(loanOpen.OkBtn_loginStatusFailed);
+			if(ElementDisplayed(loanOpen.loginUserName)) {
+				input(loanOpen.loginUserName, loginUserName1);
+				input(loanOpen.loginPasswrd, loginValidPassword1);
+				click(loanOpen.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull");
+				Log.info("Expected Result: Login is successfull");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
+			}
+
+		}catch(Exception e) {
+			ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on 'Login'.");
+			Log.info("Step-3: Click on 'Login'.");
+			// click(loanOpen.okBtn);
+
+			if(ElementDisplayed(loanOpen.signOut)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull directly");
+				Log.info("Expected Result: Login is successfull directly");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
+			}
+
+		}
+
+
 		Thread.sleep(10000);
 		//		boolean flag1 = ElementDisplayed(institutionalCust.dashboard);
 		//		boolean flag = flag1;
@@ -797,12 +797,12 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Click on manager authorization tab");
 		Log.info("Step-2: Click on manager authorization tab");
 
-//		String makerId = testdata.get("makerId").toString();
-//		input(loanOpen.makerID, makerId);
+		//		String makerId = testdata.get("makerId").toString();
+		//		input(loanOpen.makerID, makerId);
 
 		input(loanOpen.transactionID_textbox,transactionID);
-		
-		
+
+
 		click(loanOpen.goBtn);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Manager Authorization window should be display");
@@ -810,100 +810,100 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 
 		ExtentTestManager.endTest();	
 	}
-	
+
 	//TC-46 (1)
-		public void testRefreshBtn() throws InterruptedException {
-			ExtentTestManager.startTest("TC No. - 46 --> Validate refresh button in manager authorization page");
+	public void testRefreshBtn() throws InterruptedException {
+		ExtentTestManager.startTest("TC No. - 46 --> Validate refresh button in manager authorization page");
 
-			click(loanOpen.refreshBtn);
-			ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
-			Log.info("Step-1: Click on refresh button");
+		click(loanOpen.refreshBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
+		Log.info("Step-1: Click on refresh button");
 
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan entry should be display in the  window");
-			Log.info("Expected Result: Loan entry should be display in the  window");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan entry should be display in the  window");
+		Log.info("Expected Result: Loan entry should be display in the  window");
 
-			ExtentTestManager.endTest();	
-		}
+		ExtentTestManager.endTest();	
+	}
 
-		//TC-47 (2)
-		public void testSelectAndAuthorize() throws InterruptedException {
-			ExtentTestManager.startTest("TC No. - 47 --> Select and authorize the customer in manager authorization page");
+	//TC-47 (2)
+	public void testSelectAndAuthorize() throws InterruptedException {
+		ExtentTestManager.startTest("TC No. - 47 --> Select and authorize the customer in manager authorization page");
 
-			click(loanOpen.authorizePage_checkbox);
-			
-//			WebElement fetchAccNo = driver.findElement(By.xpath("//input[@title='Account No']"));
-//			Object accNo = fetchAccNo.getAttribute("value");
-//			click(driver.findElement(By.xpath("//span[contains(@title,"+accNo+")]/parent::*/parent::*/td[@class='chk']/input")));
-				
-			ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
-			Log.info("Step-1: Click on refresh button");
-			click(loanOpen.authorizeBtn);
-			ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
-			Log.info("Step-1: Click on refresh button");
+		click(loanOpen.authorizePage_checkbox);
 
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry is authorized");
-			Log.info("Expected Result: Entry is authorized");
+		//			WebElement fetchAccNo = driver.findElement(By.xpath("//input[@title='Account No']"));
+		//			Object accNo = fetchAccNo.getAttribute("value");
+		//			click(driver.findElement(By.xpath("//span[contains(@title,"+accNo+")]/parent::*/parent::*/td[@class='chk']/input")));
 
-			ExtentTestManager.endTest();	
-		}
-	
-		//TC-48 (4)
-		public void testCashierAuthorization(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-			ExtentTestManager.startTest("TC No. - 48 --> Refresh, select and authorize in Cashier Authorization");
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
+		Log.info("Step-1: Click on refresh button");
+		click(loanOpen.authorizeBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
+		Log.info("Step-1: Click on refresh button");
 
-			click(loanOpen.cashierAuthorization);
-			ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on cashier authorization");
-			Log.info("Step-1: Click on cashier authorization");
-			
-//			click(loanOpen.refreshBtn);
-//			ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
-//			Log.info("Step-1: Click on refresh button");
-			
-//			String makerId = testdata.get("makerId").toString();
-//			input(loanOpen.makerID, makerId);
-			
-			input(loanOpen.transactionID_textbox,transactionID);
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry is authorized");
+		Log.info("Expected Result: Entry is authorized");
 
-			click(loanOpen.goBtn);
-			
+		ExtentTestManager.endTest();	
+	}
 
-			click(loanOpen.cashierAuthorize_checkbox);
-			ExtentTestManager.getTest().log(Status.PASS, "Step-2: Select the customer using checkbox");
-			Log.info("Step-2: Select the customer using checkbox");
+	//TC-48 (4)
+	public void testCashierAuthorization(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
+		ExtentTestManager.startTest("TC No. - 48 --> Refresh, select and authorize in Cashier Authorization");
 
-			click(loanOpen.cashier_authorizeBtn);
-			ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on authorize button");
-			Log.info("Step-3: Click on authorize button");
+		click(loanOpen.cashierAuthorization);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on cashier authorization");
+		Log.info("Step-1: Click on cashier authorization");
 
-			testCloseMessagePopup();
-			ExtentTestManager.getTest().log(Status.PASS, "Step-4: Click on close icon in popup");
-			Log.info("Step-4: Click on close icon in popup");
+		//			click(loanOpen.refreshBtn);
+		//			ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
+		//			Log.info("Step-1: Click on refresh button");
 
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account is authorized");
-			Log.info("Expected Result: Account is authorized");
+		//			String makerId = testdata.get("makerId").toString();
+		//			input(loanOpen.makerID, makerId);
 
-			ExtentTestManager.endTest();
-		}
-	
+		input(loanOpen.transactionID_textbox,transactionID);
+
+		click(loanOpen.goBtn);
+
+
+		click(loanOpen.cashierAuthorize_checkbox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Select the customer using checkbox");
+		Log.info("Step-2: Select the customer using checkbox");
+
+		click(loanOpen.cashier_authorizeBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on authorize button");
+		Log.info("Step-3: Click on authorize button");
+
+		testCloseMessagePopup();
+		ExtentTestManager.getTest().log(Status.PASS, "Step-4: Click on close icon in popup");
+		Log.info("Step-4: Click on close icon in popup");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account is authorized");
+		Log.info("Expected Result: Account is authorized");
+
+		ExtentTestManager.endTest();
+	}
+
 
 	public void testCloseMessagePopup() throws InterruptedException {
 		click(loanOpen.closeIcon);
 	}
 
-//	//TC-53 (1)
-//	public void testCashierAuthorization() throws InterruptedException {
-//		ExtentTestManager.startTest("TC No. - 53 --> Cashier Authorization");
-//
-//		click(loanOpen.cashierAuthorization);
-//		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on cashier authorization");
-//		Log.info("Step-1: Click on cashier authorization");
-//
-//		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan is cashier-authorized");
-//		Log.info("Expected Result: Loan is cashier-authorized");
-//
-//		ExtentTestManager.endTest();	
-//	}
+	//	//TC-53 (1)
+	//	public void testCashierAuthorization() throws InterruptedException {
+	//		ExtentTestManager.startTest("TC No. - 53 --> Cashier Authorization");
+	//
+	//		click(loanOpen.cashierAuthorization);
+	//		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on cashier authorization");
+	//		Log.info("Step-1: Click on cashier authorization");
+	//
+	//		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan is cashier-authorized");
+	//		Log.info("Expected Result: Loan is cashier-authorized");
+	//
+	//		ExtentTestManager.endTest();	
+	//	}
 
 }
 
-	
+

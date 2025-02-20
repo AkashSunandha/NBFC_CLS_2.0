@@ -696,8 +696,37 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 		Log.info("Step-2: Enter valid password.");
 
 		click(loanOpen.loginButton);
-		ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on 'Login'.");
-		Log.info("Step-3: Click on 'Login'.");
+		
+
+		try {
+        	click(loanOpen.OkBtn_loginStatusFailed);
+            if(ElementDisplayed(loanOpen.loginUserName)) {
+            	input(loanOpen.loginUserName, loginUserName1);
+            	input(loanOpen.loginPasswrd, loginValidPassword1);
+            	click(loanOpen.loginButton);
+            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull");
+    			Log.info("Expected Result: Login is successfull");
+            }else {
+                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+                  Log.info("ERROR");
+            }
+                                
+     }catch(Exception e) {
+            
+           // click(loanOpen.okBtn);
+    	 ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on 'Login'.");
+ 		Log.info("Step-3: Click on 'Login'.");
+            if(ElementDisplayed(loanOpen.signOut)) {
+            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull directly");
+    			Log.info("Expected Result: Login is successfull directly");
+            }else {
+                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+                  Log.info("ERROR");
+            }
+            
+     }
+		
+		
 		Thread.sleep(10000);
 		//		boolean flag1 = ElementDisplayed(institutionalCust.dashboard);
 		//		boolean flag = flag1;
