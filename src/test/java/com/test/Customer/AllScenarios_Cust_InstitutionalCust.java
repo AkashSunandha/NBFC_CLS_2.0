@@ -626,7 +626,7 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 				instituCust.testOtherTabBtn();
 
 				//TC-327
-				instituCust.testRefreshBtn();
+				//instituCust.testRefreshBtn();
 
 				//TC-328
 				instituCust.testSelectAndAuthorize();

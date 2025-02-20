@@ -23,6 +23,8 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 
 	String parentWindow;
 	Set<String> allWindows;
+	
+	String transactionID;
 
 	public boolean signOut() throws InterruptedException {
 		ExtentTestManager.startTest(" SignOut");
@@ -783,7 +785,8 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 			}
 
 		}
-		
+		transactionID=driver.findElement(loanOpen.transactionID).getText();
+		System.out.println(transactionID);
 	//	click(loanOpen.saveBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Click save button.");
 		Log.info("Step-1:  Click save button.");
@@ -812,8 +815,36 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		Log.info("Step-2: Enter valid password.");
 
 		click(loanOpen.loginButton);
-		ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on 'Login'.");
-		Log.info("Step-3: Click on 'Login'.");
+		
+		try {
+        	click(loanOpen.OkBtn_loginStatusFailed);
+            if(ElementDisplayed(loanOpen.loginUserName)) {
+            	input(loanOpen.loginUserName, loginUserName1);
+            	input(loanOpen.loginPasswrd, loginValidPassword1);
+            	click(loanOpen.loginButton);
+            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull");
+    			Log.info("Expected Result: Login is successfull");
+            }else {
+                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+                  Log.info("ERROR");
+            }
+                                
+     }catch(Exception e) {
+            
+           // click(loanOpen.okBtn);
+    	 ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on 'Login'.");
+ 		Log.info("Step-3: Click on 'Login'.");
+            if(ElementDisplayed(loanOpen.signOut)) {
+            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull directly");
+    			Log.info("Expected Result: Login is successfull directly");
+            }else {
+                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+                  Log.info("ERROR");
+            }
+            
+     }
+		
+		
 		Thread.sleep(10000);
 		//		boolean flag1 = ElementDisplayed(institutionalCust.dashboard);
 		//		boolean flag = flag1;
@@ -839,11 +870,12 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 		click(loanOpen.transferTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on transfer tab");
 		Log.info("Step-3: Click on transfer tab");
-		String makerId = testdata.get("makerId").toString();
 		
-		input(loanOpen.makerID, makerId);
-		ExtentTestManager.getTest().log(Status.PASS, "Step-4: Enter makerid ");
-		Log.info("Step-4: Enter makerid");
+//		String makerId = testdata.get("makerId").toString();
+//		input(loanOpen.makerID, makerId);
+		input(loanOpen.transactionID_textbox,transactionID);
+//		ExtentTestManager.getTest().log(Status.PASS, "Step-4: Enter makerid ");
+//		Log.info("Step-4: Enter makerid");
 		click(loanOpen.goBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-5: Click on go button");
 		Log.info("Step-5: Click on go button");

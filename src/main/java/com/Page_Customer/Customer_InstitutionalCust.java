@@ -29,8 +29,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
 
 
-	String query="Exec Getcustomer";
+	String query="Exec Getcustomer 102";
 	String columnName="CustomerID";
+	String transactionID;
 
 	//TC-02 (3)
 	public void userLogin(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
@@ -3005,6 +3006,8 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 		click(institutionalCust.final_OKBtn);
 		driver.switchTo().defaultContent();
+		transactionID=driver.findElement(institutionalCust.transactionID).getText();
+		System.out.println(transactionID);
 		ExtentTestManager.endTest();
 	}
 
@@ -3026,6 +3029,34 @@ public class Customer_InstitutionalCust extends Base_Class {
 		Log.info("Step-2: Enter valid password.");
 
 		click(institutionalCust.loginButton);
+		
+		 try {
+	        	click(institutionalCust.OkBtn_loginStatusFailed);
+	            if(ElementDisplayed(institutionalCust.loginUserName)) {
+	            	input(institutionalCust.loginUserName, loginUserName1);
+	            	input(institutionalCust.loginPasswrd, loginValidPassword1);
+	            	click(institutionalCust.loginButton);
+	            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull");
+	    			Log.info("Expected Result: Login is successfull");
+	            }else {
+	                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+	                  Log.info("ERROR");
+	            }
+	                                
+	     }catch(Exception e) {
+	            
+	           // click(loanOpen.okBtn);
+	            
+	            if(ElementDisplayed(institutionalCust.signOut)) {
+	            	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull directly");
+	    			Log.info("Expected Result: Login is successfull directly");
+	            }else {
+	                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+	                  Log.info("ERROR");
+	            }
+	            
+	     }
+		
 		ExtentTestManager.getTest().log(Status.PASS, "Step-3: Click on 'Login'.");
 		Log.info("Step-3: Click on 'Login'.");
 		Thread.sleep(10000);
@@ -3065,6 +3096,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on Others tab");
 		Log.info("Step-1: Click on Others tab ");
+		input(institutionalCust.transactionID_textbox,transactionID);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Others tab load");
 		Log.info("Expected Result: Others tab load");

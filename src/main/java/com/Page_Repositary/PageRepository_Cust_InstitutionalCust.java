@@ -311,6 +311,10 @@ public By identityPage_frame=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_CustContent_Cu
 	public By otherTab=By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers\"]");
 	public By otherTab_checkbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers_ucMAOthers_lvwOtherDetails_ctrl0_chkSelect\"]");
 	
+	public By transactionID=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID\"]");
+	public By transactionID_textbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt\"]");
+	//*[@id="ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt"]
+	public By OkBtn_loginStatusFailed=By.xpath("//span[text()='OK']");
 	
 }
 

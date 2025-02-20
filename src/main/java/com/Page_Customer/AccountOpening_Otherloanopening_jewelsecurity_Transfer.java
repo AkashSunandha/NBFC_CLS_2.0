@@ -21,6 +21,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	String parentWindow;
 	Set<String> allWindows;
+	String transactionID;
 
 	//(1)
 	public boolean signOut() throws InterruptedException {
@@ -663,6 +664,9 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 		}
 
+		transactionID=driver.findElement(loanOpen.transactionID).getText();
+		System.out.println(transactionID);
+		
 		//	click(loanOpen.saveBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Click save button.");
 		Log.info("Step-1:  Click save button.");
@@ -722,9 +726,10 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 
 		click(loanOpen.transferTab);
-		String makerId = testdata.get("makerId").toString();
-		input(loanOpen.makerID, makerId);
-
+//		String makerId = testdata.get("makerId").toString();
+//		input(loanOpen.makerID, makerId);
+		input(loanOpen.transactionID_textbox,transactionID);
+		
 		click(loanOpen.goBtn);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Manager Authorization window should be display");

@@ -133,6 +133,8 @@ public By cashierAuthorize_checkbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_
 	public By OkBtn=By.xpath("//*[@id=\"close\"]");
 	
 	public By authorizeCheckbox=By.xpath("//span[contains(@title,\"102000015930 \")]/parent::*/parent::*/td[@class='chk']/input");
+	public By transactionID=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID\"]");
+	public By transactionID_textbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt\"]");
 	
-	
+	public By OkBtn_loginStatusFailed=By.xpath("//span[text()='OK']");
 }

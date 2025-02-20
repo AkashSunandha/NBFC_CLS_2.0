@@ -17,6 +17,8 @@ public class AccountOpening_Otherloanopening_jewelsecurity extends Base_Class {
 
 	String query="Exec Getcustomer 102";
 	String columnName="CustomerID";
+	String transactionID;
+
 	
 	public boolean signOut() throws InterruptedException {
 		ExtentTestManager.startTest(" SignOut");
@@ -541,6 +543,34 @@ public class AccountOpening_Otherloanopening_jewelsecurity extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select transaction mode as cash.");
 		Log.info("Step-1:  Select transaction mode as cash.");
 		click(loanOpen.saveBtn);
+		
+		try {
+			click(loanOpen.yesBtnInTransfer);
+			if(ElementDisplayed(loanOpen.signOut)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Signout is present");
+				Log.info("Expected Result: Signout is present");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
+			}
+
+		}catch(Exception e) {
+
+			// click(loanOpen.okBtn);
+
+			if(ElementDisplayed(loanOpen.signOut)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Signout is present");
+				Log.info("Expected Result: Signout is present");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
+			}
+
+		}
+		transactionID=driver.findElement(loanOpen.transactionID).getText();
+		System.out.println(transactionID);
+		
+		
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2:  Click save button.");
 		Log.info("Step-2:  Click save button.");
 		if(driver.findElement(loanOpen.newAccountOpenedLabel).isDisplayed()) {
@@ -597,8 +627,10 @@ public class AccountOpening_Otherloanopening_jewelsecurity extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Click on manager authorization tab");
 		Log.info("Step-2: Click on manager authorization tab");
 
-		String makerId = testdata.get("makerId").toString();
-		input(loanOpen.makerID, makerId);
+//		String makerId = testdata.get("makerId").toString();
+//		input(loanOpen.makerID, makerId);
+		
+		input(loanOpen.transactionID_textbox,transactionID);
 		
 		click(loanOpen.goBtn);
 
@@ -664,8 +696,10 @@ public class AccountOpening_Otherloanopening_jewelsecurity extends Base_Class {
 //		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
 //		Log.info("Step-1: Click on refresh button");
 		
-		String makerId = testdata.get("makerId").toString();
-		input(loanOpen.makerID, makerId);
+//		String makerId = testdata.get("makerId").toString();
+//		input(loanOpen.makerID, makerId);
+		
+		input(loanOpen.transactionID_textbox,transactionID);
 		
 		click(loanOpen.goBtn);
 
