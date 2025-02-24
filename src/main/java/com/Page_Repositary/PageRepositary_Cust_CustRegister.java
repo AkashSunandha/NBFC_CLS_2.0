@@ -39,7 +39,7 @@ public class PageRepositary_Cust_CustRegister {
 	public By custLoan = By.xpath("//td[@class='SubHead' and contains(text(), 'Loan')]");
 	public By custDeposit = By.xpath("//td[@class='SubHead' and contains(text(), 'Deposits')]");
 	public By custDetailGrid = By.xpath("//*[@id=\"tblCustList\"]");
-	
+
 	//Loan Grid Column Names
 	public By loanProdName = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'Product Name')]");
 	public By loanAcNum = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'A/C No')]");

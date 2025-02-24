@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_AccountOpening_FixedDeposit {
 
+	public static final By Transaction_based = null;
 	//PC Registration
 	public By formName = By.xpath("//*[@id='Username']");
 	public By formBranchName = By.xpath("//select[@id='ddlBranches']/option[text()='TRIVANDRUM']");
@@ -145,7 +146,7 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 		public By loginUserName1 = By.xpath("//*[@id=\"txtUserName_txt\"]");
 		public By loginPasswrd1 = By.xpath("//*[@id=\"txtPassword_txt\"]");
 		public By loginButton1 = By.xpath("//*[@id=\"imgbtnSubmit\"]");
-		public By Newloginvalidate=By.xpath("//span[text()='mhatre']");
+		public By Newloginvalidate=By.xpath("//span[text()='vijayauthorize']");
 		//public By logoutMsg1 = By.xpath("//*[@id=\"logMessage\"]");
 		//public By logoutOk1 = By.xpath("/html/body/div[1]/div/div[2]/div/form/div[11]/div[3]/div/button[1]");
 		
@@ -173,6 +174,41 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 		public By postdebit=By.id("ctl00_ctl00_CPH1_PRDCNT_lstAcInfo_ctrl0_AIF1_btnAutoPost");
 		public By autoposting_popup=By.id("ddlTrnsBased_ddl");
 		
+		//Auto posting child Popup window
+		// selecting Transaction_Based
+		public By Transaction_Based =By.id("ddlTrnsBased_ddl"); 
+        public By optionGLCode =By.xpath("//*[@id=\"ddlTrnsBased_ddl\"]");
+        public By GL_Name =By.id("hyjackText0");
+        public By GL_NameOption =By.xpath("//li[@val=463 and text()='ADVERTISEMENT']");
+        public By Balance_Amount = By.id("txtBalanceAmount_txt");
+		public By AutopostingAmount =By.id("txtAmountForGLHead_txt");
+		public By Add =By.id("btnAddGLAcHead"); 
+		public By submit =By.id("btnSubmit");
+		public By save = By.id("ctl00_ctl00_CPH1_PRDCNT_btnSave");
+		
+		//Login with another user
+				//logout
+				public By signout1 = By.xpath("//*[text()='Signout']");
+
+				//Login
+				public By loginUserName2 = By.xpath("//*[@id=\"txtUserName_txt\"]");
+				public By loginPasswrd2 = By.xpath("//*[@id=\"txtPassword_txt\"]");
+				public By loginButton2 = By.xpath("//*[@id=\"imgbtnSubmit\"]");
+				public By Newloginvalidate1=By.xpath("//span[text()='vijayauthorize']");
+				
+				
+				//Authorize & cancel for Transfer
+				public By Authorize_canceltab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/div");
+				//public By Transfertab =By.id("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
+				public By Transfertab = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_tab\"]");
+				public By Manager_Authorization_Transfer_Tab =By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/ul/li[4]/a");
+				public By Refresh_1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
+				public By checkboxselect1_transfer=By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div/div[3]/table/tbody/tr/td/div/div[2]/div[2]/div/table/tbody/tr/td/div[2]/div/div/table/tbody/tr[2]/td[2]");
+				public By Authorizebutton1_transfer=By.id("ctl00_ctl00_CPH1_PRDCNT_btnOtherPass");
+			
+				
+			
+				
 }
 
 

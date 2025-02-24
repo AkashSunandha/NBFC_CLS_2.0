@@ -157,12 +157,14 @@ public class Customer_CustomerSearch extends Base_Class{
 		Log.info("Valid Login");
 			
 		
-					String loginUserName = testdata.get("loginUserName").toString();
+//					String loginUserName = testdata.get("loginUserName").toString();
+					String loginUserName = configloader().getProperty("UserName");
 					input(custSearch.loginUserName, loginUserName);
 					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");
 					Log.info("Step:01 - Enetered valid User Name");
 					
-					String loginValidPassword = testdata.get("loginValidPassword").toString();
+					String loginValidPassword = configloader().getProperty("Password");
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
 					input(custSearch.loginPasswrd, loginValidPassword);
 					ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Eneter valid Password");
 					Log.info("Step:02 - Enetered valid Password");

@@ -62,7 +62,7 @@ public class AllScenarios_Cust_CustSearch extends Base_Class{
 				
 				//PC Registration
 				custSrchMthds.pcRegistration(testdata, context);
-				
+			
 				//TC No. - 03, 91 --> Invalid Login - Incorrect Password
 				custSrchMthds.userLoginInValidPaswrd(testdata, context);
 

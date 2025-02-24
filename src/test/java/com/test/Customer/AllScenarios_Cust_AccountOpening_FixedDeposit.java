@@ -54,7 +54,7 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				//PC Registration
 				custSrchMthds.pcRegistration(testdata, context);
 			
-				//TC 01
+			//TC 01
 				//User Login
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
@@ -83,55 +83,105 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				//fixeddeposit.Selectnature();
 				
 				
-				//TC18
+				//TC11
 				fixeddeposit.LedgerandFolioNumberEntry(testdata, context);
 				
-				//TC19
+				//TC12
 				fixeddeposit.RemarkFieldEntry(testdata, context);
 				
-				//TC20
+				//TC13
 				fixeddeposit.LienMarkFunctionality(testdata);
 				
-				//TC21
+				//TC14
 				fixeddeposit.NavigateThroughTabs();
 				
-				//TC22
+				//TC15
 				fixeddeposit.AddNomineeandValidateAutofill(testdata);
 				
-				//TC17
+				//TC16
 				fixeddeposit.AddOperatorandValidate(testdata);
 				
-				//TC18
+				//TC17
 				fixeddeposit.Interest_Transfer_Requirements(testdata);
 				
-				//TC19
+				//TC18
 				fixeddeposit.next_button_functioanlity();
 				
-				//TC20
+				//TC19
 				fixeddeposit.On_Maturity_Settings();
-				
 				
 				//TC21
 				fixeddeposit.Login_with_Another_User(testdata, context);
 				
+				
 				//TC22
-				fixeddeposit.Cashier_Authorization();
-				
-				//TC23
 				fixeddeposit.Manager_Authorization_Cash_Tab();
-				
-				//TC24
-				fixeddeposit.Refresh_Loan_Opening_Entry();
 				
 				
 				//TC25
-				fixeddeposit.Authorize_Loan_Entry_as_Manager();
+				fixeddeposit.Refresh_Loan_Opening_Entry();
+				
 				
 				//TC26
+				fixeddeposit.Authorize_Loan_Entry_as_Manager();
+				
+				//TC23
+				fixeddeposit.Cashier_Authorization(); 
+				
+				
+				//TC20
 				fixeddeposit.Deposit_opening_Transfer(testdata, context);
 				
-				//Sign out
+				//==============================++++++++++++++++++++++++++++++++++============================
+				//TC21
+				// fixeddeposit.Transaction_Based (testdata, context);
+				
+			     // TC22
+				// fixeddeposit.GL_Name (testdata, context);
+				
+				 // TC23
+				 //fixeddeposit.AutopostingAmount(testdata, context);
+				
+				// TC24
+				 //fixeddeposit.Add();
+				 
+		        // TC25
+				 //fixeddeposit.submit();
+				 //==============================++++++++++++++++++++++++++++++++++============================
+
+				 
+				 
+				 
+				 // TC26
+				 fixeddeposit.save();
+				 
+				 //Sign out
 				custSrchMthds.logout();
+				Base_Class.SetUp();
+				
+				//PC Registration
+				custSrchMthds.pcRegistration(testdata, context); 
+				 
+			    //TC27
+				fixeddeposit.Login_with_Another_User_transferauthorize(testdata, context);
+				
+			
+		        //TC28
+				fixeddeposit.Manager_Authorization_Transfer_Tab(); 
+				
+				//TC 29
+				fixeddeposit.Transfertab(); 
+				
+				//TC30
+				fixeddeposit.RefreshLoan_Opening_TransferEntry(); 
+				
+				
+				//TC31
+				fixeddeposit.AuthorizeLoan_Entry_as_ManagerTransfertab(); 
+			
+				
+				//Sign out
+				custSrchMthds.logout(); 		
 				
 				
 				// EndTest
