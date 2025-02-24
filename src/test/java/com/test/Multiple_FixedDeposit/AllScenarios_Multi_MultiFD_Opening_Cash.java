@@ -181,7 +181,7 @@ public class AllScenarios_Multi_MultiFD_Opening_Cash extends Base_Class {
 				multifdCash.CashierAuthorizationRefresh();
 				
 				//TC_42 ---> Cashier Authorization
-				multifdCash.CashierAuthorizationSelectCheckBox();
+				multifdCash.CashierAuthorizationSelectCheckBox(testdata, context);
 				
 				//TC_43 ---> Cashier Authorization
 				multifdCash.CashierAuthorizationAuthorize();

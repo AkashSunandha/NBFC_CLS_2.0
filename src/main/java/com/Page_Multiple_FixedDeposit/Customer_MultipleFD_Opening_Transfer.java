@@ -1085,34 +1085,40 @@ public boolean AddOperatorBtn() throws InterruptedException {
 
 	public boolean EnterFrequency(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:34 - Interest Transfer Data Entry");
-	Log.info("TC:34 - Interest Transfer Data Entry");
-	
-	
-		click(multifd.Frequency);
-
-		WebElement FrequencyField = driver.findElement(multifd.Frequency);
+		ExtentTestManager.startTest("TC:34 - Interest Transfer Data Entry");
+		Log.info("TC:34 - Interest Transfer Data Entry");
 		
-		String EnterFrequency = testdata.get("Frequency").toString();
-		input(multifd.Frequency, EnterFrequency);
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter the Frequency as 1");
-		Log.info("Step:01 - Enter the Frequency as 1");
-	
+				
+			WebDriverWait wait = new WebDriverWait(driver, 10);
 			
-		Assert.assertTrue(ElementDisplayed(multifd.Frequency), "Validation Failed: Frequency Field is not entered.");
-					
-		FrequencyField.sendKeys(Keys.TAB);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on TAB button in the keyboard");
-		Log.info("Step:02 - Click on TAB button in the keyboard");
-		
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Amount,  Startdate and End date are autoloaded.");
-		Log.info("Expected Result: Amount,  Startdate and End date are autoloaded.");
+		    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("progressdiv")));
 
-	ExtentTestManager.endTest();
-	return true;
-}
+			
+			WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtExeFrequency_txt']")));
+			option.click();
+
+			WebElement FrequencyField = driver.findElement(multifd.Frequency);
+			
+			String EnterFrequency = testdata.get("Frequency").toString();
+			input(multifd.Frequency, EnterFrequency);
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter the Frequency as 1");
+			Log.info("Step:01 - Enter the Frequency as 1");
+		
+			Assert.assertEquals(FrequencyField.getAttribute("value"), EnterFrequency, "Validation Failed: Frequency Field is not entered correctly.");
+			//Assert.assertTrue(ElementDisplayed(multifd.Frequency), "Validation Failed: Frequency Field is not entered.");
+						
+			FrequencyField.sendKeys(Keys.TAB);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on TAB button in the keyboard");
+			Log.info("Step:02 - Click on TAB button in the keyboard");
+			
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Amount,  Startdate and End date are autoloaded.");
+			Log.info("Expected Result: Amount,  Startdate and End date are autoloaded.");
+
+		ExtentTestManager.endTest();
+		return true;
+	}
 
 	public boolean OnMaturityTabNavigation() throws InterruptedException {
 	

@@ -26,9 +26,22 @@ import com.extentReports.ExtentTestManager;
 public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	Pages_Multi_FD_Module multifd = new Pages_Multi_FD_Module();
 	
+	
 	ScreenShot sc = new ScreenShot(null);
+	
+	String transIdCashPersonal;
+    String transIdTransferPersonal;
+	
+	public boolean FetchwithTransID(String transID) throws InterruptedException {
+		
+		input(multifd.TransactionIDField,transID);
+		click(multifd.GoBTN);
+		
+		ExtentTestManager.endTest();
+		return true;
+		
+	}
 
-//Customer Login Window
 	public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context)
 			throws ClassNotFoundException, InterruptedException, IOException {
 		ExtentTestManager.startTest("TC:01 - Login to NBFC Application");
@@ -518,8 +531,8 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean CustomerID(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:16 - Enter customer ID in customer");
-		Log.info("TC:16 - Enter customer ID in customer");
+			ExtentTestManager.startTest("TC:16 - Enter customer ID in customer");
+			Log.info("TC:16 - Enter customer ID in customer");
 
 			click(multifd.SearchIcon);
 
@@ -555,8 +568,8 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 			Log.info("Expected Result: Customer is listing similar to the entered Customer name");
 
 
-		ExtentTestManager.endTest();
-		return true;
+			ExtentTestManager.endTest();
+			return true;
 	}
 
 	public boolean CustomerNomineeSearch(Map<Object, Object> testdata, ITestContext context)
@@ -597,8 +610,8 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Nominee details auto-fill upon selection");
 			Log.info("Expected Result: Nominee details auto-fill upon selection");
 
-		ExtentTestManager.endTest();
-		return true;
+			ExtentTestManager.endTest();
+			return true;
 	}
 	
 	public boolean MandatoryNameField(Map<Object, Object> testdata, ITestContext context)
@@ -1036,12 +1049,12 @@ public boolean AddOperatorBtn() throws InterruptedException {
 
 	}
 	
-public boolean ProductDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	public boolean ProductDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:33 - Interest Transfer Data Entry");
-		Log.info("TC:33 - Interest Transfer Data Entry");
+			ExtentTestManager.startTest("TC:33 - Interest Transfer Data Entry");
+			Log.info("TC:33 - Interest Transfer Data Entry");
 		
-		if (ElementDisplayed(multifd.SelectProduct)) {
+			if (ElementDisplayed(multifd.SelectProduct)) {
 			click(multifd.SelectProduct);
 
 			ExtentTestManager.getTest().log(Status.PASS, "Step 01: Select a Product from the product Dropdown list. Eg: Suspense Liability");
@@ -1078,28 +1091,38 @@ public boolean ProductDropdown(Map<Object, Object> testdata, ITestContext contex
 
 		}
 		
-		ExtentTestManager.endTest();
-		return true;
+			ExtentTestManager.endTest();
+			return true;
 	}
 
-public boolean EnterFrequency(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	public boolean EnterFrequency(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:34 - Interest Transfer Data Entry");
-	Log.info("TC:34 - Interest Transfer Data Entry");
+		ExtentTestManager.startTest("TC:34 - Interest Transfer Data Entry");
+		Log.info("TC:34 - Interest Transfer Data Entry");
 	
-	
-		click(multifd.Frequency);
+			
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		
+	    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("progressdiv")));
+
+		
+		WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtExeFrequency_txt']")));
+		option.click();
 
 		WebElement FrequencyField = driver.findElement(multifd.Frequency);
 		
+		WebElement transactionField = wait.until(ExpectedConditions.visibilityOfElementLocated(multifd.Frequency));
+		
 		String EnterFrequency = testdata.get("Frequency").toString();
-		input(multifd.Frequency, EnterFrequency);
+		transactionField.sendKeys(EnterFrequency);
+
+		//input(multifd.Frequency, EnterFrequency);
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter the Frequency as 1");
 		Log.info("Step:01 - Enter the Frequency as 1");
 	
-			
-		Assert.assertTrue(ElementDisplayed(multifd.Frequency), "Validation Failed: Frequency Field is not entered.");
+		Assert.assertEquals(FrequencyField.getAttribute("value"), EnterFrequency, "Validation Failed: Frequency Field is not entered correctly.");
+		//Assert.assertTrue(ElementDisplayed(multifd.Frequency), "Validation Failed: Frequency Field is not entered.");
 					
 		FrequencyField.sendKeys(Keys.TAB);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on TAB button in the keyboard");
@@ -1113,24 +1136,24 @@ public boolean EnterFrequency(Map<Object, Object> testdata, ITestContext context
 	return true;
 }
 
-public boolean OnMaturityTabNavigation() throws InterruptedException {
+	public boolean OnMaturityTabNavigation() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:35 - On Maturity Tab Navigation");
-	Log.info("TC:35 - On Maturity Tab Navigation");
+		ExtentTestManager.startTest("TC:35 - On Maturity Tab Navigation");
+		Log.info("TC:35 - On Maturity Tab Navigation");
 	
-	if(ElementDisplayed(multifd.IntrestNextButton)) {
+		if(ElementDisplayed(multifd.IntrestNextButton)) {
 		click(multifd.IntrestNextButton);
 		
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Next' button");
-	Log.info("Step:01 - Click 'Next' button");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Next' button");
+		Log.info("Step:01 - Click 'Next' button");
 	
 
-	boolean OnMaturityNextPageNavigation = ElementDisplayed(multifd.IntrestNextButton);
+		boolean OnMaturityNextPageNavigation = ElementDisplayed(multifd.IntrestNextButton);
 
-	Assert.assertTrue(OnMaturityNextPageNavigation, "Validation Failed: Operator Tab Navigation is not successful.");
+		Assert.assertTrue(OnMaturityNextPageNavigation, "Validation Failed: Operator Tab Navigation is not successful.");
 
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'On Maturity' tab is present");
-	Log.info("Expected Result: 'On Maturity' tab is present");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'On Maturity' tab is present");
+		Log.info("Expected Result: 'On Maturity' tab is present");
 	
 	}
 	
@@ -1138,13 +1161,12 @@ public boolean OnMaturityTabNavigation() throws InterruptedException {
 	return true;
 }
 
-public boolean MaturityActionSelection() throws InterruptedException {
+	public boolean MaturityActionSelection() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:36 - Maturity Action Selection");
-	Log.info("TC:36 - Maturity Action Selection");
+		ExtentTestManager.startTest("TC:36 - Maturity Action Selection");
+		Log.info("TC:36 - Maturity Action Selection");
 	
-		WebElement KeepSameAccountCheckbox = driver
-				.findElement(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpAutoRenewal_MATFM_rdbSameAccount']"));
+		WebElement KeepSameAccountCheckbox = driver.findElement(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpAutoRenewal_MATFM_rdbSameAccount']"));
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - select. 'Keep in same account'");
 		Log.info("Step:01 - select. 'Keep in same account'");
@@ -1168,20 +1190,20 @@ public boolean MaturityActionSelection() throws InterruptedException {
 	return true;
 }
 
-public boolean MultipleAccountCheckbox() throws InterruptedException {
+	public boolean MultipleAccountCheckbox() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:37 - Multiple Account Checkbox");
-	Log.info("TC:37 - Multiple Account Checkbox");
+		ExtentTestManager.startTest("TC:37 - Multiple Account Checkbox");
+		Log.info("TC:37 - Multiple Account Checkbox");
 	
-	WebElement MultipleAccountCheckbox = driver.findElement(By.xpath("//input[@id ='chkIsMultipleAc']"));
+		WebElement MultipleAccountCheckbox = driver.findElement(By.xpath("//input[@id ='chkIsMultipleAc']"));
 		
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", MultipleAccountCheckbox);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView(true);", MultipleAccountCheckbox);
 
-		Thread.sleep(1000);
+			Thread.sleep(1000);
 
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Make a tick on the checkbox aligned newar to 'Is Multiple A/C'");
-		Log.info("Step:01 - Make a tick on the checkbox aligned newar to 'Is Multiple A/C'");
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Make a tick on the checkbox aligned newar to 'Is Multiple A/C'");
+			Log.info("Step:01 - Make a tick on the checkbox aligned newar to 'Is Multiple A/C'");
 
 			MultipleAccountCheckbox.click();
 			
@@ -1198,10 +1220,10 @@ public boolean MultipleAccountCheckbox() throws InterruptedException {
 	return true;
 }
 
-public boolean IsMultipleAccount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	public boolean IsMultipleAccount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:38 - Multiple Account Checkbox");
-	Log.info("TC:38 - Multiple Account Checkbox");
+		ExtentTestManager.startTest("TC:38 - Multiple Account Checkbox");
+		Log.info("TC:38 - Multiple Account Checkbox");
 	
 	
 		click(multifd.MutipleAccountText);
@@ -1266,14 +1288,32 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Deposit opening is saved, results in summary");
 		Log.info("Expected Result: Deposit opening is saved, results in summary");
-
-	
+		
+		if(ElementDisplayed(multifd.SummaryPage)) {
+    		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary will be generated");
+    		Log.info("Expected Result: Summary will be generated");
+    		}else {
+    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    			Log.info("ERROR");
+    		}
+		transIdCashPersonal = driver.findElement(multifd.TrasID).getText();
+		
 	}
+		if(ElementDisplayed(multifd.SummaryPage)) {
+    		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary will be generated");
+    		Log.info("Expected Result: Summary will be generated");
+    		}
+		else {
+    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+    			Log.info("ERROR");
+    		}
+		transIdCashPersonal = driver.findElement(multifd.TrasID).getText();	
+	
 	ExtentTestManager.endTest();
 	return true;
 }
 
-	public boolean CashierAuthorization(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	public boolean CashierAuthorization(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException{
 	
 	ExtentTestManager.startTest("TC:40 - Cashier Authorization");
 	Log.info("TC:40 - Cashier Authorization");
@@ -1291,11 +1331,17 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
 	Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 	
-			String loginNewUserName = testdata.get("LoginNewUserName").toString();
-			input(multifd.loginUserName, loginNewUserName);
+			//String loginNewUserName = testdata.get("LoginNewUserName").toString();
+			String UserName1 = configloader().getProperty("UserName1");
+			input(multifd.loginUserName, UserName1);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
+			Log.info("Step:01 - Enetered valid User Name");
 			
-			String loginNewValidPassword = testdata.get("LoginNewPassword").toString();
-			input(multifd.loginPasswrd, loginNewValidPassword);
+			//String loginNewValidPassword = testdata.get("LoginNewPassword").toString();
+			String Password1 = configloader().getProperty("Password1");
+			input(multifd.loginPasswrd, Password1);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");
+			Log.info("Step:02 - Enter valid Password");
 
 			click(multifd.loginButton);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Login as another user.");
@@ -1344,10 +1390,16 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 		
 	}
 	
-	public boolean CashierAuthorizationSelectCheckBox() throws InterruptedException{
+public boolean CashierAuthorizationSelectCheckBox(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
 		ExtentTestManager.startTest("TC:42 - Cashier Authorization");
 		Log.info("TC:42 - Cashier Authorization");
+		
+		System.out.println("transIdCashPersonal "+transIdCashPersonal);
+		FetchwithTransID(transIdCashPersonal);
+		
+	    WebElement checkbox = driver.findElement(multifd.OpeningEntryCashCheckbox);
+
 		
 		if(ElementDisplayed(multifd.OpeningEntryCashCheckbox)) {
 		click(multifd.OpeningEntryCashCheckbox);
@@ -1355,7 +1407,7 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Select check box of opening entry.");
 		Log.info("Step:01 -  Select check box of opening entry.");
 		
-		Assert.assertTrue(ElementDisplayed(multifd.OpeningEntryCashCheckbox), "Validation Failed: 'Checkbox' is not Selected.");
+        Assert.assertTrue(checkbox.isSelected(), "Validation Failed: 'Checkbox' is not selected.");
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the entry");
 		Log.info("Expected Result: Possible to select the entry");
@@ -1366,7 +1418,7 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 		return true;
 		
 	}
-	
+
 	public boolean CashierAuthorizationAuthorize() throws InterruptedException{
 		
 		ExtentTestManager.startTest("TC:43 - Cashier Authorization");
@@ -1439,13 +1491,24 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 		ExtentTestManager.startTest("TC:46 - Manager Authorization");
 		Log.info("TC:46 - Manager Authorization");
 		
+		System.out.println("transIdCashPersonal "+transIdCashPersonal);
+		FetchwithTransID(transIdCashPersonal);
+
+		
+		//input(multifd.TransactionIDField,transIdCashPersonal);
+		//click(multifd.GoBTN);
+		
+	    WebElement Managercheckbox = driver.findElement(multifd.ManagerCheckBox);
+		
 		if(ElementDisplayed(multifd.ManagerCheckBox)) {
 		click(multifd.ManagerCheckBox);
 			
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select transaction entry from the cash section.");
 		Log.info("Step:01 - Select transaction entry from the cash section.");
 		
-		Assert.assertTrue(ElementDisplayed(multifd.ManagerCheckBox), "Validation Failed: Transaction entry from the cash section not selected.");
+        Assert.assertTrue(Managercheckbox.isSelected(), "Validation Failed: 'Checkbox' is not selected.");
+
+		//Assert.assertTrue(ElementDisplayed(multifd.ManagerCheckBox), "Validation Failed: Transaction entry from the cash section not selected.");
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the entry");
 		Log.info("Expected Result: Possible to select the entry");
