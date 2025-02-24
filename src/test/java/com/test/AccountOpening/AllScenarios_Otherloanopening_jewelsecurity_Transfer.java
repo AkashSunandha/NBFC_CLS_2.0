@@ -36,7 +36,7 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 
 		@BeforeSuite
 		public void reference() {
-			ExcelReader = new com.Utility.ExcelReader("Otherloanopening_jewelsecurity");
+			ExcelReader = new com.Utility.ExcelReader("Otherloanopeningjewelsecurity-T");
 			log = new Log();
 			TestListener = new TestListener();
 			screenShot = new com.Utility.ScreenShot(null);
@@ -58,6 +58,7 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					Log.info("Step-1: Launch NBFC application.");
 
 					Base_Class.SetUp();
+					custSrchMthds.pcRegistration(testdata, context);
 					ExtentTestManager.endTest();
 					Thread.sleep(2000);
 
@@ -68,7 +69,7 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					//					String validCustId = testdata.get("validCustId").toString();
 
 					//PC Registration
-					custSrchMthds.pcRegistration(testdata, context);
+					//custSrchMthds.pcRegistration(testdata, context);
 
                     //TC-02
 					personalLoan.userLogin(testdata, context);
@@ -100,7 +101,7 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					//TC-11
 					personalLoan.testDSACode(testdata, context);
 					
-					//TC-12
+					//--TC-12
 					//personalLoan.testAreaField(testdata, context);
 					
 					//TC-13
@@ -186,7 +187,7 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					personalLoan.testSaveBtnFunc();
 					
 					Thread.sleep(5000);
-					personalLoan.signOut();
+					//personalLoan.signOut();
 
 					//TC-41
 					personalLoan.userLogin1(testdata, context);
@@ -194,14 +195,14 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					//TC-42
 					personalLoan.testManagerAuthorization(testdata, context);
 					
-					//TC-43
+					//--TC-43
 					//personalLoan.testRefreshBtn();
 					
 					//TC-44
 					personalLoan.testSelectAndAuthorize();
 					
 			
-					personalLoan.testCloseMessagePopup();
+				//	personalLoan.testCloseMessagePopup();
 					
 					Thread.sleep(5000);
 					personalLoan.signOut();

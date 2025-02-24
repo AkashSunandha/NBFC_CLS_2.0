@@ -36,7 +36,7 @@ public class AllScenarios_Otherloanoping_documentsecurity_Transfer {
 
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("Otherloanoping_documentsecurity");
+		ExcelReader = new com.Utility.ExcelReader("documensecurity-Transfer");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);

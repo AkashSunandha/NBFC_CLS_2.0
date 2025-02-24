@@ -36,7 +36,7 @@ public class AllScenarios_Otherloanopening_jewelsecurity {
 
 		@BeforeSuite
 		public void reference() {
-			ExcelReader = new com.Utility.ExcelReader("Otherloanopening_jewelsecurity");
+			ExcelReader = new com.Utility.ExcelReader("Otherloanopeningjewelsecurity-C");
 			log = new Log();
 			TestListener = new TestListener();
 			screenShot = new com.Utility.ScreenShot(null);

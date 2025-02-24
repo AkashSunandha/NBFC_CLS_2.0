@@ -673,37 +673,37 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-70 (5)
-	public void testCustPopupInOwnerSection(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
-		String parentWindow = driver.getWindowHandle();
-		String ownserDetails_custId = testdata.get("ownserDetails_custId").toString();
-
-		click(institutionalCust.searchIconInOwnerSection);
-		Set<String> allWindows = driver.getWindowHandles();
-		for (String window : allWindows) {
-			if(!window.equals(parentWindow)) {
-				driver.switchTo().window(window);
-				input(institutionalCust.OwnerSectionCustId_textbox, ownserDetails_custId);
-				click(institutionalCust.OwnerSectionSearchBttn);
-				click(institutionalCust.OwnerSectionSelectLink);
-				driver.switchTo().window(parentWindow);
-				SwitchToFrame(institutionalCust.institution_frame);
-				System.out.println("Frame is switched");
-				break;
-			}
-
-		}
-		String OwnerSectionName = driver.findElement(institutionalCust.ownerSection_nameField).getText();
-		if(OwnerSectionName=="") {
-			System.out.println("Field is emply");
-		}	
-		else {
-			System.out.println("Runing further testcases");
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer Name and Member are auto-loaded.");
-			Log.info("Expected Result: Customer Name and Member are auto-loaded.");
-
-		}
-	}
+//	//TC-70 (5)
+//	public void testCustPopupInOwnerSection(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
+//		String parentWindow = driver.getWindowHandle();
+//		String ownserDetails_custId = testdata.get("ownserDetails_custId").toString();
+//
+//		click(institutionalCust.searchIconInOwnerSection);
+//		Set<String> allWindows = driver.getWindowHandles();
+//		for (String window : allWindows) {
+//			if(!window.equals(parentWindow)) {
+//				driver.switchTo().window(window);
+//				input(institutionalCust.OwnerSectionCustId_textbox, ownserDetails_custId);
+//				click(institutionalCust.OwnerSectionSearchBttn);
+//				click(institutionalCust.OwnerSectionSelectLink);
+//				driver.switchTo().window(parentWindow);
+//				SwitchToFrame(institutionalCust.institution_frame);
+//				System.out.println("Frame is switched");
+//				break;
+//			}
+//
+//		}
+//		String OwnerSectionName = driver.findElement(institutionalCust.ownerSection_nameField).getText();
+//		if(OwnerSectionName=="") {
+//			System.out.println("Field is emply");
+//		}	
+//		else {
+//			System.out.println("Runing further testcases");
+//			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer Name and Member are auto-loaded.");
+//			Log.info("Expected Result: Customer Name and Member are auto-loaded.");
+//
+//		}
+//	}
 
 
 	//TC-71(1)
@@ -1731,7 +1731,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-165 (8)
+	// (8)
 	public void testCustomerSelection1(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		String parentWindow = driver.getWindowHandle();
 
@@ -1757,6 +1757,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		}
 	}
 
+	//TC-165
 	public void testCustomerSelection(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 
 		//		String custID=generateUniqueId(query, columnName);
@@ -1926,9 +1927,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-181 (1)
+	//TC-182 (1)
 	public void testIssuedAuthorityField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 181 --> Input Alphabets and Numerals in 'Issued Authority'");
+		ExtentTestManager.startTest("TC No. - 182 --> Input Alphabets and Numerals in 'Issued Authority'");
 		String issuedAuthority = testdata.get("issuedAuthority").toString();
 		input(institutionalCust.issuedAuthority_textbox, issuedAuthority);	
 
@@ -1942,9 +1943,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-182 (7)
+	//TC-183 (7)
 	public void testIssueDate(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 182 --> Validate 'Issue Date' Field");
+		ExtentTestManager.startTest("TC No. - 183 --> Validate 'Issue Date' Field");
 
 		Thread.sleep(5000);
 
@@ -1984,10 +1985,10 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-183 (2)
+	//TC-184 (2)
 	public void testValidUpTo(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 
-		ExtentTestManager.startTest("TC No. - 183 --> Validate 'Issue Date' Field");
+		ExtentTestManager.startTest("TC No. - 184 --> Validate 'Issue Date' Field");
 		click(institutionalCust.validUpTo_textbox);
 		String ValidUpTo = testdata.get("ValidUpTo").toString();
 		input(institutionalCust.validUpTo_textbox, ValidUpTo);	
@@ -2001,9 +2002,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-185 (1)
+	//TC-186 (1)
 	public void testDetailsField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 185 --> Input Alphabets and Numerals in 'Details'");
+		ExtentTestManager.startTest("TC No. - 186 --> Input Alphabets and Numerals in 'Details'");
 
 		String Details = testdata.get("Details").toString();
 		input(institutionalCust.details_textbox, Details);	
@@ -2018,9 +2019,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 
 
-	//TC-186 (8)
+	//TC-187 (8)
 	public void testImageBtn() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 186 --> Add Images through Popup ");
+		ExtentTestManager.startTest("TC No. - 187 --> Add Images through Popup ");
 		String parentWindow = driver.getWindowHandle();
 		click(institutionalCust.addImageBtn);
 
@@ -2055,9 +2056,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-187 (2)
+	//TC-188(2)
 	public void testAddDocument() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 187 --> Add Document to Grid");
+		ExtentTestManager.startTest("TC No. - 188 --> Add Document to Grid");
 		click(institutionalCust.addDocumentBtn);
 		if(driver.findElement(institutionalCust.identityGrid).isDisplayed()) {
 
@@ -2072,7 +2073,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-190 (2)
+	//TC-191 (2)
 	public void testAreaDropdown() {
 		ExtentTestManager.startTest("TC No. - 191 --> Select Item from 'Area' Drop Down ");
 		select("1",institutionalCust.areaDropdown);
@@ -2089,9 +2090,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-193 (2)
+	//TC-194 (2)
 	public void testAmshamDropdown() {
-		ExtentTestManager.startTest("TC No. - 193 --> Select Item from 'Amsham' Drop Down");
+		ExtentTestManager.startTest("TC No. - 194 --> Select Item from 'Amsham' Drop Down");
 		select("12",institutionalCust.amshamDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click on 'Amsham' drop down.");
@@ -2105,9 +2106,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 		ExtentTestManager.endTest();
 	}
-	//TC-196 (2)
+	//TC-197 (2)
 	public void testDeshamDropdown() {
-		ExtentTestManager.startTest("TC No. - 196 --> Select Item from 'Desham' Drop Down");
+		ExtentTestManager.startTest("TC No. - 197 --> Select Item from 'Desham' Drop Down");
 		select("180",institutionalCust.deshamDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click on 'Desham' drop down.");
@@ -2122,9 +2123,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 
 	}
-	//TC-199 (2)
+	//TC-200 (2)
 	public void testVillageDropdown() {
-		ExtentTestManager.startTest("TC No. - 199 --> Select Item from 'Village' Drop Down");
+		ExtentTestManager.startTest("TC No. - 200 --> Select Item from 'Village' Drop Down");
 		select("135",institutionalCust.villageDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Village' drop down.");
@@ -2139,9 +2140,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 
 	}
-	//TC-202 (1)
+	//TC-203 (1)
 	public void testWardTextbox(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 202 --> Select Item from 'Ward' Drop Down");
+		ExtentTestManager.startTest("TC No. - 203 --> Select Item from 'Ward' Drop Down");
 		String ValidUpTo = testdata.get("ValidUpTo").toString();
 		input(institutionalCust.validUpTo_textbox, ValidUpTo);	
 
@@ -2160,9 +2161,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 
 	////////
-	//TC-205 (2)
+	//TC-206 (2)
 	public void testPanchayathDropdown() {
-		ExtentTestManager.startTest("TC No. - 205 --> Select Item from 'Panchayath' Drop Down");
+		ExtentTestManager.startTest("TC No. - 206 --> Select Item from 'Panchayath' Drop Down");
 		select("2",institutionalCust.panchayath_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Panchayath' drop down.");
@@ -2177,9 +2178,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 
 	}
-	//TC-208 (2)
+	//TC-209 (2)
 	public void testMunicipalityDropdown() {
-		ExtentTestManager.startTest("TC No. - 208 --> Select Item from 'Municipality' Drop Down");
+		ExtentTestManager.startTest("TC No. - 209 --> Select Item from 'Municipality' Drop Down");
 		select("2",institutionalCust.municipalityDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Municipality' drop down.");
@@ -2195,9 +2196,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 	}
 
-	//TC-211 (2)
+	//TC-212 (2)
 	public void testCorporationDropdown() {
-		ExtentTestManager.startTest("TC No. - 211 --> Select Item from 'Corporation' Drop Down");
+		ExtentTestManager.startTest("TC No. - 212 --> Select Item from 'Corporation' Drop Down");
 		select("2",institutionalCust.corporationDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:    Click on 'Corporation' drop down.");
@@ -2213,9 +2214,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-214 (2)
+	//TC-215 (2)
 	public void testAssemblyConstiDropdown() {
-		ExtentTestManager.startTest("TC No. - 214 --> Select Item from 'Assembly Constituency' Drop Down");
+		ExtentTestManager.startTest("TC No. - 215 --> Select Item from 'Assembly Constituency' Drop Down");
 		select("23",institutionalCust.assemblyConstiDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Assembly Constituency' drop down.");
@@ -2231,9 +2232,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-217 (2)
+	//TC-218 (2)
 	public void testTalukDropdown() {
-		ExtentTestManager.startTest("TC No. - 217 --> Select Item from 'Taluk' Drop Down");
+		ExtentTestManager.startTest("TC No. - 218 --> Select Item from 'Taluk' Drop Down");
 		select("16",institutionalCust.talukDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Taluk' drop down.");
 		Log.info("Step 1:   Click on 'Taluk' drop down.");
@@ -2247,9 +2248,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-219 (1)
+	//TC-220 (1)
 	public void testPanchayathWardField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 219 --> Enter Numerals in 'PanchayathWard' Textfield");
+		ExtentTestManager.startTest("TC No. - 220 --> Enter Numerals in 'PanchayathWard' Textfield");
 		String panchayathWard = testdata.get("panchayathWard").toString();
 		input(institutionalCust.panchayathWard_textbox, panchayathWard);	
 
@@ -2263,9 +2264,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-221 (1)
+	//TC-222 (1)
 	public void testBankWardField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 221 --> Enter Numerals in 'BankWard' Textfield");
+		ExtentTestManager.startTest("TC No. - 222 --> Enter Numerals in 'BankWard' Textfield");
 		String bankWard = testdata.get("bankWard").toString();
 		input(institutionalCust.bankWard_textbox, bankWard);	
 
@@ -2278,9 +2279,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-224 (2)
+	//TC-225 (2)
 	public void testLandTypeDropdown() {
-		ExtentTestManager.startTest("TC No. - 224 --> Select Item from 'Land Type' Drop Down");
+		ExtentTestManager.startTest("TC No. - 225 --> Select Item from 'Land Type' Drop Down");
 		select("Owned",institutionalCust.landType_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:    Click on 'Land Type' drop down.");
@@ -2296,9 +2297,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 	}
 
-	//TC-226 (1)
+	//TC-227 (1)
 	public void testSurveyNoField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 226 --> Enter Alphanumeric in 'Survey No' Textfield");
+		ExtentTestManager.startTest("TC No. - 227 --> Enter Alphanumeric in 'Survey No' Textfield");
 		String surveyNo = testdata.get("surveyNo").toString();
 		input(institutionalCust.surveyNo_textbox, surveyNo);
 
@@ -2313,9 +2314,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 	}
 
-	//TC-228 (1)
+	//TC-229 (1)
 	public void testResurveyNoField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 228 --> Enter Alphanumeric in 'ReSurvey No' Textfield");
+		ExtentTestManager.startTest("TC No. - 229 --> Enter Alphanumeric in 'ReSurvey No' Textfield");
 		String resurveyNo = testdata.get("resurveyNo").toString();
 		input(institutionalCust.resurveyNo_textbox, resurveyNo);
 
@@ -2330,9 +2331,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 	}
 
-	//TC-231 (2)
+	//TC-232 (2)
 	public void testUnitDropdown() {
-		ExtentTestManager.startTest("TC No. - 231 --> Select Item from 'Unit' Drop Down");
+		ExtentTestManager.startTest("TC No. - 232 --> Select Item from 'Unit' Drop Down");
 		select("1",institutionalCust.unitDropdown);
 
 
@@ -2348,9 +2349,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 	}
 
-	//TC-233 (2)
+	//TC-234 (2)
 	public void testWetField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 233 --> Enter Numerals in 'Wet' Textfield");
+		ExtentTestManager.startTest("TC No. - 234 --> Enter Numerals in 'Wet' Textfield");
 		String wet = testdata.get("wet").toString();
 		click(institutionalCust.wet_textbox);
 		input(institutionalCust.wet_textbox, wet);
@@ -2367,9 +2368,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 	}
 
-	//TC-235 (2)
+	//TC-236 (2)
 	public void testDryField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 235 --> Enter Numerals in 'Dry' Textfield");
+		ExtentTestManager.startTest("TC No. - 236 --> Enter Numerals in 'Dry' Textfield");
 
 		String dry = testdata.get("dry").toString();
 		click(institutionalCust.dry_textbox);
@@ -2384,9 +2385,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-237 (1)
+	//TC-238 (1)
 	public void testAddBtn() throws InterruptedException{
-		ExtentTestManager.startTest("TC No. - 237 --> Verify Data Insertion on 'Add' Button");
+		ExtentTestManager.startTest("TC No. - 238 --> Verify Data Insertion on 'Add' Button");
 		click(institutionalCust.addBtn);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click on 'Add' button.");
@@ -2401,9 +2402,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-239 (1)
+	//TC-240 (1)
 	public void testIdentityAndArea_saveAndProceedBtn() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 239 --> Verify Data Saving on 'Save & Proceed' Button");
+		ExtentTestManager.startTest("TC No. - 240 --> Verify Data Saving on 'Save & Proceed' Button");
 		click(institutionalCust.identityAndArea_saveAndProceedBtn);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click 'Save & Proceed' button.");
@@ -2420,9 +2421,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 
 	/////////////////////
-	//TC-244 (2)
+	//TC-245 (2)
 	public void testStateDropdown() {
-		ExtentTestManager.startTest("TC No. - 244 --> Select State from Dropdown");
+		ExtentTestManager.startTest("TC No. - 245 --> Select State from Dropdown");
 		select("KERALA",institutionalCust.bank_state_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select a state from the list");
 		Log.info("Step 1: Select a state from the list");
@@ -2433,9 +2434,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-247 (2)
+	//TC-248 (2)
 	public void testBankIdDropdown() {
-		ExtentTestManager.startTest("TC No. - 247 --> Select BankID from Dropdown");
+		ExtentTestManager.startTest("TC No. - 248 --> Select BankID from Dropdown");
 		select("2",institutionalCust.bankId_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select a BankID from the list");
@@ -2447,9 +2448,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-250 (2)
+	//TC-251 (2)
 	public void testBranchIdDropdown() {
-		ExtentTestManager.startTest("TC No. - 250 --> Select BranchID from Dropdown");
+		ExtentTestManager.startTest("TC No. - 251 --> Select BranchID from Dropdown");
 		select("CALICUT(KOZHICODE)",institutionalCust.branchId_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select a BranchID from the list");
@@ -2463,9 +2464,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-251 (1)
+	//TC-252 (1)
 	public void testIFSCAutofill() {
-		ExtentTestManager.startTest("TC No. - 251 --> Check IFSC Code Field Auto-fill");
+		ExtentTestManager.startTest("TC No. - 252 --> Check IFSC Code Field Auto-fill");
 		String ifsc=driver.findElement(institutionalCust.ifsc_textbox).getAttribute("value");
 		if(ifsc!="") {
 
@@ -2479,9 +2480,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		}
 	}
 
-	//TC-253 (1)
+	//TC-254 (1)
 	public void testCustName(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
-		ExtentTestManager.startTest("TC No. - 253 --> Validate 'Cust Name' Input");
+		ExtentTestManager.startTest("TC No. - 254 --> Validate 'Cust Name' Input");
 		String custName = testdata.get("custName").toString();
 		input(institutionalCust.custName_textbox, custName);	
 
@@ -2498,9 +2499,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 	}
 
-	//TC-255 (1)
+	//TC-256 (1)
 	public void testAddress(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
-		ExtentTestManager.startTest("TC No. - 255 --> Validate 'Address' Input");
+		ExtentTestManager.startTest("TC No. - 256 --> Validate 'Address' Input");
 		String Address = testdata.get("Address").toString();
 		input(institutionalCust.address_textbox, Address);	
 
@@ -2516,9 +2517,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 
 
-	//TC-257 (1)
+	//TC-258 (1)
 	public void testBankAccNo(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 257 --> Validate 'BankAccNo' Input");
+		ExtentTestManager.startTest("TC No. - 258 --> Validate 'BankAccNo' Input");
 		String bankAccNo = testdata.get("bankAccNo").toString();
 		input(institutionalCust.bankAccNo_textbox, bankAccNo);	
 
@@ -2534,9 +2535,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-259 (1)
+	//TC-260 (1)
 	public void testRetypeAccNo(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 259 --> Validate 'RetypeAccNo' Input");
+		ExtentTestManager.startTest("TC No. - 260 --> Validate 'RetypeAccNo' Input");
 		String RetypeAccNo = testdata.get("RetypeAccNo").toString();
 		input(institutionalCust.retypeAccNo_textbox, RetypeAccNo);
 
@@ -2550,9 +2551,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-262 (2)
+	//TC-263 (2)
 	public void testBankAccIdDropdown() {
-		ExtentTestManager.startTest("TC No. - 262 --> Select BankAccID from Dropdown");
+		ExtentTestManager.startTest("TC No. - 263 --> Select BankAccID from Dropdown");
 		select("5",institutionalCust.bankAccId_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select a BankAccID from the list");
@@ -2565,9 +2566,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-264 (2)
+	//TC-265 (2)
 	public void testBankStartDate(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 264 --> Enter Date in 'Start Date' Field");
+		ExtentTestManager.startTest("TC No. - 265 --> Enter Date in 'Start Date' Field");
 		String bank_stateDate = testdata.get("bank_stateDate").toString();
 		click(institutionalCust.bank_startDate_textbox);
 		input(institutionalCust.bank_startDate_textbox, bank_stateDate);
@@ -2582,9 +2583,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-267 (1)
+	//TC-268 (1)
 	public void testAdditionalInfoCheckBox() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 267 --> Toggle 'Additional Information' Checkbox");
+		ExtentTestManager.startTest("TC No. - 268 --> Toggle 'Additional Information' Checkbox");
 		click(institutionalCust.additionalInfoCheckBox);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click the 'Additional Information' checkbox");
@@ -2597,9 +2598,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-268 (1)
+	//TC-269 (1)
 	public void testBalanceAsOn(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 268 --> Enter Date in 'Balance Ason' Field");
+		ExtentTestManager.startTest("TC No. - 269 --> Enter Date in 'Balance Ason' Field");
 		String balanceAsOn = testdata.get("balanceAsOn").toString();
 		input(institutionalCust.balanceAsOn_bank, balanceAsOn);
 
@@ -2613,9 +2614,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-270 (1)
+	//TC-271 (1)
 	public void testBalanceField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 270 --> Validate 'Balance' Field Input");
+		ExtentTestManager.startTest("TC No. - 271 --> Validate 'Balance' Field Input");
 		String balance = testdata.get("balance").toString();
 		input(institutionalCust.balance_textbox, balance);
 
@@ -2629,9 +2630,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-272 (2)
+	//TC-273 (2)
 	public void testBalanceFieldIsRemoved() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 272 --> Toggle 'Not Mentioned' Checkbox");
+		ExtentTestManager.startTest("TC No. - 273 --> Toggle 'Not Mentioned' Checkbox");
 		click(institutionalCust.notMentionedCheckbox);
 		if(!driver.findElement(institutionalCust.balance_textbox).isDisplayed()) {
 
@@ -2646,9 +2647,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		}
 	}
 
-	//TC-273 (1)
+	//TC-274 (1)
 	public void testCreditCardTick() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 273 --> Check 'Credit Card' Checkbox Tick");
+		ExtentTestManager.startTest("TC No. - 274 --> Check 'Credit Card' Checkbox Tick");
 		click(institutionalCust.creditCardCheckboc);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Check if 'Credit Card' checkbox can be ticked");
@@ -2661,9 +2662,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-274 (1)
+	//TC-275 (1)
 	public void testCreditCardNoField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 274 --> Validate 'Credit Card No' Input");
+		ExtentTestManager.startTest("TC No. - 275 --> Validate 'Credit Card No' Input");
 		String creditCardNo = testdata.get("creditCardNo").toString();
 		input(institutionalCust.credirCardNo_textbox, creditCardNo);
 
@@ -2679,9 +2680,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-276 (2)
+	//TC-277 (2)
 	public void testBankAddBtnFunc() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 276 --> Verify 'Add' Button Functionality");
+		ExtentTestManager.startTest("TC No. - 277 --> Verify 'Add' Button Functionality");
 		click(institutionalCust.bank_addBtn);
 		if(driver.findElement(institutionalCust.bankGrid).isDisplayed()) {
 
@@ -2697,9 +2698,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		}
 	}
 
-	//TC-279 (1)
+	//TC-280 (1)
 	public void testDPIDField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 279 --> Validate 'DPID' Input");
+		ExtentTestManager.startTest("TC No. - 280 --> Validate 'DPID' Input");
 		String dpid = testdata.get("dpid").toString();
 		input(institutionalCust.dpid_textbox, dpid);
 
@@ -2713,9 +2714,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-281 (1)
+	//TC-282 (1)
 	public void testDematAcc(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 281 --> Validate 'Demat Acno' Input");
+		ExtentTestManager.startTest("TC No. - 282 --> Validate 'Demat Acno' Input");
 		String demataccNo = testdata.get("demataccNo").toString();
 		input(institutionalCust.dematAccNo, demataccNo);
 
@@ -2730,9 +2731,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 	}
 
-	//TC-283 (1)
+	//TC-284 (1)
 	public void testProceedBtnFunc() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 283 --> Verify 'Proceed' Button Functionality");
+		ExtentTestManager.startTest("TC No. - 284 --> Verify 'Proceed' Button Functionality");
 		click(institutionalCust.bank_proceedBtn);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click 'Proceed' button");
@@ -2745,9 +2746,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-286 (2)
+	//TC-287 (2)
 	public void testRiskIdDropdown() {
-		ExtentTestManager.startTest("TC No. - 286 --> Verify Selection from 'RiskID' Dropdown");
+		ExtentTestManager.startTest("TC No. - 287 --> Verify Selection from 'RiskID' Dropdown");
 		select("3",institutionalCust.riskId_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on the 'RiskID' dropdown.");
@@ -2764,9 +2765,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-288 (1)
+	//TC-289(1)
 	public void testRiskRemarksField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 288 --> Validate Input in 'Remarks' Field");
+		ExtentTestManager.startTest("TC No. - 289 --> Validate Input in 'Remarks' Field");
 		String risk_remarks = testdata.get("risk_remarks").toString();
 		input(institutionalCust.risk_remarks_textbox, risk_remarks);	
 
@@ -2780,9 +2781,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-290 (1)
+	//TC-291 (1)
 	public void testActivespecialinstructionField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 290 --> Validate Input in 'Activespecialinstruction' Field");
+		ExtentTestManager.startTest("TC No. - 291 --> Validate Input in 'Activespecialinstruction' Field");
 		String actSplIns = testdata.get("actSplIns").toString();
 		input(institutionalCust.ActiveSpecialInstruction_textbox, actSplIns);
 
@@ -2798,9 +2799,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-292 (1)
+	//TC-293 (1)
 	public void testDefaultStateOfSusCheckbox() {
-		ExtentTestManager.startTest("TC No. - 292 --> Validate Default State of 'Suspecious' Checkbox");
+		ExtentTestManager.startTest("TC No. - 293 --> Validate Default State of 'Suspecious' Checkbox");
 
 		if(!driver.findElement(institutionalCust.suspecious_checkbox).isSelected()) {
 			ExtentTestManager.getTest().log(Status.PASS, "Step 1: Verify the default state of the 'suspecious' checkbox.");
@@ -2815,9 +2816,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-293 (1)
+	//TC-294 (1)
 	public void testTickSusField() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 293 --> Validate Ticking of 'Suspecious' Checkbox");
+		ExtentTestManager.startTest("TC No. - 294 --> Validate Ticking of 'Suspecious' Checkbox");
 		click(institutionalCust.suspecious_checkbox);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Attempt to tick the 'suspecious' checkbox.");
@@ -2829,9 +2830,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-295 (2)
+	//TC-296 (2)
 	public void testRiskSaveAndProceed() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 295 --> Verify Successful Save with 'Save&Proceed' Button");
+		ExtentTestManager.startTest("TC No. - 296 --> Verify Successful Save with 'Save&Proceed' Button");
 
 		ScrollUntilElementVisible(institutionalCust.risk_saveAndProceedBtn);
 		click(institutionalCust.risk_saveAndProceedBtn);
@@ -2844,9 +2845,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-304 (2)
+	//TC-305 (2)
 	public void testselectPhotoFromDropdown() {
-		ExtentTestManager.startTest("TC No. - 304 --> Select Photo from Dropdown");
+		ExtentTestManager.startTest("TC No. - 305 --> Select Photo from Dropdown");
 		select("1",institutionalCust.document_dropdown_one);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Select 'Photo' from dropdown");
@@ -2858,9 +2859,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-305 (2)
+	//TC-306 (2)
 	public void testUploadPhoto() {
-		ExtentTestManager.startTest("TC No. - 305 --> Upload Photo in Supported Format");
+		ExtentTestManager.startTest("TC No. - 306 --> Upload Photo in Supported Format");
 		UploadFile(institutionalCust.selectDoc_browse,".\\src\\test\\resources\\tiger.jpg");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click 'browse' button");
@@ -2875,9 +2876,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-307 (3)
+	//TC-308 (3)
 	public void testCheckDefaultCheckbox() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 305 --> Add Photo with Default Checkbox Checked");
+		ExtentTestManager.startTest("TC No. - 308 --> Add Photo with Default Checkbox Checked");
 		click(institutionalCust.defaultCheckbox);
 		click(institutionalCust.add_photo_Btn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click 'Add' button");
@@ -2890,9 +2891,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-308 (2)
+	//TC-309 (2)
 	public void testselectSignFromDropdown() {
-		ExtentTestManager.startTest("TC No. - 308 --> Select Sign from Dropdown");
+		ExtentTestManager.startTest("TC No. - 309 --> Select Sign from Dropdown");
 		select("2",institutionalCust.document_dropdown_one);
 
 
@@ -2905,9 +2906,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-309 (2)
+	//TC-310 (2)
 	public void testUploadSign() {
-		ExtentTestManager.startTest("TC No. - 309 --> Upload Sign in Supported Format");
+		ExtentTestManager.startTest("TC No. - 310 --> Upload Sign in Supported Format");
 		UploadFile(institutionalCust.selectDoc_browse, ".\\src\\test\\resources\\e-sign.pdf");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click 'browse' button");
@@ -2922,9 +2923,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-310 (2)
+	//TC-311 (2)
 	public void testAddSign() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 310 --> Add Sign to Display Window");
+		ExtentTestManager.startTest("TC No. - 311 --> Add Sign to Display Window");
 		click(institutionalCust.add_photo_Btn);
 		if(driver.findElement(institutionalCust.imageDisplayWindow).isDisplayed()) {
 			ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click 'Add' button");
@@ -2937,9 +2938,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-311 (2)
+	//TC-312 (2)
 	public void testselectGeneralFromDropdown() {
-		ExtentTestManager.startTest("TC No. - 311 --> Select General from Dropdown");
+		ExtentTestManager.startTest("TC No. - 312 --> Select General from Dropdown");
 		select("3",institutionalCust.document_dropdown_one);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Select 'General' from dropdown");
@@ -2951,9 +2952,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-312 (2)
+	//TC-313 (2)
 	public void testDocumentNameDropdown() {
-		ExtentTestManager.startTest("TC No. - 312 --> Verify Document Name Dropdown");
+		ExtentTestManager.startTest("TC No. - 313 --> Verify Document Name Dropdown");
 		select("15",institutionalCust.document_dropdown_two);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Check if the list of document names is present in dropdown");
@@ -2964,9 +2965,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	//TC-313 (2)
+	//TC-314 (2)
 	public void testUploadGeneralDocument() {
-		ExtentTestManager.startTest("TC No. - 313 --> Upload General Document in Supported Format");
+		ExtentTestManager.startTest("TC No. - 314 --> Upload General Document in Supported Format");
 		UploadFile(institutionalCust.selectDoc_browse,".\\src\\test\\resources\\tiger.jpg");
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click 'browse' button");
 		Log.info("Step 1: Click 'browse' button");
@@ -2980,9 +2981,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 	}
 
-	//TC-314 (1)
+	//TC-315 (1)
 	public void testAddGenDocWindow() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 314 --> Add General Document to Display Window");
+		ExtentTestManager.startTest("TC No. - 315 --> Add General Document to Display Window");
 		click(institutionalCust.add_photo_Btn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click 'Add' button");
 		Log.info("Step 1:  Click 'Add' button");
@@ -2992,9 +2993,9 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 
-	//TC-316 (5)
+	//TC-317 (5)
 	public void testFinishBtn() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 316 --> Save Data Upon Proceed");
+		ExtentTestManager.startTest("TC No. - 317 --> Save Data Upon Proceed");
 		ScrollUntilElementVisible(institutionalCust.finishBtn);
 		click(institutionalCust.finishBtn);
 		//click(institutionalCust.finishBtn);

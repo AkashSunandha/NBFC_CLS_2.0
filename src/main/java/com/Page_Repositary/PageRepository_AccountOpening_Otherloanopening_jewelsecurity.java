@@ -135,5 +135,6 @@ public class PageRepository_AccountOpening_Otherloanopening_jewelsecurity {
 	public By transactionID_textbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt\"]");
 	//*[@id="ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt"]
 	public By OkBtn_loginStatusFailed=By.xpath("//span[text()='OK']");
+	public By transMode=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstOtherInfo_ctrl0_LIF1_ddlTransactionMode_ddl\"]");
 	
 }

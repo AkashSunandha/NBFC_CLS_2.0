@@ -25,7 +25,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//(1)
 	public boolean signOut() throws InterruptedException {
-		ExtentTestManager.startTest(" SignOut");
+		//ExtentTestManager.startTest(" SignOut");
 		click(loanOpen.signOut);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on SignOut");
 		Log.info("Step-1: Click on SignOut");
@@ -33,7 +33,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 		//		Log.info("Admin SignedOut");
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is signed out successfully");
 		Log.info("Expected Result: User is signed out successfully");
-		ExtentTestManager.endTest();
+		//ExtentTestManager.endTest();
 		return true;
 	}
 
@@ -542,6 +542,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 	//TC-34 (2)
 	public void testSelectTransactionMode1() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 34 --> Select Transaction Mode");
+		click(loanOpen.transMode);
 		select("2",loanOpen.transModeDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select transaction mode as cash.");
 		Log.info("Step-1:  Select transaction mode as cash.");
@@ -684,6 +685,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 	public void userLogin1(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 
 
+		signOut();
 		ExtentTestManager.startTest("TC No. - 41 --> Login to LMS as another User");
 		String loginUserName1 = testdata.get("loginUserName1").toString();
 		input(loanOpen.loginUserName, loginUserName1);
@@ -795,6 +797,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry is authorized");
 		Log.info("Expected Result: Entry is authorized");
 
+		testCloseMessagePopup();
 		ExtentTestManager.endTest();	
 	}
 

@@ -137,4 +137,5 @@ public By cashierAuthorize_checkbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_
 	public By transactionID_textbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt\"]");
 	
 	public By OkBtn_loginStatusFailed=By.xpath("//span[text()='OK']");
+	public By transMode=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstOtherInfo_ctrl0_LIF1_ddlTransactionMode_ddl\"]");
 }

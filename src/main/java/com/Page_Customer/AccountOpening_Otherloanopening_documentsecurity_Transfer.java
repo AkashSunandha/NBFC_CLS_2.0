@@ -664,6 +664,7 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 //TC-37
 	public void testSelectTransactionMode1() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 37 --> Select Transaction Mode");
+		click(loanOpen.transMode);
 		select("2",loanOpen.transModeDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select transaction mode as cash.");
 		Log.info("Step-1:  Select transaction mode as cash.");

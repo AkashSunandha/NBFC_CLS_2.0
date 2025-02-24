@@ -539,6 +539,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity extends Base_Class {
 	//TC-33
 	public void testSelectTransactionMode() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 33 --> Select Transaction Mode");
+		click(loanOpen.transMode);
 		select("1",loanOpen.transModeDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select transaction mode as cash.");
 		Log.info("Step-1:  Select transaction mode as cash.");
