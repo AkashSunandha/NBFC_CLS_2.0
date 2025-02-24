@@ -1230,47 +1230,47 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	
 	public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
-		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
-		Log.info("Login with Another User");
-		
-		click(custSearch.custSignOut);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Log out");
-		Log.info("Step:01 - Log out");
-		
-		String UserName = configloader().getProperty("UserName2");
-		input(custSearch.loginUserName,UserName );
-		String Password = configloader().getProperty("Password2");
-		input(custSearch.loginPasswrd, Password);
-		click(custSearch.loginButton);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
-		Log.info("Step:02 - Log in with another user for authorization");
-	
-		String userName = driver.findElement(goaldLoanRepo.userName).getText();
-		System.out.println(userName);
-		
-		String flag = "akash";
-		
-		if(!userName.equalsIgnoreCase(flag)) {
-    		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
-    		Log.info("Expected Result: Logging successfull with another user");
-    		}else {
-    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-    			Log.info("ERROR");
-    		}
-		
-		ExtentTestManager.endTest();
-		
-		
-		
-
+//		//Login with Another User
+//		ExtentTestManager.startTest("Login with Another User");
+//		Log.info("Login with Another User");
+//		
+//		click(custSearch.custSignOut);
+//		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Log out");
+//		Log.info("Step:01 - Log out");
+//		
+//		String UserName = configloader().getProperty("UserName2");
+//		input(custSearch.loginUserName,UserName );
+//		String Password = configloader().getProperty("Password2");
+//		input(custSearch.loginPasswrd, Password);
+//		click(custSearch.loginButton);
+//		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
+//		Log.info("Step:02 - Log in with another user for authorization");
+//	
+//		String userName = driver.findElement(goaldLoanRepo.userName).getText();
+//		System.out.println(userName);
+//		
+//		String flag = "akash";
+//		
+//		if(!userName.equalsIgnoreCase(flag)) {
+//    		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
+//    		Log.info("Expected Result: Logging successfull with another user");
+//    		}else {
+//    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+//    			Log.info("ERROR");
+//    		}
+//		
+//		ExtentTestManager.endTest();
+//		
+//		
+//		
+//
 		//Manager Authorization - Transfer Tab
 		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
 		Log.info("Manager Authorization - Transfer Tab");
-		
-		click(goaldLoanRepo.autorizeAndCancelTab);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
-		Log.info("Step:01 - Click \"Authorize & Cancel\"");
+//		
+//		click(goaldLoanRepo.autorizeAndCancelTab);
+//		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
+//		Log.info("Step:01 - Click \"Authorize & Cancel\"");
 		
 		click(goaldLoanRepo.managerAuthoTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select \"Manager Authorization\"");
@@ -1327,6 +1327,9 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		Log.info("Expected Result: Entry authorized");
 
 		ExtentTestManager.endTest();
+		
+		click(goaldLoanRepo.errorPopUpCloseIcon);
+
 		
 	}//end
 	

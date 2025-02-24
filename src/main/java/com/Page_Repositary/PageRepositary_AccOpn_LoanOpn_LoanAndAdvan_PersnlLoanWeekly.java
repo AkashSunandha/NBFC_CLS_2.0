@@ -65,6 +65,15 @@ public class PageRepositary_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly {
 	public By ldAmountTxtBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpLoanDet_lstLoanDetail_ctrl0_LDF_txtInstAmount_txt\"]");
 	public By ldTransModeDropdown = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstOtherInfo_ctrl0_LIF1_ddlTransactionMode_ddl\"]");
 	public By ldSaveBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSave\"]");
+	public By ldPostCreditBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstOtherInfo_ctrl0_LIF1_btnAutoPost\"]");
+	public By ldTransBasedDropdown = By.xpath("//*[@id=\"ddlTrnsBased_ddl\"]");
+	public By ldGLNameTxtBox = By.xpath("//*[@id=\"hyjackText0\"]");
+	public By ldGLAccCodeTxtBox = By.xpath("//*[@id=\"txtGLAcCode_txt\"]");
+	public By ldGLNameOption = By.xpath("//li[@val=50 and text()='AL INTEREST']");
+	public By ldBalanceAmtTxtBox = By.xpath("//*[@id=\"txtBalanceAmount_txt\"]");
+	public By ldAmntTxtBox = By.xpath("//*[@id=\"txtAmountForGLHead_txt\"]");
+	public By ldAddBtn = By.xpath("//*[@id=\"btnAddGLAcHead\"]");
+	public By ldSubmitBtn = By.xpath("//*[@id=\"btnSubmit\"]");
 	
 	//Summary
 	public By sSimilarDataExistsPopUpOkBtn = By.xpath("/html/body/form/div[14]/div[3]/div/button[1]/span");
@@ -73,8 +82,8 @@ public class PageRepositary_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly {
 	public By sTransferTab = By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
 	public By errorPopUpOkBtn = By.xpath("/html/body/div[3]/div[11]/div/button[1]/span");
 //	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
+	public By ldAutoPostingGrid = By.xpath("//*[@id=\"tblContra\"]");
+	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");

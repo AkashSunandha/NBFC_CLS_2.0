@@ -16,6 +16,7 @@ import com.extentReports.ExtentTestManager;
 public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 	String transIdCashPersonal;
 	String transIdTransferPersonal;
+	
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
 	PageRepositary_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly prsnlLoanWeeklyRepo = new PageRepositary_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly();
@@ -154,33 +155,31 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on Add button");
 		Log.info("Step:01 - Click on Add button");
 		
-//		try {
+		try {
 			
 			click(prsnlLoanWeeklyRepo.aciPrvOkBtn);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click ok button in the 'previous active loan' pop up");
 			Log.info("Step:02 - Click ok button in the 'previous active loan' pop up");
 			
 			if(ElementDisplayed(prsnlLoanWeeklyRepo.aciCustDetailsGrid)) {
-				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Pop up is closed.");
-				Log.info("Expected Result: Pop up is closed.");
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Previous active loan' window pops up if any & Customer details get's saved in grid");
+				Log.info("Expected Result: 'Previous active loan' window pops up if any & Customer details get's saved in grid");
 			}else {
 				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 				Log.info("ERROR");
 			}
 						
-//		}catch(Exception e) {
-//			
-//			
-//			
-//			if(ElementDisplayed(goaldLoanRepo.aiCustGrid)) {
-//				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer details are added.");
-//				Log.info("Expected Result: Customer details are added.");
-//			}else {
-//				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-//				Log.info("ERROR");
-//			}
-//			
-//		}
+		}catch(Exception e) {
+			
+			if(ElementDisplayed(prsnlLoanWeeklyRepo.aciCustDetailsGrid)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Previous active loan' window pops up if any & Customer details get's saved in grid");
+				Log.info("Expected Result: 'Previous active loan' window pops up if any & Customer details get's saved in grid");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
+			}
+			
+		}
 			
 		ExtentTestManager.endTest();
 		
@@ -572,8 +571,8 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 				click(prsnlLoanWeeklyRepo.npreviousOverDueLoanPopUpOkBtn);
 
 				if(ElementDisplayed(prsnlLoanWeeklyRepo.psPersonalSecuGrid)) {
-					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Security details are saved in grid");
-					Log.info("Expected Result: Security details are saved in grid");
+					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Previous active loan' window pops up if any & Securities details get's saved in grid");
+					Log.info("Expected Result: 'Previous active loan' window pops up if any & Securities details get's saved in grid");
 				}
 				else {
 					ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
@@ -582,8 +581,8 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 				}catch(Exception e) {
 					
 					if(ElementDisplayed(prsnlLoanWeeklyRepo.psPersonalSecuGrid)) {
-						ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Security details are saved in grid");
-						Log.info("Expected Result: Security details are saved in grid");
+						ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Previous active loan' window pops up if any & Securities details get's saved in grid");
+						Log.info("Expected Result: 'Previous active loan' window pops up if any & Securities details get's saved in grid");
 					}
 					else {
 						ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
@@ -644,9 +643,9 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 		
 		
-		//Add Nominee
-				ExtentTestManager.startTest("Add Nominee");
-				Log.info("Add Nominee");
+		//Customer search icon functionality
+				ExtentTestManager.startTest("Customer search icon functionality");
+				Log.info("Customer search icon functionality");
 				
 				click(prsnlLoanWeeklyRepo.nNomineeCustSrchIcon);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on Select Customer popup button.");
@@ -661,27 +660,60 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 			            driver.manage().window().maximize();
 			            popupAppeared = true;
 			         
+			    		if(ElementDisplayed(prsnlLoanWeeklyRepo.popUpWndNameTxtBox)) {
+							ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer seacrh popup window will be opened.");
+							Log.info("Expected Result: Customer seacrh popup window will be opened.");
+			    		}else {
+			    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			    			Log.info("ERROR");
+			    		}
+			    		
+			    		ExtentTestManager.endTest();
+			    		
+			    		
+			    		
+			    		
+			    		//Search button functionality
+			    				ExtentTestManager.startTest("Search button functionality");
+			    				Log.info("Search button functionality");   					    		
 			    		
 			    		String custName = testdata.get("securitiesCustName").toString();
 			    		input(prsnlLoanWeeklyRepo.popUpWndNameTxtBox, custName);
-			    		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter any alphabets in the   Name Field(not applicant name).");
-			    		Log.info("Step:02 - Enter any alphabets in the   Name Field(not applicant name).");
+			    		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter any alphabets in the   Name Field(not applicant name).");
+			    		Log.info("Step:01 - Enter any alphabets in the   Name Field(not applicant name).");
 			    		
 			    		click(prsnlLoanWeeklyRepo.popUpWndSearchBtn);
-			    		ExtentTestManager.getTest().log(Status.PASS, "Step:03 -  Click on Search button.");
-			    		Log.info("Step:03 -  Click on Search button.");
+			    		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Click on Search button.");
+			    		Log.info("Step:02 -  Click on Search button.");
+				         
+				    		if(ElementDisplayed(prsnlLoanWeeklyRepo.popUpWndSelectBtn)) {
+								ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customers will be display against the given details.");
+								Log.info("Expected Result: Customers will be display against the given details.");
+				    		}else {
+				    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				    			Log.info("ERROR");
+				    		}
+				    		
+				    		ExtentTestManager.endTest();
+				    		
+				    		
+				    		
+				    		
+				    		//Select Customer from Customer popup
+				    				ExtentTestManager.startTest("Select Customer from Customer popup");
+				    				Log.info("Select Customer from Customer popup");
 			    		
 			    		click(prsnlLoanWeeklyRepo.popUpWndSelectBtn);
-			    		ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on the select button");
-			    		Log.info("Step:04 - Click on the select button");
+			    		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the select button");
+			    		Log.info("Step:01 - Click on the select button");
 			    		
 			    		driver.switchTo().window(mainWindowHandle);
 			    		
 			    		String flag = driver.findElement(prsnlLoanWeeklyRepo.nCustIdTxtBox).getAttribute("value");
 			    		
 			    		if(!flag.isBlank()) {
-							ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer is added in security tab.");
-							Log.info("Expected Result: Customer is added in security tab.");
+							ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Selected customer details will be autoloads in the fields expect \"Relation\" field");
+							Log.info("Expected Result: Selected customer details will be autoloads in the fields expect \"Relation\" field.");
 			    		}else {
 			    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			    			Log.info("ERROR");
@@ -852,13 +884,43 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 			
 			
 			
-//			//Voucher Generation Verification
-//			ExtentTestManager.startTest("Voucher Generation Verification");
-//			Log.info("Voucher Generation Verification");
-//			
-//			click(prsnlLoanWeeklyRepo.sPrintBtn);
-//			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click PRINT on summary page");
-//			Log.info("Step:01 - Click PRINT on summary page");
+			//Voucher Generation Verification
+			ExtentTestManager.startTest("Voucher Generation Verification");
+			Log.info("Voucher Generation Verification");
+			
+			click(prsnlLoanWeeklyRepo.sPrintBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click PRINT on summary page");
+			Log.info("Step:01 - Click PRINT on summary page");
+			
+			//Navigate to Pop Up Window
+		    String mainWindowHandle = driver.getWindowHandle();
+		    boolean popupAppeared = false;
+		    for (String handle : driver.getWindowHandles()) {
+		        if (!handle.equals(mainWindowHandle)) {
+		            driver.switchTo().window(handle);
+		            driver.manage().window().maximize();
+		            popupAppeared = true;
+		         
+		            String currentUrl = driver.getCurrentUrl();
+		            System.out.println("currentUrl: "+currentUrl);
+		            if (currentUrl.endsWith(".pdf")) {
+						ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Voucher is generated correctly.");
+						Log.info("Expected Result: Voucher is generated correctly.");		    		
+						}else {
+		    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+		    			Log.info("ERROR");
+		    		}
+		    		
+		    		ExtentTestManager.endTest();
+		    		
+		    		driver.close();
+		    		driver.switchTo().window(mainWindowHandle);
+		    		
+		            break;	
+		            
+		        }
+		   
+		    }//for loop end
 			
 			
 			
@@ -930,7 +992,139 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 			
 			
 			
-			//Save functionality Trans. Mode - CASH
+			//Post credit button functionality
+			ExtentTestManager.startTest("Post credit button functionality");
+			Log.info("Post credit button functionality");
+			
+			click(prsnlLoanWeeklyRepo.ldPostCreditBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Post credit button");
+			Log.info("Step:01 - Click Post credit button");
+			
+			
+			//Navigate to Pop Up Window
+		    String mainWindowHandle = driver.getWindowHandle();
+		    boolean popupAppeared = false;
+		    for (String handle : driver.getWindowHandles()) {
+		        if (!handle.equals(mainWindowHandle)) {
+		            driver.switchTo().window(handle);
+		            driver.manage().window().maximize();
+		            popupAppeared = true;
+		         
+		    		
+		            if(ElementDisplayed(prsnlLoanWeeklyRepo.ldTransBasedDropdown)) {
+						ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Auto posting popup window will be opened.");
+						Log.info("Expected Result: Auto posting popup window will be opened.");
+		    		}else {
+		    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+		    			Log.info("ERROR");
+		    		}
+		            
+					ExtentTestManager.endTest();
+
+
+					
+					//Transaction based selection.
+					ExtentTestManager.startTest("Transaction based selection.");
+					Log.info("Transaction based selection.");
+					
+					select("GL Code",prsnlLoanWeeklyRepo.ldTransBasedDropdown);
+					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select transaction based as GL Code.");
+					Log.info("Step:01 - Select transaction based as GL Code.");
+					
+		            if(ElementDisplayed(prsnlLoanWeeklyRepo.ldGLNameTxtBox) && ElementDisplayed(prsnlLoanWeeklyRepo.ldGLAccCodeTxtBox)) { 
+					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: GL code related field will be display (GL name,GL code).");
+					Log.info("Expected Result: GL code related field will be display (GL name,GL code)");
+		            }else {
+		    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+		    			Log.info("ERROR");
+		    		}
+		            
+					ExtentTestManager.endTest();
+					
+					
+					
+					//GL Name selection.
+					ExtentTestManager.startTest("GL Name selection.");
+					Log.info("GL Name selection.");
+					
+					click(prsnlLoanWeeklyRepo.ldGLNameTxtBox);
+					click(prsnlLoanWeeklyRepo.ldGLNameOption);
+					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select the \"GL Name\" from the drop down");
+					Log.info("Step:01 - Select the \"GL Name\" from the drop down");
+		            
+					String GLAccCodeValue = driver.findElement(prsnlLoanWeeklyRepo.ldGLAccCodeTxtBox).getAttribute("value");
+					
+		    		if(!GLAccCodeValue.isBlank()) {
+								ExtentTestManager.getTest().log(Status.PASS, "Expected Result: GL code will be autoloads while selecting the GL Name.");
+								Log.info("Expected Result: GL code will be autoloads while selecting the GL Name.");
+				    		}else {
+				    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				    			Log.info("ERROR");
+				    		}
+				    		
+				    ExtentTestManager.endTest();
+				    
+
+					
+					//Add button functionality
+					ExtentTestManager.startTest("Add button functionality");
+					Log.info("Add button functionality");
+					
+					String amntValue = driver.findElement(prsnlLoanWeeklyRepo.ldBalanceAmtTxtBox).getAttribute("value");
+					String amntValue1 = amntValue.split("\\.")[0];
+					
+					clear(prsnlLoanWeeklyRepo.ldAmntTxtBox);
+					click(prsnlLoanWeeklyRepo.ldAmntTxtBox);
+					input(prsnlLoanWeeklyRepo.ldAmntTxtBox, amntValue1);
+					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Give the amount in \"Amount\" field");
+					Log.info("Step:01 - Give the amount in \"Amount\" field.");
+
+					click(prsnlLoanWeeklyRepo.ldAddBtn);
+					ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click add button");
+					Log.info("Step:02 - Click add button.");
+					
+		            if(ElementDisplayed(prsnlLoanWeeklyRepo.ldAutoPostingGrid)) { 
+					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Given details will be displays in the grid.");
+					Log.info("Expected Result: Given details will be displays in the grid");
+		            }else {
+		    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+		    			Log.info("ERROR");
+		    		}
+
+					ExtentTestManager.endTest();
+					
+					
+					
+					//Submit button functionality
+					ExtentTestManager.startTest("Submit button functionality");
+					Log.info("Submit button functionality");
+					
+					click(prsnlLoanWeeklyRepo.ldSubmitBtn);
+					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click submit button after adding the details in the auto posting popup window");
+					Log.info("Step:01 - Click submit button after adding the details in the auto posting popup window.");
+
+		    		driver.switchTo().window(mainWindowHandle);
+		    		
+		            if(ElementDisplayed(prsnlLoanWeeklyRepo.ldSaveBtn)) { 
+					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup window will be closed.");
+					Log.info("Expected Result: Popup window will be closed");
+		            }else {
+		    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+		    			Log.info("ERROR");
+		    		}
+		    		ExtentTestManager.endTest();
+		    		
+		            break;	
+		            
+		        }
+		   
+		    }//for loop end
+		    
+		    
+			
+			
+			
+			//Save functionality Trans. Mode - TRANSFER
 			ExtentTestManager.startTest("Save functionality Trans. Mode - TRANSFER");
 			Log.info("Save functionality Trans. Mode - TRANSFER");
 			
@@ -940,7 +1134,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 			
 			try {
 				
-				click(prsnlLoanWeeklyRepo.errorPopUpOkBtn);
+//				click(prsnlLoanWeeklyRepo.errorPopUpOkBtn);
 
 				click(prsnlLoanWeeklyRepo.sSimilarDataExistsPopUpOkBtn);
 				
@@ -965,20 +1159,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 				transIdTransferPersonal = driver.findElement(prsnlLoanWeeklyRepo.sTransId).getText();
 			}
 			ExtentTestManager.endTest();
-			
-			
-			
-//			//Voucher Generation Verification
-//			ExtentTestManager.startTest("Voucher Generation Verification");
-//			Log.info("Voucher Generation Verification");
-//			
-//			click(prsnlLoanWeeklyRepo.sPrintBtn);
-//			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click PRINT on summary page");
-//			Log.info("Step:01 - Click PRINT on summary page");
-			
-			
-			
-		
+				
 		
 	}//end
 	
@@ -1057,6 +1238,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		Log.info("Step:01 - Click Refresh Button");
 		
 		System.out.println("transIdCashPersonal "+transIdCashPersonal);
+		
 		fetchWithTransId(transIdCashPersonal);
 		
 		if(ElementDisplayed(goaldLoanRepo.approveCheckBox)) {
@@ -1128,7 +1310,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 		ExtentTestManager.endTest();
 		
-//		click(custSearch.custSignOut);
+//		click(prsnlLoanWeeklyRepo.errorPopUpCloseIcon);
 
 		
 	}//end
@@ -1233,6 +1415,9 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		Log.info("Expected Result: Entry authorized");
 
 		ExtentTestManager.endTest();
+		
+		click(prsnlLoanWeeklyRepo.errorPopUpCloseIcon);
+
 		
 	}//end
 }

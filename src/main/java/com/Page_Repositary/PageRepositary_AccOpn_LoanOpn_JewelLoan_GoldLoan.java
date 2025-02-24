@@ -102,6 +102,6 @@ public class PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan {
 	public By sTransferTab = By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
 
 	public By approveCheckBoxTransfer = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect\"]");
-//	public By variable = By.xpath("");
+	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
 
 }

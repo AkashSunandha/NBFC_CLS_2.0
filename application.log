@@ -1,4 +1,4 @@
-[ERROR] 2025-02-20 00:58:28.488 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-24 12:03:35.200 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-20 00:58:28.507 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-24 12:03:35.214 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-20 00:58:28.509 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-24 12:03:35.216 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-20 00:58:28.514 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-24 12:03:35.223 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -210,245 +210,317 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-02-20 00:58:29.248 [main] Log - *** Running test method New Customer Module...
-[INFO ] 2025-02-20 00:58:33.081 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-02-20 00:58:34.093 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-02-20 00:58:36.406 [main] Log - PC Registration
-[INFO ] 2025-02-20 00:58:37.478 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-02-20 00:58:37.827 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-02-20 00:58:38.883 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-02-20 00:58:43.170 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-02-20 00:58:44.246 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-02-20 00:58:44.305 [main] Log - Valid Login
-[INFO ] 2025-02-20 00:58:45.382 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-02-20 00:58:46.452 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-02-20 00:58:53.595 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-02-20 00:58:54.698 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-20 00:58:55.819 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-20 00:58:55.867 [main] Log - Open Personal Loan Weekly window
-[INFO ] 2025-02-20 00:59:00.187 [main] Log - Step:01 - Navigate to account opening
-[INFO ] 2025-02-20 00:59:04.483 [main] Log - Step:02 - Select loan opening.
-[INFO ] 2025-02-20 00:59:08.767 [main] Log - Step:03 - Select Loan & Advances.
-[INFO ] 2025-02-20 00:59:14.622 [main] Log - Step:04 - Select Personal Loan Weekly.
-[INFO ] 2025-02-20 00:59:15.703 [main] Log - Expected Result: Personal Loan Weekly window is displayed.
-[INFO ] 2025-02-20 00:59:15.738 [main] Log - Select Customer from Customer pop up - Pop up displayed
-[INFO ] 2025-02-20 00:59:20.248 [main] Log - Step:01 -  Click on Select Customer popup button.
-[INFO ] 2025-02-20 00:59:21.631 [main] Log - Expected Result: Pop up is opened.
-[INFO ] 2025-02-20 00:59:21.663 [main] Log - Select Customer from Customer pop up - Customer Search
-[INFO ] 2025-02-20 00:59:22.761 [main] Log - Step:01 - Enter customer Name or alphabet.
-[INFO ] 2025-02-20 00:59:27.078 [main] Log - Step:02 -  Click on Search button.
-[INFO ] 2025-02-20 00:59:28.147 [main] Log - Expected Result: Customer is listing.
-[INFO ] 2025-02-20 00:59:28.178 [main] Log - Select Customer from Customer pop up
-[INFO ] 2025-02-20 00:59:32.303 [main] Log - Step:01 - Click on the select button
-[INFO ] 2025-02-20 00:59:32.358 [main] Log - Expected Result: Customer ID is autoloaded in the Customer ID field.
-[INFO ] 2025-02-20 00:59:32.391 [main] Log - Add Button functionality
-[INFO ] 2025-02-20 00:59:38.061 [main] Log - Step:01 - Click on Add button
-[INFO ] 2025-02-20 00:59:42.382 [main] Log - Step:02 - Click ok button in the 'previous active loan' pop up
-[INFO ] 2025-02-20 00:59:43.474 [main] Log - Expected Result: Pop up is closed.
-[INFO ] 2025-02-20 00:59:43.510 [main] Log - Resolution No Field - BVA Validations
-[INFO ] 2025-02-20 00:59:44.560 [main] Log - Step:01 - Enter alphanumeric data  in the 'Resolution No' field in the account info tab.
-[INFO ] 2025-02-20 00:59:44.561 [main] Log - Expected Result: Resolution No. entered successfully.
-[INFO ] 2025-02-20 00:59:44.600 [main] Log - Enter Resolution Date
-[INFO ] 2025-02-20 00:59:50.010 [main] Log - Step:01 - Enter valid  dates from date picker in the Resolution Date field.
-[INFO ] 2025-02-20 00:59:50.010 [main] Log - Expected Result: Resolution Date are entered successfully.
-[INFO ] 2025-02-20 00:59:50.047 [main] Log - Referred By Dropdown Selection
-[INFO ] 2025-02-20 00:59:58.736 [main] Log - Step:01 - Select an item from Referred By dropdown.
-[INFO ] 2025-02-20 00:59:58.790 [main] Log - Expected Result: Selected item is displayed.
-[INFO ] 2025-02-20 00:59:58.828 [main] Log - Enter Equitable Mort Reg.No
-[INFO ] 2025-02-20 00:59:59.936 [main] Log - Step:01 - Enter Equitable Mort Reg.No.
-[INFO ] 2025-02-20 00:59:59.937 [main] Log - Expected Result: Equitable Mort Reg.No are entered successfully.
-[INFO ] 2025-02-20 00:59:59.969 [main] Log - EMR Date Field - BVA Validations
-[INFO ] 2025-02-20 01:00:05.391 [main] Log - Step:01 - Enter invalid dates in EMR Date field.
-[INFO ] 2025-02-20 01:00:10.817 [main] Log - Expected Result: Error on invalid dates.
-[INFO ] 2025-02-20 01:00:19.241 [main] Log - Step:02 - Enter valid dates in EMR Date field.
-[INFO ] 2025-02-20 01:00:19.241 [main] Log - Expected Result: Valid date accepted.
-[INFO ] 2025-02-20 01:00:19.277 [main] Log - Agent Code Field - ECP Validations
-[INFO ] 2025-02-20 01:00:20.341 [main] Log - Step:01 - Enter invalid numeric data in Agent code field
-[INFO ] 2025-02-20 01:00:25.778 [main] Log - Expected Result: Error on invalid Code.
-[INFO ] 2025-02-20 01:00:34.234 [main] Log - Step:02 - Enter valid numeric data in Agent code field
-[INFO ] 2025-02-20 01:00:38.617 [main] Log - Expected Result: Agent name autoloads.
-[INFO ] 2025-02-20 01:00:38.659 [main] Log - DSA Code Field - ECP Validations
-[INFO ] 2025-02-20 01:00:39.729 [main] Log - Step:01 - Enter invalid numeric data in DSA code field
-[INFO ] 2025-02-20 01:00:45.169 [main] Log - Expected Result: Error on invalid Code.
-[INFO ] 2025-02-20 01:00:53.621 [main] Log - Step:02 - Enter valid numeric data in DSA code field
-[INFO ] 2025-02-20 01:00:58.050 [main] Log - Expected Result: DSA name autoloads.
-[INFO ] 2025-02-20 01:00:58.086 [main] Log - Remarks Field
-[INFO ] 2025-02-20 01:00:59.139 [main] Log - Step:01 - Enter alphanumeric data in Remarks field
-[INFO ] 2025-02-20 01:00:59.139 [main] Log - Expected Result: Text is saved without issues
-[INFO ] 2025-02-20 01:00:59.179 [main] Log - Move to Securities Tab
-[INFO ] 2025-02-20 01:01:03.519 [main] Log - Step:01 - Click NEXT button
-[INFO ] 2025-02-20 01:01:04.609 [main] Log - Expected Result: Securities tab is displayed
-[INFO ] 2025-02-20 01:01:04.638 [main] Log - Select Personal Sureties Tab
-[INFO ] 2025-02-20 01:01:08.973 [main] Log - Step:01 - Click personal surety tab
-[INFO ] 2025-02-20 01:01:10.080 [main] Log - Expected Result: Personal Sureties tab is displayed
-[INFO ] 2025-02-20 01:01:10.108 [main] Log - Customer added in security tab
-[INFO ] 2025-02-20 01:01:14.590 [main] Log - Step:01 -  Click on Select Customer popup button.
-[INFO ] 2025-02-20 01:01:15.982 [main] Log - Step:02 - Enter any alphabets in the   Name Field(not applicant name).
-[INFO ] 2025-02-20 01:01:20.314 [main] Log - Step:03 -  Click on Search button.
-[INFO ] 2025-02-20 01:01:24.485 [main] Log - Step:04 - Click on the select button
-[INFO ] 2025-02-20 01:01:24.542 [main] Log - Expected Result: Customer is added in security tab.
-[INFO ] 2025-02-20 01:01:24.575 [main] Log - Security Addition Process
-[INFO ] 2025-02-20 01:01:28.901 [main] Log - Step:01 - Select Salary Certificate
-[INFO ] 2025-02-20 01:01:38.060 [main] Log - Step:02 - Enter details in OffName, DEpt Head, Designation, Place fields
-[INFO ] 2025-02-20 01:01:38.060 [main] Log - Expected Result: Possible to give the detail
-[INFO ] 2025-02-20 01:01:38.102 [main] Log - Enter Basic Pay, Net salary, Retd. Date & Remark
-[INFO ] 2025-02-20 01:01:48.895 [main] Log - Step:01 - Enter basic pay and  net salary  details
-[INFO ] 2025-02-20 01:01:54.332 [main] Log - Step:02 - Enter date in Retd. Date field
-[INFO ] 2025-02-20 01:01:55.394 [main] Log - Step:03 - Enter alphanumeric data in Remarks field
-[INFO ] 2025-02-20 01:01:55.394 [main] Log - Expected Result: Possible to give the detail
-[INFO ] 2025-02-20 01:01:55.433 [main] Log - Add Button functionality
-[INFO ] 2025-02-20 01:02:01.347 [main] Log - Step:01 - Click ADD button
-[INFO ] 2025-02-20 01:02:06.743 [main] Log - Expected Result: Security details are saved in grid
-[INFO ] 2025-02-20 01:02:06.768 [main] Log - Navigate to Nominee Tab
-[INFO ] 2025-02-20 01:02:12.180 [main] Log - Step:01 - Click NEXT button
-[INFO ] 2025-02-20 01:02:13.247 [main] Log - Expected Result: Nominee tab is displayed
-[INFO ] 2025-02-20 01:02:13.274 [main] Log - Add Nominee - Untick 'Nominee Not Required'
-[INFO ] 2025-02-20 01:02:17.604 [main] Log - Step:01 - Untick 'Nominee Not Required'
-[INFO ] 2025-02-20 01:02:18.662 [main] Log - Expected Result: Nominee details field will be display
-[INFO ] 2025-02-20 01:02:18.693 [main] Log - Add Nominee
-[INFO ] 2025-02-20 01:02:23.159 [main] Log - Step:01 -  Click on Select Customer popup button.
-[INFO ] 2025-02-20 01:02:24.589 [main] Log - Step:02 - Enter any alphabets in the   Name Field(not applicant name).
-[INFO ] 2025-02-20 01:02:28.921 [main] Log - Step:03 -  Click on Search button.
-[INFO ] 2025-02-20 01:02:33.055 [main] Log - Step:04 - Click on the select button
-[INFO ] 2025-02-20 01:02:33.159 [main] Log - Expected Result: Customer is added in security tab.
-[INFO ] 2025-02-20 01:02:33.186 [main] Log - Relation drop down selection
-[INFO ] 2025-02-20 01:02:33.511 [main] Log - Step:01 -  Click on Select Customer popup button.
-[INFO ] 2025-02-20 01:02:33.511 [main] Log - Expected Result: Possible to select the relation from the drop down.
-[INFO ] 2025-02-20 01:02:33.550 [main] Log - Add Button functionality
-[INFO ] 2025-02-20 01:02:37.949 [main] Log - Step:01 - Click add button.
-[INFO ] 2025-02-20 01:02:39.020 [main] Log - Expected Result: Given details will be displays in the grid.
-[INFO ] 2025-02-20 01:02:39.048 [main] Log - Move to Loan Details Tab
-[INFO ] 2025-02-20 01:02:43.366 [main] Log - Step:01 - Click NEXT button.
-[INFO ] 2025-02-20 01:02:44.449 [main] Log - Expected Result: Given details will be displays in the grid.
-[INFO ] 2025-02-20 01:02:44.475 [main] Log - Limit/Sanctioned Field - ECP Validations
-[INFO ] 2025-02-20 01:02:45.541 [main] Log - Step:01 - Enter numeric data in Limit/Sanctioned field.
-[INFO ] 2025-02-20 01:02:45.542 [main] Log - Expected Result: Numeric data accepted.
-[INFO ] 2025-02-20 01:02:45.569 [main] Log - Get Values button functionality
-[INFO ] 2025-02-20 01:02:49.950 [main] Log - Step:01 - Click GET VALUES button.
-[INFO ] 2025-02-20 01:02:50.082 [main] Log - Expected Result: Valid data fetched.
-[INFO ] 2025-02-20 01:02:50.106 [main] Log - Transmode Selection and Save
-[INFO ] 2025-02-20 01:02:51.477 [main] Log - Step:01 - Select Transmode as CASH.
-[INFO ] 2025-02-20 01:02:51.478 [main] Log - Expected Result: Transmode CASH can be selected.
-[INFO ] 2025-02-20 01:02:51.522 [main] Log - Save functionality Trans. Mode - CASH
-[INFO ] 2025-02-20 01:02:55.868 [main] Log - Step:01 - Click 'save'
-[INFO ] 2025-02-20 01:03:01.286 [main] Log - Expected Result: Summary page is displayed
-[INFO ] 2025-02-20 01:03:01.336 [main] Log - Login with Another User
-[INFO ] 2025-02-20 01:03:05.814 [main] Log - Step:01 - Log out
-[INFO ] 2025-02-20 01:03:14.143 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-02-20 01:03:14.186 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-02-20 01:03:14.215 [main] Log - Manager Authorization - Cash Tab
-[INFO ] 2025-02-20 01:03:18.531 [main] Log - Step:01 - Click "Authorize & Cancel"
-[INFO ] 2025-02-20 01:03:22.981 [main] Log - Step:02 - Select "Manager Authorization"
-[INFO ] 2025-02-20 01:03:27.284 [main] Log - Step:03 - Click "Cash" tab
-[INFO ] 2025-02-20 01:03:27.285 [main] Log - Expected Result: Cash tab load
-[INFO ] 2025-02-20 01:03:27.348 [main] Log - Refresh Loan Opening Entry
-[INFO ] 2025-02-20 01:03:31.703 [main] Log - Step:01 - Click Refresh Button
-[INFO ] 2025-02-20 01:03:38.198 [main] Log - Expected Result: Loan opening entry displayed
-[INFO ] 2025-02-20 01:03:38.225 [main] Log - Authorize Loan Entry as Manager
-[INFO ] 2025-02-20 01:03:42.550 [main] Log - Step:01 - Select loan entry checkbox
-[INFO ] 2025-02-20 01:03:46.856 [main] Log - Step:02 - Click Authorize Button
-[INFO ] 2025-02-20 01:03:46.856 [main] Log - Expected Result: Entry authorized
-[INFO ] 2025-02-20 01:03:46.892 [main] Log - Cashier Authorization
-[INFO ] 2025-02-20 01:03:51.281 [main] Log - Step:01 - Navigate to Cashier Authorization
-[INFO ] 2025-02-20 01:03:55.623 [main] Log - Step:02 - Click Refresh Button
-[INFO ] 2025-02-20 01:04:05.363 [main] Log - Step:03 - Select checkbox
-[INFO ] 2025-02-20 01:04:09.671 [main] Log - Step:04 - Click Authorize Button
-[INFO ] 2025-02-20 01:04:10.784 [main] Log - Expected Result: Account is created
-[INFO ] 2025-02-20 01:04:15.132 [main] Log - Logout
-[INFO ] 2025-02-20 01:04:23.532 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-02-20 01:04:24.599 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
-[INFO ] 2025-02-20 01:04:28.341 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-02-20 01:04:29.647 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-02-20 01:04:29.647 [main] Log - PC Registration
-[INFO ] 2025-02-20 01:04:30.725 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-02-20 01:04:31.022 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-02-20 01:04:32.063 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-02-20 01:04:36.327 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-02-20 01:04:37.181 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-02-20 01:04:37.214 [main] Log - Valid Login
-[INFO ] 2025-02-20 01:04:38.234 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-02-20 01:04:39.256 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-02-20 01:04:46.588 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-02-20 01:04:47.647 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-20 01:04:48.700 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-20 01:04:48.729 [main] Log - Open Personal Loan Weekly window
-[INFO ] 2025-02-20 01:04:53.057 [main] Log - Step:01 - Navigate to account opening
-[INFO ] 2025-02-20 01:04:57.295 [main] Log - Step:02 - Select loan opening.
-[INFO ] 2025-02-20 01:05:01.548 [main] Log - Step:03 - Select Loan & Advances.
-[INFO ] 2025-02-20 01:05:07.351 [main] Log - Step:04 - Select Personal Loan Weekly.
-[INFO ] 2025-02-20 01:05:08.398 [main] Log - Expected Result: Personal Loan Weekly window is displayed.
-[INFO ] 2025-02-20 01:05:08.422 [main] Log - Select Customer from Customer pop up - Pop up displayed
-[INFO ] 2025-02-20 01:05:12.867 [main] Log - Step:01 -  Click on Select Customer popup button.
-[INFO ] 2025-02-20 01:05:14.210 [main] Log - Expected Result: Pop up is opened.
-[INFO ] 2025-02-20 01:05:14.234 [main] Log - Select Customer from Customer pop up - Customer Search
-[INFO ] 2025-02-20 01:05:15.274 [main] Log - Step:01 - Enter customer Name or alphabet.
-[INFO ] 2025-02-20 01:05:19.521 [main] Log - Step:02 -  Click on Search button.
-[INFO ] 2025-02-20 01:05:20.574 [main] Log - Expected Result: Customer is listing.
-[INFO ] 2025-02-20 01:05:20.600 [main] Log - Select Customer from Customer pop up
-[INFO ] 2025-02-20 01:05:24.708 [main] Log - Step:01 - Click on the select button
-[INFO ] 2025-02-20 01:05:24.740 [main] Log - Expected Result: Customer ID is autoloaded in the Customer ID field.
-[INFO ] 2025-02-20 01:05:24.767 [main] Log - Add Button functionality
-[INFO ] 2025-02-20 01:05:29.902 [main] Log - Step:01 - Click on Add button
-[INFO ] 2025-02-20 01:05:34.207 [main] Log - Step:02 - Click ok button in the 'previous active loan' pop up
-[INFO ] 2025-02-20 01:05:35.251 [main] Log - Expected Result: Pop up is closed.
-[INFO ] 2025-02-20 01:05:35.279 [main] Log - Resolution No Field - BVA Validations
-[INFO ] 2025-02-20 01:05:36.306 [main] Log - Step:01 - Enter alphanumeric data  in the 'Resolution No' field in the account info tab.
-[INFO ] 2025-02-20 01:05:36.306 [main] Log - Expected Result: Resolution No. entered successfully.
-[INFO ] 2025-02-20 01:05:36.342 [main] Log - Enter Resolution Date
-[INFO ] 2025-02-20 01:05:41.653 [main] Log - Step:01 - Enter valid  dates from date picker in the Resolution Date field.
-[INFO ] 2025-02-20 01:05:41.653 [main] Log - Expected Result: Resolution Date are entered successfully.
-[INFO ] 2025-02-20 01:05:41.680 [main] Log - Referred By Dropdown Selection
-[INFO ] 2025-02-20 01:05:50.272 [main] Log - Step:01 - Select an item from Referred By dropdown.
-[INFO ] 2025-02-20 01:05:50.304 [main] Log - Expected Result: Selected item is displayed.
-[INFO ] 2025-02-20 01:05:50.334 [main] Log - Enter Equitable Mort Reg.No
-[INFO ] 2025-02-20 01:05:51.414 [main] Log - Step:01 - Enter Equitable Mort Reg.No.
-[INFO ] 2025-02-20 01:05:51.415 [main] Log - Expected Result: Equitable Mort Reg.No are entered successfully.
-[INFO ] 2025-02-20 01:05:51.439 [main] Log - EMR Date Field - BVA Validations
-[INFO ] 2025-02-20 01:05:56.757 [main] Log - Step:01 - Enter invalid dates in EMR Date field.
-[INFO ] 2025-02-20 01:06:02.072 [main] Log - Expected Result: Error on invalid dates.
-[INFO ] 2025-02-20 01:06:10.413 [main] Log - Step:02 - Enter valid dates in EMR Date field.
-[INFO ] 2025-02-20 01:06:10.413 [main] Log - Expected Result: Valid date accepted.
-[INFO ] 2025-02-20 01:06:10.439 [main] Log - Agent Code Field - ECP Validations
-[INFO ] 2025-02-20 01:06:11.464 [main] Log - Step:01 - Enter invalid numeric data in Agent code field
-[INFO ] 2025-02-20 01:06:16.823 [main] Log - Expected Result: Error on invalid Code.
-[INFO ] 2025-02-20 01:06:25.185 [main] Log - Step:02 - Enter valid numeric data in Agent code field
-[INFO ] 2025-02-20 01:06:29.563 [main] Log - Expected Result: Agent name autoloads.
-[INFO ] 2025-02-20 01:06:29.588 [main] Log - DSA Code Field - ECP Validations
-[INFO ] 2025-02-20 01:06:30.650 [main] Log - Step:01 - Enter invalid numeric data in DSA code field
-[INFO ] 2025-02-20 01:06:36.014 [main] Log - Expected Result: Error on invalid Code.
-[INFO ] 2025-02-20 01:06:44.389 [main] Log - Step:02 - Enter valid numeric data in DSA code field
-[INFO ] 2025-02-20 01:06:48.749 [main] Log - Expected Result: DSA name autoloads.
-[INFO ] 2025-02-20 01:06:48.777 [main] Log - Remarks Field
-[INFO ] 2025-02-20 01:06:49.826 [main] Log - Step:01 - Enter alphanumeric data in Remarks field
-[INFO ] 2025-02-20 01:06:49.827 [main] Log - Expected Result: Text is saved without issues
-[INFO ] 2025-02-20 01:06:49.853 [main] Log - Move to Securities Tab
-[INFO ] 2025-02-20 01:06:54.157 [main] Log - Step:01 - Click NEXT button
-[INFO ] 2025-02-20 01:06:55.204 [main] Log - Expected Result: Securities tab is displayed
-[INFO ] 2025-02-20 01:06:55.229 [main] Log - Select Personal Sureties Tab
-[INFO ] 2025-02-20 01:06:59.542 [main] Log - Step:01 - Click personal surety tab
-[INFO ] 2025-02-20 01:07:00.576 [main] Log - Expected Result: Personal Sureties tab is displayed
-[INFO ] 2025-02-20 01:07:00.603 [main] Log - Customer added in security tab
-[INFO ] 2025-02-20 01:07:05.108 [main] Log - Step:01 -  Click on Select Customer popup button.
-[INFO ] 2025-02-20 01:07:06.483 [main] Log - Step:02 - Enter any alphabets in the   Name Field(not applicant name).
-[INFO ] 2025-02-20 01:07:10.769 [main] Log - Step:03 -  Click on Search button.
-[INFO ] 2025-02-20 01:07:14.875 [main] Log - Step:04 - Click on the select button
-[INFO ] 2025-02-20 01:07:14.898 [main] Log - Expected Result: Customer is added in security tab.
-[INFO ] 2025-02-20 01:07:14.930 [main] Log - Security Addition Process
-[INFO ] 2025-02-20 01:07:19.196 [main] Log - Step:01 - Select Salary Certificate
-[INFO ] 2025-02-20 01:07:28.218 [main] Log - Step:02 - Enter details in OffName, DEpt Head, Designation, Place fields
-[INFO ] 2025-02-20 01:07:28.219 [main] Log - Expected Result: Possible to give the detail
-[INFO ] 2025-02-20 01:07:28.270 [main] Log - Enter Basic Pay, Net salary, Retd. Date & Remark
-[INFO ] 2025-02-20 01:07:38.910 [main] Log - Step:01 - Enter basic pay and  net salary  details
-[INFO ] 2025-02-20 01:07:44.233 [main] Log - Step:02 - Enter date in Retd. Date field
-[INFO ] 2025-02-20 01:07:45.271 [main] Log - Step:03 - Enter alphanumeric data in Remarks field
-[INFO ] 2025-02-20 01:07:45.271 [main] Log - Expected Result: Possible to give the detail
-[INFO ] 2025-02-20 01:07:45.309 [main] Log - Add Button functionality
-[INFO ] 2025-02-20 01:07:51.815 [main] Log - Step:01 - Click ADD button
-[INFO ] 2025-02-20 01:08:28.408 [main] Log - Expected Result: Security details are saved in grid
-[INFO ] 2025-02-20 01:08:28.434 [main] Log - Navigate to Nominee Tab
-[INFO ] 2025-02-20 01:08:31.525 [main] Log - Exception org.openqa.selenium.ElementClickInterceptedException: Element <input id="ctl00_ctl00_CPH1_PRDCNT_btnNext" class="Button" name="ctl00$ctl00$CPH1$PRDCNT$btnNext" type="button"> is not clickable at point (618,296) because another element <div id="divOverDueLoanExistPopup" class="ui-dialog-content ui-widget-content"> obscures it
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SPTVMLAP-2124', ip: '10.212.136.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 135.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250130195129, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2856, moz:profile: C:\Users\AKASH~1.VEN\AppDat..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 02c79077-ebfc-4a85-a4a7-2f3bcc009732
+[INFO ] 2025-02-24 12:03:35.887 [main] Log - *** Running test method New Customer Module...
+[INFO ] 2025-02-24 12:03:39.737 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-02-24 12:03:41.244 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-02-24 12:03:43.615 [main] Log - PC Registration
+[INFO ] 2025-02-24 12:03:44.706 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-02-24 12:03:45.047 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-02-24 12:03:46.100 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-02-24 12:03:50.416 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-02-24 12:03:51.954 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-02-24 12:03:52.021 [main] Log - Valid Login
+[INFO ] 2025-02-24 12:03:53.068 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-02-24 12:03:54.124 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-02-24 12:04:02.262 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-02-24 12:04:03.368 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-24 12:04:04.413 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-24 12:04:04.457 [main] Log - Open Personal Loan Weekly window
+[INFO ] 2025-02-24 12:04:08.751 [main] Log - Step:01 - Navigate to account opening
+[INFO ] 2025-02-24 12:04:13.060 [main] Log - Step:02 - Select loan opening.
+[INFO ] 2025-02-24 12:04:17.337 [main] Log - Step:03 - Select Loan & Advances.
+[INFO ] 2025-02-24 12:04:27.487 [main] Log - Step:04 - Select Personal Loan Weekly.
+[INFO ] 2025-02-24 12:04:28.552 [main] Log - Expected Result: Personal Loan Weekly window is displayed.
+[INFO ] 2025-02-24 12:04:28.588 [main] Log - Select Customer from Customer pop up - Pop up displayed
+[INFO ] 2025-02-24 12:04:33.016 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-24 12:04:34.382 [main] Log - Expected Result: Pop up is opened.
+[INFO ] 2025-02-24 12:04:34.421 [main] Log - Select Customer from Customer pop up - Customer Search
+[INFO ] 2025-02-24 12:04:35.493 [main] Log - Step:01 - Enter customer Name or alphabet.
+[INFO ] 2025-02-24 12:04:39.797 [main] Log - Step:02 -  Click on Search button.
+[INFO ] 2025-02-24 12:04:40.869 [main] Log - Expected Result: Customer is listing.
+[INFO ] 2025-02-24 12:04:40.905 [main] Log - Select Customer from Customer pop up
+[INFO ] 2025-02-24 12:04:45.045 [main] Log - Step:01 - Click on the select button
+[INFO ] 2025-02-24 12:04:45.099 [main] Log - Expected Result: Customer ID is autoloaded in the Customer ID field.
+[INFO ] 2025-02-24 12:04:45.137 [main] Log - Add Button functionality
+[INFO ] 2025-02-24 12:04:51.428 [main] Log - Step:01 - Click on Add button
+[INFO ] 2025-02-24 12:04:55.733 [main] Log - Step:02 - Click ok button in the 'previous active loan' pop up
+[INFO ] 2025-02-24 12:04:56.806 [main] Log - Expected Result: 'Previous active loan' window pops up if any & Customer details get's saved in grid
+[INFO ] 2025-02-24 12:04:56.838 [main] Log - Resolution No Field - BVA Validations
+[INFO ] 2025-02-24 12:04:57.895 [main] Log - Step:01 - Enter alphanumeric data  in the 'Resolution No' field in the account info tab.
+[INFO ] 2025-02-24 12:04:57.895 [main] Log - Expected Result: Resolution No. entered successfully.
+[INFO ] 2025-02-24 12:04:57.927 [main] Log - Enter Resolution Date
+[INFO ] 2025-02-24 12:05:03.299 [main] Log - Step:01 - Enter valid  dates from date picker in the Resolution Date field.
+[INFO ] 2025-02-24 12:05:03.299 [main] Log - Expected Result: Resolution Date are entered successfully.
+[INFO ] 2025-02-24 12:05:03.333 [main] Log - Referred By Dropdown Selection
+[INFO ] 2025-02-24 12:05:11.936 [main] Log - Step:01 - Select an item from Referred By dropdown.
+[INFO ] 2025-02-24 12:05:11.972 [main] Log - Expected Result: Selected item is displayed.
+[INFO ] 2025-02-24 12:05:12.006 [main] Log - Enter Equitable Mort Reg.No
+[INFO ] 2025-02-24 12:05:13.059 [main] Log - Step:01 - Enter Equitable Mort Reg.No.
+[INFO ] 2025-02-24 12:05:13.059 [main] Log - Expected Result: Equitable Mort Reg.No are entered successfully.
+[INFO ] 2025-02-24 12:05:13.093 [main] Log - EMR Date Field - BVA Validations
+[INFO ] 2025-02-24 12:05:19.379 [main] Log - Step:01 - Enter invalid dates in EMR Date field.
+[INFO ] 2025-02-24 12:05:24.754 [main] Log - Expected Result: Error on invalid dates.
+[INFO ] 2025-02-24 12:05:33.193 [main] Log - Step:02 - Enter valid dates in EMR Date field.
+[INFO ] 2025-02-24 12:05:33.193 [main] Log - Expected Result: Valid date accepted.
+[INFO ] 2025-02-24 12:05:33.228 [main] Log - Agent Code Field - ECP Validations
+[INFO ] 2025-02-24 12:05:34.282 [main] Log - Step:01 - Enter invalid numeric data in Agent code field
+[INFO ] 2025-02-24 12:05:39.853 [main] Log - Expected Result: Error on invalid Code.
+[INFO ] 2025-02-24 12:05:48.276 [main] Log - Step:02 - Enter valid numeric data in Agent code field
+[INFO ] 2025-02-24 12:05:52.729 [main] Log - Expected Result: Agent name autoloads.
+[INFO ] 2025-02-24 12:05:52.772 [main] Log - DSA Code Field - ECP Validations
+[INFO ] 2025-02-24 12:05:53.819 [main] Log - Step:01 - Enter invalid numeric data in DSA code field
+[INFO ] 2025-02-24 12:05:59.238 [main] Log - Expected Result: Error on invalid Code.
+[INFO ] 2025-02-24 12:06:07.672 [main] Log - Step:02 - Enter valid numeric data in DSA code field
+[INFO ] 2025-02-24 12:06:12.088 [main] Log - Expected Result: DSA name autoloads.
+[INFO ] 2025-02-24 12:06:12.124 [main] Log - Remarks Field
+[INFO ] 2025-02-24 12:06:13.187 [main] Log - Step:01 - Enter alphanumeric data in Remarks field
+[INFO ] 2025-02-24 12:06:13.188 [main] Log - Expected Result: Text is saved without issues
+[INFO ] 2025-02-24 12:06:13.229 [main] Log - Move to Securities Tab
+[INFO ] 2025-02-24 12:06:17.540 [main] Log - Step:01 - Click NEXT button
+[INFO ] 2025-02-24 12:06:18.603 [main] Log - Expected Result: Securities tab is displayed
+[INFO ] 2025-02-24 12:06:18.636 [main] Log - Select Personal Sureties Tab
+[INFO ] 2025-02-24 12:06:22.955 [main] Log - Step:01 - Click personal surety tab
+[INFO ] 2025-02-24 12:06:24.026 [main] Log - Expected Result: Personal Sureties tab is displayed
+[INFO ] 2025-02-24 12:06:24.057 [main] Log - Customer added in security tab
+[INFO ] 2025-02-24 12:06:28.534 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-24 12:06:29.902 [main] Log - Step:02 - Enter any alphabets in the   Name Field(not applicant name).
+[INFO ] 2025-02-24 12:06:34.215 [main] Log - Step:03 -  Click on Search button.
+[INFO ] 2025-02-24 12:06:38.351 [main] Log - Step:04 - Click on the select button
+[INFO ] 2025-02-24 12:06:38.407 [main] Log - Expected Result: Customer is added in security tab.
+[INFO ] 2025-02-24 12:06:38.445 [main] Log - Security Addition Process
+[INFO ] 2025-02-24 12:06:42.755 [main] Log - Step:01 - Select Salary Certificate
+[INFO ] 2025-02-24 12:06:51.857 [main] Log - Step:02 - Enter details in OffName, DEpt Head, Designation, Place fields
+[INFO ] 2025-02-24 12:06:51.857 [main] Log - Expected Result: Possible to give the detail
+[INFO ] 2025-02-24 12:06:51.888 [main] Log - Enter Basic Pay, Net salary, Retd. Date & Remark
+[INFO ] 2025-02-24 12:07:02.664 [main] Log - Step:01 - Enter basic pay and  net salary  details
+[INFO ] 2025-02-24 12:07:08.051 [main] Log - Step:02 - Enter date in Retd. Date field
+[INFO ] 2025-02-24 12:07:09.095 [main] Log - Step:03 - Enter alphanumeric data in Remarks field
+[INFO ] 2025-02-24 12:07:09.095 [main] Log - Expected Result: Possible to give the detail
+[INFO ] 2025-02-24 12:07:09.127 [main] Log - Add Button functionality
+[INFO ] 2025-02-24 12:07:16.219 [main] Log - Step:01 - Click ADD button
+[INFO ] 2025-02-24 12:07:21.596 [main] Log - Expected Result: 'Previous active loan' window pops up if any & Securities details get's saved in grid
+[INFO ] 2025-02-24 12:07:21.624 [main] Log - Navigate to Nominee Tab
+[INFO ] 2025-02-24 12:07:27.000 [main] Log - Step:01 - Click NEXT button
+[INFO ] 2025-02-24 12:07:28.072 [main] Log - Expected Result: Nominee tab is displayed
+[INFO ] 2025-02-24 12:07:28.100 [main] Log - Add Nominee - Untick 'Nominee Not Required'
+[INFO ] 2025-02-24 12:07:32.400 [main] Log - Step:01 - Untick 'Nominee Not Required'
+[INFO ] 2025-02-24 12:07:33.467 [main] Log - Expected Result: Nominee details field will be display
+[INFO ] 2025-02-24 12:07:33.500 [main] Log - Customer search icon functionality
+[INFO ] 2025-02-24 12:07:37.943 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-24 12:07:39.311 [main] Log - Expected Result: Customer seacrh popup window will be opened.
+[INFO ] 2025-02-24 12:07:39.338 [main] Log - Search button functionality
+[INFO ] 2025-02-24 12:07:40.400 [main] Log - Step:01 - Enter any alphabets in the   Name Field(not applicant name).
+[INFO ] 2025-02-24 12:07:44.723 [main] Log - Step:02 -  Click on Search button.
+[INFO ] 2025-02-24 12:07:45.791 [main] Log - Expected Result: Customers will be display against the given details.
+[INFO ] 2025-02-24 12:07:45.820 [main] Log - Select Customer from Customer popup
+[INFO ] 2025-02-24 12:07:49.950 [main] Log - Step:01 - Click on the select button
+[INFO ] 2025-02-24 12:07:50.003 [main] Log - Expected Result: Selected customer details will be autoloads in the fields expect "Relation" field.
+[INFO ] 2025-02-24 12:07:50.035 [main] Log - Relation drop down selection
+[INFO ] 2025-02-24 12:07:50.609 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-24 12:07:50.610 [main] Log - Expected Result: Possible to select the relation from the drop down.
+[INFO ] 2025-02-24 12:07:50.637 [main] Log - Add Button functionality
+[INFO ] 2025-02-24 12:07:55.008 [main] Log - Step:01 - Click add button.
+[INFO ] 2025-02-24 12:07:56.071 [main] Log - Expected Result: Given details will be displays in the grid.
+[INFO ] 2025-02-24 12:07:56.099 [main] Log - Move to Loan Details Tab
+[INFO ] 2025-02-24 12:08:00.432 [main] Log - Step:01 - Click NEXT button.
+[INFO ] 2025-02-24 12:08:01.502 [main] Log - Expected Result: Given details will be displays in the grid.
+[INFO ] 2025-02-24 12:08:01.530 [main] Log - Limit/Sanctioned Field - ECP Validations
+[INFO ] 2025-02-24 12:08:02.592 [main] Log - Step:01 - Enter numeric data in Limit/Sanctioned field.
+[INFO ] 2025-02-24 12:08:02.593 [main] Log - Expected Result: Numeric data accepted.
+[INFO ] 2025-02-24 12:08:02.629 [main] Log - Get Values button functionality
+[INFO ] 2025-02-24 12:08:06.954 [main] Log - Step:01 - Click GET VALUES button.
+[INFO ] 2025-02-24 12:08:07.067 [main] Log - Expected Result: Valid data fetched.
+[INFO ] 2025-02-24 12:08:07.098 [main] Log - Transmode Selection and Save
+[INFO ] 2025-02-24 12:08:08.504 [main] Log - Step:01 - Select Transmode as CASH.
+[INFO ] 2025-02-24 12:08:08.504 [main] Log - Expected Result: Transmode CASH can be selected.
+[INFO ] 2025-02-24 12:08:08.530 [main] Log - Save functionality Trans. Mode - CASH
+[INFO ] 2025-02-24 12:08:12.852 [main] Log - Step:01 - Click 'save'
+[INFO ] 2025-02-24 12:08:18.249 [main] Log - Expected Result: Summary page is displayed
+[INFO ] 2025-02-24 12:08:18.294 [main] Log - Voucher Generation Verification
+[INFO ] 2025-02-24 12:08:22.763 [main] Log - Step:01 - Click PRINT on summary page
+[INFO ] 2025-02-24 12:08:22.796 [main] Log - Expected Result: Voucher is generated correctly.
+[INFO ] 2025-02-24 12:08:22.876 [main] Log - Login with Another User
+[INFO ] 2025-02-24 12:08:27.301 [main] Log - Step:01 - Log out
+[INFO ] 2025-02-24 12:08:35.701 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-02-24 12:08:35.736 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-02-24 12:08:35.772 [main] Log - Manager Authorization - Cash Tab
+[INFO ] 2025-02-24 12:08:40.073 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-02-24 12:08:44.425 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-02-24 12:08:48.713 [main] Log - Step:03 - Click "Cash" tab
+[INFO ] 2025-02-24 12:08:48.713 [main] Log - Expected Result: Cash tab load
+[INFO ] 2025-02-24 12:08:48.741 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-02-24 12:08:53.053 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-02-24 12:08:59.524 [main] Log - Expected Result: Loan opening entry displayed
+[INFO ] 2025-02-24 12:08:59.551 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-02-24 12:09:03.828 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-02-24 12:09:08.118 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-02-24 12:09:08.119 [main] Log - Expected Result: Entry authorized
+[INFO ] 2025-02-24 12:09:08.145 [main] Log - Cashier Authorization
+[INFO ] 2025-02-24 12:09:12.495 [main] Log - Step:01 - Navigate to Cashier Authorization
+[INFO ] 2025-02-24 12:09:16.811 [main] Log - Step:02 - Click Refresh Button
+[INFO ] 2025-02-24 12:09:26.447 [main] Log - Step:03 - Select checkbox
+[INFO ] 2025-02-24 12:09:30.728 [main] Log - Step:04 - Click Authorize Button
+[INFO ] 2025-02-24 12:09:31.796 [main] Log - Expected Result: Account is created
+[INFO ] 2025-02-24 12:09:36.092 [main] Log - Logout
+[INFO ] 2025-02-24 12:09:44.515 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-02-24 12:09:45.591 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-02-24 12:09:49.363 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-02-24 12:09:50.548 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-02-24 12:09:50.548 [main] Log - PC Registration
+[INFO ] 2025-02-24 12:09:51.601 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-02-24 12:09:51.882 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-02-24 12:09:52.904 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-02-24 12:09:57.147 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-02-24 12:09:57.866 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-02-24 12:09:57.906 [main] Log - Valid Login
+[INFO ] 2025-02-24 12:09:58.927 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-02-24 12:09:59.966 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-02-24 12:10:07.344 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-02-24 12:10:08.384 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-24 12:10:09.413 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-24 12:10:09.442 [main] Log - Open Personal Loan Weekly window
+[INFO ] 2025-02-24 12:10:13.720 [main] Log - Step:01 - Navigate to account opening
+[INFO ] 2025-02-24 12:10:17.976 [main] Log - Step:02 - Select loan opening.
+[INFO ] 2025-02-24 12:10:22.259 [main] Log - Step:03 - Select Loan & Advances.
+[INFO ] 2025-02-24 12:10:28.105 [main] Log - Step:04 - Select Personal Loan Weekly.
+[INFO ] 2025-02-24 12:10:29.146 [main] Log - Expected Result: Personal Loan Weekly window is displayed.
+[INFO ] 2025-02-24 12:10:29.170 [main] Log - Select Customer from Customer pop up - Pop up displayed
+[INFO ] 2025-02-24 12:10:33.580 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-24 12:10:34.913 [main] Log - Expected Result: Pop up is opened.
+[INFO ] 2025-02-24 12:10:34.940 [main] Log - Select Customer from Customer pop up - Customer Search
+[INFO ] 2025-02-24 12:10:35.991 [main] Log - Step:01 - Enter customer Name or alphabet.
+[INFO ] 2025-02-24 12:10:40.248 [main] Log - Step:02 -  Click on Search button.
+[INFO ] 2025-02-24 12:10:41.289 [main] Log - Expected Result: Customer is listing.
+[INFO ] 2025-02-24 12:10:41.315 [main] Log - Select Customer from Customer pop up
+[INFO ] 2025-02-24 12:10:45.390 [main] Log - Step:01 - Click on the select button
+[INFO ] 2025-02-24 12:10:45.416 [main] Log - Expected Result: Customer ID is autoloaded in the Customer ID field.
+[INFO ] 2025-02-24 12:10:45.443 [main] Log - Add Button functionality
+[INFO ] 2025-02-24 12:10:51.274 [main] Log - Step:01 - Click on Add button
+[INFO ] 2025-02-24 12:10:55.540 [main] Log - Step:02 - Click ok button in the 'previous active loan' pop up
+[INFO ] 2025-02-24 12:10:56.574 [main] Log - Expected Result: 'Previous active loan' window pops up if any & Customer details get's saved in grid
+[INFO ] 2025-02-24 12:10:56.598 [main] Log - Resolution No Field - BVA Validations
+[INFO ] 2025-02-24 12:10:57.635 [main] Log - Step:01 - Enter alphanumeric data  in the 'Resolution No' field in the account info tab.
+[INFO ] 2025-02-24 12:10:57.635 [main] Log - Expected Result: Resolution No. entered successfully.
+[INFO ] 2025-02-24 12:10:57.665 [main] Log - Enter Resolution Date
+[INFO ] 2025-02-24 12:11:02.970 [main] Log - Step:01 - Enter valid  dates from date picker in the Resolution Date field.
+[INFO ] 2025-02-24 12:11:02.970 [main] Log - Expected Result: Resolution Date are entered successfully.
+[INFO ] 2025-02-24 12:11:03.005 [main] Log - Referred By Dropdown Selection
+[INFO ] 2025-02-24 12:11:11.541 [main] Log - Step:01 - Select an item from Referred By dropdown.
+[INFO ] 2025-02-24 12:11:11.564 [main] Log - Expected Result: Selected item is displayed.
+[INFO ] 2025-02-24 12:11:11.588 [main] Log - Enter Equitable Mort Reg.No
+[INFO ] 2025-02-24 12:11:12.677 [main] Log - Step:01 - Enter Equitable Mort Reg.No.
+[INFO ] 2025-02-24 12:11:12.678 [main] Log - Expected Result: Equitable Mort Reg.No are entered successfully.
+[INFO ] 2025-02-24 12:11:12.704 [main] Log - EMR Date Field - BVA Validations
+[INFO ] 2025-02-24 12:11:18.049 [main] Log - Step:01 - Enter invalid dates in EMR Date field.
+[INFO ] 2025-02-24 12:11:23.356 [main] Log - Expected Result: Error on invalid dates.
+[INFO ] 2025-02-24 12:11:31.685 [main] Log - Step:02 - Enter valid dates in EMR Date field.
+[INFO ] 2025-02-24 12:11:31.685 [main] Log - Expected Result: Valid date accepted.
+[INFO ] 2025-02-24 12:11:31.710 [main] Log - Agent Code Field - ECP Validations
+[INFO ] 2025-02-24 12:11:32.739 [main] Log - Step:01 - Enter invalid numeric data in Agent code field
+[INFO ] 2025-02-24 12:11:38.129 [main] Log - Expected Result: Error on invalid Code.
+[INFO ] 2025-02-24 12:11:46.455 [main] Log - Step:02 - Enter valid numeric data in Agent code field
+[INFO ] 2025-02-24 12:11:50.861 [main] Log - Expected Result: Agent name autoloads.
+[INFO ] 2025-02-24 12:11:50.888 [main] Log - DSA Code Field - ECP Validations
+[INFO ] 2025-02-24 12:11:51.924 [main] Log - Step:01 - Enter invalid numeric data in DSA code field
+[INFO ] 2025-02-24 12:11:57.303 [main] Log - Expected Result: Error on invalid Code.
+[INFO ] 2025-02-24 12:12:05.650 [main] Log - Step:02 - Enter valid numeric data in DSA code field
+[INFO ] 2025-02-24 12:12:09.986 [main] Log - Expected Result: DSA name autoloads.
+[INFO ] 2025-02-24 12:12:10.014 [main] Log - Remarks Field
+[INFO ] 2025-02-24 12:12:11.056 [main] Log - Step:01 - Enter alphanumeric data in Remarks field
+[INFO ] 2025-02-24 12:12:11.056 [main] Log - Expected Result: Text is saved without issues
+[INFO ] 2025-02-24 12:12:11.086 [main] Log - Move to Securities Tab
+[INFO ] 2025-02-24 12:12:15.402 [main] Log - Step:01 - Click NEXT button
+[INFO ] 2025-02-24 12:12:16.432 [main] Log - Expected Result: Securities tab is displayed
+[INFO ] 2025-02-24 12:12:16.455 [main] Log - Select Personal Sureties Tab
+[INFO ] 2025-02-24 12:12:20.748 [main] Log - Step:01 - Click personal surety tab
+[INFO ] 2025-02-24 12:12:21.780 [main] Log - Expected Result: Personal Sureties tab is displayed
+[INFO ] 2025-02-24 12:12:21.805 [main] Log - Customer added in security tab
+[INFO ] 2025-02-24 12:12:26.235 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-24 12:12:27.611 [main] Log - Step:02 - Enter any alphabets in the   Name Field(not applicant name).
+[INFO ] 2025-02-24 12:12:31.903 [main] Log - Step:03 -  Click on Search button.
+[INFO ] 2025-02-24 12:12:35.998 [main] Log - Step:04 - Click on the select button
+[INFO ] 2025-02-24 12:12:36.031 [main] Log - Expected Result: Customer is added in security tab.
+[INFO ] 2025-02-24 12:12:36.059 [main] Log - Security Addition Process
+[INFO ] 2025-02-24 12:12:40.362 [main] Log - Step:01 - Select Salary Certificate
+[INFO ] 2025-02-24 12:12:49.383 [main] Log - Step:02 - Enter details in OffName, DEpt Head, Designation, Place fields
+[INFO ] 2025-02-24 12:12:49.383 [main] Log - Expected Result: Possible to give the detail
+[INFO ] 2025-02-24 12:12:49.413 [main] Log - Enter Basic Pay, Net salary, Retd. Date & Remark
+[INFO ] 2025-02-24 12:13:00.079 [main] Log - Step:01 - Enter basic pay and  net salary  details
+[INFO ] 2025-02-24 12:13:05.417 [main] Log - Step:02 - Enter date in Retd. Date field
+[INFO ] 2025-02-24 12:13:06.472 [main] Log - Step:03 - Enter alphanumeric data in Remarks field
+[INFO ] 2025-02-24 12:13:06.473 [main] Log - Expected Result: Possible to give the detail
+[INFO ] 2025-02-24 12:13:06.513 [main] Log - Add Button functionality
+[INFO ] 2025-02-24 12:13:12.261 [main] Log - Step:01 - Click ADD button
+[INFO ] 2025-02-24 12:13:17.557 [main] Log - Expected Result: 'Previous active loan' window pops up if any & Securities details get's saved in grid
+[INFO ] 2025-02-24 12:13:17.592 [main] Log - Navigate to Nominee Tab
+[INFO ] 2025-02-24 12:13:22.942 [main] Log - Step:01 - Click NEXT button
+[INFO ] 2025-02-24 12:13:23.980 [main] Log - Expected Result: Nominee tab is displayed
+[INFO ] 2025-02-24 12:13:24.013 [main] Log - Add Nominee - Untick 'Nominee Not Required'
+[INFO ] 2025-02-24 12:13:28.333 [main] Log - Step:01 - Untick 'Nominee Not Required'
+[INFO ] 2025-02-24 12:13:29.382 [main] Log - Expected Result: Nominee details field will be display
+[INFO ] 2025-02-24 12:13:29.406 [main] Log - Customer search icon functionality
+[INFO ] 2025-02-24 12:13:33.888 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-24 12:13:35.243 [main] Log - Expected Result: Customer seacrh popup window will be opened.
+[INFO ] 2025-02-24 12:13:35.276 [main] Log - Search button functionality
+[INFO ] 2025-02-24 12:13:36.329 [main] Log - Step:01 - Enter any alphabets in the   Name Field(not applicant name).
+[INFO ] 2025-02-24 12:13:40.615 [main] Log - Step:02 -  Click on Search button.
+[INFO ] 2025-02-24 12:13:41.679 [main] Log - Expected Result: Customers will be display against the given details.
+[INFO ] 2025-02-24 12:13:41.707 [main] Log - Select Customer from Customer popup
+[INFO ] 2025-02-24 12:13:45.872 [main] Log - Step:01 - Click on the select button
+[INFO ] 2025-02-24 12:13:45.899 [main] Log - Expected Result: Selected customer details will be autoloads in the fields expect "Relation" field.
+[INFO ] 2025-02-24 12:13:45.927 [main] Log - Relation drop down selection
+[INFO ] 2025-02-24 12:13:46.238 [main] Log - Step:01 -  Click on Select Customer popup button.
+[INFO ] 2025-02-24 12:13:46.239 [main] Log - Expected Result: Possible to select the relation from the drop down.
+[INFO ] 2025-02-24 12:13:46.274 [main] Log - Add Button functionality
+[INFO ] 2025-02-24 12:13:50.652 [main] Log - Step:01 - Click add button.
+[INFO ] 2025-02-24 12:13:51.821 [main] Log - Expected Result: Given details will be displays in the grid.
+[INFO ] 2025-02-24 12:13:51.858 [main] Log - Move to Loan Details Tab
+[INFO ] 2025-02-24 12:13:56.170 [main] Log - Step:01 - Click NEXT button.
+[INFO ] 2025-02-24 12:13:57.205 [main] Log - Expected Result: Given details will be displays in the grid.
+[INFO ] 2025-02-24 12:13:57.230 [main] Log - Limit/Sanctioned Field - ECP Validations
+[INFO ] 2025-02-24 12:13:58.267 [main] Log - Step:01 - Enter numeric data in Limit/Sanctioned field.
+[INFO ] 2025-02-24 12:13:58.267 [main] Log - Expected Result: Numeric data accepted.
+[INFO ] 2025-02-24 12:13:58.294 [main] Log - Get Values button functionality
+[INFO ] 2025-02-24 12:14:02.664 [main] Log - Step:01 - Click GET VALUES button.
+[INFO ] 2025-02-24 12:14:02.716 [main] Log - Expected Result: Valid data fetched.
+[INFO ] 2025-02-24 12:14:02.741 [main] Log - Transmode Selection and Save
+[INFO ] 2025-02-24 12:14:04.076 [main] Log - Step:01 - Select Transmode as TRANSFER.
+[INFO ] 2025-02-24 12:14:04.077 [main] Log - Expected Result: Transmode TRANSFER can be selected.
+[INFO ] 2025-02-24 12:14:04.126 [main] Log - Post credit button functionality
+[INFO ] 2025-02-24 12:14:08.634 [main] Log - Step:01 - Click Post credit button
+[INFO ] 2025-02-24 12:14:09.977 [main] Log - Expected Result: Auto posting popup window will be opened.
+[INFO ] 2025-02-24 12:14:10.002 [main] Log - Transaction based selection.
+[INFO ] 2025-02-24 12:14:10.278 [main] Log - Step:01 - Select transaction based as GL Code.
+[INFO ] 2025-02-24 12:14:12.326 [main] Log - Expected Result: GL code related field will be display (GL name,GL code)
+[INFO ] 2025-02-24 12:14:12.350 [main] Log - GL Name selection.
+[INFO ] 2025-02-24 12:14:20.929 [main] Log - Step:01 - Select the "GL Name" from the drop down
+[INFO ] 2025-02-24 12:14:20.968 [main] Log - Expected Result: GL code will be autoloads while selecting the GL Name.
+[INFO ] 2025-02-24 12:14:21.000 [main] Log - Add button functionality
+[INFO ] 2025-02-24 12:14:29.625 [main] Log - Step:01 - Give the amount in "Amount" field.
+[INFO ] 2025-02-24 12:14:33.920 [main] Log - Step:02 - Click add button.
+[INFO ] 2025-02-24 12:14:34.961 [main] Log - Expected Result: Given details will be displays in the grid
+[INFO ] 2025-02-24 12:14:34.988 [main] Log - Submit button functionality
+[INFO ] 2025-02-24 12:14:39.267 [main] Log - Step:01 - Click submit button after adding the details in the auto posting popup window.
+[INFO ] 2025-02-24 12:14:40.314 [main] Log - Expected Result: Popup window will be closed
+[INFO ] 2025-02-24 12:14:40.348 [main] Log - Save functionality Trans. Mode - TRANSFER
+[INFO ] 2025-02-24 12:14:44.671 [main] Log - Step:01 - Click 'save'
+[INFO ] 2025-02-24 12:14:50.044 [main] Log - Expected Result: Summary page is displayed
+[INFO ] 2025-02-24 12:14:50.091 [main] Log - Login with Another User
+[INFO ] 2025-02-24 12:14:54.656 [main] Log - Step:01 - Log out
+[INFO ] 2025-02-24 12:15:03.013 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-02-24 12:15:03.064 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-02-24 12:15:03.113 [main] Log - Manager Authorization - Transfer Tab
+[INFO ] 2025-02-24 12:15:07.416 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-02-24 12:15:11.789 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-02-24 12:15:16.106 [main] Log - Step:03 - Click "Transfer" tab
+[INFO ] 2025-02-24 12:15:16.108 [main] Log - Expected Result: Transfer tab load
+[INFO ] 2025-02-24 12:15:16.169 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-02-24 12:15:20.495 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-02-24 12:15:26.966 [main] Log - Expected Result: Loan opening entry displayed
+[INFO ] 2025-02-24 12:15:26.990 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-02-24 12:15:31.310 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-02-24 12:15:35.631 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-02-24 12:15:35.631 [main] Log - Expected Result: Entry authorized
+[INFO ] 2025-02-24 12:15:39.948 [main] Log - Logout
+[INFO ] 2025-02-24 12:15:48.405 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-02-24 12:15:49.464 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
