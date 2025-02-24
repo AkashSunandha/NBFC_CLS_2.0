@@ -26,7 +26,8 @@ public class AllScenarios_Multi_MultiFD_Opening_Cash extends Base_Class {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 
-	Customer_MultipleFD_Opening_Cash multifd = new Customer_MultipleFD_Opening_Cash();
+	//Customer_MultipleFD_Opening_Cash multifd = new Customer_MultipleFD_Opening_Cash();
+	Customer_MultipleFD_Opening_Cash multifdCash = new Customer_MultipleFD_Opening_Cash();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	
 	@BeforeSuite
@@ -57,145 +58,145 @@ public class AllScenarios_Multi_MultiFD_Opening_Cash extends Base_Class {
 				custSrchMthds.pcRegistration(testdata, context);
 
 				// TC_01 ---> Login to NBFC Application
-				multifd.userLoginValidPaswrd(testdata, context);
+				multifdCash.userLoginValidPaswrd(testdata, context);
 
 				// TC_02 ----> Access Deposit Opening Window
-				multifd.DepositOpeningWindow();
+				multifdCash.DepositOpeningWindow();
 
 				// TC_03 -----> Customer Search and Selection
-				multifd.customerSearchandSelectionWindow(testdata, context);
+				multifdCash.customerSearchandSelectionWindow(testdata, context);
 				
 				//TC_04 ----> Enter Amount
-				multifd.EnterAmount(testdata, context);
+				multifdCash.EnterAmount(testdata, context);
 
 				// TC_05 ----> Enter Valid Duration
-				multifd.EnterValidDuration(testdata, context);
+				multifdCash.EnterValidDuration(testdata, context);
 
 				// TC_06 ----> Select Referral
-				multifd.SelectReferral();
+				multifdCash.SelectReferral();
 				
 				//TC_07 ----> ROI and Due Date Calculation
-				multifd.ROIandDueDateCalculation();
+				multifdCash.ROIandDueDateCalculation();
 				
 				//TC_08 ----> Ledger & Folio Number Entry
-				multifd.LedgerandFolioNo(testdata, context);
+				multifdCash.LedgerandFolioNo(testdata, context);
 				
 				//TC_09 ----> Remark Field Entry
-				multifd.Remark(testdata, context);
+				multifdCash.Remark(testdata, context);
 				
 				//TC_10 ---->  Lien Mark Interaction(Checkbox)
-				multifd.clickLienMarkCheckbox();
+				multifdCash.clickLienMarkCheckbox();
 				
 				//TC_11 ----> Lien Mark Interaction (Amount Field)
-				multifd.EnterLienAmount(testdata, context);
+				multifdCash.EnterLienAmount(testdata, context);
 				
 				//TC_12 ---> Lien Mark Interaction (Lien Remark)
-				multifd.EnterLienRemark(testdata, context);
+				multifdCash.EnterLienRemark(testdata, context);
 				
 				//TC_13 ---> Next Button Navigation
-				multifd.NextButtonNavigation();
+				multifdCash.NextButtonNavigation();
 				
 				//TC_14 ----> Nominee Tab Display
-				multifd.NomineeCheckbox();
+				multifdCash.NomineeCheckbox();
 				
 				//TC_15 ----> Enter customer ID in customer 
-				multifd.EnterCustomerID();
+				multifdCash.EnterCustomerID();
 				
 				//TC_16 ---> Enter customer ID in customer Search Customer ID
-				multifd.CustomerID(testdata, context);
+				multifdCash.CustomerID(testdata, context);
 				
 				//TC_17 ---> Customer Nominee Search
-				multifd.CustomerNomineeSearch(testdata, context);
+				multifdCash.CustomerNomineeSearch(testdata, context);
 				
 				//TC_18 ---> Mandatory 'Name' Field Validation in Nominee
-				multifd.MandatoryNameField(testdata, context);
+				multifdCash.MandatoryNameField(testdata, context);
 				
 				//TC_19 ----> Relation Dropdown List Validation
-				multifd.RelationDropDown();
+				multifdCash.RelationDropDown();
 				
 				//TC_20 ----> Mobile No Auto-fill in Nominee
-				multifd.MobileNumberAutoFilled();
+				multifdCash.MobileNumberAutoFilled();
 				
 				//TC_21 ---> All Address Auto-fill in Nominee
-				multifd.AddressAutofilled();
+				multifdCash.AddressAutofilled();
 				
 				//TC_22 ---> Date of Birth Details in Nominee
-				multifd.DOBandAgeField();
+				multifdCash.DOBandAgeField();
 				
 				//TC_23 ---> Add Nominee Details
-				multifd.AddNomineeBtn();
+				multifdCash.AddNomineeBtn();
 				
 				//TC_24 ---> Operator Tab Navigation
-				multifd.OperatorTabNavigation();
+				multifdCash.OperatorTabNavigation();
 				
 				//TC_25 ---> Operator Search and Selection
-				multifd.OperatorCustomerID();
+				multifdCash.OperatorCustomerID();
 				
 				//TC_26 ---> Enter customer ID in customer 
-				multifd.OperatorCustomerIDSearch(testdata, context);
+				multifdCash.OperatorCustomerIDSearch(testdata, context);
 				
 				//TC_27 ---> Operator Customer Search and Selection
-				multifd.OperatorCustomerIDSelection(testdata, context);
+				multifdCash.OperatorCustomerIDSelection(testdata, context);
 				
 				//TC_28 ---> Operator Relation Entry
-				multifd.OperatorRelationDesig(testdata, context);
+				multifdCash.OperatorRelationDesig(testdata, context);
 				
 				//TC_29 ---> Operator Remark Entry
-				multifd.OperatorRemarkEntry(testdata, context);
+				multifdCash.OperatorRemarkEntry(testdata, context);
 				
 				//TC_30 ---> Operator Details Addition
-				multifd.AddOperatorBtn();
+				multifdCash.AddOperatorBtn();
 				
 				//TC_31 ---> Interest Transfer Tab Presence
-				multifd.InterestTransferTabPresence();
+				multifdCash.InterestTransferTabPresence();
 				
 				//TC_32 ---> Interest Transfer Requirements
-				multifd.InterestTransferRequiredCheckbox();
+				multifdCash.InterestTransferRequiredCheckbox();
 				
 				//TC_33 ----> Interest Transfer Data Entry
-				multifd.ProductDropdown(testdata, context);
+				multifdCash.ProductDropdown(testdata, context);
 				
 				//TC_34 ---> Interest Transfer Data Entry
-				multifd.EnterFrequency(testdata, context);
+				multifdCash.EnterFrequency(testdata, context);
 				
 				//TC_35 ---> On Maturity Tab Navigation
-				multifd.OnMaturityTabNavigation();
+				multifdCash.OnMaturityTabNavigation();
 				
 				//TC_36 ----> Maturity Action Selection
-				multifd.MaturityActionSelection();
+				multifdCash.MaturityActionSelection();
 				
 				//TC_37 ---> Multiple Account Checkbox
-				multifd.MultipleAccountCheckbox();
+				multifdCash.MultipleAccountCheckbox();
 				
 				//TC_38 ----> Multiple Account Checkbox
-				multifd.IsMultipleAccount(testdata, context);
+				multifdCash.IsMultipleAccount(testdata, context);
 				
 				//TC_39 ---> Final Deposit Configuration
-				multifd.FinalDepositConfiguration(testdata, context);
+				multifdCash.FinalDepositConfiguration(testdata, context);
 				
 				//TC_40 ---> Cashier Authorization
-				multifd.CashierAuthorization(testdata, context);
+				multifdCash.CashierAuthorization(testdata, context);
 				
 				//TC_41 ---> Cashier Authorization
-				multifd.CashierAuthorizationRefresh();
+				multifdCash.CashierAuthorizationRefresh();
 				
 				//TC_42 ---> Cashier Authorization
-				multifd.CashierAuthorizationSelectCheckBox();
+				multifdCash.CashierAuthorizationSelectCheckBox();
 				
 				//TC_43 ---> Cashier Authorization
-				multifd.CashierAuthorizationAuthorize();
+				multifdCash.CashierAuthorizationAuthorize();
 				
 				//TC_44 ---> Manager Authorization
-				multifd.ManagerAuthorization();
+				multifdCash.ManagerAuthorization();
 				
 				//TC_45 ---> Manager Authorization
-				multifd.ManagerAuthorizationRefresh();
+				multifdCash.ManagerAuthorizationRefresh();
 				
 				//TC_46 ---> Manager Authorization
-				multifd.ManagerAuthorizationSelectCheckBox();
+				multifdCash.ManagerAuthorizationSelectCheckBox();
 				
 				//TC_47 ---> Manager Authorization
-				multifd.ManagerAuthorizationAuthorize();
+				multifdCash.ManagerAuthorizationAuthorize();
 				
 				
 				// Sign out

@@ -1,5 +1,6 @@
 package com.Page_Multiple_FixedDeposit;
 
+import java.awt.Dialog;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
@@ -1036,7 +1037,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 
 	}
 	
-public boolean ProductDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	public boolean ProductDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
 		ExtentTestManager.startTest("TC:33 - Interest Transfer Data Entry");
 		Log.info("TC:33 - Interest Transfer Data Entry");
@@ -1082,7 +1083,7 @@ public boolean ProductDropdown(Map<Object, Object> testdata, ITestContext contex
 		return true;
 	}
 
-public boolean EnterFrequency(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	public boolean EnterFrequency(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
 	ExtentTestManager.startTest("TC:34 - Interest Transfer Data Entry");
 	Log.info("TC:34 - Interest Transfer Data Entry");
@@ -1113,7 +1114,7 @@ public boolean EnterFrequency(Map<Object, Object> testdata, ITestContext context
 	return true;
 }
 
-public boolean OnMaturityTabNavigation() throws InterruptedException {
+	public boolean OnMaturityTabNavigation() throws InterruptedException {
 	
 	ExtentTestManager.startTest("TC:35 - On Maturity Tab Navigation");
 	Log.info("TC:35 - On Maturity Tab Navigation");
@@ -1138,7 +1139,7 @@ public boolean OnMaturityTabNavigation() throws InterruptedException {
 	return true;
 }
 
-public boolean MaturityActionSelection() throws InterruptedException {
+	public boolean MaturityActionSelection() throws InterruptedException {
 	
 	ExtentTestManager.startTest("TC:36 - Maturity Action Selection");
 	Log.info("TC:36 - Maturity Action Selection");
@@ -1168,7 +1169,7 @@ public boolean MaturityActionSelection() throws InterruptedException {
 	return true;
 }
 
-public boolean MultipleAccountCheckbox() throws InterruptedException {
+	public boolean MultipleAccountCheckbox() throws InterruptedException {
 	
 	ExtentTestManager.startTest("TC:37 - Multiple Account Checkbox");
 	Log.info("TC:37 - Multiple Account Checkbox");
@@ -1198,7 +1199,7 @@ public boolean MultipleAccountCheckbox() throws InterruptedException {
 	return true;
 }
 
-public boolean IsMultipleAccount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	public boolean IsMultipleAccount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
 	ExtentTestManager.startTest("TC:38 - Multiple Account Checkbox");
 	Log.info("TC:38 - Multiple Account Checkbox");
@@ -1231,52 +1232,360 @@ public boolean IsMultipleAccount(Map<Object, Object> testdata, ITestContext cont
 	return true;
 }
 
-public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
 	ExtentTestManager.startTest("TC:39 - Final Deposit Configuration");
 	Log.info("TC:39 - Final Deposit Configuration");
 	
 	WebElement TransMode = driver.findElement(multifd.MutipleAccountText);
-
 	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("arguments[0].scrollIntoView(true);", TransMode);
 	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+	
 	if (ElementDisplayed(multifd.TransMode)) {
 		click(multifd.TransMode);
 
-		ExtentTestManager.getTest().log(Status.PASS, "Step 01: Select 'Trans.mode'as Cash.");
-		Log.info("Step 01: Select 'Trans.mode'as Cash.");
+	ExtentTestManager.getTest().log(Status.PASS, "Step 01: Select 'Trans.mode'as Transfer.");
+	Log.info("Step 01: Select 'Trans.mode'as Transfer.");
+	
+	WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/table/tbody/tr[2]/td[2]/div/table/tbody/tr/td[3]/div/select/option[3]")));
+	option.click();
 		
+	Assert.assertTrue(true, "The Transfer Mode should be successfully selected");	
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Post Debit Button will be display");
+	Log.info("Expected Result: Post Debit Button will be display");
+		}
 
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		WebElement option = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/table/tbody/tr[2]/td[2]/div/table/tbody/tr/td[3]/div/select/option[2]")));
-		option.click();
-		
-		Assert.assertTrue(true, "The Cash Mode should be successfully selected");
-		
-		Thread.sleep(1000);
-		
-		click(multifd.SaveBtn);
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Step 02: click save");
-		Log.info("Step 02: click save");
-		
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Deposit opening is saved, results in summary");
-		Log.info("Expected Result: Deposit opening is saved, results in summary");
+	ExtentTestManager.endTest();
+	return true;
 
+}
+	public boolean DepositSubmissionTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:40 - Deposit Submission with Transfer");
+	Log.info("TC:40 - Deposit Submission with Transfer");
+	
+	click(multifd.PostDebit);
+	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on 'Post Debit' button");
+	Log.info("Step 1: Click on 'Post Debit' button");
+	
+	String mainWindowHandle = driver.getWindowHandle();
+	Set<String> allWindowHandles = driver.getWindowHandles();
+	boolean popupOpened = false;
+
+	for (String handle : allWindowHandles) {
+		if (!handle.equals(mainWindowHandle)) {
+			driver.switchTo().window(handle);
+			popupOpened = true;
+			break;
+		}
+	}	
+	Assert.assertTrue(popupOpened, "Validation Failed: Auto posting popup window did not open");
+	
+	driver.close();
+	driver.switchTo().window(mainWindowHandle);
+	
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Auto posting popup window will be opened");
+	Log.info("Expected Result: Auto posting popup window will be opened");
+		
+	ExtentTestManager.endTest();
+	return true;
+
+}
+
+	public boolean DepositSubmissionTransactionBased(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:41 - Deposit Submission with Transfer");
+	Log.info("TC:41 - Deposit Submission with Transfer");
+	
+	click(multifd.PostDebit);
+	
+	String mainWindowHandle = driver.getWindowHandle();
+	Set<String> allWindowHandles = driver.getWindowHandles();
+	boolean popupOpened = false;
+
+	for (String handle : allWindowHandles) {
+		if (!handle.equals(mainWindowHandle)) {
+			driver.switchTo().window(handle);
+			popupOpened = true;
+			break;
+		}
+	}	
+	Assert.assertTrue(popupOpened, "Auto posting popup window did not open");
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+	
+	if(ElementDisplayed(multifd.TransactionBased)) {
+	click(multifd.TransactionBased);
+		
+	
+	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[2]/td[2]/div/select/option[2]")));
+	options.click();
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Give transaction based as 'GL Code'");
+	Log.info("Step 1: Give transaction based as 'GL Code'");
+	
+	Assert.assertTrue(ElementDisplayed(multifd.GLName), "Validation Failed: Transaction Based field should not be displayed");
+
+	
+	driver.close();
+	driver.switchTo().window(mainWindowHandle);
+	
+
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: GL code related field will be display (GL name,GL code)");
+	Log.info("Expected Result: GL code related field will be display (GL name,GL code)");
 	
 	}
 	ExtentTestManager.endTest();
 	return true;
 }
 
-	public boolean CashierAuthorization(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+
+	public boolean DepositSubmissionGLNameDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:40 - Cashier Authorization");
-	Log.info("TC:40 - Cashier Authorization");
+	ExtentTestManager.startTest("TC:42 - Deposit Submission with Transfer");
+	Log.info("TC:42 - Deposit Submission with Transfer");
+	
+	click(multifd.PostDebit);
+	
+	String mainWindowHandle = driver.getWindowHandle();
+	Set<String> allWindowHandles = driver.getWindowHandles();
+
+	for (String handle : allWindowHandles) {
+		if (!handle.equals(mainWindowHandle)) {
+			driver.switchTo().window(handle);
+			break;
+		}
+	}	
+	
+	if(ElementDisplayed(multifd.TransactionBased)) {
+	click(multifd.TransactionBased);
+		
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+
+	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[2]/td[2]/div/select/option[2]")));
+	options.click();
+	
+	if(ElementDisplayed(multifd.GLName)) {
+	click(multifd.GLName);
+
+
+	WebElement GLName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[6]/td[4]/div/div/div[2]/ul/li[5]")));
+	GLName.click();
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select the 'GL Name' from the drop down");
+	Log.info("Step 1: Select the 'GL Name' from the drop down");
+	
+	driver.close();
+	driver.switchTo().window(mainWindowHandle);
+
+	Assert.assertFalse(ElementDisplayed(multifd.GLName), "Validation Failed: GL Name field dropdown should not be displayed");
+
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: GL code will be autoloads while selecting the GL Name");
+	Log.info("Expected Result: GL code will be autoloads while selecting the GL Name");
+	}
+	
+}
+	ExtentTestManager.endTest();
+	return true;
+
+}
+
+	public boolean DepositSubmissionAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:43 - Deposit Submission with Transfer");
+	Log.info("TC:43 - Deposit Submission with Transfer");
+	
+	click(multifd.PostDebit);
+	
+	String mainWindowHandle = driver.getWindowHandle();
+	Set<String> allWindowHandles = driver.getWindowHandles();
+
+	for (String handle : allWindowHandles) {
+		if (!handle.equals(mainWindowHandle)) {
+			driver.switchTo().window(handle);
+			break;
+		}
+	}	
+	
+	if(ElementDisplayed(multifd.TransactionBased)) {
+	click(multifd.TransactionBased);
+		
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+
+	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[2]/td[2]/div/select/option[2]")));
+	options.click();
+	
+	if(ElementDisplayed(multifd.GLName)) {
+	click(multifd.GLName);
+
+	WebElement GLName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[6]/td[4]/div/div/div[2]/ul/li[5]")));
+	GLName.click();
+	
+	WebElement balanceAmountElement = driver.findElement(By.xpath("//input[@id='txtTotalCreditDebit_txt']"));
+	String balanceAmountText = balanceAmountElement.getAttribute("value");
+	Log.info(balanceAmountText);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Give the amount in 'Amount' field");
+	Log.info("Step 1: Give the amount in 'Amount' field");
+	
+	WebElement amountField = driver.findElement(multifd.AmountTrans);
+	String EnterAmountText = testdata.get("GL_Amount").toString();
+	input(multifd.AmountTrans, EnterAmountText);
+
+	click(multifd.AddButton);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step 2: Click 'Add' button");
+	Log.info("Step 2: Click 'Add' button");
+	
+	Assert.assertTrue(ElementDisplayed(multifd.AddButton), "Validation Failed: Given details will not be displays in the grid");
+
+	driver.close();
+	driver.switchTo().window(mainWindowHandle);
+
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Given details will be displays in the grid");
+	Log.info("Expected Result: Given details will be displays in the grid");
+	}	
+}
+	ExtentTestManager.endTest();
+	return true;
+
+}
+
+	public boolean DepositSubmissionSubmitButton(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:44 - Deposit Submission with Transfer");
+	Log.info("TC:44 - Deposit Submission with Transfer");
+	
+	click(multifd.PostDebit);
+	
+	String mainWindowHandle = driver.getWindowHandle();
+	Set<String> allWindowHandles = driver.getWindowHandles();
+
+	for (String handle : allWindowHandles) {
+		if (!handle.equals(mainWindowHandle)) {
+			driver.switchTo().window(handle);
+			break;
+		}
+	}	
+	
+	if(ElementDisplayed(multifd.TransactionBased)) {
+	click(multifd.TransactionBased);
+		
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+
+	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[2]/td[2]/div/select/option[2]")));
+	options.click();
+	
+	if(ElementDisplayed(multifd.GLName)) {
+	click(multifd.GLName);
+
+	WebElement GLName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[6]/td[4]/div/div/div[2]/ul/li[5]")));
+	GLName.click();
+	
+	WebElement balanceAmountElement = driver.findElement(By.xpath("//input[@id='txtTotalCreditDebit_txt']"));
+	String balanceAmountText = balanceAmountElement.getAttribute("value");
+	Log.info(balanceAmountText);
+	
+	
+	WebElement amountField = driver.findElement(multifd.AmountTrans);
+	String EnterAmountText = testdata.get("GL_Amount").toString();
+	input(multifd.AmountTrans, EnterAmountText);
+
+	click(multifd.AddButton);
+	click(multifd.SubmitButton);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click submit button after adding the details in the auto posting popup window");
+	Log.info("Step 1: Click submit button after adding the details in the auto posting popup window");
+	
+	//Assert.assertTrue(ElementDisplayed(multifd.SubmitButton), "Validation Failed: Popup window will not be closed");
+
+	driver.switchTo().window(mainWindowHandle);
+
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup window will be closed");
+	Log.info("Expected Result: Popup window will be closed");
+	}	
+}
+	ExtentTestManager.endTest();
+	return true;
+
+}
+
+	public boolean DepositSubmissionSaveButton(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:45 - Deposit Submission with Transfer");
+	Log.info("TC:45 - Deposit Submission with Transfer");
+	
+	click(multifd.PostDebit);
+	
+	String mainWindowHandle = driver.getWindowHandle();
+	Set<String> allWindowHandles = driver.getWindowHandles();
+
+	for (String handle : allWindowHandles) {
+		if (!handle.equals(mainWindowHandle)) {
+			driver.switchTo().window(handle);
+			break;
+		}
+	}	
+	
+	if(ElementDisplayed(multifd.TransactionBased)) {
+	click(multifd.TransactionBased);
+		
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+
+	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[2]/td[2]/div/select/option[2]")));
+	options.click();
+	
+	if(ElementDisplayed(multifd.GLName)) {
+	click(multifd.GLName);
+
+	WebElement GLName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[6]/td[4]/div/div/div[2]/ul/li[5]")));
+	GLName.click();
+	
+	WebElement balanceAmountElement = driver.findElement(By.xpath("//input[@id='txtTotalCreditDebit_txt']"));
+	String balanceAmountText = balanceAmountElement.getAttribute("value");
+	Log.info(balanceAmountText);
+	
+	
+	WebElement amountField = driver.findElement(multifd.AmountTrans);
+	String EnterAmountText = testdata.get("GL_Amount").toString();
+	input(multifd.AmountTrans, EnterAmountText);
+
+	click(multifd.AddButton);
+	click(multifd.SubmitButton);
+	
+	driver.switchTo().window(mainWindowHandle);
+	Log.info("Switch back to main window");
+
+	
+	Thread.sleep(2000);
+	
+	if(ElementDisplayed(multifd.SaveBtn)) {
+	click(multifd.SaveBtn);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click Save button after giving the post credit details");
+	Log.info("Step 1: Click Save button after giving the post credit details");
+	
+	
+	//Assert.assertTrue(ElementDisplayed(multifd.SaveBtn), "Validation Failed: Deposit opening is saved, results in summary, Five account is not opened Successfully");
+
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Deposit opening is saved, results in summary, Five account is opened Successfully");
+	Log.info("Expected Result: Deposit opening is saved, results in summary, Five account is opened Successfully");
+	}	
+	}
+}
+	ExtentTestManager.endTest();
+	return true;
+
+}
+	public boolean ManagerAuthorization(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:46 - Manager authorization");
+	Log.info("TC:46 - Manager authorization");
 	
 	ExtentTestManager.startTest("Logout");
 	Log.info("Logout");
@@ -1291,133 +1600,64 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
 	Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 	
-			String loginNewUserName = testdata.get("LoginNewUserName").toString();
-			input(multifd.loginUserName, loginNewUserName);
+	String loginNewUserName = testdata.get("LoginNewUserName").toString();
+	input(multifd.loginUserName, loginNewUserName);
 			
-			String loginNewValidPassword = testdata.get("LoginNewPassword").toString();
-			input(multifd.loginPasswrd, loginNewValidPassword);
+	String loginNewValidPassword = testdata.get("LoginNewPassword").toString();
+	input(multifd.loginPasswrd, loginNewValidPassword);
 
-			click(multifd.loginButton);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Login as another user.");
-			Log.info("Step:01 - Login as another user.");
+	click(multifd.loginButton);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Login as another user.");
+	Log.info("Step:01 - Login as another user.");
 			
-			Thread.sleep(4000);
+	Thread.sleep(4000);
 			
-			WebElement CashMode = driver.findElement(multifd.AuthorizeCancel);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].scrollIntoView(true);", CashMode);
+	WebElement TransMode = driver.findElement(multifd.AuthorizeCancel);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", TransMode);
 			
-			Assert.assertTrue(ElementDisplayed(multifd.AuthorizeCancel), "Validation Failed: 'Authorize & Cancel' option is not displayed.");
+	Assert.assertTrue(ElementDisplayed(multifd.AuthorizeCancel), "Validation Failed: 'Authorize & Cancel' option is not displayed.");
 			
-				click(multifd.AuthorizeCancel);
-				click(multifd.CashAuthorisation);
+	click(multifd.AuthorizeCancel);
+	click(multifd.ManagerAuthorization);
 				
-			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Navigate to Authorize&cancel -> Cashier authorization window.");
-			Log.info("Step:02 - Navigate to Authorize&cancel -> Cashier authorization window.");
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Navigate to Authorize&cancel -> Manager authorization window.");
+	Log.info("Step:02 - Navigate to Authorize&cancel -> Manager authorization window.");
 			
-			Assert.assertTrue(ElementDisplayed(multifd.CashAuthorisation), "Validation Failed: Cashier authorization window did not open.");
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Cashier authorization window opens");
-			Log.info("Expected Result: Cashier authorization window opens");
+	Assert.assertTrue(ElementDisplayed(multifd.ManagerAuthorization), "Validation Failed: Cashier authorization window did not open.");
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Manager authorization window opens");
+	Log.info("Expected Result: Manager authorization window opens");
 	
 	ExtentTestManager.endTest();
 	return true;
 	
 }
 
-	public boolean CashierAuthorizationRefresh() throws InterruptedException{
+
+	public boolean ManagerAuthorizationTransfer() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:41 - Cashier Authorization");
-		Log.info("TC:41 - Cashier Authorization");
+		ExtentTestManager.startTest("TC:47 - Manager authorization");
+		Log.info("TC:47 - Manager authorization");
 		
-		click(multifd.Refresh);
+		click(multifd.Transfer);
 			
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Refresh' button.");
-		Log.info("Step:01 - Click 'Refresh' button.");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Transfer' button.");
+		Log.info("Step:01 - Click 'Transfer' button.");
 		
-		Assert.assertTrue(ElementDisplayed(multifd.Refresh), "Validation Failed: 'Refresh' button is not displayed.");
+		Assert.assertTrue(ElementDisplayed(multifd.Transfer), "Validation Failed: 'Transfer' button is not displayed.");
 		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry will be display");
-		Log.info("Expected Result: Entry will be display");
-			
-		ExtentTestManager.endTest();
-		return true;
-		
-	}
-	
-	public boolean CashierAuthorizationSelectCheckBox() throws InterruptedException{
-		
-		ExtentTestManager.startTest("TC:42 - Cashier Authorization");
-		Log.info("TC:42 - Cashier Authorization");
-		
-		if(ElementDisplayed(multifd.OpeningEntryCashCheckbox)) {
-		click(multifd.OpeningEntryCashCheckbox);
-			
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Select check box of opening entry.");
-		Log.info("Step:01 -  Select check box of opening entry.");
-		
-		Assert.assertTrue(ElementDisplayed(multifd.OpeningEntryCashCheckbox), "Validation Failed: 'Checkbox' is not Selected.");
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the entry");
-		Log.info("Expected Result: Possible to select the entry");
-			
-		}
-		
-		ExtentTestManager.endTest();
-		return true;
-		
-	}
-	
-	public boolean CashierAuthorizationAuthorize() throws InterruptedException{
-		
-		ExtentTestManager.startTest("TC:43 - Cashier Authorization");
-		Log.info("TC:43 - Cashier Authorization");
-		
-		if(ElementDisplayed(multifd.CashAuthorizeBtn)) {
-		click(multifd.CashAuthorizeBtn);
-			
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Authorize button");
-		Log.info("Step:01 - Click Authorize button");
-		
-		Assert.assertTrue(ElementDisplayed(multifd.CashAuthorizeBtn), "Validation Failed: 'Authorize' button is not Clicked.");
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction is authorized by Cashier.");
-		Log.info("Expected Result: Transaction is authorized by Cashier.");
-			
-		}
-		
-		ExtentTestManager.endTest();
-		return true;
-		
-	}
-	
-	public boolean ManagerAuthorization() throws InterruptedException{
-		
-		ExtentTestManager.startTest("TC:44 - Manager Authorization");
-		Log.info("TC:44 - Manager Authorization");
-		
-		WebElement ManagerCashMode = driver.findElement(multifd.ManagerAuthorization);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", ManagerCashMode);
-		
-		click(multifd.ManagerAuthorization);
-			
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Authorize&cancel -> Manager authorization window.");
-		Log.info("Step:01 - Navigate to Authorize&cancel -> Manager authorization window.");
-		
-		Assert.assertTrue(ElementDisplayed(multifd.ManagerAuthorization), "Validation Failed: Manager authorization window not opens");
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Manager authorization window opens");
-		Log.info("Expected Result: Manager authorization window opens");	
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transfer Tab loads");
+		Log.info("Expected Result: Transfer Tab loads");
 			
 		ExtentTestManager.endTest();
 		return true;
 		
 	}
-	
+		
 	public boolean ManagerAuthorizationRefresh() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:45 - Manager Authorization");
-		Log.info("TC:45 - Manager Authorization");
+		ExtentTestManager.startTest("TC:48 - Manager Authorization");
+		Log.info("TC:48 - Manager Authorization");
 		
 		click(multifd.Refresh);
 			
@@ -1436,16 +1676,21 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 	
 	public boolean ManagerAuthorizationSelectCheckBox() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:46 - Manager Authorization");
-		Log.info("TC:46 - Manager Authorization");
+		ExtentTestManager.startTest("TC:49 - Manager Authorization");
+		Log.info("TC:49 - Manager Authorization");
 		
-		if(ElementDisplayed(multifd.ManagerCheckBox)) {
-		click(multifd.ManagerCheckBox);
+		WebElement SelectCheckbox = driver.findElement(multifd.ManagerSelectCheckBox);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", SelectCheckbox);
+		
+		
+		if(ElementDisplayed(multifd.ManagerSelectCheckBox)) {
+		click(multifd.ManagerSelectCheckBox);
 			
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select transaction entry from the cash section.");
-		Log.info("Step:01 - Select transaction entry from the cash section.");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select check box of opening entry.");
+		Log.info("Step:01 - Select check box of opening entry.");
 		
-		Assert.assertTrue(ElementDisplayed(multifd.ManagerCheckBox), "Validation Failed: Transaction entry from the cash section not selected.");
+		Assert.assertTrue(ElementDisplayed(multifd.ManagerSelectCheckBox), "Validation Failed: Transaction entry from the transfer section not selected.");
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the entry");
 		Log.info("Expected Result: Possible to select the entry");
@@ -1459,8 +1704,8 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 	
 	public boolean ManagerAuthorizationAuthorize() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:47 - Manager Authorization");
-		Log.info("TC:47 - Manager Authorization");
+		ExtentTestManager.startTest("TC:50 - Manager Authorization");
+		Log.info("TC:50 - Manager Authorization");
 		
 		if(ElementDisplayed(multifd.ManagerAuthorizen)) {
 		click(multifd.ManagerAuthorizen);

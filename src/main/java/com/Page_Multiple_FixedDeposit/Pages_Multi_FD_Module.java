@@ -86,6 +86,7 @@ public class Pages_Multi_FD_Module
 		public By AccountNumber = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtStandAcNoF_txt']");
 		public By Frequency = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtExeFrequency_txt']");
 		public By Amount1 = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtStandAmount_txt']");
+		public By OkPopup = By.xpath("//span[normalize-space()='OK']");
 		public By IntrestNextButton = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnNext']");
 		public By AuthorizeCancel = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[@class='submenu']/ul[@id='CreateMenu']/li[10]/div[1]");
 		public By ManagerAuthorization = By.xpath("//a[normalize-space()='Manager Authorisation (MNAU)']");
@@ -101,6 +102,18 @@ public class Pages_Multi_FD_Module
 		public By CashSectionEntry = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect']");
 		public By ManagerCheckBox = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl4_chkSelect']");
 		public By ClosePopup = By.xpath("//img[@id = 'closetop']");
+		public By ManagerSelectCheckBox = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl9_chkSelect']");
+		public By PostDebit = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstAcInfo_ctrl0_AIF1_btnAutoPost']");
+		public By TransactionBased = By.xpath("//select[@id='ddlTrnsBased_ddl']");
+		public By GLName = By.xpath("//input[@id = 'hyjackText0']");
+		public By GLNameList = By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[6]/td[4]/div/div/div[2]/ul/li[5]");
+		
+		public By BalanceAmount = By.xpath("//input[@id = 'txtBalanceAmount_txt']");
+		public By AmountTrans = By.xpath("//input[@id='txtAmountForGLHead_txt']");
+		
+		public By AddButton = By.xpath("//input[@id='btnAddGLAcHead']");
+		public By SubmitButton = By.xpath("//input[@id='btnSubmit']");
+		
 		//Signout
 		public By custSignOut = By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
 

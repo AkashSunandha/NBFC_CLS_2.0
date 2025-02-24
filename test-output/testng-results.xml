@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-19T11:35:43 IST" name="Default suite" finished-at="2025-02-19T11:42:08 IST" duration-ms="385474">
+  <suite started-at="2025-02-21T21:13:47 IST" name="Default suite" finished-at="2025-02-21T21:21:58 IST" duration-ms="490998">
     <groups>
     </groups>
-    <test started-at="2025-02-19T11:35:43 IST" name="Default test" finished-at="2025-02-19T11:42:08 IST" duration-ms="385474">
-      <class name="com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening_Cash">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening_Cash@2f7a7219]" started-at="2025-02-19T11:35:43 IST" name="reference" finished-at="2025-02-19T11:35:43 IST" duration-ms="7" status="PASS">
+    <test started-at="2025-02-21T21:13:47 IST" name="Default test" finished-at="2025-02-21T21:21:58 IST" duration-ms="490998">
+      <class name="com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening_Transfer">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening_Transfer@2f7a7219]" started-at="2025-02-21T21:13:47 IST" name="reference" finished-at="2025-02-21T21:13:47 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="Multi_MultiFD_Opening(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening_Cash@2f7a7219]" started-at="2025-02-19T11:35:44 IST" name="Multi_MultiFD_Opening" data-provider="TestData" finished-at="2025-02-19T11:42:08 IST" duration-ms="384687" status="PASS">
+        <test-method signature="Multi_MultiFD_Opening(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening_Transfer@2f7a7219]" started-at="2025-02-21T21:13:48 IST" name="Multi_MultiFD_Opening" data-provider="TestData" finished-at="2025-02-21T21:21:58 IST" duration-ms="489927" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Account No.=1, Amount=500000, CustomerName=A, Duration=12, FolioNumber=630, Frequency=1, IsMultipleAccountText=5, LedgerNumber=123, LienAmount=4000, LienRemark=Test Remark, LoginNewPassword=test@123, LoginNewUserName=kajol, OperatorRelation=Daughter, OperatorRemark=Test Operator, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Remark=Test, Run=Yes, TestScenario=Multiple FD Opening}]]>
+                <![CDATA[{Account No.=1, Amount=500000, CustomerName=A, Duration=12, FolioNumber=630, Frequency=1, GL_Amount=250000, IsMultipleAccountText=5, LedgerNumber=123, LienAmount=4000, LienRemark=Test Remark, LoginNewPassword=test@123, LoginNewUserName=kajol, OperatorRelation=Daughter, OperatorRemark=Test Operator, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Remark=Test, Run=Yes, TestScenario=Multiple FD Opening}]]>
               </value>
             </param>
             <param index="1">
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Multi_MultiFD_Opening -->
-      </class> <!-- com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening_Cash -->
+      </class> <!-- com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening_Transfer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

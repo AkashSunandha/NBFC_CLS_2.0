@@ -12,6 +12,7 @@ import com.BasePackage.Base_Class;
 import com.Page_Customer.Customer_CustomerRegister;
 //import com.Page_Multiple_FixedDeposit.Customer_MultipleFD_Opening;
 import com.Page_Multiple_FixedDeposit.Customer_MultipleFD_Opening_Cash;
+import com.Page_Multiple_FixedDeposit.Customer_MultipleFD_Opening_Transfer;
 import com.Page_Repositary.PageRepositary_Cust_CustRegister;
 import com.Page_Repositary.PageRepositary_Cust_CustSearch;
 import com.Utility.Log;
@@ -26,7 +27,8 @@ public class AllScenarios_Multi_MultiFD_Opening_Transfer extends Base_Class {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 
-	Customer_MultipleFD_Opening_Cash multifd = new Customer_MultipleFD_Opening_Cash();
+	//Customer_MultipleFD_Opening_Cash multifdCash = new Customer_MultipleFD_Opening_Cash();
+	Customer_MultipleFD_Opening_Transfer multifdTransfer = new Customer_MultipleFD_Opening_Transfer();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	
 	@BeforeSuite
@@ -57,146 +59,154 @@ public class AllScenarios_Multi_MultiFD_Opening_Transfer extends Base_Class {
 				custSrchMthds.pcRegistration(testdata, context);
 
 				// TC_01 ---> Login to NBFC Application
-				multifd.userLoginValidPaswrd(testdata, context);
+				multifdTransfer.userLoginValidPaswrd(testdata, context);
 
 				// TC_02 ----> Access Deposit Opening Window
-				multifd.DepositOpeningWindow();
+				multifdTransfer.DepositOpeningWindow();
 
 				// TC_03 -----> Customer Search and Selection
-				multifd.customerSearchandSelectionWindow(testdata, context);
+				multifdTransfer.customerSearchandSelectionWindow(testdata, context);
 				
 				//TC_04 ----> Enter Amount
-				multifd.EnterAmount(testdata, context);
+				multifdTransfer.EnterAmount(testdata, context);
 
 				// TC_05 ----> Enter Valid Duration
-				multifd.EnterValidDuration(testdata, context);
+				multifdTransfer.EnterValidDuration(testdata, context);
 
 				// TC_06 ----> Select Referral
-				multifd.SelectReferral();
+				multifdTransfer.SelectReferral();
 				
 				//TC_07 ----> ROI and Due Date Calculation
-				multifd.ROIandDueDateCalculation();
+				multifdTransfer.ROIandDueDateCalculation();
 				
 				//TC_08 ----> Ledger & Folio Number Entry
-				multifd.LedgerandFolioNo(testdata, context);
+				multifdTransfer.LedgerandFolioNo(testdata, context);
 				
 				//TC_09 ----> Remark Field Entry
-				multifd.Remark(testdata, context);
+				multifdTransfer.Remark(testdata, context);
 				
 				//TC_10 ---->  Lien Mark Interaction(Checkbox)
-				multifd.clickLienMarkCheckbox();
+				multifdTransfer.clickLienMarkCheckbox();
 				
 				//TC_11 ----> Lien Mark Interaction (Amount Field)
-				multifd.EnterLienAmount(testdata, context);
+				multifdTransfer.EnterLienAmount(testdata, context);
 				
 				//TC_12 ---> Lien Mark Interaction (Lien Remark)
-				multifd.EnterLienRemark(testdata, context);
+				multifdTransfer.EnterLienRemark(testdata, context);
 				
 				//TC_13 ---> Next Button Navigation
-				multifd.NextButtonNavigation();
+				multifdTransfer.NextButtonNavigation();
 				
 				//TC_14 ----> Nominee Tab Display
-				multifd.NomineeCheckbox();
+				multifdTransfer.NomineeCheckbox();
 				
 				//TC_15 ----> Enter customer ID in customer 
-				multifd.EnterCustomerID();
+				multifdTransfer.EnterCustomerID();
 				
 				//TC_16 ---> Enter customer ID in customer Search Customer ID
-				multifd.CustomerID(testdata, context);
+				multifdTransfer.CustomerID(testdata, context);
 				
 				//TC_17 ---> Customer Nominee Search
-				multifd.CustomerNomineeSearch(testdata, context);
+				multifdTransfer.CustomerNomineeSearch(testdata, context);
 				
 				//TC_18 ---> Mandatory 'Name' Field Validation in Nominee
-				multifd.MandatoryNameField(testdata, context);
+				multifdTransfer.MandatoryNameField(testdata, context);
 				
 				//TC_19 ----> Relation Dropdown List Validation
-				multifd.RelationDropDown();
+				multifdTransfer.RelationDropDown();
 				
 				//TC_20 ----> Mobile No Auto-fill in Nominee
-				multifd.MobileNumberAutoFilled();
+				multifdTransfer.MobileNumberAutoFilled();
 				
 				//TC_21 ---> All Address Auto-fill in Nominee
-				multifd.AddressAutofilled();
+				multifdTransfer.AddressAutofilled();
 				
 				//TC_22 ---> Date of Birth Details in Nominee
-				multifd.DOBandAgeField();
+				multifdTransfer.DOBandAgeField();
 				
 				//TC_23 ---> Add Nominee Details
-				multifd.AddNomineeBtn();
+				multifdTransfer.AddNomineeBtn();
 				
 				//TC_24 ---> Operator Tab Navigation
-				multifd.OperatorTabNavigation();
+				multifdTransfer.OperatorTabNavigation();
 				
 				//TC_25 ---> Operator Search and Selection
-				multifd.OperatorCustomerID();
+				multifdTransfer.OperatorCustomerID();
 				
 				//TC_26 ---> Enter customer ID in customer 
-				multifd.OperatorCustomerIDSearch(testdata, context);
+				multifdTransfer.OperatorCustomerIDSearch(testdata, context);
 				
 				//TC_27 ---> Operator Customer Search and Selection
-				multifd.OperatorCustomerIDSelection(testdata, context);
+				multifdTransfer.OperatorCustomerIDSelection(testdata, context);
 				
 				//TC_28 ---> Operator Relation Entry
-				multifd.OperatorRelationDesig(testdata, context);
+				multifdTransfer.OperatorRelationDesig(testdata, context);
 				
 				//TC_29 ---> Operator Remark Entry
-				multifd.OperatorRemarkEntry(testdata, context);
+				multifdTransfer.OperatorRemarkEntry(testdata, context);
 				
 				//TC_30 ---> Operator Details Addition
-				multifd.AddOperatorBtn();
+				multifdTransfer.AddOperatorBtn();
 				
 				//TC_31 ---> Interest Transfer Tab Presence
-				multifd.InterestTransferTabPresence();
+				multifdTransfer.InterestTransferTabPresence();
 				
 				//TC_32 ---> Interest Transfer Requirements
-				multifd.InterestTransferRequiredCheckbox();
+				multifdTransfer.InterestTransferRequiredCheckbox();
 				
 				//TC_33 ----> Interest Transfer Data Entry
-				multifd.ProductDropdown(testdata, context);
+				multifdTransfer.ProductDropdown(testdata, context);
 				
 				//TC_34 ---> Interest Transfer Data Entry
-				multifd.EnterFrequency(testdata, context);
+				multifdTransfer.EnterFrequency(testdata, context);
 				
 				//TC_35 ---> On Maturity Tab Navigation
-				multifd.OnMaturityTabNavigation();
+				multifdTransfer.OnMaturityTabNavigation();
 				
 				//TC_36 ----> Maturity Action Selection
-				multifd.MaturityActionSelection();
+				multifdTransfer.MaturityActionSelection();
 				
 				//TC_37 ---> Multiple Account Checkbox
-				multifd.MultipleAccountCheckbox();
+				multifdTransfer.MultipleAccountCheckbox();
 				
 				//TC_38 ----> Multiple Account Checkbox
-				multifd.IsMultipleAccount(testdata, context);
+				multifdTransfer.IsMultipleAccount(testdata, context);
 				
 				//TC_39 ---> Final Deposit Configuration
-				multifd.FinalDepositConfiguration(testdata, context);
+				multifdTransfer.FinalDepositConfiguration(testdata, context);
 				
-				//TC_40 ---> Cashier Authorization
-				multifd.CashierAuthorization(testdata, context);
+				//TC_40 ---> Deposit Submission Transfer
+				multifdTransfer.DepositSubmissionTransfer(testdata, context);
 				
-				//TC_41 ---> Cashier Authorization
-				multifd.CashierAuthorizationRefresh();
+				//TC_41 ---> Deposit Submission Transfer
+				multifdTransfer.DepositSubmissionTransactionBased(testdata, context);
 				
-				//TC_42 ---> Cashier Authorization
-				multifd.CashierAuthorizationSelectCheckBox();
+				//TC_42 ---> Deposit Submission Transfer
+				multifdTransfer.DepositSubmissionGLNameDropdown(testdata, context);
 				
-				//TC_43 ---> Cashier Authorization
-				multifd.CashierAuthorizationAuthorize();
+				//TC_43 ---> Deposit Submission Transfer
+				multifdTransfer.DepositSubmissionAmount(testdata, context);
 				
-				//TC_44 ---> Manager Authorization
-				multifd.ManagerAuthorization();
+				//TC_44 ---> Deposit Submission Transfer
+				multifdTransfer.DepositSubmissionSubmitButton(testdata, context);
 				
-				//TC_45 ---> Manager Authorization
-				multifd.ManagerAuthorizationRefresh();
+				//TC_45 ---> Deposit Submission Transfer
+				multifdTransfer.DepositSubmissionSaveButton(testdata, context);
 				
-				//TC_46 ---> Manager Authorization
-				multifd.ManagerAuthorizationSelectCheckBox();
+				//TC_46 ---> Manager authorization
+				multifdTransfer.ManagerAuthorization(testdata, context);
 				
-				//TC_47 ---> Manager Authorization
-				multifd.ManagerAuthorizationAuthorize();
+				//TC_47 ----> Manager authorization
+				multifdTransfer.ManagerAuthorizationTransfer();
 				
+				//TC_48 ---> Manager authorization
+				multifdTransfer.ManagerAuthorizationRefresh();
+				
+				//TC_49 ---> Manager authorization
+				multifdTransfer.ManagerAuthorizationSelectCheckBox();
+				
+				//TC_50 ----> Manager authorization
+				multifdTransfer.ManagerAuthorizationAuthorize();
 				
 				// Sign out
 				Thread.sleep(3000);
