@@ -794,7 +794,7 @@ return true;
 		//DismissAlert();
 		click(fixeddeposit.cancelpopup);
 		
-		click(fixeddeposit.signout);
+		//click(fixeddeposit.signout);
 		
 		ExtentTestManager.endTest();
 		return true;

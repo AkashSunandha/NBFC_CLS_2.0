@@ -128,6 +128,11 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				//TC23
 				fixeddeposit.Cashier_Authorization(); 
 				
+				custSrchMthds.logout();
+				Base_Class.SetUp();
+				
+				//PC Registration
+				custSrchMthds.pcRegistration(testdata, context); 
 				
 				//TC20
 				fixeddeposit.Deposit_opening_Transfer(testdata, context);
@@ -157,6 +162,7 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				 
 				 //Sign out
 				custSrchMthds.logout();
+				
 				Base_Class.SetUp();
 				
 				//PC Registration
