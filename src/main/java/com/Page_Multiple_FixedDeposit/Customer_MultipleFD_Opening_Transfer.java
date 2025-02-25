@@ -41,6 +41,7 @@ public class Customer_MultipleFD_Opening_Transfer extends Base_Class {
 		return true;
 		
 	}
+	
 	public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context)
 			throws ClassNotFoundException, InterruptedException, IOException {
 		ExtentTestManager.startTest("TC:01 - Login to NBFC Application");

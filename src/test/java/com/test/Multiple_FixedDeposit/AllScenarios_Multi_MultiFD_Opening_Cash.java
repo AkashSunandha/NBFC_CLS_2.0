@@ -40,7 +40,7 @@ public class AllScenarios_Multi_MultiFD_Opening_Cash extends Base_Class {
 	}
 
 	@Test(dataProvider = "TestData")
-	public void Multi_MultiFD_Opening(Map<Object, Object> testdata, ITestContext context)
+	public void Multi_MultiFD_Opening_Cash(Map<Object, Object> testdata, ITestContext context)
 			throws ClassNotFoundException, InterruptedException, IOException {
 		try {
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes")) {

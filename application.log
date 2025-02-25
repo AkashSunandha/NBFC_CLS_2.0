@@ -1,4 +1,4 @@
-[ERROR] 2025-02-25 12:53:24.932 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-25 18:00:55.324 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-25 12:53:24.946 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-25 18:00:55.338 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-25 12:53:24.949 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-25 18:00:55.340 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-02-25 12:53:24.953 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-02-25 18:00:55.345 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -210,200 +210,200 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-02-25 12:53:25.579 [main] Log - *** Running test method Multiple FD Opening...
-[INFO ] 2025-02-25 12:53:31.305 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-02-25 12:53:33.178 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-02-25 12:53:33.417 [main] Log - PC Registration
-[INFO ] 2025-02-25 12:53:34.484 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-02-25 12:53:34.810 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-02-25 12:53:35.836 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-02-25 12:53:40.122 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-02-25 12:53:41.796 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-02-25 12:53:41.868 [main] Log - TC_01 - Login to NBFC Application
-[INFO ] 2025-02-25 12:53:42.913 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-02-25 12:53:43.971 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-02-25 12:53:51.837 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-02-25 12:53:52.917 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-25 12:53:53.970 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-02-25 12:53:54.027 [main] Log - TC:02 - Access to Deposit Opening Window
-[INFO ] 2025-02-25 12:54:12.695 [main] Log - Step:01 clicking on Account opening -> Deposit opening -> Fixed deposit
-[INFO ] 2025-02-25 12:54:13.756 [main] Log - Expected Result: Deposit opening window is displayed
-[INFO ] 2025-02-25 12:54:13.801 [main] Log - TC:03 - Customer Search and Selection
-[INFO ] 2025-02-25 12:54:18.229 [main] Log - Step:01 - Click 'Customer Search' button
-[INFO ] 2025-02-25 12:54:27.731 [main] Log - Step:02 - Select Customer from Search Popup
-[INFO ] 2025-02-25 12:54:27.736 [main] Log - Switched back to the main window.
-[INFO ] 2025-02-25 12:54:33.878 [main] Log - Step:03 - Click 'Add' Button
-[INFO ] 2025-02-25 12:54:39.266 [main] Log - Clicked on OK button after adding the customer.
-[INFO ] 2025-02-25 12:54:39.267 [main] Log - Expected Result: Selected customer details populate necessary fields
-[INFO ] 2025-02-25 12:54:39.363 [main] Log - TC:04 - Enter Amount
-[INFO ] 2025-02-25 12:54:44.718 [main] Log - Step:01 - Enter the Amount in the 'Amount' Field
-[INFO ] 2025-02-25 12:54:50.029 [main] Log - Expected Result:Possible to Enter the Amount
-[INFO ] 2025-02-25 12:54:50.104 [main] Log - TC:05 - Enter Valid Duration
-[INFO ] 2025-02-25 12:54:51.149 [main] Log - Step:01 - Enter Valid Duration eg: 12
-[INFO ] 2025-02-25 12:54:55.764 [main] Log - Expected Result: 12 is entered in the Duration field, Month is seleced from the Duration Mode Dropdown list.
-[INFO ] 2025-02-25 12:54:55.809 [main] Log - TC:06 - Select Referral
-[INFO ] 2025-02-25 12:55:01.151 [main] Log - Step 01: Select 'Referred by' from dropdown
-[INFO ] 2025-02-25 12:55:02.287 [main] Log - Expected Result: Referral is successfully selected
-[INFO ] 2025-02-25 12:55:02.335 [main] Log - TC:07 - ROI and Due Date Calculation
-[INFO ] 2025-02-25 12:55:07.707 [main] Log - Step 01: Click 'Get Values' button
-[INFO ] 2025-02-25 12:55:07.707 [main] Log - Expected Result: ROI and Due date are auto-calculated and displayed
-[INFO ] 2025-02-25 12:55:07.748 [main] Log - TC:08 - Ledger & Folio Number Entry
-[INFO ] 2025-02-25 12:55:13.102 [main] Log - Step:01 - Enter the Folio number
-[INFO ] 2025-02-25 12:55:19.492 [main] Log - Expected Result: Folio number is entered.
-[INFO ] 2025-02-25 12:55:19.532 [main] Log - TC:09 - Remark Field Entry
-[INFO ] 2025-02-25 12:55:24.863 [main] Log - Step:01 - Enter remark in Remark Field.
-[INFO ] 2025-02-25 12:55:25.901 [main] Log - Expected Result: Remark is entered.
-[INFO ] 2025-02-25 12:55:25.943 [main] Log - TC:10 - Lien Mark Interaction
-[INFO ] 2025-02-25 12:55:25.952 [main] Log - Step:01 - Make a tick on the 'Lien Mark' checkbox
-[INFO ] 2025-02-25 12:55:26.197 [main] Log - Expected Result : Tick is added
-[INFO ] 2025-02-25 12:55:26.316 [main] Log - TC:11 - Lien Mark Interaction
-[INFO ] 2025-02-25 12:55:30.624 [main] Log - Step:01 - Enter lien amount
-[INFO ] 2025-02-25 12:55:31.679 [main] Log - Step:02 - Enter amount less than the depost amount.
-[INFO ] 2025-02-25 12:55:32.744 [main] Log - Expected Result: Lien Amount is entered.
-[INFO ] 2025-02-25 12:55:32.790 [main] Log - TC:12 - Lien Mark Interaction
-[INFO ] 2025-02-25 12:55:38.169 [main] Log - Step:01 - Enter value in the Lien Remar field
-[INFO ] 2025-02-25 12:55:39.223 [main] Log - Expected Result: Lien Remark is entered.
-[INFO ] 2025-02-25 12:55:39.268 [main] Log - TC:13 - Next Button Navigation
-[INFO ] 2025-02-25 12:55:44.655 [main] Log - Step:01 - Click 'Next' button
-[INFO ] 2025-02-25 12:55:45.722 [main] Log - Expected Result: Navigate to next section successfully
-[INFO ] 2025-02-25 12:55:45.769 [main] Log - TC:14 - Nominee Tab Display
-[INFO ] 2025-02-25 12:55:45.777 [main] Log - Step:01 - Untick the checkbox for nominee not required field.
-[INFO ] 2025-02-25 12:55:46.055 [main] Log - Expected Result : 'Nominee details section is visible upon unticking the checkbox
-[INFO ] 2025-02-25 12:55:46.106 [main] Log - TC:15 - Enter customer ID in customer
-[INFO ] 2025-02-25 12:55:50.521 [main] Log - Step:01 - Click on the Customer ID Search button.
-[INFO ] 2025-02-25 12:55:50.594 [main] Log - Switched back to the main window.
-[INFO ] 2025-02-25 12:55:50.594 [main] Log - Expected Result: Customer Search popoup is visible.
-[INFO ] 2025-02-25 12:55:50.648 [main] Log - TC:16 - Enter customer ID in customer
-[INFO ] 2025-02-25 12:55:55.116 [main] Log - Step:01 - Enter Name 
-[INFO ] 2025-02-25 12:56:00.466 [main] Log - Step:02 - click on search button
-[INFO ] 2025-02-25 12:56:00.522 [main] Log - Switched back to the main window.
-[INFO ] 2025-02-25 12:56:00.523 [main] Log - Expected Result: Customer is listing similar to the entered Customer name
-[INFO ] 2025-02-25 12:56:00.569 [main] Log - TC:17 - Customer Nominee Search
-[INFO ] 2025-02-25 12:56:10.383 [main] Log - Step:01 -  Search for nominee
-[INFO ] 2025-02-25 12:56:14.537 [main] Log - Step:02 - Select a nominee from search results
-[INFO ] 2025-02-25 12:56:14.549 [main] Log - Switched back to the main window.
-[INFO ] 2025-02-25 12:56:14.550 [main] Log - Expected Result: Nominee details auto-fill upon selection
-[INFO ] 2025-02-25 12:56:14.626 [main] Log - TC:18 - Mandatory 'Name' Field Validation in Nominee
-[INFO ] 2025-02-25 12:56:14.652 [main] Log - Step:01 - Ensure 'Name' field is filled
-[INFO ] 2025-02-25 12:56:14.652 [main] Log - Expected Result: 'Name' field must not be empty
-[INFO ] 2025-02-25 12:56:14.692 [main] Log - TC:19 - Relation Dropdown List Validation
-[INFO ] 2025-02-25 12:56:20.144 [main] Log - Step 01: Select a Relation from the Relation dropdown
-[INFO ] 2025-02-25 12:56:20.414 [main] Log - Expected Result: Relation is selected from the relation Dropdown list
-[INFO ] 2025-02-25 12:56:20.512 [main] Log - TC:20 - Mobile No Auto-fill in Nominee
-[INFO ] 2025-02-25 12:56:20.538 [main] Log - Step:01 - Check 'Mobile No' field
-[INFO ] 2025-02-25 12:56:20.538 [main] Log - Expected Result: Mobile number is auto-filled from customer details
-[INFO ] 2025-02-25 12:56:20.572 [main] Log - TC:21 - Address Auto-fill in Nominee
-[INFO ] 2025-02-25 12:56:20.634 [main] Log - Step:01 - Check 'House Name', 'Residence', 'District', 'Post' fields
-[INFO ] 2025-02-25 12:56:20.634 [main] Log - Expected Result: All address fields are auto-filled correctly
-[INFO ] 2025-02-25 12:56:20.672 [main] Log - TC:22 - Date of Birth Details in Nominee
-[INFO ] 2025-02-25 12:56:20.702 [main] Log - Step:01 - Check 'DOB' and 'Age' fields
-[INFO ] 2025-02-25 12:56:20.703 [main] Log - Expected Result: DOB and Age are correctly populated and computed
-[INFO ] 2025-02-25 12:56:20.739 [main] Log - TC:23 - Add Nominee Details
-[INFO ] 2025-02-25 12:56:26.166 [main] Log - Step:01 - Click 'Add' button
-[INFO ] 2025-02-25 12:56:27.244 [main] Log - Expected Result: Nominee details are added to the record
-[INFO ] 2025-02-25 12:56:27.289 [main] Log - TC:24 - Operator Tab Navigation
-[INFO ] 2025-02-25 12:56:32.702 [main] Log - Step:01 - Click 'Next' button
-[INFO ] 2025-02-25 12:56:33.749 [main] Log - Expected Result: Operator tab is accessed
-[INFO ] 2025-02-25 12:56:33.791 [main] Log - TC:25 - Operator Search and Selection
-[INFO ] 2025-02-25 12:56:38.236 [main] Log - Step:01 - Click on the Search button aligned near to Customer ID Field.
-[INFO ] 2025-02-25 12:56:38.302 [main] Log - Switched back to the main window.
-[INFO ] 2025-02-25 12:56:38.303 [main] Log - Expected Result: Customer Search popup page is opened.
-[INFO ] 2025-02-25 12:56:38.353 [main] Log - TC:26 - Enter customer ID in customer
-[INFO ] 2025-02-25 12:56:42.797 [main] Log - Step:01 - Enter Name 
-[INFO ] 2025-02-25 12:56:48.133 [main] Log - Step:02 - click on search button
-[INFO ] 2025-02-25 12:56:48.192 [main] Log - Switched back to the main window.
-[INFO ] 2025-02-25 12:56:48.193 [main] Log - Expected Result: Customer is listing similar to the entered Customer name
-[INFO ] 2025-02-25 12:56:48.228 [main] Log - TC:27 - Customer Nominee Search
-[INFO ] 2025-02-25 12:56:58.101 [main] Log - Step:01 -  Search for nominee
-[INFO ] 2025-02-25 12:57:02.229 [main] Log - Step:02 - Select a nominee from search results
-[INFO ] 2025-02-25 12:57:02.235 [main] Log - Switched back to the main window.
-[INFO ] 2025-02-25 12:57:02.235 [main] Log - Expected Result: Nominee details auto-fill upon selection
-[INFO ] 2025-02-25 12:57:02.294 [main] Log - TC:28 - Operator Relation Entry
-[INFO ] 2025-02-25 12:57:07.676 [main] Log - Step:01 - Enter relation in Relation Field.
-[INFO ] 2025-02-25 12:57:08.761 [main] Log - Expected Result: Relation is validly entered
-[INFO ] 2025-02-25 12:57:08.796 [main] Log - TC:29 - Operator Remark Entry
-[INFO ] 2025-02-25 12:57:14.189 [main] Log - Step:01 - Enter remark in Remark Field.
-[INFO ] 2025-02-25 12:57:15.248 [main] Log - Expected Result: Remark is validly entered
-[INFO ] 2025-02-25 12:57:15.280 [main] Log - TC:30 - Operator Details Addition
-[INFO ] 2025-02-25 12:57:20.677 [main] Log - Step:01 - Click 'Add' button
-[INFO ] 2025-02-25 12:57:21.729 [main] Log - Expected Result: Operator details are added to the record
-[INFO ] 2025-02-25 12:57:21.765 [main] Log - TC:31 - Interest Transfer Tab Presence
-[INFO ] 2025-02-25 12:57:27.128 [main] Log - Step:01 - Click 'Next' button
-[INFO ] 2025-02-25 12:57:28.171 [main] Log - Expected Result: Interest transfer tab is present
-[INFO ] 2025-02-25 12:57:28.206 [main] Log - TC:32 - Interest Transfer Requirements
-[INFO ] 2025-02-25 12:57:28.214 [main] Log - Step:01 - Add a tick on the checkbox aligned to Interest Transfer Required
-[INFO ] 2025-02-25 12:57:33.588 [main] Log - Expected Result : Interest Transfer adding fields are visible on adding  a tick on the checkbox.
-[INFO ] 2025-02-25 12:57:33.666 [main] Log - TC:33 - Interest Transfer Data Entry
-[INFO ] 2025-02-25 12:57:39.047 [main] Log - Step 01: Select a Product from the product Dropdown list. Eg: Suspense Liability
-[INFO ] 2025-02-25 12:57:44.717 [main] Log - Step:02 - Enter an account numbr Eg: 1
-[INFO ] 2025-02-25 12:57:45.818 [main] Log - Step:03 - Click on TAB button in the keyboard
-[INFO ] 2025-02-25 12:57:45.819 [main] Log - Expected Result: Account Details is autoloaded.
-[INFO ] 2025-02-25 12:57:45.862 [main] Log - TC:34 - Interest Transfer Data Entry
-[INFO ] 2025-02-25 12:57:47.110 [main] Log - Step:01 - Enter the Frequency as 1
-[INFO ] 2025-02-25 12:57:47.160 [main] Log - Step:02 - Click on TAB button in the keyboard
-[INFO ] 2025-02-25 12:57:47.160 [main] Log - Expected Result: Amount,  Startdate and End date are autoloaded.
-[INFO ] 2025-02-25 12:57:47.205 [main] Log - TC:35 - On Maturity Tab Navigation
-[INFO ] 2025-02-25 12:57:52.567 [main] Log - Step:01 - Click 'Next' button
-[INFO ] 2025-02-25 12:57:53.637 [main] Log - Expected Result: 'On Maturity' tab is present
-[INFO ] 2025-02-25 12:57:53.669 [main] Log - TC:36 - Maturity Action Selection
-[INFO ] 2025-02-25 12:57:53.678 [main] Log - Step:01 - select. 'Keep in same account'
-[INFO ] 2025-02-25 12:57:54.023 [main] Log - Expected Result : clicked on the radio aligend against 'Keep in Same Account.'
-[INFO ] 2025-02-25 12:57:54.072 [main] Log - TC:37 - Multiple Account Checkbox
-[INFO ] 2025-02-25 12:57:55.094 [main] Log - Step:01 - Make a tick on the checkbox aligned newar to 'Is Multiple A/C'
-[INFO ] 2025-02-25 12:57:55.350 [main] Log - Tick is already selected.
-[INFO ] 2025-02-25 12:57:55.350 [main] Log - Expected Result : Text field is enabled on adding the Tcick
-[INFO ] 2025-02-25 12:57:55.387 [main] Log - TC:38 - Multiple Account Checkbox
-[INFO ] 2025-02-25 12:58:04.897 [main] Log - Step:01 - Enter 5 as the count visible on the Text box appered near to the Checbox
-[INFO ] 2025-02-25 12:58:05.948 [main] Log - Expected Result: 5 is entred Successfully.
-[INFO ] 2025-02-25 12:58:05.983 [main] Log - TC:39 - Final Deposit Configuration
-[INFO ] 2025-02-25 12:58:11.386 [main] Log - Step 01: Select 'Trans.mode'as Transfer.
-[INFO ] 2025-02-25 12:58:11.684 [main] Log - Expected Result: Post Debit Button will be display
-[INFO ] 2025-02-25 12:58:11.724 [main] Log - TC:40 - Deposit Submission with Transfer
-[INFO ] 2025-02-25 12:58:16.239 [main] Log - Step 1: Click on 'Post Debit' button
-[INFO ] 2025-02-25 12:58:16.289 [main] Log - Expected Result: Auto posting popup window will be opened
-[INFO ] 2025-02-25 12:58:16.326 [main] Log - TC:41 - Deposit Submission with Transfer
-[INFO ] 2025-02-25 12:58:26.424 [main] Log - Step 1: Give transaction based as 'GL Code'
-[INFO ] 2025-02-25 12:58:27.545 [main] Log - Expected Result: GL code related field will be display (GL name,GL code)
-[INFO ] 2025-02-25 12:58:27.587 [main] Log - TC:42 - Deposit Submission with Transfer
-[INFO ] 2025-02-25 12:58:43.445 [main] Log - Step 1: Select the 'GL Name' from the drop down
-[INFO ] 2025-02-25 12:58:44.554 [main] Log - Expected Result: GL code will be autoloads while selecting the GL Name
-[INFO ] 2025-02-25 12:58:44.601 [main] Log - TC:43 - Deposit Submission with Transfer
-[INFO ] 2025-02-25 12:59:00.436 [main] Log - 2500000
-[INFO ] 2025-02-25 12:59:00.437 [main] Log - Step 1: Give the amount in 'Amount' field
-[INFO ] 2025-02-25 12:59:05.790 [main] Log - Step 2: Click 'Add' button
-[INFO ] 2025-02-25 12:59:06.891 [main] Log - Expected Result: Given details will be displays in the grid
-[INFO ] 2025-02-25 12:59:06.927 [main] Log - TC:44 - Deposit Submission with Transfer
-[INFO ] 2025-02-25 12:59:22.802 [main] Log - 2500000
-[INFO ] 2025-02-25 12:59:32.446 [main] Log - Step 1: Click submit button after adding the details in the auto posting popup window
-[INFO ] 2025-02-25 12:59:32.450 [main] Log - Expected Result: Popup window will be closed
-[INFO ] 2025-02-25 12:59:32.493 [main] Log - TC:45 - Deposit Submission with Transfer
-[INFO ] 2025-02-25 12:59:48.330 [main] Log - 2500000
-[INFO ] 2025-02-25 12:59:57.977 [main] Log - Switch back to main window
-[INFO ] 2025-02-25 13:00:05.438 [main] Log - Step 1: Click Save button after giving the post credit details
-[INFO ] 2025-02-25 13:00:05.439 [main] Log - Expected Result: Deposit opening is saved, results in summary, Five account is opened Successfully
-[INFO ] 2025-02-25 13:00:06.484 [main] Log - Expected Result: Summary will be generated
-[INFO ] 2025-02-25 13:00:07.545 [main] Log - Expected Result: Summary will be generated
-[INFO ] 2025-02-25 13:00:07.599 [main] Log - TC:46 - Manager authorization
-[INFO ] 2025-02-25 13:00:07.599 [main] Log - Logout
-[INFO ] 2025-02-25 13:00:14.236 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-02-25 13:00:15.295 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
-[INFO ] 2025-02-25 13:00:16.336 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-02-25 13:00:17.436 [main] Log - Step:02 - Enter valid Password
-[INFO ] 2025-02-25 13:00:23.854 [main] Log - Step:01 - Login as another user.
-[INFO ] 2025-02-25 13:00:38.511 [main] Log - Step:02 - Navigate to Authorize&cancel -> Manager authorization window.
-[INFO ] 2025-02-25 13:00:39.561 [main] Log - Expected Result: Manager authorization window opens
-[INFO ] 2025-02-25 13:00:39.593 [main] Log - TC:47 - Manager authorization
-[INFO ] 2025-02-25 13:00:43.880 [main] Log - Step:01 - Click 'Transfer' button.
-[INFO ] 2025-02-25 13:00:44.936 [main] Log - Expected Result: Transfer Tab loads
-[INFO ] 2025-02-25 13:00:44.969 [main] Log - TC:48 - Manager Authorization
-[INFO ] 2025-02-25 13:00:49.248 [main] Log - Step:01 - Click 'Refresh' button.
-[INFO ] 2025-02-25 13:00:50.290 [main] Log - Expected Result: Entry will be display
-[INFO ] 2025-02-25 13:00:50.323 [main] Log - TC:49 - Manager Authorization
-[INFO ] 2025-02-25 13:01:01.145 [main] Log - Step:01 - Select check box of opening entry.
-[INFO ] 2025-02-25 13:01:01.159 [main] Log - Expected Result: Possible to select the entry
-[INFO ] 2025-02-25 13:01:01.240 [main] Log - TC:50 - Manager Authorization
-[INFO ] 2025-02-25 13:01:06.626 [main] Log - Step:01 - Click Authorize button
-[INFO ] 2025-02-25 13:01:07.680 [main] Log - Expected Result: Transaction is authorized by Manager.
-[INFO ] 2025-02-25 13:01:15.036 [main] Log - Logout
-[INFO ] 2025-02-25 13:01:23.580 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-02-25 13:01:24.613 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-02-25 18:00:56.042 [main] Log - *** Running test method Multiple FD Opening...
+[INFO ] 2025-02-25 18:00:59.838 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-02-25 18:01:00.746 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-02-25 18:01:00.997 [main] Log - PC Registration
+[INFO ] 2025-02-25 18:01:02.062 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-02-25 18:01:02.374 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-02-25 18:01:03.428 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-02-25 18:01:07.715 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-02-25 18:01:09.205 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-02-25 18:01:09.301 [main] Log - TC_01 - Login to NBFC Application
+[INFO ] 2025-02-25 18:01:10.356 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-02-25 18:01:11.423 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-02-25 18:01:18.718 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-02-25 18:01:19.782 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-25 18:01:20.829 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-02-25 18:01:20.889 [main] Log - TC:02 - Access to Deposit Opening Window
+[INFO ] 2025-02-25 18:01:39.461 [main] Log - Step:01 clicking on Account opening -> Deposit opening -> Fixed deposit
+[INFO ] 2025-02-25 18:01:40.533 [main] Log - Expected Result: Deposit opening window is displayed
+[INFO ] 2025-02-25 18:01:40.587 [main] Log - TC:03 - Customer Search and Selection
+[INFO ] 2025-02-25 18:01:45.083 [main] Log - Step:01 - Click 'Customer Search' button
+[INFO ] 2025-02-25 18:01:54.671 [main] Log - Step:02 - Select Customer from Search Popup
+[INFO ] 2025-02-25 18:01:54.676 [main] Log - Switched back to the main window.
+[INFO ] 2025-02-25 18:02:00.831 [main] Log - Step:03 - Click 'Add' Button
+[INFO ] 2025-02-25 18:02:06.199 [main] Log - Clicked on OK button after adding the customer.
+[INFO ] 2025-02-25 18:02:06.200 [main] Log - Expected Result: Selected customer details populate necessary fields
+[INFO ] 2025-02-25 18:02:06.279 [main] Log - TC:04 - Enter Amount
+[INFO ] 2025-02-25 18:02:11.631 [main] Log - Step:01 - Enter the Amount in the 'Amount' Field
+[INFO ] 2025-02-25 18:02:16.942 [main] Log - Expected Result:Possible to Enter the Amount
+[INFO ] 2025-02-25 18:02:17.017 [main] Log - TC:05 - Enter Valid Duration
+[INFO ] 2025-02-25 18:02:18.060 [main] Log - Step:01 - Enter Valid Duration eg: 12
+[INFO ] 2025-02-25 18:02:22.687 [main] Log - Expected Result: 12 is entered in the Duration field, Month is seleced from the Duration Mode Dropdown list.
+[INFO ] 2025-02-25 18:02:22.730 [main] Log - TC:06 - Select Referral
+[INFO ] 2025-02-25 18:02:28.052 [main] Log - Step 01: Select 'Referred by' from dropdown
+[INFO ] 2025-02-25 18:02:29.088 [main] Log - Expected Result: Referral is successfully selected
+[INFO ] 2025-02-25 18:02:29.139 [main] Log - TC:07 - ROI and Due Date Calculation
+[INFO ] 2025-02-25 18:02:34.521 [main] Log - Step 01: Click 'Get Values' button
+[INFO ] 2025-02-25 18:02:34.522 [main] Log - Expected Result: ROI and Due date are auto-calculated and displayed
+[INFO ] 2025-02-25 18:02:34.591 [main] Log - TC:08 - Ledger & Folio Number Entry
+[INFO ] 2025-02-25 18:02:39.930 [main] Log - Step:01 - Enter the Folio number
+[INFO ] 2025-02-25 18:02:46.378 [main] Log - Expected Result: Folio number is entered.
+[INFO ] 2025-02-25 18:02:46.433 [main] Log - TC:09 - Remark Field Entry
+[INFO ] 2025-02-25 18:02:51.809 [main] Log - Step:01 - Enter remark in Remark Field.
+[INFO ] 2025-02-25 18:02:52.859 [main] Log - Expected Result: Remark is entered.
+[INFO ] 2025-02-25 18:02:52.909 [main] Log - TC:10 - Lien Mark Interaction
+[INFO ] 2025-02-25 18:02:52.917 [main] Log - Step:01 - Make a tick on the 'Lien Mark' checkbox
+[INFO ] 2025-02-25 18:02:53.183 [main] Log - Expected Result : Tick is added
+[INFO ] 2025-02-25 18:02:53.267 [main] Log - TC:11 - Lien Mark Interaction
+[INFO ] 2025-02-25 18:02:57.607 [main] Log - Step:01 - Enter lien amount
+[INFO ] 2025-02-25 18:02:58.675 [main] Log - Step:02 - Enter amount less than the depost amount.
+[INFO ] 2025-02-25 18:02:59.734 [main] Log - Expected Result: Lien Amount is entered.
+[INFO ] 2025-02-25 18:02:59.775 [main] Log - TC:12 - Lien Mark Interaction
+[INFO ] 2025-02-25 18:03:05.162 [main] Log - Step:01 - Enter value in the Lien Remar field
+[INFO ] 2025-02-25 18:03:06.221 [main] Log - Expected Result: Lien Remark is entered.
+[INFO ] 2025-02-25 18:03:06.260 [main] Log - TC:13 - Next Button Navigation
+[INFO ] 2025-02-25 18:03:11.609 [main] Log - Step:01 - Click 'Next' button
+[INFO ] 2025-02-25 18:03:12.678 [main] Log - Expected Result: Navigate to next section successfully
+[INFO ] 2025-02-25 18:03:12.727 [main] Log - TC:14 - Nominee Tab Display
+[INFO ] 2025-02-25 18:03:12.735 [main] Log - Step:01 - Untick the checkbox for nominee not required field.
+[INFO ] 2025-02-25 18:03:13.006 [main] Log - Expected Result : 'Nominee details section is visible upon unticking the checkbox
+[INFO ] 2025-02-25 18:03:13.128 [main] Log - TC:15 - Enter customer ID in customer
+[INFO ] 2025-02-25 18:03:17.667 [main] Log - Step:01 - Click on the Customer ID Search button.
+[INFO ] 2025-02-25 18:03:17.785 [main] Log - Switched back to the main window.
+[INFO ] 2025-02-25 18:03:17.785 [main] Log - Expected Result: Customer Search popoup is visible.
+[INFO ] 2025-02-25 18:03:17.866 [main] Log - TC:16 - Enter customer ID in customer
+[INFO ] 2025-02-25 18:03:22.416 [main] Log - Step:01 - Enter Name 
+[INFO ] 2025-02-25 18:03:27.781 [main] Log - Step:02 - click on search button
+[INFO ] 2025-02-25 18:03:27.900 [main] Log - Switched back to the main window.
+[INFO ] 2025-02-25 18:03:27.900 [main] Log - Expected Result: Customer is listing similar to the entered Customer name
+[INFO ] 2025-02-25 18:03:27.954 [main] Log - TC:17 - Customer Nominee Search
+[INFO ] 2025-02-25 18:03:37.804 [main] Log - Step:01 -  Search for nominee
+[INFO ] 2025-02-25 18:03:42.002 [main] Log - Step:02 - Select a nominee from search results
+[INFO ] 2025-02-25 18:03:42.007 [main] Log - Switched back to the main window.
+[INFO ] 2025-02-25 18:03:42.007 [main] Log - Expected Result: Nominee details auto-fill upon selection
+[INFO ] 2025-02-25 18:03:42.046 [main] Log - TC:18 - Mandatory 'Name' Field Validation in Nominee
+[INFO ] 2025-02-25 18:03:42.070 [main] Log - Step:01 - Ensure 'Name' field is filled
+[INFO ] 2025-02-25 18:03:42.070 [main] Log - Expected Result: 'Name' field must not be empty
+[INFO ] 2025-02-25 18:03:42.105 [main] Log - TC:19 - Relation Dropdown List Validation
+[INFO ] 2025-02-25 18:03:47.515 [main] Log - Step 01: Select a Relation from the Relation dropdown
+[INFO ] 2025-02-25 18:03:47.795 [main] Log - Expected Result: Relation is selected from the relation Dropdown list
+[INFO ] 2025-02-25 18:03:47.838 [main] Log - TC:20 - Mobile No Auto-fill in Nominee
+[INFO ] 2025-02-25 18:03:47.854 [main] Log - Step:01 - Check 'Mobile No' field
+[INFO ] 2025-02-25 18:03:47.854 [main] Log - Expected Result: Mobile number is auto-filled from customer details
+[INFO ] 2025-02-25 18:03:47.891 [main] Log - TC:21 - Address Auto-fill in Nominee
+[INFO ] 2025-02-25 18:03:47.951 [main] Log - Step:01 - Check 'House Name', 'Residence', 'District', 'Post' fields
+[INFO ] 2025-02-25 18:03:47.952 [main] Log - Expected Result: All address fields are auto-filled correctly
+[INFO ] 2025-02-25 18:03:47.993 [main] Log - TC:22 - Date of Birth Details in Nominee
+[INFO ] 2025-02-25 18:03:48.023 [main] Log - Step:01 - Check 'DOB' and 'Age' fields
+[INFO ] 2025-02-25 18:03:48.023 [main] Log - Expected Result: DOB and Age are correctly populated and computed
+[INFO ] 2025-02-25 18:03:48.066 [main] Log - TC:23 - Add Nominee Details
+[INFO ] 2025-02-25 18:03:53.471 [main] Log - Step:01 - Click 'Add' button
+[INFO ] 2025-02-25 18:03:54.528 [main] Log - Expected Result: Nominee details are added to the record
+[INFO ] 2025-02-25 18:03:54.560 [main] Log - TC:24 - Operator Tab Navigation
+[INFO ] 2025-02-25 18:03:59.923 [main] Log - Step:01 - Click 'Next' button
+[INFO ] 2025-02-25 18:04:00.962 [main] Log - Expected Result: Operator tab is accessed
+[INFO ] 2025-02-25 18:04:01.000 [main] Log - TC:25 - Operator Search and Selection
+[INFO ] 2025-02-25 18:04:05.483 [main] Log - Step:01 - Click on the Search button aligned near to Customer ID Field.
+[INFO ] 2025-02-25 18:04:05.609 [main] Log - Switched back to the main window.
+[INFO ] 2025-02-25 18:04:05.610 [main] Log - Expected Result: Customer Search popup page is opened.
+[INFO ] 2025-02-25 18:04:05.646 [main] Log - TC:26 - Enter customer ID in customer
+[INFO ] 2025-02-25 18:04:10.155 [main] Log - Step:01 - Enter Name 
+[INFO ] 2025-02-25 18:04:15.528 [main] Log - Step:02 - click on search button
+[INFO ] 2025-02-25 18:04:15.662 [main] Log - Switched back to the main window.
+[INFO ] 2025-02-25 18:04:15.662 [main] Log - Expected Result: Customer is listing similar to the entered Customer name
+[INFO ] 2025-02-25 18:04:15.702 [main] Log - TC:27 - Customer Nominee Search
+[INFO ] 2025-02-25 18:04:25.599 [main] Log - Step:01 -  Search for nominee
+[INFO ] 2025-02-25 18:04:29.802 [main] Log - Step:02 - Select a nominee from search results
+[INFO ] 2025-02-25 18:04:29.807 [main] Log - Switched back to the main window.
+[INFO ] 2025-02-25 18:04:29.807 [main] Log - Expected Result: Nominee details auto-fill upon selection
+[INFO ] 2025-02-25 18:04:29.846 [main] Log - TC:28 - Operator Relation Entry
+[INFO ] 2025-02-25 18:04:35.257 [main] Log - Step:01 - Enter relation in Relation Field.
+[INFO ] 2025-02-25 18:04:36.319 [main] Log - Expected Result: Relation is validly entered
+[INFO ] 2025-02-25 18:04:36.351 [main] Log - TC:29 - Operator Remark Entry
+[INFO ] 2025-02-25 18:04:41.743 [main] Log - Step:01 - Enter remark in Remark Field.
+[INFO ] 2025-02-25 18:04:42.806 [main] Log - Expected Result: Remark is validly entered
+[INFO ] 2025-02-25 18:04:42.838 [main] Log - TC:30 - Operator Details Addition
+[INFO ] 2025-02-25 18:04:48.235 [main] Log - Step:01 - Click 'Add' button
+[INFO ] 2025-02-25 18:04:49.291 [main] Log - Expected Result: Operator details are added to the record
+[INFO ] 2025-02-25 18:04:49.330 [main] Log - TC:31 - Interest Transfer Tab Presence
+[INFO ] 2025-02-25 18:04:54.734 [main] Log - Step:01 - Click 'Next' button
+[INFO ] 2025-02-25 18:04:55.798 [main] Log - Expected Result: Interest transfer tab is present
+[INFO ] 2025-02-25 18:04:55.836 [main] Log - TC:32 - Interest Transfer Requirements
+[INFO ] 2025-02-25 18:04:55.842 [main] Log - Step:01 - Add a tick on the checkbox aligned to Interest Transfer Required
+[INFO ] 2025-02-25 18:05:01.188 [main] Log - Expected Result : Interest Transfer adding fields are visible on adding  a tick on the checkbox.
+[INFO ] 2025-02-25 18:05:01.267 [main] Log - TC:33 - Interest Transfer Data Entry
+[INFO ] 2025-02-25 18:05:06.714 [main] Log - Step 01: Select a Product from the product Dropdown list. Eg: Suspense Liability
+[INFO ] 2025-02-25 18:05:12.367 [main] Log - Step:02 - Enter an account numbr Eg: 1
+[INFO ] 2025-02-25 18:05:13.501 [main] Log - Step:03 - Click on TAB button in the keyboard
+[INFO ] 2025-02-25 18:05:13.501 [main] Log - Expected Result: Account Details is autoloaded.
+[INFO ] 2025-02-25 18:05:13.539 [main] Log - TC:34 - Interest Transfer Data Entry
+[INFO ] 2025-02-25 18:05:14.731 [main] Log - Step:01 - Enter the Frequency as 1
+[INFO ] 2025-02-25 18:05:14.772 [main] Log - Step:02 - Click on TAB button in the keyboard
+[INFO ] 2025-02-25 18:05:14.773 [main] Log - Expected Result: Amount,  Startdate and End date are autoloaded.
+[INFO ] 2025-02-25 18:05:14.814 [main] Log - TC:35 - On Maturity Tab Navigation
+[INFO ] 2025-02-25 18:05:20.189 [main] Log - Step:01 - Click 'Next' button
+[INFO ] 2025-02-25 18:05:21.254 [main] Log - Expected Result: 'On Maturity' tab is present
+[INFO ] 2025-02-25 18:05:21.289 [main] Log - TC:36 - Maturity Action Selection
+[INFO ] 2025-02-25 18:05:21.297 [main] Log - Step:01 - select. 'Keep in same account'
+[INFO ] 2025-02-25 18:05:21.620 [main] Log - Expected Result : clicked on the radio aligend against 'Keep in Same Account.'
+[INFO ] 2025-02-25 18:05:21.680 [main] Log - TC:37 - Multiple Account Checkbox
+[INFO ] 2025-02-25 18:05:22.702 [main] Log - Step:01 - Make a tick on the checkbox aligned newar to 'Is Multiple A/C'
+[INFO ] 2025-02-25 18:05:22.967 [main] Log - Tick is already selected.
+[INFO ] 2025-02-25 18:05:22.968 [main] Log - Expected Result : Text field is enabled on adding the Tcick
+[INFO ] 2025-02-25 18:05:23.003 [main] Log - TC:38 - Multiple Account Checkbox
+[INFO ] 2025-02-25 18:05:32.517 [main] Log - Step:01 - Enter 5 as the count visible on the Text box appered near to the Checbox
+[INFO ] 2025-02-25 18:05:33.579 [main] Log - Expected Result: 5 is entred Successfully.
+[INFO ] 2025-02-25 18:05:33.612 [main] Log - TC:39 - Final Deposit Configuration
+[INFO ] 2025-02-25 18:05:39.092 [main] Log - Step 01: Select 'Trans.mode'as Transfer.
+[INFO ] 2025-02-25 18:05:39.421 [main] Log - Expected Result: Post Debit Button will be display
+[INFO ] 2025-02-25 18:05:39.487 [main] Log - TC:40 - Deposit Submission with Transfer
+[INFO ] 2025-02-25 18:05:44.043 [main] Log - Step 1: Click on 'Post Debit' button
+[INFO ] 2025-02-25 18:05:44.157 [main] Log - Expected Result: Auto posting popup window will be opened
+[INFO ] 2025-02-25 18:05:44.202 [main] Log - TC:41 - Deposit Submission with Transfer
+[INFO ] 2025-02-25 18:05:54.441 [main] Log - Step 1: Give transaction based as 'GL Code'
+[INFO ] 2025-02-25 18:05:55.610 [main] Log - Expected Result: GL code related field will be display (GL name,GL code)
+[INFO ] 2025-02-25 18:05:55.652 [main] Log - TC:42 - Deposit Submission with Transfer
+[INFO ] 2025-02-25 18:06:11.595 [main] Log - Step 1: Select the 'GL Name' from the drop down
+[INFO ] 2025-02-25 18:06:12.767 [main] Log - Expected Result: GL code will be autoloads while selecting the GL Name
+[INFO ] 2025-02-25 18:06:12.799 [main] Log - TC:43 - Deposit Submission with Transfer
+[INFO ] 2025-02-25 18:06:28.739 [main] Log - 2500000
+[INFO ] 2025-02-25 18:06:28.739 [main] Log - Step 1: Give the amount in 'Amount' field
+[INFO ] 2025-02-25 18:06:34.193 [main] Log - Step 2: Click 'Add' button
+[INFO ] 2025-02-25 18:06:35.337 [main] Log - Expected Result: Given details will be displays in the grid
+[INFO ] 2025-02-25 18:06:35.377 [main] Log - TC:44 - Deposit Submission with Transfer
+[INFO ] 2025-02-25 18:06:51.266 [main] Log - 2500000
+[INFO ] 2025-02-25 18:07:01.100 [main] Log - Step 1: Click submit button after adding the details in the auto posting popup window
+[INFO ] 2025-02-25 18:07:01.104 [main] Log - Expected Result: Popup window will be closed
+[INFO ] 2025-02-25 18:07:01.145 [main] Log - TC:45 - Deposit Submission with Transfer
+[INFO ] 2025-02-25 18:07:17.077 [main] Log - 2500000
+[INFO ] 2025-02-25 18:07:26.816 [main] Log - Switch back to main window
+[INFO ] 2025-02-25 18:07:34.257 [main] Log - Step 1: Click Save button after giving the post credit details
+[INFO ] 2025-02-25 18:07:34.257 [main] Log - Expected Result: Deposit opening is saved, results in summary, Five account is opened Successfully
+[INFO ] 2025-02-25 18:07:35.299 [main] Log - Expected Result: Summary will be generated
+[INFO ] 2025-02-25 18:07:36.370 [main] Log - Expected Result: Summary will be generated
+[INFO ] 2025-02-25 18:07:36.421 [main] Log - TC:46 - Manager authorization
+[INFO ] 2025-02-25 18:07:36.421 [main] Log - Logout
+[INFO ] 2025-02-25 18:07:42.949 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-02-25 18:07:44.005 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-02-25 18:07:45.056 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-02-25 18:07:46.107 [main] Log - Step:02 - Enter valid Password
+[INFO ] 2025-02-25 18:07:52.486 [main] Log - Step:01 - Login as another user.
+[INFO ] 2025-02-25 18:08:06.368 [main] Log - Step:02 - Navigate to Authorize&cancel -> Manager authorization window.
+[INFO ] 2025-02-25 18:08:07.407 [main] Log - Expected Result: Manager authorization window opens
+[INFO ] 2025-02-25 18:08:07.438 [main] Log - TC:47 - Manager authorization
+[INFO ] 2025-02-25 18:08:11.764 [main] Log - Step:01 - Click 'Transfer' button.
+[INFO ] 2025-02-25 18:08:12.812 [main] Log - Expected Result: Transfer Tab loads
+[INFO ] 2025-02-25 18:08:12.842 [main] Log - TC:48 - Manager Authorization
+[INFO ] 2025-02-25 18:08:17.140 [main] Log - Step:01 - Click 'Refresh' button.
+[INFO ] 2025-02-25 18:08:18.198 [main] Log - Expected Result: Entry will be display
+[INFO ] 2025-02-25 18:08:18.239 [main] Log - TC:49 - Manager Authorization
+[INFO ] 2025-02-25 18:08:29.076 [main] Log - Step:01 - Select check box of opening entry.
+[INFO ] 2025-02-25 18:08:29.091 [main] Log - Expected Result: Possible to select the entry
+[INFO ] 2025-02-25 18:08:29.139 [main] Log - TC:50 - Manager Authorization
+[INFO ] 2025-02-25 18:08:34.481 [main] Log - Step:01 - Click Authorize button
+[INFO ] 2025-02-25 18:08:35.555 [main] Log - Expected Result: Transaction is authorized by Manager.
+[INFO ] 2025-02-25 18:08:42.936 [main] Log - Logout
+[INFO ] 2025-02-25 18:08:51.512 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-02-25 18:08:52.580 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

@@ -41,7 +41,7 @@ public class AllScenarios_Multi_MultiFD_Opening_Transfer extends Base_Class {
 	}
 
 	@Test(dataProvider = "TestData")
-	public void Multi_MultiFD_Opening(Map<Object, Object> testdata, ITestContext context)
+	public void Multi_MultiFD_Opening_Transfer(Map<Object, Object> testdata, ITestContext context)
 			throws ClassNotFoundException, InterruptedException, IOException {
 		try {
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes")) {
