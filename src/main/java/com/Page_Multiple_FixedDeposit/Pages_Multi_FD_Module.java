@@ -106,7 +106,7 @@ public class Pages_Multi_FD_Module
 		public By CashSectionEntry = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect']");
 		public By ManagerCheckBox = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect']");
 		public By ClosePopup = By.xpath("//img[@id = 'closetop']");
-		public By ManagerSelectCheckBox = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl9_chkSelect']");
+		public By ManagerSelectCheckBox = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect']");
 		public By PostDebit = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstAcInfo_ctrl0_AIF1_btnAutoPost']");
 		public By TransactionBased = By.xpath("//select[@id='ddlTrnsBased_ddl']");
 		public By GLName = By.xpath("//input[@id = 'hyjackText0']");

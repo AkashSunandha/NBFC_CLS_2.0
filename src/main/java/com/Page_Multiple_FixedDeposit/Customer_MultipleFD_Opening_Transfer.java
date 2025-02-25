@@ -28,8 +28,19 @@ public class Customer_MultipleFD_Opening_Transfer extends Base_Class {
 	Pages_Multi_FD_Module multifd = new Pages_Multi_FD_Module();
 	
 	ScreenShot sc = new ScreenShot(null);
-
-//Customer Login Window
+	
+	String transIdCashPersonal;
+    String transIdTransferPersonal;
+	
+	public boolean FetchwithTransID(String transID) throws InterruptedException {
+		
+		input(multifd.TransactionIDField,transID);
+		click(multifd.GoBTN);
+		
+		ExtentTestManager.endTest();
+		return true;
+		
+	}
 	public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context)
 			throws ClassNotFoundException, InterruptedException, IOException {
 		ExtentTestManager.startTest("TC:01 - Login to NBFC Application");
@@ -1087,38 +1098,42 @@ public boolean AddOperatorBtn() throws InterruptedException {
 	
 		ExtentTestManager.startTest("TC:34 - Interest Transfer Data Entry");
 		Log.info("TC:34 - Interest Transfer Data Entry");
+	
+			
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
-				
-			WebDriverWait wait = new WebDriverWait(driver, 10);
-			
-		    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("progressdiv")));
+	    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("progressdiv")));
 
-			
-			WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtExeFrequency_txt']")));
-			option.click();
-
-			WebElement FrequencyField = driver.findElement(multifd.Frequency);
-			
-			String EnterFrequency = testdata.get("Frequency").toString();
-			input(multifd.Frequency, EnterFrequency);
-			
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter the Frequency as 1");
-			Log.info("Step:01 - Enter the Frequency as 1");
 		
-			Assert.assertEquals(FrequencyField.getAttribute("value"), EnterFrequency, "Validation Failed: Frequency Field is not entered correctly.");
-			//Assert.assertTrue(ElementDisplayed(multifd.Frequency), "Validation Failed: Frequency Field is not entered.");
-						
-			FrequencyField.sendKeys(Keys.TAB);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on TAB button in the keyboard");
-			Log.info("Step:02 - Click on TAB button in the keyboard");
-			
-			
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Amount,  Startdate and End date are autoloaded.");
-			Log.info("Expected Result: Amount,  Startdate and End date are autoloaded.");
+		WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtExeFrequency_txt']")));
+		option.click();
 
-		ExtentTestManager.endTest();
-		return true;
-	}
+		WebElement FrequencyField = driver.findElement(multifd.Frequency);
+		
+		WebElement transactionField = wait.until(ExpectedConditions.visibilityOfElementLocated(multifd.Frequency));
+		
+		String EnterFrequency = testdata.get("Frequency").toString();
+		transactionField.sendKeys(EnterFrequency);
+
+		//input(multifd.Frequency, EnterFrequency);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter the Frequency as 1");
+		Log.info("Step:01 - Enter the Frequency as 1");
+	
+		Assert.assertEquals(FrequencyField.getAttribute("value"), EnterFrequency, "Validation Failed: Frequency Field is not entered correctly.");
+		//Assert.assertTrue(ElementDisplayed(multifd.Frequency), "Validation Failed: Frequency Field is not entered.");
+					
+		FrequencyField.sendKeys(Keys.TAB);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on TAB button in the keyboard");
+		Log.info("Step:02 - Click on TAB button in the keyboard");
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Amount,  Startdate and End date are autoloaded.");
+		Log.info("Expected Result: Amount,  Startdate and End date are autoloaded.");
+
+	ExtentTestManager.endTest();
+	return true;
+}
 
 	public boolean OnMaturityTabNavigation() throws InterruptedException {
 	
@@ -1583,12 +1598,32 @@ public boolean AddOperatorBtn() throws InterruptedException {
 	Log.info("Expected Result: Deposit opening is saved, results in summary, Five account is opened Successfully");
 	}	
 	}
+
+	if(ElementDisplayed(multifd.SummaryPage)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary will be generated");
+		Log.info("Expected Result: Summary will be generated");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+	transIdTransferPersonal = driver.findElement(multifd.TrasID).getText();
+	
 }
+	if(ElementDisplayed(multifd.SummaryPage)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary will be generated");
+		Log.info("Expected Result: Summary will be generated");
+		}
+	else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+	transIdTransferPersonal = driver.findElement(multifd.TrasID).getText();	
+	
 	ExtentTestManager.endTest();
 	return true;
 
 }
-	public boolean ManagerAuthorization(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	public boolean ManagerAuthorization(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException{
 	
 	ExtentTestManager.startTest("TC:46 - Manager authorization");
 	Log.info("TC:46 - Manager authorization");
@@ -1606,11 +1641,17 @@ public boolean AddOperatorBtn() throws InterruptedException {
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
 	Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 	
-	String loginNewUserName = testdata.get("LoginNewUserName").toString();
-	input(multifd.loginUserName, loginNewUserName);
+	String UserName1 = configloader().getProperty("UserName1");
+	//String loginNewUserName = testdata.get("LoginNewUserName").toString();
+	input(multifd.loginUserName, UserName1);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
+	Log.info("Step:01 - Enetered valid User Name");
 			
-	String loginNewValidPassword = testdata.get("LoginNewPassword").toString();
-	input(multifd.loginPasswrd, loginNewValidPassword);
+	String Password1 = configloader().getProperty("Password1");
+	//String loginNewValidPassword = testdata.get("LoginNewPassword").toString();
+	input(multifd.loginPasswrd, Password1);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");
+	Log.info("Step:02 - Enter valid Password");
 
 	click(multifd.loginButton);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Login as another user.");
@@ -1685,6 +1726,9 @@ public boolean AddOperatorBtn() throws InterruptedException {
 		ExtentTestManager.startTest("TC:49 - Manager Authorization");
 		Log.info("TC:49 - Manager Authorization");
 		
+		System.out.println("transIdTransferPersonal "+transIdTransferPersonal);
+		FetchwithTransID(transIdTransferPersonal);
+		
 		WebElement SelectCheckbox = driver.findElement(multifd.ManagerSelectCheckBox);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", SelectCheckbox);
@@ -1696,7 +1740,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select check box of opening entry.");
 		Log.info("Step:01 - Select check box of opening entry.");
 		
-		Assert.assertTrue(ElementDisplayed(multifd.ManagerSelectCheckBox), "Validation Failed: Transaction entry from the transfer section not selected.");
+		Assert.assertTrue(SelectCheckbox.isSelected(), "Validation Failed: 'Checkbox' is not selected.");
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the entry");
 		Log.info("Expected Result: Possible to select the entry");
