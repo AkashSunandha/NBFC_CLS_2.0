@@ -3,6 +3,7 @@ package com.Page_Customer;
 import java.io.IOException;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestContext;
@@ -24,7 +25,7 @@ public class Customer_AccountOpening_FixedDeposit extends Base_Class
 	PageRepositary_AccountOpening_FixedDeposit fixeddeposit= new PageRepositary_AccountOpening_FixedDeposit();
 	//PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-
+   String Transactionid;
 	ScreenShot sc = new ScreenShot(null);
 	
 	//Navigate to Deposit Opening Window
@@ -717,6 +718,9 @@ return true;
 			Log.info("ExpectedResult: cash opening is not possible and Summary is not generated  " +false);
 			Thread.sleep(1000);
 		}
+		Transactionid = driver.findElement(fixeddeposit.Transactionid).getText();
+		System.out.println(Transactionid);
+		
 		
 		ExtentTestManager.endTest();
 		return true;
@@ -762,6 +766,8 @@ return true;
 		ExtentTestManager.startTest("TC:22 - Cashier Authorization");
 		Log.info("TC:22 - Cashier Authorization");
 		Thread.sleep (2000);
+		ScrollUntilElementVisible(fixeddeposit.Authorizeandcanceltab);
+		click(fixeddeposit.Authorizeandcanceltab);
 //		click(fixeddeposit.Accountopening);
 //		click(fixeddeposit.Authorizeandcanceltab);
 		click(fixeddeposit.cashierauthorization);
@@ -769,6 +775,8 @@ return true;
 		Log.info("Step:01 -Navigate to \"Cashier Authorization\" module");
 		
 		click(fixeddeposit.Refresh);
+		input(fixeddeposit.TransactionIDtextbox, Transactionid);
+  		click(fixeddeposit.Go);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click \"Refresh");
 		Log.info("Step:02 -Click \"Refresh");
 		
@@ -804,9 +812,6 @@ return true;
 	public Boolean Manager_Authorization_Cash_Tab() throws InterruptedException {
 		ExtentTestManager.startTest("TC:23 - Manager Authorization - Cash Tab");
 		Log.info("TC:23 - Manager Authorization - Cash Tab");
-		
-		ScrollUntilElementVisible(fixeddeposit.Authorizeandcanceltab);
-		click(fixeddeposit.Authorizeandcanceltab);
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Go to \"Authorize & Cancel\"");
 		Log.info("Step:01 -Go to \"Authorize & Cancel\"");
@@ -864,6 +869,8 @@ return true;
 		Log.info("TC:25 - Authorize Loan Entry as Manager");
 		
 	    //Thread.sleep(20000);
+		input(fixeddeposit.TransactionIDtextbox, Transactionid);
+  		click(fixeddeposit.Go);
 		click(fixeddeposit.checkboxselect1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select loan entry checkbox");
 		Log.info("Step:01 -Select loan entry checkbox");
@@ -884,6 +891,7 @@ return true;
 
 		}
 		click(fixeddeposit.cancelpopup);
+		click(fixeddeposit.signout);
 		
 		Thread.sleep(20000);
 		ExtentTestManager.endTest();
@@ -897,9 +905,9 @@ public boolean Deposit_opening_Transfer(Map<Object, Object> testdata, ITestConte
 
 		ExtentTestManager.startTest("TC:26 - Deposit opening-Transfer");
 		ScrollUntilElementVisible(fixeddeposit.Accountopening);
-		click(fixeddeposit.Accountopening);
-		click(fixeddeposit.Depositopening);
-		click(fixeddeposit.FixedDeposit);
+		//click(fixeddeposit.Accountopening);
+		//click(fixeddeposit.Depositopening);
+		//click(fixeddeposit.FixedDeposit);
 		click(fixeddeposit.Bondcumulativetpe);
 		
 		
@@ -1249,7 +1257,22 @@ select("GL Code", fixeddeposit.Transaction_Based);
 			click(fixeddeposit.save);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click save button");
 				Log.info("Step:02 - Click save button");
+				if (ElementDisplayed(fixeddeposit.summary)) {
+					
+					ExtentTestManager.getTest().log(Status.PASS,"cash opening possible and Summary is generated ");
+					Log.info("ExpectedResult: cash opening possible and Summary is generated "  );
+					
+				} else {
+					ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: cash opening is not possible and Summary is not generated " + false);
+					Log.info("ExpectedResult: cash opening is not possible and Summary is not generated  " +false);
+					Thread.sleep(1000);
+				}
+				Transactionid = driver.findElement(fixeddeposit.Transactionid).getText();
+				System.out.println(Transactionid);
+				click(fixeddeposit.signout);
 		}
+		
+		
 		public boolean Login_with_Another_User_transferauthorize(Map<Object,Object>testdata,ITestContext context) throws InterruptedException {
 			ExtentTestManager.startTest("TC:27 - Login with Another User");
 			Log.info("TC:27 - Login with Another User");
@@ -1283,7 +1306,9 @@ select("GL Code", fixeddeposit.Transaction_Based);
 		 public Boolean Manager_Authorization_Transfer_Tab() throws InterruptedException {
 				ExtentTestManager.startTest("TC:28 - 2.Navigate to \"Manager Authorization\" module");
 				Log.info("TC:28 -2.Navigate to \"Manager Authorization\" module");
-				 click(fixeddeposit.Authorize_canceltab);
+				
+				ScrollUntilElementVisible(fixeddeposit.Manager_Authorization_Transfer_Tab);
+				// click(fixeddeposit.Authorize_canceltab);
 				click(fixeddeposit.Manager_Authorization_Transfer_Tab);
 				//click(fixeddeposit.Transfertab);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select \"Manager Authorization\"");
@@ -1308,6 +1333,7 @@ select("GL Code", fixeddeposit.Transaction_Based);
 		 public Boolean Transfertab() throws InterruptedException {
 				ExtentTestManager.startTest("TC:29 - 2.Navigate to \"Manager Authorization\" module");
 				Log.info("TC:29 -2.Navigate to \"Manager Authorization\" module");
+				
 				click(fixeddeposit.Transfertab);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 -click transfer button");
 				Log.info("Step:01 -click transfer button");
@@ -1361,11 +1387,13 @@ select("GL Code", fixeddeposit.Transaction_Based);
 				ExtentTestManager.startTest("TC:31- Authorize Loan Entry as Manager");
 				Log.info("TC:31 - Authorize Loan Entry as Manager");
 				
-			    //Thread.sleep(20000);
-				click(fixeddeposit.checkboxselect1_transfer);
-				ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select loan entry checkbox");
-				Log.info("Step:01 -Select loan entry checkbox");
-				//Thread.sleep(20000);
+
+		  		input(fixeddeposit.TransactionIDtextbox, Transactionid);
+		  		
+		  		click(fixeddeposit.Go);
+		  		
+		  		click(fixeddeposit.Checkboxselect1_transfer);
+		  		
 				click(fixeddeposit.Authorizebutton1_transfer);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click \"Authorize\" button");
 				Log.info("Step:02 -Click \"Authorize\" button");

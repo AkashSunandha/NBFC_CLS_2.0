@@ -54,7 +54,7 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				//PC Registration
 				custSrchMthds.pcRegistration(testdata, context);
 			
-			//TC 01
+			    //TC 01
 				//User Login
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
@@ -108,13 +108,15 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				fixeddeposit.next_button_functioanlity();
 				
 				//TC19
-				fixeddeposit.On_Maturity_Settings();
+				fixeddeposit.On_Maturity_Settings(); 
 				
-				//TC21
+			//TC21
 				fixeddeposit.Login_with_Another_User(testdata, context);
 				
-				
 				//TC22
+				fixeddeposit.Cashier_Authorization();
+				
+				//TC23
 				fixeddeposit.Manager_Authorization_Cash_Tab();
 				
 				
@@ -125,15 +127,9 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				//TC26
 				fixeddeposit.Authorize_Loan_Entry_as_Manager();
 				
-				//TC23
-				fixeddeposit.Cashier_Authorization(); 
+				 
 				
-				custSrchMthds.logout();
-				Base_Class.SetUp();
-				
-				//PC Registration
-				custSrchMthds.pcRegistration(testdata, context); 
-				
+			 
 				//TC20
 				fixeddeposit.Deposit_opening_Transfer(testdata, context);
 				
@@ -157,16 +153,8 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				 
 				 
 				 
-				 // TC26
-				 fixeddeposit.save();
-				 
-				 //Sign out
-				custSrchMthds.logout();
-				
-				Base_Class.SetUp();
-				
-				//PC Registration
-				custSrchMthds.pcRegistration(testdata, context); 
+				 // TC26 
+				 fixeddeposit.save(); 
 				 
 			    //TC27
 				fixeddeposit.Login_with_Another_User_transferauthorize(testdata, context);

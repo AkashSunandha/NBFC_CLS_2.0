@@ -153,6 +153,8 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 		//Cashier Authorization
 		public By Authorizeandcanceltab=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/div");
 		public By cashierauthorization=By.linkText("Cashier Authorisation (CAAU)");
+		//public By Transacid =By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
+		//public By TransactionIDtext = By.id ("ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt");
 		public By Refresh=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
 		public By checkboxselect=By.id("ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect");
 		public By Authorizebutton=By.id("ctl00_ctl00_CPH1_PRDCNT_btnSubmit");
@@ -203,9 +205,14 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 				public By Transfertab = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_tab\"]");
 				public By Manager_Authorization_Transfer_Tab =By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/ul/li[4]/a");
 				public By Refresh_1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
-				public By checkboxselect1_transfer=By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div/div[3]/table/tbody/tr/td/div/div[2]/div[2]/div/table/tbody/tr/td/div[2]/div/div/table/tbody/tr[2]/td[2]");
+				
+				public By TransactionIDtextbox = By.id("ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt"); 
+			public By Transactionid =By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
+				public By Go = By.id("ctl00_ctl00_CPH1_PRDCNT_btnGo");
+				//public By checkboxselect1_transfer=By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div/div[3]/table/tbody/tr/td/div/div[2]/div[2]/div/table/tbody/tr/td/div[2]/div/div/table/tbody/tr[2]/td[2]");
+				public By Checkboxselect1_transfer =By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect");
 				public By Authorizebutton1_transfer=By.id("ctl00_ctl00_CPH1_PRDCNT_btnOtherPass");
-			
+	
 				
 			
 				
