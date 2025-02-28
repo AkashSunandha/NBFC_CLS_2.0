@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening_Cash">
+      <class name="com.test.Closure_and_Renewals.AllScenarios_Loan_Closure_Cash">
         <methods>
-          <include name="Multi_MultiFD_Opening" invocation-numbers="0"/>
           <include name="reference"/>
+          <include name="Loan_Closure_Cash" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.Multiple_FixedDeposit.AllScenarios_Multi_MultiFD_Opening_Cash -->
+      </class> <!-- com.test.Closure_and_Renewals.AllScenarios_Loan_Closure_Cash -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

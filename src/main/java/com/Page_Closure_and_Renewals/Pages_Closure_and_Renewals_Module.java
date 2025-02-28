@@ -25,13 +25,30 @@ public class Pages_Closure_and_Renewals_Module
 		
 		//Account Opening sub module
 		
-		public By AccOpening = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[contains(@class,'submenu')]/ul[@id='CreateMenu']/li[6]/div[1]");
-		public By DepositOpening = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[contains(@class,'submenu')]/ul[@id='CreateMenu']/li[6]/ul[1]/li[1]/div[1]");
-		public By FixedDeposit = By.xpath("//li[contains(@class,'open')]//li[contains(@class,'open')]//div[contains(@class,'last symbol-close')]");
-		public By FixedType2Years = By.xpath("//a[contains(text(),'DEBUNTURE FIXED TYPE 2 YRS')]");
-
+		public By ClosureRenewal = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/div");
+		public By LoanClosure = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/ul/li[7]/a");
+		public By ProductGroup = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlProductGroup']");
+		public By ProductName = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlProduct_ddl']");
+		public By AccountNumber = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_txtAcNo_txt']");
+		public By GoBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_btnGo']");
+		public By LoanDetailsSection= By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[6]/div/div[2]/table/tbody/tr[2]/td/table");
+		public By PreMatureClosure = By.xpath("/html/body/form/div[12]/div[3]/div/button[1]/span");
+		public By RenewAccount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucLoanClosure_chkRenewLoanAccount']");
+		public By RenewAccountDetails = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[6]/div/div[4]/div[1]/table/tbody/tr[2]/td/table[2]");
+		public By SecurityDetails = By.xpath("//input[@id ='btnSecurityDetails']");
+		public By ItemGroup = By.xpath("//select[@id ='JSF_ddlItemGroup_ddl']");
+		public By ItemName = By.xpath("//select[@id = 'JSF_ddlItems_ddl']");
+		public By ItemDesption = By.xpath("//input[@id ='JSF_txtJewelDescription_txt']");
+		public By ItemQty = By.xpath("//input[@id ='JSF_txtItemQty_txt']");
+		public By StoneWeight = By.xpath("//input[@id ='JSF_txtStoneWeight_txt']");
+		public By PurityTest = By.xpath("//input[@id ='JSF_Repeater1_ctl01_chkpuritytest']");
+		public By ItemWeight  = By.xpath("//input[@id ='JSF_txtItemWeight_txt']");
+		public By DirtWeight = By.xpath("//input[@id ='JSF_txtDirtWeight_txt']");
+		public By EnterPurity = By.xpath("//input[@id ='JSF_txtPurity_txt']");
+		public By AddBtn = By.xpath("//input[@id ='JSF_btnGoldAdd']");
+		public By Appraiser = By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']");
+		public By SubmitBtn = By.xpath("//input[@id ='btnSubmit']");
 		
-
 		
 		//Customer Search Window
 		public By cust = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/div");
@@ -40,7 +57,7 @@ public class Pages_Closure_and_Renewals_Module
 		public By SearchBtn = By.id("PopQuick1_btnSearch");
 		public By SelectCust = By.id("PopQuick1_lst_ctrl0_linkSelect");
 		public By SelectCustName = By.id("PopQuick1_lst_ctrl4_linkSelect");
-		public By AddBtn = By.id("ctl00_ctl00_CPH1_PRDCNT_lstProAccInfo_ctrl0_PAI_btnAddCustomer");
+		//public By AddBtn = By.id("ctl00_ctl00_CPH1_PRDCNT_lstProAccInfo_ctrl0_PAI_btnAddCustomer");
 		public By OkBtn = By.xpath("//span[@class = 'ui-button-text']");
 		public By Amount = By.xpath("//input[@id= 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_txtAcOpeningAmount_txt']");
 		public By DurationNum = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_txtDuration_txt']");
@@ -83,7 +100,7 @@ public class Pages_Closure_and_Renewals_Module
 		public By TransMode = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_lstAcInfo_ctrl0_AIF1_ddlTransMode_ddl']");
 		public By SaveBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnSave']");
 		public By SelectProduct = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_ddlFromProduct_ddl']");
-		public By AccountNumber = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtStandAcNoF_txt']");
+		//public By AccountNumber = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtStandAcNoF_txt']");
 		public By Frequency = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtExeFrequency_txt']");
 		public By Amount1 = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpStandInst_ucStandInst_txtStandAmount_txt']");
 		public By OkPopup = By.xpath("//span[normalize-space()='OK']");

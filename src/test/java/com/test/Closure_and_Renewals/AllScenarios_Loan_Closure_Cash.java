@@ -55,16 +55,68 @@ public class AllScenarios_Loan_Closure_Cash extends Base_Class {
 				ExtentTestManager.endTest();
 
 				// PC Registration
-				LoanClosureCash.pcRegistration__Loan_Closure_Cash(testdata, context);
+				custSrchMthds.pcRegistration(testdata, context);
 
 				// TC_01 ---> Login to NBFC Application
-				multifdCash.userLoginValidPaswrd(testdata, context);
+				LoanClosureCash.userLoginValidPaswrd(testdata, context);
 
-				// TC_02 ----> Access Deposit Opening Window
-				multifdCash.DepositOpeningWindow();
+				// TC_02 ----> Open Account Closure Window
+				LoanClosureCash.OpenAccountClosureWindow();
+				
+				//TC_03 ---> Select Jewel Loan Product Group
+				LoanClosureCash.SelectJewelLoanProductGroup();
+				
+				//TC_04 ---> Select Product Name from Dropdown
+				LoanClosureCash.SelectProductNamefromDropdown();
+				
+				//TC_05 ---> EnterLoanAccountNumber
+				LoanClosureCash.EnterLoanAccountNumber();
+				
+				//TC_06 ---> Display Loan Account Details
+				LoanClosureCash.DisplayLoanAccountDetails();
+				
+				//TC_07 ---> ExpandRenewalSection
+				LoanClosureCash.ExpandRenewalSection();
+				
+				//TC_08 ---> OpenSecurityDetailsPopup
+				LoanClosureCash.OpenSecurityDetailsPopup();
+				
+				//TC_09 ---> Add Security Details
+				LoanClosureCash.AddSecurityDetails();
+				
+				//TC_10 ---> Add Security Details Item Name
+				LoanClosureCash.AddSecurityDetailsItemName();
+				
+				//TC_11 ---> AddSecurityDetailsItemDescription
+				LoanClosureCash.AddSecurityDetailsItemDescription(testdata, context);
+				
+				//TC_12 ---> AddSecurityDetailsItemQuantity
+				LoanClosureCash.AddSecurityDetailsItemQuantity(testdata, context);
+				
+				//TC_13 ---> AddSecurityDetailsStoneWeight
+				LoanClosureCash.AddSecurityDetailsStoneWeight(testdata, context);
+				
+				//TC_14 ---> AddSecurityDetailsTickPurityCheckbox
+				LoanClosureCash.AddSecurityDetailsTickPurityCheckbox(testdata, context);
+				
+				//TC_15 ---> AddSecurityDetailsItemWeight
+				LoanClosureCash.AddSecurityDetailsItemWeight(testdata, context);
+				
+				//TC_16 ---> AddSecurityDetailsDirtWeight
+				LoanClosureCash.AddSecurityDetailsDirtWeight(testdata, context);
+				
+				//TC_17 --->
+				LoanClosureCash.AddSecurityDetailsEnterPurity(testdata, context);
+				
+				//TC_18 --->
+				LoanClosureCash.AddSecurityDetailsAdd(testdata, context);
+				
+				//TC_19 ---> CloseSecurityDetailsPopup
+				LoanClosureCash.CloseSecurityDetailsPopup(testdata, context);
+				
+				//TC_20 ---> CloseSecurityDetailsPopupSubmit
+				LoanClosureCash.CloseSecurityDetailsPopupSubmit(testdata, context);
 
-				// TC_03 -----> Customer Search and Selection
-				multifdCash.customerSearchandSelectionWindow(testdata, context);
 				
 								
 				// Sign out
