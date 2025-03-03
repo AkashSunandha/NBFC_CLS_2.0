@@ -1,4 +1,4 @@
-package com.Page_Closure_and_Renewals;
+package com.Pages_Jewel_Gold_Loan_Renewal_Module;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -30,7 +30,7 @@ import com.extentReports.ExtentTestManager;
 
 public class Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 	
-	Pages_Jewel_Gold_Loan_Renewals_Module LoanClosureCash = new Pages_Jewel_Gold_Loan_Renewals_Module();
+	Pages_Jewel_Gold_Loan_Renewals LoanClosureCash = new Pages_Jewel_Gold_Loan_Renewals();
 	
 	ScreenShot sc = new ScreenShot(null);
 	

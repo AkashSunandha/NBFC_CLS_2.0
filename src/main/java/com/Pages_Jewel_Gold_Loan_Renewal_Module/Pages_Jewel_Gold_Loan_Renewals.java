@@ -1,9 +1,9 @@
-package com.Page_Closure_and_Renewals;
+package com.Pages_Jewel_Gold_Loan_Renewal_Module;
 
 import org.openqa.selenium.By;
 
 
-public class Pages_Jewel_Gold_Loan_Renewals_Module
+public class Pages_Jewel_Gold_Loan_Renewals
 {
 	//PC Registration
 		public By formName = By.xpath("//*[@id='Username']");

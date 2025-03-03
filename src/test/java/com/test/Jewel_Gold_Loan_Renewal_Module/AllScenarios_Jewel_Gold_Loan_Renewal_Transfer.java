@@ -1,4 +1,4 @@
-package com.test.Closure_and_Renewals;
+package com.test.Jewel_Gold_Loan_Renewal_Module;
 
 import java.io.IOException;
 import java.util.Map;
@@ -19,7 +19,7 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_Loan_Closure_Cash extends Base_Class {
+public class AllScenarios_Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
@@ -28,11 +28,11 @@ public class AllScenarios_Loan_Closure_Cash extends Base_Class {
 
 	Customer_MultipleFD_Opening_Cash multifdCash = new Customer_MultipleFD_Opening_Cash();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	com.Page_Closure_and_Renewals.Jewel_Gold_Loan_Renewal_Cash GoldLoanRenewalCash = new com.Page_Closure_and_Renewals.Jewel_Gold_Loan_Renewal_Cash();
+	com.Pages_Jewel_Gold_Loan_Renewal_Module.Jewel_Gold_Loan_Renewal_Transfer GoldLoanRenewalTransfer = new com.Pages_Jewel_Gold_Loan_Renewal_Module.Jewel_Gold_Loan_Renewal_Transfer();
 	
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("Jewel_Gold_Loan_Renewal_Cash");
+		ExcelReader = new com.Utility.ExcelReader("Jewel_Gold_Loan_Renewal_Transfer");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -57,106 +57,106 @@ public class AllScenarios_Loan_Closure_Cash extends Base_Class {
 				custSrchMthds.pcRegistration(testdata, context);
 
 				// TC_01 ---> Login to NBFC Application
-				GoldLoanRenewalCash.userLoginValidPaswrd(testdata, context);
+				GoldLoanRenewalTransfer.userLoginValidPaswrd(testdata, context);
 
 				// TC_02 ----> Open Account Closure Window
-				GoldLoanRenewalCash.OpenAccountClosureWindow();
+				GoldLoanRenewalTransfer.OpenAccountClosureWindow();
 				
 				//TC_03 ---> Select Jewel Loan Product Group
-				GoldLoanRenewalCash.SelectJewelLoanProductGroup();
+				GoldLoanRenewalTransfer.SelectJewelLoanProductGroup();
 				
 				//TC_04 ---> Select Product Name from Dropdown
-				GoldLoanRenewalCash.SelectProductNamefromDropdown();
+				GoldLoanRenewalTransfer.SelectProductNamefromDropdown();
 				
 				//TC_05 ---> EnterLoanAccountNumber
-				GoldLoanRenewalCash.EnterLoanAccountNumber();
+				GoldLoanRenewalTransfer.EnterLoanAccountNumber();
 				
 				//TC_06 ---> Display Loan Account Details
-				GoldLoanRenewalCash.DisplayLoanAccountDetails();
+				GoldLoanRenewalTransfer.DisplayLoanAccountDetails();
 				
 				//TC_07 ---> ExpandRenewalSection
-				GoldLoanRenewalCash.ExpandRenewalSection();
+				GoldLoanRenewalTransfer.ExpandRenewalSection();
 				
 				//TC_08 ---> OpenSecurityDetailsPopup
-				GoldLoanRenewalCash.OpenSecurityDetailsPopup();
+				GoldLoanRenewalTransfer.OpenSecurityDetailsPopup();
 				
 				//TC_09 ---> Add Security Details
-				GoldLoanRenewalCash.AddSecurityDetails();
+				GoldLoanRenewalTransfer.AddSecurityDetails();
 				
 				//TC_10 ---> Add Security Details Item Name
-				GoldLoanRenewalCash.AddSecurityDetailsItemName();
+				GoldLoanRenewalTransfer.AddSecurityDetailsItemName();
 				
 				//TC_11 ---> AddSecurityDetailsItemDescription
-				GoldLoanRenewalCash.AddSecurityDetailsItemDescription(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsItemDescription(testdata, context);
 				
 				//TC_12 ---> AddSecurityDetailsItemQuantity
-				GoldLoanRenewalCash.AddSecurityDetailsItemQuantity(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsItemQuantity(testdata, context);
 				
 				//TC_13 ---> AddSecurityDetailsStoneWeight
-				GoldLoanRenewalCash.AddSecurityDetailsStoneWeight(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsStoneWeight(testdata, context);
 				
 				//TC_14 ---> AddSecurityDetailsTickPurityCheckbox
-				GoldLoanRenewalCash.AddSecurityDetailsTickPurityCheckbox(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsTickPurityCheckbox(testdata, context);
 				
 				//TC_15 ---> AddSecurityDetailsItemWeight
-				GoldLoanRenewalCash.AddSecurityDetailsItemWeight(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsItemWeight(testdata, context);
 				
 				//TC_16 ---> AddSecurityDetailsDirtWeight
-				GoldLoanRenewalCash.AddSecurityDetailsDirtWeight(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsDirtWeight(testdata, context);
 				
 				//TC_17 ---> AddSecurityDetailsEnterPurity
-				GoldLoanRenewalCash.AddSecurityDetailsEnterPurity(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsEnterPurity(testdata, context);
 				
 				//TC_18 ---> AddSecurityDetailsAdd
-				GoldLoanRenewalCash.AddSecurityDetailsAdd(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsAdd(testdata, context);
 				
 				//TC_19 ---> CloseSecurityDetailsPopup
-				GoldLoanRenewalCash.CloseSecurityDetailsPopup(testdata, context);
+				GoldLoanRenewalTransfer.CloseSecurityDetailsPopup(testdata, context);
 				
 				//TC_20 ---> CloseSecurityDetailsPopupSubmit
-				GoldLoanRenewalCash.CloseSecurityDetailsPopupSubmit(testdata, context);
+				GoldLoanRenewalTransfer.CloseSecurityDetailsPopupSubmit(testdata, context);
 				
 				//TC_21 ---> EnterSanctionedAmount
-				GoldLoanRenewalCash.EnterSanctionedAmount(testdata, context);
+				GoldLoanRenewalTransfer.EnterSanctionedAmount(testdata, context);
 				
 				//TC_22 ---> GetValuewithCashTransactionMode
-				GoldLoanRenewalCash.GetValuewithCashTransactionMode();
+				GoldLoanRenewalTransfer.GetValuewithCashTransactionMode();
 				
 				//TC_23 ---> GetValuewithCashTransactionMode
-				GoldLoanRenewalCash.GetValuewithCashTransactionMode(testdata, context);
+				GoldLoanRenewalTransfer.GetValuewithCashTransactionMode(testdata, context);
 				
 				//TC_24 ---> EnterRemarksandSelectClosureType
-				GoldLoanRenewalCash.EnterRemarksandSelectClosureType(testdata, context);
+				GoldLoanRenewalTransfer.EnterRemarksandSelectClosureType(testdata, context);
 				
 				//TC_25 ---> SubmitAccountClosure
-				GoldLoanRenewalCash.SubmitAccountClosure();
+				GoldLoanRenewalTransfer.SubmitAccountClosure();
 				
 				//TC_26 ---> LogintoNBFcApplicationinadifferentuser
-				GoldLoanRenewalCash.LogintoNBFcApplicationinadifferentuser();
+				GoldLoanRenewalTransfer.LogintoNBFcApplicationinadifferentuser();
 				
 				//TC_27 ---> LogintoNBFcApplicationinadifferentuserAuthorizecancel
-				GoldLoanRenewalCash.LogintoNBFcApplicationinadifferentuserAuthorizeandcancel();
+				GoldLoanRenewalTransfer.LogintoNBFcApplicationinadifferentuserAuthorizeandcancel();
 				
 				//TC_28 ---> LogintoNBFcApplicationinadifferentuserRefresh
-				GoldLoanRenewalCash.ManagerAuthorisationRefresh();
+				GoldLoanRenewalTransfer.ManagerAuthorisationRefresh();
 				
 				//TC_29 ---> LogintoNBFcApplicationinadifferentuserSelectTransaction
-				GoldLoanRenewalCash.SelectManagerCashTransaction();
+				GoldLoanRenewalTransfer.SelectManagerCashTransaction();
 				
 				//TC_30 ---> LogintoNBFcApplicationinadifferentuserAuthorization
-				GoldLoanRenewalCash.ManagerCashAuthorization();
+				GoldLoanRenewalTransfer.ManagerCashAuthorization();
 				
 				//TC_31 ---> LogintoNBFcApplicationinadifferentuserManagerAuthorisation
-				GoldLoanRenewalCash.CashierAuthorisation();
+				GoldLoanRenewalTransfer.CashierAuthorisation();
 				
 				//TC_32 ---> ManagerAuthorizationRefresh
-				GoldLoanRenewalCash.CashAuthorizationRefresh();
+				GoldLoanRenewalTransfer.CashAuthorizationRefresh();
 				
 				//TC_33 --> SelectCashTransactionManagerAuthorisation
-				GoldLoanRenewalCash.SelectCashTransactionCashierAuthorisation();
+				GoldLoanRenewalTransfer.SelectCashTransactionCashierAuthorisation();
 				
 				//TC_34 ---> ManagerAuthorization
-				GoldLoanRenewalCash.CashAuthorization();
+				GoldLoanRenewalTransfer.CashAuthorization();
 				
 								
 				// Sign out
