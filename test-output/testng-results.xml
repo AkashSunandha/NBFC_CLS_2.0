@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-24T12:03:35 IST" name="Default suite" finished-at="2025-02-24T12:15:50 IST" duration-ms="735188">
+  <suite started-at="2025-03-03T10:32:24 IST" name="Default suite" finished-at="2025-03-03T10:38:06 IST" duration-ms="341914">
     <groups>
     </groups>
-    <test started-at="2025-02-24T12:03:35 IST" name="Default test" finished-at="2025-02-24T12:15:50 IST" duration-ms="735188">
-      <class name="com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly@3a320ade]" started-at="2025-02-24T12:03:35 IST" name="reference" finished-at="2025-02-24T12:03:35 IST" duration-ms="12" status="PASS">
+    <test started-at="2025-03-03T10:32:24 IST" name="Default test" finished-at="2025-03-03T10:38:06 IST" duration-ms="341914">
+      <class name="com.test.GeneralOpening.AllScenario_GeneralOpen_Cash_Transfer">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.GeneralOpening.AllScenario_GeneralOpen_Cash_Transfer@18c5069b]" started-at="2025-03-03T10:32:24 IST" name="reference" finished-at="2025-03-03T10:32:24 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly@3a320ade]" started-at="2025-02-24T12:03:35 IST" name="newCustomer" data-provider="TestData" finished-at="2025-02-24T12:15:50 IST" duration-ms="734454" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.GeneralOpening.AllScenario_GeneralOpen_Cash_Transfer@18c5069b]" started-at="2025-03-03T10:32:25 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-03T10:38:06 IST" duration-ms="341262" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{basicPay=10000, custName=CHANDRAMATHI P K, invalidDate=10/25/2024, MortgagerRegNo=1234, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, referedByOption=NITHIN, resolutionDate=10/11/2254, resolutionNum=ab12, retdDate=12/12/2311, Run=Yes, sanctionedAmt=5000, securitiesCustName=WEWE, TestScenario=New Customer Module, validCode=1}]]>
+                <![CDATA[{Name=AAA, Openaccount=500000, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Remarks=Testing, Run=Yes, TestScenario=Personal Loan Weekly}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@36f1046f]]>
+                <![CDATA[org.testng.TestRunner@2dbd803f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newCustomer -->
-      </class> <!-- com.test.AccountOpening.AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly -->
+      </class> <!-- com.test.GeneralOpening.AllScenario_GeneralOpen_Cash_Transfer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
