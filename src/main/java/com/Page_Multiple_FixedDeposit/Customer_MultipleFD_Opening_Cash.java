@@ -1299,15 +1299,6 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 		transIdCashPersonal = driver.findElement(multifd.TrasID).getText();
 		
 	}
-		if(ElementDisplayed(multifd.SummaryPage)) {
-    		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary will be generated");
-    		Log.info("Expected Result: Summary will be generated");
-    		}
-		else {
-    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-    			Log.info("ERROR");
-    		}
-		transIdCashPersonal = driver.findElement(multifd.TrasID).getText();	
 	
 	ExtentTestManager.endTest();
 	return true;
@@ -1507,8 +1498,6 @@ public boolean CashierAuthorizationSelectCheckBox(Map<Object, Object> testdata, 
 		Log.info("Step:01 - Select transaction entry from the cash section.");
 		
         Assert.assertTrue(Managercheckbox.isSelected(), "Validation Failed: 'Checkbox' is not selected.");
-
-		//Assert.assertTrue(ElementDisplayed(multifd.ManagerCheckBox), "Validation Failed: Transaction entry from the cash section not selected.");
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the entry");
 		Log.info("Expected Result: Possible to select the entry");

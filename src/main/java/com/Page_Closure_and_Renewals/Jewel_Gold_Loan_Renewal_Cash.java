@@ -28,11 +28,9 @@ import com.Utility.ScreenShot;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
-public class Loan_Closure_Cash extends Base_Class {
-	//Pages_Multi_FD_Module multifd = new Pages_Multi_FD_Module();
-	//Loan_Closure_Cash LoanClosureCash = new Loan_Closure_Cash();
-	Pages_Closure_and_Renewals_Module LoanClosureCash = new Pages_Closure_and_Renewals_Module();
+public class Jewel_Gold_Loan_Renewal_Cash extends Base_Class {
 	
+	Pages_Jewel_Gold_Loan_Renewals_Module LoanClosureCash = new Pages_Jewel_Gold_Loan_Renewals_Module();
 	
 	ScreenShot sc = new ScreenShot(null);
 	
@@ -50,25 +48,19 @@ public class Loan_Closure_Cash extends Base_Class {
 		
 	}
 	public static  String generateAccountNumber() throws ClassNotFoundException {
-		 // Method that returns the first customer ID (String) from the database
-	        // Database connection details
-       // Database connection details
        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		String UserName = "sqa";
 		String Password = "SPQA@sql2019" ;
 		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
 
 		String query = "exec GetJewelloanAccountnumber;";
-	        String AccountNum = null; // Declare and initialize the return variable
-
-	        
-	        // Establish the connection to the database
-	        try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
+	        String AccountNum = null; 
+	       	        try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
 	             Statement statement = connection.createStatement();
 	             ResultSet resultSet = statement.executeQuery(query)) {
 	        	
 	        	if (resultSet.next()) {
-	        		AccountNum = resultSet.getString("Acno"); // Column name
+	        		AccountNum = resultSet.getString("Acno");
 	                System.out.println("Account Number of Loan Opening: " + AccountNum);
 	            } else {
 	                System.out.println("No Account Number found.");
@@ -81,22 +73,18 @@ public class Loan_Closure_Cash extends Base_Class {
 
 	        return AccountNum; 
 	        
-	    }
-	
-	
+	    }	
 	
 	public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context)
 			throws ClassNotFoundException, InterruptedException, IOException {
 		ExtentTestManager.startTest("TC:01 - Login to NBFC Application");
 		Log.info("TC_01 - Login to NBFC Application");
 
-		// String loginUserName = testdata.get("loginUserName").toString();
 		String UserName = configloader().getProperty("UserName");
 		input(LoanClosureCash.loginUserName, UserName);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
 		Log.info("Step:01 - Enetered valid User Name");
 
-		// String loginValidPassword = testdata.get("loginValidPassword").toString();
 		String Password = configloader().getProperty("Password");
 		input(LoanClosureCash.loginPasswrd, Password);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");
@@ -121,12 +109,10 @@ public class Loan_Closure_Cash extends Base_Class {
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
 			Log.info("Step:01 - Click on OK button");
 
-			// String loginUserName = testdata.get("loginUserName").toString();
 			input(LoanClosureCash.loginUserName, UserName);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
 			Log.info("Step:02 - Enetered valid User Name");
 
-			// String loginValidPassword = testdata.get("loginValidPassword").toString();
 			input(LoanClosureCash.loginPasswrd, Password);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
 			Log.info("Step:03 - Entered valid Password");
@@ -193,7 +179,7 @@ public class Loan_Closure_Cash extends Base_Class {
 	ExtentTestManager.startTest("TC:03 - Select Jewel Loan Product Group");
 	Log.info("TC:03 - Select Jewel Loan Product Group");
 
-
+	click(LoanClosureCash.TopUp);
 	click(LoanClosureCash.ProductGroup);
 	ExtentTestManager.getTest().log(Status.PASS,"Step:01 Select topup checkbox");
 	Log.info("Step:01 Select topup checkbox");
@@ -455,14 +441,14 @@ public boolean AddSecurityDetailsItemName() throws InterruptedException{
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
 	
 	ExtentTestManager.getTest().log(Status.PASS,"Step:01 Select Item Name");
 	Log.info("Step:01 Select Item Name");
 
 	String selectedItemName = dropdown.getFirstSelectedOption().getText();
 
-	Assert.assertEquals(selectedItemName, "NECKLASE","Validation Failed: The selected Item Name should not be 'NECKLASE'.");
+	Assert.assertEquals(selectedItemName, "RING","Validation Failed: The selected Item Name should not be 'RING'.");
 
 	driver.close();
 	driver.switchTo().window(mainWindowHandle);
@@ -496,11 +482,13 @@ public boolean AddSecurityDetailsItemDescription(Map<Object, Object> testdata, I
 	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
+	
 	// ✅ Select Item Name
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
+	
 	// ✅ Enter Item Description
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -549,7 +537,7 @@ public boolean AddSecurityDetailsItemQuantity(Map<Object, Object> testdata, ITes
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
 
 	// ✅ Enter Item Description
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
@@ -607,7 +595,7 @@ public boolean AddSecurityDetailsStoneWeight(Map<Object, Object> testdata, ITest
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
 
 	// ✅ Enter Item Description
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
@@ -673,7 +661,7 @@ public boolean AddSecurityDetailsTickPurityCheckbox(Map<Object, Object> testdata
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -743,7 +731,7 @@ public boolean AddSecurityDetailsItemWeight(Map<Object, Object> testdata, ITestC
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -817,7 +805,7 @@ public boolean AddSecurityDetailsDirtWeight(Map<Object, Object> testdata, ITestC
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -898,7 +886,7 @@ public boolean AddSecurityDetailsEnterPurity(Map<Object, Object> testdata, ITest
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -986,7 +974,7 @@ public boolean AddSecurityDetailsAdd(Map<Object, Object> testdata, ITestContext 
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -1039,7 +1027,7 @@ public boolean AddSecurityDetailsAdd(Map<Object, Object> testdata, ITestContext 
 	
 	if(ElementDisplayed(LoanClosureCash.AddBtn)){
 	click(LoanClosureCash.AddBtn);
-	
+		
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Add' button");
 	Log.info("Step:01 - Click 'Add' button");
 	
@@ -1087,7 +1075,7 @@ public boolean CloseSecurityDetailsPopup(Map<Object, Object> testdata, ITestCont
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -1193,7 +1181,7 @@ public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITe
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("NECKLASE");
+	dropdown.selectByVisibleText("RING");
 
 	// ✅ Enter Item Description
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
@@ -1251,6 +1239,7 @@ public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITe
 	// ✅ Click Add Button
 	WebElement AddDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_btnGoldAdd']")));
 	
+	Thread.sleep(2000);
 	if(ElementDisplayed(LoanClosureCash.AddBtn)){
 	click(LoanClosureCash.AddBtn);
 	
@@ -1259,9 +1248,7 @@ public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITe
 
 	Select appraiser = new Select(AppraiserDropdown);
 	appraiser.selectByVisibleText("DIVYA");
-	
-	Thread.sleep(1000);
-	
+		
 	WebElement AppraiserDropdownAfterSelection = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
 	Select appraiserAfterSelection = new Select(AppraiserDropdownAfterSelection);
 	String selectedAppraiserName = appraiserAfterSelection.getFirstSelectedOption().getText();
@@ -1288,6 +1275,389 @@ public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITe
 
 }
 
+public boolean EnterSanctionedAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
+	
+	ExtentTestManager.startTest("TC:21 - Enter Sanctioned Amount");
+	Log.info("TC:21 - Enter Sanctioned Amount");
+	
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+	WebElement SanctionedAmountValue = driver.findElement(LoanClosureCash.SanctionedAmount);
+
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", SanctionedAmountValue);
+	
+	click(LoanClosureCash.SanctionedAmount);
+
+	String EnterSanctionedAmount = testdata.get("Sanctioned_Amount").toString();
+	input(LoanClosureCash.SanctionedAmount, EnterSanctionedAmount);
+
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter the sanctioned amount in the respective field");
+	Log.info("Step:01 - Enter the sanctioned amount in the respective field");
+	
+    Assert.assertFalse(EnterSanctionedAmount.isEmpty(), "Validation Failed: Sanctioned amount should not be empty.");
+
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Sanctioned amount is accepted");
+	Log.info("Expected Result: Sanctioned amount is accepted");
+
+	ExtentTestManager.endTest();
+	return true;
+}
+
+public boolean GetValuewithCashTransactionMode() throws InterruptedException {
+
+	ExtentTestManager.startTest("TC:22 - Get Value with Cash Transaction Mode");
+	Log.info("TC:22 - Get Value with Cash Transaction Mode");
+	
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+    WebElement getValuesBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(LoanClosureCash.GetValues));
+
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", getValuesBtn);
+	
+	boolean isClicked = false;
+
+	if (ElementDisplayed(LoanClosureCash.GetValues)) {
+		click(LoanClosureCash.GetValues);
+		isClicked = true;
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step 01: Click 'Get Value' button");
+		Log.info("Step 01: Click 'Get Value' button");
+
+	} else {
+		ExtentTestManager.getTest().log(Status.FAIL, "'Get Values' button is not displayed");
+		Log.error("'Get Values' button is not displayed");
+	}
+
+	Assert.assertTrue(isClicked, "Validation Failed: 'Get Values' button was not clicked successfully.");
+
+	ExtentTestManager.getTest().log(Status.PASS,"Expected Result: Value is calculated and displayed");
+	Log.info("Expected Result: Value is calculated and displayed");
+
+	ExtentTestManager.endTest();
+	return true;
+
+}
+
+public boolean GetValuewithCashTransactionMode(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+		ExtentTestManager.startTest("TC:23 - Get Value with Cash Transaction Mode");
+		Log.info("TC:23 - Get Value with Cash Transaction Mode");
+		
+		WebElement PayAmountField = driver.findElement(LoanClosureCash.PayAmount);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", PayAmountField);
+		
+		Thread.sleep(2000);
+		
+		if (ElementDisplayed(LoanClosureCash.TransModeCash)) {
+		click(LoanClosureCash.TransModeCash);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step 01: Select 'Trans.mode'as Cash.");
+		Log.info("Step 01: Select 'Trans.mode'as Cash.");	
+
+	    WebDriverWait wait = new WebDriverWait(driver, 10);
+
+		WebElement Options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[6]/div/div[5]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/div/select/option[2]")));
+		Options.click();
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Cash transmode  is accepted");
+		Log.info("Expected Result: Cash transmode  is accepted");
+	}
+	
+		ExtentTestManager.endTest();
+		return true;
+}
+
+public boolean EnterRemarksandSelectClosureType(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+
+	ExtentTestManager.startTest("TC:24 - Enter Remarks and Select Closure Type");
+	Log.info("TC:24 - Enter Remarks and Select Closure Type");
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+	WebElement EnterRemarkvalue = driver.findElement(LoanClosureCash.CashRemarks);
+
+	click(LoanClosureCash.CashRemarks);
+	String EnterRemark = testdata.get("Remark").toString();
+	input(LoanClosureCash.CashRemarks, EnterRemark);
+
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter remarks in the 'Remarks' field");
+	Log.info("Step:01 - Enter remarks in the 'Remarks' field");
+	
+    Assert.assertFalse(EnterRemark.isEmpty(), "Validation Failed: Enter Remark should not be empty.");
+
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Remarks are noted.");
+	Log.info("Expected Result: Remarks are noted.");
+
+	ExtentTestManager.endTest();
+	return true;
+
+}
+public boolean SubmitAccountClosure() throws InterruptedException {
+	
+	ExtentTestManager.startTest("TC:25 - Submit Account Closure");
+	Log.info("TC:25 - Submit Account Closure");
+	
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+	WebElement SubmitDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnSubmit']")));
+	
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", SubmitDetails);
+	
+	if(ElementDisplayed(LoanClosureCash.SubmitButton)){
+	click(LoanClosureCash.SubmitButton);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Submit' button for closure process");
+	Log.info("Step:01 - Click 'Submit' button for closure process");
+	
+	Assert.assertEquals(driver.getWindowHandles().size(), 1, "Validation Failed: Security Details popup window is still open.");
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Security details popup window is closed");
+	Log.info("Expected Result: Security details popup window is closed");
+	}
+	if(ElementDisplayed(LoanClosureCash.SummaryOperation)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary will be generated");
+		Log.info("Expected Result: Summary will be generated");
+		}
+	else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+	transIdCashLoan = driver.findElement(LoanClosureCash.TransCashID).getText();
+	
+	ExtentTestManager.endTest();
+	return true;
+	
+	}
+
+public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedException, IOException{
+	
+		ExtentTestManager.startTest("TC:26 - Login to NBFc Application in a different user");
+		Log.info("TC:26 - Login to NBFc Application in a different user");
+		
+		ExtentTestManager.startTest("Logout");
+		Log.info("Logout");
+		
+		Thread.sleep(2000);
+		
+		click(LoanClosureCash.custSignOut);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on 'Signout'");
+		Log.info("Step:01 -  Click on 'Signout'");
+		
+		Assert.assertTrue(ElementDisplayed(LoanClosureCash.loginButton), "Validation Failed: User is not logged out successfully.");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
+		Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
+		
+		String UserName1 = configloader().getProperty("UserName1");
+		input(LoanClosureCash.loginUserName, UserName1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
+		Log.info("Step:01 - Enetered valid User Name");
+				
+		String Password1 = configloader().getProperty("Password1");
+		input(LoanClosureCash.loginPasswrd, Password1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");
+		Log.info("Step:02 - Enter valid Password");
+	
+		click(LoanClosureCash.loginButton);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Login as another user.");
+		Log.info("Step:01 - Login as another user.");
+		
+		Assert.assertTrue(ElementDisplayed(LoanClosureCash.home), "Validation Failed: 'Home' button is not displayed.");
+
+		ExtentTestManager.getTest().log(Status.PASS,"Expected Result: User is logged in successfully and dashboard visible");
+		Log.info("Expected Result: User is logged in successfully and dashboard visible");				
+				
+		ExtentTestManager.endTest();
+		return true;		
+}
+
+public boolean LogintoNBFcApplicationinadifferentuserAuthorizeandcancel() throws InterruptedException, IOException{
+	
+	ExtentTestManager.startTest("TC:27 - Login to NBFc Application in a different user");
+	Log.info("TC:27 - Login to NBFc Application in a different user");
+	
+	WebElement CashMode = driver.findElement(LoanClosureCash.AuthorizeCancel);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", CashMode);
+	
+	Assert.assertTrue(ElementDisplayed(LoanClosureCash.AuthorizeCancel), "Validation Failed: 'Authorize & Cancel' option is not displayed.");
+	
+	click(LoanClosureCash.AuthorizeCancel);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to AUTHORISE and Cancel in the menu");
+	Log.info("Step:01 - Navigate to AUTHORISE and Cancel in the menu");
+	
+	click(LoanClosureCash.ManagerAuthorization);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select the Manager Authorisation window.");
+	Log.info("Step:02 - Select the Manager Authorisation window.");
+	
+	Assert.assertTrue(ElementDisplayed(LoanClosureCash.ManagerAuthorization), "Validation Failed: Manager Authorisation window did not open.");
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result:  Manager Authorisation window opened successfully");
+	Log.info("Expected Result:  Manager Authorisation window opened successfully");
+
+ExtentTestManager.endTest();
+return true;
+
+}
+
+public boolean ManagerAuthorisationRefresh() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:28 - Login to NBFc Application in a different user");
+	Log.info("TC:28 - Login to NBFc Application in a different user");
+	
+	click(LoanClosureCash.Refresh);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Refresh button");
+	Log.info("Step:01 - Click on the Refresh button");
+	
+	Assert.assertTrue(ElementDisplayed(LoanClosureCash.Refresh), "Validation Failed: Authorisation pending transaction is not displayed after refreshing.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Authorisation pending transaction gets displayed ");
+	Log.info("Expected Result: Authorisation pending transaction gets displayed ");
+		
+	ExtentTestManager.endTest();
+	return true;
+}
+
+public boolean SelectManagerCashTransaction() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:29 - Login to NBFc Application in a different user");
+	Log.info("TC:29 - Login to NBFc Application in a different user");
+	
+	System.out.println("transIdCashLoan "+transIdCashLoan);
+	FetchwithTransID(transIdCashLoan);
+	
+    WebElement checkbox = driver.findElement(LoanClosureCash.OpeningEntryCashCheckbox);
+	
+	if(ElementDisplayed(LoanClosureCash.OpeningEntryCashCheckbox)) {
+	click(LoanClosureCash.OpeningEntryCashCheckbox);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select the transaction to authorise");
+	Log.info("Step:01 - Select the transaction to authorise");
+	
+    Assert.assertTrue(checkbox.isSelected(), "Validation Failed: 'Checkbox' is not selected.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: transaction to authorise is selected");
+	Log.info("Expected Result: transaction to authorise is selected");		
+}	
+	ExtentTestManager.endTest();
+	return true;	
+}
+
+public boolean ManagerCashAuthorization() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:30 - Login to NBFc Application in a different user");
+	Log.info("TC:30 - Login to NBFc Application in a different user");
+	
+	if(ElementDisplayed(LoanClosureCash.ManagerAuthorize)) {
+	click(LoanClosureCash.ManagerAuthorize);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Authorize button");
+	Log.info("Step:01 - Click on the Authorize button");
+	
+	Assert.assertTrue(ElementDisplayed(LoanClosureCash.ManagerAuthorize), "Validation Failed: 'Authorize' button is not Clicked.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction gets authorised");
+	Log.info("Expected Result: Transaction gets authorised");	
+	
+	click(LoanClosureCash.ClosePopup);
+}
+	ExtentTestManager.endTest();
+	return true;	
+}
+
+public boolean CashierAuthorisation() throws InterruptedException, IOException{
+	
+	ExtentTestManager.startTest("TC:31 - Login to NBFc Application in a different user");
+	Log.info("TC:31 - Login to NBFc Application in a different user");
+	
+	WebElement CashModeTrans = driver.findElement(LoanClosureCash.CashAuthorisation);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", CashModeTrans);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to AUTHORISE and Cancel in the menu");
+	Log.info("Step:01 - Navigate to AUTHORISE and Cancel in the menu");
+	
+	Thread.sleep(2000);
+	click(LoanClosureCash.CashAuthorisation);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select the Cashier Authorisation window.");
+	Log.info("Step:02 - Select the Cashier Authorisation window.");
+	
+	Assert.assertTrue(ElementDisplayed(LoanClosureCash.CashAuthorisation), "Validation Failed: Cashier Authorisation window did not open.");
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Cashier Authorisation window opened successfully");
+	Log.info("Expected Result: Cashier Authorisation window opened successfully");
+
+	ExtentTestManager.endTest();
+	return true;
+}
+
+public boolean CashAuthorizationRefresh() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:32 - Login to NBFc Application in a different user");
+	Log.info("TC:32 - Login to NBFc Application in a different user");
+	
+	click(LoanClosureCash.Refresh);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Refresh button");
+	Log.info("Step:01 - Click on the Refresh button");
+	
+	Assert.assertTrue(ElementDisplayed(LoanClosureCash.Refresh), "Validation Failed: 'Refresh' button is not displayed.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Authorisation pending transaction gets displayed ");
+	Log.info("Expected Result: Authorisation pending transaction gets displayed ");
+		
+	ExtentTestManager.endTest();
+	return true;	
+}
+
+public boolean SelectCashTransactionCashierAuthorisation() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:33 - Login to NBFc Application in a different user");
+	Log.info("TC:33 - Login to NBFc Application in a different user");
+	
+	System.out.println("transIdCashPersonal "+transIdCashLoan);
+	FetchwithTransID(transIdCashLoan);
+	
+	WebElement Managercheckbox = driver.findElement(LoanClosureCash.ManagerCheckBox);
+	
+	if(ElementDisplayed(LoanClosureCash.ManagerCheckBox)) {
+	click(LoanClosureCash.ManagerCheckBox);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select the transaction to authorise");
+	Log.info("Step:01 - Select the transaction to authorise");
+	
+    Assert.assertTrue(Managercheckbox.isSelected(), "Validation Failed: 'Checkbox' is not selected.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: transaction to authorise is selected");
+	Log.info("Expected Result: transaction to authorise is selected");
+}	
+	ExtentTestManager.endTest();
+	return true;	
+}
+
+public boolean CashAuthorization() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:34 - Login to NBFc Application in a different user");
+	Log.info("TC:34 - Login to NBFc Application in a different user");
+	
+	if(ElementDisplayed(LoanClosureCash.CashAuthorizeBtn)) {
+	click(LoanClosureCash.CashAuthorizeBtn);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Authorize button");
+	Log.info("Step:01 - Click on the Authorize button");
+	
+	Assert.assertTrue(ElementDisplayed(LoanClosureCash.CashAuthorizeBtn), "Validation Failed: 'Authorize' button is not Clicked.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction gets authorised");
+	Log.info("Expected Result: Transaction gets authorised");
+	
+	click(LoanClosureCash.ClosePopup);
+}
+	ExtentTestManager.endTest();
+	return true;	
+}
 
 
 		
