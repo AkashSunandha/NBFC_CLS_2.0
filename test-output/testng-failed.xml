@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit">
+      <class name="com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash">
         <methods>
-          <include name="customerRegister" invocation-numbers="0"/>
+          <include name="customerRegister"/>
           <include name="reference"/>
         </methods>
-      </class> <!-- com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit -->
+      </class> <!-- com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

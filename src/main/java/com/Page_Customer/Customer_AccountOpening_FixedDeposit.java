@@ -23,7 +23,7 @@ public class Customer_AccountOpening_FixedDeposit extends Base_Class
 {
 
 	PageRepositary_AccountOpening_FixedDeposit fixeddeposit= new PageRepositary_AccountOpening_FixedDeposit();
-	//PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
+	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
    String Transactionid;
 	ScreenShot sc = new ScreenShot(null);
@@ -31,7 +31,7 @@ public class Customer_AccountOpening_FixedDeposit extends Base_Class
 	//Navigate to Deposit Opening Window
 	
 	public boolean DepositOpeningWindow()throws InterruptedException {
-		ExtentTestManager.startTest("TC:02 - Navigate to Deposit Opening Window");
+		ExtentTestManager.startTest("TC:03 - Navigate to Deposit Opening Window");
 		click(fixeddeposit.Accountopening);
 		click(fixeddeposit.Depositopening);
 		click(fixeddeposit.FixedDeposit);
@@ -728,7 +728,7 @@ return true;
 		
 	}
 	
-	public boolean Login_with_Another_User(Map<Object,Object>testdata,ITestContext context) throws InterruptedException {
+	public boolean Login_with_Another_User(Map<Object,Object>testdata,ITestContext context) throws InterruptedException, IOException {
 	ExtentTestManager.startTest("TC:21 - Login with Another User");
 	Log.info("TC:21 - Login with Another User");
 	
@@ -737,10 +737,10 @@ return true;
 	Log.info("Step:01 -  'Logout'"); 
 	
 	
-	String newuserid = testdata.get("Newuserid").toString();
+	String newuserid = configloader().getProperty("UserName1");
 	input(fixeddeposit.loginUserName1, newuserid);
 	
-	String newpwd = testdata.get("Newpassword").toString();
+	String newpwd = configloader().getProperty("Password1");
 	input(fixeddeposit.loginPasswrd1,newpwd);
 	
 	click(fixeddeposit.loginButton1);
@@ -1273,14 +1273,14 @@ select("GL Code", fixeddeposit.Transaction_Based);
 		}
 		
 		
-		public boolean Login_with_Another_User_transferauthorize(Map<Object,Object>testdata,ITestContext context) throws InterruptedException {
+		public boolean Login_with_Another_User_transferauthorize(Map<Object,Object>testdata,ITestContext context) throws InterruptedException, IOException {
 			ExtentTestManager.startTest("TC:27 - Login with Another User");
 			Log.info("TC:27 - Login with Another User");
 			
-			String newuserid = testdata.get("Newuserid").toString();
+			String newuserid = configloader().getProperty("UserName1");
 			input(fixeddeposit.loginUserName2, newuserid);
 			
-			String newpwd = testdata.get("Newpassword").toString();
+			String newpwd = configloader().getProperty("Password1");
 			input(fixeddeposit.loginPasswrd2,newpwd);
 			
 			click(fixeddeposit.loginButton2);

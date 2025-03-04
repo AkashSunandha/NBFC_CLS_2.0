@@ -149,8 +149,6 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 		        // TC25
 				 //fixeddeposit.submit();
 				 //==============================++++++++++++++++++++++++++++++++++============================
-
-				 
 				 
 				 
 				 // TC26 
