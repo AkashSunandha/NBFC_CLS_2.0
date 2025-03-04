@@ -111,10 +111,8 @@ public class Pages_Multi_FD_Module
 		public By TransactionBased = By.xpath("//select[@id='ddlTrnsBased_ddl']");
 		public By GLName = By.xpath("//input[@id = 'hyjackText0']");
 		public By GLNameList = By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[6]/td[4]/div/div/div[2]/ul/li[5]");
-		
 		public By BalanceAmount = By.xpath("//input[@id = 'txtBalanceAmount_txt']");
 		public By AmountTrans = By.xpath("//input[@id='txtAmountForGLHead_txt']");
-		
 		public By AddButton = By.xpath("//input[@id='btnAddGLAcHead']");
 		public By SubmitButton = By.xpath("//input[@id='btnSubmit']");
 		

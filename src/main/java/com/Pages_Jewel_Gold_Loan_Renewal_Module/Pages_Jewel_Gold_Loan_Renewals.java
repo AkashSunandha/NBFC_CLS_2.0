@@ -53,7 +53,7 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By TransModeCash = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstApproval_ctrl0_ucClosureApproval_ddlTransactionMode_ddl']");
 		public By PayAmount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstLoanDetails_ctrl0_LDF_txtPayAmount_txt']");
 		public By CashRemarks = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstApproval_ctrl0_ucClosureApproval_txtRemarks_txt']");
-		public By SubmitButton = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnSubmit']");
+		public By SubmitButton = By.xpath("//input[@id ='btnSubmit']");
 		public By TopUp = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ChkTopUp']");
 		public By OkTopup = By.xpath("//input[@id ='closeSelopU']");
 		public By TransCashID = By.xpath("//span[@id ='ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID']");
@@ -70,6 +70,20 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By ManagerAuthorize = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnOtherPass']");
 		public By ClosePopup = By.xpath("//img[@id = 'closetop']");
 		public By ItemAlready = By.xpath("//input[@id='close']");
+		public By TrasID = By.xpath("//span[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID']");
+		public By SummaryPage = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/table[1]");
+
+		//Post debit
+		
+		public By PostDebit = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstApproval_ctrl0_ucClosureApproval_btnAutoPost']");
+		public By TransactionBased = By.xpath("//select[@id='ddlTrnsBased_ddl']");
+		public By ProductGroupDropdown = By.xpath("//select[@id = 'ddlProductGroup_ddl']");
+		public By ProductNameDropdown = By.xpath("//select[@id ='ddlProductName_ddl']");
+		public By BranchName = By.xpath("//select[@id ='ddlBranch_ddl']");
+		public By AccountNum = By.xpath("//input[@id ='txtChildAcNo_txt']");
+		public By AmountField = By.xpath("//input[@id ='txtAmount_txt']");
+		public By AddButton = By.xpath("//input[@id='btnAddGLAcHead']");
+		public By SubButton = By.xpath("//input[@id='btnSubmit']");
 		
 		//Signout
 		public By custSignOut = By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
