@@ -64,11 +64,11 @@ public class AllScenario_GeneralOpen_Cash_Transfer {
 				
 				generalOpening.verifieddata(testdata, context);
 				
-				generalOpening.transactions();
+				generalOpening.transactions(testdata, context);
 				
 				generalOpening.Signout();
 				
-				generalOpening.Cashier();
+				generalOpening.Cashier(testdata, context);
 				
 				generalOpening.closesuccess();
 				
@@ -82,9 +82,12 @@ public class AllScenario_GeneralOpen_Cash_Transfer {
 				
 				generalOpening.verifieddata(testdata, context);
 				
-				generalOpening.transactionsTransfer();
+				generalOpening.transactionsTransfer(testdata, context);
 				
-				generalOpening.transactioncode();
+				generalOpening.authorizeTransfer(testdata, context);
+				
+				generalOpening.Signout();
+
 				
 				
 				

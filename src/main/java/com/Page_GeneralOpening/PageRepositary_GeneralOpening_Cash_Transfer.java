@@ -1,6 +1,8 @@
 package com.Page_GeneralOpening;
 
 import org.openqa.selenium.By;
+import com.aventstack.extentreports.Status;
+import com.extentReports.ExtentTestManager;
 
 public class PageRepositary_GeneralOpening_Cash_Transfer {
 
@@ -52,7 +54,15 @@ public class PageRepositary_GeneralOpening_Cash_Transfer {
 	// click on postdebit
 
 	public By PostDeb = By.xpath("//input[@value='Post Debit']");
+	public By clickonacc = By.xpath("//*[@id=\"ddlTrnsBased_ddl\"]");
 	public By Sleecttransaction = By.xpath("//select[@class='DropRequiedField']");
-	public By selectGLname = By.xpath("//input[@id='hyjackText0']");
+	public By selectGLname = By.xpath("//*[@id=\"hyjackText0\"]");
+	public By add = By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[6]/td[4]/div/div/div[2]/ul/li[5]");
 	public By amount=By.xpath("//*[@id=\"txtAmountForGLHead_txt\"]");
+	public By clicksubmit= By.xpath("//*[@id=\"btnSubmit\"]");
+	public By clickaddbutton= By.xpath(" //*[@id=\"btnAddGLAcHead\"] ");
+	public By clicksaves= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSave\"]");
+	public By visible= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstOtherInfo_ctrl0_ucOtherInfoForm_lblTransMode\"]");
+	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
+	public By Transid =By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl1_lbllstTransID\"]");
 	}

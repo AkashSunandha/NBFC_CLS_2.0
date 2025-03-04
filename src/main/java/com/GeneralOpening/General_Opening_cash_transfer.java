@@ -127,7 +127,7 @@ public class General_Opening_cash_transfer extends Base_Class {
 
 	}
 
-	public void transactions() throws InterruptedException {
+	public void transactions(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		click(GenOpen.Opentransdropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Options are cash and transfer.");
 		Log.info("Step:01 - Options are cash and transfer.");
@@ -142,8 +142,8 @@ public class General_Opening_cash_transfer extends Base_Class {
 		click(GenOpen.clickonsubmit);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Click submit button.");
 		Log.info("Step:01 - Redirects to summary page.");
-
-		// validation
+		
+//vinusha
 
 		transId = driver.findElement(GenOpen.transIdd).getText();
 	}
@@ -154,7 +154,7 @@ public class General_Opening_cash_transfer extends Base_Class {
 		Log.info("Step:01 - Log out.");
 	}
 
-	public void Cashier() throws InterruptedException, IOException {
+	public void Cashier(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {
 		String UserName = configloader().getProperty("UserName1");
 		input(custSearch.loginUserName, UserName);
 
@@ -287,34 +287,23 @@ public class General_Opening_cash_transfer extends Base_Class {
 
 	}
 
-	public void transactionsTransfer() throws InterruptedException {
+	public void transactionsTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		click(GenOpen.Opentransdropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Options are cash and transfer.");
 		Log.info("Step:01 - Options are cash and transfer.");
 
 		select("TRANSFER", GenOpen.Opentransdropdown);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select Trans. Mode 'Cash'");
-		Log.info("Step:01 - Select Trans. Mode 'Cash'");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select Trans. Mode 'Transfer'");
+		Log.info("Step:01 - Select Trans. Mode 'Transfer'");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the trans mode as cash");
 		Log.info("Expected Result: Possible to select the trans mode as cash");
 
+		// transId = driver.findElement(GenOpen.transIdd).getText();
+
 		click(GenOpen.PostDeb);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click post debit button.");
 		Log.info("Step:01 - Click post debit button.");
-
-		// click(GenOpen.clickonsubmit);
-		// ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Click submit
-		// button.");
-		// Log.info("Step:01 - Redirects to summary page.");
-
-		// validation
-
-		transId = driver.findElement(GenOpen.transIdd).getText();
-
-	}
-
-	public void transactioncode(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
 		String mainWindowHandle = driver.getWindowHandle();
 		boolean popupAppeared = false;
@@ -323,22 +312,213 @@ public class General_Opening_cash_transfer extends Base_Class {
 				driver.switchTo().window(handle);
 				driver.manage().window().maximize();
 				popupAppeared = true;
-				
-				
-				select("GL code",GenOpen.Sleecttransaction);
+
+				// transId = driver.findElement(GenOpen.transIdd).getText();
+				click(GenOpen.clickonacc);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - click on tansaction based.");
+				Log.info("Step:01 - click on tansaction based.");
+
+				select("GL Code", GenOpen.clickonacc);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select Transaction based.");
-				Log.info("Step:01 - Click post debit button.");
-				
-				select("ADVERTISEMENT",GenOpen.selectGLname);
+				Log.info("Step:01 - Select Transaction based.");
+
+				click(GenOpen.selectGLname);
+				click(GenOpen.add);
+				// select("ADVERTISEMENT", GenOpen.add);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select GL name.");
 				Log.info("Step:01 - Select GL name");
 
 				String amount = testdata.get("Amount").toString();
 				input(GenOpen.amount, amount);
-				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Give the amount in \"Amount\" field.");
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Give the amount in Amount field.");
 				Log.info("Step:01 - Give the amount in Amount field.");
+
+				click(GenOpen.clickaddbutton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1.Click add button");
+				Log.info("Step:01 - 1.Click add button ");
+
+				click(GenOpen.clicksubmit);
+				ExtentTestManager.getTest().log(Status.PASS,
+						"Step:01 - 1.Click submit button after adding the details in the auto posting popup window");
+				Log.info("Step:01 - 1.Click submit button after adding the details in the auto posting popup window");
+
+				driver.switchTo().window(mainWindowHandle);
+
+				if (ElementDisplayed(GenOpen.PostDeb)) {
+					ExtentTestManager.getTest().log(Status.PASS,
+							"Expected Result: Customer details are shown in grid.");
+					Log.info("Expected Result: Customer details are shown in grid.");
+				} else {
+					ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+					Log.info("ERROR");
+				}
+				click(GenOpen.clicksaves);
+				ExtentTestManager.getTest().log(Status.PASS,
+						"Step:01 - 1.Click Save button after giving the post debit details");
+				Log.info("Step:01 - 1.1.Click Save button after giving the post debit details");
 				
+				
+				transIdTransfer = driver.findElement(GenOpen.Transid).getText();
+				
+
 			}
 		}
+
 	}
+
+	public void transactioncode(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+
+		String mainWindowHandle = driver.getWindowHandle();
+
+		click(GenOpen.clickonacc);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - click on tansaction based.");
+		Log.info("Step:01 - click on tansaction based.");
+
+		select("GL Code", GenOpen.clickonacc);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select Transaction based.");
+		Log.info("Step:01 - Select Transaction based.");
+
+		click(GenOpen.selectGLname);
+		click(GenOpen.add);
+		// select("ADVERTISEMENT", GenOpen.add);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select GL name.");
+		Log.info("Step:01 - Select GL name");
+
+		String amount = testdata.get("Amount").toString();
+		input(GenOpen.amount, amount);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Give the amount in Amount field.");
+		Log.info("Step:01 - Give the amount in Amount field.");
+
+		click(GenOpen.clickaddbutton);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1.Click add button");
+		Log.info("Step:01 - 1.Click add button ");
+
+		click(GenOpen.clicksubmit);
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Step:01 - 1.Click submit button after adding the details in the auto posting popup window");
+		Log.info("Step:01 - 1.Click submit button after adding the details in the auto posting popup window");
+
+		driver.switchTo().window(mainWindowHandle);
+
+		if (ElementDisplayed(GenOpen.PostDeb)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer details are shown in grid.");
+			Log.info("Expected Result: Customer details are shown in grid.");
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+		click(GenOpen.clicksaves);
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Step:01 - 1.Click Save button after giving the post debit details");
+		Log.info("Step:01 - 1.1.Click Save button after giving the post debit details");
+		
+		if (ElementDisplayed(GenOpen.Transid)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan opening entry displayed");
+			Log.info("Expected Result: Loan opening entry displayed");
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
+		transIdTransfer = driver.findElement(GenOpen.Transid).getText();
+		// validation
+
+	}
+
+	public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context)
+			throws InterruptedException, IOException {
+
+		// Login with Another User
+		ExtentTestManager.startTest("Login with Another User");
+		Log.info("Login with Another User");
+
+		click(custSearch.custSignOut);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Log out");
+		Log.info("Step:01 - Log out");
+
+		String UserName = configloader().getProperty("UserName1");
+		input(custSearch.loginUserName, UserName);
+		String Password = configloader().getProperty("Password1");
+		input(custSearch.loginPasswrd, Password);
+		click(custSearch.loginButton);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
+		Log.info("Step:02 - Log in with another user for authorization");
+
+		String userName = driver.findElement(goaldLoanRepo.userName).getText();
+		System.out.println(userName);
+
+		String flag = "Vinusha";
+
+		if (!userName.equalsIgnoreCase(flag)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
+			Log.info("Expected Result: Logging successfull with another user");
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
+		ExtentTestManager.endTest();
+
+		// Manager Authorization - Transfer Tab
+		// ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		// Log.info("Manager Authorization - Transfer Tab");
+
+		// click(goaldLoanRepo.autorizeAndCancelTab);
+		// ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize &
+		// Cancel\"");
+		// Log.info("Step:01 - Click \"Authorize & Cancel\"");
+
+		click(goaldLoanRepo.managerAuthoTab);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select \"Manager Authorization\"");
+		Log.info("Step:02 - Select \"Manager Authorization\"");
+
+		click(goaldLoanRepo.sTransferTab);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click \"Transfer\" tab");
+		Log.info("Step:03 - Click \"Transfer\" tab");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transfer tab load");
+		Log.info("Expected Result: Transfer tab load");
+
+		ExtentTestManager.endTest();
+
+		// Refresh Loan Opening Entry
+		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		Log.info("Refresh Loan Opening Entry");
+
+		click(goaldLoanRepo.refreshBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Refresh Button");
+		Log.info("Step:01 - Click Refresh Button");
+//vinusha
+		System.out.println("transIdTransferPersonal " + transIdTransfer);
+		fetchWithTransId(transIdTransfer);
+
+		if (ElementDisplayed(goaldLoanRepo.approveCheckBoxTransfer)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan opening entry displayed");
+			Log.info("Expected Result: Loan opening entry displayed");
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+		ExtentTestManager.endTest();
+
+		// Authorize Loan Entry as Manager
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		Log.info("Authorize Loan Entry as Manager");
+
+		click(goaldLoanRepo.approveCheckBoxTransfer);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select loan entry checkbox");
+		Log.info("Step:01 - Select loan entry checkbox");
+
+		click(goaldLoanRepo.authorizeBtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click Authorize Button");
+		Log.info("Step:02 - Click Authorize Button");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry authorized");
+		Log.info("Expected Result: Entry authorized");
+
+		ExtentTestManager.endTest();
+
+		click(GenOpen.errorPopUpCloseIcon);
+
+	}// end
 }
