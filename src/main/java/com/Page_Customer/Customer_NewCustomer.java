@@ -27,7 +27,7 @@ public class Customer_NewCustomer extends Base_Class{
 	PageRepositary_Cust_NewCustomer newCustRepo = new PageRepositary_Cust_NewCustomer();
 	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
-	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
+	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();	
 	String transIdCash;
 	String transIdTransfer;
 //	String spPAN = "GenerateNextPAN";

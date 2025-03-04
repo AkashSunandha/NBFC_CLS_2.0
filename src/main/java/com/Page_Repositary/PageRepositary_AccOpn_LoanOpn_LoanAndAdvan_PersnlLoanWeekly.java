@@ -8,7 +8,7 @@ public class PageRepositary_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly {
 	public By loanOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/div");
 	public By loanAndAdvancesTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/ul/li[3]/div");
 	public By personalLoanWeeeklyTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/ul/li[3]/ul/li[1]/a");
-	
+	 
 	//Account Info
 	public By aciCustSearchIcon = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[8]/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]/table/tbody/tr/td[2]/a/img");
 	public By popUpWndNameTxtBox = By.xpath("//*[@id=\"PopQuick1_txtName\"]");
@@ -86,20 +86,6 @@ public class PageRepositary_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly {
 	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
+
 	
 }

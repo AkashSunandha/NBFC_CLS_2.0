@@ -2,7 +2,7 @@ package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
-public class PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan {
+public class PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan { 
 
 	public By accOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div");
 	public By loanOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/div");

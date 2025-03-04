@@ -2,7 +2,7 @@ package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
-public class PageRepositary_Cust_CustSearch {
+public class PageRepositary_Cust_CustSearch {  
 	
 	//PC Registration
 	public By formName = By.xpath("//*[@id='Username']");

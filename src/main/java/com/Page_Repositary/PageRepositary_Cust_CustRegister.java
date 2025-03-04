@@ -2,14 +2,14 @@ package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
-public class PageRepositary_Cust_CustRegister {
+public class PageRepositary_Cust_CustRegister { 
 	//PC Registration
 	public By formName = By.xpath("//*[@id='Username']");
 	public By formBranchName = By.xpath("//select[@id='ddlBranches']/option[text()='TRIVANDRUM']");
 	public By formComputerName = By.xpath("//*[@id=\"MacName\"]");
 	public By formSubmitBtn = By.xpath("/html/body/div[2]/div[11]/div/button/span");
 	
-	//Login Module
+	//Login Module 
 	public By loginUserName = By.xpath("//*[@id=\"txtUserName_txt\"]");
 	public By loginPasswrd = By.xpath("//*[@id=\"txtPassword_txt\"]");
 	public By loginButton = By.xpath("//*[@id=\"imgbtnSubmit\"]");

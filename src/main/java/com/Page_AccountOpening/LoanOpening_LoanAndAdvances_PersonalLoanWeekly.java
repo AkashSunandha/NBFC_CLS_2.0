@@ -24,7 +24,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 	public void fetchWithTransId(String transId) throws InterruptedException {
 		input(goaldLoanRepo.transIdTxtBox,transId);
 		click(goaldLoanRepo.goBtn);
-	}
+	} 
 	
 	public void openPersonalLoanWindow() throws InterruptedException {
 		

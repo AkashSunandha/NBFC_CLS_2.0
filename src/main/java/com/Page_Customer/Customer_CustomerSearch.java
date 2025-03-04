@@ -29,7 +29,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
 	com.Utility.ExcelReader ExcelReader = new com.Utility.ExcelReader("Customer_CustSearch");
 	Base_Class Base_Class= new Base_Class();
-	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
+	Customer_QuickCustomer quickCust = new Customer_QuickCustomer(); 
 	
 	
 	

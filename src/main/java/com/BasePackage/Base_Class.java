@@ -44,7 +44,7 @@ public class Base_Class {
 	
 	public WebDriver getDriver() {
 		return driver;
-	}
+	} 
 	
 	private static By L_username = By.id("Username");
 	private static By L_password = By.id("Password");
@@ -134,7 +134,8 @@ public class Base_Class {
 		Thread.sleep(2000);
 	}
 
-	public static void select(String value,By element) {
+	public static void select(String value,By element) throws InterruptedException {
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 120);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		Select selWeekDayDropDown = new Select(driver.findElement(element));
@@ -200,6 +201,13 @@ public class Base_Class {
 	{
 		WebElement element = driver.findElement(locator);
 		Boolean flag = element.isEnabled();
+		return flag;
+	}
+	
+	public static boolean CheckBoxStatus(By locator)
+	{
+		WebElement element = driver.findElement(locator);
+		Boolean flag = element.isSelected();
 		return flag;
 	}
 	
