@@ -87,11 +87,6 @@ public class AllScenario_GeneralOpen_Cash_Transfer {
 				generalOpening.authorizeTransfer(testdata, context);
 				
 				generalOpening.Signout();
-
-				
-				
-				
-				
 				
 				
 				
