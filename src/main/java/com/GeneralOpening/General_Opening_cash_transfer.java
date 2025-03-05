@@ -29,8 +29,8 @@ public class General_Opening_cash_transfer extends Base_Class {
 
 	public void accountOpening() throws InterruptedException {
 
-		ExtentTestManager.startTest("Access Gold Loan Opening Window");
-		Log.info("Access Gold Loan Opening Window");
+		ExtentTestManager.startTest("Navigate to General Opening");
+		Log.info("Navigate to General Opening");
 
 		click(goaldLoanRepo.accOpeningTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to account opening");
@@ -52,8 +52,8 @@ public class General_Opening_cash_transfer extends Base_Class {
 
 	public void Customerinfo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("Name Field Validation");
-		Log.info("Name Field Validation");
+		ExtentTestManager.startTest("Customer Search Popup");
+		Log.info("Customer Search Popup");
 
 		click(GenOpen.clicksearch);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on search icon.");
@@ -67,6 +67,9 @@ public class General_Opening_cash_transfer extends Base_Class {
 				driver.switchTo().window(handle);
 				driver.manage().window().maximize();
 				popupAppeared = true;
+
+				ExtentTestManager.startTest("Search Customer by Name");
+				Log.info("Search Customer by Name");
 
 				String custName = testdata.get("Name").toString();
 				input(GenOpen.Custname, custName);
@@ -82,6 +85,9 @@ public class General_Opening_cash_transfer extends Base_Class {
 				Log.info("Step:01 - click on a select button.");
 
 				driver.switchTo().window(mainWindowHandle);
+
+				ExtentTestManager.startTest("Select and Open Customer Details");
+				Log.info("Select and Open Customer Details");
 
 				click(GenOpen.ClickonADD);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Clcik on add.");
@@ -105,6 +111,9 @@ public class General_Opening_cash_transfer extends Base_Class {
 
 	public void verifieddata(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
+		ExtentTestManager.startTest("Enter Opening Amount");
+		Log.info("Enter Opening Amount");
+
 		click(GenOpen.enteropenamount);
 		ExtentTestManager.getTest().log(Status.PASS,
 				"Step:02 - Enter valid numeric value into the 'Opening Amount 'field.");
@@ -114,6 +123,9 @@ public class General_Opening_cash_transfer extends Base_Class {
 		input(GenOpen.enteropenamount, openacc);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter Remarks into Remarks field.");
 		Log.info("Step:01 - Enter Remarks into Remarks field.");
+
+		ExtentTestManager.startTest("Enter Remarks");
+		Log.info("Enter Remarks");
 
 		click(GenOpen.enteremarks);
 		ExtentTestManager.getTest().log(Status.PASS,
@@ -128,9 +140,15 @@ public class General_Opening_cash_transfer extends Base_Class {
 	}
 
 	public void transactions(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+		ExtentTestManager.startTest("Verify Transaction Mode Options");
+		Log.info("Verify Transaction Mode Options");
+
 		click(GenOpen.Opentransdropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Options are cash and transfer.");
 		Log.info("Step:01 - Options are cash and transfer.");
+
+		ExtentTestManager.startTest("Select Transaction Mode as Cash and Submit");
+		Log.info("Select Transaction Mode as Cash and Submit");
 
 		select("CASH", GenOpen.Opentransdropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select Trans. Mode 'Cash'");
@@ -139,10 +157,13 @@ public class General_Opening_cash_transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the trans mode as cash");
 		Log.info("Expected Result: Possible to select the trans mode as cash");
 
+		ExtentTestManager.startTest("Select Transaction Mode as Cash and Submit");
+		Log.info("Select Transaction Mode as Cash and Submit");
+
 		click(GenOpen.clickonsubmit);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Click submit button.");
 		Log.info("Step:01 - Redirects to summary page.");
-		
+
 //vinusha
 
 		transId = driver.findElement(GenOpen.transIdd).getText();
@@ -162,6 +183,9 @@ public class General_Opening_cash_transfer extends Base_Class {
 		input(custSearch.loginPasswrd, Password);
 
 		click(custSearch.loginButton);
+
+		ExtentTestManager.startTest("Login with Another User");
+		Log.info("Login with Another User");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
@@ -183,8 +207,8 @@ public class General_Opening_cash_transfer extends Base_Class {
 
 		// Cashier Authorization
 
-		ExtentTestManager.startTest("Cashier Authorization");
-		Log.info("Cashier Authorization");
+		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		Log.info("Manager Authorization - Cash Tab");
 
 		click(goaldLoanRepo.autorizeAndCancelTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
@@ -194,12 +218,18 @@ public class General_Opening_cash_transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Cashier Authorization");
 		Log.info("Step:01 - Navigate to Cashier Authorization");
 
+		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		Log.info("Refresh Loan Opening Entry");
+
 		click(goaldLoanRepo.cashierRefreshBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click Refresh Button");
 		Log.info("Step:02 - Click Refresh Button");
 
 		System.out.println("transIdCashPersonal " + transId);
 		fetchWithTransId(transId);
+
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		Log.info("Authorize Loan Entry as Manager");
 
 		click(goaldLoanRepo.cashierCheckBox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Select checkbox");
@@ -220,6 +250,9 @@ public class General_Opening_cash_transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
+		ExtentTestManager.startTest("Cashier Authorization");
+		Log.info("Cashier Authorization");
+
 		click(goaldLoanRepo.managerAuthoTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select \"Manager Authorization\"");
 		Log.info("Step:02 - Select \"Manager Authorization\"");
@@ -233,9 +266,8 @@ public class General_Opening_cash_transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		// Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
-		Log.info("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Cashier Authorization");
+		Log.info("Cashier Authorization");
 
 		click(goaldLoanRepo.refreshBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Refresh Button");
@@ -255,8 +287,8 @@ public class General_Opening_cash_transfer extends Base_Class {
 		ExtentTestManager.endTest();
 
 		// Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
-		Log.info("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Cashier Authorization");
+		Log.info("Cashier Authorization");
 
 		click(goaldLoanRepo.approveCheckBox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select loan entry checkbox");
@@ -265,6 +297,9 @@ public class General_Opening_cash_transfer extends Base_Class {
 		click(goaldLoanRepo.authorizeBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click Authorize Button");
 		Log.info("Step:02 - Click Authorize Button");
+
+		ExtentTestManager.startTest("Cashier Authorization");
+		Log.info("Cashier Authorization");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Entry authorized");
 		Log.info("Expected Result: Entry authorized");
@@ -281,6 +316,9 @@ public class General_Opening_cash_transfer extends Base_Class {
 
 	public void accountOpening2() throws InterruptedException {
 
+		ExtentTestManager.startTest("Navigate to General Opening");
+		Log.info("Navigate to General Opening");
+
 		click(GenOpen.Suspliability);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:04 - select suspense liability.");
 		Log.info("Step:04 - select suspense liability.");
@@ -288,9 +326,16 @@ public class General_Opening_cash_transfer extends Base_Class {
 	}
 
 	public void transactionsTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+
+		ExtentTestManager.startTest("Verify Transaction Mode Options");
+		Log.info("Verify Transaction Mode Options");
+
 		click(GenOpen.Opentransdropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Options are cash and transfer.");
 		Log.info("Step:01 - Options are cash and transfer.");
+
+		ExtentTestManager.startTest("Select Transaction Mode as Transfer and Post Debit");
+		Log.info("Select Transaction Mode as Transfer and Post Debit");
 
 		select("TRANSFER", GenOpen.Opentransdropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select Trans. Mode 'Transfer'");
@@ -318,15 +363,24 @@ public class General_Opening_cash_transfer extends Base_Class {
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - click on tansaction based.");
 				Log.info("Step:01 - click on tansaction based.");
 
+				ExtentTestManager.startTest("Verify general Submission with Transfer Mode");
+				Log.info("Verify general Submission with Transfer Mode");
+
 				select("GL Code", GenOpen.clickonacc);
-				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select Transaction based.");
-				Log.info("Step:01 - Select Transaction based.");
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select Transaction based GL mode.");
+				Log.info("Step:01 - Select Transaction based GL Mode.");
+
+				ExtentTestManager.startTest("Verify general Submission with Transfer Mode");
+				Log.info("Verify general Submission with Transfer Mode");
 
 				click(GenOpen.selectGLname);
 				click(GenOpen.add);
 				// select("ADVERTISEMENT", GenOpen.add);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select GL name.");
 				Log.info("Step:01 - Select GL name");
+
+				ExtentTestManager.startTest("Verify general Submission with Transfer Mode");
+				Log.info("Verify general Submission with Transfer Mode");
 
 				String amount = testdata.get("Amount").toString();
 				input(GenOpen.amount, amount);
@@ -336,6 +390,9 @@ public class General_Opening_cash_transfer extends Base_Class {
 				click(GenOpen.clickaddbutton);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1.Click add button");
 				Log.info("Step:01 - 1.Click add button ");
+
+				ExtentTestManager.startTest("Verify general Submission with Transfer Mode");
+				Log.info("Verify general Submission with Transfer Mode");
 
 				click(GenOpen.clicksubmit);
 				ExtentTestManager.getTest().log(Status.PASS,
@@ -352,14 +409,16 @@ public class General_Opening_cash_transfer extends Base_Class {
 					ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 					Log.info("ERROR");
 				}
+
+				ExtentTestManager.startTest("Verify general Submission with Transfer Mode");
+				Log.info("Verify general Submission with Transfer Mode");
+
 				click(GenOpen.clicksaves);
 				ExtentTestManager.getTest().log(Status.PASS,
 						"Step:01 - 1.Click Save button after giving the post debit details");
 				Log.info("Step:01 - 1.1.Click Save button after giving the post debit details");
-				
-				
+
 				transIdTransfer = driver.findElement(GenOpen.Transid).getText();
-				
 
 			}
 		}
@@ -411,7 +470,7 @@ public class General_Opening_cash_transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS,
 				"Step:01 - 1.Click Save button after giving the post debit details");
 		Log.info("Step:01 - 1.1.Click Save button after giving the post debit details");
-		
+
 		if (ElementDisplayed(GenOpen.Transid)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan opening entry displayed");
 			Log.info("Expected Result: Loan opening entry displayed");
@@ -460,13 +519,8 @@ public class General_Opening_cash_transfer extends Base_Class {
 		ExtentTestManager.endTest();
 
 		// Manager Authorization - Transfer Tab
-		// ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
-		// Log.info("Manager Authorization - Transfer Tab");
-
-		// click(goaldLoanRepo.autorizeAndCancelTab);
-		// ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize &
-		// Cancel\"");
-		// Log.info("Step:01 - Click \"Authorize & Cancel\"");
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		Log.info("Manager Authorization - Transfer Tab");
 
 		click(goaldLoanRepo.managerAuthoTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select \"Manager Authorization\"");
@@ -488,7 +542,7 @@ public class General_Opening_cash_transfer extends Base_Class {
 		click(goaldLoanRepo.refreshBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Refresh Button");
 		Log.info("Step:01 - Click Refresh Button");
-//vinusha
+
 		System.out.println("transIdTransferPersonal " + transIdTransfer);
 		fetchWithTransId(transIdTransfer);
 

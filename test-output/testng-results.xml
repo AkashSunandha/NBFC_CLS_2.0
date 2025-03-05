@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-04T10:57:03 IST" name="Default suite" finished-at="2025-03-04T11:02:05 IST" duration-ms="302086">
+  <suite started-at="2025-03-05T10:30:01 IST" name="Default suite" finished-at="2025-03-05T10:30:39 IST" duration-ms="37421">
     <groups>
     </groups>
-    <test started-at="2025-03-04T10:57:03 IST" name="Default test" finished-at="2025-03-04T11:02:05 IST" duration-ms="302086">
-      <class name="com.test.GeneralOpening.AllScenario_GeneralOpen_Cash_Transfer">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.GeneralOpening.AllScenario_GeneralOpen_Cash_Transfer@18c5069b]" started-at="2025-03-04T10:57:03 IST" name="reference" finished-at="2025-03-04T10:57:03 IST" duration-ms="9" status="PASS">
+    <test started-at="2025-03-05T10:30:01 IST" name="Default test" finished-at="2025-03-05T10:30:39 IST" duration-ms="37421">
+      <class name="com.test.JewelLoanClosure.AllScenario_JewelLoan_Cash_Transfer">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.JewelLoanClosure.AllScenario_JewelLoan_Cash_Transfer@68ad99fe]" started-at="2025-03-05T10:30:01 IST" name="reference" finished-at="2025-03-05T10:30:01 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.GeneralOpening.AllScenario_GeneralOpen_Cash_Transfer@18c5069b]" started-at="2025-03-04T10:57:03 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-04T11:02:05 IST" duration-ms="301410" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.JewelLoanClosure.AllScenario_JewelLoan_Cash_Transfer@68ad99fe]" started-at="2025-03-05T10:30:02 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-05T10:30:39 IST" duration-ms="36755" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Amount=500000, Name=AAA, Openaccount=500000, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Remarks=Testing, Run=Yes, TestScenario=Personal Loan Weekly}]]>
+                <![CDATA[{pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Personal Loan Weekly}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@2dbd803f]]>
+                <![CDATA[org.testng.TestRunner@131fcb6f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newCustomer -->
-      </class> <!-- com.test.GeneralOpening.AllScenario_GeneralOpen_Cash_Transfer -->
+      </class> <!-- com.test.JewelLoanClosure.AllScenario_JewelLoan_Cash_Transfer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
