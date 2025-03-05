@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -490,7 +491,7 @@ public boolean AddSecurityDetailsItemDescription(Map<Object, Object> testdata, I
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("BANGLE");
 	
 	// ✅ Enter Item Description
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
@@ -540,7 +541,7 @@ public boolean AddSecurityDetailsItemQuantity(Map<Object, Object> testdata, ITes
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("BANGLE");
 
 	// ✅ Enter Item Description
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
@@ -598,7 +599,7 @@ public boolean AddSecurityDetailsStoneWeight(Map<Object, Object> testdata, ITest
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("BANGLE");
 
 	// ✅ Enter Item Description
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
@@ -664,7 +665,7 @@ public boolean AddSecurityDetailsTickPurityCheckbox(Map<Object, Object> testdata
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("BANGLE");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -734,7 +735,7 @@ public boolean AddSecurityDetailsItemWeight(Map<Object, Object> testdata, ITestC
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("BANGLE");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -808,7 +809,7 @@ public boolean AddSecurityDetailsDirtWeight(Map<Object, Object> testdata, ITestC
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("BANGLE");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -889,7 +890,7 @@ public boolean AddSecurityDetailsEnterPurity(Map<Object, Object> testdata, ITest
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("BANGLE");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -977,7 +978,7 @@ public boolean AddSecurityDetailsAdd(Map<Object, Object> testdata, ITestContext 
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("BANGLE");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -1078,7 +1079,7 @@ public boolean CloseSecurityDetailsPopup(Map<Object, Object> testdata, ITestCont
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("BANGLE");
 
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
 	
@@ -1184,7 +1185,7 @@ public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITe
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("BANGLE");
 
 	// ✅ Enter Item Description
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
@@ -1411,7 +1412,7 @@ public boolean EnterRemarksandSelectClosureType(Map<Object, Object> testdata, IT
 
 }
 
-public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, TimeoutException{
 	
 	ExtentTestManager.startTest("TC:25 - POST DEBIT popup is present");
 	Log.info("TC:25 - POST DEBIT popup is present");
@@ -1870,8 +1871,6 @@ public boolean PostDebitPopUpAddDetails(Map<Object, Object> testdata, ITestConte
 								//Alert alert = driver.switchTo().alert();
 								//alert.accept();
 								
-								Thread.sleep(2000);
-
 								if(ElementDisplayed(LoanClosureCash.AddButton)) {
 								click(LoanClosureCash.AddButton);
 
@@ -1896,7 +1895,7 @@ public boolean PostDebitPopUpAddDetails(Map<Object, Object> testdata, ITestConte
 		return true;
 }
 
-public boolean PostDebitPopUpSubmitDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+public boolean PostDebitPopUpSubmitDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, TimeoutException{
 	
 	ExtentTestManager.startTest("TC:33 - POST DEBIT popup is present");
 	Log.info("TC:33 - POST DEBIT popup is present");
@@ -1953,9 +1952,7 @@ public boolean PostDebitPopUpSubmitDetails(Map<Object, Object> testdata, ITestCo
 							//click(LoanClosureCash.RemoveEntry);
 							//Alert alert = driver.switchTo().alert();
 							//alert.accept();
-							
-							Thread.sleep(2000);
-							
+														
 							if(ElementDisplayed(LoanClosureCash.AddButton)) {
 							click(LoanClosureCash.AddButton);
 					
@@ -1966,8 +1963,8 @@ public boolean PostDebitPopUpSubmitDetails(Map<Object, Object> testdata, ITestCo
 								ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on the SUBMIT button ");
 								Log.info("Step 1: Click on the SUBMIT button ");
 								
-								WebDriverWait waitForWindowClose = new WebDriverWait(driver, 10);
-							    waitForWindowClose.until(ExpectedConditions.numberOfWindowsToBe(1));
+								WebDriverWait waitForWindowClose = new WebDriverWait(driver, 15);
+								waitForWindowClose.until(ExpectedConditions.numberOfWindowsToBe(1));
 								
 								driver.switchTo().window(mainWindowHandle);
 
@@ -1996,7 +1993,7 @@ public boolean PostDebitSubmitAccountClosure() throws InterruptedException {
 	
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	WebElement SubmitDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='btnSubmit']")));
+	WebElement SubmitDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnSubmit']")));
 	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("arguments[0].scrollIntoView(true);", SubmitDetails);
@@ -2154,10 +2151,10 @@ public boolean SelectManagerTransferTransaction() throws InterruptedException{
 	System.out.println("transIdTransferLoan "+transIdTransferLoan);
 	FetchwithTransID(transIdTransferLoan);
 	
-    WebElement checkbox = driver.findElement(LoanClosureCash.OpeningEntryCashCheckbox);
+    WebElement checkbox = driver.findElement(LoanClosureCash.ManagerSelectCheckbox);
 	
-	if(ElementDisplayed(LoanClosureCash.OpeningEntryCashCheckbox)) {
-	click(LoanClosureCash.OpeningEntryCashCheckbox);
+	if(ElementDisplayed(LoanClosureCash.ManagerSelectCheckbox)) {
+	click(LoanClosureCash.ManagerSelectCheckbox);
 		
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select the transaction to authorise");
 	Log.info("Step:01 - Select the transaction to authorise");
@@ -2193,97 +2190,6 @@ public boolean ManagerTransferAuthorization() throws InterruptedException{
 	return true;	
 }
 
-public boolean CashierAuthorisation() throws InterruptedException, IOException{
-	
-	ExtentTestManager.startTest("TC:31 - Login to NBFc Application in a different user");
-	Log.info("TC:31 - Login to NBFc Application in a different user");
-	
-	WebElement CashModeTrans = driver.findElement(LoanClosureCash.CashAuthorisation);
-	JavascriptExecutor js = (JavascriptExecutor) driver;
-	js.executeScript("arguments[0].scrollIntoView(true);", CashModeTrans);
-	
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to AUTHORISE and Cancel in the menu");
-	Log.info("Step:01 - Navigate to AUTHORISE and Cancel in the menu");
-	
-	Thread.sleep(2000);
-	click(LoanClosureCash.CashAuthorisation);
-	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select the Cashier Authorisation window.");
-	Log.info("Step:02 - Select the Cashier Authorisation window.");
-	
-	Assert.assertTrue(ElementDisplayed(LoanClosureCash.CashAuthorisation), "Validation Failed: Cashier Authorisation window did not open.");
-		
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Cashier Authorisation window opened successfully");
-	Log.info("Expected Result: Cashier Authorisation window opened successfully");
-
-	ExtentTestManager.endTest();
-	return true;
-}
-
-public boolean CashAuthorizationRefresh() throws InterruptedException{
-	
-	ExtentTestManager.startTest("TC:32 - Login to NBFc Application in a different user");
-	Log.info("TC:32 - Login to NBFc Application in a different user");
-	
-	click(LoanClosureCash.Refresh);
-		
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Refresh button");
-	Log.info("Step:01 - Click on the Refresh button");
-	
-	Assert.assertTrue(ElementDisplayed(LoanClosureCash.Refresh), "Validation Failed: 'Refresh' button is not displayed.");
-	
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Authorisation pending transaction gets displayed ");
-	Log.info("Expected Result: Authorisation pending transaction gets displayed ");
-		
-	ExtentTestManager.endTest();
-	return true;	
-}
-
-public boolean SelectCashTransactionCashierAuthorisation() throws InterruptedException{
-	
-	ExtentTestManager.startTest("TC:33 - Login to NBFc Application in a different user");
-	Log.info("TC:33 - Login to NBFc Application in a different user");
-	
-	System.out.println("transIdCashPersonal "+transIdCashLoan);
-	FetchwithTransID(transIdCashLoan);
-	
-	WebElement Managercheckbox = driver.findElement(LoanClosureCash.ManagerCheckBox);
-	
-	if(ElementDisplayed(LoanClosureCash.ManagerCheckBox)) {
-	click(LoanClosureCash.ManagerCheckBox);
-		
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select the transaction to authorise");
-	Log.info("Step:01 - Select the transaction to authorise");
-	
-    Assert.assertTrue(Managercheckbox.isSelected(), "Validation Failed: 'Checkbox' is not selected.");
-	
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: transaction to authorise is selected");
-	Log.info("Expected Result: transaction to authorise is selected");
-}	
-	ExtentTestManager.endTest();
-	return true;	
-}
-
-public boolean CashAuthorization() throws InterruptedException{
-	
-	ExtentTestManager.startTest("TC:34 - Login to NBFc Application in a different user");
-	Log.info("TC:34 - Login to NBFc Application in a different user");
-	
-	if(ElementDisplayed(LoanClosureCash.CashAuthorizeBtn)) {
-	click(LoanClosureCash.CashAuthorizeBtn);
-		
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Authorize button");
-	Log.info("Step:01 - Click on the Authorize button");
-	
-	Assert.assertTrue(ElementDisplayed(LoanClosureCash.CashAuthorizeBtn), "Validation Failed: 'Authorize' button is not Clicked.");
-	
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction gets authorised");
-	Log.info("Expected Result: Transaction gets authorised");
-	
-	click(LoanClosureCash.ClosePopup);
-}
-	ExtentTestManager.endTest();
-	return true;	
-}
 
 
 		

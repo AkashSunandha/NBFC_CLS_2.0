@@ -1,4 +1,4 @@
-[ERROR] 2025-03-05 11:26:50.921 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-05 15:05:14.525 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Jewel_Gold_Loan_Renewal_Module.AllScenarios_Jewel_Gold_Loan_Renewal_Cash.gettestdate(AllScenarios_Jewel_Gold_Loan_Renewal_Cash.java:180) ~[test-classes/:?]
+	at com.test.Jewel_Gold_Loan_Renewal_Module.AllScenarios_Jewel_Gold_Loan_Renewal_Transfer.gettestdate(AllScenarios_Jewel_Gold_Loan_Renewal_Transfer.java:199) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-05 11:26:50.940 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-05 15:05:14.547 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -71,7 +71,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Jewel_Gold_Loan_Renewal_Module.AllScenarios_Jewel_Gold_Loan_Renewal_Cash.gettestdate(AllScenarios_Jewel_Gold_Loan_Renewal_Cash.java:180) ~[test-classes/:?]
+	at com.test.Jewel_Gold_Loan_Renewal_Module.AllScenarios_Jewel_Gold_Loan_Renewal_Transfer.gettestdate(AllScenarios_Jewel_Gold_Loan_Renewal_Transfer.java:199) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-05 11:26:50.943 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-05 15:05:14.550 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -124,7 +124,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Jewel_Gold_Loan_Renewal_Module.AllScenarios_Jewel_Gold_Loan_Renewal_Cash.gettestdate(AllScenarios_Jewel_Gold_Loan_Renewal_Cash.java:180) ~[test-classes/:?]
+	at com.test.Jewel_Gold_Loan_Renewal_Module.AllScenarios_Jewel_Gold_Loan_Renewal_Transfer.gettestdate(AllScenarios_Jewel_Gold_Loan_Renewal_Transfer.java:199) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-05 11:26:50.951 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-05 15:05:14.556 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Jewel_Gold_Loan_Renewal_Module.AllScenarios_Jewel_Gold_Loan_Renewal_Cash.gettestdate(AllScenarios_Jewel_Gold_Loan_Renewal_Cash.java:180) ~[test-classes/:?]
+	at com.test.Jewel_Gold_Loan_Renewal_Module.AllScenarios_Jewel_Gold_Loan_Renewal_Transfer.gettestdate(AllScenarios_Jewel_Gold_Loan_Renewal_Transfer.java:199) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,135 +210,153 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-03-05 11:26:51.613 [main] Log - *** Running test method Loan_Closure_Cash...
-[INFO ] 2025-03-05 11:26:55.504 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-05 11:26:56.434 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-05 11:26:56.670 [main] Log - PC Registration
-[INFO ] 2025-03-05 11:26:57.738 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-05 11:26:58.063 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-05 11:26:59.090 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-03-05 11:27:03.361 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-05 11:27:04.816 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-05 11:27:04.882 [main] Log - TC_01 - Login to NBFC Application
-[INFO ] 2025-03-05 11:27:05.917 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-05 11:27:06.971 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-05 11:27:14.867 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-05 11:27:15.936 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-05 11:27:16.975 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-05 11:27:17.031 [main] Log - TC:02 - Open Account Closure Window
-[INFO ] 2025-03-05 11:27:21.340 [main] Log - Step:01 Navigate to the main menu
-[INFO ] 2025-03-05 11:27:26.161 [main] Log - Step:02 Click 'Account loan Closure'
-[INFO ] 2025-03-05 11:27:27.209 [main] Log - Expected Result: Account Closure window opens
-[INFO ] 2025-03-05 11:27:27.249 [main] Log - TC:03 - Select Jewel Loan Product Group
-[INFO ] 2025-03-05 11:27:35.868 [main] Log - Step:01 Select topup checkbox
-[INFO ] 2025-03-05 11:27:35.891 [main] Log - Step:02 Click on the 'Product Group' dropdown
-[INFO ] 2025-03-05 11:27:36.154 [main] Log - Step:03 Select 'Jewel Loan'
-[INFO ] 2025-03-05 11:27:36.205 [main] Log - Expected Result: Jewel Loan is selected in the product group field
-[INFO ] 2025-03-05 11:27:36.252 [main] Log - TC:04 - Select Product Name from Dropdown
-[INFO ] 2025-03-05 11:27:40.566 [main] Log - Step:01 Click on the 'Product Name' dropdown
-[INFO ] 2025-03-05 11:27:40.838 [main] Log - Step:02 Select a product
-[INFO ] 2025-03-05 11:27:40.869 [main] Log - Expected Result: Selected product name is displayed
-[INFO ] 2025-03-05 11:27:40.916 [main] Log - TC:05 - Enter Loan Account Number
-[INFO ] 2025-03-05 11:27:41.278 [main] Log - Fetched Account Number from DB: 102210010000764
-[INFO ] 2025-03-05 11:27:41.278 [main] Log - Extracted Last 3 Digits: 764
-[INFO ] 2025-03-05 11:27:45.675 [main] Log - Step:01 Enter a valid loan account number in the 'Account Number' field
-[INFO ] 2025-03-05 11:27:45.676 [main] Log - Expected Result: Loan account number is accepted
-[INFO ] 2025-03-05 11:27:45.726 [main] Log - TC:06 - Display Loan Account Details
-[INFO ] 2025-03-05 11:27:50.023 [main] Log - Step:01 - Click 'Go' button
-[INFO ] 2025-03-05 11:27:54.312 [main] Log - Switched back to the main window.
-[INFO ] 2025-03-05 11:27:55.377 [main] Log - Expected Result: Loan account details are displayed
-[INFO ] 2025-03-05 11:27:55.421 [main] Log - TC:07 - Expand Renewal Section
-[INFO ] 2025-03-05 11:28:00.753 [main] Log - Step:01 - Click 'Renew Account' checkbox
-[INFO ] 2025-03-05 11:28:01.817 [main] Log - Expected Result: Renewal section is expanded
-[INFO ] 2025-03-05 11:28:01.862 [main] Log - TC:08 - Open Security Details Popup
-[INFO ] 2025-03-05 11:28:06.392 [main] Log - Step 1: Click 'Security' button
-[INFO ] 2025-03-05 11:28:06.517 [main] Log - Expected Result: Security details popup window is opened
-[INFO ] 2025-03-05 11:28:06.568 [main] Log - TC:09 - Add Security Details
-[INFO ] 2025-03-05 11:28:11.115 [main] Log - Step:01 Select Item Group
-[INFO ] 2025-03-05 11:28:11.219 [main] Log - Expected Result: Security details are added to the grid
-[INFO ] 2025-03-05 11:28:11.269 [main] Log - TC:10 - Add Security Details Item Name
-[INFO ] 2025-03-05 11:28:16.133 [main] Log - Step:01 Select Item Name
-[INFO ] 2025-03-05 11:28:17.107 [main] Log - Expected Result: Item name is selected
-[INFO ] 2025-03-05 11:28:17.154 [main] Log - TC:11 - Add Security Details Item Description
-[INFO ] 2025-03-05 11:28:27.380 [main] Log - Step:01 -  Select Item Description
-[INFO ] 2025-03-05 11:28:27.489 [main] Log - Expected Result: Item Description selected
-[INFO ] 2025-03-05 11:28:27.538 [main] Log - TC:12 - Add Security Details Item Quantity
-[INFO ] 2025-03-05 11:28:43.153 [main] Log - Step:01 -  Select Item quantity
-[INFO ] 2025-03-05 11:28:43.269 [main] Log - Expected Result: Item quantity selected
-[INFO ] 2025-03-05 11:28:43.316 [main] Log - TC:13 - Add Security Details Stone Weight
-[INFO ] 2025-03-05 11:29:04.213 [main] Log - Step:01 - Enter Stone Weight 0
-[INFO ] 2025-03-05 11:29:04.314 [main] Log - Expected Result: Stone Weight Entered
-[INFO ] 2025-03-05 11:29:04.353 [main] Log - TC:14 - Add Security Details Tick Purity Checkbox
-[INFO ] 2025-03-05 11:29:29.673 [main] Log - Step:01 - Tick purity test checkbox
-[INFO ] 2025-03-05 11:29:30.839 [main] Log - Expected Result: Purity is ticked
-[INFO ] 2025-03-05 11:29:30.896 [main] Log - TC:15 - Add Security Details Item Weight
-[INFO ] 2025-03-05 11:30:01.489 [main] Log - Step:01 - Enter Item Weight as 24
-[INFO ] 2025-03-05 11:30:01.591 [main] Log - Expected Result: Item Weight entered
-[INFO ] 2025-03-05 11:30:01.638 [main] Log - TC:16 - Add Security Details Dirt Weight
-[INFO ] 2025-03-05 11:30:37.517 [main] Log - Step:01 - Enter Dirt Weight as 1
-[INFO ] 2025-03-05 11:30:37.634 [main] Log - Expected Result: Dirt Weight entered
-[INFO ] 2025-03-05 11:30:37.678 [main] Log - TC:17 - Add Security Details Enter Purity
-[INFO ] 2025-03-05 11:31:19.037 [main] Log - Step:01 - Enter Purity  as 22
-[INFO ] 2025-03-05 11:31:19.153 [main] Log - Expected Result: Purity added
-[INFO ] 2025-03-05 11:31:19.209 [main] Log - TC:18 - Add Security Details Add
-[INFO ] 2025-03-05 11:32:06.094 [main] Log - Step:01 - Click 'Add' button
-[INFO ] 2025-03-05 11:32:13.596 [main] Log - Expected Result: Add button selected date is inseted into the grid
-[INFO ] 2025-03-05 11:32:13.634 [main] Log - TC:19 - Close Security Details Popup
-[INFO ] 2025-03-05 11:33:00.807 [main] Log - Step:01  Select Appraiser from dropdown
-[INFO ] 2025-03-05 11:33:02.097 [main] Log - Expected Result: appraiser selected
-[INFO ] 2025-03-05 11:33:02.132 [main] Log - TC:20 - Close Security Details Popup Submit
-[INFO ] 2025-03-05 11:33:57.588 [main] Log - Step:01 - Click 'Submit' button
-[INFO ] 2025-03-05 11:33:57.602 [main] Log - Expected Result: Security details popup window is closed
-[INFO ] 2025-03-05 11:33:57.674 [main] Log - TC:21 - Enter Sanctioned Amount
-[INFO ] 2025-03-05 11:34:03.053 [main] Log - Step:01 - Enter the sanctioned amount in the respective field
-[INFO ] 2025-03-05 11:34:03.053 [main] Log - Expected Result: Sanctioned amount is accepted
-[INFO ] 2025-03-05 11:34:03.082 [main] Log - TC:22 - Get Value with Cash Transaction Mode
-[INFO ] 2025-03-05 11:34:08.546 [main] Log - Step 01: Click 'Get Value' button
-[INFO ] 2025-03-05 11:34:08.547 [main] Log - Expected Result: Value is calculated and displayed
-[INFO ] 2025-03-05 11:34:08.629 [main] Log - TC:23 - Get Value with Cash Transaction Mode
-[INFO ] 2025-03-05 11:34:16.072 [main] Log - Step 01: Select 'Trans.mode'as Cash.
-[INFO ] 2025-03-05 11:34:16.393 [main] Log - Expected Result: Cash transmode  is accepted
-[INFO ] 2025-03-05 11:34:16.476 [main] Log - TC:24 - Enter Remarks and Select Closure Type
-[INFO ] 2025-03-05 11:34:21.852 [main] Log - Step:01 - Enter remarks in the 'Remarks' field
-[INFO ] 2025-03-05 11:34:21.852 [main] Log - Expected Result: Remarks are noted.
-[INFO ] 2025-03-05 11:34:21.893 [main] Log - TC:25 - Submit Account Closure
-[INFO ] 2025-03-05 11:34:27.298 [main] Log - Step:01 - Click 'Submit' button for closure process
-[INFO ] 2025-03-05 11:34:28.364 [main] Log - Expected Result: Security details popup window is closed
-[INFO ] 2025-03-05 11:34:29.440 [main] Log - Expected Result: Summary will be generated
-[INFO ] 2025-03-05 11:34:29.497 [main] Log - TC:26 - Login to NBFc Application in a different user
-[INFO ] 2025-03-05 11:34:29.498 [main] Log - Logout
-[INFO ] 2025-03-05 11:34:36.088 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-03-05 11:34:37.165 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
-[INFO ] 2025-03-05 11:34:38.216 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-05 11:34:39.241 [main] Log - Step:02 - Enter valid Password
-[INFO ] 2025-03-05 11:34:45.672 [main] Log - Step:01 - Login as another user.
-[INFO ] 2025-03-05 11:34:46.736 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-05 11:34:46.765 [main] Log - TC:27 - Login to NBFc Application in a different user
-[INFO ] 2025-03-05 11:34:52.152 [main] Log - Step:01 - Navigate to AUTHORISE and Cancel in the menu
-[INFO ] 2025-03-05 11:34:57.288 [main] Log - Step:02 - Select the Manager Authorisation window.
-[INFO ] 2025-03-05 11:34:58.355 [main] Log - Expected Result:  Manager Authorisation window opened successfully
-[INFO ] 2025-03-05 11:34:58.386 [main] Log - TC:28 - Login to NBFc Application in a different user
-[INFO ] 2025-03-05 11:35:02.700 [main] Log - Step:01 - Click on the Refresh button
-[INFO ] 2025-03-05 11:35:03.766 [main] Log - Expected Result: Authorisation pending transaction gets displayed 
-[INFO ] 2025-03-05 11:35:03.794 [main] Log - TC:29 - Login to NBFc Application in a different user
-[INFO ] 2025-03-05 11:35:14.610 [main] Log - Step:01 - Select the transaction to authorise
-[INFO ] 2025-03-05 11:35:14.644 [main] Log - Expected Result: transaction to authorise is selected
-[INFO ] 2025-03-05 11:35:14.682 [main] Log - TC:30 - Login to NBFc Application in a different user
-[INFO ] 2025-03-05 11:35:20.090 [main] Log - Step:01 - Click on the Authorize button
-[INFO ] 2025-03-05 11:35:21.144 [main] Log - Expected Result: Transaction gets authorised
-[INFO ] 2025-03-05 11:35:25.516 [main] Log - TC:31 - Login to NBFc Application in a different user
-[INFO ] 2025-03-05 11:35:25.535 [main] Log - Step:01 - Navigate to AUTHORISE and Cancel in the menu
-[INFO ] 2025-03-05 11:35:32.181 [main] Log - Step:02 - Select the Cashier Authorisation window.
-[INFO ] 2025-03-05 11:35:33.229 [main] Log - Expected Result: Cashier Authorisation window opened successfully
-[INFO ] 2025-03-05 11:35:33.263 [main] Log - TC:32 - Login to NBFc Application in a different user
-[INFO ] 2025-03-05 11:35:37.565 [main] Log - Step:01 - Click on the Refresh button
-[INFO ] 2025-03-05 11:35:38.617 [main] Log - Expected Result: Authorisation pending transaction gets displayed 
-[INFO ] 2025-03-05 11:35:38.653 [main] Log - TC:33 - Login to NBFc Application in a different user
-[INFO ] 2025-03-05 11:35:49.401 [main] Log - Step:01 - Select the transaction to authorise
-[INFO ] 2025-03-05 11:35:49.411 [main] Log - Expected Result: transaction to authorise is selected
-[INFO ] 2025-03-05 11:35:49.489 [main] Log - TC:34 - Login to NBFc Application in a different user
-[INFO ] 2025-03-05 11:35:54.835 [main] Log - Step:01 - Click on the Authorize button
-[INFO ] 2025-03-05 11:35:55.873 [main] Log - Expected Result: Transaction gets authorised
-[INFO ] 2025-03-05 11:36:03.214 [main] Log - Logout
-[INFO ] 2025-03-05 11:36:11.757 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-03-05 11:36:12.817 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-03-05 15:05:15.515 [main] Log - *** Running test method Loan_Closure_Transfer...
+[INFO ] 2025-03-05 15:05:22.622 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-03-05 15:05:23.821 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-03-05 15:05:24.213 [main] Log - PC Registration
+[INFO ] 2025-03-05 15:05:25.313 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-03-05 15:05:25.732 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-03-05 15:05:26.781 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-03-05 15:05:31.096 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-03-05 15:05:32.802 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-03-05 15:05:32.934 [main] Log - TC_01 - Login to NBFC Application
+[INFO ] 2025-03-05 15:05:34.004 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-05 15:05:35.093 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-03-05 15:05:42.632 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-03-05 15:05:43.740 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-05 15:05:44.803 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-05 15:05:44.909 [main] Log - TC:02 - Open Account Closure Window
+[INFO ] 2025-03-05 15:05:49.239 [main] Log - Step:01 Navigate to the main menu
+[INFO ] 2025-03-05 15:05:54.021 [main] Log - Step:02 Click 'Account loan Closure'
+[INFO ] 2025-03-05 15:05:55.080 [main] Log - Expected Result: Account Closure window opens
+[INFO ] 2025-03-05 15:05:55.165 [main] Log - TC:03 - Select Jewel Loan Product Group
+[INFO ] 2025-03-05 15:06:03.856 [main] Log - Step:01 Select topup checkbox
+[INFO ] 2025-03-05 15:06:03.884 [main] Log - Step:02 Click on the 'Product Group' dropdown
+[INFO ] 2025-03-05 15:06:04.159 [main] Log - Step:03 Select 'Jewel Loan'
+[INFO ] 2025-03-05 15:06:04.220 [main] Log - Expected Result: Jewel Loan is selected in the product group field
+[INFO ] 2025-03-05 15:06:04.298 [main] Log - TC:04 - Select Product Name from Dropdown
+[INFO ] 2025-03-05 15:06:08.633 [main] Log - Step:01 Click on the 'Product Name' dropdown
+[INFO ] 2025-03-05 15:06:08.916 [main] Log - Step:02 Select a product
+[INFO ] 2025-03-05 15:06:08.950 [main] Log - Expected Result: Selected product name is displayed
+[INFO ] 2025-03-05 15:06:09.031 [main] Log - TC:05 - Enter Loan Account Number
+[INFO ] 2025-03-05 15:06:09.496 [main] Log - Fetched Account Number from DB: 102210010000762
+[INFO ] 2025-03-05 15:06:09.496 [main] Log - Extracted Last 3 Digits: 762
+[INFO ] 2025-03-05 15:06:13.906 [main] Log - Step:01 Enter a valid loan account number in the 'Account Number' field
+[INFO ] 2025-03-05 15:06:13.907 [main] Log - Expected Result: Loan account number is accepted
+[INFO ] 2025-03-05 15:06:13.980 [main] Log - TC:06 - Display Loan Account Details
+[INFO ] 2025-03-05 15:06:18.281 [main] Log - Step:01 - Click 'Go' button
+[INFO ] 2025-03-05 15:06:22.695 [main] Log - Switched back to the main window.
+[INFO ] 2025-03-05 15:06:23.742 [main] Log - Expected Result: Loan account details are displayed
+[INFO ] 2025-03-05 15:06:23.821 [main] Log - TC:07 - Expand Renewal Section
+[INFO ] 2025-03-05 15:06:29.179 [main] Log - Step:01 - Click 'Renew Account' checkbox
+[INFO ] 2025-03-05 15:06:30.256 [main] Log - Expected Result: Renewal section is expanded
+[INFO ] 2025-03-05 15:06:30.328 [main] Log - TC:08 - Open Security Details Popup
+[INFO ] 2025-03-05 15:06:34.852 [main] Log - Step 1: Click 'Security' button
+[INFO ] 2025-03-05 15:06:34.922 [main] Log - Expected Result: Security details popup window is opened
+[INFO ] 2025-03-05 15:06:35.006 [main] Log - TC:09 - Add Security Details
+[INFO ] 2025-03-05 15:06:39.578 [main] Log - Step:01 Select Item Group
+[INFO ] 2025-03-05 15:06:39.665 [main] Log - Expected Result: Security details are added to the grid
+[INFO ] 2025-03-05 15:06:39.730 [main] Log - TC:10 - Add Security Details Item Name
+[INFO ] 2025-03-05 15:06:44.632 [main] Log - Step:01 Select Item Name
+[INFO ] 2025-03-05 15:06:46.000 [main] Log - Expected Result: Item name is selected
+[INFO ] 2025-03-05 15:06:46.079 [main] Log - TC:11 - Add Security Details Item Description
+[INFO ] 2025-03-05 15:06:56.371 [main] Log - Step:01 -  Select Item Description
+[INFO ] 2025-03-05 15:06:56.452 [main] Log - Expected Result: Item Description selected
+[INFO ] 2025-03-05 15:06:56.520 [main] Log - TC:12 - Add Security Details Item Quantity
+[INFO ] 2025-03-05 15:07:12.337 [main] Log - Step:01 -  Select Item quantity
+[INFO ] 2025-03-05 15:07:12.433 [main] Log - Expected Result: Item quantity selected
+[INFO ] 2025-03-05 15:07:12.518 [main] Log - TC:13 - Add Security Details Stone Weight
+[INFO ] 2025-03-05 15:07:33.666 [main] Log - Step:01 - Enter Stone Weight 0
+[INFO ] 2025-03-05 15:07:33.743 [main] Log - Expected Result: Stone Weight Entered
+[INFO ] 2025-03-05 15:07:33.829 [main] Log - TC:14 - Add Security Details Tick Purity Checkbox
+[INFO ] 2025-03-05 15:07:59.339 [main] Log - Step:01 - Tick purity test checkbox
+[INFO ] 2025-03-05 15:08:00.467 [main] Log - Expected Result: Purity is ticked
+[INFO ] 2025-03-05 15:08:00.544 [main] Log - TC:15 - Add Security Details Item Weight
+[INFO ] 2025-03-05 15:08:31.313 [main] Log - Step:01 - Enter Item Weight as 24
+[INFO ] 2025-03-05 15:08:31.393 [main] Log - Expected Result: Item Weight entered
+[INFO ] 2025-03-05 15:08:31.457 [main] Log - TC:16 - Add Security Details Dirt Weight
+[INFO ] 2025-03-05 15:09:07.666 [main] Log - Step:01 - Enter Dirt Weight as 1
+[INFO ] 2025-03-05 15:09:07.748 [main] Log - Expected Result: Dirt Weight entered
+[INFO ] 2025-03-05 15:09:07.802 [main] Log - TC:17 - Add Security Details Enter Purity
+[INFO ] 2025-03-05 15:09:49.345 [main] Log - Step:01 - Enter Purity  as 22
+[INFO ] 2025-03-05 15:09:49.436 [main] Log - Expected Result: Purity added
+[INFO ] 2025-03-05 15:09:49.508 [main] Log - TC:18 - Add Security Details Add
+[INFO ] 2025-03-05 15:10:36.677 [main] Log - Step:01 - Click 'Add' button
+[INFO ] 2025-03-05 15:10:44.259 [main] Log - Expected Result: Add button selected date is inseted into the grid
+[INFO ] 2025-03-05 15:10:44.322 [main] Log - TC:19 - Close Security Details Popup
+[INFO ] 2025-03-05 15:11:31.871 [main] Log - Step:01  Select Appraiser from dropdown
+[INFO ] 2025-03-05 15:11:33.216 [main] Log - Expected Result: appraiser selected
+[INFO ] 2025-03-05 15:11:33.268 [main] Log - TC:20 - Close Security Details Popup Submit
+[INFO ] 2025-03-05 15:12:23.836 [main] Log - Selected Appraiser: DIVYA
+[INFO ] 2025-03-05 15:12:29.175 [main] Log - Step:01 - Click 'Submit' button
+[INFO ] 2025-03-05 15:12:29.184 [main] Log - Expected Result: Security details popup window is closed
+[INFO ] 2025-03-05 15:12:29.255 [main] Log - TC:21 - Enter Sanctioned Amount
+[INFO ] 2025-03-05 15:12:34.613 [main] Log - Step:01 - Enter the sanctioned amount in the respective field
+[INFO ] 2025-03-05 15:12:34.614 [main] Log - Expected Result: Sanctioned amount is accepted
+[INFO ] 2025-03-05 15:12:34.672 [main] Log - TC:22 - Get Value with Cash Transaction Mode
+[INFO ] 2025-03-05 15:12:40.171 [main] Log - Step 01: Click 'Get Value' button
+[INFO ] 2025-03-05 15:12:40.172 [main] Log - Expected Result: Value is calculated and displayed
+[INFO ] 2025-03-05 15:12:40.244 [main] Log - TC:23 - Get Value with Cash Transaction Mode
+[INFO ] 2025-03-05 15:12:47.733 [main] Log - Step 01: Select 'Trans.mode'as Transfer.
+[INFO ] 2025-03-05 15:12:48.035 [main] Log - Expected Result: Transfer transmode  is accepted
+[INFO ] 2025-03-05 15:12:48.123 [main] Log - TC:24 - Enter Remarks and Select Closure Type
+[INFO ] 2025-03-05 15:12:53.549 [main] Log - Step:01 - Enter remarks in the 'Remarks' field
+[INFO ] 2025-03-05 15:12:53.549 [main] Log - Expected Result: Remarks are noted.
+[INFO ] 2025-03-05 15:12:53.613 [main] Log - TC:25 - POST DEBIT popup is present
+[INFO ] 2025-03-05 15:12:58.191 [main] Log - Step 1: Click on 'Post Debit' Popup
+[INFO ] 2025-03-05 15:12:58.273 [main] Log - Expected Result:  POST DEBIT popup is opened
+[INFO ] 2025-03-05 15:12:58.348 [main] Log - TC:26 - POST DEBIT popup is present
+[INFO ] 2025-03-05 15:13:08.623 [main] Log - Step 1: Select Account  from the 'Transaciton Based' drop down
+[INFO ] 2025-03-05 15:13:09.761 [main] Log - Expected Result: Account selected from the 'Transaciton Based' drop down
+[INFO ] 2025-03-05 15:13:09.825 [main] Log - TC:27 - POST DEBIT popup is present
+[INFO ] 2025-03-05 15:13:25.826 [main] Log - Step 1: Select Demand Investment from the 'Product group' drop down
+[INFO ] 2025-03-05 15:13:26.976 [main] Log - Expected Result: Demand Investment is selected
+[INFO ] 2025-03-05 15:13:27.043 [main] Log - TC:28 - POST DEBIT popup is present
+[INFO ] 2025-03-05 15:13:48.806 [main] Log - Step 1: Select item from the 'Product Name' drop down
+[INFO ] 2025-03-05 15:13:49.924 [main] Log - Expected Result: Product name item  is selected 
+[INFO ] 2025-03-05 15:13:49.989 [main] Log - TC:29 - POST DEBIT popup is present
+[INFO ] 2025-03-05 15:14:17.374 [main] Log - Step 1: Select an a branch  from the 'Branch  'drop down'
+[INFO ] 2025-03-05 15:14:18.510 [main] Log - Expected Result: Popup window will be closed
+[INFO ] 2025-03-05 15:14:18.568 [main] Log - TC:30 - POST DEBIT popup is present
+[INFO ] 2025-03-05 15:14:52.351 [main] Log - Step 1: Tick mark and select an account from the list of accounts displayed
+[INFO ] 2025-03-05 15:14:53.453 [main] Log - Expected Result: Account  is selected 
+[INFO ] 2025-03-05 15:14:53.510 [main] Log - TC:31 - POST DEBIT popup is present
+[INFO ] 2025-03-05 15:15:33.901 [main] Log - Step 1: Check if data is filled in the text fields
+[INFO ] 2025-03-05 15:15:35.039 [main] Log - Expected Result: Data gets auto filled in the text fields
+[INFO ] 2025-03-05 15:15:35.116 [main] Log - TC:32 - POST DEBIT popup is present
+[INFO ] 2025-03-05 15:16:20.734 [main] Log - Step 1: Click on the ADD button 
+[INFO ] 2025-03-05 15:16:21.898 [main] Log - Expected Result: Data gets inserted in the grid below
+[INFO ] 2025-03-05 15:16:21.961 [main] Log - TC:33 - POST DEBIT popup is present
+[INFO ] 2025-03-05 15:17:12.999 [main] Log - Step 1: Click on the SUBMIT button 
+[INFO ] 2025-03-05 15:17:13.009 [main] Log - Expected Result: Popup gets closed
+[INFO ] 2025-03-05 15:17:13.069 [main] Log - TC:34 - Submit Account Closure
+[INFO ] 2025-03-05 15:17:18.559 [main] Log - Step:01 - Click 'Submit' button for closure process
+[INFO ] 2025-03-05 15:17:18.580 [main] Log - Expected Result: Security details popup window is closed
+[INFO ] 2025-03-05 15:17:20.580 [main] Log - Expected Result: Summary will be generated
+[INFO ] 2025-03-05 15:17:20.642 [main] Log - TC:35 - Login to NBFc Application in a different user
+[INFO ] 2025-03-05 15:17:20.643 [main] Log - Logout
+[INFO ] 2025-03-05 15:17:27.246 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-03-05 15:17:28.333 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-03-05 15:17:29.383 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-05 15:17:30.417 [main] Log - Step:02 - Enter valid Password
+[INFO ] 2025-03-05 15:17:36.943 [main] Log - Step:01 - Login as another user.
+[INFO ] 2025-03-05 15:17:38.016 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-05 15:17:38.085 [main] Log - TC:36 - Login to NBFc Application in a different user
+[INFO ] 2025-03-05 15:17:43.433 [main] Log - Step:01 - Navigate to AUTHORISE and Cancel in the menu
+[INFO ] 2025-03-05 15:17:48.104 [main] Log - Step:02 - Select the Manager Authorisation window.
+[INFO ] 2025-03-05 15:17:49.171 [main] Log - Expected Result:  Manager Authorisation window opened successfully
+[INFO ] 2025-03-05 15:17:49.232 [main] Log - TC:37 - Login to NBFc Application in a different user
+[INFO ] 2025-03-05 15:17:53.544 [main] Log - Step:01 - Click on the  TRANSFER  tab
+[INFO ] 2025-03-05 15:17:53.611 [main] Log - Expected Result: Moved to TRANSFER  tab
+[INFO ] 2025-03-05 15:17:53.670 [main] Log - TC:38 - Login to NBFc Application in a different user
+[INFO ] 2025-03-05 15:17:57.977 [main] Log - Step:01 - Click on the Refresh button
+[INFO ] 2025-03-05 15:17:58.051 [main] Log - Expected Result: Authorisation pending transaction gets displayed 
+[INFO ] 2025-03-05 15:17:58.105 [main] Log - TC:39 - Login to NBFc Application in a different user
+[INFO ] 2025-03-05 15:18:08.933 [main] Log - Step:01 - Select the transaction to authorise
+[INFO ] 2025-03-05 15:18:08.939 [main] Log - Expected Result: transaction to authorise is selected
+[INFO ] 2025-03-05 15:18:08.991 [main] Log - TC:40 - Login to NBFc Application in a different user
+[INFO ] 2025-03-05 15:18:14.339 [main] Log - Step:01 - Click on the Authorize button
+[INFO ] 2025-03-05 15:18:15.380 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-03-05 15:18:22.759 [main] Log - Logout
+[INFO ] 2025-03-05 15:18:31.471 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-03-05 15:18:32.512 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

@@ -49,7 +49,7 @@ public class AllScenarios_Jewel_Gold_Loan_Renewal_Cash extends Base_Class {
 				context.setAttribute("fileName", "Login");
 
 				// Application launch
-				ExtentTestManager.startTest("Firefox Driver & Application Launch for Loan Closure Cash");
+				ExtentTestManager.startTest("Firefox Driver & Application Launch");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 

@@ -50,7 +50,7 @@ public class AllScenarios_Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 				context.setAttribute("fileName", "Login");
 
 				// Application launch
-				ExtentTestManager.startTest("Firefox Driver & Application Launch for Loan Closure Cash");
+				ExtentTestManager.startTest("Firefox Driver & Application Launch");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 
@@ -85,34 +85,34 @@ public class AllScenarios_Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 				GoldLoanRenewalTransfer.AddSecurityDetails();
 				
 				//TC_10 ---> Add Security Details Item Name
-				//GoldLoanRenewalTransfer.AddSecurityDetailsItemName();
+				GoldLoanRenewalTransfer.AddSecurityDetailsItemName();
 				
 				//TC_11 ---> AddSecurityDetailsItemDescription
-				//GoldLoanRenewalTransfer.AddSecurityDetailsItemDescription(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsItemDescription(testdata, context);
 				
 				//TC_12 ---> AddSecurityDetailsItemQuantity
-				//GoldLoanRenewalTransfer.AddSecurityDetailsItemQuantity(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsItemQuantity(testdata, context);
 				
 				//TC_13 ---> AddSecurityDetailsStoneWeight
-				//GoldLoanRenewalTransfer.AddSecurityDetailsStoneWeight(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsStoneWeight(testdata, context);
 				
 				//TC_14 ---> AddSecurityDetailsTickPurityCheckbox
-				//GoldLoanRenewalTransfer.AddSecurityDetailsTickPurityCheckbox(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsTickPurityCheckbox(testdata, context);
 				
 				//TC_15 ---> AddSecurityDetailsItemWeight
-				//GoldLoanRenewalTransfer.AddSecurityDetailsItemWeight(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsItemWeight(testdata, context);
 				
 				//TC_16 ---> AddSecurityDetailsDirtWeight
-				//GoldLoanRenewalTransfer.AddSecurityDetailsDirtWeight(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsDirtWeight(testdata, context);
 				
 				//TC_17 ---> AddSecurityDetailsEnterPurity
-				//GoldLoanRenewalTransfer.AddSecurityDetailsEnterPurity(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsEnterPurity(testdata, context);
 				
 				//TC_18 ---> AddSecurityDetailsAdd
-				//GoldLoanRenewalTransfer.AddSecurityDetailsAdd(testdata, context);
+				GoldLoanRenewalTransfer.AddSecurityDetailsAdd(testdata, context);
 				
 				//TC_19 ---> CloseSecurityDetailsPopup
-				//GoldLoanRenewalTransfer.CloseSecurityDetailsPopup(testdata, context);
+				GoldLoanRenewalTransfer.CloseSecurityDetailsPopup(testdata, context);
 				
 				//TC_20 ---> CloseSecurityDetailsPopupSubmit
 				GoldLoanRenewalTransfer.CloseSecurityDetailsPopupSubmit(testdata, context);
@@ -133,25 +133,25 @@ public class AllScenarios_Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 				GoldLoanRenewalTransfer.POSTDEBITpopupispresent(testdata, context);
 				
 				//TC_26 ---> PostDebitpopupispresent
-				//GoldLoanRenewalTransfer.PostDebitpopupispresent(testdata, context);
+				GoldLoanRenewalTransfer.PostDebitpopupispresent(testdata, context);
 				
 				//TC_27 ---> PostDebitPopUpProductGroupDropdown
-				//GoldLoanRenewalTransfer.PostDebitPopUpProductGroupDropdown(testdata, context);
+				GoldLoanRenewalTransfer.PostDebitPopUpProductGroupDropdown(testdata, context);
 				
 				//TC_28 ---> PostDebitPopUpProductNameDropdown
-				//GoldLoanRenewalTransfer.PostDebitPopUpProductNameDropdown(testdata, context);
+				GoldLoanRenewalTransfer.PostDebitPopUpProductNameDropdown(testdata, context);
 				
 				//TC_29 ---> PostDebitPopUpBranchDropdown
-				//GoldLoanRenewalTransfer.PostDebitPopUpBranchDropdown(testdata, context);
+				GoldLoanRenewalTransfer.PostDebitPopUpBranchDropdown(testdata, context);
 				
 				//TC_30 ---> PostDebitPopUpAccountNumber
-				//GoldLoanRenewalTransfer.PostDebitPopUpAccountNumber(testdata, context);
+				GoldLoanRenewalTransfer.PostDebitPopUpAccountNumber(testdata, context);
 				
 				//TC_31 ---> PostDebitPopUpEnterAmount
-				//GoldLoanRenewalTransfer.PostDebitPopUpEnterAmount(testdata, context);
+				GoldLoanRenewalTransfer.PostDebitPopUpEnterAmount(testdata, context);
 				
 				//TC_32 ---> PostDebitPopUpAddDetails
-				//GoldLoanRenewalTransfer.PostDebitPopUpAddDetails(testdata, context);
+				GoldLoanRenewalTransfer.PostDebitPopUpAddDetails(testdata, context);
 				
 				//TC_33 ---> PostDebitPopUpSubmitDetails
 				GoldLoanRenewalTransfer.PostDebitPopUpSubmitDetails(testdata, context);
@@ -176,18 +176,6 @@ public class AllScenarios_Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 				
 				//TC_40 ---> ManagerTransferAuthorization
 				GoldLoanRenewalTransfer.ManagerTransferAuthorization();
-				
-				//TC_31 ---> LogintoNBFcApplicationinadifferentuserManagerAuthorisation
-				//GoldLoanRenewalTransfer.CashierAuthorisation();
-				
-				//TC_32 ---> ManagerAuthorizationRefresh
-				//GoldLoanRenewalTransfer.CashAuthorizationRefresh();
-				
-				//TC_33 --> SelectCashTransactionManagerAuthorisation
-				//GoldLoanRenewalTransfer.SelectCashTransactionCashierAuthorisation();
-				
-				//TC_34 ---> ManagerAuthorization
-				//GoldLoanRenewalTransfer.CashAuthorization();
 				
 								
 				// Sign out
