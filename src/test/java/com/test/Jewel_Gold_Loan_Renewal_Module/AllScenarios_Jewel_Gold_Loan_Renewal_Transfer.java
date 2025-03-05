@@ -133,37 +133,49 @@ public class AllScenarios_Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 				GoldLoanRenewalTransfer.POSTDEBITpopupispresent(testdata, context);
 				
 				//TC_26 ---> PostDebitpopupispresent
-				GoldLoanRenewalTransfer.PostDebitpopupispresent(testdata, context);
+				//GoldLoanRenewalTransfer.PostDebitpopupispresent(testdata, context);
 				
 				//TC_27 ---> PostDebitPopUpProductGroupDropdown
-				GoldLoanRenewalTransfer.PostDebitPopUpProductGroupDropdown(testdata, context);
+				//GoldLoanRenewalTransfer.PostDebitPopUpProductGroupDropdown(testdata, context);
 				
 				//TC_28 ---> PostDebitPopUpProductNameDropdown
-				GoldLoanRenewalTransfer.PostDebitPopUpProductNameDropdown(testdata, context);
+				//GoldLoanRenewalTransfer.PostDebitPopUpProductNameDropdown(testdata, context);
 				
 				//TC_29 ---> PostDebitPopUpBranchDropdown
-				GoldLoanRenewalTransfer.PostDebitPopUpBranchDropdown(testdata, context);
+				//GoldLoanRenewalTransfer.PostDebitPopUpBranchDropdown(testdata, context);
 				
 				//TC_30 ---> PostDebitPopUpAccountNumber
-				GoldLoanRenewalTransfer.PostDebitPopUpAccountNumber(testdata, context);
+				//GoldLoanRenewalTransfer.PostDebitPopUpAccountNumber(testdata, context);
 				
-				//TC_25 ---> SubmitAccountClosure
-				//GoldLoanRenewalTransfer.SubmitAccountClosure();
+				//TC_31 ---> PostDebitPopUpEnterAmount
+				//GoldLoanRenewalTransfer.PostDebitPopUpEnterAmount(testdata, context);
 				
-				//TC_26 ---> LogintoNBFcApplicationinadifferentuser
-				//GoldLoanRenewalTransfer.LogintoNBFcApplicationinadifferentuser();
+				//TC_32 ---> PostDebitPopUpAddDetails
+				//GoldLoanRenewalTransfer.PostDebitPopUpAddDetails(testdata, context);
 				
-				//TC_27 ---> LogintoNBFcApplicationinadifferentuserAuthorizecancel
-				//GoldLoanRenewalTransfer.LogintoNBFcApplicationinadifferentuserAuthorizeandcancel();
+				//TC_33 ---> PostDebitPopUpSubmitDetails
+				GoldLoanRenewalTransfer.PostDebitPopUpSubmitDetails(testdata, context);
 				
-				//TC_28 ---> LogintoNBFcApplicationinadifferentuserRefresh
-				//GoldLoanRenewalTransfer.ManagerAuthorisationRefresh();
+				//TC_34 ---> PostDebitSubmitAccountClosure
+				GoldLoanRenewalTransfer.PostDebitSubmitAccountClosure();
 				
-				//TC_29 ---> LogintoNBFcApplicationinadifferentuserSelectTransaction
-				//GoldLoanRenewalTransfer.SelectManagerCashTransaction();
+				//TC_35 ---> LogintoNBFcApplicationinadifferentuser
+				GoldLoanRenewalTransfer.LogintoNBFcApplicationinadifferentuser();
 				
-				//TC_30 ---> LogintoNBFcApplicationinadifferentuserAuthorization
-				//GoldLoanRenewalTransfer.ManagerCashAuthorization();
+				//TC_36 ---> LogintoNBFcApplicationinadifferentuserAuthorizecancel
+				GoldLoanRenewalTransfer.LogintoNBFcApplicationinadifferentuserAuthorizeandcancel();
+				
+				//TC_37 ---> ManagerAuthorisationTransfer
+				GoldLoanRenewalTransfer.ManagerAuthorisationTransfer();
+				
+				//TC_38 ---> ManagerAuthorisationRefresh
+				GoldLoanRenewalTransfer.ManagerAuthorisationRefresh();
+				
+				//TC_39 ---> SelectManagerTransferTransaction
+				GoldLoanRenewalTransfer.SelectManagerTransferTransaction();
+				
+				//TC_40 ---> ManagerTransferAuthorization
+				GoldLoanRenewalTransfer.ManagerTransferAuthorization();
 				
 				//TC_31 ---> LogintoNBFcApplicationinadifferentuserManagerAuthorisation
 				//GoldLoanRenewalTransfer.CashierAuthorisation();

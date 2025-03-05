@@ -53,7 +53,7 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By TransModeCash = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstApproval_ctrl0_ucClosureApproval_ddlTransactionMode_ddl']");
 		public By PayAmount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstLoanDetails_ctrl0_LDF_txtPayAmount_txt']");
 		public By CashRemarks = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstApproval_ctrl0_ucClosureApproval_txtRemarks_txt']");
-		public By SubmitButton = By.xpath("//input[@id ='btnSubmit']");
+		public By SubmitButton = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnSubmit']");
 		public By TopUp = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ChkTopUp']");
 		public By OkTopup = By.xpath("//input[@id ='closeSelopU']");
 		public By TransCashID = By.xpath("//span[@id ='ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID']");
@@ -63,6 +63,8 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By Refresh = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnRefresh']");
 		public By TransactionIDField = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt']");
 		public By GoBTN = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnGo']");
+		public By ManagerSelectCheckbo = By.xpath("//input[@id='']");
+		public By SubmitButon = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnSubmit']");
 		public By OpeningEntryCashCheckbox = By.xpath("//input[@id='ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect']");
 		public By CashAuthorizeBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnSubmit']");
 		public By ManagerAuthorization = By.xpath("//a[normalize-space()='Manager Authorisation (MNAU)']");
@@ -72,7 +74,7 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By ItemAlready = By.xpath("//input[@id='close']");
 		public By TrasID = By.xpath("//span[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID']");
 		public By SummaryPage = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/table[1]");
-
+		public By TransferTab = By.xpath("//span[@id ='__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer']");
 		//Post debit
 		
 		public By PostDebit = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstApproval_ctrl0_ucClosureApproval_btnAutoPost']");
@@ -82,7 +84,8 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By BranchName = By.xpath("//select[@id ='ddlBranch_ddl']");
 		public By AccountNum = By.xpath("//input[@id ='txtChildAcNo_txt']");
 		public By AmountField = By.xpath("//input[@id ='txtAmount_txt']");
-		public By AddButton = By.xpath("//input[@id='btnAddGLAcHead']");
+		public By RemoveEntry = By.xpath("//a[@id ='lstContraEntry_ctrl0_lnkRemove']");
+		public By AddButton = By.xpath("//input[@id='btnAdd']");
 		public By SubButton = By.xpath("//input[@id='btnSubmit']");
 		
 		//Signout

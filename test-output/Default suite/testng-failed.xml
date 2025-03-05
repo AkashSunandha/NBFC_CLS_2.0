@@ -5,7 +5,7 @@
     <classes>
       <class name="com.test.Jewel_Gold_Loan_Renewal_Module.AllScenarios_Jewel_Gold_Loan_Renewal_Transfer">
         <methods>
-          <include name="Loan_Closure_Transfer"/>
+          <include name="Loan_Closure_Transfer" invocation-numbers="0"/>
           <include name="reference"/>
         </methods>
       </class> <!-- com.test.Jewel_Gold_Loan_Renewal_Module.AllScenarios_Jewel_Gold_Loan_Renewal_Transfer -->

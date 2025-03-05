@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -1393,14 +1394,14 @@ public boolean EnterRemarksandSelectClosureType(Map<Object, Object> testdata, IT
 	return true;
 
 }
-public boolean SubmitAccountClosure() throws InterruptedException {
+public boolean SubmitAccountClosure() throws InterruptedException, TimeoutException {
 	
 	ExtentTestManager.startTest("TC:25 - Submit Account Closure");
 	Log.info("TC:25 - Submit Account Closure");
 	
 	
-	WebDriverWait wait = new WebDriverWait(driver, 10);
-	WebElement SubmitDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnSubmit']")));
+	WebDriverWait wait = new WebDriverWait(driver, 15);
+	WebElement SubmitDetails = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnSubmit']")));
 	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("arguments[0].scrollIntoView(true);", SubmitDetails);
@@ -1410,12 +1411,15 @@ public boolean SubmitAccountClosure() throws InterruptedException {
 	
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Submit' button for closure process");
 	Log.info("Step:01 - Click 'Submit' button for closure process");
+	wait.until(ExpectedConditions.numberOfWindowsToBe(1));
 	
-	Assert.assertEquals(driver.getWindowHandles().size(), 1, "Validation Failed: Security Details popup window is still open.");
+	boolean isPopupClosed = ElementDisplayed(LoanClosureCash.SummaryOperation);
+	Assert.assertTrue(isPopupClosed, "Validation Failed: Security Details popup window is still open.");
 		
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Security details popup window is closed");
 	Log.info("Expected Result: Security details popup window is closed");
 	}
+	
 	if(ElementDisplayed(LoanClosureCash.SummaryOperation)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary will be generated");
 		Log.info("Expected Result: Summary will be generated");

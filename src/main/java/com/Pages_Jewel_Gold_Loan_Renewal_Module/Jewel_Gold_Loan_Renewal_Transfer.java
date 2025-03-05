@@ -9,9 +9,11 @@ import java.sql.Statement;
 import java.util.Map;
 import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -1246,20 +1248,35 @@ public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITe
 	
 	 // ✅ Select Appraiser from Dropdown
 	WebElement AppraiserDropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
+	  try {
+		  Select appraiser = new Select(AppraiserDropdown);
+		  appraiser.selectByVisibleText("DIVYA");
+	
+			WebElement AppraiserDropdownAfterSelection = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
+			Select appraiserAfterSelection = new Select(AppraiserDropdownAfterSelection);
+			String selectedAppraiserName = appraiserAfterSelection.getFirstSelectedOption().getText();
+			Log.info("Selected Appraiser: " + selectedAppraiserName);
+			
+	  } catch (StaleElementReferenceException e) {
+		  Log.info("Retrying due to StaleElementReferenceException...");
+		  
+		  AppraiserDropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
+		  Select appraiser = new Select(AppraiserDropdown);
+		    appraiser.selectByVisibleText("DIVYA");
 
-	Select appraiser = new Select(AppraiserDropdown);
-	appraiser.selectByVisibleText("DIVYA");
-		
-	WebElement AppraiserDropdownAfterSelection = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
-	Select appraiserAfterSelection = new Select(AppraiserDropdownAfterSelection);
-	String selectedAppraiserName = appraiserAfterSelection.getFirstSelectedOption().getText();
+		    WebElement AppraiserDropdownAfterSelection = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
+		    Select appraiserAfterSelection = new Select(AppraiserDropdownAfterSelection);
+		    String selectedAppraiserName = appraiserAfterSelection.getFirstSelectedOption().getText();
+		    Log.info("Retry Successful - Selected Appraiser: " + selectedAppraiserName);
+		}
+	  }
 	
 	// ✅ Click Submit Button
 	WebElement SubmitDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='btnSubmit']")));
 	
-	if(ElementDisplayed(LoanClosureCash.SubmitBtn)){
+	if(ElementDisplayed(LoanClosureCash.SubmitBtn)) {
 	click(LoanClosureCash.SubmitBtn);
-
+	   
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Submit' button");
 	Log.info("Step:01 - Click 'Submit' button");
 	
@@ -1269,8 +1286,7 @@ public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITe
 		
     ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Security details popup window is closed");
     Log.info("Expected Result: Security details popup window is closed");
-	}
-	}
+	        }
     ExtentTestManager.endTest();
 	return true;
 
@@ -1462,7 +1478,6 @@ public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContex
 	
 	if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
 	click(LoanClosureCash.TransactionBased);
-		
 	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlTrnsBased_ddl']/option[1]")));
 	options.click();
 	
@@ -1503,34 +1518,31 @@ public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContex
 			break;
 		}
 	}	
-	
-	if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
-	click(LoanClosureCash.TransactionBased);
-		
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 
+	if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
+	click(LoanClosureCash.TransactionBased);
 	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlTrnsBased_ddl']/option[1]")));
 	options.click();
 	
-	if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
-	click(LoanClosureCash.ProductGroupDropdown);
-
-	WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
-	ProductGroup.click();
+		if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
+		click(LoanClosureCash.ProductGroupDropdown);
+		WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
+		ProductGroup.click();
 	
-	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select Demand Investment from the 'Product group' drop down");
-	Log.info("Step 1: Select Demand Investment from the 'Product group' drop down");
+		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select Demand Investment from the 'Product group' drop down");
+		Log.info("Step 1: Select Demand Investment from the 'Product group' drop down");
+		
+		Assert.assertTrue(ElementDisplayed(LoanClosureCash.ProductNameDropdown), "Validation Failed: Product Group dropdown should not be displayed");
+		
+		driver.close();
+		driver.switchTo().window(mainWindowHandle);
 	
-	Assert.assertTrue(ElementDisplayed(LoanClosureCash.ProductNameDropdown), "Validation Failed: Product Group dropdown should not be displayed");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Demand Investment is selected");
+		Log.info("Expected Result: Demand Investment is selected");
+		}
 	
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Demand Investment is selected");
-	Log.info("Expected Result: Demand Investment is selected");
 	}
-	
-}
 	ExtentTestManager.endTest();
 	return true;
 
@@ -1558,38 +1570,35 @@ public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContex
 		}
 	}	
 	
-	if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
-	click(LoanClosureCash.TransactionBased);
-		
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 
+	if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
+	click(LoanClosureCash.TransactionBased);
 	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlTrnsBased_ddl']/option[1]")));
 	options.click();
 	
-	if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
-	click(LoanClosureCash.ProductGroupDropdown);
-
-	WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
-	ProductGroup.click();
+		if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
+		click(LoanClosureCash.ProductGroupDropdown);
+		WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
+		ProductGroup.click();
 	
-	if(ElementDisplayed(LoanClosureCash.ProductNameDropdown)) {
-	click(LoanClosureCash.ProductNameDropdown);
-
-	WebElement ProductName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlProductName_ddl']/option[2]")));
-	ProductName.click();
+			if(ElementDisplayed(LoanClosureCash.ProductNameDropdown)) {
+			click(LoanClosureCash.ProductNameDropdown);
+			WebElement ProductName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlProductName_ddl']/option[2]")));
+			ProductName.click();
 		
-	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select item from the 'Product Name' drop down");
-	Log.info("Step 1: Select item from the 'Product Name' drop down");
-	
-	Assert.assertTrue(ElementDisplayed(LoanClosureCash.BranchName), "Validation Failed: Product Name dropdown should not be displayed");
-
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Product name item  is selected ");
-	Log.info("Expected Result: Product name item  is selected ");
-	}	
-}
+			ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select item from the 'Product Name' drop down");
+			Log.info("Step 1: Select item from the 'Product Name' drop down");
+			
+			Assert.assertTrue(ElementDisplayed(LoanClosureCash.BranchName), "Validation Failed: Product Name dropdown should not be displayed");
+		
+			driver.close();
+			driver.switchTo().window(mainWindowHandle);
+		
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Product name item  is selected ");
+			Log.info("Expected Result: Product name item  is selected ");
+			}	
+		}
 	}
 	ExtentTestManager.endTest();
 	return true;
@@ -1617,47 +1626,42 @@ public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContex
 			break;
 		}
 	}	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
 	
 	if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
 	click(LoanClosureCash.TransactionBased);
-		
-	WebDriverWait wait = new WebDriverWait(driver, 10);
-
 	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlTrnsBased_ddl']/option[1]")));
 	options.click();
 	
-	if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
-	click(LoanClosureCash.ProductGroupDropdown);
-
-	WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
-	ProductGroup.click();
+		if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
+		click(LoanClosureCash.ProductGroupDropdown);
+		WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
+		ProductGroup.click();
 	
-	if(ElementDisplayed(LoanClosureCash.ProductNameDropdown)) {
-	click(LoanClosureCash.ProductNameDropdown);
-
-	WebElement ProductName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlProductName_ddl']/option[2]")));
-	ProductName.click();
+			if(ElementDisplayed(LoanClosureCash.ProductNameDropdown)) {
+			click(LoanClosureCash.ProductNameDropdown);
+			WebElement ProductName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlProductName_ddl']/option[2]")));
+			ProductName.click();
+				
+				if(ElementDisplayed(LoanClosureCash.BranchName)) {
+				click(LoanClosureCash.BranchName);
+				WebElement BranchName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlBranch_ddl']/option[3]")));
+				BranchName.click();
 	
-	if(ElementDisplayed(LoanClosureCash.BranchName)) {
-	click(LoanClosureCash.BranchName);
-
-	WebElement BranchName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlBranch_ddl']/option[3]")));
-	BranchName.click();
-	
-	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select an a branch  from the 'Branch  'drop down'");
-	Log.info("Step 1: Select an a branch  from the 'Branch  'drop down'");
-	
-	Assert.assertTrue(ElementDisplayed(LoanClosureCash.AccountNum), "Validation Failed: Branch dropdown should not be displayed");
-
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup window will be closed");
-	Log.info("Expected Result: Popup window will be closed");
-	}	
-}
+				ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select an a branch  from the 'Branch  'drop down'");
+				Log.info("Step 1: Select an a branch  from the 'Branch  'drop down'");
+				
+				Assert.assertTrue(ElementDisplayed(LoanClosureCash.AccountNum), "Validation Failed: Branch dropdown should not be displayed");
+			
+				driver.close();
+				driver.switchTo().window(mainWindowHandle);
+			
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup window will be closed");
+				Log.info("Expected Result: Popup window will be closed");
+				}	
+			}
+		}
 	}
-}
 	ExtentTestManager.endTest();
 	return true;
 
@@ -1684,80 +1688,331 @@ public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContex
 			break;
 		}
 	}	
-	
-	if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
-	click(LoanClosureCash.TransactionBased);
-		
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 
+	if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
+	click(LoanClosureCash.TransactionBased);
 	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlTrnsBased_ddl']/option[1]")));
 	options.click();
 	
-	if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
-	click(LoanClosureCash.ProductGroupDropdown);
-
-	WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
-	ProductGroup.click();
+		if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
+		click(LoanClosureCash.ProductGroupDropdown);
+		WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
+		ProductGroup.click();
 	
-	if(ElementDisplayed(LoanClosureCash.ProductNameDropdown)) {
-	click(LoanClosureCash.ProductNameDropdown);
-
-	WebElement ProductName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlProductName_ddl']/option[2]")));
-	ProductName.click();
+			if(ElementDisplayed(LoanClosureCash.ProductNameDropdown)) {
+			click(LoanClosureCash.ProductNameDropdown);
+			WebElement ProductName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlProductName_ddl']/option[2]")));
+			ProductName.click();
 	
-	if(ElementDisplayed(LoanClosureCash.BranchName)) {
-	click(LoanClosureCash.BranchName);
-
-	WebElement BranchName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlBranch_ddl']/option[3]")));
-	BranchName.click();
+				if(ElementDisplayed(LoanClosureCash.BranchName)) {
+				click(LoanClosureCash.BranchName);
+				WebElement BranchName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlBranch_ddl']/option[3]")));
+				BranchName.click();
 	
-	if(ElementDisplayed(LoanClosureCash.AccountNum)) {
-	click(LoanClosureCash.AccountNum);
-	
-	WebElement AccountNumber = driver.findElement(LoanClosureCash.AccountNum);
-	String EnterAccountNumber = testdata.get("Account_Number").toString();
-	input(LoanClosureCash.AccountNum, EnterAccountNumber);
+					if(ElementDisplayed(LoanClosureCash.AccountNum)) {
+					click(LoanClosureCash.AccountNum);
+					WebElement AccountNumber = driver.findElement(LoanClosureCash.AccountNum);
+					String EnterAccountNumber = testdata.get("Account_Number").toString();
+					input(LoanClosureCash.AccountNum, EnterAccountNumber);
 
-	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Tick mark and select an account from the list of accounts displayed");
-	Log.info("Step 1: Tick mark and select an account from the list of accounts displayed");
-	
-	Assert.assertTrue(ElementDisplayed(LoanClosureCash.AmountField), "Validation Failed: Account Number is not displayed");
-
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account  is selected ");
-	Log.info("Expected Result: Account  is selected ");
-	}	
-	}
-	}
-	}
+					ExtentTestManager.getTest().log(Status.PASS, "Step 1: Tick mark and select an account from the list of accounts displayed");
+					Log.info("Step 1: Tick mark and select an account from the list of accounts displayed");
+					
+					Assert.assertTrue(ElementDisplayed(LoanClosureCash.AmountField), "Validation Failed: Account Number is not displayed");
+				
+					driver.close();
+					driver.switchTo().window(mainWindowHandle);
+				
+					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account  is selected ");
+					Log.info("Expected Result: Account  is selected ");
+					}	
+				}
+			}
+		}
 	}
 	ExtentTestManager.endTest();
 	return true;
 
 }
+	public boolean PostDebitPopUpEnterAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+		
+		ExtentTestManager.startTest("TC:31 - POST DEBIT popup is present");
+		Log.info("TC:31 - POST DEBIT popup is present");
+		
+		WebElement PostDebitTab = driver.findElement(LoanClosureCash.PostDebit);
 
-public boolean SubmitAccountClosure() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", PostDebitTab);
+		
+		click(LoanClosureCash.PostDebit);
+		
+		String mainWindowHandle = driver.getWindowHandle();
+		Set<String> allWindowHandles = driver.getWindowHandles();
+
+		for (String handle : allWindowHandles) {
+			if (!handle.equals(mainWindowHandle)) {
+				driver.switchTo().window(handle);
+				break;
+			}
+		}	
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+
+		if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
+		click(LoanClosureCash.TransactionBased);
+		WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlTrnsBased_ddl']/option[1]")));
+		options.click();
+		
+			if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
+			click(LoanClosureCash.ProductGroupDropdown);
+			WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
+			ProductGroup.click();
+		
+				if(ElementDisplayed(LoanClosureCash.ProductNameDropdown)) {
+				click(LoanClosureCash.ProductNameDropdown);
+				WebElement ProductName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlProductName_ddl']/option[2]")));
+				ProductName.click();
+		
+					if(ElementDisplayed(LoanClosureCash.BranchName)) {
+					click(LoanClosureCash.BranchName);
+					WebElement BranchName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlBranch_ddl']/option[3]")));
+					BranchName.click();
+		
+						if(ElementDisplayed(LoanClosureCash.AccountNum)) {
+						click(LoanClosureCash.AccountNum);
+						WebElement AccountNumber = driver.findElement(LoanClosureCash.AccountNum);
+						String EnterAccountNumber = testdata.get("Account_Number").toString();
+						input(LoanClosureCash.AccountNum, EnterAccountNumber);
+		
+							if(ElementDisplayed(LoanClosureCash.AmountField)) {
+							click(LoanClosureCash.AmountField);
+							WebElement Amount = driver.findElement(LoanClosureCash.AmountField);
+							String EnterAmount = testdata.get("Enter_Amount").toString();
+							input(LoanClosureCash.AmountField, EnterAmount);
+
+							ExtentTestManager.getTest().log(Status.PASS, "Step 1: Check if data is filled in the text fields");
+							Log.info("Step 1: Check if data is filled in the text fields");
+							
+							Assert.assertTrue(ElementDisplayed(LoanClosureCash.AmountField), "Validation Failed: Account Number is not displayed");
+					
+							driver.close();
+							driver.switchTo().window(mainWindowHandle);
+					
+							ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data gets auto filled in the text fields");
+							Log.info("Expected Result: Data gets auto filled in the text fields");
+							}	
+						}
+					}
+				}
+			}
+		}
+		ExtentTestManager.endTest();
+		return true;
+
+	}
 	
-	ExtentTestManager.startTest("TC:25 - Submit Account Closure");
-	Log.info("TC:25 - Submit Account Closure");
+public boolean PostDebitPopUpAddDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+		
+		ExtentTestManager.startTest("TC:32 - POST DEBIT popup is present");
+		Log.info("TC:32 - POST DEBIT popup is present");
+		
+		WebElement PostDebitTab = driver.findElement(LoanClosureCash.PostDebit);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", PostDebitTab);
+		
+		click(LoanClosureCash.PostDebit);
+		
+		String mainWindowHandle = driver.getWindowHandle();
+		Set<String> allWindowHandles = driver.getWindowHandles();
+
+		for (String handle : allWindowHandles) {
+			if (!handle.equals(mainWindowHandle)) {
+				driver.switchTo().window(handle);
+				break;
+			}
+		}	
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+
+		if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
+		click(LoanClosureCash.TransactionBased);			
+		WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlTrnsBased_ddl']/option[1]")));
+		options.click();
+		
+			if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
+			click(LoanClosureCash.ProductGroupDropdown);
+			WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
+			ProductGroup.click();
+		
+				if(ElementDisplayed(LoanClosureCash.ProductNameDropdown)) {
+				click(LoanClosureCash.ProductNameDropdown);
+				WebElement ProductName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlProductName_ddl']/option[2]")));
+				ProductName.click();
+				
+					if(ElementDisplayed(LoanClosureCash.BranchName)) {
+					click(LoanClosureCash.BranchName);
+					WebElement BranchName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlBranch_ddl']/option[3]")));
+					BranchName.click();
+		
+						if(ElementDisplayed(LoanClosureCash.AccountNum)) {
+						click(LoanClosureCash.AccountNum);
+						WebElement AccountNumber = driver.findElement(LoanClosureCash.AccountNum);
+						String EnterAccountNumber = testdata.get("Account_Number").toString();
+						input(LoanClosureCash.AccountNum, EnterAccountNumber);
+		
+							if(ElementDisplayed(LoanClosureCash.AmountField)) {
+							click(LoanClosureCash.AmountField);			
+							WebElement Amount = driver.findElement(LoanClosureCash.AmountField);
+							String EnterAmount = testdata.get("Enter_Amount").toString();
+							input(LoanClosureCash.AmountField, EnterAmount);
+							
+								//click(LoanClosureCash.RemoveEntry);
+								//Alert alert = driver.switchTo().alert();
+								//alert.accept();
+								
+								Thread.sleep(2000);
+
+								if(ElementDisplayed(LoanClosureCash.AddButton)) {
+								click(LoanClosureCash.AddButton);
+
+								ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on the ADD button ");
+								Log.info("Step 1: Click on the ADD button ");
+								
+								Assert.assertTrue(ElementDisplayed(LoanClosureCash.SubButton), "Validation Failed: Account Number is not displayed");
+						
+								driver.close();
+								driver.switchTo().window(mainWindowHandle);
+						
+								ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data gets inserted in the grid below");
+								Log.info("Expected Result: Data gets inserted in the grid below");
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	ExtentTestManager.endTest();
+		return true;
+}
+
+public boolean PostDebitPopUpSubmitDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:33 - POST DEBIT popup is present");
+	Log.info("TC:33 - POST DEBIT popup is present");
+	
+	WebElement PostDebitTab = driver.findElement(LoanClosureCash.PostDebit);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", PostDebitTab);
+	
+	click(LoanClosureCash.PostDebit);
+	
+	String mainWindowHandle = driver.getWindowHandle();
+	Set<String> allWindowHandles = driver.getWindowHandles();
+
+	for (String handle : allWindowHandles) {
+		if (!handle.equals(mainWindowHandle)) {
+			driver.switchTo().window(handle);
+			break;
+		}
+	}	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+
+	if(ElementDisplayed(LoanClosureCash.TransactionBased)) {
+	click(LoanClosureCash.TransactionBased);
+	WebElement options = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlTrnsBased_ddl']/option[1]")));
+	options.click();
+	
+		if(ElementDisplayed(LoanClosureCash.ProductGroupDropdown)) {
+		click(LoanClosureCash.ProductGroupDropdown);
+		WebElement ProductGroup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ddlProductGroup_ddl']/option[4]")));
+		ProductGroup.click();
+	
+			if(ElementDisplayed(LoanClosureCash.ProductNameDropdown)) {
+			click(LoanClosureCash.ProductNameDropdown);
+			WebElement ProductName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlProductName_ddl']/option[2]")));
+			ProductName.click();
+	
+				if(ElementDisplayed(LoanClosureCash.BranchName)) {
+				click(LoanClosureCash.BranchName);
+				WebElement BranchName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id ='ddlBranch_ddl']/option[3]")));
+				BranchName.click();
+	
+					if(ElementDisplayed(LoanClosureCash.AccountNum)) {
+					click(LoanClosureCash.AccountNum);
+					WebElement AccountNumber = driver.findElement(LoanClosureCash.AccountNum);
+					String EnterAccountNumber = testdata.get("Account_Number").toString();
+					input(LoanClosureCash.AccountNum, EnterAccountNumber);
+	
+						if(ElementDisplayed(LoanClosureCash.AmountField)) {
+						click(LoanClosureCash.AmountField);
+						WebElement Amount = driver.findElement(LoanClosureCash.AmountField);
+						String EnterAmount = testdata.get("Enter_Amount").toString();
+						input(LoanClosureCash.AmountField, EnterAmount);
+						
+							//click(LoanClosureCash.RemoveEntry);
+							//Alert alert = driver.switchTo().alert();
+							//alert.accept();
+							
+							Thread.sleep(2000);
+							
+							if(ElementDisplayed(LoanClosureCash.AddButton)) {
+							click(LoanClosureCash.AddButton);
+					
+	
+								if(ElementDisplayed(LoanClosureCash.SubButton)) {
+								click(LoanClosureCash.SubButton);
+
+								ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on the SUBMIT button ");
+								Log.info("Step 1: Click on the SUBMIT button ");
+								
+								WebDriverWait waitForWindowClose = new WebDriverWait(driver, 10);
+							    waitForWindowClose.until(ExpectedConditions.numberOfWindowsToBe(1));
+								
+								driver.switchTo().window(mainWindowHandle);
+
+								int windowCount = driver.getWindowHandles().size();
+							    Assert.assertEquals(windowCount, 1, "Validation Failed: Popup did not close as expected");
+							
+								ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup gets closed  ");
+							    Log.info("Expected Result: Popup gets closed");
+							    }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	ExtentTestManager.endTest();
+	return true;
+
+}
+	
+public boolean PostDebitSubmitAccountClosure() throws InterruptedException {
+	
+	ExtentTestManager.startTest("TC:34 - Submit Account Closure");
+	Log.info("TC:34 - Submit Account Closure");
 	
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	WebElement SubmitDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnSubmit']")));
+	WebElement SubmitDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='btnSubmit']")));
 	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("arguments[0].scrollIntoView(true);", SubmitDetails);
 	
-	if(ElementDisplayed(LoanClosureCash.SubmitButton)){
-	click(LoanClosureCash.SubmitButton);
+	if(ElementDisplayed(LoanClosureCash.SubmitButon)){
+	click(LoanClosureCash.SubmitButon);
 	
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Submit' button for closure process");
 	Log.info("Step:01 - Click 'Submit' button for closure process");
 	
-	Assert.assertEquals(driver.getWindowHandles().size(), 1, "Validation Failed: Security Details popup window is still open.");
-		
+	WebDriverWait waitForWindowClose = new WebDriverWait(driver, 10);
+    waitForWindowClose.until(ExpectedConditions.numberOfWindowsToBe(1));
+
+	int windowCount = driver.getWindowHandles().size();
+    Assert.assertEquals(windowCount, 1, "Validation Failed: Security Details popup window is still open.");
+			
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Security details popup window is closed");
 	Log.info("Expected Result: Security details popup window is closed");
 	}
@@ -1769,7 +2024,7 @@ public boolean SubmitAccountClosure() throws InterruptedException {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
 		}
-	transIdCashLoan = driver.findElement(LoanClosureCash.TransCashID).getText();
+	transIdTransferLoan = driver.findElement(LoanClosureCash.TransCashID).getText();
 	
 	ExtentTestManager.endTest();
 	return true;
@@ -1778,8 +2033,8 @@ public boolean SubmitAccountClosure() throws InterruptedException {
 
 public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedException, IOException{
 	
-		ExtentTestManager.startTest("TC:26 - Login to NBFc Application in a different user");
-		Log.info("TC:26 - Login to NBFc Application in a different user");
+		ExtentTestManager.startTest("TC:35 - Login to NBFc Application in a different user");
+		Log.info("TC:35 - Login to NBFc Application in a different user");
 		
 		ExtentTestManager.startTest("Logout");
 		Log.info("Logout");
@@ -1819,8 +2074,8 @@ public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedExcept
 
 public boolean LogintoNBFcApplicationinadifferentuserAuthorizeandcancel() throws InterruptedException, IOException{
 	
-	ExtentTestManager.startTest("TC:27 - Login to NBFc Application in a different user");
-	Log.info("TC:27 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:36 - Login to NBFc Application in a different user");
+	Log.info("TC:36 - Login to NBFc Application in a different user");
 	
 	WebElement CashMode = driver.findElement(LoanClosureCash.AuthorizeCancel);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -1846,18 +2101,44 @@ return true;
 
 }
 
+public boolean ManagerAuthorisationTransfer() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:37 - Login to NBFc Application in a different user");
+	Log.info("TC:37 - Login to NBFc Application in a different user");
+	
+	click(LoanClosureCash.TransferTab);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the  TRANSFER  tab");
+	Log.info("Step:01 - Click on the  TRANSFER  tab");
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+    boolean isDisplayed = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id ='__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer']"))).isDisplayed();
+	
+    Assert.assertTrue(isDisplayed, "Validation Failed: Authorisation pending transaction is not displayed after refreshing.");
+
+    ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Moved to TRANSFER  tab  ");
+	Log.info("Expected Result: Moved to TRANSFER  tab");
+		
+	ExtentTestManager.endTest();
+	return true;
+}
+
+
 public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:28 - Login to NBFc Application in a different user");
-	Log.info("TC:28 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:38 - Login to NBFc Application in a different user");
+	Log.info("TC:38 - Login to NBFc Application in a different user");
 	
 	click(LoanClosureCash.Refresh);
 		
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Refresh button");
 	Log.info("Step:01 - Click on the Refresh button");
 	
-	Assert.assertTrue(ElementDisplayed(LoanClosureCash.Refresh), "Validation Failed: Authorisation pending transaction is not displayed after refreshing.");
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+    boolean isDisplayed = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnRefresh']"))).isDisplayed();
 	
+    Assert.assertTrue(isDisplayed, "Validation Failed: Authorisation pending transaction is not displayed after refreshing.");
+
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Authorisation pending transaction gets displayed ");
 	Log.info("Expected Result: Authorisation pending transaction gets displayed ");
 		
@@ -1865,13 +2146,13 @@ public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 	return true;
 }
 
-public boolean SelectManagerCashTransaction() throws InterruptedException{
+public boolean SelectManagerTransferTransaction() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:29 - Login to NBFc Application in a different user");
-	Log.info("TC:29 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:39 - Login to NBFc Application in a different user");
+	Log.info("TC:39 - Login to NBFc Application in a different user");
 	
-	System.out.println("transIdCashLoan "+transIdCashLoan);
-	FetchwithTransID(transIdCashLoan);
+	System.out.println("transIdTransferLoan "+transIdTransferLoan);
+	FetchwithTransID(transIdTransferLoan);
 	
     WebElement checkbox = driver.findElement(LoanClosureCash.OpeningEntryCashCheckbox);
 	
@@ -1890,10 +2171,10 @@ public boolean SelectManagerCashTransaction() throws InterruptedException{
 	return true;	
 }
 
-public boolean ManagerCashAuthorization() throws InterruptedException{
+public boolean ManagerTransferAuthorization() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:30 - Login to NBFc Application in a different user");
-	Log.info("TC:30 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:40 - Login to NBFc Application in a different user");
+	Log.info("TC:40 - Login to NBFc Application in a different user");
 	
 	if(ElementDisplayed(LoanClosureCash.ManagerAuthorize)) {
 	click(LoanClosureCash.ManagerAuthorize);
