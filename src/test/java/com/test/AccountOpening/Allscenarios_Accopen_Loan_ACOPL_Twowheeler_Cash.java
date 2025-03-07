@@ -9,6 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
+import com.Page_AccountOpening.AccOpen_Loanopening_ACOPL_TwoWheeler;
 import com.Page_Customer.Customer_AccountOpening_FixedDeposit;
 import com.Utility.Log;
 import com.extentReports.ExtentManager;
@@ -22,8 +23,8 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 	TestListener TestListener; 
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	Customer_AccountOpening_FixedDeposit fixeddeposit= new Customer_AccountOpening_FixedDeposit();
-	//Accopen_Loan_ACOPL_TwoWheeler_Cash  fixeddeposit  = new Accopen_Loan_ACOPL_TwoWheeler_cash();
+	//Customer_AccountOpening_FixedDeposit fixeddeposit= new Customer_AccountOpening_FixedDeposit();
+	AccOpen_Loanopening_ACOPL_TwoWheeler  fixeddeposit  = new AccOpen_Loanopening_ACOPL_TwoWheeler();
 	
 	@BeforeSuite
 	public void reference() {
@@ -61,10 +62,20 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				
 				//TC 03
 				//Account Opening
-				//fixeddeposit.TwoWheelerLoan();
+				fixeddeposit.TwoWheelerLoan();
+				
+				//TC 04, 05,06
+				fixeddeposit.AddandselectCustomer(testdata, context);
+				
+				//TC 08
+				fixeddeposit.FillAccountInfoTab(testdata,context);
+				
+				//TC 09
+				fixeddeposit.FillAccountInfoTabResolutionNo(testdata, context);
+			
 						
-				//Sign out
-				custSrchMthds.logout(); 		
+				/*//Sign out
+				custSrchMthds.logout(); */		
 				
 				
 				// EndTest

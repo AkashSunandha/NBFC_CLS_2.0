@@ -5,7 +5,7 @@
     <classes>
       <class name="com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash">
         <methods>
-          <include name="customerRegister"/>
+          <include name="customerRegister" invocation-numbers="0"/>
           <include name="reference"/>
         </methods>
       </class> <!-- com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash -->

@@ -90,29 +90,16 @@ public class Customer_AccountOpening_FixedDeposit extends Base_Class
 		click(fixeddeposit.Addbutton);
 		click(fixeddeposit.okbutton);
 		
-		//boolean flag1 = ElementDisplayed(fixeddeposit.formcustid);
-		  /*String customerformid=driver.findElement(fixeddeposit.customerform).getAttribute("value");
-		  System.out.println(customerformid);
-				if(customerformid.equals(custid)) {
-					ExtentTestManager.getTest().log(Status.PASS, " Expected Result: Selected customer is populated in the form");
-					Log.info("Expected Result:Selected customer is populated in the form");
-				}
-					else {
-						ExtentTestManager.getTest().log(Status.FAIL, "Expected Result:Selected customer is not populated in the form");
-						Log.info("Expected Result:Selected customer is not populated in the form");
-						
-					}*/
-		
 		WebElement custid1 = driver.findElement(fixeddeposit.customerform);
 		System.out.println("custId is validated" + custid1.getAttribute("title"));
  
 		String custformid = custid1.getAttribute("title");
 		if (custformid.equals(custid1.getAttribute("title"))) {
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Selected customer is  populated in the form" + true);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Selected customer detail is  populated and Customer id should be displayed in the custid feild in the form" + true);
 			Log.info("Expected Result:Selected customer is  populated in the form" + true);
 			return true;
 		} else {
-			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result:Selected customer is not populated in the form" + false);
+			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result:Selected customer details is not populated and Customer id should not be displayed in the custid feild in the form" + false);
  
 			Thread.sleep(1000);
 		}
