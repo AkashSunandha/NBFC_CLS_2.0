@@ -1,4 +1,4 @@
-[ERROR] 2025-03-04 15:25:27.028 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-10 11:39:28.036 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_TRANSFER.gettestdate(AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_TRANSFER.java:91) ~[test-classes/:?]
+	at com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER.gettestdate(AllScenarios_Transaction_Transactions_Jewel_TRANSFER.java:89) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-04 15:25:27.044 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-10 11:39:28.054 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -71,7 +71,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_TRANSFER.gettestdate(AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_TRANSFER.java:91) ~[test-classes/:?]
+	at com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER.gettestdate(AllScenarios_Transaction_Transactions_Jewel_TRANSFER.java:89) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-04 15:25:27.046 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-10 11:39:28.057 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -124,7 +124,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_TRANSFER.gettestdate(AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_TRANSFER.java:91) ~[test-classes/:?]
+	at com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER.gettestdate(AllScenarios_Transaction_Transactions_Jewel_TRANSFER.java:89) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-04 15:25:27.055 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-10 11:39:28.066 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOpening.AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_TRANSFER.gettestdate(AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_TRANSFER.java:91) ~[test-classes/:?]
+	at com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER.gettestdate(AllScenarios_Transaction_Transactions_Jewel_TRANSFER.java:89) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,79 +210,108 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-03-04 15:25:27.935 [main] Log - *** Running test method Suspense Asset...
-[INFO ] 2025-03-04 15:25:33.667 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-04 15:25:34.893 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-04 15:25:37.496 [main] Log - PC Registration
-[INFO ] 2025-03-04 15:25:38.765 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-04 15:25:41.181 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-04 15:25:42.223 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-03-04 15:25:46.551 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-04 15:25:48.084 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-04 15:25:48.185 [main] Log - Valid Login
-[INFO ] 2025-03-04 15:25:49.236 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-04 15:25:50.286 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-04 15:25:58.337 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-04 15:25:59.464 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-04 15:26:00.573 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-04 15:26:00.692 [main] Log - Navigate to General Opening
-[INFO ] 2025-03-04 15:26:18.331 [main] Log - Step:01 - Navigate through: Account opening -> General opening -> Suspense Asset-> Suspense Asset(31002)
-[INFO ] 2025-03-04 15:26:19.412 [main] Log - Expected Result: General Opening page is displayed.
-[INFO ] 2025-03-04 15:26:19.492 [main] Log - Customer Search Popup
-[INFO ] 2025-03-04 15:26:24.168 [main] Log - Step:01 - Click on Search Icon
-[INFO ] 2025-03-04 15:26:25.607 [main] Log - Expected Result: Customer search popup window is opened.
-[INFO ] 2025-03-04 15:26:25.667 [main] Log - Search Customer by Name
-[INFO ] 2025-03-04 15:26:26.751 [main] Log - Step:01 - Enter any alphabet in the name  field.
-[INFO ] 2025-03-04 15:26:31.108 [main] Log - Step:02 -  Click on Search button.
-[INFO ] 2025-03-04 15:26:32.208 [main] Log - Expected Result: List of customers matching criteria are displayed.
-[INFO ] 2025-03-04 15:26:32.271 [main] Log - Select and Open Customer Details
-[INFO ] 2025-03-04 15:26:36.412 [main] Log - Step:01 - Select a customer from the search result list.
-[INFO ] 2025-03-04 15:26:40.738 [main] Log - Step:02 - Click Add Button.
-[INFO ] 2025-03-04 15:26:41.869 [main] Log - Expected Result: Customer details are shown in grid.
-[INFO ] 2025-03-04 15:26:41.941 [main] Log - Enter Opening Amount
-[INFO ] 2025-03-04 15:26:47.431 [main] Log - Step:01 - Enter valid numeric value into the 'Opening Amount 'field.
-[INFO ] 2025-03-04 15:26:47.432 [main] Log - Expected Result: Value is accepted as valid input.
-[INFO ] 2025-03-04 15:26:47.506 [main] Log - Enter Remarks
-[INFO ] 2025-03-04 15:26:48.584 [main] Log - Step:01 - Enter text into the Remarks field.
-[INFO ] 2025-03-04 15:26:48.584 [main] Log - Expected Result: Text is accepted; field allows non-mandatory input
-[INFO ] 2025-03-04 15:26:48.659 [main] Log - Select Transaction Mode and Submit Loan
-[INFO ] 2025-03-04 15:26:51.070 [main] Log - Step:01 - Select Trans. Mode 'TRANSFER'.
-[INFO ] 2025-03-04 15:26:51.070 [main] Log - Expected Result: Possible to select the TRANSFER trasaction mode
-[INFO ] 2025-03-04 15:26:51.166 [main] Log - Post credit button functionality
-[INFO ] 2025-03-04 15:26:55.761 [main] Log - Step:01 - Select Post credit button.
-[INFO ] 2025-03-04 15:26:57.148 [main] Log - Expected Result: Auto posting popup window will be opened.
-[INFO ] 2025-03-04 15:26:57.237 [main] Log - Transaction based selection.
-[INFO ] 2025-03-04 15:26:59.620 [main] Log - Step:01 - Select transaction based as GL Code.
-[INFO ] 2025-03-04 15:27:01.788 [main] Log - Expected Result: GL code related field will be display (GL name,GL code)
-[INFO ] 2025-03-04 15:27:01.857 [main] Log - GL Name selection.
-[INFO ] 2025-03-04 15:27:10.506 [main] Log - Step:01 - Select the "GL Name" from the drop down
-[INFO ] 2025-03-04 15:27:10.547 [main] Log - Expected Result: GL code will be autoloads while selecting the GL Name.
-[INFO ] 2025-03-04 15:27:10.610 [main] Log - Add button functionality
-[INFO ] 2025-03-04 15:27:19.115 [main] Log - Step:01 - Give the amount in "Amount" field.
-[INFO ] 2025-03-04 15:27:23.464 [main] Log - Step:02 - Click add button.
-[INFO ] 2025-03-04 15:27:24.535 [main] Log - Expected Result: Given details will be displays in the grid
-[INFO ] 2025-03-04 15:27:24.608 [main] Log - Submit button functionality
-[INFO ] 2025-03-04 15:27:28.921 [main] Log - Step:01 - Click submit button after adding the details in the auto posting popup window.
-[INFO ] 2025-03-04 15:27:30.008 [main] Log - Expected Result: Popup window will be closed
-[INFO ] 2025-03-04 15:27:30.078 [main] Log - Submit the transaction
-[INFO ] 2025-03-04 15:27:34.767 [main] Log - Step:01 - Click 'save'
-[INFO ] 2025-03-04 15:27:35.836 [main] Log - Expected Result: Redirects to summary page
-[INFO ] 2025-03-04 15:27:35.952 [main] Log - Login with Another User
-[INFO ] 2025-03-04 15:27:40.520 [main] Log - Step:01 - Log out
-[INFO ] 2025-03-04 15:27:49.749 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-03-04 15:27:49.805 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-03-04 15:27:49.865 [main] Log - Manager Authorization - Transfer Tab
-[INFO ] 2025-03-04 15:27:54.173 [main] Log - Step:01 - Click "Authorize & Cancel"
-[INFO ] 2025-03-04 15:27:58.648 [main] Log - Step:02 - Select "Manager Authorization"
-[INFO ] 2025-03-04 15:28:02.962 [main] Log - Step:03 - Click "Transfer" tab
-[INFO ] 2025-03-04 15:28:02.963 [main] Log - Expected Result: Transfer tab load
-[INFO ] 2025-03-04 15:28:03.040 [main] Log - Refresh Loan Opening Entry
-[INFO ] 2025-03-04 15:28:07.364 [main] Log - Step:01 - Click Refresh Button
-[INFO ] 2025-03-04 15:28:13.858 [main] Log - Expected Result: Loan opening entry displayed
-[INFO ] 2025-03-04 15:28:13.919 [main] Log - Authorize Loan Entry as Manager
-[INFO ] 2025-03-04 15:28:18.223 [main] Log - Step:01 - Select loan entry checkbox
-[INFO ] 2025-03-04 15:28:22.569 [main] Log - Step:02 - Click Authorize Button
-[INFO ] 2025-03-04 15:28:23.649 [main] Log - Expected Result: Entry authorized
-[INFO ] 2025-03-04 15:28:28.024 [main] Log - Logout
-[INFO ] 2025-03-04 15:28:36.567 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-03-04 15:28:37.635 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-03-10 11:39:28.902 [main] Log - *** Running test method Transactions_Jewel...
+[INFO ] 2025-03-10 11:39:32.897 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-03-10 11:39:34.482 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-03-10 11:39:36.775 [main] Log - PC Registration
+[INFO ] 2025-03-10 11:39:37.857 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-03-10 11:39:40.263 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-03-10 11:39:41.323 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-03-10 11:39:45.641 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-03-10 11:39:47.847 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-03-10 11:39:47.970 [main] Log - Valid Login
+[INFO ] 2025-03-10 11:39:49.044 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-10 11:39:50.097 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-03-10 11:39:57.597 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-03-10 11:39:58.685 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-10 11:39:59.780 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-10 11:39:59.896 [main] Log - Open Transaction Module
+[INFO ] 2025-03-10 11:40:04.195 [main] Log - Step:01 - Navigate to the transaction module in the menu.
+[INFO ] 2025-03-10 11:40:08.789 [main] Log - Step:02 - Click on the transaction module.
+[INFO ] 2025-03-10 11:40:09.889 [main] Log - Expected Result: Transaction module opens successfully.
+[INFO ] 2025-03-10 11:40:09.982 [main] Log - Select Branch
+[INFO ] 2025-03-10 11:40:12.168 [main] Log - Step:01 -  Select a branch from the dropdown.
+[INFO ] 2025-03-10 11:40:12.168 [main] Log - Expected Result: Correct branch  selected.
+[INFO ] 2025-03-10 11:40:12.255 [main] Log - Select Product Group
+[INFO ] 2025-03-10 11:40:14.707 [main] Log - Step:01 -  Choose 'Jewel Loan' for product group.
+[INFO ] 2025-03-10 11:40:14.707 [main] Log - Expected Result: Correct product group selected.
+[INFO ] 2025-03-10 11:40:14.791 [main] Log - Select Product Name
+[INFO ] 2025-03-10 11:40:17.190 [main] Log - Step:01 - Select 'Gold Loan' for product name.
+[INFO ] 2025-03-10 11:40:17.190 [main] Log - Expected Result: Correct product Name selected.
+[INFO ] 2025-03-10 11:40:17.269 [main] Log - Enter account number
+[INFO ] 2025-03-10 11:40:18.701 [main] Log - Step:01 - Enter a valid account number in the input field.
+[INFO ] 2025-03-10 11:40:18.702 [main] Log - Expected Result: Account number is accepted.
+[INFO ] 2025-03-10 11:40:18.757 [main] Log - Select Transaction Type
+[INFO ] 2025-03-10 11:40:21.110 [main] Log - Step:01 - Select transaction type as 'Credit'.
+[INFO ] 2025-03-10 11:40:21.111 [main] Log - Expected Result: Transaction type is set.
+[INFO ] 2025-03-10 11:40:21.203 [main] Log - Transaction Window Display
+[INFO ] 2025-03-10 11:40:25.562 [main] Log - Step:01 - Click the 'Go' button.
+[INFO ] 2025-03-10 11:40:26.664 [main] Log - Expected Result: Transaction window for the selected account is displayed.
+[INFO ] 2025-03-10 11:40:26.738 [main] Log - Verify Principal Log Details
+[INFO ] 2025-03-10 11:40:32.384 [main] Log - Step:01 - Click and view Principal log details.
+[INFO ] 2025-03-10 11:40:36.736 [main] Log - Expected Result: Logs display correct interest  details.
+[INFO ] 2025-03-10 11:40:36.832 [main] Log - Verify Interest Log Details
+[INFO ] 2025-03-10 11:40:41.433 [main] Log - Step:01 - Click and view interest log details.
+[INFO ] 2025-03-10 11:40:41.493 [main] Log - Expected Result: Logs display correct interest  details.
+[INFO ] 2025-03-10 11:40:45.764 [main] Log - Enter Transaction Amount
+[INFO ] 2025-03-10 11:40:54.357 [main] Log - Step:01 - Enter a valid transaction amount in the input field.
+[INFO ] 2025-03-10 11:40:54.358 [main] Log - Expected Result: Transaction amount is accepted.
+[INFO ] 2025-03-10 11:40:58.825 [main] Log - Verify Interest and Principal Amount
+[INFO ] 2025-03-10 11:40:58.957 [main] Log - Step:01 - Check the principal amount displayed.
+[INFO ] 2025-03-10 11:40:58.958 [main] Log - Step:02 - Check the interest amount displayed.
+[INFO ] 2025-03-10 11:40:58.959 [main] Log - Expected Result: Interest and principal amounts are correct.
+[INFO ] 2025-03-10 11:40:59.043 [main] Log - Select Transaction Mode
+[INFO ] 2025-03-10 11:41:01.411 [main] Log - Step:01 - Choose 'TRANSFER' from the transaction mode dropdown.
+[INFO ] 2025-03-10 11:41:01.411 [main] Log - Expected Result: Transaction mode 'TRANSFER' is selected.
+[INFO ] 2025-03-10 11:41:01.496 [main] Log - Enter Remark 
+[INFO ] 2025-03-10 11:41:02.609 [main] Log - Step:01 - Enter a remark in the input field.
+[INFO ] 2025-03-10 11:41:02.610 [main] Log - Expected Result: Remark   accepted.
+[INFO ] 2025-03-10 11:41:02.687 [main] Log - Post credit button functionality
+[INFO ] 2025-03-10 11:41:07.444 [main] Log - Step:01 - Select Post credit button.
+[INFO ] 2025-03-10 11:41:08.889 [main] Log - Expected Result: Auto posting popup window will be opened.
+[INFO ] 2025-03-10 11:41:08.961 [main] Log - Transaction based selection.
+[INFO ] 2025-03-10 11:41:11.073 [main] Log - Step:01 - Select transaction based as Account.
+[INFO ] 2025-03-10 11:41:11.073 [main] Log - Expected Result:  ACCOunt selected from the 'Transaciton Based' drop down
+[INFO ] 2025-03-10 11:41:11.130 [main] Log - Select Product Group
+[INFO ] 2025-03-10 11:41:13.500 [main] Log - Step:01 - Select Demand Investment from the 'Product group ' drop down.
+[INFO ] 2025-03-10 11:41:13.501 [main] Log - Expected Result:  Demand Investment is selected 
+[INFO ] 2025-03-10 11:41:13.596 [main] Log - Select Product Name
+[INFO ] 2025-03-10 11:41:16.028 [main] Log - Step:01 - Select an item from the 'Product Name' drop down.
+[INFO ] 2025-03-10 11:41:16.029 [main] Log - Expected Result:  Product name item  is selected 
+[INFO ] 2025-03-10 11:41:16.098 [main] Log - Select Branch
+[INFO ] 2025-03-10 11:41:18.211 [main] Log - Step:01 - Select a branch  from the 'Branch  ' drop down.
+[INFO ] 2025-03-10 11:41:18.211 [main] Log - Expected Result:  Branch  item  is selected  
+[INFO ] 2025-03-10 11:41:18.284 [main] Log - Select Account
+[INFO ] 2025-03-10 11:41:19.359 [main] Log - Step:01 - Tick mark and select an account from the list of accounts displayed.
+[INFO ] 2025-03-10 11:41:23.754 [main] Log - Expected Result:  Account is selected 
+[INFO ] 2025-03-10 11:41:23.822 [main] Log - Enter Amount
+[INFO ] 2025-03-10 11:41:24.907 [main] Log - Step:01 - Enter a valid amount in the input field.
+[INFO ] 2025-03-10 11:41:24.908 [main] Log - Expected Result: Amount accepted
+[INFO ] 2025-03-10 11:41:25.069 [main] Log - Add button functionality
+[INFO ] 2025-03-10 11:41:29.405 [main] Log - Step:01 - Click add button.
+[INFO ] 2025-03-10 11:41:30.488 [main] Log - Expected Result: Given details will be displays in the grid
+[INFO ] 2025-03-10 11:41:30.555 [main] Log - Submit button functionality
+[INFO ] 2025-03-10 11:41:34.911 [main] Log - Step:01 - Click submit button after adding the details in the auto posting popup window.
+[INFO ] 2025-03-10 11:41:36.022 [main] Log - Expected Result: Popup window will be closed
+[INFO ] 2025-03-10 11:41:36.094 [main] Log - Submit Transaction
+[INFO ] 2025-03-10 11:41:40.444 [main] Log - Step:01 - Click the 'Submit' button.
+[INFO ] 2025-03-10 11:41:41.534 [main] Log - Expected Result: Transaction should be successful and  summary is displayed with correct details.
+[INFO ] 2025-03-10 11:41:41.623 [main] Log - Login with Another User
+[INFO ] 2025-03-10 11:41:46.367 [main] Log - Step:01 - Log out
+[INFO ] 2025-03-10 11:41:56.432 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-03-10 11:41:56.484 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-03-10 11:41:56.544 [main] Log - Manager Authorization - Transfer Tab
+[INFO ] 2025-03-10 11:42:00.863 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-03-10 11:42:05.455 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-03-10 11:42:09.764 [main] Log - Step:03 - Click "Transfer" tab
+[INFO ] 2025-03-10 11:42:09.765 [main] Log - Expected Result: Transfer tab load
+[INFO ] 2025-03-10 11:42:09.856 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-03-10 11:42:14.221 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-03-10 11:42:20.722 [main] Log - Expected Result: Loan opening entry displayed
+[INFO ] 2025-03-10 11:42:20.792 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-03-10 11:42:25.179 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-03-10 11:42:29.523 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-03-10 11:42:30.598 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-03-10 11:42:35.023 [main] Log - Logout
+[INFO ] 2025-03-10 11:42:43.612 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-03-10 11:42:44.711 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

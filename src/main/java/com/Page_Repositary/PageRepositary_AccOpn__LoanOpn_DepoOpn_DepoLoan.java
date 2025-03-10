@@ -79,6 +79,18 @@ public class PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan {
 //	public By variable = By.xpath("");
 	public By oiBatchOpenPopUp = By.xpath("/html/body/div[2]/div[11]/div/button[1]/span");
 	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
+	
+	//postCredit 
+	public By transactionDropdown = By.xpath("//*[@id=\"ddlTrnsBased_ddl\"]");
+	public By productGroupDropdown = By.xpath("//*[@id=\"ddlProductGroup_ddl\"]");
+	public By productNameDropdown = By.xpath("//*[@id=\"ddlProductName_ddl\"]");
+	public By branchDropdown = By.xpath("//*[@id=\"ddlBranch_ddl\"]");
+	public By accNumTxtBox = By.xpath("//*[@id=\"txtChildAcNo_txt\"]");
+	public By amtTxtBox = By.xpath("//*[@id=\"txtAmount_txt\"]");
+	public By submitBtn = By.xpath("//*[@id=\"btnSubmit\"]");
+	public By accNumTxt = By.xpath("//*[@id=\"lblAcno\"]");
+	public By remarksTxtBox = By.xpath("//*[@id=\"txtRemarks_txt\"]");
+	public By addBtn = By.xpath("//*[@id=\"btnAdd\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 

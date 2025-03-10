@@ -29,7 +29,6 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		input(goaldLoanRepo.transIdTxtBox,transId);
 		click(goaldLoanRepo.goBtn); 
 	} 
-	 
 	
 	public String spAccNum = "EXEC SPGetNotPledgeddepositdetailsTEST  '102' , '14003'";
 	public String clmnNam = "AcNO";
