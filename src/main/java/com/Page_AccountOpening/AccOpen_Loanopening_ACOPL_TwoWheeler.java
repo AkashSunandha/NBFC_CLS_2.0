@@ -85,6 +85,7 @@ PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler fixeddeposit = new PageRepositary_A
 				}
 			 ExtentTestManager.endTest();
 			 click(fixeddeposit.Addbutton);
+			 click(fixeddeposit.okbutton);
 		  }
 		  ExtentTestManager.endTest();		
 		}
@@ -130,7 +131,66 @@ PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler fixeddeposit = new PageRepositary_A
 		
 					return true; 
 }
+		public boolean FillAccountInfoTabEnterResoultionDate(Map<Object, Object> testdata, ITestContext context)throws ClassNotFoundException,InterruptedException {
+			ExtentTestManager.startTest("TC:10 - Fill Account Info Tab Enter Resolution Date");
+			click(fixeddeposit.ResolutionDate);
+			String resolutiondate = testdata.get("ResoultionDate").toString();
+		  	  input(fixeddeposit.ResolutionDate, resolutiondate);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 Enter resolution date");
+			Log.info("\"Step:01 Enter resolution date");
+			
+			boolean flag1 = ElementDisplayed(fixeddeposit.ResolutionDate);
+			if(flag1 == true) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to enter Resolution date");
+				Log.info("Possible to enter Resolution date");
+			}
+			else {
+				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Possible to enter Resolution date");
+				Log.info("Expected result: Possible to enter Resolution date");
+			}
+			ExtentTestManager.endTest();
+		
+					return true; 
 }
+		public boolean FillAccountInfoTabReferedBy(Map<Object, Object> testdata, ITestContext context)throws InterruptedException {
+		    ExtentTestManager.startTest("TC:11 - Fill Account Info Tab ReferedBy");
+		        click(fixeddeposit.Referedby);
+		        String reference = testdata.get("ReferenceBy").toString();
+                input(fixeddeposit.Referedby, reference);
+		        click(fixeddeposit.optionPradeep);
+		        click(fixeddeposit.Popupnull);
+		        ExtentTestManager.getTest().log(Status.PASS, "Step:01  Choose Referred By from dropdown");
+				Log.info("Step:01 Choose Referred By from dropdown");
+		        
+		  		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to choose the Referred By from the drop down");
+		  		Log.info("Expected Result: Possible to choose the Referred By from the drop down");
+		  		
+		  		
+						ExtentTestManager.endTest();
+						return true; 
+
+		}
+		public boolean FillAccountInfoTabCanvasserName (Map<Object, Object> testdata, ITestContext context)throws InterruptedException {
+		ExtentTestManager.startTest("TC:12 -  Fill Account Info Tab Canvasser Name");
+	
+		click(fixeddeposit.CanvasserName);
+		String Canvasser_Name = testdata.get("Canvassername").toString();
+        input(fixeddeposit.CanvasserName,Canvasser_Name);
+		click(fixeddeposit.optionASMA);
+	        ExtentTestManager.getTest().log(Status.PASS, "Step:01 Choose Canvasser Name  from dropdown");
+			Log.info("Step:01 Choose Canvasser Name  from dropdown");
+	        
+	  		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to choose the Canvasser Name from the drop down"
+	  				+ "Canvasser code is displayed");
+	  		Log.info("Expected Result: Possible to choose the Canvasser Name from the drop down"
+	  				+"Canvasser code is displayed\"");
+	  		
+	  		
+				ExtentTestManager.endTest();
+					return true; 
+}
+}
+
 	  
 	
 

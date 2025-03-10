@@ -24,14 +24,22 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
     public By selectcustomer =By.id("PopQuick1_lst_ctrl0_linkSelect"); 
     public By custid =By.id("ctl00_ctl00_CPH1_PRDCNT_LAI_txtCoCustID_txt");
     public By Addbutton=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LAI_btnAddCustomer1\"]");
+    public By okbutton=By.className("ui-button-text");
     public By Accountinfotab =By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_body");
    
     
     //Fill Account Info Tab
     public By ResolutionNo=By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_txtResNo_txt");
+    public By ResolutionDate = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_dtResDate_txt");
+    public By Referedby = By.id("hyjackText0");
+    public By optionPradeep = By.xpath("//li[text()='PRADEEP']");
+    public By Popupnull =By.id("closeValurc");
+    public By CanvasserName =By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_ddlCanvasserName_ddl");
+    //public By optionASMA =By.xpath("//li[text()='ASMA']");
+    public By optionASMA =By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_ddlCanvasserName_ddl\"]");
     public By EquitableMortRegNo =By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_txtEquitableMortgagerRegNo_txt\"]");
     public By EMRDate = By.xpath("//*[@id=\"__LASTFOCUS\"]");
-    //public By ReferredBy = By.id("hyjackText0");
+   
 	
 		
 		

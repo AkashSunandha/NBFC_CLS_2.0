@@ -35,7 +35,7 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 	public By selectcust=By.id("PopQuick1_lst_ctrl0_linkSelect");
 	//public By formcustid=By.id("ctl00_ctl00_CPH1_PRDCNT_lstProAccInfo_ctrl0_PAI_txtCustomerId_txt");
 	public By Addbutton=By.id("ctl00_ctl00_CPH1_PRDCNT_lstProAccInfo_ctrl0_PAI_btnAddCustomer");
-	public By okbutton=By.className("ui-button-text");
+	public By okbutton=By.className("ui-button-text"); 
 	public By customerform=By.xpath("//*[@id=\"Cust_ID\"]");
 	
 	//Entering Amount 
@@ -47,7 +47,7 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 	
 	//selecting ReferenceBy
 	public By Referenceby=By.xpath("//*[@id=\"hyjackText0\"]");
-	public By optionNithin = By.xpath("//li[text()='NITHIN']");
+	public By optionNithin = By.xpath("//li[text()='NITHIN']"); 
 	
 	//clicking on Getvalues
 	public By getvalue=By.id("ctl00_ctl00_CPH1_PRDCNT_TC1_tp1_lstProductDetails_ctrl0_GAF1_btnGetROI");
@@ -196,7 +196,7 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 				public By loginUserName2 = By.xpath("//*[@id=\"txtUserName_txt\"]");
 				public By loginPasswrd2 = By.xpath("//*[@id=\"txtPassword_txt\"]");
 				public By loginButton2 = By.xpath("//*[@id=\"imgbtnSubmit\"]");
-				public By Newloginvalidate1=By.xpath("//span[text()='vijayauthorize']");
+				public By Newloginvalidate1=By.xpath("//*[@id=\"ctl00_ctl00_lblUser\"]");
 				
 				
 				//Authorize & cancel for Transfer

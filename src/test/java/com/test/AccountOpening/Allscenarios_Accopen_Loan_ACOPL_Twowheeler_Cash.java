@@ -12,6 +12,7 @@ import com.BasePackage.Base_Class;
 import com.Page_AccountOpening.AccOpen_Loanopening_ACOPL_TwoWheeler;
 import com.Page_Customer.Customer_AccountOpening_FixedDeposit;
 import com.Utility.Log;
+import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
@@ -64,7 +65,7 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				//Account Opening
 				fixeddeposit.TwoWheelerLoan();
 				
-				//TC 04, 05,06
+				//TC 04, 05,06,07
 				fixeddeposit.AddandselectCustomer(testdata, context);
 				
 				//TC 08
@@ -72,6 +73,15 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				
 				//TC 09
 				fixeddeposit.FillAccountInfoTabResolutionNo(testdata, context);
+				
+				//TC 10
+				fixeddeposit.FillAccountInfoTabEnterResoultionDate(testdata,context);
+				
+				//TC 11
+				fixeddeposit.FillAccountInfoTabReferedBy(testdata, context); 
+				
+				//TC 12
+				fixeddeposit.FillAccountInfoTabCanvasserName(testdata, context);
 			
 						
 				/*//Sign out
@@ -83,7 +93,9 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				ExtentManager.getInstance().flush();
 			}		
 		}catch(Exception e) {
-			System.out.println(e);
+			ExtentTestManager.getTest().log(Status.FAIL, e);
+            Log.info("Exception "+e);
+            ExtentTestManager.endTest();
 		}
 	}
 	

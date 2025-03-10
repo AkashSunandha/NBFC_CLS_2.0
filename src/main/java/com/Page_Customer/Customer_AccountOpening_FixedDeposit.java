@@ -27,7 +27,7 @@ public class Customer_AccountOpening_FixedDeposit extends Base_Class
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
    String Transactionid;
 	ScreenShot sc = new ScreenShot(null);
-	
+	String username1;
 	//Navigate to Deposit Opening Window
 	
 	public boolean DepositOpeningWindow()throws InterruptedException {
@@ -37,6 +37,8 @@ public class Customer_AccountOpening_FixedDeposit extends Base_Class
 		click(fixeddeposit.FixedDeposit);
 		click(fixeddeposit.Bondcumulativetpe);
 		
+		username1 = driver.findElement(fixeddeposit.Newloginvalidate1).getText();
+
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 clicking on Account opening -> Deposit opening -> Fixed deposit");
 		Log.info("Step:01 clicking on Account opening -> Deposit opening -> Fixed deposit");
@@ -1275,7 +1277,9 @@ select("GL Code", fixeddeposit.Transaction_Based);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Log in with another user for authorization");
 			Log.info("Step:02 -Log in with another user for authorization");
 			
-			if(ElementDisplayed(fixeddeposit.Newloginvalidate1)) {
+			String username2 = driver.findElement(fixeddeposit.Newloginvalidate1).getText();
+			
+			if(!username1.equals(username2)) {
 				ExtentTestManager.getTest().log(Status.PASS,"Logging successfull with another user ");
 				Log.info("ExpectedResult: Logging successfull with another user"  );
 				

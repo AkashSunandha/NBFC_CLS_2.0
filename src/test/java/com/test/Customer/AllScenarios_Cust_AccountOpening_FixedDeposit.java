@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.BasePackage.Base_Class;
 import com.Page_Customer.Customer_AccountOpening_FixedDeposit;
 import com.Utility.Log;
+import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
@@ -181,7 +182,9 @@ public class AllScenarios_Cust_AccountOpening_FixedDeposit {
 				ExtentManager.getInstance().flush();
 			}		
 		}catch(Exception e) {
-			System.out.println(e);
+			ExtentTestManager.getTest().log(Status.FAIL, e);
+            Log.info("Exception "+e);
+            ExtentTestManager.endTest();
 		}
 	}
 	
