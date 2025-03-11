@@ -1,4 +1,4 @@
-package com.test.JewelLoanClosure;
+package com.test.OLTransaction;
 
 import java.io.IOException;
 import java.util.Map;
@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.BasePackage.Base_Class;
 import com.GeneralOpening.General_Opening_cash_transfer;
 import com.JewelLoan_Closure.JewelLoan_Closure_Cash_Transfer;
+import com.OLTransaction_Cash_Transfer.OLTransaction_Cash_Transfer;
 import com.Page_Customer.Customer_NewCustomer;
 import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
 import com.Utility.Log;
@@ -19,8 +20,8 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenario_JewelLoan_Cash_Transfer {
-
+public class AllScenario_OLTransaction_Cash_Transfer {
+	
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
@@ -35,6 +36,7 @@ public class AllScenario_JewelLoan_Cash_Transfer {
 	Customer_NewCustomer newCustMths = new Customer_NewCustomer();
 	General_Opening_cash_transfer generalOpening = new General_Opening_cash_transfer();
 	JewelLoan_Closure_Cash_Transfer JLoanClosure = new JewelLoan_Closure_Cash_Transfer();
+	OLTransaction_Cash_Transfer Transaction = new OLTransaction_Cash_Transfer();
 
 	@BeforeSuite
 	public void reference() {
@@ -63,41 +65,11 @@ public class AllScenario_JewelLoan_Cash_Transfer {
 				custSrchMthds.pcRegistration(testdata, context);
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
-
-				JLoanClosure.Closurerenewal();
-
-				JLoanClosure.Accountnumber(testdata, context);
 				
-				JLoanClosure.Cash(testdata, context);
-
-				JLoanClosure.Signout();
-
-				JLoanClosure.AnotherUSer(testdata, context);
-
-				JLoanClosure.Cashier();
-
-				JLoanClosure.Manager();
-
-				JLoanClosure.Signout();
-
-				custSrchMthds.userLoginValidPaswrd(testdata, context);
-
-				JLoanClosure.ClosurerenewalTrasnfer();
-
-				JLoanClosure.Accountnumber(testdata, context);
-
-				JLoanClosure.Transfer(testdata, context);
-
-				JLoanClosure.Accountnumber2(testdata, context);
-
-				JLoanClosure.Signout();
-
-				JLoanClosure.AnotherUSer(testdata, context);
-
-				JLoanClosure.ManagerAuth();
-
-				JLoanClosure.Signout();
-
+				Transaction.Transactionwindow();
+				
+				
+				
 				ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();
 			}
@@ -123,3 +95,6 @@ public class AllScenario_JewelLoan_Cash_Transfer {
 	}
 
 }
+
+
+

@@ -1,9 +1,10 @@
-package com.Page_JewelLoanClosure;
+package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
-public class PageRepository_JewelLoan_cash_Transfer {
+public class PageRepositary_Jewel_Loan_Closure_Cash_Transfer {
 
+	
 	public By OpenClosureandrenewal = By
 			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/div");
 	public By Clickonclosure = By
@@ -66,3 +67,5 @@ public By Transfertab= By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_t
 public By dispname= By.xpath("//input[@id='txtTotalCrDr_txt']");
 public By checkboxtrue = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect\"]");
 }
+
+

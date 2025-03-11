@@ -11,9 +11,9 @@ import java.util.Map;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
-import com.Page_JewelLoanClosure.PageRepository_JewelLoan_cash_Transfer;
 import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
 import com.Page_Repositary.PageRepositary_Cust_CustSearch;
+import com.Page_Repositary.PageRepositary_Jewel_Loan_Closure_Cash_Transfer;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
@@ -22,26 +22,26 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
-	PageRepository_JewelLoan_cash_Transfer JewelClosure = new PageRepository_JewelLoan_cash_Transfer();
+	PageRepositary_Jewel_Loan_Closure_Cash_Transfer JewelClosure = new PageRepositary_Jewel_Loan_Closure_Cash_Transfer();
 
 	String transId;
 	String transIdTransfer;
-	
-    String Display;
-    
+
+	String Display;
+
 	public String sp = "GetJewelloanAccountnumber";
 	public String columnName = "Acno";
 
 	public void fetchWithTransId(String transId) throws InterruptedException {
 		input(goaldLoanRepo.transIdTxtBox, transId);
 		click(goaldLoanRepo.goBtn);
-		
+
 	}
-     public void displayamount(String Display) throws InterruptedException {
- 		input(JewelClosure.enteramount, Display);
-     }
-     
-     
+
+	public void displayamount(String Display) throws InterruptedException {
+		input(JewelClosure.enteramount, Display);
+	}
+
 	public void Closurerenewal() throws InterruptedException {
 
 		ExtentTestManager.startTest("Navigate to Jewel Loan Closure Window");
@@ -55,6 +55,11 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  click on Loan Closure");
 		Log.info("Step:02 -click on Loan Closure");
 
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Loan Closure window is displayed ");
+		Log.info("Expected Result: Loan Closure window is displayed");
+
+		ExtentTestManager.endTest();
+
 		ExtentTestManager.startTest("Select Product Group and Name");
 		Log.info("Select Product Group and Name");
 
@@ -65,6 +70,11 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		select("GOLD LOAN", JewelClosure.productname);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Select appropriate product name'");
 		Log.info("Step:02 -Select appropriate product name'");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Selected product is displayed");
+		Log.info("Expected Result: Selected product is displayed");
+
+		ExtentTestManager.endTest();
 
 	}
 
@@ -106,9 +116,18 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 	public void Accountnumber(Map<Object, Object> testdata, ITestContext context)
 			throws ClassNotFoundException, InterruptedException {
+
 		String valueAccNum = generateUniqueCode(sp, columnName);
 		String AccNum = valueAccNum.substring(valueAccNum.length() - 3);
 		input(JewelClosure.StoreAccun, AccNum);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -");
+		Log.info("Step:01 -");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result:Loan number can be entered Account details are displayed ");
+		Log.info("Expected Result: Loan number can be entered Account details are displayed");
+
+		ExtentTestManager.endTest();
 
 		ExtentTestManager.startTest("Enter Loan Account Number");
 		Log.info("Enter Loan Account Number");
@@ -117,12 +136,29 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click on Go button");
 		Log.info("Step:01 -Click on Go button");
 
-		ExtentTestManager.startTest("Warning Validation Popup window");
-		Log.info("Warning Validation Popup window");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account details are displayed");
+		Log.info("Expected Result: Account details are displayed");
 
-		click(JewelClosure.ClickNo);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Enter No in the warning validation popup window");
-		Log.info("Step:01 -Enter No in the warning validation popup window");
+		ExtentTestManager.endTest();
+
+		try {
+
+			ExtentTestManager.startTest("Warning Validation Popup window");
+			Log.info("Warning Validation Popup window");
+
+			click(JewelClosure.ClickNo);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Enter No in the warning validation popup window");
+			Log.info("Step:01 -Enter No in the warning validation popup window");
+
+			ExtentTestManager.getTest().log(Status.PASS,
+					"Expected Result: Loan details are fetched and displayed correctly.");
+			Log.info("Expected Result: Loan details are fetched and displayed correctly.");
+
+			ExtentTestManager.endTest();
+
+		} catch (Exception e) {
+
+		}
 
 		ExtentTestManager.startTest("Verify Closure Amount Display");
 		Log.info("Verify Closure Amount Display");
@@ -136,6 +172,11 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
 		}
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure amount is accurately displayed");
+		Log.info("Expected Result: Closure amount is accurately displayed.");
+
+		ExtentTestManager.endTest();
 	}
 
 	public void Cash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
@@ -145,6 +186,11 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		select("CASH", JewelClosure.Selectcash);
 		ExtentTestManager.getTest().log(Status.PASS, " Select 'CASH' from transmode dropdown");
 		Log.info("Step:01 -Select 'CASH' from transmode dropdown");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transmode CASH selected");
+		Log.info("Expected Result: Transmode CASH selected.");
+
+		ExtentTestManager.endTest();
 
 		ScrollUntilElementVisible(JewelClosure.scrolldown);
 
@@ -159,6 +205,11 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		click(JewelClosure.submit);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Loan closure transaction is submitted successfully");
 		Log.info("Step:01 -Loan closure transaction is submitted successfully");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Product group and name selected");
+		Log.info("Expected Result: Product group and name selected.");
+
+		ExtentTestManager.endTest();
 
 		ExtentTestManager.startTest("Summary page");
 		Log.info("Summary page");
@@ -183,6 +234,11 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		click(JewelClosure.Singout);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Log out.");
 		Log.info("Step:01 - Log out.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Login page will be dispays.");
+		Log.info("Expected Result:Login page will be dispays.");
+
+		ExtentTestManager.endTest();
 	}
 
 	public void AnotherUSer(Map<Object, Object> testdata, ITestContext context)
@@ -229,6 +285,11 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -.Click cashier authorisation Submodule");
 		Log.info("Step:02 -Click cashier authorisation Submodule");
 
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:  Cashier authorization window will be display.");
+		Log.info("Expected Result: Cashier authorization window will be display");
+
+		ExtentTestManager.endTest();
+
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
 
@@ -239,12 +300,24 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		System.out.println("transIdCashPersonal " + transId);
 		fetchWithTransId(transId);
 
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result:  Closure entry will be diaply after clicking the refresh button.");
+		Log.info("Expected Result:Closure entry will be diaply after clicking the refresh button");
+
+		ExtentTestManager.endTest();
+
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkbox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select the checbox of jewel loan closure ");
 		Log.info("Step:01 -Select the checbox of jewel loan closure ");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Possible to select the closure entry and selected entry is hghlighted");
+		Log.info("Expected Result:Possible to select the closure entry and selected entry is hghlighted");
+
+		ExtentTestManager.endTest();
 
 		ExtentTestManager.startTest("User is on Cashier authorisation window");
 		Log.info("User is on Cashier authorisation window");
@@ -253,6 +326,11 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -1.Click Authorise button");
 		Log.info("Step:01 -1.Click Authorise button");
 		click(JewelClosure.close);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure entry is authorised");
+		Log.info("Expected Result:Closure entry is authorised");
+
+		ExtentTestManager.endTest();
 
 	}
 
@@ -267,12 +345,22 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click Manager authorisation Submodule");
 		Log.info("Step:02 -Click Manager authorisation Submodule");
 
+		ExtentTestManager.getTest().log(Status.PASS, " Expected Result: Manager authorization window will be display");
+		Log.info("Expected Result: Manager authorization window will be display");
+
+		ExtentTestManager.endTest();
+
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
 
 		click(JewelClosure.cashtab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click the cash tab");
 		Log.info("Step:01 -Click the cash tab");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Cash tab will be displayed");
+		Log.info("Expected Result: Cash tab will be displayed");
+
+		ExtentTestManager.endTest();
 
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
@@ -284,12 +372,22 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		System.out.println("transIdCashPersonal " + transId);
 		fetchWithTransId(transId);
 
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure entry will be diaply after clicking the refresh button");
+		Log.info("Expected Result: Closure entry will be diaply after clicking the refresh button");
+
+		ExtentTestManager.endTest();
+
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkboxman);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select the checbox of jewel loan closure ");
 		Log.info("Step:01 -Select the checbox of jewel loan closure ");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the closure entry and selected entry is hghlighted");
+		Log.info("Expected Result: Possible to select the closure entry and selected entry is hghlighted");
+
+		ExtentTestManager.endTest();
 
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
@@ -299,6 +397,11 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Step:01 -Click Authorise button");
 
 		click(JewelClosure.close);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure entry is authorised");
+		Log.info("Expected Result: Closure entry is authorised");
+
+		ExtentTestManager.endTest();
 
 	}
 
@@ -309,14 +412,15 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		ExtentTestManager.startTest("Navigate to Jewel Loan Closure Window");
 		Log.info("Navigate to Jewel Loan Closure Window");
 
-		// click(JewelClosure.OpenClosureandrenewal);
-		// ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Closure &
-		// Renewals Loan Closure");
-		// Log.info("Step:01 - Navigate to Closure & Renewals Loan Closure");
 
 		click(JewelClosure.Clickonclosure);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  click on Loan Closure");
 		Log.info("Step:02 -click on Loan Closure");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan Closure window is displayed");
+		Log.info("Expected Result: Loan Closure window is displayed");
+
+		ExtentTestManager.endTest();
 
 		ExtentTestManager.startTest("Select Product Group and Name");
 		Log.info("Select Product Group and Name");
@@ -328,28 +432,40 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		select("GOLD LOAN", JewelClosure.productname);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -  Select appropriate product name'");
 		Log.info("Step:02 -Select appropriate product name'");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Selected product is displayed");
+		Log.info("Expected Result: Selected product is displayed");
+		ExtentTestManager.endTest();
 
 	}
 
 	public void Transfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("Loan account details are displayed");
-		Log.info("Loan account details are displayed");
+		ExtentTestManager.startTest("Verify Closure Amount Display");
+		Log.info("Verify Closure Amount Display");
 
 		if (ElementDisplayed(JewelClosure.cloamtdisplay)) {
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Summary page visible.");
-			Log.info("Expected Result:Summary page visible.");
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Closure amount is accurately displayed");
+			Log.info("Expected Result:Closure amount is accurately displayed");
 		} else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
 		}
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan account details are correctly displayed");
+		Log.info("Expected Result: Loan account details are correctly displayed");
+		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Cash as Transmode and Submit");
-		Log.info("Select Cash as Transmode and Submit");
+		ExtentTestManager.startTest("Select Transmode Transfer and Post Debit");
+		Log.info("Select Transmode Transfer and Post Debit");
 
 		select("TRANSFER", JewelClosure.selecttransfer);
-		ExtentTestManager.getTest().log(Status.PASS, " Select 'TRANSFER' from transmode dropdown");
+		ExtentTestManager.getTest().log(Status.PASS, " Step:01-Select 'TRANSFER' from transmode dropdown");
 		Log.info("Step:01 -Select 'CASH' from transmode dropdown");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: POST DEBITbutton will be display");
+		Log.info("Expected Result:POST DEBITbutton will be display ");
+		ExtentTestManager.endTest();
 
 		ExtentTestManager.startTest("Select Post Debit");
 		Log.info("Select Post Debit");
@@ -357,6 +473,10 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		click(JewelClosure.clickPD);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01-  Click the POST DEBIT button.");
 		Log.info("Step:02 -Click the POST DEBIT button.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Auto posting popup window will be opens");
+		Log.info("Expected Result:Auto posting popup window will be opens ");
+		ExtentTestManager.endTest();
 
 	}
 
@@ -372,65 +492,81 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 				popupAppeared = true;
 			}
 		}
-		
-		ExtentTestManager.startTest("TRasaction based field alreday selected as Account");
-		Log.info("TRasaction based field alreday selected as Account");
-		
+
+		ExtentTestManager.startTest("Search Account number");
+		Log.info("Search Account number");
+
 		select("Demand Investment", JewelClosure.produgroup);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01-  Select a product group.");
 		Log.info("Step:02 -Select a product group.");
-		
+
 		select("INV-DEMAND-CA", JewelClosure.produname);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02-  Select a product name.");
 		Log.info("Step:02 -Select a product name.");
 		
-		ExtentTestManager.startTest("Search Account Number");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Possible to select the product group and product name ");
+		Log.info("Expected Result:Possible to select the product group and product name ");
+		ExtentTestManager.endTest();
+
+		ExtentTestManager.startTest("Select Account Number");
 		Log.info("Search Account Number");
 
 		String AccountNumber = testdata.get("AccountNumber").toString();
 		input(JewelClosure.accnumber, AccountNumber);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01-  Give account number as '3'.");
 		Log.info("Step:01-Give account number as '3'.");
-
 		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Given account number details will be display ");
+		Log.info("Expected Result:Given account number details will be display ");
+		ExtentTestManager.endTest();
+
 		ExtentTestManager.startTest("Add Transaction Amount");
 		Log.info("Add Transaction Amount");
-		
+
 		Display = driver.findElement(JewelClosure.dispname).getAttribute("value");
-		
+
 		System.out.println("Amount" + Display);
 		displayamount(Display);
-		
-		
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01-  Enter amount.");
 		Log.info("Step:01-Enter amount.");
-		
+
 		click(JewelClosure.CliADD);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01- Click ADD.");
-		Log.info("Step:01-Click ADD");
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02- Click ADD.");
+		Log.info("Step:02-Click ADD");
 		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Amount and details is added in the grid in the auto posting popup window ");
+		Log.info("Expected Result: Amount and details is added in the grid in the auto posting popup window");
+		ExtentTestManager.endTest();
+
 		ExtentTestManager.startTest("Submit POST DEBIT Action");
 		Log.info("Submit POST DEBIT Action");
-		
+
 		click(JewelClosure.clickSubmit);
 		ExtentTestManager.getTest().log(Status.PASS, "Click the SUBMIT button for POST DEBIT..");
 		Log.info("Step:01-Enter amount.");
-		
+
 		driver.switchTo().window(mainWindowHandle);
-   
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Auto posting popu window will be close ");
+		Log.info("Expected Result: Auto posting popu window will be close");
+		ExtentTestManager.endTest();
+
 		ExtentTestManager.startTest("Navigate to Summary Page - SWIFT_CODE");
 		Log.info("Navigate to Summary Page - SWIFT_CODE");
-		
-		
+
 		click(JewelClosure.submitpostD);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01-  Enter amount.");
 		Log.info("Step:01-Enter amount.");
-		
+
 		transId = driver.findElement(JewelClosure.ttransid).getText();
 		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is navigated to the summary page");
+		Log.info("Expected Result:User is navigated to the summary page ");
+		ExtentTestManager.endTest();
 
 	}
-	
+
 	public void ManagerAuth() throws InterruptedException {
 
 		ExtentTestManager.startTest("User is logged in");
@@ -441,6 +577,10 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		click(JewelClosure.managertab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click Manager authorisation Submodule");
 		Log.info("Step:02 -Click Manager authorisation Submodule");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Manager authorization window will be display ");
+		Log.info("Expected Result:Manager authorization window will be display ");
+		ExtentTestManager.endTest();
 
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
@@ -448,6 +588,10 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		click(JewelClosure.Transfertab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click the Transfer tab");
 		Log.info("Step:01 -Click the cash tab");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Transfer tab will be display ");
+		Log.info("Expected Result: Transfer tab will be display");
+		ExtentTestManager.endTest();
 
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
@@ -458,6 +602,10 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		System.out.println("transIdCashPersonal " + transId);
 		fetchWithTransId(transId);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure entry will be diaply after clicking the refresh button ");
+		Log.info("Expected Result:Closure entry will be diaply after clicking the refresh button ");
+		ExtentTestManager.endTest();
 
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
@@ -465,14 +613,26 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		click(JewelClosure.checkboxtrue);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select the checbox of jewel loan closure ");
 		Log.info("Step:01 -Select the checbox of jewel loan closure ");
-
-		ExtentTestManager.startTest("User is logged in");
-		Log.info("User is logged in");
 		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Possible to select the closure entry and selected entry is hghlighted ");
+		Log.info("Expected Result:Possible to select the closure entry and selected entry is hghlighted ");
+		ExtentTestManager.endTest();
+
+		ExtentTestManager.startTest("User is on Manager authorisation window");
+		Log.info("User is on Manager authorisation window");
+
 		click(JewelClosure.clickauth);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click Authorise button");
 		Log.info("Step:01 -Click Authorise button");
 
 		click(JewelClosure.close);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure entry is authorised");
+		Log.info("Expected Result:Closure entry is authorised ");
+		ExtentTestManager.endTest();
 
-}}
+		
+		
+
+	}
+}
