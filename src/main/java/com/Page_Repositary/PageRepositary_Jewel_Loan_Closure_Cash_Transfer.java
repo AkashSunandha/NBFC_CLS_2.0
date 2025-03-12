@@ -56,7 +56,7 @@ public By clickPD = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstApproval_ctrl
 
 public By produgroup= By.xpath("//*[@id=\"ddlProductGroup_ddl\"]");
 public By produname= By.xpath("//*[@id=\"ddlProductName_ddl\"]");
-public By enteramount= By.xpath("//input[@title=\"Amount\"]");
+public By enteramount= By.xpath("//input[@id='txtAmount_txt']");
 public By accnumber= By.xpath("//*[@id=\"txtChildAcNo_txt\"]");
 public By CliADD= By.xpath("//*[@id=\"btnAdd\"]");
 public By clickSubmit= By.xpath("//*[@id=\"btnSubmit\"]");

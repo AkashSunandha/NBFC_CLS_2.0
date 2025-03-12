@@ -28,7 +28,7 @@ public class AllScenario_OLTransaction_Cash_Transfer {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 
-	public String sp = "GetJewelloanAccountnumber";
+	public String sp = "GetOtherloanAccountnumberForTransaction";
 	public String columnName = "Acno";
 
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
@@ -67,6 +67,8 @@ public class AllScenario_OLTransaction_Cash_Transfer {
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 				
 				Transaction.Transactionwindow();
+				
+				Transaction.Accountnumber(testdata, context);
 				
 				
 				

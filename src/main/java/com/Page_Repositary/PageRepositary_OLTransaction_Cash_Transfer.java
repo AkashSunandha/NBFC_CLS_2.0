@@ -11,4 +11,8 @@ public By productgroup= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactio
 public By transaccount = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_txtAcNo_txt\"]");
 public By selectcredit = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlTrnType_ddl\"]");
 public By clickGoo = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_btnGo\"]");
+public By transamount = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_txtTrnAmount_txt\"]");
+public By selectcash= By.xpath("");
+public By submittrans=By.xpath("");
+public By clickprint=By.xpath("");
 }

@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-11T15:08:59 IST" name="Default suite" finished-at="2025-03-11T15:16:59 IST" duration-ms="480930">
+  <suite started-at="2025-03-12T11:59:32 IST" name="Default suite" finished-at="2025-03-12T12:07:33 IST" duration-ms="481604">
     <groups>
     </groups>
-    <test started-at="2025-03-11T15:08:59 IST" name="Default test" finished-at="2025-03-11T15:16:59 IST" duration-ms="480930">
+    <test started-at="2025-03-12T11:59:32 IST" name="Default test" finished-at="2025-03-12T12:07:33 IST" duration-ms="481604">
       <class name="com.test.JewelLoanClosure.AllScenario_JewelLoan_Closure_Cash_Transfer">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.JewelLoanClosure.AllScenario_JewelLoan_Closure_Cash_Transfer@68ad99fe]" started-at="2025-03-11T15:08:58 IST" name="reference" finished-at="2025-03-11T15:08:59 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.JewelLoanClosure.AllScenario_JewelLoan_Closure_Cash_Transfer@68ad99fe]" started-at="2025-03-12T11:59:32 IST" name="reference" finished-at="2025-03-12T11:59:32 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.JewelLoanClosure.AllScenario_JewelLoan_Closure_Cash_Transfer@68ad99fe]" started-at="2025-03-11T15:08:59 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-11T15:16:59 IST" duration-ms="480265" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.JewelLoanClosure.AllScenario_JewelLoan_Closure_Cash_Transfer@68ad99fe]" started-at="2025-03-12T11:59:32 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-12T12:07:33 IST" duration-ms="480946" status="PASS">
           <params>
             <param index="0">
               <value>

@@ -1,4 +1,4 @@
-[ERROR] 2025-03-11 15:08:59.184 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-12 11:59:32.202 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -49,7 +49,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-11 15:08:59.195 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-12 11:59:32.214 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -100,7 +100,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-11 15:08:59.196 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-12 11:59:32.215 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -151,7 +151,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-11 15:08:59.200 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-12 11:59:32.219 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -202,154 +202,154 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-03-11 15:08:59.741 [main] Log - *** Running test method JewlClosure...
-[INFO ] 2025-03-11 15:09:02.996 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-11 15:09:04.080 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-11 15:09:06.347 [main] Log - PC Registration
-[INFO ] 2025-03-11 15:09:07.430 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-11 15:09:07.799 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-11 15:09:08.850 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-03-11 15:09:13.193 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-11 15:09:14.805 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-11 15:09:14.883 [main] Log - Valid Login
-[INFO ] 2025-03-11 15:09:15.929 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-11 15:09:16.997 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-11 15:09:26.881 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-11 15:09:27.956 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-11 15:09:29.022 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-11 15:09:29.078 [main] Log - Navigate to Jewel Loan Closure Window
-[INFO ] 2025-03-11 15:09:33.373 [main] Log - Step:01 -  Navigate to Closure & Renewals Loan Closure
-[INFO ] 2025-03-11 15:09:38.097 [main] Log - Step:02 -click on Loan Closure
-[INFO ] 2025-03-11 15:09:38.098 [main] Log - Expected Result: Loan Closure window is displayed
-[INFO ] 2025-03-11 15:09:38.180 [main] Log - Select Product Group and Name
-[INFO ] 2025-03-11 15:09:38.534 [main] Log - Step:01 -Select product group 'Jewel Loan'
-[INFO ] 2025-03-11 15:09:38.862 [main] Log - Step:02 -Select appropriate product name'
-[INFO ] 2025-03-11 15:09:38.863 [main] Log - Expected Result: Selected product is displayed
-[INFO ] 2025-03-11 15:09:38.935 [main] Log - Enter Loan Account Number
-[INFO ] 2025-03-11 15:09:40.370 [main] Log - Step:01 -
-[INFO ] 2025-03-11 15:09:40.371 [main] Log - Expected Result: Loan number can be entered Account details are displayed
-[INFO ] 2025-03-11 15:09:40.421 [main] Log - Enter Loan Account Number
-[INFO ] 2025-03-11 15:09:44.750 [main] Log - Step:01 -Click on Go button
-[INFO ] 2025-03-11 15:09:44.750 [main] Log - Expected Result: Account details are displayed
-[INFO ] 2025-03-11 15:09:44.823 [main] Log - Warning Validation Popup window
-[INFO ] 2025-03-11 15:11:46.874 [main] Log - Verify Closure Amount Display
-[INFO ] 2025-03-11 15:11:48.982 [main] Log - Expected Result: Verify Closure Amount Display.
-[INFO ] 2025-03-11 15:11:48.982 [main] Log - Expected Result: Closure amount is accurately displayed.
-[INFO ] 2025-03-11 15:11:49.030 [main] Log - Select Cash as Transmode and Submit
-[INFO ] 2025-03-11 15:11:49.407 [main] Log - Step:01 -Select 'CASH' from transmode dropdown
-[INFO ] 2025-03-11 15:11:49.407 [main] Log - Expected Result: Transmode CASH selected.
-[INFO ] 2025-03-11 15:11:55.856 [main] Log - Select Cash as Transmode and Submit
-[INFO ] 2025-03-11 15:12:00.181 [main] Log - Step:01 -Loan closure transaction is submitted successfully
-[INFO ] 2025-03-11 15:12:00.182 [main] Log - Expected Result: Product group and name selected.
-[INFO ] 2025-03-11 15:12:00.246 [main] Log - Summary page
-[INFO ] 2025-03-11 15:12:01.328 [main] Log - Expected Result:Summary page visible.
-[INFO ] 2025-03-11 15:12:01.359 [main] Log - Logout in application
-[INFO ] 2025-03-11 15:12:05.785 [main] Log - Step:01 - Log out.
-[INFO ] 2025-03-11 15:12:05.785 [main] Log - Expected Result:Login page will be dispays.
-[INFO ] 2025-03-11 15:12:14.929 [main] Log - Login with Another User
-[INFO ] 2025-03-11 15:12:14.930 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-03-11 15:12:14.970 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-03-11 15:12:15.034 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:12:19.327 [main] Log - Step:01 -.Click the authoirze & Cancel module from the taskbar
-[INFO ] 2025-03-11 15:12:23.771 [main] Log - Step:02 -Click cashier authorisation Submodule
-[INFO ] 2025-03-11 15:12:23.772 [main] Log - Expected Result: Cashier authorization window will be display
-[INFO ] 2025-03-11 15:12:23.839 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:12:28.130 [main] Log - Step:01 -Click the Refresh tab
-[INFO ] 2025-03-11 15:12:33.512 [main] Log - Expected Result:Closure entry will be diaply after clicking the refresh button
-[INFO ] 2025-03-11 15:12:33.564 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:12:37.855 [main] Log - Step:01 -Select the checbox of jewel loan closure 
-[INFO ] 2025-03-11 15:12:37.855 [main] Log - Expected Result:Possible to select the closure entry and selected entry is hghlighted
-[INFO ] 2025-03-11 15:12:37.940 [main] Log - User is on Cashier authorisation window
-[INFO ] 2025-03-11 15:12:42.256 [main] Log - Step:01 -1.Click Authorise button
-[INFO ] 2025-03-11 15:12:46.561 [main] Log - Expected Result:Closure entry is authorised
-[INFO ] 2025-03-11 15:12:46.606 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:12:51.100 [main] Log - Step:02 -Click Manager authorisation Submodule
-[INFO ] 2025-03-11 15:12:51.101 [main] Log - Expected Result: Manager authorization window will be display
-[INFO ] 2025-03-11 15:12:51.172 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:12:55.463 [main] Log - Step:01 -Click the cash tab
-[INFO ] 2025-03-11 15:12:55.464 [main] Log - Expected Result: Cash tab will be displayed
-[INFO ] 2025-03-11 15:12:55.518 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:12:59.838 [main] Log - Step:01 -Refresh tab 
-[INFO ] 2025-03-11 15:13:05.222 [main] Log - Expected Result: Closure entry will be diaply after clicking the refresh button
-[INFO ] 2025-03-11 15:13:05.283 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:13:09.579 [main] Log - Step:01 -Select the checbox of jewel loan closure 
-[INFO ] 2025-03-11 15:13:09.579 [main] Log - Expected Result: Possible to select the closure entry and selected entry is hghlighted
-[INFO ] 2025-03-11 15:13:09.636 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:13:13.964 [main] Log - Step:01 -Click Authorise button
-[INFO ] 2025-03-11 15:13:18.267 [main] Log - Expected Result: Closure entry is authorised
-[INFO ] 2025-03-11 15:13:18.315 [main] Log - Logout in application
-[INFO ] 2025-03-11 15:13:22.747 [main] Log - Step:01 - Log out.
-[INFO ] 2025-03-11 15:13:22.747 [main] Log - Expected Result:Login page will be dispays.
-[INFO ] 2025-03-11 15:13:22.797 [main] Log - Valid Login
-[INFO ] 2025-03-11 15:13:23.852 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-11 15:13:24.912 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-11 15:13:29.703 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-11 15:13:30.768 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-11 15:13:31.829 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-11 15:13:31.870 [main] Log - Navigate to Jewel Loan Closure Window
-[INFO ] 2025-03-11 15:13:36.886 [main] Log - Step:02 -click on Loan Closure
-[INFO ] 2025-03-11 15:13:36.887 [main] Log - Expected Result: Loan Closure window is displayed
-[INFO ] 2025-03-11 15:13:36.935 [main] Log - Select Product Group and Name
-[INFO ] 2025-03-11 15:13:37.294 [main] Log - Step:01 -Select product group 'Jewel Loan'
-[INFO ] 2025-03-11 15:13:37.606 [main] Log - Step:02 -Select appropriate product name'
-[INFO ] 2025-03-11 15:13:37.607 [main] Log - Expected Result: Selected product is displayed
-[INFO ] 2025-03-11 15:13:37.665 [main] Log - Enter Loan Account Number
-[INFO ] 2025-03-11 15:13:39.167 [main] Log - Step:01 -
-[INFO ] 2025-03-11 15:13:39.167 [main] Log - Expected Result: Loan number can be entered Account details are displayed
-[INFO ] 2025-03-11 15:13:39.215 [main] Log - Enter Loan Account Number
-[INFO ] 2025-03-11 15:13:43.525 [main] Log - Step:01 -Click on Go button
-[INFO ] 2025-03-11 15:13:43.525 [main] Log - Expected Result: Account details are displayed
-[INFO ] 2025-03-11 15:13:43.580 [main] Log - Warning Validation Popup window
-[INFO ] 2025-03-11 15:15:45.612 [main] Log - Verify Closure Amount Display
-[INFO ] 2025-03-11 15:15:47.716 [main] Log - Expected Result: Verify Closure Amount Display.
-[INFO ] 2025-03-11 15:15:47.717 [main] Log - Expected Result: Closure amount is accurately displayed.
-[INFO ] 2025-03-11 15:15:47.756 [main] Log - Verify Closure Amount Display
-[INFO ] 2025-03-11 15:15:48.818 [main] Log - Expected Result:Closure amount is accurately displayed
-[INFO ] 2025-03-11 15:15:48.819 [main] Log - Expected Result: Loan account details are correctly displayed
-[INFO ] 2025-03-11 15:15:48.861 [main] Log - Select Transmode Transfer and Post Debit
-[INFO ] 2025-03-11 15:15:49.210 [main] Log - Step:01 -Select 'CASH' from transmode dropdown
-[INFO ] 2025-03-11 15:15:49.211 [main] Log - Expected Result:POST DEBITbutton will be display 
-[INFO ] 2025-03-11 15:15:49.279 [main] Log - Select Post Debit
-[INFO ] 2025-03-11 15:15:53.815 [main] Log - Step:02 -Click the POST DEBIT button.
-[INFO ] 2025-03-11 15:15:53.816 [main] Log - Expected Result:Auto posting popup window will be opens 
-[INFO ] 2025-03-11 15:15:54.192 [main] Log - Search Account number
-[INFO ] 2025-03-11 15:15:54.517 [main] Log - Step:02 -Select a product group.
-[INFO ] 2025-03-11 15:15:54.832 [main] Log - Step:02 -Select a product name.
-[INFO ] 2025-03-11 15:15:54.833 [main] Log - Expected Result:Possible to select the product group and product name 
-[INFO ] 2025-03-11 15:15:54.881 [main] Log - Search Account Number
-[INFO ] 2025-03-11 15:15:55.944 [main] Log - Step:01-Give account number as '3'.
-[INFO ] 2025-03-11 15:15:55.945 [main] Log - Expected Result:Given account number details will be display 
-[INFO ] 2025-03-11 15:15:55.989 [main] Log - Add Transaction Amount
-[INFO ] 2025-03-11 15:15:57.075 [main] Log - Step:01-Enter amount.
-[INFO ] 2025-03-11 15:16:01.369 [main] Log - Step:02-Click ADD
-[INFO ] 2025-03-11 15:16:01.370 [main] Log - Expected Result: Amount and details is added in the grid in the auto posting popup window
-[INFO ] 2025-03-11 15:16:01.441 [main] Log - Submit POST DEBIT Action
-[INFO ] 2025-03-11 15:16:05.745 [main] Log - Step:01-Enter amount.
-[INFO ] 2025-03-11 15:16:05.766 [main] Log - Expected Result: Auto posting popu window will be close
-[INFO ] 2025-03-11 15:16:05.826 [main] Log - Navigate to Summary Page - SWIFT_CODE
-[INFO ] 2025-03-11 15:16:10.142 [main] Log - Step:01-Enter amount.
-[INFO ] 2025-03-11 15:16:10.620 [main] Log - Expected Result:User is navigated to the summary page 
-[INFO ] 2025-03-11 15:16:10.667 [main] Log - Logout in application
-[INFO ] 2025-03-11 15:16:15.097 [main] Log - Step:01 - Log out.
-[INFO ] 2025-03-11 15:16:15.098 [main] Log - Expected Result:Login page will be dispays.
-[INFO ] 2025-03-11 15:16:23.687 [main] Log - Login with Another User
-[INFO ] 2025-03-11 15:16:23.688 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-03-11 15:16:23.719 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-03-11 15:16:23.753 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:16:28.156 [main] Log - Step:02 -Click Manager authorisation Submodule
-[INFO ] 2025-03-11 15:16:28.157 [main] Log - Expected Result:Manager authorization window will be display 
-[INFO ] 2025-03-11 15:16:28.217 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:16:32.507 [main] Log - Step:01 -Click the cash tab
-[INFO ] 2025-03-11 15:16:32.508 [main] Log - Expected Result: Transfer tab will be display
-[INFO ] 2025-03-11 15:16:32.568 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:16:36.890 [main] Log - Step:01 -Refresh tab 
-[INFO ] 2025-03-11 15:16:42.287 [main] Log - Expected Result:Closure entry will be diaply after clicking the refresh button 
-[INFO ] 2025-03-11 15:16:42.346 [main] Log - User is logged in
-[INFO ] 2025-03-11 15:16:46.651 [main] Log - Step:01 -Select the checbox of jewel loan closure 
-[INFO ] 2025-03-11 15:16:46.652 [main] Log - Expected Result:Possible to select the closure entry and selected entry is hghlighted 
-[INFO ] 2025-03-11 15:16:46.695 [main] Log - User is on Manager authorisation window
-[INFO ] 2025-03-11 15:16:50.993 [main] Log - Step:01 -Click Authorise button
-[INFO ] 2025-03-11 15:16:55.285 [main] Log - Expected Result:Closure entry is authorised 
-[INFO ] 2025-03-11 15:16:55.341 [main] Log - Logout in application
-[INFO ] 2025-03-11 15:16:59.765 [main] Log - Step:01 - Log out.
-[INFO ] 2025-03-11 15:16:59.765 [main] Log - Expected Result:Login page will be dispays.
+[INFO ] 2025-03-12 11:59:32.792 [main] Log - *** Running test method JewlClosure...
+[INFO ] 2025-03-12 11:59:36.431 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-03-12 11:59:37.554 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-03-12 11:59:39.813 [main] Log - PC Registration
+[INFO ] 2025-03-12 11:59:40.896 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-03-12 11:59:41.261 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-03-12 11:59:42.325 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-03-12 11:59:46.624 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-03-12 11:59:48.628 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-03-12 11:59:48.709 [main] Log - Valid Login
+[INFO ] 2025-03-12 11:59:49.770 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-12 11:59:50.856 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-03-12 11:59:59.037 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-03-12 12:00:00.111 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-12 12:00:01.183 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-12 12:00:01.273 [main] Log - Navigate to Jewel Loan Closure Window
+[INFO ] 2025-03-12 12:00:05.580 [main] Log - Step:01 -  Navigate to Closure & Renewals Loan Closure
+[INFO ] 2025-03-12 12:00:10.668 [main] Log - Step:02 -click on Loan Closure
+[INFO ] 2025-03-12 12:00:10.668 [main] Log - Expected Result: Loan Closure window is displayed
+[INFO ] 2025-03-12 12:00:10.718 [main] Log - Select Product Group and Name
+[INFO ] 2025-03-12 12:00:11.071 [main] Log - Step:01 -Select product group 'Jewel Loan'
+[INFO ] 2025-03-12 12:00:11.476 [main] Log - Step:02 -Select appropriate product name'
+[INFO ] 2025-03-12 12:00:11.477 [main] Log - Expected Result: Selected product is displayed
+[INFO ] 2025-03-12 12:00:11.582 [main] Log - Enter Loan Account Number
+[INFO ] 2025-03-12 12:00:13.070 [main] Log - Step:01 -
+[INFO ] 2025-03-12 12:00:13.071 [main] Log - Expected Result: Loan number can be entered Account details are displayed
+[INFO ] 2025-03-12 12:00:13.133 [main] Log - Enter Loan Account Number
+[INFO ] 2025-03-12 12:00:17.455 [main] Log - Step:01 -Click on Go button
+[INFO ] 2025-03-12 12:00:17.455 [main] Log - Expected Result: Account details are displayed
+[INFO ] 2025-03-12 12:00:17.542 [main] Log - Warning Validation Popup window
+[INFO ] 2025-03-12 12:02:19.597 [main] Log - Verify Closure Amount Display
+[INFO ] 2025-03-12 12:02:21.769 [main] Log - Expected Result: Verify Closure Amount Display.
+[INFO ] 2025-03-12 12:02:21.770 [main] Log - Expected Result: Closure amount is accurately displayed.
+[INFO ] 2025-03-12 12:02:21.853 [main] Log - Select Cash as Transmode and Submit
+[INFO ] 2025-03-12 12:02:22.234 [main] Log - Step:01 -Select 'CASH' from transmode dropdown
+[INFO ] 2025-03-12 12:02:22.235 [main] Log - Expected Result: Transmode CASH selected.
+[INFO ] 2025-03-12 12:02:28.739 [main] Log - Select Cash as Transmode and Submit
+[INFO ] 2025-03-12 12:02:33.056 [main] Log - Step:01 -Loan closure transaction is submitted successfully
+[INFO ] 2025-03-12 12:02:33.058 [main] Log - Expected Result: Product group and name selected.
+[INFO ] 2025-03-12 12:02:33.134 [main] Log - Summary page
+[INFO ] 2025-03-12 12:02:34.202 [main] Log - Expected Result:Summary page visible.
+[INFO ] 2025-03-12 12:02:34.219 [main] Log - Logout in application
+[INFO ] 2025-03-12 12:02:38.750 [main] Log - Step:01 - Log out.
+[INFO ] 2025-03-12 12:02:38.751 [main] Log - Expected Result:Login page will be dispays.
+[INFO ] 2025-03-12 12:02:47.416 [main] Log - Login with Another User
+[INFO ] 2025-03-12 12:02:47.417 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-03-12 12:02:47.460 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-03-12 12:02:47.529 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:02:51.827 [main] Log - Step:01 -.Click the authoirze & Cancel module from the taskbar
+[INFO ] 2025-03-12 12:02:56.381 [main] Log - Step:02 -Click cashier authorisation Submodule
+[INFO ] 2025-03-12 12:02:56.382 [main] Log - Expected Result: Cashier authorization window will be display
+[INFO ] 2025-03-12 12:02:56.462 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:03:00.785 [main] Log - Step:01 -Click the Refresh tab
+[INFO ] 2025-03-12 12:03:06.202 [main] Log - Expected Result:Closure entry will be diaply after clicking the refresh button
+[INFO ] 2025-03-12 12:03:06.288 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:03:10.627 [main] Log - Step:01 -Select the checbox of jewel loan closure 
+[INFO ] 2025-03-12 12:03:10.628 [main] Log - Expected Result:Possible to select the closure entry and selected entry is hghlighted
+[INFO ] 2025-03-12 12:03:10.712 [main] Log - User is on Cashier authorisation window
+[INFO ] 2025-03-12 12:03:15.045 [main] Log - Step:01 -1.Click Authorise button
+[INFO ] 2025-03-12 12:03:19.325 [main] Log - Expected Result:Closure entry is authorised
+[INFO ] 2025-03-12 12:03:19.408 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:03:24.010 [main] Log - Step:02 -Click Manager authorisation Submodule
+[INFO ] 2025-03-12 12:03:24.011 [main] Log - Expected Result: Manager authorization window will be display
+[INFO ] 2025-03-12 12:03:24.093 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:03:28.411 [main] Log - Step:01 -Click the cash tab
+[INFO ] 2025-03-12 12:03:28.411 [main] Log - Expected Result: Cash tab will be displayed
+[INFO ] 2025-03-12 12:03:28.491 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:03:32.839 [main] Log - Step:01 -Refresh tab 
+[INFO ] 2025-03-12 12:03:38.225 [main] Log - Expected Result: Closure entry will be diaply after clicking the refresh button
+[INFO ] 2025-03-12 12:03:38.290 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:03:42.594 [main] Log - Step:01 -Select the checbox of jewel loan closure 
+[INFO ] 2025-03-12 12:03:42.594 [main] Log - Expected Result: Possible to select the closure entry and selected entry is hghlighted
+[INFO ] 2025-03-12 12:03:42.661 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:03:46.974 [main] Log - Step:01 -Click Authorise button
+[INFO ] 2025-03-12 12:03:51.269 [main] Log - Expected Result: Closure entry is authorised
+[INFO ] 2025-03-12 12:03:51.318 [main] Log - Logout in application
+[INFO ] 2025-03-12 12:03:55.742 [main] Log - Step:01 - Log out.
+[INFO ] 2025-03-12 12:03:55.742 [main] Log - Expected Result:Login page will be dispays.
+[INFO ] 2025-03-12 12:03:55.804 [main] Log - Valid Login
+[INFO ] 2025-03-12 12:03:56.845 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-12 12:03:57.891 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-03-12 12:04:02.621 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-03-12 12:04:03.692 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-12 12:04:04.754 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-12 12:04:04.811 [main] Log - Navigate to Jewel Loan Closure Window
+[INFO ] 2025-03-12 12:04:09.743 [main] Log - Step:02 -click on Loan Closure
+[INFO ] 2025-03-12 12:04:09.743 [main] Log - Expected Result: Loan Closure window is displayed
+[INFO ] 2025-03-12 12:04:09.781 [main] Log - Select Product Group and Name
+[INFO ] 2025-03-12 12:04:10.136 [main] Log - Step:01 -Select product group 'Jewel Loan'
+[INFO ] 2025-03-12 12:04:10.449 [main] Log - Step:02 -Select appropriate product name'
+[INFO ] 2025-03-12 12:04:10.450 [main] Log - Expected Result: Selected product is displayed
+[INFO ] 2025-03-12 12:04:10.489 [main] Log - Enter Loan Account Number
+[INFO ] 2025-03-12 12:04:12.245 [main] Log - Step:01 -
+[INFO ] 2025-03-12 12:04:12.246 [main] Log - Expected Result: Loan number can be entered Account details are displayed
+[INFO ] 2025-03-12 12:04:12.279 [main] Log - Enter Loan Account Number
+[INFO ] 2025-03-12 12:04:16.571 [main] Log - Step:01 -Click on Go button
+[INFO ] 2025-03-12 12:04:16.572 [main] Log - Expected Result: Account details are displayed
+[INFO ] 2025-03-12 12:04:16.637 [main] Log - Warning Validation Popup window
+[INFO ] 2025-03-12 12:06:18.671 [main] Log - Verify Closure Amount Display
+[INFO ] 2025-03-12 12:06:20.789 [main] Log - Expected Result: Verify Closure Amount Display.
+[INFO ] 2025-03-12 12:06:20.789 [main] Log - Expected Result: Closure amount is accurately displayed.
+[INFO ] 2025-03-12 12:06:20.829 [main] Log - Verify Closure Amount Display
+[INFO ] 2025-03-12 12:06:21.900 [main] Log - Expected Result:Closure amount is accurately displayed
+[INFO ] 2025-03-12 12:06:21.901 [main] Log - Expected Result: Loan account details are correctly displayed
+[INFO ] 2025-03-12 12:06:21.940 [main] Log - Select Transmode Transfer and Post Debit
+[INFO ] 2025-03-12 12:06:22.310 [main] Log - Step:01 -Select 'CASH' from transmode dropdown
+[INFO ] 2025-03-12 12:06:22.311 [main] Log - Expected Result:POST DEBITbutton will be display 
+[INFO ] 2025-03-12 12:06:22.363 [main] Log - Select Post Debit
+[INFO ] 2025-03-12 12:06:26.921 [main] Log - Step:02 -Click the POST DEBIT button.
+[INFO ] 2025-03-12 12:06:26.921 [main] Log - Expected Result:Auto posting popup window will be opens 
+[INFO ] 2025-03-12 12:06:27.247 [main] Log - Search Account number
+[INFO ] 2025-03-12 12:06:27.574 [main] Log - Step:02 -Select a product group.
+[INFO ] 2025-03-12 12:06:27.899 [main] Log - Step:02 -Select a product name.
+[INFO ] 2025-03-12 12:06:27.899 [main] Log - Expected Result:Possible to select the product group and product name 
+[INFO ] 2025-03-12 12:06:27.946 [main] Log - Search Account Number
+[INFO ] 2025-03-12 12:06:29.011 [main] Log - Step:01-Give account number as '3'.
+[INFO ] 2025-03-12 12:06:29.011 [main] Log - Expected Result:Given account number details will be display 
+[INFO ] 2025-03-12 12:06:29.055 [main] Log - Add Transaction Amount
+[INFO ] 2025-03-12 12:06:30.140 [main] Log - Step:01-Enter amount.
+[INFO ] 2025-03-12 12:06:34.431 [main] Log - Step:02-Click ADD
+[INFO ] 2025-03-12 12:06:34.431 [main] Log - Expected Result: Amount and details is added in the grid in the auto posting popup window
+[INFO ] 2025-03-12 12:06:34.473 [main] Log - Submit POST DEBIT Action
+[INFO ] 2025-03-12 12:06:38.785 [main] Log - Step:01-Enter amount.
+[INFO ] 2025-03-12 12:06:38.803 [main] Log - Expected Result: Auto posting popu window will be close
+[INFO ] 2025-03-12 12:06:38.857 [main] Log - Navigate to Summary Page - SWIFT_CODE
+[INFO ] 2025-03-12 12:06:43.184 [main] Log - Step:01-Enter amount.
+[INFO ] 2025-03-12 12:06:44.269 [main] Log - Expected Result:User is navigated to the summary page 
+[INFO ] 2025-03-12 12:06:44.309 [main] Log - Logout in application
+[INFO ] 2025-03-12 12:06:48.797 [main] Log - Step:01 - Log out.
+[INFO ] 2025-03-12 12:06:48.797 [main] Log - Expected Result:Login page will be dispays.
+[INFO ] 2025-03-12 12:06:57.487 [main] Log - Login with Another User
+[INFO ] 2025-03-12 12:06:57.487 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-03-12 12:06:57.519 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-03-12 12:06:57.554 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:07:01.965 [main] Log - Step:02 -Click Manager authorisation Submodule
+[INFO ] 2025-03-12 12:07:01.965 [main] Log - Expected Result:Manager authorization window will be display 
+[INFO ] 2025-03-12 12:07:02.007 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:07:06.308 [main] Log - Step:01 -Click the cash tab
+[INFO ] 2025-03-12 12:07:06.309 [main] Log - Expected Result: Transfer tab will be display
+[INFO ] 2025-03-12 12:07:06.356 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:07:10.639 [main] Log - Step:01 -Refresh tab 
+[INFO ] 2025-03-12 12:07:16.039 [main] Log - Expected Result:Closure entry will be diaply after clicking the refresh button 
+[INFO ] 2025-03-12 12:07:16.084 [main] Log - User is logged in
+[INFO ] 2025-03-12 12:07:20.376 [main] Log - Step:01 -Select the checbox of jewel loan closure 
+[INFO ] 2025-03-12 12:07:20.377 [main] Log - Expected Result:Possible to select the closure entry and selected entry is hghlighted 
+[INFO ] 2025-03-12 12:07:20.422 [main] Log - User is on Manager authorisation window
+[INFO ] 2025-03-12 12:07:24.731 [main] Log - Step:01 -Click Authorise button
+[INFO ] 2025-03-12 12:07:29.013 [main] Log - Expected Result:Closure entry is authorised 
+[INFO ] 2025-03-12 12:07:29.060 [main] Log - Logout in application
+[INFO ] 2025-03-12 12:07:33.482 [main] Log - Step:01 - Log out.
+[INFO ] 2025-03-12 12:07:33.490 [main] Log - Expected Result:Login page will be dispays.

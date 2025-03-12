@@ -28,7 +28,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	String Display;
 
-	public String sp = "GetJewelloanAccountnumber";
+	public String sp = "GetOtherloanAccountnumberForTransaction";
 	public String columnName = "Acno";
 
 	public void fetchWithTransId(String transId) throws InterruptedException {
@@ -61,7 +61,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select Other Loan from Product Group..");
 		Log.info("Step:01 - Select Other Loan from Product Group..");
 
-		select("AUTO LOAN", OLtrans.productname);
+		select("PERSONAL LOAN WEEKLY", OLtrans.productname);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02- Select any product name..");
 		Log.info("Step:02- Select any product name..");
 	}
@@ -105,7 +105,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 	public void Accountnumber(Map<Object, Object> testdata, ITestContext context)
 			throws ClassNotFoundException, InterruptedException {
 		String valueAccNum = generateUniqueCode(sp, columnName);
-		String AccNum = valueAccNum.substring(valueAccNum.length() - 3);
+		String AccNum = valueAccNum.substring(valueAccNum.length() - 4);
 		input(OLtrans.transaccount, AccNum);
 
 		ExtentTestManager.startTest("Enter Loan Account Number");
@@ -125,12 +125,16 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click on Go button");
 		Log.info("Step:01 -Click on Go button");
 
-		ExtentTestManager.startTest("Warning Validation Popup window");
-		Log.info("Warning Validation Popup window");
+		ExtentTestManager.startTest("Enter Transaction Amount");
+		Log.info("Enter Transaction Amount");
+		
+		String TransAmount = testdata.get("TransAmount").toString();
+		input(OLtrans.transamount, TransAmount);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01-Enter an amount figure in the Trans. amount field.");
+		Log.info("Step:01-Enter an amount figure in the Trans. amount field.");
 
-		click(JewelClosure.ClickNo);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Enter No in the warning validation popup window");
-		Log.info("Step:01 -Enter No in the warning validation popup window");
+		
+		
 
 	}
 }
