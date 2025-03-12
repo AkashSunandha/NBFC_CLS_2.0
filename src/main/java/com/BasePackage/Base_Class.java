@@ -122,21 +122,21 @@ public class Base_Class {
 
 	public static  void input(By element, String Value) throws InterruptedException {
 		Thread.sleep(1000);
-		WebDriverWait wait2 = new WebDriverWait(driver, 120);
+		WebDriverWait wait2 = new WebDriverWait(driver, 30);
 		wait2.until(ExpectedConditions.presenceOfElementLocated(element)).sendKeys(Value);
 	}
 
 	public static  void click(By element) throws InterruptedException {
 
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 		Thread.sleep(2000);
 	}
 
 	public static void select(String value,By element) throws InterruptedException {
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		Select selWeekDayDropDown = new Select(driver.findElement(element));
 		selWeekDayDropDown.selectByVisibleText(value);
@@ -146,7 +146,7 @@ public class Base_Class {
 	public static void clear(By element)throws InterruptedException
 	{
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(element)).clear();
 		Thread.sleep(2000);
 	}
@@ -166,7 +166,7 @@ public class Base_Class {
 	public static  void INclick(By element) throws InterruptedException {
 
 		//Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
 		//Thread.sleep(2000);
 
@@ -175,7 +175,7 @@ public class Base_Class {
 	public static void SwitchToFrame(By frameName) throws InterruptedException
 	{
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameName));
 	}
 	
@@ -190,7 +190,7 @@ public class Base_Class {
 	public static boolean ElementDisplayed(By locator) throws InterruptedException
 	{
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		WebElement element = driver.findElement(locator);
 		Boolean flag = element.isDisplayed();

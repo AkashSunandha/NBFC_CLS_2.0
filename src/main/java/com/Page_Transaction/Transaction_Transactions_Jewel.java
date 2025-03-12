@@ -189,6 +189,11 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the 'Go' button.");
 		Log.info("Step:01 - Click the 'Go' button.");
 		
+		try {
+			click(transJewelRepo.accMaturedPopUpOkBtn);
+		}catch(Exception e) {
+		}
+		
 		if(ElementDisplayed(transJewelRepo.tdTransactionDetailsWindow)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction window for the selected account is displayed.");
 			Log.info("Expected Result: Transaction window for the selected account is displayed.");
