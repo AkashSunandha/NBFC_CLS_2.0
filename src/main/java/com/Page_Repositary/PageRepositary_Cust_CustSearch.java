@@ -21,7 +21,7 @@ public class PageRepositary_Cust_CustSearch {
 	public By invalidPaswrdErrMsg = By.xpath("//*[@id=\"lblErrorMessage\"]");
 	public By home = By.xpath("//div[text()='Dashboard']");
 	public By loginWarningOkBtn = By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]");
-//	public By variable = By.xpath("");
+	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");

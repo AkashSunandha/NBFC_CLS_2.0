@@ -252,9 +252,10 @@ public class Customer_CustomerSearch extends Base_Class{
 									Log.info("Expected Result: User is logged in successfully and dashboard visible");	
 							}
 					
-					ElementDisplayed(custSearch.home);
-					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
-					Log.info("Expected Result: User is logged in successfully and dashboard visible");
+//					ElementDisplayed(custSearch.home);
+//					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+//					Log.info("Expected Result: User is logged in successfully and dashboard visible");
+					
 		ExtentTestManager.endTest();
 
 		return true;
