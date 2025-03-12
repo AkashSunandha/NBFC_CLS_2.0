@@ -82,6 +82,30 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				
 				//TC 12
 				fixeddeposit.FillAccountInfoTabCanvasserName(testdata, context);
+				
+				//TC 13
+				fixeddeposit.FillAccountInfoTabREquitableMortRegNo(testdata, context);
+				
+				//TC 14,15
+				fixeddeposit.FillAccountInfoTabEMRDate(testdata, context);
+				
+				//TC 16
+				fixeddeposit.FillAccountInfoTabAgentCode(testdata, context);
+				
+				//TC 17
+				fixeddeposit.FillAccountInfoTabDSACode(testdata, context);
+				
+				//TC 18
+				fixeddeposit.NextButtonFunctionality();
+				
+				//TC 19, 20
+				fixeddeposit.SelectvehicleSecurityTab(testdata, context);
+				
+				//TC 21
+				fixeddeposit.FillVehicleSecurityDetialsRCno(testdata, context);
+				
+				//TC 22
+				
 			
 						
 				/*//Sign out

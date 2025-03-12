@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-10T17:44:49 IST" name="Default suite" finished-at="2025-03-10T17:54:28 IST" duration-ms="578774">
+  <suite started-at="2025-03-12T11:50:06 IST" name="Default suite" finished-at="2025-03-12T11:59:47 IST" duration-ms="581537">
     <groups>
     </groups>
-    <test started-at="2025-03-10T17:44:49 IST" name="Default test" finished-at="2025-03-10T17:54:28 IST" duration-ms="578774">
+    <test started-at="2025-03-12T11:50:06 IST" name="Default test" finished-at="2025-03-12T11:59:47 IST" duration-ms="581537">
       <class name="com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit@35e5d0e5]" started-at="2025-03-10T17:44:49 IST" name="reference" finished-at="2025-03-10T17:44:49 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit@c055c54]" started-at="2025-03-12T11:50:06 IST" name="reference" finished-at="2025-03-12T11:50:06 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit@35e5d0e5]" started-at="2025-03-10T17:44:50 IST" name="customerRegister" data-provider="TestData" finished-at="2025-03-10T17:54:28 IST" duration-ms="577849" status="PASS">
+        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit@c055c54]" started-at="2025-03-12T11:50:06 IST" name="customerRegister" data-provider="TestData" finished-at="2025-03-12T11:59:47 IST" duration-ms="580817" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,7 +20,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@4784013e]]>
+                <![CDATA[org.testng.TestRunner@d176a31]]>
               </value>
             </param>
           </params>

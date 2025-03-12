@@ -32,17 +32,19 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
     public By ResolutionNo=By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_txtResNo_txt");
     public By ResolutionDate = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_dtResDate_txt");
     public By Referedby = By.id("hyjackText0");
-    public By optionPradeep = By.xpath("//li[text()='PRADEEP']");
+    public By optionPradeep = By.xpath("//li[@val='101000002433']");
     public By Popupnull =By.id("closeValurc");
     public By CanvasserName =By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_ddlCanvasserName_ddl");
-    //public By optionASMA =By.xpath("//li[text()='ASMA']");
-    public By optionASMA =By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_ddlCanvasserName_ddl\"]");
     public By EquitableMortRegNo =By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_txtEquitableMortgagerRegNo_txt\"]");
-    public By EMRDate = By.xpath("//*[@id=\"__LASTFOCUS\"]");
-   
+    public By EMRDate1 = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_dtEMRDate_txt");
+    public By Agentcode1 =By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_txtAgentCode_txt");
+	public By DSAcode1 =By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpAccInfo_lstProductLoan_ctrl0_LAF_txtDSACode_txt");
+	public By Nextbtn = By.id("ctl00_ctl00_CPH1_PRDCNT_btnNext");
 	
-		
-		
+	//Securities Tab
+	
+	public By Vehicleno1 = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpSecurity_tbSecurity_tpVehicle_SVF_txtVehNo_txt");
+	public By RCno1 = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpSecurity_tbSecurity_tpVehicle_SVF_txtRCNo_txt");
 	
 }
 

@@ -121,11 +121,11 @@ PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler fixeddeposit = new PageRepositary_A
 			boolean flag1 = ElementDisplayed(fixeddeposit.ResolutionNo);
 			if(flag1 == true) {
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to enter Resolution No");
-				Log.info("Possible to enter Resolution No");
+				Log.info("Expected result:Possible to enter Resolution No");
 			}
 			else {
-				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Possible to enter Resolution No");
-				Log.info("Expected result: Possible to enter Resolution No");
+				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: unable to enter Resolution No");
+				Log.info("Expected result: unable to enter Resolution No");
 			}
 			ExtentTestManager.endTest();
 		
@@ -145,8 +145,8 @@ PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler fixeddeposit = new PageRepositary_A
 				Log.info("Possible to enter Resolution date");
 			}
 			else {
-				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Possible to enter Resolution date");
-				Log.info("Expected result: Possible to enter Resolution date");
+				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: unable to enter Resolution date");
+				Log.info("Expected result: unable to enter Resolution date");
 			}
 			ExtentTestManager.endTest();
 		
@@ -155,16 +155,20 @@ PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler fixeddeposit = new PageRepositary_A
 		public boolean FillAccountInfoTabReferedBy(Map<Object, Object> testdata, ITestContext context)throws InterruptedException {
 		    ExtentTestManager.startTest("TC:11 - Fill Account Info Tab ReferedBy");
 		        click(fixeddeposit.Referedby);
-		        String reference = testdata.get("ReferenceBy").toString();
-                input(fixeddeposit.Referedby, reference);
 		        click(fixeddeposit.optionPradeep);
 		        click(fixeddeposit.Popupnull);
 		        ExtentTestManager.getTest().log(Status.PASS, "Step:01  Choose Referred By from dropdown");
 				Log.info("Step:01 Choose Referred By from dropdown");
 		        
+				boolean flag1 = ElementDisplayed(fixeddeposit.Referedby);
+				if(flag1 == true) {
 		  		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to choose the Referred By from the drop down");
 		  		Log.info("Expected Result: Possible to choose the Referred By from the drop down");
-		  		
+				}
+				else {
+					ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: unable to choose the Referred By from the dropdown");
+					Log.info("Expected result: unable to choose the Referred By from the dropdown");
+				}
 		  		
 						ExtentTestManager.endTest();
 						return true; 
@@ -172,24 +176,173 @@ PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler fixeddeposit = new PageRepositary_A
 		}
 		public boolean FillAccountInfoTabCanvasserName (Map<Object, Object> testdata, ITestContext context)throws InterruptedException {
 		ExtentTestManager.startTest("TC:12 -  Fill Account Info Tab Canvasser Name");
-	
-		click(fixeddeposit.CanvasserName);
-		String Canvasser_Name = testdata.get("Canvassername").toString();
-        input(fixeddeposit.CanvasserName,Canvasser_Name);
-		click(fixeddeposit.optionASMA);
+		select("AISWARYA S N",fixeddeposit.CanvasserName);
+
 	        ExtentTestManager.getTest().log(Status.PASS, "Step:01 Choose Canvasser Name  from dropdown");
 			Log.info("Step:01 Choose Canvasser Name  from dropdown");
-	        
-	  		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to choose the Canvasser Name from the drop down"
-	  				+ "Canvasser code is displayed");
-	  		Log.info("Expected Result: Possible to choose the Canvasser Name from the drop down"
-	  				+"Canvasser code is displayed\"");
-	  		
+			
+			boolean flag1 = ElementDisplayed(fixeddeposit.Referedby);
+			if(flag1 == true) {
+	        ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to choose the Canvasser Name from the drop down and Canvasser code is displayed");
+	  		Log.info("Expected Result: Possible to choose the Canvasser Name from the drop down and Canvasser code is displayed");
+			}
+			else {
+				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: unable to choose the Canvasser Name from the dropdown and Canvasser code is not displayed");
+				Log.info("Expected result: unable to choose the Canvasser Name from the dropdown and Canvasser code is not displayed");
+			}
 	  		
 				ExtentTestManager.endTest();
 					return true; 
 }
+		public boolean FillAccountInfoTabREquitableMortRegNo(Map<Object, Object> testdata, ITestContext context)throws ClassNotFoundException,InterruptedException {
+			ExtentTestManager.startTest("TC:13 - Fill Account Info Tab Equitable Mort Reg No");
+			click(fixeddeposit.EquitableMortRegNo);
+			String Equitmortregno = testdata.get("EquitableMortRegNo").toString();
+		  	  input(fixeddeposit.EquitableMortRegNo, Equitmortregno);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 Enter Equitable Mort Reg.No.");
+			Log.info("\"Step:01 Enter Equitable Mort Reg.No.");
+			
+			boolean flag1 = ElementDisplayed(fixeddeposit.EquitableMortRegNo);
+			if(flag1 == true) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to give the Equitable Mort Reg.No");
+				Log.info("Expected result: Possible to give the Equitable Mort Reg.No");
+			}
+			else {
+				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Unable to give the Equitable Mort reg.No");
+				Log.info("Expected result: Unable to give the Equitable Mort reg.No");
+			}
+			ExtentTestManager.endTest();
+		
+					return true; 
 }
+	
+		public boolean FillAccountInfoTabEMRDate(Map<Object, Object> testdata, ITestContext context)throws ClassNotFoundException,InterruptedException {
+			ExtentTestManager.startTest("TC:14 - Fill Account Info Tab EMR Date");
+			click(fixeddeposit.EMRDate1);
+			String EMRdatepicker = testdata.get("EMRDate").toString();
+		  	  input(fixeddeposit.EMRDate1, EMRdatepicker);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 Select Date from EMR Date picker");
+			Log.info("\"Step:01 select Date from EMR Date picker");
+			
+			boolean flag1 = ElementDisplayed(fixeddeposit.EMRDate1);
+			if(flag1 == true) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the date from date picker");
+				Log.info("Expected Result:Possible to select the date from date picker");
+			}
+			else {
+				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: unable to select the date from EMR date picker");
+				Log.info("Expected result: unable to select the date from EMR date picker");
+			}
+			ExtentTestManager.endTest();
+		
+					return true; 
+}
+		public boolean FillAccountInfoTabAgentCode (Map<Object, Object> testdata, ITestContext context)throws InterruptedException {
+			ExtentTestManager.startTest("TC:16 -  Fill Account Info Tab Agent Code");
+			click(fixeddeposit.Agentcode1);
+			String Agent_code= testdata.get("Agentcode").toString();
+		  	  input(fixeddeposit.Agentcode1,Agent_code );
+		        ExtentTestManager.getTest().log(Status.PASS, "Step:01 Enter Agentcode");
+				Log.info("Step:01 Enter Agentcode");
+				
+				boolean flag1 = ElementDisplayed(fixeddeposit.Agentcode1);
+				if(flag1 == true) {
+		        ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to enter agentcode and agentname is displayed");
+		  		Log.info("Expected Result: Not Possible to enter agentcode and Agentname is not displayed");
+				}
+				else {
+					ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: unable to enter agentcode and agent name is not displayed");
+					Log.info("Expected result: unable to enter agentcode and agentname is not displayed");
+				}
+		  		
+					ExtentTestManager.endTest();
+						return true; 
+}
+		public boolean FillAccountInfoTabDSACode (Map<Object, Object> testdata, ITestContext context)throws InterruptedException {
+			ExtentTestManager.startTest("TC:17 -  Fill Account Info Tab DSA Code");
+			click(fixeddeposit.DSAcode1);
+			String DSA_code= testdata.get("DSACode").toString();
+		  	  input(fixeddeposit.DSAcode1,DSA_code );
+		        ExtentTestManager.getTest().log(Status.PASS, "Step:01 Enter DSAcode");
+				Log.info("Step:01 Enter DSA code");
+				
+				boolean flag1 = ElementDisplayed(fixeddeposit.DSAcode1);
+				if(flag1 == true) {
+		        ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to enter DSAcode and DSAname is displayed");
+		  		Log.info("Expected Result: Not Possible to enter DSAcode and DSAname is not displayed");
+				}
+				else {
+					ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: unable to enter DSAcode and DSAname is not displayed");
+					Log.info("Expected result: unable to enter DSAcode and DSAname is not displayed");
+				}
+		  		
+					ExtentTestManager.endTest();
+						return true; 
+}
+
+		public Boolean NextButtonFunctionality() throws InterruptedException {
+			ExtentTestManager.startTest("TC:18 - Next Button Functionality");
+			
+			click(fixeddeposit.Nextbtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the 'Next' button after giving all the details in the account info tab") ;
+			Log.info("Step:01 -  Click the 'Next' button after giving all the details in the account info tab");
+			
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:redirected to the securities tab");
+			Log.info("Expected Result: Redirected to the securities tab");
+			
+			ExtentTestManager.endTest();
+	        return true;
+			
+		
+	}
+		public Boolean SelectvehicleSecurityTab(Map<Object, Object> testdata, ITestContext context)throws InterruptedException {
+			ExtentTestManager.startTest("TC:19 20 - Select Vehicle Security Tab fill vehicle no");
+			
+			click(fixeddeposit.Vehicleno1);
+			String Vehicle_No = testdata.get("VehicleNo").toString();
+		  	  input(fixeddeposit.Vehicleno1, Vehicle_No);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01- Vehicle tab displayed and enter Vehicle no") ;
+			Log.info("Step:01 - Vehicle tab displayed and enter Vehicle no");
+			
+			boolean flag1 = ElementDisplayed(fixeddeposit.Vehicleno1);
+			if(flag1 == true) {
+	        ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Given Vehicleno details are accepted");
+	  		Log.info("Expected Result: Given Vehicleno details are accepted");
+			}
+			else {
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Given vehicleno details are not accepted");
+			Log.info("Expected Result: Given vehicle no details are not accepted");
+			}
+			ExtentTestManager.endTest();
+	        return true;
+}
+		public Boolean FillVehicleSecurityDetialsRCno(Map<Object, Object> testdata, ITestContext context)throws InterruptedException {
+			ExtentTestManager.startTest("TC:21 - Fill Vehicle security details RC no");
+			
+			click(fixeddeposit.RCno1);
+			String RC_No = testdata.get("RC.No").toString();
+		  	  input(fixeddeposit.RCno1, RC_No);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01- enter RC no") ;
+			Log.info("Step:01 - Enter RC no");
+			
+			boolean flag1 = ElementDisplayed(fixeddeposit.RCno1);
+			if(flag1 == true) {
+	        ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Given RC.No details are accepted");
+	  		Log.info("Expected Result: Given RC.No details are accepted");
+			}
+			else {
+			
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Given RC.No details are not accepted");
+			Log.info("Expected Result: Given RC.No details are not accepted");
+			}
+			ExtentTestManager.endTest();
+	        return true;
+}
+}
+
+
 
 	  
 	

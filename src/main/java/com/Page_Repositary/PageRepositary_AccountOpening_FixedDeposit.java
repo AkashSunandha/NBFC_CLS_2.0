@@ -146,7 +146,7 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 		public By loginUserName1 = By.xpath("//*[@id=\"txtUserName_txt\"]");
 		public By loginPasswrd1 = By.xpath("//*[@id=\"txtPassword_txt\"]");
 		public By loginButton1 = By.xpath("//*[@id=\"imgbtnSubmit\"]");
-		public By Newloginvalidate=By.xpath("//span[text()='vijayauthorize']");
+		public By Newloginvalidate=By.id("ctl00_ctl00_lblUser");
 		//public By logoutMsg1 = By.xpath("//*[@id=\"logMessage\"]");
 		//public By logoutOk1 = By.xpath("/html/body/div[1]/div/div[2]/div/form/div[11]/div[3]/div/button[1]");
 		
