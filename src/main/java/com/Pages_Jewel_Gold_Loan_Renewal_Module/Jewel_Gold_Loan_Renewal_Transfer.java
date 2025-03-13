@@ -301,8 +301,8 @@ public boolean DisplayLoanAccountDetails() throws InterruptedException {
 	driver.switchTo().window(mainWindowHandle);
 	Log.info("Switched back to the main window.");
 	
-
-	boolean LoanDetails = ElementDisplayed(LoanClosureCash.LoanDetailsSection);
+	Thread.sleep(3000);
+	boolean LoanDetails = ElementDisplayed(LoanClosureCash.LoanDetailSection);
 
 	Assert.assertTrue(LoanDetails, "Validation Failed: Loan account details section is not displayed.");
 
@@ -329,7 +329,7 @@ public boolean ExpandRenewalSection() throws InterruptedException {
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Renew Account' checkbox");
 	Log.info("Step:01 - Click 'Renew Account' checkbox");
 
-	boolean RenewAccountDetail = ElementDisplayed(LoanClosureCash.RenewAccountDetails);
+	boolean RenewAccountDetail = ElementDisplayed(LoanClosureCash.RenewAccountDetail);
 
 	Assert.assertTrue(RenewAccountDetail, "Validation Failed: Renew account details section is not displayed.");
 
@@ -1367,6 +1367,9 @@ public boolean GetValuewithCashTransactionMode(Map<Object, Object> testdata, ITe
 		js.executeScript("arguments[0].scrollIntoView(true);", PayAmountField);
 		
 		Thread.sleep(2000);
+		
+		//click(LoanClosureCash.Closepopup);
+
 		
 		if (ElementDisplayed(LoanClosureCash.TransModeCash)) {
 		click(LoanClosureCash.TransModeCash);
