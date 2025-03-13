@@ -134,29 +134,29 @@ public class AllScenarios_Jewel_Gold_Loan_Renewal_Cash extends Base_Class {
 				//TC_26 ---> LogintoNBFcApplicationinadifferentuser
 				GoldLoanRenewalCash.LogintoNBFcApplicationinadifferentuser();
 				
-				//TC_27 ---> LogintoNBFcApplicationinadifferentuserAuthorizecancel
-				GoldLoanRenewalCash.LogintoNBFcApplicationinadifferentuserAuthorizeandcancel();
-				
-				//TC_28 ---> LogintoNBFcApplicationinadifferentuserRefresh
-				GoldLoanRenewalCash.ManagerAuthorisationRefresh();
-				
-				//TC_29 ---> LogintoNBFcApplicationinadifferentuserSelectTransaction
-				GoldLoanRenewalCash.SelectManagerCashTransaction();
-				
-				//TC_30 ---> LogintoNBFcApplicationinadifferentuserAuthorization
-				GoldLoanRenewalCash.ManagerCashAuthorization();
-				
-				//TC_31 ---> LogintoNBFcApplicationinadifferentuserManagerAuthorisation
+				//TC_27 ---> CashierAuthorisation
 				GoldLoanRenewalCash.CashierAuthorisation();
 				
-				//TC_32 ---> ManagerAuthorizationRefresh
+				//TC_28 ---> CashAuthorizationRefresh
 				GoldLoanRenewalCash.CashAuthorizationRefresh();
 				
-				//TC_33 --> SelectCashTransactionManagerAuthorisation
+				//TC_29 ---> SelectCashTransactionCashierAuthorisation
 				GoldLoanRenewalCash.SelectCashTransactionCashierAuthorisation();
 				
-				//TC_34 ---> ManagerAuthorization
+				//TC_30 ---> CashAuthorization
 				GoldLoanRenewalCash.CashAuthorization();
+				
+				//TC_31 ---> LogintoNBFcApplicationinadifferentuserAuthorizeandcancel
+				GoldLoanRenewalCash.LogintoNBFcApplicationinadifferentuserAuthorizeandcancel();
+				
+				//TC_32 ---> ManagerAuthorisationRefresh
+				GoldLoanRenewalCash.ManagerAuthorisationRefresh();
+				
+				//TC_33 --> SelectManagerCashTransaction
+				GoldLoanRenewalCash.SelectManagerCashTransaction();
+				
+				//TC_34 ---> ManagerCashAuthorization
+				GoldLoanRenewalCash.ManagerCashAuthorization();
 				
 								
 				// Sign out
