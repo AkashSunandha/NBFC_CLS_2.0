@@ -21,7 +21,7 @@ import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
 public class AllScenario_OLTransaction_Cash_Transfer {
-	
+
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
@@ -40,7 +40,7 @@ public class AllScenario_OLTransaction_Cash_Transfer {
 
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("JewelClosure");
+		ExcelReader = new com.Utility.ExcelReader("Transaction");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -65,13 +65,45 @@ public class AllScenario_OLTransaction_Cash_Transfer {
 				custSrchMthds.pcRegistration(testdata, context);
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
-				
+
 				Transaction.Transactionwindow();
-				
+
 				Transaction.Accountnumber(testdata, context);
-				
-				
-				
+
+				Transaction.SelectCASH();
+
+				Transaction.print();
+
+				Transaction.Signout();
+
+				Transaction.AnotherUSer(testdata, context);
+
+				Transaction.Cashier();
+
+				Transaction.Manager();
+
+				Transaction.Signout();
+
+				custSrchMthds.userLoginValidPaswrd(testdata, context);
+
+				Transaction.Transactionwindow2();
+
+				Transaction.Accountnumber(testdata, context);
+
+				Transaction.SelectTransfer();
+
+				Transaction.Accountnumber2(testdata, context);
+
+				Transaction.print();
+
+				Transaction.Signout();
+
+				Transaction.AnotherUSer(testdata, context);
+
+				Transaction.ManagerAuth();
+
+				Transaction.Signout();
+
 				ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();
 			}
@@ -97,6 +129,3 @@ public class AllScenario_OLTransaction_Cash_Transfer {
 	}
 
 }
-
-
-

@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.JewelLoanClosure.AllScenario_JewelLoan_Cash_Transfer">
+      <class name="com.test.OLTransaction.AllScenario_OLTransaction_Cash_Transfer">
         <methods>
           <include name="reference"/>
           <include name="newCustomer"/>
         </methods>
-      </class> <!-- com.test.JewelLoanClosure.AllScenario_JewelLoan_Cash_Transfer -->
+      </class> <!-- com.test.OLTransaction.AllScenario_OLTransaction_Cash_Transfer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

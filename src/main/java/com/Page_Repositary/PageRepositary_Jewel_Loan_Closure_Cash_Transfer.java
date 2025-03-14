@@ -63,6 +63,8 @@ public By clickSubmit= By.xpath("//*[@id=\"btnSubmit\"]");
 
 public By submitpostD= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]");
 public By ttransid= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl1_lbllstTransID\"]");
+
+                               
 public By Transfertab= By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
 public By dispname= By.xpath("//input[@id='txtTotalCrDr_txt']");
 public By checkboxtrue = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect\"]");

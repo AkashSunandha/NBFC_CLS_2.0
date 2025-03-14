@@ -12,7 +12,13 @@ public By transaccount = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransacti
 public By selectcredit = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlTrnType_ddl\"]");
 public By clickGoo = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_btnGo\"]");
 public By transamount = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_txtTrnAmount_txt\"]");
-public By selectcash= By.xpath("");
-public By submittrans=By.xpath("");
-public By clickprint=By.xpath("");
+public By selectcash= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_ddlTransactionMode_ddl\"]");
+public By submittrans=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]");
+public By scrolldwn= By.xpath("//*[@id=\"WorkArea\"]");
+public By TransIID= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl1_lbllstTransID\"]");
+public By clickprint=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnPrintSingleVr1\"]");
+
+//transfer
+
+public By Clickpostdeb= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_btnAutoPost\"]");
 }
