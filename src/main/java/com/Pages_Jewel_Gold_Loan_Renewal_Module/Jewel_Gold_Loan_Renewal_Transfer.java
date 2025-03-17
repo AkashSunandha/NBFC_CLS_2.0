@@ -40,6 +40,7 @@ public class Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 	
 	String transIdCashLoan;
     String transIdTransferLoan;
+    String mainWindowHandle;
 
 	
 	public boolean FetchwithTransID(String transID) throws InterruptedException {
@@ -349,7 +350,7 @@ public boolean OpenSecurityDetailsPopup() throws InterruptedException{
 	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click 'Security' button");
 	Log.info("Step 1: Click 'Security' button");
 	
-	String mainWindowHandle = driver.getWindowHandle();
+	mainWindowHandle = driver.getWindowHandle();
 	Set<String> allWindowHandles = driver.getWindowHandles();
 	boolean popupOpened = false;
 
@@ -361,10 +362,6 @@ public boolean OpenSecurityDetailsPopup() throws InterruptedException{
 		}
 	}	
 	Assert.assertTrue(popupOpened, "Validation Failed: Securities popup window did not open");
-	
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-	
 	
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Security details popup window is opened");
 	Log.info("Expected Result: Security details popup window is opened");
@@ -378,21 +375,6 @@ public boolean AddSecurityDetails() throws InterruptedException{
 	
 	ExtentTestManager.startTest("TC:09 - Add Security Details");
 	Log.info("TC:09 - Add Security Details");
-	
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 
@@ -408,9 +390,6 @@ public boolean AddSecurityDetails() throws InterruptedException{
 	String selectedOption = dropdown.getFirstSelectedOption().getText();
 
 	Assert.assertEquals(selectedOption, "Gold","Validation Failed: The selected Item Group should not be 'Gold'.");
-
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
 	
     ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Security details are added to the grid");
     Log.info("Expected Result: Security details are added to the grid");
@@ -424,21 +403,6 @@ public boolean AddSecurityDetailsItemName() throws InterruptedException{
 	
 	ExtentTestManager.startTest("TC:10 - Add Security Details Item Name");
 	Log.info("TC:10 - Add Security Details Item Name");
-	
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	// ✅ Select Item Name
@@ -453,9 +417,6 @@ public boolean AddSecurityDetailsItemName() throws InterruptedException{
 	String selectedItemName = dropdown.getFirstSelectedOption().getText();
 
 	Assert.assertEquals(selectedItemName, "RING","Validation Failed: The selected Item Name should not be 'RING'.");
-
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
 	
     ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Item name is selected");
     Log.info("Expected Result: Item name is selected");
@@ -469,29 +430,8 @@ public boolean AddSecurityDetailsItemDescription(Map<Object, Object> testdata, I
 	
 	ExtentTestManager.startTest("TC:11 - Add Security Details Item Description");
 	Log.info("TC:11 - Add Security Details Item Description");
-	
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	
-	// ✅ Select Item Name
-	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
-	
-	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("BANGLE");
 	
 	// ✅ Enter Item Description
 	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
@@ -506,9 +446,6 @@ public boolean AddSecurityDetailsItemDescription(Map<Object, Object> testdata, I
 
 	Assert.assertEquals(ItemDescription.getAttribute("value"), EnterItemDescrption, "Validation Failed: Item Description is incorrect.");
 	
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-	
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Item Description selected");
 	Log.info("Expected Result: Item Description selected");
 	
@@ -520,36 +457,8 @@ public boolean AddSecurityDetailsItemQuantity(Map<Object, Object> testdata, ITes
 	
 	ExtentTestManager.startTest("TC:12 - Add Security Details Item Quantity");
 	Log.info("TC:12 - Add Security Details Item Quantity");
-	
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	// ✅ Select Item Name
-	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
-	
-	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("BANGLE");
-
-	// ✅ Enter Item Description
-	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
-	
-	click(LoanClosureCash.ItemDesption);
-	
-	String EnterItemDescrption = testdata.get("Item_Description").toString();
-	input(LoanClosureCash.ItemDesption, EnterItemDescrption);
 	
 	// ✅ Enter Item Quantity
 	WebElement ItemQuantity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemQty_txt']")));
@@ -563,10 +472,7 @@ public boolean AddSecurityDetailsItemQuantity(Map<Object, Object> testdata, ITes
 	Log.info("Step:01 -  Select Item quantity");
 
 	Assert.assertEquals(ItemQuantity.getAttribute("value"), EnterItemItemQuantity, "Validation Failed: Item Quantity is incorrect.");
-	
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-	
+
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Item quantity selected");
 	Log.info("Expected Result: Item quantity selected");
 	
@@ -578,44 +484,8 @@ public boolean AddSecurityDetailsStoneWeight(Map<Object, Object> testdata, ITest
 	
 	ExtentTestManager.startTest("TC:13 - Add Security Details Stone Weight");
 	Log.info("TC:13 - Add Security Details Stone Weight");
-	
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	// ✅ Select Item Name
-	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
-	
-	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("BANGLE");
-
-	// ✅ Enter Item Description
-	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
-	
-	click(LoanClosureCash.ItemDesption);
-	
-	String EnterItemDescrption = testdata.get("Item_Description").toString();
-	input(LoanClosureCash.ItemDesption, EnterItemDescrption);
-	
-	// ✅ Enter Item Quantity
-	WebElement ItemQuantity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemQty_txt']")));
-	
-	click(LoanClosureCash.ItemQty);
-	
-	String EnterItemItemQuantity = testdata.get("Item_Quantity").toString();
-	input(LoanClosureCash.ItemQty, EnterItemItemQuantity);
 	
 	// ✅ Enter Stone Weight
 	WebElement StoneWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtStoneWeight_txt']")));
@@ -630,9 +500,6 @@ public boolean AddSecurityDetailsStoneWeight(Map<Object, Object> testdata, ITest
 
 	Assert.assertEquals(StoneWeight.getAttribute("value"), EnterStoneWeight, "Validation Failed: Entered Stone Weight is incorrect.");
 	
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-	
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Stone Weight Entered");
 	Log.info("Expected Result: Stone Weight Entered");
 	
@@ -645,48 +512,7 @@ public boolean AddSecurityDetailsTickPurityCheckbox(Map<Object, Object> testdata
 	ExtentTestManager.startTest("TC:14 - Add Security Details Tick Purity Checkbox");
 	Log.info("TC:14 - Add Security Details Tick Purity Checkbox");
 
-	
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
-
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
-	
-	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("BANGLE");
-
-	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
-	
-	click(LoanClosureCash.ItemDesption);
-	
-	String EnterItemDescrption = testdata.get("Item_Description").toString();
-	input(LoanClosureCash.ItemDesption, EnterItemDescrption);
-	
-	WebElement ItemQuantity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemQty_txt']")));
-	
-	click(LoanClosureCash.ItemQty);
-	
-	String EnterItemItemQuantity = testdata.get("Item_Quantity").toString();
-	input(LoanClosureCash.ItemQty, EnterItemItemQuantity);
-	
-	WebElement StoneWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtStoneWeight_txt']")));
-	
-	click(LoanClosureCash.StoneWeight);
-	
-	String EnterStoneWeight = testdata.get("Stone_Weight").toString();
-	input(LoanClosureCash.StoneWeight, EnterStoneWeight);
 
 	// ✅ Tick Purity Checkbox
 	WebElement TickPurityCheckbox = driver.findElement(By.xpath("//input[@id ='JSF_Repeater1_ctl03_chkpuritytest']"));
@@ -699,10 +525,7 @@ public boolean AddSecurityDetailsTickPurityCheckbox(Map<Object, Object> testdata
 	boolean PurityTick = ElementDisplayed(LoanClosureCash.PurityTest);
 
 	Assert.assertTrue(PurityTick, "Validation Failed: Purity Tick checkbox is not Selected.");
-	
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-	
+
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Purity is ticked");
 	Log.info("Expected Result: Purity is ticked");
 	
@@ -715,52 +538,7 @@ public boolean AddSecurityDetailsItemWeight(Map<Object, Object> testdata, ITestC
 	ExtentTestManager.startTest("TC:15 - Add Security Details Item Weight");
 	Log.info("TC:15 - Add Security Details Item Weight");
 
-	
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
-
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
-	
-	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("BANGLE");
-
-	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
-	
-	click(LoanClosureCash.ItemDesption);
-	
-	String EnterItemDescrption = testdata.get("Item_Description").toString();
-	input(LoanClosureCash.ItemDesption, EnterItemDescrption);
-	
-	WebElement ItemQuantity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemQty_txt']")));
-	
-	click(LoanClosureCash.ItemQty);
-	
-	String EnterItemItemQuantity = testdata.get("Item_Quantity").toString();
-	input(LoanClosureCash.ItemQty, EnterItemItemQuantity);
-	
-	WebElement StoneWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtStoneWeight_txt']")));
-	
-	click(LoanClosureCash.StoneWeight);
-	
-	String EnterStoneWeight = testdata.get("Stone_Weight").toString();
-	input(LoanClosureCash.StoneWeight, EnterStoneWeight);
-
-	WebElement TickPurityCheckbox = driver.findElement(By.xpath("//input[@id ='JSF_Repeater1_ctl03_chkpuritytest']"));
-
-	click(LoanClosureCash.PurityTest);
 	
 	// ✅ Enter Item Weight
 	WebElement ItemWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemWeight_txt']")));
@@ -775,9 +553,6 @@ public boolean AddSecurityDetailsItemWeight(Map<Object, Object> testdata, ITestC
 	
 	Assert.assertEquals(ItemWeight.getAttribute("value"), EnterItemWeight, "Validation Failed: Entered Item Weight is incorrect.");
 	
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-	
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Item Weight entered");
 	Log.info("Expected Result: Item Weight entered");
 	
@@ -790,58 +565,7 @@ public boolean AddSecurityDetailsDirtWeight(Map<Object, Object> testdata, ITestC
 	ExtentTestManager.startTest("TC:16 - Add Security Details Dirt Weight");
 	Log.info("TC:16 - Add Security Details Dirt Weight");
 
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
-
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
-	
-	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("BANGLE");
-
-	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
-	
-	click(LoanClosureCash.ItemDesption);
-	
-	String EnterItemDescrption = testdata.get("Item_Description").toString();
-	input(LoanClosureCash.ItemDesption, EnterItemDescrption);
-	
-	WebElement ItemQuantity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemQty_txt']")));
-	
-	click(LoanClosureCash.ItemQty);
-	
-	String EnterItemItemQuantity = testdata.get("Item_Quantity").toString();
-	input(LoanClosureCash.ItemQty, EnterItemItemQuantity);
-	
-	WebElement StoneWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtStoneWeight_txt']")));
-	
-	click(LoanClosureCash.StoneWeight);
-	
-	String EnterStoneWeight = testdata.get("Stone_Weight").toString();
-	input(LoanClosureCash.StoneWeight, EnterStoneWeight);
-
-	WebElement TickPurityCheckbox = driver.findElement(By.xpath("//input[@id ='JSF_Repeater1_ctl03_chkpuritytest']"));
-
-	click(LoanClosureCash.PurityTest);
-	
-	WebElement ItemWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemWeight_txt']")));
-	
-	click(LoanClosureCash.ItemWeight);
-	
-	String EnterItemWeight = testdata.get("Item_Weight").toString();
-	input(LoanClosureCash.ItemWeight, EnterItemWeight);
 	
 	// ✅ Enter Dirt Weight
 	WebElement DirtWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtDirtWeight_txt']")));
@@ -856,9 +580,6 @@ public boolean AddSecurityDetailsDirtWeight(Map<Object, Object> testdata, ITestC
 	
 	Assert.assertEquals(DirtWeight.getAttribute("value"), EnterDirtWeight, "Validation Failed: Entered Dirt Weight is incorrect.");
 	
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-	
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Dirt Weight entered");
 	Log.info("Expected Result: Dirt Weight entered");
 	
@@ -871,65 +592,7 @@ public boolean AddSecurityDetailsEnterPurity(Map<Object, Object> testdata, ITest
 	ExtentTestManager.startTest("TC:17 - Add Security Details Enter Purity");
 	Log.info("TC:17 - Add Security Details Enter Purity");
 
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
-
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
-	
-	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("BANGLE");
-
-	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
-	
-	click(LoanClosureCash.ItemDesption);
-	
-	String EnterItemDescrption = testdata.get("Item_Description").toString();
-	input(LoanClosureCash.ItemDesption, EnterItemDescrption);
-	
-	WebElement ItemQuantity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemQty_txt']")));
-	
-	click(LoanClosureCash.ItemQty);
-	
-	String EnterItemItemQuantity = testdata.get("Item_Quantity").toString();
-	input(LoanClosureCash.ItemQty, EnterItemItemQuantity);
-	
-	WebElement StoneWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtStoneWeight_txt']")));
-	
-	click(LoanClosureCash.StoneWeight);
-	
-	String EnterStoneWeight = testdata.get("Stone_Weight").toString();
-	input(LoanClosureCash.StoneWeight, EnterStoneWeight);
-
-	WebElement TickPurityCheckbox = driver.findElement(By.xpath("//input[@id ='JSF_Repeater1_ctl03_chkpuritytest']"));
-
-	click(LoanClosureCash.PurityTest);
-	
-	WebElement ItemWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemWeight_txt']")));
-	
-	click(LoanClosureCash.ItemWeight);
-	
-	String EnterItemWeight = testdata.get("Item_Weight").toString();
-	input(LoanClosureCash.ItemWeight, EnterItemWeight);
-	
-	WebElement DirtWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtDirtWeight_txt']")));
-	
-	click(LoanClosureCash.DirtWeight);
-	
-	String EnterDirtWeight = testdata.get("Dirt_Weight").toString();
-	input(LoanClosureCash.DirtWeight, EnterDirtWeight);
 	
 	// ✅ Enter Purity
 	WebElement EnterPurity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtPurity_txt']")));
@@ -944,9 +607,6 @@ public boolean AddSecurityDetailsEnterPurity(Map<Object, Object> testdata, ITest
 	
 	Assert.assertEquals(EnterPurity.getAttribute("value"), EnterPurityDetail, "Validation Failed: Entered Purity is incorrect.");
 	
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-	
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Purity added");
 	Log.info("Expected Result: Purity added");
 	
@@ -959,74 +619,8 @@ public boolean AddSecurityDetailsAdd(Map<Object, Object> testdata, ITestContext 
 	ExtentTestManager.startTest("TC:18 - Add Security Details Add");
 	Log.info("TC:18 - Add Security Details Add");
 
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
-
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
-	
-	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("BANGLE");
 
-	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
-	
-	click(LoanClosureCash.ItemDesption);
-	
-	String EnterItemDescrption = testdata.get("Item_Description").toString();
-	input(LoanClosureCash.ItemDesption, EnterItemDescrption);
-	
-	WebElement ItemQuantity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemQty_txt']")));
-	
-	click(LoanClosureCash.ItemQty);
-	
-	String EnterItemItemQuantity = testdata.get("Item_Quantity").toString();
-	input(LoanClosureCash.ItemQty, EnterItemItemQuantity);
-	
-	WebElement StoneWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtStoneWeight_txt']")));
-	
-	click(LoanClosureCash.StoneWeight);
-	
-	String EnterStoneWeight = testdata.get("Stone_Weight").toString();
-	input(LoanClosureCash.StoneWeight, EnterStoneWeight);
-
-	WebElement TickPurityCheckbox = driver.findElement(By.xpath("//input[@id ='JSF_Repeater1_ctl03_chkpuritytest']"));
-
-	click(LoanClosureCash.PurityTest);
-	
-	WebElement ItemWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemWeight_txt']")));
-	
-	click(LoanClosureCash.ItemWeight);
-	
-	String EnterItemWeight = testdata.get("Item_Weight").toString();
-	input(LoanClosureCash.ItemWeight, EnterItemWeight);
-	
-	WebElement DirtWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtDirtWeight_txt']")));
-	
-	click(LoanClosureCash.DirtWeight);
-	
-	String EnterDirtWeight = testdata.get("Dirt_Weight").toString();
-	input(LoanClosureCash.DirtWeight, EnterDirtWeight);
-	
-	WebElement EnterPurity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtPurity_txt']")));
-	
-	click(LoanClosureCash.EnterPurity);
-	
-	String EnterPurityDetail = testdata.get("Enter_Purity").toString();
-	input(LoanClosureCash.EnterPurity, EnterPurityDetail);
-	
-	// ✅ Click Add Button
 	WebElement AddDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_btnGoldAdd']")));
 	
 	if(ElementDisplayed(LoanClosureCash.AddBtn)){
@@ -1043,9 +637,6 @@ public boolean AddSecurityDetailsAdd(Map<Object, Object> testdata, ITestContext 
 	Assert.assertTrue(ElementDisplayed(LoanClosureCash.DirtWeight), "Validation Failed: Dirt Weight field is not visible.");
 	Assert.assertTrue(ElementDisplayed(LoanClosureCash.EnterPurity), "Validation Failed: Entered Purity field is not visible.");	
 	
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
-	
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Add button selected date is inseted into the grid");
 	Log.info("Expected Result: Add button selected date is inseted into the grid");
 	}
@@ -1059,78 +650,8 @@ public boolean CloseSecurityDetailsPopup(Map<Object, Object> testdata, ITestCont
 	
 	ExtentTestManager.startTest("TC:19 - Close Security Details Popup");
 	Log.info("TC:19 - Close Security Details Popup");
-	
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
-	
-	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("BANGLE");
-
-	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
-	
-	click(LoanClosureCash.ItemDesption);
-	
-	String EnterItemDescrption = testdata.get("Item_Description").toString();
-	input(LoanClosureCash.ItemDesption, EnterItemDescrption);
-	
-	WebElement ItemQuantity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemQty_txt']")));
-	
-	click(LoanClosureCash.ItemQty);
-	
-	String EnterItemItemQuantity = testdata.get("Item_Quantity").toString();
-	input(LoanClosureCash.ItemQty, EnterItemItemQuantity);
-	
-	WebElement StoneWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtStoneWeight_txt']")));
-	
-	click(LoanClosureCash.StoneWeight);
-	
-	String EnterStoneWeight = testdata.get("Stone_Weight").toString();
-	input(LoanClosureCash.StoneWeight, EnterStoneWeight);
-
-	WebElement TickPurityCheckbox = driver.findElement(By.xpath("//input[@id ='JSF_Repeater1_ctl03_chkpuritytest']"));
-
-	click(LoanClosureCash.PurityTest);
-	
-	WebElement ItemWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemWeight_txt']")));
-	
-	click(LoanClosureCash.ItemWeight);
-	
-	String EnterItemWeight = testdata.get("Item_Weight").toString();
-	input(LoanClosureCash.ItemWeight, EnterItemWeight);
-	
-	WebElement DirtWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtDirtWeight_txt']")));
-	
-	click(LoanClosureCash.DirtWeight);
-	
-	String EnterDirtWeight = testdata.get("Dirt_Weight").toString();
-	input(LoanClosureCash.DirtWeight, EnterDirtWeight);
-	
-	WebElement EnterPurity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtPurity_txt']")));
-	
-	click(LoanClosureCash.EnterPurity);
-	
-	String EnterPurityDetail = testdata.get("Enter_Purity").toString();
-	input(LoanClosureCash.EnterPurity, EnterPurityDetail);
-	
-	WebElement AddDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_btnGoldAdd']")));
-	
-	if(ElementDisplayed(LoanClosureCash.AddBtn)){
-	click(LoanClosureCash.AddBtn);
 	
 	 // ✅ Select Appraiser from Dropdown
 	WebElement AppraiserDropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
@@ -1148,136 +669,28 @@ public boolean CloseSecurityDetailsPopup(Map<Object, Object> testdata, ITestCont
 	String selectedAppraiserName = appraiserAfterSelection.getFirstSelectedOption().getText();
 
 	Assert.assertEquals(selectedAppraiserName, "DIVYA","Validation Failed: The selected Appraiser Name should not be 'DIVYA'.");
-
-	driver.close();
-	driver.switchTo().window(mainWindowHandle);
 	
     ExtentTestManager.getTest().log(Status.PASS, "Expected Result: appraiser selected");
     Log.info("Expected Result: appraiser selected");
-	}
+
     ExtentTestManager.endTest();
 	return true;
 
 }
 
-public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
+public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, StaleElementReferenceException{
 	
 	ExtentTestManager.startTest("TC:20 - Close Security Details Popup Submit");
 	Log.info("TC:20 - Close Security Details Popup Submit");
 	
-	click(LoanClosureCash.SecurityDetails);
-	
-	String mainWindowHandle = driver.getWindowHandle();
-	Set<String> allWindowHandles = driver.getWindowHandles();
-	boolean isPopupOpened = false;
-
-	for (String handle : allWindowHandles) {
-		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
-			isPopupOpened = true;
-			break;
-		}
-	}	
-	Assert.assertTrue(isPopupOpened, "Validation Failed: Security Details popup window did not open.");
-
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-	 // ✅ Select Item from Dropdown
-	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
-	
-	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("BANGLE");
-
-	// ✅ Enter Item Description
-	WebElement ItemDescription = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtJewelDescription_txt']")));
-	
-	click(LoanClosureCash.ItemDesption);
-	
-	String EnterItemDescrption = testdata.get("Item_Description").toString();
-	input(LoanClosureCash.ItemDesption, EnterItemDescrption);
-	
-	 // ✅ Enter Item Quantity
-	WebElement ItemQuantity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemQty_txt']")));
-	
-	click(LoanClosureCash.ItemQty);
-	
-	String EnterItemItemQuantity = testdata.get("Item_Quantity").toString();
-	input(LoanClosureCash.ItemQty, EnterItemItemQuantity);
-	
-	 // ✅ Enter Stone Weight
-	WebElement StoneWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtStoneWeight_txt']")));
-	
-	click(LoanClosureCash.StoneWeight);
-	
-	String EnterStoneWeight = testdata.get("Stone_Weight").toString();
-	input(LoanClosureCash.StoneWeight, EnterStoneWeight);
-
-	// ✅ Click Purity Test Checkbox
-	WebElement TickPurityCheckbox = driver.findElement(By.xpath("//input[@id ='JSF_Repeater1_ctl03_chkpuritytest']"));
-
-	click(LoanClosureCash.PurityTest);
-	
-	 // ✅ Enter Item Weight
-	WebElement ItemWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtItemWeight_txt']")));
-	
-	click(LoanClosureCash.ItemWeight);
-	
-	String EnterItemWeight = testdata.get("Item_Weight").toString();
-	input(LoanClosureCash.ItemWeight, EnterItemWeight);
-	
-	// ✅ Enter Dirt Weight
-	WebElement DirtWeight = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtDirtWeight_txt']")));
-	
-	click(LoanClosureCash.DirtWeight);
-	
-	String EnterDirtWeight = testdata.get("Dirt_Weight").toString();
-	input(LoanClosureCash.DirtWeight, EnterDirtWeight);
-	
-	// ✅ Enter Purity Details
-	WebElement EnterPurity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_txtPurity_txt']")));
-	
-	click(LoanClosureCash.EnterPurity);
-	
-	String EnterPurityDetail = testdata.get("Enter_Purity").toString();
-	input(LoanClosureCash.EnterPurity, EnterPurityDetail);
-	
-	// ✅ Click Add Button
-	WebElement AddDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='JSF_btnGoldAdd']")));
-	
-	Thread.sleep(2000);
-	if(ElementDisplayed(LoanClosureCash.AddBtn)){
-	click(LoanClosureCash.AddBtn);
-	
-	 // ✅ Select Appraiser from Dropdown
-	WebElement AppraiserDropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
-	  try {
-		  Select appraiser = new Select(AppraiserDropdown);
-		  appraiser.selectByVisibleText("DIVYA");
-	
-			WebElement AppraiserDropdownAfterSelection = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
-			Select appraiserAfterSelection = new Select(AppraiserDropdownAfterSelection);
-			String selectedAppraiserName = appraiserAfterSelection.getFirstSelectedOption().getText();
-			Log.info("Selected Appraiser: " + selectedAppraiserName);
-			
-	  } catch (StaleElementReferenceException e) {
-		  Log.info("Retrying due to StaleElementReferenceException...");
-		  
-		  AppraiserDropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
-		  Select appraiser = new Select(AppraiserDropdown);
-		    appraiser.selectByVisibleText("DIVYA");
-
-		    WebElement AppraiserDropdownAfterSelection = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']")));
-		    Select appraiserAfterSelection = new Select(AppraiserDropdownAfterSelection);
-		    String selectedAppraiserName = appraiserAfterSelection.getFirstSelectedOption().getText();
-		    Log.info("Retry Successful - Selected Appraiser: " + selectedAppraiserName);
-		}
-	  }
 	
 	// ✅ Click Submit Button
 	WebElement SubmitDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='btnSubmit']")));
 	
-	if(ElementDisplayed(LoanClosureCash.SubmitBtn)) {
+	if(ElementDisplayed(LoanClosureCash.SubmitBtn)){
 	click(LoanClosureCash.SubmitBtn);
-	   
+
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Submit' button");
 	Log.info("Step:01 - Click 'Submit' button");
 	
@@ -1287,11 +700,13 @@ public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITe
 		
     ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Security details popup window is closed");
     Log.info("Expected Result: Security details popup window is closed");
-	        }
+	
+	}
     ExtentTestManager.endTest();
 	return true;
 
 }
+
 
 public boolean EnterSanctionedAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 	

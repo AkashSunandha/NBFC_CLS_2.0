@@ -153,6 +153,29 @@ public class AllScenarios_Jewel_Loan_Transcharge_Transfer extends Base_Class {
 				//TC_31 ---> PostDebitPopUpSubmitDetails
 				loantranscharge.PostDebitPopUpSubmitDetails(testdata, context);
 				
+				//TC_32 ---> PostDebitSubmitAccountClosure
+				loantranscharge.PostDebitSubmitAccountClosure();
+				
+				//TC_33 ---> LogintoNBFcApplicationinadifferentuser
+				loantranscharge.LogintoNBFcApplicationinadifferentuser();
+				
+				//TC_34 ---> LogintoNBFcApplicationinadifferentuserAuthorizeandcancel
+				loantranscharge.LogintoNBFcApplicationinadifferentuserAuthorizeandcancel();
+				
+				//TC_35 ---> ManagerAuthorisationTransfer
+				loantranscharge.ManagerAuthorisationTransfer();
+				
+				//TC_36 ---> ManagerAuthorisationRefresh
+				loantranscharge.ManagerAuthorisationRefresh();
+				
+				//TC_37 ---> SelectManagerTransferTransaction
+				loantranscharge.SelectManagerTransferTransaction();
+				
+				//TC_38 ---> ManagerTransferAuthorization
+				loantranscharge.ManagerTransferAuthorization();
+				
+				
+				
 				
 								
 				// Sign out

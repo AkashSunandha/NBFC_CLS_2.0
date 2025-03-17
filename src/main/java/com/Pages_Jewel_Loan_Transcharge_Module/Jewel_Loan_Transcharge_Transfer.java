@@ -638,7 +638,7 @@ public boolean OpenAccountTransactions()throws InterruptedException {
     ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click go button");
     Log.info("Step:01 - Click go button");
     
-    click(LoanTranscharge.ClosePoup);
+    //click(LoanTranscharge.ClosePoup);
 
     WebElement Accountsummary = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[1]/table/tbody/tr[2]/td/div/table/tbody/tr/td/table")));
     
@@ -1350,6 +1350,213 @@ public boolean PostDebitPopUpSubmitDetails(Map<Object, Object> testdata, ITestCo
 	return true;
 
 }
+
+public boolean PostDebitSubmitAccountClosure() throws InterruptedException {
+	
+	ExtentTestManager.startTest("TC:32 - POST DEBIT popup is present");
+	Log.info("TC:32 - POST DEBIT popup is present");
+	
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+	WebElement SubmitDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnSubmit']")));
+	
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", SubmitDetails);
+	
+	if(ElementDisplayed(LoanTranscharge.SubmitButon)){
+	click(LoanTranscharge.SubmitButon);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the SUBMIT button in the transaction window");
+	Log.info("Step:01 - Click on the SUBMIT button in the transaction window");
+	
+	WebDriverWait waitForWindowClose = new WebDriverWait(driver, 10);
+    waitForWindowClose.until(ExpectedConditions.numberOfWindowsToBe(1));
+
+	int windowCount = driver.getWindowHandles().size();
+    Assert.assertEquals(windowCount, 1, "Validation Failed: Security Details popup window is still open.");
+			
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data gets successfully saved in the backend  ");
+	Log.info("Expected Result: Data gets successfully saved in the backend  ");
+	}
+	if(ElementDisplayed(LoanTranscharge.SummaryOperation)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary will be generated");
+		Log.info("Expected Result: Summary will be generated");
+		}
+	else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+	transIdTransferLoan = driver.findElement(LoanTranscharge.TransCashID).getText();
+	
+	ExtentTestManager.endTest();
+	return true;
+	
+	}
+
+public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedException, IOException{
+	
+		ExtentTestManager.startTest("TC:33 - Login to NBFc Application in a different user");
+		Log.info("TC:33 - Login to NBFc Application in a different user");
+		
+		ExtentTestManager.startTest("Logout");
+		Log.info("Logout");
+		
+		Thread.sleep(2000);
+		
+		click(LoanTranscharge.custSignOut);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on 'Signout'");
+		Log.info("Step:01 -  Click on 'Signout'");
+		
+		Assert.assertTrue(ElementDisplayed(LoanTranscharge.loginButton), "Validation Failed: User is not logged out successfully.");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
+		Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
+		
+		String UserName1 = configloader().getProperty("UserName1");
+		input(LoanTranscharge.loginUserName, UserName1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
+		Log.info("Step:01 - Enetered valid User Name");
+				
+		String Password1 = configloader().getProperty("Password1");
+		input(LoanTranscharge.loginPasswrd, Password1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");
+		Log.info("Step:02 - Enter valid Password");
+	
+		click(LoanTranscharge.loginButton);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Login as another user.");
+		Log.info("Step:01 - Login as another user.");
+		
+		Assert.assertTrue(ElementDisplayed(LoanTranscharge.home), "Validation Failed: 'Home' button is not displayed.");
+
+		ExtentTestManager.getTest().log(Status.PASS,"Expected Result: User is logged in successfully and dashboard visible");
+		Log.info("Expected Result: User is logged in successfully and dashboard visible");				
+				
+		ExtentTestManager.endTest();
+		return true;		
+}
+
+public boolean LogintoNBFcApplicationinadifferentuserAuthorizeandcancel() throws InterruptedException, IOException{
+	
+	ExtentTestManager.startTest("TC:34 - Login to NBFc Application in a different user");
+	Log.info("TC:34 - Login to NBFc Application in a different user");
+	
+	WebElement CashMode = driver.findElement(LoanTranscharge.AuthorizeCancel);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", CashMode);
+	
+	Assert.assertTrue(ElementDisplayed(LoanTranscharge.AuthorizeCancel), "Validation Failed: 'Authorize & Cancel' option is not displayed.");
+	
+	click(LoanTranscharge.AuthorizeCancel);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to AUTHORISE and Cancel in the menu");
+	Log.info("Step:01 - Navigate to AUTHORISE and Cancel in the menu");
+	
+	click(LoanTranscharge.ManagerAuthorization);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select the Manager Authorisation window.");
+	Log.info("Step:02 - Select the Manager Authorisation window.");
+	
+	Assert.assertTrue(ElementDisplayed(LoanTranscharge.ManagerAuthorization), "Validation Failed: Manager Authorisation window did not open.");
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result:  Manager Authorisation window opened successfully");
+	Log.info("Expected Result:  Manager Authorisation window opened successfully");
+
+ExtentTestManager.endTest();
+return true;
+
+}
+
+public boolean ManagerAuthorisationTransfer() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:35 - Login to NBFc Application in a different user");
+	Log.info("TC:35 - Login to NBFc Application in a different user");
+	
+	click(LoanTranscharge.TransferTab);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the  TRANSFER  tab");
+	Log.info("Step:01 - Click on the  TRANSFER  tab");
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+    boolean isDisplayed = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id ='__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer']"))).isDisplayed();
+	
+    Assert.assertTrue(isDisplayed, "Validation Failed: Authorisation pending transaction is not displayed after refreshing.");
+
+    ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Moved to TRANSFER  tab  ");
+	Log.info("Expected Result: Moved to TRANSFER  tab");
+		
+	ExtentTestManager.endTest();
+	return true;
+}
+
+
+public boolean ManagerAuthorisationRefresh() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:36 - Login to NBFc Application in a different user");
+	Log.info("TC:36 - Login to NBFc Application in a different user");
+	
+	click(LoanTranscharge.Refresh);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Refresh button");
+	Log.info("Step:01 - Click on the Refresh button");
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+    boolean isDisplayed = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnRefresh']"))).isDisplayed();
+	
+    Assert.assertTrue(isDisplayed, "Validation Failed: Authorisation pending transaction is not displayed after refreshing.");
+
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Authorisation pending transaction gets displayed ");
+	Log.info("Expected Result: Authorisation pending transaction gets displayed ");
+		
+	ExtentTestManager.endTest();
+	return true;
+}
+
+public boolean SelectManagerTransferTransaction() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:37 - Login to NBFc Application in a different user");
+	Log.info("TC:37 - Login to NBFc Application in a different user");
+	
+	System.out.println("transIdTransferLoan "+transIdTransferLoan);
+	FetchwithTransID(transIdTransferLoan);
+	
+    WebElement checkbox = driver.findElement(LoanTranscharge.ManagerSelectCheckbox);
+	
+	if(ElementDisplayed(LoanTranscharge.ManagerSelectCheckbox)) {
+	click(LoanTranscharge.ManagerSelectCheckbox);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select the transaction to authorise");
+	Log.info("Step:01 - Select the transaction to authorise");
+	
+    Assert.assertTrue(checkbox.isSelected(), "Validation Failed: 'Checkbox' is not selected.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: transaction to authorise is selected");
+	Log.info("Expected Result: transaction to authorise is selected");		
+}	
+	ExtentTestManager.endTest();
+	return true;	
+}
+
+public boolean ManagerTransferAuthorization() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:38 - Login to NBFc Application in a different user");
+	Log.info("TC:38 - Login to NBFc Application in a different user");
+	
+	if(ElementDisplayed(LoanTranscharge.ManagerAuthorize)) {
+	click(LoanTranscharge.ManagerAuthorize);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Authorize button");
+	Log.info("Step:01 - Click on the Authorize button");
+	
+	Assert.assertTrue(ElementDisplayed(LoanTranscharge.ManagerAuthorize), "Validation Failed: 'Authorize' button is not Clicked.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction gets authorised");
+	Log.info("Expected Result: Transaction gets authorised");	
+	
+	click(LoanTranscharge.ClosePopup);
+}
+	ExtentTestManager.endTest();
+	return true;	
+}
+
+
+
 	
 		
 	private WebElement visibilityOfElementLocated(By xpath) {

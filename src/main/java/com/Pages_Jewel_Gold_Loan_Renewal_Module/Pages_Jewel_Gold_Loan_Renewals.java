@@ -51,7 +51,7 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By AddBtn = By.xpath("//input[@id ='JSF_btnGoldAdd']");
 		public By Appraiser = By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']");
 		public By SubmitBtn = By.xpath("//input[@id ='btnSubmit']");
-		public By SanctionedAmount = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstLoanDetails_ctrl0_LDF_txtSactAmt_txt']");
+		public By SanctionedAmount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstLoanDetails_ctrl0_LDF_txtSactAmt_txt']");
 		public By GetValues = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstLoanDetails_ctrl0_LDF_btnGetROI']");
 		public By TransModeCash = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstApproval_ctrl0_ucClosureApproval_ddlTransactionMode_ddl']");
 		public By PayAmount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstLoanDetails_ctrl0_LDF_txtPayAmount_txt']");
