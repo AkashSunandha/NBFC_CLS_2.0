@@ -653,7 +653,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	}//end
 	
 	
-	public void transModeCash() throws InterruptedException {
+	public void transModeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		
 		//Select Transaction Mode
 		ExtentTestManager.startTest("Select Transaction Mode");
@@ -666,6 +666,22 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction mode 'Cash' is selected.");
 		Log.info("Expected Result: Transaction mode 'Cash' is selected.");
 		
+		ExtentTestManager.endTest();
+		
+		
+		
+		//Enter Remark 
+		ExtentTestManager.startTest("Enter Remark ");
+		Log.info("Enter Remark ");
+		
+		String reamrk = testdata.get("remark").toString();
+		input(transJewelRepo.tdRemarkTxtBox, reamrk);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter a remark in the input field.");
+		Log.info("Step:01 - Enter a remark in the input field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Remark   accepted.");
+		Log.info("Expected Result: Remark   accepted.");
+
 		ExtentTestManager.endTest();
 		
 		

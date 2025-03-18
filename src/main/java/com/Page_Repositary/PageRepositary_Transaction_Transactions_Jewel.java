@@ -16,6 +16,7 @@ public class PageRepositary_Transaction_Transactions_Jewel extends Base_Class{
 	public By aiAccNumTxtBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_txtAcNo_txt\"]");
 	public By aiTransTypeDropdwon = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlTrnType_ddl\"]");
 	public By aiGoBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_btnGo\"]");
+	public By actualBranch = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlBranch\"]/option[@selected='selected']");
 	
 	//Transaction Details
 	public By tdTransactionDetailsWindow = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_SectionCaption2_lblCaption\"]");

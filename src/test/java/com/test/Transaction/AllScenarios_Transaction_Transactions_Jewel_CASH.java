@@ -42,7 +42,7 @@ public class AllScenarios_Transaction_Transactions_Jewel_CASH {
 	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest("Transaction_Transactions_Jewel_CASH");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
@@ -60,7 +60,7 @@ public class AllScenarios_Transaction_Transactions_Jewel_CASH {
 				
 				transJewel.accountInfo(testdata, context);
 
-				transJewel.transModeCash();
+				transJewel.transModeCash(testdata, context);
 
 				transJewel.authorizeCash(testdata, context);
 

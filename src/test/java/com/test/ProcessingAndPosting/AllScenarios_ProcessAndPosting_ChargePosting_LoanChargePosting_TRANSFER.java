@@ -41,7 +41,7 @@ public class AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRAN
 	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest("ChargePosting_LoanChargePosting_TRANSFER");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
@@ -58,6 +58,16 @@ public class AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRAN
 				loanChrgMths.navigateToLoanChargePosting();
 				
 				loanChrgMths.loanChargePosting(testdata, context);
+
+				loanChrgMths.transaction(testdata, context);
+				
+				loanChrgMths.selectTransModeAsTransfer();
+				
+				loanChrgMths.postCreditPopUpEntry(testdata, context);
+				
+				loanChrgMths.submitTrans(testdata, context);
+
+				loanChrgMths.authorizeTransfer(testdata, context);
 
 				custSrchMthds.logout();
 

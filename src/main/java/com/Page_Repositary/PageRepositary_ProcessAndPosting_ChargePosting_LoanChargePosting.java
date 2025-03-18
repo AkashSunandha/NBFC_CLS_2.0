@@ -29,9 +29,8 @@ public class PageRepositary_ProcessAndPosting_ChargePosting_LoanChargePosting {
 	public By randomTxt = By.xpath("//td[contains(text(),'Charge Type')]");
 	public By addChargesGrid = By.xpath("//*[@id=\"AddCharges\"]");
 	public By topPopUpCloseBtn = By.xpath("//*[@id=\"closetop\"]");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
+	public By noticeTxtBox1 = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionRecoveryDue_txtDue6\"]");
+	public By addChargesGridAmtValue = By.xpath("//*[@id=\"ctl00_CPH1_lstAddCharges_ctrl0_lblAmount\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");

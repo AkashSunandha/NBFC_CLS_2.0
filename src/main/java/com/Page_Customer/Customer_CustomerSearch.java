@@ -30,7 +30,8 @@ public class Customer_CustomerSearch extends Base_Class{
 	com.Utility.ExcelReader ExcelReader = new com.Utility.ExcelReader("Customer_CustSearch");
 	Base_Class Base_Class= new Base_Class();
 	Customer_QuickCustomer quickCust = new Customer_QuickCustomer(); 
-	
+	public String actualUserName;
+
 	
 	
 	public static  String generateCustId() throws ClassNotFoundException {
@@ -204,7 +205,6 @@ public class Customer_CustomerSearch extends Base_Class{
 			
 			
 					String UserName = configloader().getProperty("UserName");
-//					String loginUserName = testdata.get("loginUserName").toString();
 					input(custSearch.loginUserName,UserName );
 					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");
 					Log.info("Step:01 - Enetered valid User Name");
@@ -257,7 +257,8 @@ public class Customer_CustomerSearch extends Base_Class{
 //					Log.info("Expected Result: User is logged in successfully and dashboard visible");
 					
 		ExtentTestManager.endTest();
-
+						actualUserName = driver.findElement(custSearch.actualUserName).getText();
+						System.out.println("actualUserName: "+actualUserName);
 		return true;
 	}
 	
