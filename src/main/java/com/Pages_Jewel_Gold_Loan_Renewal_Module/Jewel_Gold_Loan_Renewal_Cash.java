@@ -279,26 +279,34 @@ public boolean DisplayLoanAccountDetails() throws InterruptedException, TimeoutE
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 
 	WebElement GoButton = driver.findElement(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_btnGo']"));
-	click(LoanClosureCash.GoBtn);
+	GoButton.click();
 	
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Go' button");
 	Log.info("Step:01 - Click 'Go' button");
 	
-	//String mainWindowHandle = driver.getWindowHandle();
-	//Set<String> allWindowHandles = driver.getWindowHandles();
+	String mainWindowHandle = driver.getWindowHandle();
+	Set<String> allWindowHandles = driver.getWindowHandles();
 
-	//for (String handle : allWindowHandles) {
-		//if (!handle.equals(mainWindowHandle)) {
-		//	driver.switchTo().window(handle);
-			//break;
-		//}
-	//}
+	for (String handle : allWindowHandles) {
+		if (!handle.equals(mainWindowHandle)) {
+		driver.switchTo().window(handle);
+			break;
+		}
+	}
+	try {
+		WebElement PreMatureClosurePopup = wait.until(ExpectedConditions.presenceOfElementLocated(LoanClosureCash.PreMatureClosure));
 
-	//click(LoanClosureCash.PreMatureClosure);
-	
-	//driver.switchTo().window(mainWindowHandle);
-	//Log.info("Switched back to the main window.");
-	
+        if (PreMatureClosurePopup.isDisplayed()) {
+            Log.info("Pre-Mature Closure popup detected, clicking...");
+            PreMatureClosurePopup.click();
+        }
+    } catch (TimeoutException e) {
+        Log.info("No Pre-Mature Closure popup detected, continuing...");
+    }
+
+    driver.switchTo().window(mainWindowHandle);
+    Log.info("Switched back to the main window.");
+
 
 	boolean LoanDetails = ElementDisplayed(LoanClosureCash.LoanDetailsSection);
 

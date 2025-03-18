@@ -31,8 +31,8 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By ProductName = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlProduct_ddl']");
 		public By AccountNumber = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_txtAcNo_txt']");
 		public By GoBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_btnGo']");
-		public By LoanDetailsSection= By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[7]/div/div[2]/table/tbody/tr[2]/td/table");
-		public By LoanDetailSection= By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[6]/div/div[4]/table");
+		public By LoanDetailsSection= By.xpath("//div[@id ='ctl00_ctl00_CPH1_PRDCNT_divRec']");
+		public By LoanDetailSection= By.xpath("//div[@id ='ctl00_ctl00_CPH1_PRDCNT_divRec']");
 
 		public By PreMatureClosure = By.xpath("/html/body/form/div[12]/div[3]/div/button[1]/span");
 		public By RenewAccount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucLoanClosure_chkRenewLoanAccount']");

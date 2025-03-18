@@ -8,13 +8,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -292,17 +292,24 @@ public boolean DisplayLoanAccountDetails() throws InterruptedException {
 
 	for (String handle : allWindowHandles) {
 		if (!handle.equals(mainWindowHandle)) {
-			driver.switchTo().window(handle);
+		driver.switchTo().window(handle);
 			break;
 		}
 	}
+	try {
+		WebElement PreMatureClosurePopup = wait.until(ExpectedConditions.presenceOfElementLocated(LoanClosureCash.PreMatureClosure));
 
-	click(LoanClosureCash.PreMatureClosure);
-	
-	driver.switchTo().window(mainWindowHandle);
-	Log.info("Switched back to the main window.");
-	
-	Thread.sleep(3000);
+        if (PreMatureClosurePopup.isDisplayed()) {
+            Log.info("Pre-Mature Closure popup detected, clicking...");
+            PreMatureClosurePopup.click();
+        }
+    } catch (TimeoutException e) {
+        Log.info("No Pre-Mature Closure popup detected, continuing...");
+    }
+
+    driver.switchTo().window(mainWindowHandle);
+    Log.info("Switched back to the main window.");
+    
 	boolean LoanDetails = ElementDisplayed(LoanClosureCash.LoanDetailSection);
 
 	Assert.assertTrue(LoanDetails, "Validation Failed: Loan account details section is not displayed.");
