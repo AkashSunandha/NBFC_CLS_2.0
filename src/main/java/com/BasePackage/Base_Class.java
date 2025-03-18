@@ -136,7 +136,9 @@ public class Base_Class {
 		Thread.sleep(2000);
 	}
 
-	public static void select(String value, By element) {
+	public static void select(String value, By element) throws InterruptedException {
+		Thread.sleep(2000);
+
 		WebDriverWait wait = new WebDriverWait(driver, 120);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		Select selWeekDayDropDown = new Select(driver.findElement(element));

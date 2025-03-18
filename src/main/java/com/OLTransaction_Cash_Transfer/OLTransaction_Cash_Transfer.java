@@ -8,6 +8,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -115,56 +120,53 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 	public void Accountnumber(Map<Object, Object> testdata, ITestContext context)
 
 			throws ClassNotFoundException, InterruptedException {
-			String valueAccNum = generateUniqueCode(sp, columnName);
-			String AccNum = valueAccNum.substring(valueAccNum.length() - 4);
-			input(OLtrans.transaccount, AccNum);
+		String valueAccNum = generateUniqueCode(sp, columnName);
+		String AccNum = valueAccNum.substring(valueAccNum.length() - 4);
+		input(OLtrans.transaccount, AccNum);
 
-			ExtentTestManager.startTest("Enter Loan Account Number");
-			Log.info("Enter Loan Account Number");
-			
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Account number is entered correctly..");
-			Log.info("Expected Result:Account number is entered correctly...");
-			ExtentTestManager.endTest();
+		ExtentTestManager.startTest("Enter Loan Account Number");
+		Log.info("Enter Loan Account Number");
 
-			ExtentTestManager.startTest("Select Transaction Type CREDIT");
-			Log.info("Select Transaction Type CREDIT");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Account number is entered correctly..");
+		Log.info("Expected Result:Account number is entered correctly...");
+		ExtentTestManager.endTest();
 
-			select("Credit", OLtrans.selectcredit);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01- Select transtype 'CREDIT'.");
-			Log.info("Step:1-Select transtype 'CREDIT'.");
+		ExtentTestManager.startTest("Select Transaction Type CREDIT");
+		Log.info("Select Transaction Type CREDIT");
 
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:'CREDIT' transaction type is selected...");
-			Log.info("Expected Result:'CREDIT' transaction type is selected...");
-			ExtentTestManager.endTest();
+		select("Credit", OLtrans.selectcredit);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01- Select transtype 'CREDIT'.");
+		Log.info("Step:1-Select transtype 'CREDIT'.");
 
-			ExtentTestManager.startTest("GO Button Interaction");
-			Log.info("GO Button Interaction");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:'CREDIT' transaction type is selected...");
+		Log.info("Expected Result:'CREDIT' transaction type is selected...");
+		ExtentTestManager.endTest();
 
-			click(OLtrans.clickGoo);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click on Go button");
-			Log.info("Step:01 -Click on Go button");
+		ExtentTestManager.startTest("GO Button Interaction");
+		Log.info("GO Button Interaction");
 
-			ExtentTestManager.getTest().log(Status.PASS,
-					"Expected Result:Transaction details are loaded successfully.");
-			Log.info("Expected Result:Transaction details are loaded successfully.");
-			ExtentTestManager.endTest();
+		click(OLtrans.clickGoo);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click on Go button");
+		Log.info("Step:01 -Click on Go button");
 
-			ExtentTestManager.startTest("Enter Transaction Amount");
-			Log.info("Enter Transaction Amount");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Transaction details are loaded successfully.");
+		Log.info("Expected Result:Transaction details are loaded successfully.");
+		ExtentTestManager.endTest();
 
-			click(OLtrans.transamount);
-			String Transferamount = testdata.get("Transferamount").toString();
-			input(OLtrans.transamount, Transferamount);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01-Enter an amount figure in the Trans. amount field.");
-			Log.info("Step:01-Enter an amount figure in the Trans. amount field.");
+		ExtentTestManager.startTest("Enter Transaction Amount");
+		Log.info("Enter Transaction Amount");
 
-			ExtentTestManager.getTest().log(Status.PASS,
-					"Expected Result:Amount is entered successfully without errors..");
-			Log.info("Expected Result:Amount is entered successfully without errors..");
-			ExtentTestManager.endTest();
+		click(OLtrans.transamount);
+		String Transferamount = testdata.get("Transferamount").toString();
+		input(OLtrans.transamount, Transferamount);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01-Enter an amount figure in the Trans. amount field.");
+		Log.info("Step:01-Enter an amount figure in the Trans. amount field.");
 
-		}
-	
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Amount is entered successfully without errors..");
+		Log.info("Expected Result:Amount is entered successfully without errors..");
+		ExtentTestManager.endTest();
+
+	}
 
 	public void SelectCASH() throws InterruptedException {
 
@@ -216,9 +218,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1.Click on the PRINT button..");
 		Log.info("Step:01 - Click on the PRINT button..");
 
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Voucher is generated and printed.");
-		Log.info("Expected Result:Voucher is generated and printed.");
-		ExtentTestManager.endTest();
+		Thread.sleep(5000);
 
 		// Navigate to Pop Up Window
 		String mainWindowHandle = driver.getWindowHandle();
@@ -228,7 +228,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 				driver.switchTo().window(handle);
 				driver.manage().window().maximize();
 				popupAppeared = true;
-
+				// Thread.sleep(5000);
 				String currentUrl = driver.getCurrentUrl();
 				System.out.println("currentUrl: " + currentUrl);
 				if (currentUrl.endsWith(".pdf")) {

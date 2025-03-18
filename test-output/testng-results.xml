@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-14T09:17:57 IST" name="Default suite" finished-at="2025-03-14T09:22:02 IST" duration-ms="244874">
+  <suite started-at="2025-03-18T10:29:56 IST" name="Default suite" finished-at="2025-03-18T10:34:43 IST" duration-ms="287063">
     <groups>
     </groups>
-    <test started-at="2025-03-14T09:17:57 IST" name="Default test" finished-at="2025-03-14T09:22:02 IST" duration-ms="244874">
-      <class name="com.test.OLTransaction.AllScenario_OLTransaction_Cash_Transfer">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.OLTransaction.AllScenario_OLTransaction_Cash_Transfer@781f10f2]" started-at="2025-03-14T09:17:57 IST" name="reference" finished-at="2025-03-14T09:17:57 IST" duration-ms="8" status="PASS">
+    <test started-at="2025-03-18T10:29:56 IST" name="Default test" finished-at="2025-03-18T10:34:43 IST" duration-ms="287063">
+      <class name="com.test.OLTransaction.AllScenario_OL_Transaction_Closure_Cash_Transfer">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.OLTransaction.AllScenario_OL_Transaction_Closure_Cash_Transfer@2e9fda69]" started-at="2025-03-18T10:29:56 IST" name="reference" finished-at="2025-03-18T10:29:56 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.OLTransaction.AllScenario_OLTransaction_Cash_Transfer@781f10f2]" started-at="2025-03-14T09:17:58 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-14T09:22:02 IST" duration-ms="244214" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.OLTransaction.AllScenario_OL_Transaction_Closure_Cash_Transfer@2e9fda69]" started-at="2025-03-18T10:29:56 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-18T10:34:43 IST" duration-ms="286268" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,14 +20,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@7df60067]]>
+                <![CDATA[org.testng.TestRunner@529cfee5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newCustomer -->
-      </class> <!-- com.test.OLTransaction.AllScenario_OLTransaction_Cash_Transfer -->
+      </class> <!-- com.test.OLTransaction.AllScenario_OL_Transaction_Closure_Cash_Transfer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
