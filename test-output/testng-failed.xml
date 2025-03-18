@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.AccountOpening.AllScenarios_AccOpn_DepoOpn_FixedDepo_BondCumulative_CASH">
+      <class name="com.test.user.TimesheetModule.AllScenarios_TimesheetListModule">
         <methods>
           <include name="reference"/>
-          <include name="newCustomer"/>
+          <include name="RUNALL" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.AccountOpening.AllScenarios_AccOpn_DepoOpn_FixedDepo_BondCumulative_CASH -->
+      </class> <!-- com.test.user.TimesheetModule.AllScenarios_TimesheetListModule -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
