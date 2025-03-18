@@ -37,7 +37,7 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By PreMatureClosure = By.xpath("/html/body/form/div[12]/div[3]/div/button[1]/span");
 		public By RenewAccount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucLoanClosure_chkRenewLoanAccount']");
 		public By RenewAccountDetails = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[7]/div/div[4]/div[1]/table");
-		public By RenewAccountDetail = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[6]/div/div[4]/div[1]/table");
+		public By RenewAccountDetail = By.xpath("//div[@id ='ctl00_ctl00_CPH1_PRDCNT_divLoanRenewalDetails']");
 		public By SecurityDetails = By.xpath("//input[@id ='btnSecurityDetails']");
 		public By ItemGroup = By.xpath("//select[@id ='JSF_ddlItemGroup_ddl']");
 		public By ItemName = By.xpath("//select[@id = 'JSF_ddlItems_ddl']");
@@ -52,6 +52,7 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By Appraiser = By.xpath("//select[@id = 'JSF_rdlAppraiser_ddl']");
 		public By SubmitBtn = By.xpath("//input[@id ='btnSubmit']");
 		public By SanctionedAmount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstLoanDetails_ctrl0_LDF_txtSactAmt_txt']");
+		public By WarningPopup = By.xpath("//input[@id = 'closewarning']");
 		public By GetValues = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstLoanDetails_ctrl0_LDF_btnGetROI']");
 		public By TransModeCash = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstApproval_ctrl0_ucClosureApproval_ddlTransactionMode_ddl']");
 		public By PayAmount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstLoanDetails_ctrl0_LDF_txtPayAmount_txt']");
