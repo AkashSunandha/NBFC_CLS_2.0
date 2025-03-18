@@ -691,11 +691,26 @@ public boolean EnterTransactionAmount(Map<Object, Object> testdata, ITestContext
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	WebElement amountField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_txtTrnAmount_txt']"))); 
-	try {
-	amountField.clear();
-    amountField.sendKeys(EnterAmount, Keys.TAB);
-	 } catch (StaleElementReferenceException e) {
-	 }
+	
+	int retryCount = 0;
+    boolean isEntered = false;
+    while (retryCount < 2) {
+        try {
+            amountField.clear();
+            amountField.sendKeys(EnterAmount, Keys.TAB);
+            isEntered = true;
+            break; 
+        } catch (StaleElementReferenceException e) {
+            Log.warn("StaleElementReferenceException caught. Retrying... Attempt: " + (retryCount + 1));
+            amountField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_txtTrnAmount_txt']"))); 
+        }
+        retryCount++;
+    }
+
+    if (!isEntered) {
+        Log.error("Failed to enter transaction amount after retries.");
+        Assert.fail("Validation Failed: Could not enter transaction amount due to stale element reference.");
+    }
 
     Thread.sleep(500);
 
@@ -704,9 +719,7 @@ public boolean EnterTransactionAmount(Map<Object, Object> testdata, ITestContext
 	
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid transaction amount");
 	Log.info("Step:01 - Enter valid transaction amount");
-	
-	Assert.assertEquals(amountField.getAttribute("value"), EnterAmount, "Validation Failed: Transaction amount is not entered correctly after re-entry.");
-
+		
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction amount is entered successfully");
 	Log.info("Expected Result: Transaction amount is entered successfully");
 

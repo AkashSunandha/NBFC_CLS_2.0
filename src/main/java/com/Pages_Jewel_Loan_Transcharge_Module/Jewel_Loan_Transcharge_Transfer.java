@@ -697,21 +697,27 @@ public boolean EnterTransactionAmount(Map<Object, Object> testdata, ITestContext
     By amountFieldLocator = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_txtTrnAmount_txt']");
 
 	WebElement amountField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_txtTrnAmount_txt']"))); 
-	 boolean isEntered = false;
-	 int attempts = 0;
-	 
-	 while (!isEntered && attempts < 3) {
 	
-	try {
-		 amountField = wait.until(ExpectedConditions.elementToBeClickable(amountFieldLocator));
-         amountField.clear();
-         amountField.sendKeys(EnterAmount, Keys.TAB);
-         isEntered = true;
-     } catch (StaleElementReferenceException e) {
-         Log.warn("StaleElementReferenceException caught, retrying attempt " + (attempts + 1));
-         attempts++;
-     }
- }
+	int retryCount = 0;
+    boolean isEntered = false;
+    while (retryCount < 2) {
+        try {
+            amountField.clear();
+            amountField.sendKeys(EnterAmount, Keys.TAB);
+            isEntered = true;
+            break; 
+        } catch (StaleElementReferenceException e) {
+            Log.warn("StaleElementReferenceException caught. Retrying... Attempt: " + (retryCount + 1));
+            amountField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_txtTrnAmount_txt']"))); 
+        }
+        retryCount++;
+    }
+
+    if (!isEntered) {
+        Log.error("Failed to enter transaction amount after retries.");
+        Assert.fail("Validation Failed: Could not enter transaction amount due to stale element reference.");
+    }
+
     Thread.sleep(500);
     
     amountField = wait.until(ExpectedConditions.visibilityOfElementLocated(amountFieldLocator));
