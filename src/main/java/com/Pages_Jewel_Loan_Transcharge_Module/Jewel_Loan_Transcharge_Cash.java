@@ -634,7 +634,17 @@ public boolean OpenAccountTransactions()throws InterruptedException {
     ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click go button");
     Log.info("Step:01 - Click go button");
     
-    click(TranschargeCash.ClosePoup);
+    try {
+   	 WebElement closePopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='closewarning']")));
+        if (closePopup.isDisplayed()) {
+            closePopup.click();
+            ExtentTestManager.getTest().log(Status.PASS, "Popup was displayed and closed.");
+            Log.info("Popup was displayed and closed.");
+        }
+    } catch (Exception e) {
+        ExtentTestManager.getTest().log(Status.INFO, "No popup displayed, continuing...");
+        Log.info("No popup displayed, continuing...");
+    }
 
     WebElement Accountsummary = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[1]/table/tbody/tr[2]/td/div/table/tbody/tr/td/table")));
     
