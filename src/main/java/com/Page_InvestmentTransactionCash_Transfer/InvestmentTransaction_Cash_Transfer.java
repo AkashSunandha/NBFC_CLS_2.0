@@ -38,6 +38,9 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 
 	String transId;
 	String lastValue;
+	public String sp = "GetJewelloanAccountnumber";
+	public String columnName = "Acno";
+
 
 	public void fetchWithTransId(String transId) throws InterruptedException {
 		input(goaldLoanRepo.transIdTxtBox,transId);
@@ -106,12 +109,12 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		ExtentSuccessMessage( "Step:01 -  Choose 'HDFC BANK - HDFC' for Select Bank.");
 		Log.info("Step:01 -  Choose 'HDFC BANK - HDFC' for Select Bank");
 		ExtentTestManager.endTest();
-//		Thread.sleep(3000);
+		//		Thread.sleep(3000);
 	}
 	public void SelectBranchDD() throws InterruptedException {
 		ExtentTestManager.startTest("Select Branch");
 		Log.info("Select Branch");
-//		Thread.sleep(5000);
+		//		Thread.sleep(5000);
 		click(InvestmentTransaction.ProductName);
 		click(InvestmentTransaction.SelectBranchDDValue);
 		ExtentSuccessMessage( "Step:01 -  Choose 'Cherpulassery' for Select Branch.");
@@ -134,7 +137,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		ExtentTestManager.endTest();
 	}
 	public void SelectTransactionModeDD(String Value) throws InterruptedException {
-//		Thread.sleep(3000);
+		//		Thread.sleep(3000);
 		ExtentTestManager.startTest("Select Transaction Mode");
 		Log.info("Select Transaction Mode");
 		select(Value,InvestmentTransaction.TransactionModeDD);
@@ -298,9 +301,9 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		ClickonAuthorize_And_Cancel_Tab();
 		ClickONManagerAuthorisation();
 	}
-	
+
 	public void ClickONManagerAuthorisation() throws InterruptedException {
-//		ExtentTestManager.startTest("Navigate Manager Authorisation ");
+		//		ExtentTestManager.startTest("Navigate Manager Authorisation ");
 		click(InvestmentTransaction.ManagerAuthorisation);
 		ExtentSuccessMessage("Step:01 -  Click on Manager Authorize ");
 		Log.info("Step:01 -  Click on Manager Authorize ");
@@ -314,6 +317,16 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		ExtentSuccessMessage( "Step:01 -  Click on POst Debit Button");
 		Log.info("Step:01 -  Click on POst Debit Button");
 		ExtentTestManager.endTest();
+	}	
+
+	public void CheckPostDebitButton() throws InterruptedException {
+		if(ElementDisplayed(InvestmentTransaction.POstDebit)) { 
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup window will be closed.");
+			Log.info("Expected Result: Popup window will be closed");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
 	}	
 
 	public void ClickonAddButton() throws InterruptedException {
@@ -377,17 +390,17 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 				}
 
 				ExtentTestManager.endTest();
-								
+
 			}
 		}
-		
+
 		SelectTransactionBasedDropdown();
 		SelectGL_NAMEDropdown();
 		EnterAmount(testdata);
 		ClickonAddButton();
 		ClickonSubmit_TransactionButton();
-		
-		
+
+
 		driver.switchTo().window(mainWindowHandle);
 	}
 
@@ -399,8 +412,10 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		ExtentTestManager.endTest();
 	}	
 
-	
+
+	////////////////////////////////////////////////////////////////////
 
 
 
-	}
+
+}
