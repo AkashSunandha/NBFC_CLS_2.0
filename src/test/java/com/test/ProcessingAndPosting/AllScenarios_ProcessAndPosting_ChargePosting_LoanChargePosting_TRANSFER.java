@@ -1,4 +1,4 @@
-package com.test.Transaction;
+package com.test.ProcessingAndPosting;
 
 import java.io.IOException;
 import java.util.Map;
@@ -9,14 +9,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
-import com.Page_Transaction.Transaction_Transactions_Jewel;
+import com.Page_ProcessingAndPosting.ChargePosting_LoanChargePosting;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_Transaction_Transactions_Jewel_TRANSFER {
+public class AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRANSFER {
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -24,13 +24,12 @@ public class AllScenarios_Transaction_Transactions_Jewel_TRANSFER {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	Transaction_Transactions_Jewel transJewel = new Transaction_Transactions_Jewel();
-	
+	ChargePosting_LoanChargePosting loanChrgMths = new ChargePosting_LoanChargePosting();
 	
 	
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("Transactions_Jewel");
+		ExcelReader = new com.Utility.ExcelReader("LoanChargePosting");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -42,7 +41,7 @@ public class AllScenarios_Transaction_Transactions_Jewel_TRANSFER {
 	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("Transaction_Transactions_Jewel_TRANSFER");
+				ExtentTestManager.startTest("ChargePosting_LoanChargePosting_TRANSFER");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
@@ -56,15 +55,20 @@ public class AllScenarios_Transaction_Transactions_Jewel_TRANSFER {
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
-				transJewel.transactionsJewel();
+				loanChrgMths.navigateToLoanChargePosting();
 				
-				transJewel.accountInfo(testdata, context);
+				loanChrgMths.loanChargePosting(testdata, context);
 
-				transJewel.transModeTransfer(testdata, context);
-
-				transJewel.authorizeTransfer(testdata, context);
-
+				loanChrgMths.transaction(testdata, context);
 				
+				loanChrgMths.selectTransModeAsTransfer();
+				
+				loanChrgMths.postCreditPopUpEntry(testdata, context);
+				
+				loanChrgMths.submitTrans(testdata, context);
+
+				loanChrgMths.authorizeTransfer(testdata, context);
+
 				custSrchMthds.logout();
 
 				

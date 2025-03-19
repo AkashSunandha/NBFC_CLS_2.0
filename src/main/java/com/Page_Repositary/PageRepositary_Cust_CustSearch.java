@@ -22,7 +22,7 @@ public class PageRepositary_Cust_CustSearch {
 	public By home = By.xpath("//div[text()='Dashboard']");
 	public By loginWarningOkBtn = By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]");
 	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
-//	public By variable = By.xpath("");
+	public By actualUserName = By.xpath("//*[@id=\"ctl00_ctl00_lblUser\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");

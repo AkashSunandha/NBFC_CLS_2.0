@@ -9,6 +9,10 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import com.Utility.Log;
@@ -165,7 +169,7 @@ public class Base_Class {
 		driver.switchTo().alert().dismiss();	
 	}
 
-	public static  void INclick(By element) throws InterruptedException {
+	public static void waitUntilElementDisappear(By element) throws InterruptedException {
 
 		//Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -305,6 +309,7 @@ public class Base_Class {
 
 
 
+
 		//	}catch(Exception e)
 		//	{
 		//		System.out.println("Class: Common Method: DatabaseConnector: Not Connected");
@@ -313,6 +318,7 @@ public class Base_Class {
 		//	}
 
 	}
+	
 	public static void ExtentSuccessMessage(String strPassSuccessMessage) {
 		ExtentTestManager.getTest().log(Status.PASS, strPassSuccessMessage);
 	}
@@ -336,5 +342,71 @@ public class Base_Class {
 	public void PageRefresh() {
 		driver.navigate().refresh();
 	}
+
+   	
+	
+    public String dateConversion(String inputDate) throws ParseException {
+    	
+        // Define the original format of the date string
+        SimpleDateFormat originalFormat = new SimpleDateFormat("EEEE, MMMM dd yyyy", Locale.ENGLISH);
+
+        // Parse the input date string
+        Date date = originalFormat.parse(inputDate);
+
+        // Define the desired output format (DD/MM/YYYY)
+        SimpleDateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+        // Format the parsed date into the desired format
+        String formattedDate = targetFormat.format(date);
+        
+    	return formattedDate;
+    }
+
+
+    public static void waitForSpinnerToStop(WebDriver driver, By spinnerLocator) {
+         int MAX_WAIT_TIME = 60;  // Max total wait time in seconds
+         int POLL_INTERVAL = 1;   // Poll interval in seconds
+         int CONSECUTIVE_DISAPPEAR_COUNT = 3;  // Number of consecutive times the spinner must disappear
+         
+        int remainingTime = MAX_WAIT_TIME;
+        int disappearCount = 0;
+
+        // WebDriverWait setup
+        WebDriverWait wait = new WebDriverWait(driver, POLL_INTERVAL);
+
+        // Loop until the spinner disappears for the set number of cycles or time runs out
+        while (remainingTime > 0) {
+            try {
+                // Wait until the spinner becomes invisible
+                wait.until(ExpectedConditions.invisibilityOfElementLocated(spinnerLocator));
+
+                // If spinner disappeared, increment the disappearCount
+                disappearCount++;
+
+                // If spinner has disappeared for enough consecutive cycles, we stop the wait
+                if (disappearCount >= CONSECUTIVE_DISAPPEAR_COUNT) {
+                    System.out.println("Spinner has stopped appearing.");
+                    return;
+                }
+
+            } catch (Exception e) {
+                // Spinner is still visible, reset disappearCount
+                disappearCount = 0;
+                System.out.println("Spinner is still visible. Waiting...");
+            }
+
+            // Sleep for the polling interval before checking again
+            try {
+                Thread.sleep(POLL_INTERVAL * 1000); // Polling interval
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+            }
+
+            // Reduce the remaining time
+            remainingTime -= POLL_INTERVAL;
+        }
+
+        System.out.println("Timeout reached, spinner still shows up intermittently.");
+    }
 
 }

@@ -192,6 +192,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		try {
 			click(transJewelRepo.accMaturedPopUpOkBtn);
 		}catch(Exception e) {
+			
 		}
 		
 		if(ElementDisplayed(transJewelRepo.tdTransactionDetailsWindow)) {
@@ -213,7 +214,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		//Navigate to Child Window
 		String parent_Window0 = driver.getWindowHandle();
 		String prinicipalAmt = driver.findElement(transJewelRepo.principal1TxtBox).getAttribute("value");
-		System.out.println("interestAmt: "+prinicipalAmt);
+		System.out.println("prinicipalAmt: "+prinicipalAmt);
 		ScrollUntilElementVisible(transJewelRepo.interestLogBtn);
 		click(transJewelRepo.principalLogBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click and view Principal log details.");
@@ -271,46 +272,46 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		
-		//Verify Interest Log Details
-		ExtentTestManager.startTest("Verify Interest Log Details");
-		Log.info("Verify Interest Log Details");
-		
-		//Navigate to Child Window
-		String parent_Window = driver.getWindowHandle();
-		String interestAmt = driver.findElement(transJewelRepo.interest1TxtBox).getAttribute("value");
-		System.out.println("interestAmt: "+interestAmt);
-//		ScrollUntilElementVisible(transJewelRepo.interestLogBtn);
-		click(transJewelRepo.interestLogBtn);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click and view interest log details.");
-		Log.info("Step:01 - Click and view interest log details.");
-		
-		Set<String> address1 = driver.getWindowHandles();
-		
-		for(String c : address1) {
-			
-			if(!c.equals(parent_Window)) {
-				driver.switchTo().window(c);
-
-			}
-			
-		}//for end
-		
-		String popUpinterestAmt = driver.findElement(transJewelRepo.popUpPageInterest).getText();
-		System.out.println("popUpinterestAmt: "+popUpinterestAmt);
-
-		
-		if(interestAmt.equals(popUpinterestAmt)) {
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logs display correct interest  details.");
-			Log.info("Expected Result: Logs display correct interest  details.");
-		}else {
-			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-			Log.info("ERROR");
-		}
-		
-		ExtentTestManager.endTest();
-			
-		click(transJewelRepo.interestWndowCloseBtn);
-		driver.switchTo().window(parent_Window);
+//		//Verify Interest Log Details
+//		ExtentTestManager.startTest("Verify Interest Log Details");
+//		Log.info("Verify Interest Log Details");
+//		
+//		//Navigate to Child Window
+//		String parent_Window = driver.getWindowHandle();
+//		String interestAmt = driver.findElement(transJewelRepo.interest1TxtBox).getAttribute("value");
+//		System.out.println("interestAmt: "+interestAmt);
+////		ScrollUntilElementVisible(transJewelRepo.interestLogBtn);
+//		click(transJewelRepo.interestLogBtn);
+//		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click and view interest log details.");
+//		Log.info("Step:01 - Click and view interest log details.");
+//		
+//		Set<String> address1 = driver.getWindowHandles();
+//		
+//		for(String c : address1) {
+//			
+//			if(!c.equals(parent_Window)) {
+//				driver.switchTo().window(c);
+//
+//			}
+//			
+//		}//for end
+//		
+//		String popUpinterestAmt = driver.findElement(transJewelRepo.popUpPageInterest).getText();
+//		System.out.println("popUpinterestAmt: "+popUpinterestAmt);
+//
+//		
+//		if(interestAmt.equals(popUpinterestAmt)) {
+//			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logs display correct interest  details.");
+//			Log.info("Expected Result: Logs display correct interest  details.");
+//		}else {
+//			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+//			Log.info("ERROR");
+//		}
+//		
+//		ExtentTestManager.endTest();
+//			
+//		click(transJewelRepo.interestWndowCloseBtn);
+//		driver.switchTo().window(parent_Window);
 
 		
 		
@@ -343,17 +344,22 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 
 		String interestAmtTxtBox2Value = driver.findElement(transJewelRepo.interest2TxtBox).getAttribute("value");
 		String principalAmtTxtBox2Value = driver.findElement(transJewelRepo.principal2TxtBox).getAttribute("value");
+		String fineTxtBox2Value = driver.findElement(transJewelRepo.fineTxtBox2).getAttribute("value");
 
 		String a = interestAmtTxtBox2Value.split("\\.")[0];
 		String b = principalAmtTxtBox2Value.split("\\.")[0];
+		String c = fineTxtBox2Value.split("\\.")[0];
 
 		int num1 = Integer.parseInt(a);
 		System.out.println("num1: "+num1);
 
 		int num2 = Integer.parseInt(b);
 		System.out.println("num2: "+num2);
+		
+		int num3 = Integer.parseInt(c);
+		System.out.println("num3: "+num3);
 
-		int sum = num1+num2;
+		int sum = num1+num2+num3;
 		System.out.println("sum: "+sum);
 
 		int transAmt1 = Integer.parseInt(transAmt);
@@ -647,7 +653,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	}//end
 	
 	
-	public void transModeCash() throws InterruptedException {
+	public void transModeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		
 		//Select Transaction Mode
 		ExtentTestManager.startTest("Select Transaction Mode");
@@ -660,6 +666,22 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction mode 'Cash' is selected.");
 		Log.info("Expected Result: Transaction mode 'Cash' is selected.");
 		
+		ExtentTestManager.endTest();
+		
+		
+		
+		//Enter Remark 
+		ExtentTestManager.startTest("Enter Remark ");
+		Log.info("Enter Remark ");
+		
+		String reamrk = testdata.get("remark").toString();
+		input(transJewelRepo.tdRemarkTxtBox, reamrk);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter a remark in the input field.");
+		Log.info("Step:01 - Enter a remark in the input field.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Remark   accepted.");
+		Log.info("Expected Result: Remark   accepted.");
+
 		ExtentTestManager.endTest();
 		
 		

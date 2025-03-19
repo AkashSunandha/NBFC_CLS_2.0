@@ -6,6 +6,7 @@ import java.util.Map;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
+import com.Page_Customer.Customer_CustomerSearch;
 import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
 import com.Page_Repositary.PageRepositary_AccOpn__GeneralLoan_SuspenseAsset;
 import com.Page_Repositary.PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan;
@@ -20,6 +21,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
 	PageRepositary_AccOpn__GeneralLoan_SuspenseAsset suspenseAssetRepo = new PageRepositary_AccOpn__GeneralLoan_SuspenseAsset();
 	PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan depositLoanRepo = new PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan();
+	Customer_CustomerSearch custSrchMtds = new Customer_CustomerSearch();
 
 	
 	String transId; 
@@ -207,18 +209,17 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
 	
-		String userName = driver.findElement(goaldLoanRepo.userName).getText();
-		System.out.println(userName);
+		String authorizeUserName = driver.findElement(goaldLoanRepo.userName).getText();
+		System.out.println(authorizeUserName);
 		
-		String flag = "akash";
 		
-		if(!userName.equalsIgnoreCase(flag)) {
-    		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
-    		Log.info("Expected Result: Logging successfull with another user");
-    		}else {
-    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-    			Log.info("ERROR");
-    		}
+		if(!authorizeUserName.equalsIgnoreCase(custSrchMtds.actualUserName)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
+			Log.info("Expected Result: Logging successfull with another user");
+			}else {
+				ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+				Log.info("ERROR");
+			}
 		
 		ExtentTestManager.endTest();
 		
