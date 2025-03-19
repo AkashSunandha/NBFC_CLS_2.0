@@ -1,9 +1,8 @@
-package com.test.OLTransaction;
+package com.test.SusAssetTransaction_Cash_Transfer;
 
 import java.io.IOException;
 import java.util.Map;
 
-import org.apache.commons.collections4.Closure;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
@@ -14,6 +13,7 @@ import com.GeneralOpening.General_Opening_cash_transfer;
 import com.JewelLoan_Closure.JewelLoan_Closure_Cash_Transfer;
 import com.OLTransaction_Cash_Transfer.OLTransaction_Cash_Transfer;
 import com.OLTransaction_Cash_Transfer.OL_Transaction_Closure_Cash_Transfer;
+import com.OLTransaction_Cash_Transfer.SusAssetTransaction_Cash_Transfer;
 import com.Page_Customer.Customer_NewCustomer;
 import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
 import com.Utility.Log;
@@ -22,28 +22,27 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenario_OL_Transaction_Closure_Cash_Transfer {
-	
+public class AllScenario_SusAssetTransaction_Cash_Transfer {
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 
-	public String sp = "GetOtherloanAccountnumberForTransaction";
+	public String sp = "GetSuspenseAssetAccountnumber";
 	public String columnName = "Acno";
 
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	Customer_NewCustomer newCustMths = new Customer_NewCustomer();
-	General_Opening_cash_transfer generalOpening = new General_Opening_cash_transfer();
 	JewelLoan_Closure_Cash_Transfer JLoanClosure = new JewelLoan_Closure_Cash_Transfer();
 	OLTransaction_Cash_Transfer Transaction = new OLTransaction_Cash_Transfer();
 	OL_Transaction_Closure_Cash_Transfer Closuretrans = new OL_Transaction_Closure_Cash_Transfer();
+	SusAssetTransaction_Cash_Transfer suspense = new SusAssetTransaction_Cash_Transfer();
 	
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("TransactionClosure");
+		ExcelReader = new com.Utility.ExcelReader("SuspenseAsset");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -69,52 +68,13 @@ public class AllScenario_OL_Transaction_Closure_Cash_Transfer {
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 				
-				Closuretrans.Closure();
+				suspense.Transactionwindow();
 				
-				Closuretrans.Accountnumber(testdata, context);
+				suspense.Accountnumber(testdata, context);
 				
-				Closuretrans.Cash(testdata, context);
+				suspense.SelectCASH();
 				
-				Closuretrans.Signout();
-				
-				Closuretrans.AnotherUSer(testdata, context);
-				
-				Closuretrans.Cashier();
-				
-				Closuretrans.Manager();
-				
-				Closuretrans.Signout2();
-				
-				custSrchMthds.userLoginValidPaswrd(testdata, context);
-				
-				Closuretrans.ClosurerenewalTrasnfer1();
-				
-				Closuretrans.Accountnumber(testdata, context);
-				
-				Closuretrans.Transfer1(testdata, context);
-				
-				Closuretrans.Accountnumbers(testdata, context);
-				
-				Closuretrans.Signout();
-				
-				Closuretrans.AnotherUSer(testdata, context);
-				
-				Closuretrans.ManagerAuth();
-				
-				Closuretrans.Signout2();
-				
-				
-				
-				
-				
-				
-				
-
-			
-
-				
-				
-				
+				Transaction.print();
 				
 				
 
@@ -143,5 +103,7 @@ public class AllScenario_OL_Transaction_Closure_Cash_Transfer {
 	}
 
 }
+
+
 
 

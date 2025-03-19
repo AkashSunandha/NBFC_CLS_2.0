@@ -124,8 +124,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		String AccNum = valueAccNum.substring(valueAccNum.length() - 4);
 		input(OLtrans.transaccount, AccNum);
 
-		ExtentTestManager.startTest("Enter Loan Account Number");
-		Log.info("Enter Loan Account Number");
+	
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Account number is entered correctly..");
 		Log.info("Expected Result:Account number is entered correctly...");
@@ -183,17 +182,19 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		ScrollUntilElementVisible(OLtrans.scrolldwn);
 
-		ExtentTestManager.startTest("Select Transaction Mode as Cash and Submit");
-		Log.info("Select Transaction Mode as Cash and Submit");
 
+		ExtentTestManager.startTest("Submit Transaction");
+		Log.info("Submit Transaction");
+		
 		click(OLtrans.submittrans);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Click submit button.");
 		Log.info("Step:01 - Redirects to summary page.");
 
-		ExtentTestManager.getTest().log(Status.PASS,
-				"Expected Result: Agent collection exists for this account popup comes.");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Agent collection exists for this account  popup comes.");
 		Log.info("Expected Result:Agent collection exists for this account popup comes");
 		ExtentTestManager.endTest();
+
 
 		ExtentTestManager.startTest("Submit Transaction");
 		Log.info("Submit Transaction");
@@ -285,8 +286,8 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void Cashier() throws InterruptedException {
-		ExtentTestManager.startTest("User is logged in");
-		Log.info("User is logged in");
+		ExtentTestManager.startTest("cashier authorization");
+		Log.info("cashier authorization");
 
 		click(JewelClosure.authandcancel);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -.Click the authoirze & Cancel module from the taskbar");
@@ -301,8 +302,8 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
-		Log.info("User is logged in");
+		ExtentTestManager.startTest("cashier authorization");
+		Log.info("cashier authorization");
 
 		click(JewelClosure.clickrefresh);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click the Refresh tab");
@@ -312,13 +313,13 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		fetchWithTransId(transId);
 
 		ExtentTestManager.getTest().log(Status.PASS,
-				"Expected Result:  Closure entry will be diaply after clicking the refresh button.");
-		Log.info("Expected Result:Closure entry will be diaply after clicking the refresh button");
+				"Expected Result:  Transaction entry will be diaply after clicking the refresh button.");
+		Log.info("Expected Result:Transaction entry will be diaply after clicking the refresh button");
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
-		Log.info("User is logged in");
+		ExtentTestManager.startTest("cashier authorization");
+		Log.info("cashier authorization");
 
 		click(JewelClosure.checkbox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select the checbox of jewel loan closure ");
@@ -338,8 +339,8 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Step:01 -1.Click Authorise button");
 		click(JewelClosure.close);
 
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure entry is authorised");
-		Log.info("Expected Result:Closure entry is authorised");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction entry is authorised");
+		Log.info("Expected Result:Transaction entry is authorised");
 
 		ExtentTestManager.endTest();
 
@@ -347,8 +348,8 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	public void Manager() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
-		Log.info("User is logged in");
+		ExtentTestManager.startTest("Manager authorization");
+		Log.info("Manager authorization");
 
 		// ScrollUntilElementVisible(JewelClosure.scrolldownside);
 
@@ -361,17 +362,13 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
-		Log.info("User is logged in");
+		
 
 		click(JewelClosure.cashtab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click the cash tab");
 		Log.info("Step:01 -Click the cash tab");
 
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Cash tab will be displayed");
-		Log.info("Expected Result: Cash tab will be displayed");
-
-		ExtentTestManager.endTest();
+		
 
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
@@ -478,7 +475,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 			}
 		}
 
-		ExtentTestManager.startTest("Search Account number");
+		ExtentTestManager.startTest("Select Product Group and Name");
 		Log.info("Search Account number");
 
 		select("Demand Investment", JewelClosure.produgroup);
@@ -657,5 +654,18 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Product Group and Name are selected successfully..");
 		ExtentTestManager.endTest();
 	}
+	public void Signout2() throws InterruptedException {
 
+		ExtentTestManager.startTest("Logout in application");
+		Log.info("Logout in application");
+
+		click(JewelClosure.Singout);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Log out.");
+		Log.info("Step:01 - Log out.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Login page will be dispays.");
+		Log.info("Expected Result:Login page will be dispays.");
+
+		ExtentTestManager.endTest();
+	}
 }

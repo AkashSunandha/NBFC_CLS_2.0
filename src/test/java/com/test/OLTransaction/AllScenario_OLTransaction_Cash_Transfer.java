@@ -96,7 +96,7 @@ public class AllScenario_OLTransaction_Cash_Transfer {
 
 				Transaction.print();
 
-				Transaction.Signout();
+				Transaction.Signout2();
 
 				Transaction.AnotherUSer(testdata, context);
 

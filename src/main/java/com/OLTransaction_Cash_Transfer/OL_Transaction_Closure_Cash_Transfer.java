@@ -48,7 +48,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 	
 	 public void Closure() throws InterruptedException
 	 {
-		 ExtentTestManager.startTest("Navigate to Jewel Loan Closure Window");
+		    ExtentTestManager.startTest("Navigate to  Navigate Other Loan Closure Window");
 			Log.info("Navigate to Jewel Loan Closure Window");
 
 			click(JewelClosure.OpenClosureandrenewal);
@@ -61,6 +61,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Loan Closure window is displayed ");
 			Log.info("Expected Result: Loan Closure window is displayed");
+			
 			ExtentTestManager.endTest();
 
 			ExtentTestManager.startTest("Select Product Group and Name");
@@ -123,8 +124,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 			String valueAccNum = generateUniqueCode(sp, columnName);
 			String AccNum = valueAccNum.substring(valueAccNum.length() - 4);
 			input(JewelClosure.StoreAccun, AccNum);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -");
-			Log.info("Step:01 -");
+			
 
 			ExtentTestManager.getTest().log(Status.PASS,
 					"Expected Result:Loan number can be entered Account details are displayed ");
@@ -132,9 +132,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 
 			ExtentTestManager.endTest();
 
-			ExtentTestManager.startTest("Enter Loan Account Number");
-			Log.info("Enter Loan Account Number");
-
+			
 			click(JewelClosure.clickGo);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click on Go button");
 			Log.info("Step:01 -Click on Go button");
@@ -163,8 +161,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 
 			}
 
-			ExtentTestManager.startTest("Verify Closure Amount Display");
-			Log.info("Verify Closure Amount Display");
+			
 
 			ScrollUntilElementVisible(JewelClosure.scrolldown);
 
@@ -176,10 +173,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 				Log.info("ERROR");
 			}
 
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure amount is accurately displayed");
-			Log.info("Expected Result: Closure amount is accurately displayed.");
-
-			ExtentTestManager.endTest();
+			
 		}
 
 		public void Cash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
@@ -190,10 +184,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 			ExtentTestManager.getTest().log(Status.PASS, " Select 'CASH' from transmode dropdown");
 			Log.info("Step:01 -Select 'CASH' from transmode dropdown");
 
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transmode CASH selected");
-			Log.info("Expected Result: Transmode CASH selected.");
-
-			ExtentTestManager.endTest();
+			
 
 			ScrollUntilElementVisible(JewelClosure.scrolldown);
 
@@ -202,8 +193,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 			input(JewelClosure.remarks, remarks);
 			click(JewelClosure.remarks);
 
-			ExtentTestManager.startTest("Select Cash as Transmode and Submit");
-			Log.info("Select Cash as Transmode and Submit");
+			
 
 			click(JewelClosure.submit);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Loan closure transaction is submitted successfully");
@@ -214,8 +204,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 
 			ExtentTestManager.endTest();
 
-			ExtentTestManager.startTest("Summary page");
-			Log.info("Summary page");
+			
 
 			if (ElementDisplayed(JewelClosure.TrasidVisible)) {
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Summary page visible.");
@@ -392,8 +381,8 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 
 			ExtentTestManager.endTest();
 
-			ExtentTestManager.startTest("User is logged in");
-			Log.info("User is logged in");
+			ExtentTestManager.startTest("User is on Manager authorisation window");
+			Log.info("User is on Manager authorisation window");
 
 			click(JewelClosure.clickauth);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click Authorise button");
@@ -408,12 +397,12 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 
 		}
 
-		// JewelClosure_Transfer
+		// Other Loan Closure transfer
 
 		public void ClosurerenewalTrasnfer() throws InterruptedException {
 
-			ExtentTestManager.startTest("Navigate to Jewel Loan Closure Window");
-			Log.info("Navigate to Jewel Loan Closure Window");
+			ExtentTestManager.startTest("Navigate to Other Loan Closure Window");
+			Log.info("Navigate to Other Loan Closure Window");
 
 
 			click(JewelClosure.Clickonclosure);
@@ -444,8 +433,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 
 		public void Transfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-			ExtentTestManager.startTest("Verify Closure Amount Display");
-			Log.info("Verify Closure Amount Display");
+			
 
 			if (ElementDisplayed(JewelClosure.cloamtdisplay)) {
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Closure amount is accurately displayed");
@@ -455,10 +443,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 				Log.info("ERROR");
 			}
 			
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan account details are correctly displayed");
-			Log.info("Expected Result: Loan account details are correctly displayed");
-			ExtentTestManager.endTest();
-
+			
 			ExtentTestManager.startTest("Select Transmode Transfer and Post Debit");
 			Log.info("Select Transmode Transfer and Post Debit");
 
@@ -861,9 +846,20 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class{
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure entry is authorised");
 			Log.info("Expected Result:Closure entry is authorised ");
 			ExtentTestManager.endTest();
+		}
+		public void Signout2() throws InterruptedException {
 
+			
+
+			click(JewelClosure.Singout);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Log out.");
+			Log.info("Step:01 - Log out.");
+
+			
+		}
+	
 			
 			
 
 		}
-	}
+	
