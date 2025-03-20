@@ -28,19 +28,24 @@ public class GL_Account_Transaction
 		public By Transaction = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/div");
 		public By GLTransactions = By.xpath("//a[normalize-space()='GL A/c Transaction']");
 		public By GLAccInfo = By.xpath("//div[@id='ctl00_ctl00_CPH1_PRDCNT_UPGLTransaction']//div[@class='iframebox']");
-		public By ProductGroup = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlProductGroup']");
-		public By ProdName	 = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlProduct_ddl']");
-		public By AccNumber = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_txtAcNo_txt']");
-		public By TransType = By.xpath("//Select[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlTrnType_ddl']");
-		public By GoButton = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_btnGo']");
-		public By AccountTrans = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[1]/table/tbody/tr[2]/td/div/table/tbody/tr/td/table");
-		public By MiscCharge = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransactionRecoveryDue_txtDue5']");
-		public By TransAmt = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_txtTrnAmount_txt']");
-		public By TransMode = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_ddlTransactionMode_ddl']");
-		public By Remarks = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_txtRemarks_txt']");
-		public By SubmitTrans = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnSubmit']");
-		public By SummaryOperation = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/table[1]");
-		public By ClosePoup = By.xpath("//input[@id ='closewarning']");
+		public By Date = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_dtDate_txt']");
+		public By Valuedate = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_dtValueDate_dtValueDate_txt']");
+		public By Branch = By.xpath("//select[@ id = 'ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_ddlBranch_ddl']");
+		public By GLaccname = By.xpath("//input [@id = 'hyjackText0']");      
+		public By GLacccode = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_txtGLCode_txt']");
+		public By TransType = By.xpath("//Select[@id ='ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_ddlTrnType']");
+		public By GoButton = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_btnGo']");
+		public By PreTranCheckbox = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_chkLastN']");
+		public By PreviousTrans = By.xpath("//div[@id='ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_divLastNT']");
+		public By TransAmt = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_txtTrnAmount_txt']");
+		public By RecoveryTotal = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_ucNonProductTransactionRecovery_txtRecoveryTotal_txt']");
+		public By Netpayable = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_ucNonProductTransactionRecovery_txtGrandTotal_txt']");
+		public By TransMode = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_ddlTransactionMode_ddl']");
+		public By PartyName = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_txtPartyName_txt']");
+		public By Particulars = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_txtRemarks_txt']");
+		public By Submitbutton = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_btnSubmit']");
+		public By SummaryOperation = By.xpath("(//div[@class='iframebox'])[4]");
+		public By ClosePopup = By.xpath("//img[@id ='closetop']");
 		public By TransCashID = By.xpath("//span[@id ='ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID']");
 		
 		//Authorization

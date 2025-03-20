@@ -66,6 +66,80 @@ public class AllScenarios_GL_Account_Transaction_Cash extends Base_Class {
 				
 				//TC_02 ---> LaunchGLAccountTransactionModule
 				GLTransaction.LaunchGLAccountTransactionModule();
+				
+				//TC_03 ---> DefaultDateCheck
+				GLTransaction.DefaultDateCheck();
+				
+				//TC_04 ---> BranchAutoloadinChargePosting
+				GLTransaction.BranchAutoloadinChargePosting();
+				
+				//TC_05 ---> GLAccNameDropdownOptions
+				GLTransaction.GLAccNameDropdownOptions();
+				
+				//TC_06 ---> GLAccNametoCodeMapping
+				GLTransaction.GLAccNametoCodeMapping();
+				
+				//TC_07 ---> TransTypeDropdownOptions
+				GLTransaction.TransTypeDropdownOptions();
+				
+				//TC_08 ---> GoButtonActionwithValidGLAccCode
+				GLTransaction.GoButtonActionwithValidGLAccCode();
+				
+				//TC_09 ---> DisplayEntryonCheckboxClick
+				GLTransaction.DisplayEntryonCheckboxClick();
+				
+				//TC_10 ---> NetPayableandRecoveryCalculation
+				GLTransaction.NetPayableandRecoveryCalculation(testdata, context);
+				
+				//TC_11 ---> TrnsmodeDropdownValidation
+				GLTransaction.TrnsmodeDropdownValidation();
+				
+				//TC_12 ---> GLTransactionCreditandCash
+				GLTransaction.GLTransactionCreditandCash();
+				
+				//TC_13 ---> EnterPartyNameforTransaction
+				GLTransaction.EnterPartyNameforTransaction(testdata, context);
+				
+				//TC_14 ---> EnterParticularsforTransaction
+				GLTransaction.EnterParticularsforTransaction(testdata, context);
+				
+				//TC_15 ---> GLTransactionsCreditandCash
+				GLTransaction.GLTransactionsCreditandCash();
+				
+				//TC_16 ---> TransactionSummaryValidation
+				GLTransaction.TransactionSummaryValidation();
+				
+				//TC_17 ---> LogintoNBFcApplicationinadifferentuser
+				GLTransaction.LogintoNBFcApplicationinadifferentuser();
+				
+				//TC_18 ---> LogintoNBFcApplicationinadifferentuserlogin
+				GLTransaction.LogintoNBFcApplicationinadifferentuserlogin();
+				
+				//TC_19 ---> LogintoNBFcApplicationinadifferentuserAuthorizeandcancel
+				GLTransaction.LogintoNBFcApplicationinadifferentuserAuthorizeandcancel();
+				
+				//TC_20 ---> CashierAuthorisationRefresh
+				GLTransaction.CashierAuthorisationRefresh();
+				
+				//TC_21 ---> SelectCashierCashTransaction
+				GLTransaction.SelectCashierCashTransaction();
+				
+				//TC_22 ---> CashierCashAuthorization
+				GLTransaction.CashierCashAuthorization();
+				
+				//TC_23 ---> ManagerCashAuthorisation
+				GLTransaction.ManagerCashAuthorisation();
+				
+				//TC_24 ---> CashAuthorizationRefresh
+				GLTransaction.CashAuthorizationRefresh();
+				
+				//TC_25 ---> SelectCashTransactionManagerAuthorisation
+				GLTransaction.SelectCashTransactionManagerAuthorisation();
+				
+				//TC_26 ---> CashManagerAuthorization
+				GLTransaction.CashManagerAuthorization();
+				
+			
 
 				
 				

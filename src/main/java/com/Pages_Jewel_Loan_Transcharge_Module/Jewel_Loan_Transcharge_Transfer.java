@@ -1098,6 +1098,7 @@ public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedExcept
 	Log.info("Step:01 -  Click on 'Signout'");
 		
 	Assert.assertTrue(ElementDisplayed(LoanTranscharge.loginButton), "Validation Failed: User is not logged out successfully.");
+	
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
 	Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 		

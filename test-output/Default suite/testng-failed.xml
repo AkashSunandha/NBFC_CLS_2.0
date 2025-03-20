@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Jewel_Loan_Transcharge_Module.AllScenarios_Jewel_Loan_Transcharge_Transfer">
+      <class name="GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Cash">
         <methods>
           <include name="reference"/>
-          <include name="Loan_Closure_Transfer"/>
+          <include name="Loan_Closure_Cash" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Jewel_Loan_Transcharge_Module.AllScenarios_Jewel_Loan_Transcharge_Transfer -->
+      </class> <!-- GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Cash -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
