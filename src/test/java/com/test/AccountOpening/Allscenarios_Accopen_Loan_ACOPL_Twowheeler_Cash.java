@@ -53,7 +53,7 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				ExtentTestManager.endTest();
 				
 
-                //TC 01
+              //TC 01
 				//PC Registration
 				custSrchMthds.pcRegistration(testdata, context);
 			
@@ -80,11 +80,11 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				//TC 11
 				fixeddeposit.FillAccountInfoTabReferedBy(testdata, context); 
 				
-				//TC 12
+				 //TC 12
 				fixeddeposit.FillAccountInfoTabCanvasserName(testdata, context);
 				
 				//TC 13
-				fixeddeposit.FillAccountInfoTabREquitableMortRegNo(testdata, context);
+				fixeddeposit.FillAccountInfoTabEquitableMortRegNo(testdata, context);
 				
 				//TC 14,15
 				fixeddeposit.FillAccountInfoTabEMRDate(testdata, context);
@@ -105,8 +105,167 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				fixeddeposit.FillVehicleSecurityDetialsRCno(testdata, context);
 				
 				//TC 22
-				
+				fixeddeposit.FillVehicleSecurityDetailsSelectVehicleStatus(testdata, context);
 			
+				//TC 23
+				fixeddeposit.FillVehicleSecurityDetailsSelectVehicleType(testdata, context);
+				
+				//TC 24
+				fixeddeposit.FillVehicleSecurityDetailsSelectVehicleDetails(testdata, context);
+				
+				//TC 25
+				fixeddeposit.FillVehicleSecurityDetailsSelectVehicleCatergory(testdata, context);
+				
+				//TC 26
+				fixeddeposit.FillVehiclesecuritydetailsExshowroomprice(testdata, context);
+				
+				//TC 27
+				fixeddeposit.FillVehiclesecuritydetailsRoadTax(testdata, context);
+				
+				//TC 28
+				fixeddeposit.FillVehiclesecuritydetailsInsurance(testdata, context);
+				
+				//TC 29
+				fixeddeposit.FillVehiclesecuritydetailsRegandOthercharges(testdata, context);
+				
+				//TC 30
+				fixeddeposit.FillVehiclesecuritydetailsDealerDiscount(testdata, context);
+			
+				//TC 31
+				fixeddeposit.GetButton();
+				
+				//TC 32
+				fixeddeposit.FillVehiclesecuritydetailsDownPayment(testdata,context); 
+				
+				//TC 33
+				fixeddeposit.FillVehiclesecuritydetailsInsuranceDocumentNo(testdata, context);
+				
+				//TC 34
+				fixeddeposit.FillVehiclesecuritydetailsYearofManufacture(testdata, context);
+				
+				//TC 35
+				fixeddeposit.FillVehiclesecuritydetailsIDV(testdata, context);
+				
+				//TC 36
+				fixeddeposit.FillVehiclesSecurityDetailsInsuranceprovider(testdata, context);
+				
+				/*//TC 37
+				fixeddeposit.FillVehicleSecurityDetailsInsuredpastDate(testdata, context);*/
+				
+				//TC 38(invalid)
+				
+				//TC 39
+				fixeddeposit.FillVehiclesecuritydetailsVehicleColor(testdata, context);
+				
+				//TC 40
+				fixeddeposit.FillVehicleSecurityDetailsRegDate(testdata, context);
+				
+				//TC 41 (invalid)
+				
+				//TC 42
+				fixeddeposit.FillVehiclesSecurityDetailsRegistrationMode(testdata, context);
+				
+				//TC 43
+				fixeddeposit.FillVehiclesecuritydetailsPermitNo(testdata, context);
+				
+				//TC 44
+				fixeddeposit.FillVehiclesecuritydetailsEgineNo(testdata, context);
+				
+				//TC 45
+				fixeddeposit.FillVehiclesecuritydetailsChassisNo(testdata, context);
+				
+				//TC 46
+				fixeddeposit.FillVehiclesSecurityDetailsDelaerdropdown(testdata, context);
+				
+				//TC 47
+				fixeddeposit.FillVehiclesSecurityDetailssubDelaerdropdown(testdata, context);
+				
+				 //TC 48
+				fixeddeposit.FillVehiclesSecurityDetailsMakedropdown();
+				
+				//TC 49
+				fixeddeposit.FillVehiclesSecurityDetailsModeldropdown(); 
+				
+				//TC 50
+				fixeddeposit.FillVehiclesecuritydetailsVariant(testdata, context);
+				
+				//TC 51
+				fixeddeposit.FillVehiclesecuritydetailsRTODetails(testdata, context);
+				
+				//TC 52 
+				fixeddeposit.FillVehiclesSecurityDetailspurposedropdown(testdata, context);
+				
+				/*//TC 53
+				fixeddeposit.AddButtonFunctionality();*/
+				
+				//TC 54
+				fixeddeposit.InsuredpastDateokbtn(testdata, context);
+				
+				//TC 55
+				fixeddeposit.FillVehicleSecurityDetailsInsuredfutureDate(testdata, context);
+				
+				//TC 56 (Invalid)
+				
+				//TC 57
+				fixeddeposit.NextButton();
+				
+				// TC 58
+				fixeddeposit.FillNomineedetailsuntickNomineeNotRequired();
+				
+				//TC 59
+				fixeddeposit.FillNomineedetailscustomersearchicon();
+				
+				//TC 60, 61
+				fixeddeposit.FillNomineedetailssearchcustomerwithnameoralphabets(testdata, context);
+				
+				//TC 62
+				fixeddeposit.FillNomineeDetailsRelationDropdown();
+				
+				//TC 63
+				fixeddeposit.FillNomineedetailssearchAddbutton1();
+				
+				//TC 64
+				fixeddeposit.FillNomineedetailssearchNextbutton();
+				
+				//TC 65
+				fixeddeposit.FillLoanDetailssanctionedamount(testdata, context);
+				
+				//TC 66
+				fixeddeposit.FillLoanDetailsNoOFInstallments(testdata, context);
+				
+				//TC 67
+				fixeddeposit.EnterValidsanctionedamountclickGetValues();
+				
+				//TC 68
+				fixeddeposit.SelectTransactionMode();
+				
+				//TC 69
+				fixeddeposit.saveloan();
+				
+				//Sign out
+				custSrchMthds.logout();
+				
+				//TC 70
+				fixeddeposit.Login_with_AnotherUser(testdata, context);
+				
+				//TC 71
+				fixeddeposit.CashierAuthorization();
+				
+				//TC 72
+				fixeddeposit.Cashierrefresh(testdata, context);
+				
+				//TC 73
+				fixeddeposit.cashierauthorizationauthorizebtn();
+				
+				//74
+				fixeddeposit.Manager_Authorization_CashTab();
+				
+				//75
+				fixeddeposit.Refresh_Loan_OpeningEntry(testdata, context);
+				
+				//76
+				fixeddeposit.Authorize_Loan_Entry_asManager();
+
 						
 				/*//Sign out
 				custSrchMthds.logout(); */		

@@ -1,4 +1,4 @@
-[ERROR] 2025-03-12 11:50:06.228 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-21 18:03:19.019 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit.gettestdate(AllScenarios_Cust_AccountOpening_FixedDeposit.java:195) ~[test-classes/:?]
+	at com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash.gettestdate(Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash.java:289) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -49,7 +49,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-12 11:50:06.248 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-21 18:03:19.033 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -69,7 +69,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit.gettestdate(AllScenarios_Cust_AccountOpening_FixedDeposit.java:195) ~[test-classes/:?]
+	at com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash.gettestdate(Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash.java:289) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -100,7 +100,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-12 11:50:06.250 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-21 18:03:19.035 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -120,7 +120,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit.gettestdate(AllScenarios_Cust_AccountOpening_FixedDeposit.java:195) ~[test-classes/:?]
+	at com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash.gettestdate(Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash.java:289) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -151,135 +151,156 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-03-12 11:50:06.900 [main] Log - *** Running test method AccountOpening_FixedDeposit...
-[INFO ] 2025-03-12 11:50:10.602 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-12 11:50:14.084 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-12 11:50:14.595 [main] Log - PC Registration
-[INFO ] 2025-03-12 11:50:15.676 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-12 11:50:16.742 [main] Log - Step:02 - Enter PC Name in Name field.
-[INFO ] 2025-03-12 11:50:25.438 [main] Log - Step:03 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-12 11:50:29.778 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-12 11:50:34.596 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-12 11:50:34.727 [main] Log - Valid Login
-[INFO ] 2025-03-12 11:50:35.796 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-12 11:50:36.856 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-12 11:50:48.356 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-12 11:50:49.425 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-12 11:50:50.490 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-12 11:51:11.912 [main] Log - Step:01 clicking on Account opening -> Deposit opening -> Fixed deposit
-[INFO ] 2025-03-12 11:51:12.994 [main] Log - Deposit opening window is displayed
-[INFO ] 2025-03-12 11:51:17.654 [main] Log - Step:01 - Click customer search button
-[INFO ] 2025-03-12 11:51:18.765 [main] Log - Step:02 - Enter criteria in search field
-[INFO ] 2025-03-12 11:51:23.091 [main] Log - click on search button
-[INFO ] 2025-03-12 11:51:27.232 [main] Log - Step:03 - Select customer from search results
-[INFO ] 2025-03-12 11:51:40.050 [main] Log - Expected Result:Selected customer is  populated in the formtrue
-[INFO ] 2025-03-12 11:51:41.166 [main] Log - Step:01 - Enter valid amount in 'Amount' field
-[INFO ] 2025-03-12 11:51:41.167 [main] Log - Expected Result: Amount is accepted and displayed
-[INFO ] 2025-03-12 11:51:42.331 [main] Log - Step:01 -  Enter duration
-[INFO ] 2025-03-12 11:51:42.693 [main] Log - Step:02 -  Select duration mode
-[INFO ] 2025-03-12 11:51:42.694 [main] Log - Expected Result: Duration is entered and visible
-[INFO ] 2025-03-12 11:51:53.374 [main] Log - Step:01  Select option from 'Referred by' drop down
-[INFO ] 2025-03-12 11:51:53.375 [main] Log - Expected Result: Option is selected
-[INFO ] 2025-03-12 11:51:57.787 [main] Log - Step:01 Click 'Get values' button
-[INFO ] 2025-03-12 11:51:57.828 [main] Log - ROI and Due date are auto-calculated and displayed
-[INFO ] 2025-03-12 11:51:57.856 [main] Log - Expected Result: ROI and Due date are auto-calculated and displayed
-[INFO ] 2025-03-12 11:51:57.920 [main] Log - Step:01 Observe 'mode operation' field
-[INFO ] 2025-03-12 11:51:57.977 [main] Log - Field displays 'Single'true
-[INFO ] 2025-03-12 11:51:59.037 [main] Log - Step:01 - Enter data into 'ledger  number' field
-[INFO ] 2025-03-12 11:52:00.089 [main] Log - Step:01 - Enter data into 'Folio  number' field
-[INFO ] 2025-03-12 11:52:00.090 [main] Log - Expected Result: Data entry is possible
-[INFO ] 2025-03-12 11:52:01.220 [main] Log - Step:01 -  Enter text in 'Remark' field
-[INFO ] 2025-03-12 11:52:01.220 [main] Log - Expected Result: Text is entered and saved
-[INFO ] 2025-03-12 11:52:05.621 [main] Log - Step:01 -  Check 'lien mark' checkbox
-[INFO ] 2025-03-12 11:52:14.140 [main] Log - Step:01 -   Enter lien amount 
-[INFO ] 2025-03-12 11:52:15.206 [main] Log - Step:01 -   Enter lien remark 
-[INFO ] 2025-03-12 11:52:15.207 [main] Log - Expected Result: Fields are editable, data entered is saved
-[INFO ] 2025-03-12 11:52:19.611 [main] Log - Step:01 -  Click 'Next' button
-[INFO ] 2025-03-12 11:52:19.614 [main] Log - Expected Result: Navigates to next tab
-[INFO ] 2025-03-12 11:52:24.012 [main] Log - Step:01 -  Untick 'Nominee Not required' checkbox
-[INFO ] 2025-03-12 11:52:38.181 [main] Log - Step:01 - Search and select customer
-[INFO ] 2025-03-12 11:52:38.238 [main] Log - Expected Result:Customer details autofilled in fields
-[INFO ] 2025-03-12 11:52:38.263 [main] Log - Adharno details autofilled in fields
-[INFO ] 2025-03-12 11:52:38.295 [main] Log - HouseName details autofilled in fields
-[INFO ] 2025-03-12 11:52:38.326 [main] Log - District details autofilled in fields
-[INFO ] 2025-03-12 11:52:38.363 [main] Log - DOB details autofilled in fields
-[INFO ] 2025-03-12 11:52:38.390 [main] Log - name details autofilled in fields
-[INFO ] 2025-03-12 11:52:38.422 [main] Log - mobileno details autofilled in fields
-[INFO ] 2025-03-12 11:52:38.452 [main] Log - Post details autofilled in fields
-[INFO ] 2025-03-12 11:52:38.482 [main] Log - Age details autofilled in fields
-[INFO ] 2025-03-12 11:53:01.606 [main] Log - Step:01 - Search and select customer
-[INFO ] 2025-03-12 11:53:02.686 [main] Log - Step:01 -  Enter data in 'relation/desig' field
-[INFO ] 2025-03-12 11:53:03.756 [main] Log - Step:01 -  Enter remark
-[INFO ] 2025-03-12 11:53:08.065 [main] Log - Step:01 -  Add details
-[INFO ] 2025-03-12 11:53:08.172 [main] Log - ExpectedResult: Operator details are  added  true
-[INFO ] 2025-03-12 11:53:16.978 [main] Log - Step:01 - tick 'interest transfer Required' checkbox
-[INFO ] 2025-03-12 11:53:18.412 [main] Log - Step:02 -   Select product, enter account no
-[INFO ] 2025-03-12 11:53:19.482 [main] Log - Enter frequency(amount auto loads)
-[INFO ] 2025-03-12 11:53:19.483 [main] Log - ExpectedResult: Fields updated properly 
-[INFO ] 2025-03-12 11:53:23.857 [main] Log - Step:01 - Click Next button
-[INFO ] 2025-03-12 11:53:23.857 [main] Log - ExpectedResult: Redirected to 'on maturity' tab
-[INFO ] 2025-03-12 11:53:23.945 [main] Log - Step:01 - 'Keep in same account' radio button is not selected 
-[INFO ] 2025-03-12 11:53:24.264 [main] Log - Step:01 - Select trans.mode as 'Cash'
-[INFO ] 2025-03-12 11:53:28.603 [main] Log - Step:01 - click on save button
-[INFO ] 2025-03-12 11:53:32.475 [main] Log - ExpectedResult: cash opening possible and Summary is generated 
-[INFO ] 2025-03-12 11:53:32.599 [main] Log - TC:21 - Login with Another User
-[INFO ] 2025-03-12 11:53:37.939 [main] Log - Step:01 -  'Logout'
-[INFO ] 2025-03-12 11:53:47.319 [main] Log - Step:02 -Log in with another user for authorization
-[INFO ] 2025-03-12 11:53:48.383 [main] Log - ExpectedResult: Logging successfull with another user
-[INFO ] 2025-03-12 11:53:48.441 [main] Log - TC:22 - Cashier Authorization
-[INFO ] 2025-03-12 11:54:02.199 [main] Log - Step:01 -Navigate to "Cashier Authorization" module
-[INFO ] 2025-03-12 11:54:11.923 [main] Log - Step:02 -Click "Refresh
-[INFO ] 2025-03-12 11:54:16.228 [main] Log - Step:02 -Select checkbox
-[INFO ] 2025-03-12 11:54:20.563 [main] Log - Step:03 -Click "Authorize" button
-[INFO ] 2025-03-12 11:54:21.654 [main] Log - ExpectedResult: Account is created
-[INFO ] 2025-03-12 11:54:26.063 [main] Log - TC:23 - Manager Authorization - Cash Tab
-[INFO ] 2025-03-12 11:54:26.064 [main] Log - Step:01 -Go to "Authorize & Cancel"
-[INFO ] 2025-03-12 11:54:32.051 [main] Log - Step:01 -Select "Manager Authorization"
-[INFO ] 2025-03-12 11:54:33.120 [main] Log - ExpectedResult:  -Cash tab will be displaying
-[INFO ] 2025-03-12 11:54:33.168 [main] Log - TC:24 - Refresh Loan Opening Entry
-[INFO ] 2025-03-12 11:54:37.486 [main] Log - ExpectedResult:  -Click "Refresh" button
-[INFO ] 2025-03-12 11:54:38.570 [main] Log - ExpectedResult:  -Loan opening entry displayed
-[INFO ] 2025-03-12 11:54:38.623 [main] Log - TC:25 - Authorize Loan Entry as Manager
-[INFO ] 2025-03-12 11:54:48.514 [main] Log - Step:01 -Select loan entry checkbox
-[INFO ] 2025-03-12 11:54:52.819 [main] Log - Step:02 -Click "Authorize" button
-[INFO ] 2025-03-12 11:54:53.884 [main] Log - ExpectedResult: Entry authorized
-[INFO ] 2025-03-12 11:55:23.632 [main] Log - Valid Login
-[INFO ] 2025-03-12 11:55:24.724 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-12 11:55:25.799 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-12 11:55:31.237 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-12 11:55:32.308 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-12 11:55:33.375 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-12 11:55:42.948 [main] Log - Step:01 Take Deposit opening window
-[INFO ] 2025-03-12 11:55:56.973 [main] Log - Step:02 - Select customer from search results
-[INFO ] 2025-03-12 11:57:48.875 [main] Log - Step:03 -Enter mandatory field data
-[INFO ] 2025-03-12 11:57:49.236 [main] Log - Step:04 -Select transmode as 'transfer'
-[INFO ] 2025-03-12 11:57:53.849 [main] Log - Step:04 -click 'post debit' button
-[INFO ] 2025-03-12 11:57:54.940 [main] Log - Expected Result  -pop up loaded
-[INFO ] 2025-03-12 11:57:55.271 [main] Log - Step:01  1. Give transaction based as "GL Code"
-[INFO ] 2025-03-12 11:57:55.272 [main] Log - Expected Result: GL code related field will be display (GL name,GL code)
-[INFO ] 2025-03-12 11:58:03.991 [main] Log - Step:01  1.Select the "GL Name" from the drop down
-[INFO ] 2025-03-12 11:58:03.991 [main] Log - Expected Result: GL code will be autoloads while selecting the GL Name
-[INFO ] 2025-03-12 11:58:12.680 [main] Log - Step:02 - 1.Give the amount in "Amount" field
-[INFO ] 2025-03-12 11:58:12.680 [main] Log - Expected Result: Given details will be displays in the grid
-[INFO ] 2025-03-12 11:58:17.045 [main] Log - Step:02 - Click Add button
-[INFO ] 2025-03-12 11:58:21.371 [main] Log - Step:02 - Click submit button
-[INFO ] 2025-03-12 11:58:25.779 [main] Log - Step:02 - Click save button
-[INFO ] 2025-03-12 11:58:26.849 [main] Log - ExpectedResult: cash opening possible and Summary is generated 
-[INFO ] 2025-03-12 11:58:31.927 [main] Log - TC:27 - Login with Another User
-[INFO ] 2025-03-12 11:58:42.671 [main] Log - Step:02 -Log in with another user for authorization
-[INFO ] 2025-03-12 11:58:42.715 [main] Log - ExpectedResult: Logging successfull with another user
-[INFO ] 2025-03-12 11:58:42.831 [main] Log - TC:28 -2.Navigate to "Manager Authorization" module
-[INFO ] 2025-03-12 11:58:48.824 [main] Log - Step:01 -2.Navigate to "Manager Authorization" module
-[INFO ] 2025-03-12 11:58:49.902 [main] Log - ExpectedResult:  -Manager Authorization Transfer windows opening
-[INFO ] 2025-03-12 11:58:49.962 [main] Log - TC:29 -2.Navigate to "Manager Authorization" module
-[INFO ] 2025-03-12 11:58:54.303 [main] Log - Step:01 -click transfer button
-[INFO ] 2025-03-12 11:58:55.381 [main] Log - ExpectedResult:  -Transfer Tabs Loads
-[INFO ] 2025-03-12 11:58:55.443 [main] Log - TC:30 - Refresh Loan Opening Entry
-[INFO ] 2025-03-12 11:58:59.751 [main] Log - ExpectedResult:  -Click "Refresh" button
-[INFO ] 2025-03-12 11:59:00.817 [main] Log - ExpectedResult:  -Loan opening entry displayed
-[INFO ] 2025-03-12 11:59:00.865 [main] Log - TC:31 - Authorize Loan Entry as Manager
-[INFO ] 2025-03-12 11:59:14.973 [main] Log - Step:02 -Click "Authorize" button
-[INFO ] 2025-03-12 11:59:16.045 [main] Log - ExpectedResult: Entry authorized
-[INFO ] 2025-03-12 11:59:40.393 [main] Log - Logout
-[INFO ] 2025-03-12 11:59:45.570 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-03-12 11:59:46.646 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-03-21 18:03:19.710 [main] Log - *** Running test method AccountOpening_loanOpening_ACOPL_TwoWheeler...
+[INFO ] 2025-03-21 18:03:23.463 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-03-21 18:03:27.115 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-03-21 18:03:28.438 [main] Log - PC Registration
+[INFO ] 2025-03-21 18:03:29.518 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-03-21 18:03:30.593 [main] Log - Step:02 - Enter PC Name in Name field.
+[INFO ] 2025-03-21 18:03:39.273 [main] Log - Step:03 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-03-21 18:03:43.594 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-03-21 18:03:48.621 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-03-21 18:03:48.859 [main] Log - Valid Login
+[INFO ] 2025-03-21 18:03:49.914 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-21 18:03:50.996 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-03-21 18:04:03.339 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-03-21 18:04:04.408 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-21 18:04:05.479 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-21 18:04:25.830 [main] Log - Step:01 Navigate to Account opening
+[INFO ] 2025-03-21 18:04:25.831 [main] Log - Step:02 Select Loan opening and Click Loan and Advance (ACOPL)
+[INFO ] 2025-03-21 18:04:25.832 [main] Log - Step:03 Choose Two Wheeler loan (23027)
+[INFO ] 2025-03-21 18:04:26.900 [main] Log - Expected result: Two Wheeler Loan selection (23027) screen is displayed
+[INFO ] 2025-03-21 18:04:31.473 [main] Log - Step:01 - Click customer search icon
+[INFO ] 2025-03-21 18:04:32.657 [main] Log - Step:02 - 2.Enter customer Name or alphabet
+[INFO ] 2025-03-21 18:04:36.966 [main] Log - click on search button
+[INFO ] 2025-03-21 18:04:41.106 [main] Log - Step:03 - Select customer from search results
+[INFO ] 2025-03-21 18:04:41.157 [main] Log - Expected Result:Selected customer is  populated in the form
+[INFO ] 2025-03-21 18:04:48.786 [main] Log - Step:01 Click on the Add Button
+[INFO ] 2025-03-21 18:04:48.787 [main] Log - Expected Result: Possible to click the Add Button
+[INFO ] 2025-03-21 18:04:53.131 [main] Log - Step:01 Verify if Previous Active loan popup comes and Click OK button
+[INFO ] 2025-03-21 18:04:53.132 [main] Log - Expected Result: OkClicked and customer details are displayed in grid
+[INFO ] 2025-03-21 18:04:57.536 [main] Log - Step:01 select Account info Tab
+[INFO ] 2025-03-21 18:04:57.537 [main] Log - Expected Result:Account info tab is opened
+[INFO ] 2025-03-21 18:05:03.021 [main] Log - Step:01 Enter resolution No
+[INFO ] 2025-03-21 18:05:03.021 [main] Log - Expected result:Possible to enter Resolution No
+[INFO ] 2025-03-21 18:05:08.535 [main] Log - Step:01 Enter resolution date
+[INFO ] 2025-03-21 18:05:08.536 [main] Log - Possible to enter Resolution date
+[INFO ] 2025-03-21 18:05:17.408 [main] Log - Step:01 Choose Referred By from dropdown
+[INFO ] 2025-03-21 18:05:17.409 [main] Log - Expected Result: Possible to choose the Referred By from the drop down
+[INFO ] 2025-03-21 18:05:21.262 [main] Log - Step:01 Choose Canvasser Name  from dropdown
+[INFO ] 2025-03-21 18:05:21.291 [main] Log - Expected Result: Possible to choose the Canvasser Name from the drop down and Canvasser code is displayed
+[INFO ] 2025-03-21 18:05:26.746 [main] Log - "Step:01 Enter Equitable Mort Reg.No.
+[INFO ] 2025-03-21 18:05:26.747 [main] Log - Expected result: Possible to give the Equitable Mort Reg.No
+[INFO ] 2025-03-21 18:05:32.238 [main] Log - Step:01 select Date from EMR Date picker
+[INFO ] 2025-03-21 18:05:32.239 [main] Log - Expected Result:Possible to select the date from date picker
+[INFO ] 2025-03-21 18:05:42.348 [main] Log - Step:01 Enter Agentcode
+[INFO ] 2025-03-21 18:05:42.392 [main] Log - Expected Result: Possible to enter agentcode and Agentname is not displayed
+[INFO ] 2025-03-21 18:05:52.407 [main] Log - Step:01 Enter DSA code
+[INFO ] 2025-03-21 18:05:52.444 [main] Log - Expected Result:  Possible to enter DSAcode and DSAname is not displayed
+[INFO ] 2025-03-21 18:05:56.881 [main] Log - Step:01 -  Click the 'Next' button after giving all the details in the account info tab
+[INFO ] 2025-03-21 18:05:56.882 [main] Log - Expected Result: Redirected to the securities tab
+[INFO ] 2025-03-21 18:06:03.708 [main] Log - Step:01 - Vehicle tab displayed and enter Vehicle no
+[INFO ] 2025-03-21 18:06:03.708 [main] Log - Expected Result: Given Vehicleno details are accepted
+[INFO ] 2025-03-21 18:06:10.760 [main] Log - Step:01 - Enter RC no
+[INFO ] 2025-03-21 18:06:10.761 [main] Log - Expected Result: Given RC.No details are accepted
+[INFO ] 2025-03-21 18:06:13.147 [main] Log - Step:01 Choose Vehicle status from dropdown
+[INFO ] 2025-03-21 18:06:13.147 [main] Log - Expected Result: Possible to choosen vehicle status are accepted
+[INFO ] 2025-03-21 18:06:15.579 [main] Log - Step:01 Choose Vehicle Type from dropdown
+[INFO ] 2025-03-21 18:06:15.580 [main] Log - Expected Result: Possible to choosen vehicle Type are accepted
+[INFO ] 2025-03-21 18:06:20.993 [main] Log - Step:01 Enter Vehicle details
+[INFO ] 2025-03-21 18:06:20.994 [main] Log - Expected Result: Given Vehicle details are accepted
+[INFO ] 2025-03-21 18:06:23.408 [main] Log - Step:01 Choose Vehicle category from dropdown
+[INFO ] 2025-03-21 18:06:23.409 [main] Log - Expected Result: Possible to choosen vehicle category are accepted
+[INFO ] 2025-03-21 18:06:28.819 [main] Log - Step:01 Enter Ex. Showroom Price in Worth field.
+[INFO ] 2025-03-21 18:06:28.820 [main] Log - Expected Result: Given Ex. Showroom Price are accepted
+[INFO ] 2025-03-21 18:06:34.251 [main] Log - Step:01 Enter Road Tax
+[INFO ] 2025-03-21 18:06:34.252 [main] Log - Expected Result: Given Road Tax details are accepted
+[INFO ] 2025-03-21 18:06:39.681 [main] Log - Step:01 Enter insurance amt
+[INFO ] 2025-03-21 18:06:39.681 [main] Log - Expected Result: Given insurance details are accepted
+[INFO ] 2025-03-21 18:06:45.149 [main] Log - Step:01 Enter registration & other chargers
+[INFO ] 2025-03-21 18:06:45.151 [main] Log - Expected Result: Given registration and other chargers details are accepted
+[INFO ] 2025-03-21 18:06:50.623 [main] Log - Step:01 Enter Dealer Discount
+[INFO ] 2025-03-21 18:06:50.624 [main] Log - Expected Result: Given dealer discount details are accepted
+[INFO ] 2025-03-21 18:06:55.093 [main] Log - Step:01 Click Get Button
+[INFO ] 2025-03-21 18:06:55.291 [main] Log - Expected Result: On road price and Worth gets displayed 
+[INFO ] 2025-03-21 18:07:00.754 [main] Log - Step:01 Enter Down payment
+[INFO ] 2025-03-21 18:07:00.755 [main] Log - Expected Result:Given Down payment details are accepted
+[INFO ] 2025-03-21 18:07:06.200 [main] Log - Step:01 Enter insurance Document No
+[INFO ] 2025-03-21 18:07:06.201 [main] Log - Expected Result:Given insurance documentno details are accepted
+[INFO ] 2025-03-21 18:07:11.678 [main] Log - Step:01 Enter year of Manufacture
+[INFO ] 2025-03-21 18:07:11.678 [main] Log - Expected Result:Given year of Manufacture details are accepted
+[INFO ] 2025-03-21 18:07:17.152 [main] Log - Step:01 Enter IDV
+[INFO ] 2025-03-21 18:07:17.152 [main] Log - Expected Result:Given IDV details are accepted
+[INFO ] 2025-03-21 18:07:19.627 [main] Log - Step:01 Select Insurance Provider
+[INFO ] 2025-03-21 18:07:19.628 [main] Log - Expected Result: Selected insurance provider gien details are accepted
+[INFO ] 2025-03-21 18:07:25.125 [main] Log - Step:01 Enter Vehicle color
+[INFO ] 2025-03-21 18:07:25.125 [main] Log - Expected Result:Given Vehicle colors are accepted
+[INFO ] 2025-03-21 18:07:30.601 [main] Log - "Step:01 Choose date from Reg.Date picker.
+[INFO ] 2025-03-21 18:07:30.601 [main] Log - Expected Result:Possible to select insured upto date from date picker
+[INFO ] 2025-03-21 18:07:33.049 [main] Log - Step:01 Select registration mode
+[INFO ] 2025-03-21 18:07:33.050 [main] Log - Expected Result: Selected insurance provider gien details are accepted
+[INFO ] 2025-03-21 18:07:38.507 [main] Log - Step:01 Enter permit No
+[INFO ] 2025-03-21 18:07:38.508 [main] Log - Expected Result:Given permitNo details are accepted
+[INFO ] 2025-03-21 18:07:44.013 [main] Log - Step:01 Enter Engine No
+[INFO ] 2025-03-21 18:07:44.013 [main] Log - Expected Result:Given engine no details are accepted
+[INFO ] 2025-03-21 18:07:49.493 [main] Log - Step:01 Enter Chassis No
+[INFO ] 2025-03-21 18:07:49.493 [main] Log - Expected Result:Given Chassis No details are accepted
+[INFO ] 2025-03-21 18:07:55.933 [main] Log - Step:01 Select dealer from dropdown
+[INFO ] 2025-03-21 18:07:55.934 [main] Log - Expected Result: Selected dealer details from dropdown are accepted
+[INFO ] 2025-03-21 18:07:58.369 [main] Log - Step:01 Select sub dealer from dropdown
+[INFO ] 2025-03-21 18:07:58.370 [main] Log - Expected Result: Selected sub dealer details from dropdown are accepted
+[INFO ] 2025-03-21 18:08:02.787 [main] Log - Step:01 Select Make from dropdown
+[INFO ] 2025-03-21 18:08:02.788 [main] Log - Expected Result: Selected Make details from dropdown are accepted
+[INFO ] 2025-03-21 18:08:05.239 [main] Log - Step:01 Select model dropdown
+[INFO ] 2025-03-21 18:08:05.240 [main] Log - Expected Result: Selected Model details from dropdown are accepted
+[INFO ] 2025-03-21 18:08:10.687 [main] Log - Step:01 Enter variant name
+[INFO ] 2025-03-21 18:08:10.688 [main] Log - Expected Result:Given variant details are accepted
+[INFO ] 2025-03-21 18:08:16.200 [main] Log - Step:01 Enter RTO Details
+[INFO ] 2025-03-21 18:08:16.200 [main] Log - Expected Result:Given RTO details are accepted
+[INFO ] 2025-03-21 18:08:18.680 [main] Log - Step:01 Select purpose from dropdown
+[INFO ] 2025-03-21 18:08:18.680 [main] Log - Expected Result: Selected purpose from dropdown are accepted
+[INFO ] 2025-03-21 18:08:32.863 [main] Log - "Step:01 Choose past date from Insured Upto Date picker.
+[INFO ] 2025-03-21 18:08:32.901 [main] Log - Expected Result:Insured upto date should not be less than Transaction Date
+[INFO ] 2025-03-21 18:08:43.595 [main] Log - "Step:01. Choose future date from Insured Upto Date picker(less than tramsaction date)
+[INFO ] 2025-03-21 18:08:43.595 [main] Log - "Step:02. Given all details
+[INFO ] 2025-03-21 18:08:43.596 [main] Log - "Step:03. Click Add Button
+[INFO ] 2025-03-21 18:09:04.668 [main] Log - Expected Result: Given details should be displayed in the grid
+[INFO ] 2025-03-21 18:09:04.669 [main] Log - Expected Result:Given details should be shows in the grid
+[INFO ] 2025-03-21 18:09:09.093 [main] Log - Step:01 -  Click 'Next' button 
+[INFO ] 2025-03-21 18:09:09.094 [main] Log - Expected Result: Nominee tab will be displayed
+[INFO ] 2025-03-21 18:09:13.526 [main] Log - Step:01 -  Untick 'Nominee Not required' checkbox
+[INFO ] 2025-03-21 18:09:13.526 [main] Log - Expected Result: Nominee details fields will be display
+[INFO ] 2025-03-21 18:09:18.227 [main] Log - Step:01 - Click the customer search icon option
+[INFO ] 2025-03-21 18:09:18.229 [main] Log - Expected Result: customer search popup window will be opened
+[INFO ] 2025-03-21 18:09:19.377 [main] Log - Step:01 - 1.Enter the name or alphabets in the name field in customer search popup window
+[INFO ] 2025-03-21 18:09:23.677 [main] Log - Step: 02 - Click the search button
+[INFO ] 2025-03-21 18:09:23.678 [main] Log - Expected Result: customers will be display against the given details
+[INFO ] 2025-03-21 18:09:27.853 [main] Log - Step:01 - Select the customer from the popup window
+[INFO ] 2025-03-21 18:09:28.070 [main] Log - Selected customer details will be autoloads in the fields expect Relation field
+[INFO ] 2025-03-21 18:09:30.470 [main] Log - Step:01 Select Relation from the drop down field
+[INFO ] 2025-03-21 18:09:30.471 [main] Log - Expected Result: Selected relation from dropdown are accepted
+[INFO ] 2025-03-21 18:09:34.888 [main] Log - Step:01 Click  Add Button
+[INFO ] 2025-03-21 18:09:34.889 [main] Log - Expected Result: Given Nominee details showing in the grid
+[INFO ] 2025-03-21 18:09:39.384 [main] Log - Step:01 Click Next Button
+[INFO ] 2025-03-21 18:09:39.386 [main] Log - Expected Result: Loan details tab will be display
+[INFO ] 2025-03-21 18:09:44.956 [main] Log - Step:01.Enter sanction amount
+[INFO ] 2025-03-21 18:09:44.957 [main] Log - Expected Result:Possibe to give the sanction amount
+[INFO ] 2025-03-21 18:09:58.467 [main] Log - Step:01.Enter No. of Installments
+[INFO ] 2025-03-21 18:09:58.468 [main] Log - Expected Result:Possibe to give the No.of Installments
+[INFO ] 2025-03-21 18:10:07.031 [main] Log - Step:01 Click Get Values
+[INFO ] 2025-03-21 18:10:07.219 [main] Log - Expected Result: Values auto-loaded (ROI, Amount, etc.Repay Start Date, Due Date, Pay Amount will be autoloaded, Net Payable)
+[INFO ] 2025-03-21 18:10:09.701 [main] Log - Step:01 Select Trans. Mode 'Cash'
+[INFO ] 2025-03-21 18:10:09.702 [main] Log - Expected Result: Possible to select the trans mode as cash
+[INFO ] 2025-03-21 18:10:14.113 [main] Log - Step:01 click save
+[INFO ] 2025-03-21 18:10:23.991 [main] Log - Expected Result: Loan is submitted, summary is displayed
+[INFO ] 2025-03-21 18:10:24.077 [main] Log - Logout
+[INFO ] 2025-03-21 18:10:29.308 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-03-21 18:10:30.394 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-03-21 18:10:31.131 [main] Log - TC:70 - Login with Another User
+[INFO ] 2025-03-21 18:10:32.172 [main] Log - Exception org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SPTVMLAP-2631', ip: '192.168.176.164', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 136.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250317120031, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14988, moz:profile: C:\Users\VIJAYA~1.A\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 3e7444ef-45c5-4d73-8cfe-035354d8a577
+*** Element info: {Using=xpath, value=//*[@id="txtUserName_txt"]}

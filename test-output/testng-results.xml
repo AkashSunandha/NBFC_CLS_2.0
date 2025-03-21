@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-12T11:50:06 IST" name="Default suite" finished-at="2025-03-12T11:59:47 IST" duration-ms="581537">
+  <suite started-at="2025-03-21T18:03:18 IST" name="Default suite" finished-at="2025-03-21T18:10:32 IST" duration-ms="433354">
     <groups>
     </groups>
-    <test started-at="2025-03-12T11:50:06 IST" name="Default test" finished-at="2025-03-12T11:59:47 IST" duration-ms="581537">
-      <class name="com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit@c055c54]" started-at="2025-03-12T11:50:06 IST" name="reference" finished-at="2025-03-12T11:50:06 IST" duration-ms="7" status="PASS">
+    <test started-at="2025-03-21T18:03:18 IST" name="Default test" finished-at="2025-03-21T18:10:32 IST" duration-ms="433354">
+      <class name="com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash@ccb4b1b]" started-at="2025-03-21T18:03:18 IST" name="reference" finished-at="2025-03-21T18:03:18 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit@c055c54]" started-at="2025-03-12T11:50:06 IST" name="customerRegister" data-provider="TestData" finished-at="2025-03-12T11:59:47 IST" duration-ms="580817" status="PASS">
+        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash@ccb4b1b]" started-at="2025-03-21T18:03:19 IST" name="customerRegister" data-provider="TestData" finished-at="2025-03-21T18:10:32 IST" duration-ms="432612" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{AccountNo=1, Amount=200,000.00, customerID=102000015729, Duration=5, Foliono=5, Frequency=2, InterestTransferAmount=1,000.00, LedgerNo=11, Lien Amount=1,000.00, Lien Remark=test01, NomineeCustomerID=103000012745, OperatorCustomerID=103000012519, OperatorRemark=Adding new operator, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, ReferenceBy=NITHIN, Relation/Desig.=Father, Remark=test, Run=Yes, TestScenario=AccountOpening_FixedDeposit, Transactionid=617339}]]>
+                <![CDATA[{Agentcode=7, ChassisNo=AWZUXX8P7EA123456, customerID=103000012417, customerName=B, customerName1=K, DealerDiscount=1200, DownPayment=500, DSACode=1, EMRDate=15/04/2025, EngineNo=J3V1063002345, EquitableMortRegNo=Ad343, EXshowroomprice=9500, IDV=1800, Insurance=600, InsuranceDocNo=PAS789456321, InsuredFutureDate=25/10/2300, InsuredPastDate=14/03/2030, NoOfInstallement=36, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, PermitNo=KA0H378910039, RegDate=24/03/2025, Regotherchargers=100, ResolutionNo=1342, ResoultionDate=30/05/2025, RoadTax=700, RTODetails=DL, Run=Yes, SanctionedAmount=8519, TestScenario=AccountOpening_loanOpening_ACOPL_TwoWheeler, Transactionid=677536, Variant=ZXI, VehicleColor=Black, VehicleDetails=BMW Z models, Yearofmanufacture=2025}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@d176a31]]>
+                <![CDATA[org.testng.TestRunner@5965844d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- customerRegister -->
-      </class> <!-- com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit -->
+      </class> <!-- com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
