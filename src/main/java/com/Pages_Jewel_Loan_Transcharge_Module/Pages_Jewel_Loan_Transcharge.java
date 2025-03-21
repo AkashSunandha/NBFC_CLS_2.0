@@ -62,6 +62,7 @@ public class Pages_Jewel_Loan_Transcharge
 		public By SummaryOperation = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/table[1]");
 		public By ClosePoup = By.xpath("//input[@id ='closewarning']");
 		public By TransCashID = By.xpath("//span[@id ='ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID']");
+		public By TotCredDebit = By.xpath("//input[@id = 'txtTotalCrDr_txt']");
 		
 		//Authorization
 		public By AuthorizeCancel = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[@class='submenu']/ul[@id='CreateMenu']/li[10]/div[1]");

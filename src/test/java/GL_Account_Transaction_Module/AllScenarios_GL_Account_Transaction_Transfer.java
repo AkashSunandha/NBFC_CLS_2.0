@@ -21,8 +21,9 @@ import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
 import Pages_GL_Account_Transaction_Module.GL_Account_Transaction_Cash;
+import Pages_GL_Account_Transaction_Module.GL_Account_Transaction_Transfer;
 
-public class AllScenarios_GL_Account_Transaction_Cash extends Base_Class {
+public class AllScenarios_GL_Account_Transaction_Transfer extends Base_Class {
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
@@ -33,11 +34,11 @@ public class AllScenarios_GL_Account_Transaction_Cash extends Base_Class {
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	com.Pages_Jewel_Gold_Loan_Renewal_Module.Jewel_Gold_Loan_Renewal_Cash GoldLoanRenewalCash = new com.Pages_Jewel_Gold_Loan_Renewal_Module.Jewel_Gold_Loan_Renewal_Cash();
 	Jewel_Loan_Transcharge_Cash loantranscharge = new Jewel_Loan_Transcharge_Cash();
-	GL_Account_Transaction_Cash GLTransaction = new GL_Account_Transaction_Cash();
+	GL_Account_Transaction_Transfer GLTransaction = new GL_Account_Transaction_Transfer();
 	
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("GL_Acc_Trans_Cash");
+		ExcelReader = new com.Utility.ExcelReader("GL_Acc_Trans_Transfer");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -91,52 +92,55 @@ public class AllScenarios_GL_Account_Transaction_Cash extends Base_Class {
 				//TC_10 ---> NetPayableandRecoveryCalculation
 				GLTransaction.NetPayableandRecoveryCalculation(testdata, context);
 				
-				//TC_11 ---> TrnsmodeDropdownValidation
+				//TC_11 ---> FieldPresenceBelowNetPayable
+				GLTransaction.FieldPresenceBelowNetPayable();
+				
+				//TC_12 ---> TrnsmodeDropdownValidation
 				GLTransaction.TrnsmodeDropdownValidation();
 				
-				//TC_12 ---> GLTransactionCreditandCash
+				//TC_13 ---> GLTransactionCreditandCash
 				GLTransaction.GLTransactionCreditandCash();
 				
-				//TC_13 ---> EnterPartyNameforTransaction
+				//TC_14 ---> EnterPartyNameforTransaction
 				GLTransaction.EnterPartyNameforTransaction(testdata, context);
 				
-				//TC_14 ---> EnterParticularsforTransaction
+				//TC_15 ---> EnterParticularsforTransaction
 				GLTransaction.EnterParticularsforTransaction(testdata, context);
 				
-				//TC_15 ---> GLTransactionsCreditandCash
+				//TC_16 ---> GLTransactionsCreditandCash
 				GLTransaction.GLTransactionsCreditandCash();
 				
-				//TC_16 ---> TransactionSummaryValidation
+				//TC_17 ---> TransactionSummaryValidation
 				GLTransaction.TransactionSummaryValidation();
 				
-				//TC_17 ---> LogintoNBFcApplicationinadifferentuser
+				//TC_18 ---> LogintoNBFcApplicationinadifferentuser
 				GLTransaction.LogintoNBFcApplicationinadifferentuser();
 				
-				//TC_18 ---> LogintoNBFcApplicationinadifferentuserlogin
+				//TC_19 ---> LogintoNBFcApplicationinadifferentuserlogin
 				GLTransaction.LogintoNBFcApplicationinadifferentuserlogin();
 				
-				//TC_19 ---> LogintoNBFcApplicationinadifferentuserAuthorizeandcancel
+				//TC_20 ---> LogintoNBFcApplicationinadifferentuserAuthorizeandcancel
 				GLTransaction.LogintoNBFcApplicationinadifferentuserAuthorizeandcancel();
 				
-				//TC_20 ---> CashierAuthorisationRefresh
+				//TC_21 ---> CashierAuthorisationRefresh
 				GLTransaction.CashierAuthorisationRefresh();
 				
-				//TC_21 ---> SelectCashierCashTransaction
+				//TC_22 ---> SelectCashierCashTransaction
 				GLTransaction.SelectCashierCashTransaction();
 				
-				//TC_22 ---> CashierCashAuthorization
+				//TC_23 ---> CashierCashAuthorization
 				GLTransaction.CashierCashAuthorization();
 				
-				//TC_23 ---> ManagerCashAuthorisation
+				//TC_24 ---> ManagerCashAuthorisation
 				GLTransaction.ManagerCashAuthorisation();
 				
-				//TC_24 ---> CashAuthorizationRefresh
+				//TC_25 ---> CashAuthorizationRefresh
 				GLTransaction.CashAuthorizationRefresh();
 				
-				//TC_25 ---> SelectCashTransactionManagerAuthorisation
+				//TC_26 ---> SelectCashTransactionManagerAuthorisation
 				GLTransaction.SelectCashTransactionManagerAuthorisation();
 				
-				//TC_26 ---> CashManagerAuthorization
+				//TC_27 ---> CashManagerAuthorization
 				GLTransaction.CashManagerAuthorization();
 				
 			

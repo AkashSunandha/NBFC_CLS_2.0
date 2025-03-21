@@ -36,7 +36,7 @@ import com.Utility.ScreenShot;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
-public class GL_Account_Transaction_Cash extends Base_Class {
+public class GL_Account_Transaction_Transfer extends Base_Class {
 	
 	GL_Account_Transaction GLTransaction = new GL_Account_Transaction();
 	
@@ -407,10 +407,43 @@ public boolean NetPayableandRecoveryCalculation(Map<Object, Object> testdata, IT
 
 }
 
+public boolean FieldPresenceBelowNetPayable()throws InterruptedException {
+	
+	ExtentTestManager.startTest("TC:11 - Field Presence Below Net Payable");
+	Log.info("TC:11 - Field Presence Below Net Payable");
+	
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+
+	WebElement Transmode = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//Select[@id ='ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_ddlTrnType']")));
+    Assert.assertTrue(Transmode.isDisplayed(), "Validation Failed: Transaction Mode field is not displayed.");
+	
+	WebElement Partyname = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_txtPartyName_txt']")));
+    Assert.assertTrue(Partyname.isDisplayed(), "Validation Failed: Party Name field is not displayed.");
+	
+	WebElement Refno = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_txtRefNo_txt']")));
+    Assert.assertTrue(Refno.isDisplayed(), "Validation Failed: Reference Number field is not displayed.");
+	
+	WebElement Particulars = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_txtRemarks_txt']")));
+    Assert.assertTrue(Particulars.isDisplayed(), "Validation Failed: Particulars field is not displayed.");
+	
+	WebElement Appmanager = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_ddlAppManager_ddl']")));
+    Assert.assertTrue(Appmanager.isDisplayed(), "Validation Failed: Approving Manager field is not displayed.");
+	
+    ExtentTestManager.getTest().log(Status.INFO, "Step:01 - Verify presence of Trnsmode, partyname, Ref no, particulars, App.manager fields");
+    Log.info("Step:01 - Verify presence of Trnsmode, partyname, Ref no, particulars, App.manager fields");
+    
+    ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Fields are present");
+    Log.info("Expected Result: Fields are present");
+
+    ExtentTestManager.endTest();
+	return true;
+
+}
+
 public boolean TrnsmodeDropdownValidation() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:11 - Trnsmode Dropdown Validation");
-	Log.info("TC:11 - Trnsmode Dropdown Validation");
+	ExtentTestManager.startTest("TC:12 - Trnsmode Dropdown Validation");
+	Log.info("TC:12 - Trnsmode Dropdown Validation");
 	
 	ScrollUntilElementVisible(GLTransaction.TransMode);
 	click(GLTransaction.TransMode);
@@ -424,6 +457,8 @@ public boolean TrnsmodeDropdownValidation() throws InterruptedException{
 	ExtentTestManager.endTest();
 	return true;
 }
+
+
 
 public boolean GLTransactionCreditandCash() throws InterruptedException{
 	

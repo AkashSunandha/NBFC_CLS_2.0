@@ -79,6 +79,8 @@ public class Pages_Jewel_Gold_Loan_Renewals
 		public By TrasID = By.xpath("//span[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID']");
 		public By SummaryPage = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/table[1]");
 		public By TransferTab = By.xpath("//span[@id ='__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer']");
+		public By TotCredDebit = By.xpath("//input[@id = 'txtTotalCrDr_txt']");
+		public By LimitAmount = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstLoanDetails_ctrl0_LDF_txtDebitLimit_txt']");
 		//Post debit
 		
 		public By PostDebit = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstApproval_ctrl0_ucClosureApproval_btnAutoPost']");

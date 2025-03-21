@@ -34,6 +34,8 @@ public class GL_Account_Transaction
 		public By GLaccname = By.xpath("//input [@id = 'hyjackText0']");      
 		public By GLacccode = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_txtGLCode_txt']");
 		public By TransType = By.xpath("//Select[@id ='ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_ddlTrnType']");
+		public By RefNo = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_txtRefNo_txt']");
+		public By AppManager = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_ddlAppManager_ddl']");
 		public By GoButton = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_btnGo']");
 		public By PreTranCheckbox = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_chkLastN']");
 		public By PreviousTrans = By.xpath("//div[@id='ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_divLastNT']");

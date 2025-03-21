@@ -53,6 +53,14 @@ public boolean FetchwithTransID(String transID) throws InterruptedException {
 	return true;
 		
 }
+public boolean FetchwithAmount(String Amount) throws InterruptedException {
+	
+	input(LoanTranscharge.AccountNum,Amount);
+		
+	ExtentTestManager.endTest();
+	return true;
+		
+}
 public static  String generateAccountNumber() throws ClassNotFoundException {
 	
     Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -936,65 +944,86 @@ public boolean PostDebitPopUpAccountNumber(Map<Object, Object> testdata, ITestCo
 	Log.info("TC:28 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-
-	if(ElementDisplayed(LoanTranscharge.AccountNum)) {
-	click(LoanTranscharge.AccountNum);
-	WebElement AccountNumber = driver.findElement(LoanTranscharge.AccountNum);
-	String EnterAccountNumber = testdata.get("Account_Number").toString();
-	input(LoanTranscharge.AccountNum, EnterAccountNumber);
-
-	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Tick mark and select an account from the list of accounts displayed");
-	Log.info("Step 1: Tick mark and select an account from the list of accounts displayed");
-					
-	Assert.assertTrue(ElementDisplayed(LoanTranscharge.AmountField), "Validation Failed: Account Number is not displayed");
-					
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account  is selected ");
-	Log.info("Expected Result: Account  is selected ");
-	}	
 	
+	if(ElementDisplayed(LoanTranscharge.AccountNum)) {
+		click(LoanTranscharge.AccountNum);
+		
+		WebElement AccountNumber = driver.findElement(LoanTranscharge.AccountNum);
+		String EnterAccountNumber = testdata.get("Account_Number").toString();
+		
+		input(LoanTranscharge.AccountNum, EnterAccountNumber);
+		AccountNumber.sendKeys(Keys.TAB);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Tick mark and select an account from the list of accounts displayed");
+		Log.info("Step 1: Tick mark and select an account from the list of accounts displayed");
+		
+		WebElement amountField = wait.until(ExpectedConditions.elementToBeClickable(LoanTranscharge.AmountField));
+        Assert.assertTrue(ElementDisplayed(LoanTranscharge.AmountField), "Validation Failed: Amount field is not displayed after entering Account Number.");
+    } else {
+        Log.error("Account Number field is not displayed.");
+        return false;
+    }
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account  is selected ");
+		Log.info("Expected Result: Account  is selected ");
+		
+
 	ExtentTestManager.endTest();
 	return true;
 
 }
-public boolean PostDebitPopUpEnterAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
-		
-	ExtentTestManager.startTest("TC:29 - POST DEBIT popup is present");
-	Log.info("TC:29 - POST DEBIT popup is present");
-		
-	WebDriverWait wait = new WebDriverWait(driver, 10);
-		
-	if(ElementDisplayed(LoanTranscharge.AmountField)) {
-	click(LoanTranscharge.AmountField);
-	WebElement Amount = driver.findElement(LoanTranscharge.AmountField);
-	String EnterAmount = testdata.get("Enter_Amount").toString();
-	input(LoanTranscharge.AmountField, EnterAmount);
 
-	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Check if data is filled in the text fields");
-	Log.info("Step 1: Check if data is filled in the text fields");
-							
-	Assert.assertTrue(ElementDisplayed(LoanTranscharge.AmountField), "Validation Failed: Account Number is not displayed");
-					
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data gets auto filled in the text fields");
-	Log.info("Expected Result: Data gets auto filled in the text fields");
-	
-	}	
-	
-	ExtentTestManager.endTest();
-	return true;
+public boolean PostDebitPopUpEnterAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+    
+    ExtentTestManager.startTest("TC:29 - POST DEBIT popup is present");
+    Log.info("TC:29 - POST DEBIT popup is present");
 
-	}
-	
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    String transAmount = "";
+
+    WebElement amountField = wait.until(ExpectedConditions.elementToBeClickable(LoanTranscharge.AmountField));
+    Assert.assertTrue(ElementDisplayed(LoanTranscharge.AmountField), "Validation Failed: Amount field is not visible.");
+
+    try {
+        WebElement totalCredDebitElement = wait.until(ExpectedConditions.visibilityOfElementLocated(LoanTranscharge.TotCredDebit));
+
+        transAmount = (String) js.executeScript("return arguments[0].value;", totalCredDebitElement);
+        
+        if (transAmount == null || transAmount.isEmpty()) {
+            transAmount = totalCredDebitElement.getText();
+        }
+
+        Log.info("Captured Transaction Amount: " + transAmount);
+
+    } catch (StaleElementReferenceException e) {
+        Log.warn("StaleElementReferenceException encountered. Retrying...");
+    }
+
+    Assert.assertFalse(transAmount.isEmpty(), "Validation Failed: Transaction amount could not be captured!");
+
+    js.executeScript("arguments[0].value=arguments[1];", amountField, transAmount);
+
+    ExtentTestManager.getTest().log(Status.PASS, "Step 2: Entered Amount in the Amount field.");
+    Log.info("Step 2: Entered Amount in the Amount field.");
+
+    String enteredValue = (String) js.executeScript("return arguments[0].value;", amountField);
+    Assert.assertEquals(enteredValue, transAmount, "Validation Failed: Entered amount does not match the captured amount.");
+
+    ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Amount is entered correctly.");
+    Log.info("Expected Result: Amount is entered correctly.");
+
+    ExtentTestManager.endTest();
+    return true;
+}
+
 public boolean PostDebitPopUpAddDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
 	ExtentTestManager.startTest("TC:30 - POST DEBIT popup is present");
 	Log.info("TC:30 - POST DEBIT popup is present");
 		
 	WebDriverWait wait = new WebDriverWait(driver, 10);
-			
-	//click(LoanClosureCash.RemoveEntry);
-	//Alert alert = driver.switchTo().alert();
-	//alert.accept();
-								
+					
 	if(ElementDisplayed(LoanTranscharge.AddButton)) {
 	click(LoanTranscharge.AddButton);
 

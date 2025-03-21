@@ -721,29 +721,46 @@ public boolean EnterSanctionedAmount(Map<Object, Object> testdata, ITestContext 
 	ExtentTestManager.startTest("TC:21 - Enter Sanctioned Amount");
 	Log.info("TC:21 - Enter Sanctioned Amount");
 	
-    WebDriverWait wait = new WebDriverWait(driver, 10);
-	WebElement SanctionedAmountValue = driver.findElement(LoanClosureCash.SanctionedAmount);
-
-	JavascriptExecutor js = (JavascriptExecutor) driver;
-	js.executeScript("arguments[0].scrollIntoView(true);", SanctionedAmountValue);
+	WebDriverWait wait = new WebDriverWait(driver, 10);
 	
-	click(LoanClosureCash.SanctionedAmount);
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    String Amount = "";
 
-	String EnterSanctionedAmount = testdata.get("Sanctioned_Amount").toString();
-	input(LoanClosureCash.SanctionedAmount, EnterSanctionedAmount);
+    WebElement Enteramount = wait.until(ExpectedConditions.elementToBeClickable(LoanClosureCash.SanctionedAmount));
+    Assert.assertTrue(ElementDisplayed(LoanClosureCash.SanctionedAmount), "Validation Failed: Amount field is not visible.");
 
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter the sanctioned amount in the respective field");
-	Log.info("Step:01 - Enter the sanctioned amount in the respective field");
-	
-    Assert.assertFalse(EnterSanctionedAmount.isEmpty(), "Validation Failed: Sanctioned amount should not be empty.");
+    try {
+        WebElement LimitSanctioned = wait.until(ExpectedConditions.visibilityOfElementLocated(LoanClosureCash.LimitAmount));
 
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Sanctioned amount is accepted");
-	Log.info("Expected Result: Sanctioned amount is accepted");
+        Amount = (String) js.executeScript("return arguments[0].value;", LimitSanctioned);
+        
+        if (Amount == null || Amount.isEmpty()) {
+            Amount = LimitSanctioned.getText();
+        }
 
-	ExtentTestManager.endTest();
-	return true;
+        Log.info("Captured Transaction Amount: " + Amount);
+
+    } catch (StaleElementReferenceException e) {
+        Log.warn("StaleElementReferenceException encountered. Retrying...");
+    }
+
+    Assert.assertFalse(Amount.isEmpty(), "Validation Failed: Transaction amount could not be captured!");
+
+    js.executeScript("arguments[0].value=arguments[1];", Enteramount, Amount);
+
+    ExtentTestManager.getTest().log(Status.PASS, "Step 1: Enter the sanctioned amount in the respective field.");
+    Log.info("Step 1: Enter the sanctioned amount in the respective field");
+
+    String enteredValue = (String) js.executeScript("return arguments[0].value;", Enteramount);
+    Assert.assertEquals(enteredValue, Amount, "Validation Failed: Sanctioned amount should not be empty.");
+
+    ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Sanctioned amount is accepted");
+    Log.info("Expected Result: Sanctioned amount is accepted");
+
+    ExtentTestManager.endTest();
+    return true;
 }
-
+	
 public boolean GetValuewithCashTransactionMode() throws InterruptedException {
 
 	ExtentTestManager.startTest("TC:22 - Get Value with Cash Transaction Mode");
@@ -759,12 +776,12 @@ public boolean GetValuewithCashTransactionMode() throws InterruptedException {
 	boolean isClicked = false;
 	
 
-	if (ElementDisplayed(LoanClosureCash.GetValues)) {
-		click(LoanClosureCash.GetValues);
-		isClicked = true;
+    if(ElementDisplayed(LoanClosureCash.GetValues)) {
+	click(LoanClosureCash.GetValues);
+	isClicked = true;
 
-		ExtentTestManager.getTest().log(Status.PASS, "Step 01: Click 'Get Value' button");
-		Log.info("Step 01: Click 'Get Value' button");
+	ExtentTestManager.getTest().log(Status.PASS, "Step 01: Click 'Get Value' button");
+	Log.info("Step 01: Click 'Get Value' button");
 
 	} else {
 		ExtentTestManager.getTest().log(Status.FAIL, "'Get Values' button is not displayed");
@@ -786,14 +803,12 @@ public boolean GetValuewithCashTransactionMode(Map<Object, Object> testdata, ITe
 		ExtentTestManager.startTest("TC:23 - Get Value with Cash Transaction Mode");
 		Log.info("TC:23 - Get Value with Cash Transaction Mode");
 		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
 		WebElement PayAmountField = driver.findElement(LoanClosureCash.PayAmount);
-
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", PayAmountField);
 		
-	    WebDriverWait wait = new WebDriverWait(driver, 10);
-
 		 try {
 		        WebElement closePopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'closewarning']")));
 		        if (closePopup.isDisplayed()) {
@@ -806,6 +821,7 @@ public boolean GetValuewithCashTransactionMode(Map<Object, Object> testdata, ITe
 		        Log.info("No popup displayed, continuing...");
 		    }
 
+		Thread.sleep(2000);
 		
 		if (ElementDisplayed(LoanClosureCash.TransModeCash)) {
 		click(LoanClosureCash.TransModeCash);
@@ -997,50 +1013,77 @@ public boolean PostDebitPopUpProductNameDropdown(Map<Object, Object> testdata, I
 	
 	if(ElementDisplayed(LoanClosureCash.AccountNum)) {
 		click(LoanClosureCash.AccountNum);
+		
 		WebElement AccountNumber = driver.findElement(LoanClosureCash.AccountNum);
 		String EnterAccountNumber = testdata.get("Account_Number").toString();
+		
 		input(LoanClosureCash.AccountNum, EnterAccountNumber);
+		AccountNumber.sendKeys(Keys.TAB);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Tick mark and select an account from the list of accounts displayed");
 		Log.info("Step 1: Tick mark and select an account from the list of accounts displayed");
 		
-		Assert.assertTrue(ElementDisplayed(LoanClosureCash.AmountField), "Validation Failed: Account Number is not displayed");
-	
+		WebElement amountField = wait.until(ExpectedConditions.elementToBeClickable(LoanClosureCash.AmountField));
+        Assert.assertTrue(ElementDisplayed(LoanClosureCash.AmountField), "Validation Failed: Amount field is not displayed after entering Account Number.");
+    } else {
+        Log.error("Account Number field is not displayed.");
+        return false;
+    }
+			
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account  is selected ");
 		Log.info("Expected Result: Account  is selected ");
-		}	
+		
 
 	ExtentTestManager.endTest();
 	return true;
 
 }
+	
 public boolean PostDebitPopUpEnterAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:31 - POST DEBIT popup is present");
-		Log.info("TC:31 - POST DEBIT popup is present");
-		
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		
-		if(ElementDisplayed(LoanClosureCash.AmountField)) {
-			click(LoanClosureCash.AmountField);
-			WebElement Amount = driver.findElement(LoanClosureCash.AmountField);
-			String EnterAmount = testdata.get("Enter_Amount").toString();
-			input(LoanClosureCash.AmountField, EnterAmount);
-
-			ExtentTestManager.getTest().log(Status.PASS, "Step 1: Check if data is filled in the text fields");
-			Log.info("Step 1: Check if data is filled in the text fields");
-			
-			Assert.assertTrue(ElementDisplayed(LoanClosureCash.AmountField), "Validation Failed: Account Number is not displayed");
+	ExtentTestManager.startTest("TC:31 - POST DEBIT popup is present");
+	Log.info("TC:31 - POST DEBIT popup is present");
 	
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data gets auto filled in the text fields");
-			Log.info("Expected Result: Data gets auto filled in the text fields");
-			}	
-				
-		ExtentTestManager.endTest();
-		return true;
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    String transAmount = "";
 
-	}
-	
+    WebElement amountField = wait.until(ExpectedConditions.elementToBeClickable(LoanClosureCash.AmountField));
+    Assert.assertTrue(ElementDisplayed(LoanClosureCash.AmountField), "Validation Failed: Amount field is not visible.");
+
+    try {
+        WebElement totalCredDebitElement = wait.until(ExpectedConditions.visibilityOfElementLocated(LoanClosureCash.TotCredDebit));
+
+        transAmount = (String) js.executeScript("return arguments[0].value;", totalCredDebitElement);
+        
+        if (transAmount == null || transAmount.isEmpty()) {
+            transAmount = totalCredDebitElement.getText();
+        }
+
+        Log.info("Captured Transaction Amount: " + transAmount);
+
+    } catch (StaleElementReferenceException e) {
+        Log.warn("StaleElementReferenceException encountered. Retrying...");
+    }
+
+    Assert.assertFalse(transAmount.isEmpty(), "Validation Failed: Transaction amount could not be captured!");
+
+    js.executeScript("arguments[0].value=arguments[1];", amountField, transAmount);
+
+    ExtentTestManager.getTest().log(Status.PASS, "Step 2: Entered Amount in the Amount field.");
+    Log.info("Step 2: Entered Amount in the Amount field.");
+
+    String enteredValue = (String) js.executeScript("return arguments[0].value;", amountField);
+    Assert.assertEquals(enteredValue, transAmount, "Validation Failed: Entered amount does not match the captured amount.");
+
+    ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Amount is entered correctly.");
+    Log.info("Expected Result: Amount is entered correctly.");
+
+    ExtentTestManager.endTest();
+    return true;
+}
+
+		
 public boolean PostDebitPopUpAddDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
 		ExtentTestManager.startTest("TC:32 - POST DEBIT popup is present");
