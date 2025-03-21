@@ -380,6 +380,23 @@ public class Base_Class {
         }
 
         System.out.println("Timeout reached, spinner still shows up intermittently.");
+    }//end
+    
+    
+    // Method to verify drop down selection
+	public boolean dropdownSelectionValidation(String expectedOption,By locator) {
+    	WebElement element = driver.findElement(locator);
+        Select dropdown = new Select(element);
+        System.out.println(dropdown.getFirstSelectedOption().getText());
+        return dropdown.getFirstSelectedOption().getText().equals(expectedOption);
     }
-
+	
+	 // Method to get the value of the entered account number
+    public boolean inputValidation(String input,By locator) {
+    	WebElement element = driver.findElement(locator);
+    	System.out.println("InputValue: "+element.getAttribute("value"));
+        return element.getAttribute("value").equals(input);
+    }
+    
+    
 }

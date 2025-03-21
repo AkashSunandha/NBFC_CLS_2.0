@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-18T11:21:22 IST" name="Default suite" finished-at="2025-03-18T11:25:01 IST" duration-ms="218959">
+  <suite started-at="2025-03-21T13:14:26 IST" name="Default suite" finished-at="2025-03-21T13:18:07 IST" duration-ms="221531">
     <groups>
     </groups>
-    <test started-at="2025-03-18T11:21:22 IST" name="Default test" finished-at="2025-03-18T11:25:01 IST" duration-ms="218959">
-      <class name="com.test.ProcessingAndPosting.AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRANSFER">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.ProcessingAndPosting.AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRANSFER@5bf22f18]" started-at="2025-03-18T11:21:22 IST" name="reference" finished-at="2025-03-18T11:21:22 IST" duration-ms="17" status="PASS">
+    <test started-at="2025-03-21T13:14:26 IST" name="Default test" finished-at="2025-03-21T13:18:07 IST" duration-ms="221531">
+      <class name="com.test.Transaction.AllScenarios_OtherLoanTransaction_Charges_CASH">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Transaction.AllScenarios_OtherLoanTransaction_Charges_CASH@5bf22f18]" started-at="2025-03-21T13:14:26 IST" name="reference" finished-at="2025-03-21T13:14:26 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.ProcessingAndPosting.AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRANSFER@5bf22f18]" started-at="2025-03-18T11:21:23 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-18T11:25:01 IST" duration-ms="217931" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Transaction.AllScenarios_OtherLoanTransaction_Charges_CASH@5bf22f18]" started-at="2025-03-21T13:14:27 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-21T13:18:07 IST" duration-ms="220708" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,14 +20,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@21422231]]>
+                <![CDATA[org.testng.TestRunner@7186333e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newCustomer -->
-      </class> <!-- com.test.ProcessingAndPosting.AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRANSFER -->
+      </class> <!-- com.test.Transaction.AllScenarios_OtherLoanTransaction_Charges_CASH -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

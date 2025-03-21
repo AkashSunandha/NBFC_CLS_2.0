@@ -33,6 +33,11 @@ public class Customer_CustomerSearch extends Base_Class{
 	public String actualUserName;
 
 	
+	public String getActualUserName(By locator) {
+		String actualUserName = driver.findElement(locator).getText();
+		System.out.println("actualUserName: "+actualUserName);
+		return actualUserName;
+	}
 	
 	public static  String generateCustId() throws ClassNotFoundException {
 		 // Method that returns the first customer ID (String) from the database
@@ -257,8 +262,7 @@ public class Customer_CustomerSearch extends Base_Class{
 //					Log.info("Expected Result: User is logged in successfully and dashboard visible");
 					
 		ExtentTestManager.endTest();
-						actualUserName = driver.findElement(custSearch.actualUserName).getText();
-						System.out.println("actualUserName: "+actualUserName);
+
 		return true;
 	}
 	

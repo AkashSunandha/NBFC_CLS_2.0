@@ -1,4 +1,4 @@
-package com.test.ProcessingAndPosting;
+package com.test.Transaction;
 
 import java.io.IOException;
 import java.util.Map;
@@ -12,14 +12,14 @@ import com.BasePackage.Base_Class;
 import com.Page_AccountOpening.GeneralOpening_SuspenseAsset;
 import com.Page_AccountOpening.LoanOpening_DepositOpn_DepositLoan;
 import com.Page_AccountOpening.LoanOpening_LoanAndAdvances_PersonalLoanWeekly;
-import com.Page_ProcessingAndPosting.ChargePosting_LoanChargePosting;
+import com.Page_Transaction.Transaction_OtherLoanTransaction_Charges;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_CASH {
+public class AllScenarios_OtherLoanTransaction_Charges_CASH {
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -27,7 +27,7 @@ public class AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_CASH
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	ChargePosting_LoanChargePosting loanChrgMths = new ChargePosting_LoanChargePosting();
+	Transaction_OtherLoanTransaction_Charges loanChrgMths = new Transaction_OtherLoanTransaction_Charges();
 	
 	
 	@BeforeSuite
@@ -44,7 +44,7 @@ public class AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_CASH
 	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("ChargePosting_LoanChargePosting_CASH");
+				ExtentTestManager.startTest("OtherLoanTransaction_Charges_CASH");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 

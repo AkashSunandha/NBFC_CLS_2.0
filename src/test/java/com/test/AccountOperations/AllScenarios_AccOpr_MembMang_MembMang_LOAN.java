@@ -1,4 +1,4 @@
-package com.test.ProcessingAndPosting;
+package com.test.AccountOperations;
 
 import java.io.IOException;
 import java.util.Map;
@@ -9,14 +9,15 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
-import com.Page_ProcessingAndPosting.ChargePosting_LoanChargePosting;
+import com.Page_AccountOperations.MemberManagement_MemberManagementLoan;
+import com.Page_Transaction.Transaction_OtherLoanTransaction_Charges;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRANSFER {
+public class AllScenarios_AccOpr_MembMang_MembMang_LOAN {
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -24,12 +25,12 @@ public class AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRAN
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	ChargePosting_LoanChargePosting loanChrgMths = new ChargePosting_LoanChargePosting();
-	
+	Transaction_OtherLoanTransaction_Charges loanChrgMths = new Transaction_OtherLoanTransaction_Charges();
+	MemberManagement_MemberManagementLoan membMangLoanMthds = new MemberManagement_MemberManagementLoan();
 	
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("LoanChargePosting");
+		ExcelReader = new com.Utility.ExcelReader("MembMang_Loan");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -41,7 +42,7 @@ public class AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRAN
 	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("ChargePosting_LoanChargePosting_TRANSFER");
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
@@ -55,20 +56,15 @@ public class AllScenarios_ProcessAndPosting_ChargePosting_LoanChargePosting_TRAN
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
-				loanChrgMths.navigateToLoanChargePosting();
-				
-				loanChrgMths.loanChargePosting(testdata, context);
+				membMangLoanMthds.navigateToMemberManagementLoan();
 
-				loanChrgMths.transaction(testdata, context);
-				
-				loanChrgMths.selectTransModeAsTransfer();
-				
-				loanChrgMths.postCreditPopUpEntry(testdata, context);
-				
-				loanChrgMths.submitTrans(testdata, context);
+				membMangLoanMthds.accountInfo();
 
-				loanChrgMths.authorizeTransfer(testdata, context);
+				membMangLoanMthds.addNewMember(testdata, context);
+				
+				membMangLoanMthds.authorizeOther(testdata, context);
 
+				
 				custSrchMthds.logout();
 
 				

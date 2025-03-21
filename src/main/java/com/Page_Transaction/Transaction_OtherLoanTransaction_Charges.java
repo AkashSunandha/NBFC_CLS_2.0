@@ -1,4 +1,4 @@
-package com.Page_ProcessingAndPosting;
+package com.Page_Transaction;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -18,7 +18,7 @@ import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
-public class ChargePosting_LoanChargePosting extends Base_Class{
+public class Transaction_OtherLoanTransaction_Charges extends Base_Class{
 	
 	String transId;
 	PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan depositLoanRepo = new PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan();

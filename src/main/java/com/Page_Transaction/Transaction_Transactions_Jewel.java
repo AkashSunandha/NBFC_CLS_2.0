@@ -213,9 +213,11 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		//Navigate to Child Window
 		String parent_Window0 = driver.getWindowHandle();
+		
 		String prinicipalAmt = driver.findElement(transJewelRepo.principal1TxtBox).getAttribute("value");
 		System.out.println("prinicipalAmt: "+prinicipalAmt);
 		ScrollUntilElementVisible(transJewelRepo.interestLogBtn);
+		
 		click(transJewelRepo.principalLogBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click and view Principal log details.");
 		Log.info("Step:01 - Click and view Principal log details.");

@@ -30,21 +30,6 @@ public class ShareOpening_AClassShare extends Base_Class{
 		click(goaldLoanRepo.goBtn);
 	}
 	
-
-//	public void navigateToChildWnd() throws InterruptedException {
-//		
-//		String parentWindow = driver.getWindowHandle();
-//		
-//		Set<String> address = driver.getWindowHandles();
-//		
-//		for(String c : address) {
-//			if(!c.equals(parentWindow)) {
-//				driver.switchTo().window(c);
-//			}
-//		}//for end
-//		
-//
-//	}//end
 	
 	public void openAClasShare() throws InterruptedException {
 		

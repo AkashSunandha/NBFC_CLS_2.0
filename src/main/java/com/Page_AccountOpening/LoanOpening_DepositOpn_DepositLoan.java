@@ -403,7 +403,6 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		ExtentTestManager.startTest("Enter account number");
 		Log.info("Enter account number");
 		
-		
 		String accNum = generateUniqueId(spAccNum, clmnNam);
 //		System.out.println("generateUniqueId: " + accNum);
 		String lastThreeDigitsOfAccNum = accNum.substring(accNum.length() - 3);

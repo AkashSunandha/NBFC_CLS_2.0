@@ -30,14 +30,6 @@ public class Customer_NewCustomer extends Base_Class{
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();	
 	String transIdCash;
 	String transIdTransfer;
-//	String spPAN = "GenerateNextPAN";
-//	String clmnNamPAN = "generated_pan";
-//	
-//	String spAadhaar = "GenerateNextAadharNumber";
-//	String clmnNamAadhaar = "generated_aadhar_number";
-//	
-//	String spMobileNum = "GenerateNextMobileNumber";
-//	String clmnNamMobileNum = "generated_mobile_number";
 	
 	
 	public void openNewCustomerWindow() throws InterruptedException {
