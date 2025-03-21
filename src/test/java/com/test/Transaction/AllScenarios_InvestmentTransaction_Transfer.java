@@ -82,18 +82,9 @@ public class AllScenarios_InvestmentTransaction_Transfer extends Base_Class{
 				
 				InvstTransaction.ClickonSubmit_TransactionButton();
 				String TransactionID= InvstTransaction.FetchTranscationIDFromINvoice();
-//				String TransactionID="677423";
-				
-						
-//				Thread.sleep(3000);
+
 				InvstTransaction.logout();
 				InvstTransaction.AuthuserLoginValidPaswrd(testdata, context);
-//				InvstTransaction.NavigatetoCashierAuthorisation();
-//				InvstTransaction.ClickonRefresh();
-//				InvstTransaction.EnterTransID(TransactionID);
-//				InvstTransaction.ClickonGoButton();
-//				InvstTransaction.ClickonTransactionCheckboxfromgrid();
-//				InvstTransaction.ClickonAuthorizeButton();
 				InvstTransaction.NavigateManagerAuthorisation();
 				InvstTransaction.ClickonTransferTab();
 				InvstTransaction.ClickonRefresh();

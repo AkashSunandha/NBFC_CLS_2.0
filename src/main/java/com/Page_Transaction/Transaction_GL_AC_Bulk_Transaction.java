@@ -20,17 +20,18 @@ import com.Page_InvestmentTransactionCash_Transfer.InvestmentTransaction_Cash_Tr
 import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
 import com.Page_Repositary.PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan;
 import com.Page_Repositary.PageRepositary_Cust_CustSearch;
+import com.Page_Repositary.PageRepositary_Transaction_GL_AC_Bulk_Transaction;
 import com.Page_Repositary.PageRepositary_Transaction_Transactions_Jewel;
 import com.Page_Repositary.PageRepositary_Transaction_Transactions_Suspense_Liability;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
-public class Transaction_Transactions_Suspense_liability extends Base_Class {
+public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	InvestmentTransaction_Cash_Transfer InvestmentTransaction = new InvestmentTransaction_Cash_Transfer();
 	PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan depositLoanRepo = new PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan();
-
+	PageRepositary_Transaction_GL_AC_Bulk_Transaction transaction_GL_AC_BulkRepo  =new PageRepositary_Transaction_GL_AC_Bulk_Transaction();
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
 	PageRepositary_Transaction_Transactions_Suspense_Liability Transactions_SusLiabilityRepo = new PageRepositary_Transaction_Transactions_Suspense_Liability();
 	Transaction_Transactions_Jewel Transactions_Jewel = new Transaction_Transactions_Jewel();
@@ -39,6 +40,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 	String transId;
 	String lastValue;
+	String Acc_No;
 	public String sp = "GetSuspenseLiabilityAccountnumber";
 	public String columnName = "Acno";
 
@@ -47,23 +49,31 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		click(Transactions_SusLiabilityRepo.goBtn);
 	}
 
-	public void transactionsSusliability() throws InterruptedException {
+	
+	public void AddButton() throws InterruptedException {
+		Thread.sleep(2000);
+		click(transaction_GL_AC_BulkRepo.AddButton);
+		ExtentSuccessMessage("Step:01 - Click on the Add Button.");
+		Log.info("Step:01 - Click on the Add Buttone.");
+	}
+	
+	public void Navigate_GL_AC_Bulk_Transaction() throws InterruptedException {
 
 		//Open Transaction Module
-		ExtentTestManager.startTest("Open Transaction Module");
-		Log.info("Open Transaction Module");
+		ExtentTestManager.startTest("Navigate to Transactions >> GL A/c Bulk Transaction.");
+		Log.info("Navigate to Transactions >> GL A/c Bulk Transaction.");
 
-		click(Transactions_SusLiabilityRepo.transactionTab);
+		click(transaction_GL_AC_BulkRepo.transactionTab);
 		ExtentSuccessMessage("Step:01 - Navigate to the transaction module in the menu.");
 		Log.info("Step:01 - Navigate to the transaction module in the menu.");
 
-		click(Transactions_SusLiabilityRepo.transactionsTab);
-		ExtentSuccessMessage("Step:02 - Click on the transaction module.");
-		Log.info("Step:02 - Click on the transaction module.");
+		click(transaction_GL_AC_BulkRepo.GL_AC_Bulk_Transaction);
+		ExtentSuccessMessage("Step:02 - Click on the GL_AC_Bulk_Transaction module.");
+		Log.info("Step:02 - Click on the GL_AC_Bulk_Transaction module.");
 
-		if (ElementDisplayed(Transactions_SusLiabilityRepo.aiBranchDropdowm)) {
-			ExtentSuccessMessage("Expected Result: Transaction module opens successfully.");
-			Log.info("Expected Result: Transaction module opens successfully.");
+		if (ElementDisplayed(transaction_GL_AC_BulkRepo.VerifyGL_AC_Bulk_transaction)) {
+			ExtentSuccessMessage("Expected Result: GL_AC_Bulk_Transaction module opens successfully.");
+			Log.info("Expected Result: GL_AC_Bulk_Transaction module opens successfully.");
 		} else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
@@ -79,20 +89,20 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		Log.info("Enter Transaction Amount");
 
 		String transAmt = testdata.get("amount").toString();
-		clear(Transactions_SusLiabilityRepo.TransAmount);
-		click(Transactions_SusLiabilityRepo.TransAmount);
-		input(Transactions_SusLiabilityRepo.TransAmount, transAmt);
+		clear(transaction_GL_AC_BulkRepo.TransAmount);
+		click(transaction_GL_AC_BulkRepo.TransAmount);
+		input(transaction_GL_AC_BulkRepo.TransAmount, transAmt);
 		ExtentSuccessMessage("Step:01 - Enter a valid transaction amount in the input field.");
 		Log.info("Step:01 - Enter a valid transaction amount in the input field.");
 		ExtentTestManager.endTest();
 	}
 
-	public void susliabilityaccountinfo(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
+	public void GLccountinfo(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 		//Select Branch
 		ExtentTestManager.startTest("Select Branch");
 		Log.info("Select Branch");
 
-		select("TRIVANDRUM", Transactions_SusLiabilityRepo.aiBranchDropdowm);
+		select("TRIVANDRUM", transaction_GL_AC_BulkRepo.aiBranchDropdown);
 		ExtentSuccessMessage("Step:01 -  Select a branch from the dropdown.");
 		Log.info("Step:01 -  Select a branch from the dropdown.");
 
@@ -101,50 +111,183 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		//Select Product Group
-		ExtentTestManager.startTest("Select Product Group");
-		Log.info("Select Product Group");
-
-		select("Suspense Liability", Transactions_SusLiabilityRepo.aiProductGroupDropdowm);
-		ExtentSuccessMessage("Step:01 -  Choose 'SUSPENSE LIABILITY' for product group.");
-		Log.info("Step:01 -  Choose 'SUSPENSE LIABILITY' for product group.");
-
-		ExtentSuccessMessage("Expected Result: Correct product group selected.");
-		Log.info("Expected Result: Correct product group selected.");
+		SelectTranscationType("Credit");
 
 		ExtentTestManager.endTest();
 
-		//Select Product Name
-		ExtentTestManager.startTest("Select Product Name");
-		Log.info("Select Product Name");
+		ExtentTestManager.startTest("Select Account Type");
+		Log.info("Select Account Type");
 
-		select("SUSPENSE LIABILITY", Transactions_SusLiabilityRepo.aiProdcutNameDropdowm);
-		ExtentSuccessMessage("Step:01 - Select 'SUSPENSE LIABILITY' for product name.");
-		Log.info("Step:01 - Select 'SUSPENSE LIABILITY' for product name.");
+		select("Accounts", transaction_GL_AC_BulkRepo.aiAccountTypeDropdown);
+		ExtentSuccessMessage("Step:01 -  Choose 'Accounts' for Transaction Type.");
+		Log.info("Step:01 -  Choose 'Accounts' for Transaction Type.");
 
-		ExtentSuccessMessage("Expected Result: Correct product Name selected.");
-		Log.info("Expected Result: Correct product Name selected.");
+		ExtentSuccessMessage("Expected Result: Correct Account Type  selected.");
+		Log.info("Expected Result: Correct Account Type  selected.");
+
+		ExtentTestManager.endTest();
+		SearchAccountpopup();
+
+		EnterTransactionAmount(testdata);
+		AddButton();
+		AddButton();
+		
+//		transModeCash();
+
+	}
+	public void GLccountinfoDebit(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
+		//Select Branch
+		ExtentTestManager.startTest("Select Branch");
+		Log.info("Select Branch");
+
+		select("TRIVANDRUM", transaction_GL_AC_BulkRepo.aiBranchDropdown);
+		ExtentSuccessMessage("Step:01 -  Select a branch from the dropdown.");
+		Log.info("Step:01 -  Select a branch from the dropdown.");
+
+		ExtentSuccessMessage("Expected Result: Correct branch  selected.");
+		Log.info("Expected Result: Correct branch  selected.");
 
 		ExtentTestManager.endTest();
 
+		SelectTranscationType("Debit");
+
+		ExtentTestManager.endTest();
+
+		ExtentTestManager.startTest("Select Account Type");
+		Log.info("Select Account Type");
+
+		select("Accounts", transaction_GL_AC_BulkRepo.aiAccountTypeDropdown);
+		ExtentSuccessMessage("Step:01 -  Choose 'Accounts' for Transaction Type.");
+		Log.info("Step:01 -  Choose 'Accounts' for Transaction Type.");
+
+		ExtentSuccessMessage("Expected Result: Correct Account Type  selected.");
+		Log.info("Expected Result: Correct Account Type  selected.");
+
+		ExtentTestManager.endTest();
+		SearchAccountpopup();
+
+		EnterTransactionAmount(testdata);
+		AddButton();
+		AddButton();
+		
+//		transModSeCash();
+
+	}
+
+	public void SelectTranscationType(String Value) throws InterruptedException {
 		//Select Transaction Type
 		ExtentTestManager.startTest("Select Transaction Type");
 		Log.info("Select Transaction Type");
 
-		select("Credit", Transactions_SusLiabilityRepo.aiTransTypeDropdwon);
-		ExtentSuccessMessage("Step:01 - Select transaction type as 'Credit'.");
-		Log.info("Step:01 - Select transaction type as 'Credit'.");
+		select(Value, transaction_GL_AC_BulkRepo.aiTransactionTypeDropdown);
 
-		ExtentSuccessMessage("Expected Result: Transaction type is set.");
-		Log.info("Expected Result: Transaction type is set.");
+		ExtentSuccessMessage("Step:01 -  Choose '"+Value+"' for Transaction Type.");
+		Log.info("Step:01 -  Choose '"+Value+"' for Transaction Type.");
+
+		ExtentSuccessMessage("Expected Result: Correct Transaction Type selected.");
+		Log.info("Expected Result: Correct Transaction Type selected.");
+		ExtentTestManager.endTest();
+	}
+	public void SearchAccountpopup() throws InterruptedException {
+		//		Accountpopup
+		ExtentTestManager.startTest("Search Account popup");
+		Log.info("Search Account popup");
+
+		click(transaction_GL_AC_BulkRepo.Accountpopup);
+		ExtentSuccessMessage("Step:01 - Click on the Search Account popup.");
+		Log.info("Step:01 - Click on the Search Account popup.");
+
+		String mainWindowHandle = driver.getWindowHandle();
+		boolean popupAppeared = false;
+		for (String handle: driver.getWindowHandles()) {
+			if (!handle.equals(mainWindowHandle)) {
+				driver.switchTo().window(handle);
+				driver.manage().window().maximize();
+				popupAppeared = true;
+
+				if (ElementDisplayed(transaction_GL_AC_BulkRepo.AccountsearchGroupNameDropdown)) {
+					ExtentSuccessMessage("Expected Result: Accoount Search popup window will be opened.");
+					Log.info("Expected Result: Accoount Search popup window will be opened.");
+				} else {
+					ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+					Log.info("ERROR");
+				}	
+			}
+		}
+
+		SelectGroupName();
+		SelectProductName();
+		SelectBranch();
+
+		click(transaction_GL_AC_BulkRepo.SearchButton);
+		ExtentSuccessMessage("Step:01 - Click on the Search Button.");
+		Log.info("Step:01 - Click on the Search Button.");
+
+		click(transaction_GL_AC_BulkRepo.SelectAccountFromList);
+		ExtentSuccessMessage("Step:01 - Click on the Search Button from the list.");
+		Log.info("Step:01 - Click on the Search Button from the list.");
+		driver.switchTo().window(mainWindowHandle);
+		if(ElementDisplayed(transaction_GL_AC_BulkRepo.aiAccNoField)) { 
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup window will be closed.");
+			Log.info("Expected Result: Popup window will be closed");
+
+			WebElement element = driver.findElement(transaction_GL_AC_BulkRepo.aiAccNoField);
+			Acc_No=element.getAttribute("value");
+			Log.info("Acc_No:-"+Acc_No);
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}		
+	}
+
+
+	public void SelectGroupName() throws InterruptedException {
+
+		ExtentTestManager.startTest("Select Transaction Type");
+		Log.info("Select Transaction Type");
+
+		select("Suspense Asset", transaction_GL_AC_BulkRepo.AccountsearchGroupNameDropdown);
+
+		ExtentSuccessMessage("Step:01 -  Choose 'Suspense Asset' for Group Name.");
+		Log.info("Step:01 -  Choose 'Suspense Asset' for Group Name.");
+
+		ExtentSuccessMessage("Expected Result: Correct Group Name selected.");
+		Log.info("Expected Result: Correct Group Name selected.");
 
 		ExtentTestManager.endTest();
-
-		Accountnumber(testdata, context);
-
-		EnterTransactionAmount(testdata);
-
 	}
+
+	public void SelectProductName() throws InterruptedException {
+		ExtentTestManager.startTest("Select Product Name");
+		Log.info("Select Product Name");
+
+		select("SUSPENSE ASSET", transaction_GL_AC_BulkRepo.AccountsearchProductNameDropdown);
+
+		ExtentSuccessMessage("Step:01 -  Choose 'SUSPENSE ASSET' for Product Name.");
+		Log.info("Step:01 -  Choose 'SUSPENSE ASSET' for Product Name.");
+
+		ExtentSuccessMessage("Expected Result: Correct Product Name selected.");
+		Log.info("Expected Result: Correct Product Name selected.");
+
+		ExtentTestManager.endTest();
+	}
+
+	public void SelectBranch() throws InterruptedException {
+		ExtentTestManager.startTest("Select Branch");
+		Log.info("Select Branch");
+
+		select("TRIVANDRUM", transaction_GL_AC_BulkRepo.AccountsearchBranchDropdown);
+
+		ExtentSuccessMessage("Step:01 -  Choose 'TRIVANDRUM' for Branch.");
+		Log.info("Step:01 -  Choose 'TRIVANDRUM' for Branch.");
+
+		ExtentSuccessMessage("Expected Result: Correct Branch selected.");
+		Log.info("Expected Result: Correct Branch selected.");
+
+		ExtentTestManager.endTest();
+	}
+
+
 
 	public void authorizeCash(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
@@ -177,35 +320,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentSuccessMessage("Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
 
-		click(Transactions_SusLiabilityRepo.cashierAuthoTab);
-		ExtentSuccessMessage("Step:01 - Navigate to Cashier Authorization");
-		Log.info("Step:01 - Navigate to Cashier Authorization");
-
-		click(Transactions_SusLiabilityRepo.cashierRefreshBtn);
-		ExtentSuccessMessage("Step:02 - Click Refresh Button");
-		Log.info("Step:02 - Click Refresh Button");
-
-		System.out.println("transIdCashPersonal " + transId);
-		fetchWithTransId(transId);
-
-		click(Transactions_SusLiabilityRepo.cashierCheckBox);
-		ExtentSuccessMessage("Step:03 - Select checkbox");
-		Log.info("Step:03 - Select checkbox");
-
-		click(Transactions_SusLiabilityRepo.cashierAuthorizeBtn);
-		ExtentSuccessMessage("Step:04 - Click Authorize Button");
-		Log.info("Step:04 - Click Authorize Button");
-
-		if (ElementDisplayed(Transactions_SusLiabilityRepo.confirmationPopUp)) {
-			ExtentSuccessMessage("Expected Result: Transaction gets authorised");
-			Log.info("Expected Result: Transaction gets authorised");
-			click(Transactions_SusLiabilityRepo.confirmationPopUp);
-		} else {
-			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-			Log.info("ERROR");
-		}
-
-		ExtentTestManager.endTest();
+		
 
 		//Manager Authorization - Cash Tab
 		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
@@ -267,6 +382,36 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		}
 
 		ExtentTestManager.endTest();
+		
+		click(Transactions_SusLiabilityRepo.cashierAuthoTab);
+		ExtentSuccessMessage("Step:01 - Navigate to Cashier Authorization");
+		Log.info("Step:01 - Navigate to Cashier Authorization");
+
+		click(Transactions_SusLiabilityRepo.cashierRefreshBtn);
+		ExtentSuccessMessage("Step:02 - Click Refresh Button");
+		Log.info("Step:02 - Click Refresh Button");
+
+		System.out.println("transIdCashPersonal " + transId);
+		fetchWithTransId(transId);
+
+		click(Transactions_SusLiabilityRepo.cashierCheckBox);
+		ExtentSuccessMessage("Step:03 - Select checkbox");
+		Log.info("Step:03 - Select checkbox");
+
+		click(Transactions_SusLiabilityRepo.cashierAuthorizeBtn);
+		ExtentSuccessMessage("Step:04 - Click Authorize Button");
+		Log.info("Step:04 - Click Authorize Button");
+
+		if (ElementDisplayed(Transactions_SusLiabilityRepo.confirmationPopUp)) {
+			ExtentSuccessMessage("Expected Result: Transaction gets authorised");
+			Log.info("Expected Result: Transaction gets authorised");
+			click(Transactions_SusLiabilityRepo.confirmationPopUp);
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
+		ExtentTestManager.endTest();
 
 		//		click(prsnlLoanWeeklyRepo.errorPopUpCloseIcon);
 
@@ -293,15 +438,6 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		String userName = driver.findElement(Transactions_SusLiabilityRepo.userName).getText();
 		System.out.println(userName);
 
-//		String flag = "akash";
-//
-//		if (!userName.equalsIgnoreCase(flag)) {
-//			ExtentSuccessMessage("Expected Result: Logging successfull with another user");
-//			Log.info("Expected Result: Logging successfull with another user");
-//		} else {
-//			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-//			Log.info("ERROR");
-//		}
 
 		ExtentTestManager.endTest();
 
@@ -377,7 +513,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.startTest("Select Transaction Mode");
 		Log.info("Select Transaction Mode");
 
-		select("CASH", Transactions_SusLiabilityRepo.tdTransModeDropdown);
+		select("CASH", transaction_GL_AC_BulkRepo.TransactionModeDD);
 		ExtentSuccessMessage("Step:01 - Choose 'Cash' from the transaction mode dropdown.");
 		Log.info("Step:01 - Choose 'Cash' from the transaction mode dropdown.");
 
@@ -386,19 +522,44 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 		ExtentTestManager.endTest();
 
+		//Enter Part Name
+		ExtentTestManager.startTest("Enter Part Name");
+		Log.info("Enter Part Name");
+
+		String PartyName = "Automationtest";
+		click(transaction_GL_AC_BulkRepo.PartyName);
+		input(transaction_GL_AC_BulkRepo.PartyName, PartyName);
+		ExtentSuccessMessage("Step:01 - Enter a valid Party Name in the input field.");
+		Log.info("Step:01 - Enter a valid Party Name in the input field.");
+		ExtentTestManager.endTest();
+
+
+		//Enter Part Name
+		ExtentTestManager.startTest("Enter Remarks");
+		Log.info("Enter Remarks");
+
+		String Remarks = "Automation_Remarks";
+		click(transaction_GL_AC_BulkRepo.Remarks);
+		input(transaction_GL_AC_BulkRepo.Remarks, Remarks);
+		ExtentSuccessMessage("Step:01 - Enter a valid Remarks in the input field.");
+		Log.info("Step:01 - Enter a valid Remarks in the input field.");
+		ExtentTestManager.endTest();
+
+
+
 		//Submit Transaction
 		ExtentTestManager.startTest("Submit Transaction");
 		Log.info("Submit Transaction");
 
-		click(Transactions_SusLiabilityRepo.submitBtn);
+		click(transaction_GL_AC_BulkRepo.SubmitTrans);
 		ExtentSuccessMessage("Step:01 - Click the 'Submit' button.");
 		Log.info("Step:01 - Click the 'Submit' button.");
 
-		if (ElementDisplayed(Transactions_SusLiabilityRepo.summaryTransId)) {
+		if (ElementDisplayed(transaction_GL_AC_BulkRepo.summaryTransId)) {
 			ExtentSuccessMessage("Expected Result: Transaction should be successful and  summary is displayed with correct details.");
 			Log.info("Expected Result: Transaction should be successful and  summary is displayed with correct details.");
 
-			transId = driver.findElement(Transactions_SusLiabilityRepo.summaryTransId).getText();
+			transId = driver.findElement(transaction_GL_AC_BulkRepo.summaryTransId).getText();
 			System.out.println("transId:-" + transId);
 
 		} else {
@@ -410,50 +571,59 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 	} //end
 
-	public void transModeTransfer(Map < Object, Object > testdata, ITestContext context) throws InterruptedException {
-
+	public void transModeTransfer() throws InterruptedException {
 		//Select Transaction Mode
 		ExtentTestManager.startTest("Select Transaction Mode");
 		Log.info("Select Transaction Mode");
 
-		select("TRANSFER", Transactions_SusLiabilityRepo.tdTransModeDropdown);
-		ExtentSuccessMessage("Step:01 - Choose 'TRANSFER' from the transaction mode dropdown.");
-		Log.info("Step:01 - Choose 'TRANSFER' from the transaction mode dropdown.");
+		select("TRANSFER", transaction_GL_AC_BulkRepo.TransactionModeDD);
+		ExtentSuccessMessage("Step:01 - Choose 'Cash' from the transaction mode dropdown.");
+		Log.info("Step:01 - Choose 'Cash' from the transaction mode dropdown.");
 
-		ExtentSuccessMessage("Expected Result: Transaction mode 'TRANSFER' is selected.");
-		Log.info("Expected Result: Transaction mode 'TRANSFER' is selected.");
-
-		ExtentTestManager.endTest();
-
-		//Enter Remark 
-		ExtentTestManager.startTest("Enter Remark ");
-		Log.info("Enter Remark ");
-
-		String reamrk = testdata.get("remark").toString();
-		input(Transactions_SusLiabilityRepo.tdRemarkTxtBox, reamrk);
-		ExtentSuccessMessage("Step:01 - Enter a remark in the input field.");
-		Log.info("Step:01 - Enter a remark in the input field.");
-
-		ExtentSuccessMessage("Expected Result: Remark   accepted.");
-		Log.info("Expected Result: Remark   accepted.");
+		ExtentSuccessMessage("Expected Result: Transaction mode 'Cash' is selected.");
+		Log.info("Expected Result: Transaction mode 'Cash' is selected.");
 
 		ExtentTestManager.endTest();
 
-		postCreditPopUpEntry(testdata);
+		//Enter Part Name
+		ExtentTestManager.startTest("Enter Part Name");
+		Log.info("Enter Part Name");
+
+		String PartyName = "Automationtest";
+		click(transaction_GL_AC_BulkRepo.PartyName);
+		input(transaction_GL_AC_BulkRepo.PartyName, PartyName);
+		ExtentSuccessMessage("Step:01 - Enter a valid Party Name in the input field.");
+		Log.info("Step:01 - Enter a valid Party Name in the input field.");
+		ExtentTestManager.endTest();
+
+
+		//Enter Part Name
+		ExtentTestManager.startTest("Enter Remarks");
+		Log.info("Enter Remarks");
+
+		String Remarks = "Automation_Remarks";
+		click(transaction_GL_AC_BulkRepo.Remarks);
+		input(transaction_GL_AC_BulkRepo.Remarks, Remarks);
+		ExtentSuccessMessage("Step:01 - Enter a valid Remarks in the input field.");
+		Log.info("Step:01 - Enter a valid Remarks in the input field.");
+		ExtentTestManager.endTest();
+
+
 
 		//Submit Transaction
 		ExtentTestManager.startTest("Submit Transaction");
 		Log.info("Submit Transaction");
 
-		click(Transactions_SusLiabilityRepo.submitBtn);
+		click(transaction_GL_AC_BulkRepo.SubmitTrans);
 		ExtentSuccessMessage("Step:01 - Click the 'Submit' button.");
 		Log.info("Step:01 - Click the 'Submit' button.");
 
-		if (ElementDisplayed(Transactions_SusLiabilityRepo.summaryTransId)) {
+		if (ElementDisplayed(transaction_GL_AC_BulkRepo.summaryTransId)) {
 			ExtentSuccessMessage("Expected Result: Transaction should be successful and  summary is displayed with correct details.");
 			Log.info("Expected Result: Transaction should be successful and  summary is displayed with correct details.");
 
-			transId = driver.findElement(Transactions_SusLiabilityRepo.summaryTransId).getText();
+			transId = driver.findElement(transaction_GL_AC_BulkRepo.summaryTransId).getText();
+			System.out.println("transId:-" + transId);
 
 		} else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
@@ -462,6 +632,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 		ExtentTestManager.endTest();
 
+	
 	} //end
 
 	public String generateUniqueCode(String query, String columnName) throws ClassNotFoundException {
