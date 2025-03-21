@@ -39,7 +39,7 @@ public class AllScenario_SusAssetTransaction_Cash_Transfer {
 	OLTransaction_Cash_Transfer Transaction = new OLTransaction_Cash_Transfer();
 	OL_Transaction_Closure_Cash_Transfer Closuretrans = new OL_Transaction_Closure_Cash_Transfer();
 	SusAssetTransaction_Cash_Transfer suspense = new SusAssetTransaction_Cash_Transfer();
-	
+
 	@BeforeSuite
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("SuspenseAsset");
@@ -66,15 +66,130 @@ public class AllScenario_SusAssetTransaction_Cash_Transfer {
 
 				custSrchMthds.pcRegistration(testdata, context);
 
+			custSrchMthds.userLoginValidPaswrd(testdata, context);
+
+			suspense.transactionWindowAccess();
+
+				suspense.selectSuspenseAssetProductGroup();
+
+				suspense.selectSuspenseAssetProductName();
+
+				suspense.enterAccountNumber1();
+
+				suspense.creditSelectionTest();
+
+				suspense.goButtonFunctionalityTest();
+
+				suspense.enterValidTransactionAmount(testdata, context);
+
+				suspense.selectTransmodeCash();
+
+				suspense.submitButtonNavigation();
+
+				suspense.printButtonTest();
+
+				suspense.logoutApplication1();
+
+				Closuretrans.AnotherUSer(testdata, context);
+
+				suspense.userLoggedIncashier();
+
+				suspense.userLoggedInrefresh();
+
+				suspense.userLoggedIncheckbox();
+
+				suspense.userOnCashierAuthorisationWindow();
+
+				suspense.userLoggedInmanager();
+
+				suspense.userLoggedIncash();
+
+				suspense.userLoggedInrefresh1();
+
+				suspense.userLoggedInbox();
+
+				suspense.Mangerauthorization();
+
+				suspense.logoutApplication();
+
+				// transfer
+				
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
+
+				suspense.reopenTransactionsWindow();
+
+				suspense.selectSuspenseAssetProductGroup();
+
+				suspense.selectSuspenseAssetProductName();
+
+				suspense.enterAccountNumber1();
+
+				suspense.creditSelectionTest();
+
+				//suspense.goButtonFunctionalityTest();
+
+				suspense.enterTransactionAmount1();
 				
-				suspense.Transactionwindow();
+				suspense.enterTransactionAmount2(testdata, context);
 				
-				suspense.Accountnumber(testdata, context);
 				
-				suspense.SelectCASH();
+				suspense.transactionWithTransfer();
 				
-				Transaction.print();
+				suspense.postDebitTransaction();
+				
+				suspense.searchAccountNumber(testdata, context);
+				
+				suspense.selectAccountNumber(testdata, context);
+				
+				suspense.addTransactionAmount1();
+				
+				suspense.addTransactionAmount();
+				
+				suspense.submitTransactionWindow();
+				
+				suspense.printButtonTest();
+
+				suspense.logoutApplication1();
+				
+				Closuretrans.AnotherUSer(testdata, context);
+				
+				suspense.UserLoggedInsub();
+				
+				suspense.UserLoggedIntransfer();
+				
+				suspense.userLoggedInrefresh1();
+
+				suspense.UserLoggedInCheckbx1();
+
+				suspense.Mangerauthorization();
+
+				suspense.logoutApplication();
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				
 				
 
@@ -103,7 +218,3 @@ public class AllScenario_SusAssetTransaction_Cash_Transfer {
 	}
 
 }
-
-
-
-
