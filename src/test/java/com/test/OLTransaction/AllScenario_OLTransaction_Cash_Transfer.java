@@ -102,7 +102,7 @@ public class AllScenario_OLTransaction_Cash_Transfer {
 
 				Transaction.ManagerAuth();
 
-				Transaction.Signout();
+				Transaction.Signout1();
 
 				ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();

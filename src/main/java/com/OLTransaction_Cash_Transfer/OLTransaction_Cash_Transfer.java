@@ -429,6 +429,24 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 	}
+	
+	public void Signout1() throws InterruptedException {
+
+		ExtentTestManager.startTest("Logout in application");
+		Log.info("Logout in application");
+
+		click(JewelClosure.Singout);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Log out.");
+		Log.info("Step:01 - Log out.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Login page will be dispays.");
+		Log.info("Expected Result:Login page will be dispays.");
+
+		ExtentTestManager.endTest();
+		
+		
+		driver.close();
+	}
 
 	// Transfer
 

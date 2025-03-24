@@ -163,7 +163,7 @@ public class AllScenario_SusAssetTransaction_Cash_Transfer {
 
 				suspense.Mangerauthorization();
 
-				suspense.logoutApplication();
+				suspense.logoutApplication3();
 				
 				
 				

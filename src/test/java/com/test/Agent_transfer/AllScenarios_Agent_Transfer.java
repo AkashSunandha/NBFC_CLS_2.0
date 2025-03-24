@@ -1,4 +1,4 @@
-package com.test.GeneralOpening;
+package com.test.Agent_transfer;
 
 import java.io.IOException;
 import java.util.Map;
@@ -8,8 +8,12 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.Agent_Transfer.Agent_Transfer;
 import com.BasePackage.Base_Class;
-import com.GeneralOpening.General_Opening_cash_transfer;
+import com.JewelLoan_Closure.JewelLoan_Closure_Cash_Transfer;
+import com.OLTransaction_Cash_Transfer.OLTransaction_Cash_Transfer;
+import com.OLTransaction_Cash_Transfer.OL_Transaction_Closure_Cash_Transfer;
+import com.OLTransaction_Cash_Transfer.SusAssetTransaction_Cash_Transfer;
 import com.Page_Customer.Customer_NewCustomer;
 import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
 import com.Utility.Log;
@@ -18,21 +22,28 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenario_GeneralOpen_Cash_Transfer {
+public class AllScenarios_Agent_Transfer {
+
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
-	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
 
+	public String sp = "GetSuspenseAssetAccountnumber";
+	public String columnName = "Acno";
+
+	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	Customer_NewCustomer newCustMths = new Customer_NewCustomer();
-	General_Opening_cash_transfer generalOpening = new General_Opening_cash_transfer();
+	JewelLoan_Closure_Cash_Transfer JLoanClosure = new JewelLoan_Closure_Cash_Transfer();
+	OLTransaction_Cash_Transfer Transaction = new OLTransaction_Cash_Transfer();
+	OL_Transaction_Closure_Cash_Transfer Closuretrans = new OL_Transaction_Closure_Cash_Transfer();
+	Agent_Transfer agent = new Agent_Transfer();
 
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("GeneralOpening");
+		ExcelReader = new com.Utility.ExcelReader("SuspenseAsset");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -57,36 +68,9 @@ public class AllScenario_GeneralOpen_Cash_Transfer {
 				custSrchMthds.pcRegistration(testdata, context);
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
-
-				generalOpening.accountOpening();
 				
-				generalOpening.Customerinfo(testdata, context);
+				agent.AgentTransferNavigation();
 				
-				generalOpening.verifieddata(testdata, context);
-				
-				generalOpening.transactions(testdata, context);
-				
-				generalOpening.Signout();
-				
-				generalOpening.Cashier(testdata, context);
-				
-				generalOpening.closesuccess();
-				
-				generalOpening.Signout();
-				
-				custSrchMthds.userLoginValidPaswrd(testdata, context);
-				
-				generalOpening.accountOpening2();
-				
-				generalOpening.Customerinfo(testdata, context);
-				
-				generalOpening.verifieddata(testdata, context);
-				
-				generalOpening.transactionsTransfer(testdata, context);
-				
-				generalOpening.authorizeTransfer(testdata, context);
-				
-				generalOpening.Signout1();
 				
 				
 				

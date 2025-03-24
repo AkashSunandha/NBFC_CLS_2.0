@@ -1,4 +1,4 @@
-[ERROR] 2025-03-21 15:45:32.971 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-24 17:33:05.819 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -49,7 +49,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-21 15:45:32.989 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-24 17:33:05.839 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -100,7 +100,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-21 15:45:32.990 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-24 17:33:05.842 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -151,7 +151,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-21 15:45:32.995 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-24 17:33:05.850 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -202,175 +202,175 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-03-21 15:45:34.037 [main] Log - *** Running test method SusAssetTransaction-Cash_Transfer...
-[INFO ] 2025-03-21 15:45:39.005 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-21 15:45:40.138 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-21 15:45:42.618 [main] Log - PC Registration
-[INFO ] 2025-03-21 15:45:43.738 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-21 15:45:46.167 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-21 15:45:47.237 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-03-21 15:45:51.614 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-21 15:45:53.379 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-21 15:45:53.487 [main] Log - Valid Login
-[INFO ] 2025-03-21 15:45:54.543 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-21 15:45:55.610 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-21 15:46:03.165 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-21 15:46:04.275 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-21 15:46:05.363 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-21 15:46:05.460 [main] Log - Transaction Window Access started.
-[INFO ] 2025-03-21 15:46:09.793 [main] Log - Step:01 - Navigate to Transaction Menu.
-[INFO ] 2025-03-21 15:46:14.473 [main] Log - Step:02 - Select Transactions.
-[INFO ] 2025-03-21 15:46:14.474 [main] Log - Expected Result: User is on Transaction window
-[INFO ] 2025-03-21 15:46:14.559 [main] Log - Selected Suspense Asset Product Group.
-[INFO ] 2025-03-21 15:46:17.048 [main] Log - Step:01 - Open Product Group Dropdown.
-[INFO ] 2025-03-21 15:46:17.049 [main] Log - Step:02 - Select Suspense Asset Product Group.
-[INFO ] 2025-03-21 15:46:17.051 [main] Log - Expected Result: Suspense Asset group is selected
-[INFO ] 2025-03-21 15:46:17.143 [main] Log - Selected Suspense Asset Product Name.
-[INFO ] 2025-03-21 15:46:19.531 [main] Log - Step:01 - Open Product Group Dropdown.
-[INFO ] 2025-03-21 15:46:19.532 [main] Log - Step:02 - Select Suspense Asset Product Group.
-[INFO ] 2025-03-21 15:46:19.533 [main] Log - Expected Result: Suspense Asset name is selected
-[INFO ] 2025-03-21 15:46:19.619 [main] Log - Entered Account Number.
-[INFO ] 2025-03-21 15:46:19.619 [main] Log - Enter  Account Number
-[INFO ] 2025-03-21 15:46:21.181 [main] Log - Step:01 - Enter Valid Account Number in Account Number Field.
-[INFO ] 2025-03-21 15:46:21.182 [main] Log - Expected Result: Account number is displayed correctly
-[INFO ] 2025-03-21 15:46:21.259 [main] Log - Performed Credit Selection Test.
-[INFO ] 2025-03-21 15:46:23.650 [main] Log - Step:01 - Select Credit Option.
-[INFO ] 2025-03-21 15:46:23.651 [main] Log - Expected Result: Credit is selected
-[INFO ] 2025-03-21 15:46:23.739 [main] Log - Tested Go Button Functionality.
-[INFO ] 2025-03-21 15:46:28.085 [main] Log - Step:01 - Click Go Button.
-[INFO ] 2025-03-21 15:46:28.086 [main] Log - Expected Result: System proceeds with account details for transaction
-[INFO ] 2025-03-21 15:46:28.177 [main] Log - Entered Valid Transaction Amount.
-[INFO ] 2025-03-21 15:46:33.583 [main] Log - Step:1 - Enter Valid Transaction Amount.
-[INFO ] 2025-03-21 15:46:33.583 [main] Log - Expected Result: Amount is displayed correctly
-[INFO ] 2025-03-21 15:46:34.736 [main] Log - Selected Transmode as CASH.
-[INFO ] 2025-03-21 15:46:34.737 [main] Log - Step:1 - Open Transmode Dropdown.
-[INFO ] 2025-03-21 15:46:37.243 [main] Log - Step:1- Select Transmode as CASH.
-[INFO ] 2025-03-21 15:46:37.243 [main] Log - Expected Result: CASH mode is selected
-[INFO ] 2025-03-21 15:46:38.384 [main] Log - Tested Submit Button Navigation.
-[INFO ] 2025-03-21 15:46:42.750 [main] Log - Step:1 - Click Submit Button.
-[INFO ] 2025-03-21 15:46:42.750 [main] Log - Expected Result: User navigates to summary page
-[INFO ] 2025-03-21 15:46:42.873 [main] Log - Tested Print Button.
-[INFO ] 2025-03-21 15:46:47.494 [main] Log - Step:1 - Click Print Button.
-[INFO ] 2025-03-21 15:46:52.556 [main] Log - Expected Result: Voucher is generated correctly.
-[INFO ] 2025-03-21 15:46:52.557 [main] Log - Expected Result: Voucher is generated and printed
-[INFO ] 2025-03-21 15:46:52.706 [main] Log - Logged out from application.
-[INFO ] 2025-03-21 15:46:57.233 [main] Log - Step:1 - Click Logout Option.
-[INFO ] 2025-03-21 15:46:57.234 [main] Log - Expected Result: Login page will be displayed
-[INFO ] 2025-03-21 15:47:06.094 [main] Log - Login with Another User
-[INFO ] 2025-03-21 15:47:06.095 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-03-21 15:47:06.140 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-03-21 15:47:06.214 [main] Log - User is logged in
-[INFO ] 2025-03-21 15:47:10.561 [main] Log - Step: 01 - Navigated to Cashier Authorization submodule.
-[INFO ] 2025-03-21 15:47:15.046 [main] Log - Step:02 -Click cashier authorisation Submodule
-[INFO ] 2025-03-21 15:47:15.047 [main] Log - Expected Result: Cashier authorization window will be displayed
-[INFO ] 2025-03-21 15:47:15.122 [main] Log - User is logged in
-[INFO ] 2025-03-21 15:47:19.498 [main] Log - Step: 01 - Clicked the Refresh tab.
-[INFO ] 2025-03-21 15:47:19.499 [main] Log - Expected Result: Transaction entry will be displayed after clicking the refresh button
-[INFO ] 2025-03-21 15:47:25.040 [main] Log - User is logged in
-[INFO ] 2025-03-21 15:47:29.390 [main] Log - Step: 01 - Selected checkbox of Transaction Suspense Asset Transaction.
-[INFO ] 2025-03-21 15:47:29.391 [main] Log - Expected Result: Possible to select the transaction entry and selected entry is highlighted
-[INFO ] 2025-03-21 15:47:29.468 [main] Log - userOnCashierAuthorisationWindow
-[INFO ] 2025-03-21 15:47:33.824 [main] Log - Step: 01 - Clicked Authorize button.
-[INFO ] 2025-03-21 15:47:33.825 [main] Log - Expected Result: Transaction is authorized
-[INFO ] 2025-03-21 15:47:33.903 [main] Log - User is logged in
-[INFO ] 2025-03-21 15:47:38.507 [main] Log - Step: 01 - Navigated to Manager Authorization submodule.
-[INFO ] 2025-03-21 15:47:38.507 [main] Log - Expected Result: Manager authorization window will be displayed
-[INFO ] 2025-03-21 15:47:38.588 [main] Log - User is logged in
-[INFO ] 2025-03-21 15:47:42.926 [main] Log - Step: 01 - Clicked the Cash tab.
-[INFO ] 2025-03-21 15:47:42.926 [main] Log - Expected Result: Cash tab will be displayed
-[INFO ] 2025-03-21 15:47:42.994 [main] Log - User is logged in
-[INFO ] 2025-03-21 15:47:47.361 [main] Log - Step: 01 - Clicked the Refresh tab again.
-[INFO ] 2025-03-21 15:47:47.362 [main] Log - Expected Result: Transaction entry will be displayed after clicking the refresh button
-[INFO ] 2025-03-21 15:47:52.878 [main] Log - User is logged in
-[INFO ] 2025-03-21 15:47:57.231 [main] Log - Step: 1 - Selected checkbox of Transaction Suspense Asset Transaction again.
-[INFO ] 2025-03-21 15:47:57.232 [main] Log - Expected Result: Possible to select the transaction entry and selected entry is highlighted
-[INFO ] 2025-03-21 15:47:57.305 [main] Log - Mangerauthorization
-[INFO ] 2025-03-21 15:48:01.693 [main] Log - Step: 1 - Clicked Authorize button again.
-[INFO ] 2025-03-21 15:48:01.693 [main] Log - Expected Result: Transaction is authorized
-[INFO ] 2025-03-21 15:48:01.769 [main] Log - Logged out from application.
-[INFO ] 2025-03-21 15:48:10.650 [main] Log - Step:1 - Click Logout Option.
-[INFO ] 2025-03-21 15:48:10.651 [main] Log - Expected Result: Login page will be displayed
-[INFO ] 2025-03-21 15:48:10.719 [main] Log - Valid Login
-[INFO ] 2025-03-21 15:48:11.785 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-21 15:48:12.859 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-21 15:48:19.388 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-21 15:48:20.459 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-21 15:48:21.560 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-21 15:48:21.639 [main] Log - Reopened Transactions Window
-[INFO ] 2025-03-21 15:48:26.239 [main] Log - Step:01 - Navigate to Transaction Menu.
-[INFO ] 2025-03-21 15:48:26.240 [main] Log - Step:02 - Select Transactions.
-[INFO ] 2025-03-21 15:48:26.240 [main] Log - Expected Result: User is on Transaction window
-[INFO ] 2025-03-21 15:48:26.312 [main] Log - Selected Suspense Asset Product Group.
-[INFO ] 2025-03-21 15:48:28.475 [main] Log - Step:01 - Open Product Group Dropdown.
-[INFO ] 2025-03-21 15:48:28.475 [main] Log - Step:02 - Select Suspense Asset Product Group.
-[INFO ] 2025-03-21 15:48:28.475 [main] Log - Expected Result: Suspense Asset group is selected
-[INFO ] 2025-03-21 15:48:28.554 [main] Log - Selected Suspense Asset Product Name.
-[INFO ] 2025-03-21 15:48:30.717 [main] Log - Step:01 - Open Product Group Dropdown.
-[INFO ] 2025-03-21 15:48:30.717 [main] Log - Step:02 - Select Suspense Asset Product Group.
-[INFO ] 2025-03-21 15:48:30.718 [main] Log - Expected Result: Suspense Asset name is selected
-[INFO ] 2025-03-21 15:48:30.783 [main] Log - Entered Account Number.
-[INFO ] 2025-03-21 15:48:30.784 [main] Log - Enter  Account Number
-[INFO ] 2025-03-21 15:48:32.218 [main] Log - Step:01 - Enter Valid Account Number in Account Number Field.
-[INFO ] 2025-03-21 15:48:32.218 [main] Log - Expected Result: Account number is displayed correctly
-[INFO ] 2025-03-21 15:48:32.276 [main] Log - Performed Credit Selection Test.
-[INFO ] 2025-03-21 15:48:34.680 [main] Log - Step:01 - Select Credit Option.
-[INFO ] 2025-03-21 15:48:34.681 [main] Log - Expected Result: Credit is selected
-[INFO ] 2025-03-21 15:48:34.749 [main] Log - Transaction Amount Entered
-[INFO ] 2025-03-21 15:48:39.106 [main] Log - Step:01 - Click Go Button.
-[INFO ] 2025-03-21 15:48:39.107 [main] Log - Expected Result: System proceeds with account details for transaction
-[INFO ] 2025-03-21 15:48:39.181 [main] Log - Transaction Amount Entered
-[INFO ] 2025-03-21 15:48:44.584 [main] Log - Step: 1- Enter a valid transaction amount.
-[INFO ] 2025-03-21 15:48:44.584 [main] Log - Expected Result: .
-[INFO ] 2025-03-21 15:48:44.657 [main] Log - Transaction with Transfer initiated
-[INFO ] 2025-03-21 15:48:47.042 [main] Log - Step: 1 -Enter all required details 
-[INFO ] 2025-03-21 15:48:47.043 [main] Log - Step: 2 -Select transmode SWIFT_CODE TRANSFER 
-[INFO ] 2025-03-21 15:48:47.044 [main] Log - Expected Result:TRANSFER  is selected and Post Debit button will be display .
-[INFO ] 2025-03-21 15:48:48.188 [main] Log - Debit Transaction Posted
-[INFO ] 2025-03-21 15:48:52.824 [main] Log - Step: 1 -Click on the POST DEBIT button.
-[INFO ] 2025-03-21 15:48:52.825 [main] Log - Expected Result:Auto posting popup window will be display .
-[INFO ] 2025-03-21 15:48:52.899 [main] Log - Searched for Account Number
-[INFO ] 2025-03-21 15:48:55.584 [main] Log - Step:02 -Select a product group.
-[INFO ] 2025-03-21 15:48:57.984 [main] Log - Step:02 -Select a product name.
-[INFO ] 2025-03-21 15:48:57.984 [main] Log - Expected Result:Possible to select the product group and product name 
-[INFO ] 2025-03-21 15:48:58.049 [main] Log - Account Number Selected
-[INFO ] 2025-03-21 15:48:59.146 [main] Log - Step: 1 - 1. Give account number as '3'.
-[INFO ] 2025-03-21 15:48:59.147 [main] Log - Expected Result: Given account number details will be display.
-[INFO ] 2025-03-21 15:49:00.317 [main] Log - Transaction Amount Added
-[INFO ] 2025-03-21 15:49:00.318 [main] Log - Step: 1 - Enter amount.
-[INFO ] 2025-03-21 15:49:04.650 [main] Log - Step: 2 - Click ADD.
-[INFO ] 2025-03-21 15:49:04.651 [main] Log - Expected Result:Amount and details is added in the grid in the auto posting popup window  .
-[INFO ] 2025-03-21 15:49:04.716 [main] Log - Transaction Amount Added
-[INFO ] 2025-03-21 15:49:09.087 [main] Log - Step: 1 - Enter submit in the auto posting popu window .
-[INFO ] 2025-03-21 15:49:09.106 [main] Log - Expected Result:Details is added and auto posting popu window closes .
-[INFO ] 2025-03-21 15:49:10.220 [main] Log - Submitted Transaction Window
-[INFO ] 2025-03-21 15:49:14.599 [main] Log - Step: 1 - Click Submit button.
-[INFO ] 2025-03-21 15:49:14.599 [main] Log - Expected Result: User navigates to the summary page.
-[INFO ] 2025-03-21 15:49:14.714 [main] Log - Tested Print Button.
-[INFO ] 2025-03-21 15:49:19.375 [main] Log - Step:1 - Click Print Button.
-[INFO ] 2025-03-21 15:49:24.424 [main] Log - Expected Result: Voucher is generated correctly.
-[INFO ] 2025-03-21 15:49:24.425 [main] Log - Expected Result: Voucher is generated and printed
-[INFO ] 2025-03-21 15:49:24.575 [main] Log - Logged out from application.
-[INFO ] 2025-03-21 15:49:29.245 [main] Log - Step:1 - Click Logout Option.
-[INFO ] 2025-03-21 15:49:29.246 [main] Log - Expected Result: Login page will be displayed
-[INFO ] 2025-03-21 15:49:38.046 [main] Log - Login with Another User
-[INFO ] 2025-03-21 15:49:38.047 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-03-21 15:49:38.089 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-03-21 15:49:38.157 [main] Log - User successfully logged in
-[INFO ] 2025-03-21 15:49:42.623 [main] Log - Step: 1 -Click the authoirze & Cancel module from the taskbar
-[INFO ] 2025-03-21 15:49:42.624 [main] Log - Step: 1 -Click Manager authorisation Submodule
-[INFO ] 2025-03-21 15:49:42.625 [main] Log - Expected Result: Manager authorization window will be display.
-[INFO ] 2025-03-21 15:49:42.690 [main] Log - User successfully logged in
-[INFO ] 2025-03-21 15:49:47.038 [main] Log - Step: 1 -Click the Transfer tab  .
-[INFO ] 2025-03-21 15:49:47.039 [main] Log - Expected Result: Transfer tab will be display.
-[INFO ] 2025-03-21 15:49:47.111 [main] Log - User is logged in
-[INFO ] 2025-03-21 15:49:51.463 [main] Log - Step: 01 - Clicked the Refresh tab again.
-[INFO ] 2025-03-21 15:49:51.464 [main] Log - Expected Result: Transaction entry will be displayed after clicking the refresh button
-[INFO ] 2025-03-21 15:49:56.976 [main] Log - User successfully logged in
-[INFO ] 2025-03-21 15:50:01.319 [main] Log - Step: 1 -1.Select the checbox of transaction suspense Asset transaction .
-[INFO ] 2025-03-21 15:50:01.320 [main] Log - Expected Result: Possible to select the transaction entry and selected entry is hghlighted.
-[INFO ] 2025-03-21 15:50:01.391 [main] Log - Mangerauthorization
-[INFO ] 2025-03-21 15:50:05.738 [main] Log - Step: 1 - Clicked Authorize button again.
-[INFO ] 2025-03-21 15:50:05.739 [main] Log - Expected Result: Transaction is authorized
-[INFO ] 2025-03-21 15:50:05.807 [main] Log - Logged out from application.
-[INFO ] 2025-03-21 15:50:14.661 [main] Log - Step:1 - Click Logout Option.
-[INFO ] 2025-03-21 15:50:14.661 [main] Log - Expected Result: Login page will be displayed
+[INFO ] 2025-03-24 17:33:06.905 [main] Log - *** Running test method SusAssetTransaction-Cash_Transfer...
+[INFO ] 2025-03-24 17:33:11.627 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-03-24 17:33:12.796 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-03-24 17:33:15.226 [main] Log - PC Registration
+[INFO ] 2025-03-24 17:33:16.320 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-03-24 17:33:18.749 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-03-24 17:33:19.806 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-03-24 17:33:24.147 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-03-24 17:33:25.782 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-03-24 17:33:25.880 [main] Log - Valid Login
+[INFO ] 2025-03-24 17:33:26.936 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-24 17:33:28.000 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-03-24 17:33:36.873 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-03-24 17:33:37.961 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-24 17:33:39.039 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-24 17:33:39.135 [main] Log - Transaction Window Access started.
+[INFO ] 2025-03-24 17:33:43.475 [main] Log - Step:01 - Navigate to Transaction Menu.
+[INFO ] 2025-03-24 17:33:48.055 [main] Log - Step:02 - Select Transactions.
+[INFO ] 2025-03-24 17:33:48.056 [main] Log - Expected Result: User is on Transaction window
+[INFO ] 2025-03-24 17:33:48.136 [main] Log - Selected Suspense Asset Product Group.
+[INFO ] 2025-03-24 17:33:50.548 [main] Log - Step:01 - Open Product Group Dropdown.
+[INFO ] 2025-03-24 17:33:50.549 [main] Log - Step:02 - Select Suspense Asset Product Group.
+[INFO ] 2025-03-24 17:33:50.550 [main] Log - Expected Result: Suspense Asset group is selected
+[INFO ] 2025-03-24 17:33:50.642 [main] Log - Selected Suspense Asset Product Name.
+[INFO ] 2025-03-24 17:33:53.010 [main] Log - Step:01 - Open Product Group Dropdown.
+[INFO ] 2025-03-24 17:33:53.011 [main] Log - Step:02 - Select Suspense Asset Product Group.
+[INFO ] 2025-03-24 17:33:53.011 [main] Log - Expected Result: Suspense Asset name is selected
+[INFO ] 2025-03-24 17:33:53.092 [main] Log - Entered Account Number.
+[INFO ] 2025-03-24 17:33:53.092 [main] Log - Enter  Account Number
+[INFO ] 2025-03-24 17:33:54.557 [main] Log - Step:01 - Enter Valid Account Number in Account Number Field.
+[INFO ] 2025-03-24 17:33:54.558 [main] Log - Expected Result: Account number is displayed correctly
+[INFO ] 2025-03-24 17:33:54.628 [main] Log - Performed Credit Selection Test.
+[INFO ] 2025-03-24 17:33:56.982 [main] Log - Step:01 - Select Credit Option.
+[INFO ] 2025-03-24 17:33:56.983 [main] Log - Expected Result: Credit is selected
+[INFO ] 2025-03-24 17:33:57.067 [main] Log - Tested Go Button Functionality.
+[INFO ] 2025-03-24 17:34:01.396 [main] Log - Step:01 - Click Go Button.
+[INFO ] 2025-03-24 17:34:01.397 [main] Log - Expected Result: System proceeds with account details for transaction
+[INFO ] 2025-03-24 17:34:01.467 [main] Log - Entered Valid Transaction Amount.
+[INFO ] 2025-03-24 17:34:06.836 [main] Log - Step:1 - Enter Valid Transaction Amount.
+[INFO ] 2025-03-24 17:34:06.837 [main] Log - Expected Result: Amount is displayed correctly
+[INFO ] 2025-03-24 17:34:07.944 [main] Log - Selected Transmode as CASH.
+[INFO ] 2025-03-24 17:34:07.944 [main] Log - Step:1 - Open Transmode Dropdown.
+[INFO ] 2025-03-24 17:34:10.409 [main] Log - Step:1- Select Transmode as CASH.
+[INFO ] 2025-03-24 17:34:10.410 [main] Log - Expected Result: CASH mode is selected
+[INFO ] 2025-03-24 17:34:11.530 [main] Log - Tested Submit Button Navigation.
+[INFO ] 2025-03-24 17:34:15.871 [main] Log - Step:1 - Click Submit Button.
+[INFO ] 2025-03-24 17:34:15.871 [main] Log - Expected Result: User navigates to summary page
+[INFO ] 2025-03-24 17:34:15.985 [main] Log - Tested Print Button.
+[INFO ] 2025-03-24 17:34:20.586 [main] Log - Step:1 - Click Print Button.
+[INFO ] 2025-03-24 17:34:25.638 [main] Log - Expected Result: Voucher is generated correctly.
+[INFO ] 2025-03-24 17:34:25.639 [main] Log - Expected Result: Voucher is generated and printed
+[INFO ] 2025-03-24 17:34:25.777 [main] Log - Logged out from application.
+[INFO ] 2025-03-24 17:34:30.391 [main] Log - Step:1 - Click Logout Option.
+[INFO ] 2025-03-24 17:34:30.392 [main] Log - Expected Result: Login page will be displayed
+[INFO ] 2025-03-24 17:34:41.709 [main] Log - Login with Another User
+[INFO ] 2025-03-24 17:34:41.710 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-03-24 17:34:41.746 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-03-24 17:34:41.817 [main] Log - User is logged in
+[INFO ] 2025-03-24 17:34:46.133 [main] Log - Step: 01 - Navigated to Cashier Authorization submodule.
+[INFO ] 2025-03-24 17:34:50.679 [main] Log - Step:02 -Click cashier authorisation Submodule
+[INFO ] 2025-03-24 17:34:50.680 [main] Log - Expected Result: Cashier authorization window will be displayed
+[INFO ] 2025-03-24 17:34:50.750 [main] Log - User is logged in
+[INFO ] 2025-03-24 17:34:55.077 [main] Log - Step: 01 - Clicked the Refresh tab.
+[INFO ] 2025-03-24 17:34:55.078 [main] Log - Expected Result: Transaction entry will be displayed after clicking the refresh button
+[INFO ] 2025-03-24 17:35:00.564 [main] Log - User is logged in
+[INFO ] 2025-03-24 17:35:04.893 [main] Log - Step: 01 - Selected checkbox of Transaction Suspense Asset Transaction.
+[INFO ] 2025-03-24 17:35:04.894 [main] Log - Expected Result: Possible to select the transaction entry and selected entry is highlighted
+[INFO ] 2025-03-24 17:35:04.960 [main] Log - userOnCashierAuthorisationWindow
+[INFO ] 2025-03-24 17:35:09.292 [main] Log - Step: 01 - Clicked Authorize button.
+[INFO ] 2025-03-24 17:35:09.292 [main] Log - Expected Result: Transaction is authorized
+[INFO ] 2025-03-24 17:35:09.364 [main] Log - User is logged in
+[INFO ] 2025-03-24 17:35:13.854 [main] Log - Step: 01 - Navigated to Manager Authorization submodule.
+[INFO ] 2025-03-24 17:35:13.855 [main] Log - Expected Result: Manager authorization window will be displayed
+[INFO ] 2025-03-24 17:35:13.917 [main] Log - User is logged in
+[INFO ] 2025-03-24 17:35:18.226 [main] Log - Step: 01 - Clicked the Cash tab.
+[INFO ] 2025-03-24 17:35:18.226 [main] Log - Expected Result: Cash tab will be displayed
+[INFO ] 2025-03-24 17:35:18.285 [main] Log - User is logged in
+[INFO ] 2025-03-24 17:35:22.601 [main] Log - Step: 01 - Clicked the Refresh tab again.
+[INFO ] 2025-03-24 17:35:22.602 [main] Log - Expected Result: Transaction entry will be displayed after clicking the refresh button
+[INFO ] 2025-03-24 17:35:28.065 [main] Log - User is logged in
+[INFO ] 2025-03-24 17:35:32.395 [main] Log - Step: 1 - Selected checkbox of Transaction Suspense Asset Transaction again.
+[INFO ] 2025-03-24 17:35:32.396 [main] Log - Expected Result: Possible to select the transaction entry and selected entry is highlighted
+[INFO ] 2025-03-24 17:35:32.460 [main] Log - Mangerauthorization
+[INFO ] 2025-03-24 17:35:36.782 [main] Log - Step: 1 - Clicked Authorize button again.
+[INFO ] 2025-03-24 17:35:36.783 [main] Log - Expected Result: Transaction is authorized
+[INFO ] 2025-03-24 17:35:36.856 [main] Log - Logged out from application.
+[INFO ] 2025-03-24 17:35:45.679 [main] Log - Step:1 - Click Logout Option.
+[INFO ] 2025-03-24 17:35:45.680 [main] Log - Expected Result: Login page will be displayed
+[INFO ] 2025-03-24 17:35:45.740 [main] Log - Valid Login
+[INFO ] 2025-03-24 17:35:46.798 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-24 17:35:47.844 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-03-24 17:35:57.176 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-03-24 17:35:58.245 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-24 17:35:59.307 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-24 17:35:59.354 [main] Log - Reopened Transactions Window
+[INFO ] 2025-03-24 17:36:03.839 [main] Log - Step:01 - Navigate to Transaction Menu.
+[INFO ] 2025-03-24 17:36:03.840 [main] Log - Step:02 - Select Transactions.
+[INFO ] 2025-03-24 17:36:03.840 [main] Log - Expected Result: User is on Transaction window
+[INFO ] 2025-03-24 17:36:03.876 [main] Log - Selected Suspense Asset Product Group.
+[INFO ] 2025-03-24 17:36:05.978 [main] Log - Step:01 - Open Product Group Dropdown.
+[INFO ] 2025-03-24 17:36:05.978 [main] Log - Step:02 - Select Suspense Asset Product Group.
+[INFO ] 2025-03-24 17:36:05.979 [main] Log - Expected Result: Suspense Asset group is selected
+[INFO ] 2025-03-24 17:36:06.010 [main] Log - Selected Suspense Asset Product Name.
+[INFO ] 2025-03-24 17:36:08.116 [main] Log - Step:01 - Open Product Group Dropdown.
+[INFO ] 2025-03-24 17:36:08.116 [main] Log - Step:02 - Select Suspense Asset Product Group.
+[INFO ] 2025-03-24 17:36:08.117 [main] Log - Expected Result: Suspense Asset name is selected
+[INFO ] 2025-03-24 17:36:08.148 [main] Log - Entered Account Number.
+[INFO ] 2025-03-24 17:36:08.148 [main] Log - Enter  Account Number
+[INFO ] 2025-03-24 17:36:09.499 [main] Log - Step:01 - Enter Valid Account Number in Account Number Field.
+[INFO ] 2025-03-24 17:36:09.499 [main] Log - Expected Result: Account number is displayed correctly
+[INFO ] 2025-03-24 17:36:09.542 [main] Log - Performed Credit Selection Test.
+[INFO ] 2025-03-24 17:36:11.897 [main] Log - Step:01 - Select Credit Option.
+[INFO ] 2025-03-24 17:36:11.898 [main] Log - Expected Result: Credit is selected
+[INFO ] 2025-03-24 17:36:11.937 [main] Log - Transaction Amount Entered
+[INFO ] 2025-03-24 17:36:16.260 [main] Log - Step:01 - Click Go Button.
+[INFO ] 2025-03-24 17:36:16.261 [main] Log - Expected Result: System proceeds with account details for transaction
+[INFO ] 2025-03-24 17:36:16.297 [main] Log - Transaction Amount Entered
+[INFO ] 2025-03-24 17:36:21.651 [main] Log - Step: 1- Enter a valid transaction amount.
+[INFO ] 2025-03-24 17:36:21.654 [main] Log - Expected Result: .
+[INFO ] 2025-03-24 17:36:21.728 [main] Log - Transaction with Transfer initiated
+[INFO ] 2025-03-24 17:36:24.128 [main] Log - Step: 1 -Enter all required details 
+[INFO ] 2025-03-24 17:36:24.129 [main] Log - Step: 2 -Select transmode SWIFT_CODE TRANSFER 
+[INFO ] 2025-03-24 17:36:24.129 [main] Log - Expected Result:TRANSFER  is selected and Post Debit button will be display .
+[INFO ] 2025-03-24 17:36:25.187 [main] Log - Debit Transaction Posted
+[INFO ] 2025-03-24 17:36:29.845 [main] Log - Step: 1 -Click on the POST DEBIT button.
+[INFO ] 2025-03-24 17:36:29.845 [main] Log - Expected Result:Auto posting popup window will be display .
+[INFO ] 2025-03-24 17:36:29.901 [main] Log - Searched for Account Number
+[INFO ] 2025-03-24 17:36:32.505 [main] Log - Step:02 -Select a product group.
+[INFO ] 2025-03-24 17:36:34.852 [main] Log - Step:02 -Select a product name.
+[INFO ] 2025-03-24 17:36:34.852 [main] Log - Expected Result:Possible to select the product group and product name 
+[INFO ] 2025-03-24 17:36:34.897 [main] Log - Account Number Selected
+[INFO ] 2025-03-24 17:36:36.045 [main] Log - Step: 1 - 1. Give account number as '3'.
+[INFO ] 2025-03-24 17:36:36.047 [main] Log - Expected Result: Given account number details will be display.
+[INFO ] 2025-03-24 17:36:37.222 [main] Log - Transaction Amount Added
+[INFO ] 2025-03-24 17:36:37.222 [main] Log - Step: 1 - Enter amount.
+[INFO ] 2025-03-24 17:36:41.544 [main] Log - Step: 2 - Click ADD.
+[INFO ] 2025-03-24 17:36:41.545 [main] Log - Expected Result:Amount and details is added in the grid in the auto posting popup window  .
+[INFO ] 2025-03-24 17:36:41.604 [main] Log - Transaction Amount Added
+[INFO ] 2025-03-24 17:36:45.908 [main] Log - Step: 1 - Enter submit in the auto posting popu window .
+[INFO ] 2025-03-24 17:36:45.942 [main] Log - Expected Result:Details is added and auto posting popu window closes .
+[INFO ] 2025-03-24 17:36:47.043 [main] Log - Submitted Transaction Window
+[INFO ] 2025-03-24 17:36:51.378 [main] Log - Step: 1 - Click Submit button.
+[INFO ] 2025-03-24 17:36:51.378 [main] Log - Expected Result: User navigates to the summary page.
+[INFO ] 2025-03-24 17:36:51.464 [main] Log - Tested Print Button.
+[INFO ] 2025-03-24 17:36:56.165 [main] Log - Step:1 - Click Print Button.
+[INFO ] 2025-03-24 17:37:01.209 [main] Log - Expected Result: Voucher is generated correctly.
+[INFO ] 2025-03-24 17:37:01.209 [main] Log - Expected Result: Voucher is generated and printed
+[INFO ] 2025-03-24 17:37:01.298 [main] Log - Logged out from application.
+[INFO ] 2025-03-24 17:37:05.916 [main] Log - Step:1 - Click Logout Option.
+[INFO ] 2025-03-24 17:37:05.917 [main] Log - Expected Result: Login page will be displayed
+[INFO ] 2025-03-24 17:37:17.341 [main] Log - Login with Another User
+[INFO ] 2025-03-24 17:37:17.341 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-03-24 17:37:24.737 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-03-24 17:37:24.788 [main] Log - User successfully logged in
+[INFO ] 2025-03-24 17:37:29.391 [main] Log - Step: 1 -Click the authoirze & Cancel module from the taskbar
+[INFO ] 2025-03-24 17:37:29.391 [main] Log - Step: 1 -Click Manager authorisation Submodule
+[INFO ] 2025-03-24 17:37:29.392 [main] Log - Expected Result: Manager authorization window will be display.
+[INFO ] 2025-03-24 17:37:29.431 [main] Log - User successfully logged in
+[INFO ] 2025-03-24 17:37:33.750 [main] Log - Step: 1 -Click the Transfer tab  .
+[INFO ] 2025-03-24 17:37:33.751 [main] Log - Expected Result: Transfer tab will be display.
+[INFO ] 2025-03-24 17:37:33.796 [main] Log - User is logged in
+[INFO ] 2025-03-24 17:37:38.109 [main] Log - Step: 01 - Clicked the Refresh tab again.
+[INFO ] 2025-03-24 17:37:38.111 [main] Log - Expected Result: Transaction entry will be displayed after clicking the refresh button
+[INFO ] 2025-03-24 17:37:43.534 [main] Log - User successfully logged in
+[INFO ] 2025-03-24 17:37:47.848 [main] Log - Step: 1 -1.Select the checbox of transaction suspense Asset transaction .
+[INFO ] 2025-03-24 17:37:47.848 [main] Log - Expected Result: Possible to select the transaction entry and selected entry is hghlighted.
+[INFO ] 2025-03-24 17:37:47.883 [main] Log - Mangerauthorization
+[INFO ] 2025-03-24 17:37:52.197 [main] Log - Step: 1 - Clicked Authorize button again.
+[INFO ] 2025-03-24 17:37:52.198 [main] Log - Expected Result: Transaction is authorized
+[INFO ] 2025-03-24 17:37:52.230 [main] Log - Logged out from application.
+[INFO ] 2025-03-24 17:38:00.987 [main] Log - Step:1 - Click Logout Option.
+[INFO ] 2025-03-24 17:38:00.988 [main] Log - Expected Result: Login page will be displayed

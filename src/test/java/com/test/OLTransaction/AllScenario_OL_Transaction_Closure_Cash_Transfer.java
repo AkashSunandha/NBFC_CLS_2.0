@@ -101,7 +101,7 @@ public class AllScenario_OL_Transaction_Closure_Cash_Transfer {
 				
 				Closuretrans.ManagerAuth();
 				
-				Closuretrans.Signout2();
+				Closuretrans.Signout1();
 				
 				
 				

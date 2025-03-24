@@ -294,6 +294,9 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login page will be displayed");
 		Log.info("Expected Result: Login page will be displayed");
 		ExtentTestManager.endTest();
+		
+		
+		
 
 	}
 
@@ -810,6 +813,28 @@ public void logoutApplication() throws InterruptedException {
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login page will be displayed");
 	Log.info("Expected Result: Login page will be displayed");
 	ExtentTestManager.endTest();
+	
+
+	
+}
+
+
+public void logoutApplication3() throws InterruptedException {
+	
+	ExtentTestManager.startTest("Logout in application");
+	Log.info("Logged out from application.");
+    
+	click(JewelClosure.close);
+	click(JewelClosure.Singout);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:1 - Click Logout Option.");
+	Log.info("Step:1 - Click Logout Option.");
+
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login page will be displayed");
+	Log.info("Expected Result: Login page will be displayed");
+	ExtentTestManager.endTest();
+	
+driver.close();
+	
 }
 
 // LOGIN ANOTHER USER

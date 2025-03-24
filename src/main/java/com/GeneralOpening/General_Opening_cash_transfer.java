@@ -174,6 +174,14 @@ public class General_Opening_cash_transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Log out.");
 		Log.info("Step:01 - Log out.");
 	}
+	
+	public void Signout1() throws InterruptedException {
+		click(GenOpen.Singout);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Log out.");
+		Log.info("Step:01 - Log out.");
+		
+		driver.close();
+	}
 
 	public void Cashier(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {
 		String UserName = configloader().getProperty("UserName1");
