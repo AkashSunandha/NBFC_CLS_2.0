@@ -204,8 +204,8 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 			throws InterruptedException {
 		ExtentTestManager.startTest("TC:11 - Fill Account Info Tab ReferedBy");
 		click(fixeddeposit.Referedby);
-		INclick(fixeddeposit.loader);
 		click(fixeddeposit.optionPradeep);
+		INclick(fixeddeposit.loader);
 		// click(fixeddeposit.Popupnull);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01  Choose Referred By from dropdown");
 		Log.info("Step:01 Choose Referred By from dropdown");
@@ -863,7 +863,7 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 			throws InterruptedException {
 		ExtentTestManager.startTest("TC:52 -  Fill Vehicle Security Details purpose dropdown");
 		select("BUSINESS", fixeddeposit.purpose);
-		//INclick(fixeddeposit.loader);
+		INclick(fixeddeposit.loader);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Select purpose from dropdown");
 		Log.info("Step:01 Select purpose from dropdown");
@@ -908,6 +908,7 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		input(fixeddeposit.InsureduptoDate1, Insuredupto_Date);
 		click(fixeddeposit.AddBtn1);
 		click(fixeddeposit.InsuredPastdateokbtn);
+		INclick(fixeddeposit.loader);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Choose past date from Insured Upto Date picker.");
 		Log.info("\"Step:01 Choose past date from Insured Upto Date picker.");
@@ -995,6 +996,7 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		ExtentTestManager.startTest("TC:59 - Fill Nominee Details - Customer search icon");
 
 		click(fixeddeposit.customersearchicon);
+		INclick(fixeddeposit.loader);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the customer search icon option");
 		Log.info("Step:01 - Click the customer search icon option");
 
@@ -1037,7 +1039,12 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 				Log.info("Step:01 - Select the customer from the popup window");
 
 				driver.switchTo().window(mainWindowHandle);
+				
+				Thread.sleep(2000);
+				
 				String customerid1 = driver.findElement(fixeddeposit.custid1).getAttribute("value");
+				System.out.println("customerid1: "+customerid1);
+				
 				if (!customerid1.isBlank()) {
 					ExtentTestManager.getTest().log(Status.PASS,
 							"Expected Result:Selected customer details will be autoloads in the fields expect Relation field");
@@ -1113,6 +1120,7 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		ExtentTestManager.startTest("TC:66 Fill loan details - No.Of Installments");
 		String Installment = testdata.get("NoOfInstallement").toString();
 		clear(fixeddeposit.NoOfInstallment);
+		INclick(fixeddeposit.loader);
 		input(fixeddeposit.NoOfInstallment, Installment);
 
 		click(fixeddeposit.sanctioned);
@@ -1134,8 +1142,6 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		click(fixeddeposit.Getvalue);
 		INclick(fixeddeposit.loader);
 
-//		click(fixeddeposit.Getvalue);
-//		INclick(fixeddeposit.loader);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Click Get Values");
 		Log.info("Step:01 Click Get Values");
 		
@@ -1178,11 +1184,14 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 	public void saveloan() throws InterruptedException {
 		ExtentTestManager.startTest("TC:69 - select transaction mode and save loan");
 		click(fixeddeposit.Save);
+		
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 click save");
 		Log.info("Step:01 click save");
 
 		click(fixeddeposit.existingloanokpopup);
+		INclick(fixeddeposit.loader);
         click (fixeddeposit.similardatapopup);
+        INclick(fixeddeposit.loader);
 
         if (ElementDisplayed(fixeddeposit.Cashsummary)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Loan is submitted, summary is displayed");
@@ -1198,13 +1207,13 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		ExtentTestManager.endTest();
 	}
 
-	public Boolean Login_with_AnotherUser(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {
+	public void Login_with_AnotherUser(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {
 		ExtentTestManager.startTest("TC:70 - Login with Another User");
 		Log.info("TC:70 - Login with Another User");
 
-		click(fixeddeposit.signout);
-		//ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Logout'");
-		//Log.info("Step:01 -  'Logout'");
+	click(fixeddeposit.signout);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Logout'");
+	Log.info("Step:01 -  'Logout'");
 
 		String newuserid = configloader().getProperty("UserName1");
 		input(fixeddeposit.loginUserName1, newuserid);
@@ -1229,94 +1238,23 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		}
 
 		ExtentTestManager.endTest();
-        return true;
+		
+        
 	}
-	public void CashierAuthorization() throws InterruptedException {
-		ExtentTestManager.startTest("TC:71 - Cashier Authorization");
-		Log.info("TC71 - Cashier Authorization");
-		Thread.sleep (2000);
-		ScrollUntilElementVisible(fixeddeposit.Authorizecanceltab);
-		click(fixeddeposit.Authorizecanceltab);
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Go to Authorize and cancel module");
-		Log.info("Step:01 - Go to Authorize and cancel module");
-		
-		click(fixeddeposit.cashiersauthorize);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click cashier authorization");
-		Log.info("Step:01 - click cashier authorization");
-		
-		
-		if(ElementDisplayed(fixeddeposit.Authorizecanceltab)) {
-			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult: Cashier Authorization window will be opened");
-			Log.info("ExpectedResult:Cashier authorization window will be opened");
-	
-		}else {
-			
-			ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: Cashier authorization window will not be opened");
-			Log.info("ExpectedResult: cashier authorization window will not be opened");
-
-		}
-		
-		ExtentTestManager.endTest();
-				
-	}
-	
-	public void Cashierrefresh(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
-		ExtentTestManager.startTest("TC:72 -Click Refresh ");
-		Log.info("Tc:72 - Click refresh");
-		input(fixeddeposit.Transacidtextbox, Transacid);
-  		
-  		click(fixeddeposit.ClickGo);
-  		click(fixeddeposit.Refresh);
-  		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Click Refersh");
-		Log.info("Step:02 -Click Refresh");
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Expected result: Loan open entry is displayed");
-		Log.info("Expected result: Loan open entry is displayed");
-		ExtentTestManager.endTest();
-	}
-		
-	public void cashierauthorizationauthorizebtn() throws InterruptedException {
-		ExtentTestManager.startTest("TC:73 -Cashier authorization ");
-		Log.info("Tc:73 - Cashier authorization");
-  		click(fixeddeposit.checkboxselect1);
-  		
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 select checkbox");
-		Log.info("Step:01 select checkbox");
-		
-		click(fixeddeposit.Authorizebtn);
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 click authorize button");
-		Log.info("Step:02 click authorize button");
-		
-		if(ElementDisplayed(fixeddeposit.successpopup1)) {
-			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult: Entry authorized");
-			Log.info("ExpectedResult: Entry authorized");
-			
-	
-		}else {
-			
-			ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: Entry is not  authorized");
-			Log.info("ExpectedResult: Entry is not authorized");
-
-		}
-		//click(fixeddeposit.cancelpopup);
-		
-		Thread.sleep(20000);
-		ExtentTestManager.endTest();
-	}
-	
-	
 	public void Manager_Authorization_CashTab() throws InterruptedException {
 		ExtentTestManager.startTest("TC:74 - Manager Authorization - Cash Tab");
 		Log.info("TC:74- Manager Authorization - Cash Tab");
 		
+		Thread.sleep (2000);
+		ScrollUntilElementVisible(fixeddeposit.Authorizecanceltab);
+		click(fixeddeposit.Authorizecanceltab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 01 -Go to Authorize & cancel module");
 		Log.info("Step:01 - Go to Authorize & cancel module");
 		
+		
 		click(fixeddeposit.ManagerAuthorization);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Select Manager Authorization");
-		Log.info("Step:01 -Select Manager Authorization");
+		Log.info("Step:02 -Select Manager Authorization");
 		
 		if(ElementDisplayed(fixeddeposit.cashtab)) {
 			
@@ -1338,12 +1276,13 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		ExtentTestManager.startTest("TC:75 - Refresh Loan Opening Entry");
 		Log.info("TC:75 - Refresh Loan Opening Entry");
 		
-			input(fixeddeposit.Transacidtextbox, Transacid);
+			input(fixeddeposit.Transacidtextbox,cashtranscid);
 	  		
 	  		click(fixeddeposit.managerClickGo);
-	  		click(fixeddeposit.Refresh);
-	  		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Click Refresh button");
-			Log.info("Step:02 -Click Refresh button");
+	  		//click(fixeddeposit.Refresh);
+	  		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Enter transaction id and click on go button");
+			Log.info("Step:01 Enter transaction id and click on go button");
+			
 			
 			ExtentTestManager.getTest().log(Status.PASS, "Expected result: Loan open entry is displayed");
 			Log.info("Expected result: Loan open entry is displayed");
@@ -1355,9 +1294,6 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		ExtentTestManager.startTest("TC:76 - Authorize Loan Entry as Manager");
 		Log.info("TC:76 - Authorize Loan Entry as Manager");
 		
-	    //Thread.sleep(20000);
-		input(fixeddeposit.Transacidtextbox, Transactid1);
-  		click(fixeddeposit.ClickGo);
 		click(fixeddeposit.checkboxselect11);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select loan entry checkbox");
 		Log.info("Step:01 -Select loan entry checkbox");
@@ -1366,10 +1302,10 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click Authorize button");
 		Log.info("Step:02 -Click Authorize button");
 		
-		if(ElementDisplayed(fixeddeposit.successpopup1)) {
+		if(ElementDisplayed(fixeddeposit.cancelpopup)) {
 			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult: Entry authorized");
 			Log.info("ExpectedResult: Entry authorized");
-			
+	
 	
 		}else {
 			
@@ -1378,11 +1314,87 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 
 		}
 		click(fixeddeposit.cancelpopup);
-		click(fixeddeposit.signout);
-		
-		Thread.sleep(20000);
+//		click(fixeddeposit.signout);
 		ExtentTestManager.endTest();
 		
 	
 	}
+	public void CashierAuthorization() throws InterruptedException {
+		ExtentTestManager.startTest("TC:71 - Cashier Authorization");
+		Log.info("TC71 - Cashier Authorization");
+		//Thread.sleep (2000);
+		//ScrollUntilElementVisible(fixeddeposit.Authorizecanceltab);
+//		click(fixeddeposit.Authorizecanceltab);
+//		
+//		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Go to Authorize and cancel module");
+//		Log.info("Step:01 - Go to Authorize and cancel module");
+		
+		click(fixeddeposit.cashiersauthorize);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click cashier authorization");
+		Log.info("Step:01 - click cashier authorization");
+		
+		if(ElementDisplayed(fixeddeposit.ClickGo)) {
+			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult: Cashier Authorization window will be opened");
+			Log.info("ExpectedResult:Cashier authorization window will be opened");
+	
+		}else {
+			
+			ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: Cashier authorization window will not be opened");
+			Log.info("ExpectedResult: cashier authorization window will not be opened");
+
+		}
+		
+		ExtentTestManager.endTest();
+				
+	}
+	
+	public void Cashierrefresh(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+		ExtentTestManager.startTest("TC:72 -Click Refresh and pass the transactionid");
+		Log.info("Tc:72 - Click refresh and pass the transactionid");
+		input(fixeddeposit.Transacidtextbox,cashtranscid);
+  		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Enter transactionid");
+		Log.info("Step:01 -Enter Transaction id");
+		
+  		click(fixeddeposit.ClickGo);
+  		//click(fixeddeposit.Refresh);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 Click Go button");
+		Log.info("Step:02 -Click Go Button");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected result: Loan open entry is displayed");
+		Log.info("Expected result: Loan open entry is displayed");
+		
+		ExtentTestManager.endTest();
+	}
+		
+	public void cashierauthorizationauthorizebtn() throws InterruptedException {
+		ExtentTestManager.startTest("TC:73 -Cashier authorization ");
+		Log.info("Tc:73 - Cashier authorization");
+  		click(fixeddeposit.checkboxselect1);
+  		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 select checkbox");
+		Log.info("Step:01 select checkbox");
+		
+		click(fixeddeposit.Authorizebtn);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 click authorize button");
+		Log.info("Step:02 click authorize button");
+		
+		if(ElementDisplayed(fixeddeposit.cancelpopup)) {
+			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult: Entry authorized");
+			Log.info("ExpectedResult: Entry authorized");
+	
+	
+		}else {
+			
+			ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: Entry is not  authorized");
+			Log.info("ExpectedResult: Entry is not authorized");
+
+		}
+		click(fixeddeposit.cancelpopup);
+		Thread.sleep(2000);
+        click(fixeddeposit.signout);
+		ExtentTestManager.endTest();
+	
+	}
+
+
 }

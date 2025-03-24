@@ -145,7 +145,7 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
 	public By cancelpopup=By.id("closetop");
 	
 	//Manager Authorization - Cash Tab
-			public By ManagerAuthorization=By.linkText("Manager Authorisation (MNAU)");
+			public By ManagerAuthorization=By.xpath("//a[text()='Manager Authorisation (MNAU)']");
 			public By Refresh1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
 			public By cashtab=By.id("__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash");
 			public By cashdetails=By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_lblBatchID");

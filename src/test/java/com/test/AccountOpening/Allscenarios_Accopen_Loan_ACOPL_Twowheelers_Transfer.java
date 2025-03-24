@@ -9,8 +9,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
+import com.Page_AccountOpening.AccOpen_Loanopening_ACOPL_TwoWheeler;
 import com.Page_Customer.Customer_AccountOpening_FixedDeposit;
 import com.Utility.Log;
+import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
@@ -22,7 +24,8 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheelers_Transfer {
 	TestListener TestListener; 
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	Customer_AccountOpening_FixedDeposit fixeddeposit= new Customer_AccountOpening_FixedDeposit();
+	//Customer_AccountOpening_FixedDeposit fixeddeposit= new Customer_AccountOpening_FixedDeposit();
+	AccOpen_Loanopening_ACOPL_TwoWheeler  fixeddeposit  = new AccOpen_Loanopening_ACOPL_TwoWheeler();
 	
 	@BeforeSuite
 	public void reference() {
@@ -57,10 +60,62 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheelers_Transfer {
 			    //TC 01
 				//User Login
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
-
-						
-				//Sign out
-				custSrchMthds.logout(); 		
+				
+				 //TC 02
+				//User Login
+				custSrchMthds.userLoginValidPaswrd(testdata, context);
+				
+				//TC 03
+				//Account Opening
+				fixeddeposit.TwoWheelerLoan();
+				
+				//TC 04, 05,06,07
+				fixeddeposit.AddandselectCustomer(testdata, context);
+				
+				//TC 08
+				fixeddeposit.FillAccountInfoTab(testdata,context);
+				
+				//TC 09
+				fixeddeposit.FillAccountInfoTabResolutionNo(testdata, context);
+				
+				//TC 10
+				fixeddeposit.FillAccountInfoTabEnterResoultionDate(testdata,context);
+				
+				//TC 11
+				fixeddeposit.FillAccountInfoTabReferedBy(testdata, context); 
+				
+				 //TC 12
+				fixeddeposit.FillAccountInfoTabCanvasserName(testdata, context);
+				
+				//TC 13
+				fixeddeposit.FillAccountInfoTabEquitableMortRegNo(testdata, context);
+				
+				//TC 14,15
+				fixeddeposit.FillAccountInfoTabEMRDate(testdata, context);
+				
+				//TC 16
+				fixeddeposit.FillAccountInfoTabAgentCode(testdata, context);
+				
+				//TC 17
+				fixeddeposit.FillAccountInfoTabDSACode(testdata, context);
+				
+				//TC 18
+				fixeddeposit.NextButtonFunctionality();
+				
+				//TC 19, 20
+				fixeddeposit.SelectvehicleSecurityTab(testdata, context);
+				
+				//TC 21
+				fixeddeposit.FillVehicleSecurityDetialsRCno(testdata, context);
+				
+				//TC 22
+				fixeddeposit.FillVehicleSecurityDetailsSelectVehicleStatus(testdata, context);
+			
+				//TC 23
+				fixeddeposit.FillVehicleSecurityDetailsSelectVehicleType(testdata, context);
+							
+			/*	//Sign out
+				custSrchMthds.logout();*/	
 				
 				
 				// EndTest
@@ -68,7 +123,9 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheelers_Transfer {
 				ExtentManager.getInstance().flush();
 			}		
 		}catch(Exception e) {
-			System.out.println(e);
+			ExtentTestManager.getTest().log(Status.FAIL, e);
+            Log.info("Exception "+e);
+            ExtentTestManager.endTest();
 		}
 	}
 	

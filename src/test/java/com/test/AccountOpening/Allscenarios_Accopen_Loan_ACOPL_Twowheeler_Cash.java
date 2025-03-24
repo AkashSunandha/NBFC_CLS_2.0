@@ -1,6 +1,7 @@
 package com.test.AccountOpening;
 
 import java.io.IOException;
+//import java.sql.Driver;
 import java.util.Map;
 
 import org.testng.ITestContext;
@@ -15,6 +16,7 @@ import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
+import com.github.dockerjava.api.model.Driver;
 import com.listeners.TestListener;
 
 public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
@@ -149,8 +151,8 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				//TC 36
 				fixeddeposit.FillVehiclesSecurityDetailsInsuranceprovider(testdata, context);
 				
-				/*//TC 37
-				fixeddeposit.FillVehicleSecurityDetailsInsuredpastDate(testdata, context);*/
+				/* // TC 37
+				fixeddeposit.FillVehicleSecurityDetailsInsuredpastDate(testdata, context); */
 				
 				//TC 38(invalid)
 				
@@ -237,25 +239,16 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				fixeddeposit.EnterValidsanctionedamountclickGetValues();
 				
 				//TC 68
-				fixeddeposit.SelectTransactionMode();
+				fixeddeposit.SelectTransactionMode(); 
 				
 				//TC 69
-				fixeddeposit.saveloan();
-				
-				//Sign out
-				custSrchMthds.logout();
+				fixeddeposit.saveloan(); 
+				 
+				/* //Sign out
+				custSrchMthds.logout(); */
 				
 				//TC 70
 				fixeddeposit.Login_with_AnotherUser(testdata, context);
-				
-				//TC 71
-				fixeddeposit.CashierAuthorization();
-				
-				//TC 72
-				fixeddeposit.Cashierrefresh(testdata, context);
-				
-				//TC 73
-				fixeddeposit.cashierauthorizationauthorizebtn();
 				
 				//74
 				fixeddeposit.Manager_Authorization_CashTab();
@@ -265,10 +258,18 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				
 				//76
 				fixeddeposit.Authorize_Loan_Entry_asManager();
-
-						
-				/*//Sign out
-				custSrchMthds.logout(); */		
+				
+				//TC 71
+				fixeddeposit.CashierAuthorization();
+				
+				//TC 72
+				fixeddeposit.Cashierrefresh(testdata, context);
+				
+				//TC 73
+				fixeddeposit.cashierauthorizationauthorizebtn();
+			
+				 /*//Sign out
+				custSrchMthds.logout(); */
 				
 				
 				// EndTest
@@ -279,6 +280,19 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 			ExtentTestManager.getTest().log(Status.FAIL, e);
             Log.info("Exception "+e);
             ExtentTestManager.endTest();
+            
+         // Logout
+         			context.setAttribute("fileName", "Logout");
+         			Driver driver = new Driver();
+					driver.wait();
+         			ExtentTestManager.getTest().log(Status.PASS, "Application Logout");
+         			Log.info("Logout is done");
+
+         			// EndTest
+         			System.out.println(("*** Test Suite " + testdata.get("TestScenario").toString() + " ending ***"));
+         			ExtentTestManager.endTest();
+         			ExtentManager.getInstance().flush();
+         			Log.info("*** Test Suite " + testdata.get("TestScenario").toString() + " ending ***");
 		}
 	}
 	
