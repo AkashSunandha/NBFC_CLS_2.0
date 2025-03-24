@@ -22,6 +22,7 @@ import com.extentReports.ExtentTestManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -408,5 +409,66 @@ public class Base_Class {
 
         System.out.println("Timeout reached, spinner still shows up intermittently.");
     }
+    public static void KeyOperation(String strKey) {
+		Actions act = new Actions(driver);
+		String str = strKey.toUpperCase();
+		switch (str) {
+		case "ENTER":
+			act.sendKeys(Keys.ENTER).build().perform();
+			ExtentSuccessMessage("Successfully click on 'ENTER' Key");
+			break;
+		case "TAB":
+			act.sendKeys(Keys.TAB).build().perform();
+			ExtentSuccessMessage("Successfully click on 'TAB' Key");
+			break;
+		case "DELETE":
+			act.sendKeys(Keys.DELETE).build().perform();
+			ExtentSuccessMessage("Successfully click on 'DELETE' Key");
+			break;
+		case "BACK_SPACE":
+			act.sendKeys(Keys.BACK_SPACE).build().perform();
+			ExtentSuccessMessage("Successfully click on 'BACK_SPACE' Key");
+			break;
+		case "LEFT":
+			act.sendKeys(Keys.LEFT).build().perform();
+			ExtentSuccessMessage("Successfully click on 'LEFT' Key");
+			break;
+		case "DOWN":
+			act.sendKeys(Keys.DOWN).build().perform();
+			ExtentSuccessMessage("Successfully click on 'DOWN' Key");
+			break;
+		case "UP":
+			act.sendKeys(Keys.UP).build().perform();
+			ExtentSuccessMessage("Successfully click on 'UP' Key");
+			break;
+		case "RIGHT":
+			act.sendKeys(Keys.RIGHT).build().perform();
+			ExtentSuccessMessage("Successfully click on 'BACK_SPACE' Key");
+			break;
+		case "SUBTRACT":
+			act.sendKeys(Keys.SUBTRACT).build().perform();
+			ExtentSuccessMessage("Successfully click on 'BACK_SPACE' Key");
+			break;
+		case "CONTROL":
+			act.sendKeys(Keys.CONTROL).build().perform();
+			ExtentSuccessMessage("Successfully click on 'CTRL' Key");
+			break;
+		case "ARROW_LEFT":
+			act.sendKeys(Keys.ARROW_LEFT).build().perform();
+			ExtentSuccessMessage("Successfully click on 'BACK_SPACE' Key");
+			break;
+		case "ESC":
+			act.sendKeys(Keys.ESCAPE).build().perform();
+			ExtentSuccessMessage("Successfully click on 'ESC' Key");
+			break;
+		case "V":
+			act.sendKeys("V").build().perform();
+			ExtentSuccessMessage("Successfully click on 'V' Key");
+			break;
+
+		}
+	}
+
+	
 
 }

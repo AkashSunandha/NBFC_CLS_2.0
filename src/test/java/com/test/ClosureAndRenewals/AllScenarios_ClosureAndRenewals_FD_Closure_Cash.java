@@ -1,4 +1,4 @@
-package com.test.Transaction;
+package com.test.ClosureAndRenewals;
 
 import java.io.IOException;
 import java.util.Map;
@@ -19,7 +19,7 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_Transaction_GL_AC_Bulk_Transaction_Cash {
+public class AllScenarios_ClosureAndRenewals_FD_Closure_Cash {
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -27,8 +27,6 @@ public class AllScenarios_Transaction_GL_AC_Bulk_Transaction_Cash {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	Transaction_Transactions_Suspense_liability transSusliability = new Transaction_Transactions_Suspense_liability();
-	Transaction_GL_AC_Bulk_Transaction transGL_AC_Bulk =new Transaction_GL_AC_Bulk_Transaction();
 	ClosureAndRenewals_FD_Closure FD_Closure =new ClosureAndRenewals_FD_Closure();
 
 	@BeforeSuite
@@ -59,19 +57,39 @@ public class AllScenarios_Transaction_GL_AC_Bulk_Transaction_Cash {
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 				
-				transGL_AC_Bulk.Navigate_GL_AC_Bulk_Transaction();
-
-				transGL_AC_Bulk.GLccountinfo(testdata, context);
-
-				transGL_AC_Bulk.GLccountinfoDebit(testdata, context);
-
-				transGL_AC_Bulk.GLccountinfo(testdata, context);
-
-				transGL_AC_Bulk.GLccountinfoDebit(testdata, context);
-
-				transGL_AC_Bulk.transModeCash();
-
-				transGL_AC_Bulk.authorizeCash(testdata, context);
+				FD_Closure.Navigate_GL_AC_Bulk_Transaction();
+				
+				
+				
+				FD_Closure.SelectBranch();
+				
+				FD_Closure.SelectProductGroup();
+				
+				FD_Closure.SelectProductName();
+				
+				FD_Closure.EnterAccountNumber();
+				
+				FD_Closure.	ClickOnGoButton();
+				
+				FD_Closure.SelectTransactionModeCASH();
+				
+				FD_Closure.ClickonSubmit_TransactionButton();
+				
+				FD_Closure.authorizeCash(testdata, context);
+				
+//				transGL_AC_Bulk.Navigate_GL_AC_Bulk_Transaction();
+//
+//				transGL_AC_Bulk.GLccountinfo(testdata, context);
+//
+//				transGL_AC_Bulk.GLccountinfoDebit(testdata, context);
+//
+//				transGL_AC_Bulk.GLccountinfo(testdata, context);
+//
+//				transGL_AC_Bulk.GLccountinfoDebit(testdata, context);
+//
+//				transGL_AC_Bulk.transModeCash();
+//
+//				transGL_AC_Bulk.authorizeCash(testdata, context);
 
 				custSrchMthds.logout();
 
