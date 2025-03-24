@@ -34,7 +34,7 @@ public class PageRepositary_AccOpr_MembMang_MembMang_Loan {
 	public By otherCheckBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers_ucMAOthers_lvwOtherDetails_ctrl0_chkSelect\"]");
 	public By actualUserName = By.xpath("//*[@id=\"ctl00_ctl00_lblUser\"]");
 //	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
+	public By loader =By.xpath("//div[@id=\"progressdiv\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");

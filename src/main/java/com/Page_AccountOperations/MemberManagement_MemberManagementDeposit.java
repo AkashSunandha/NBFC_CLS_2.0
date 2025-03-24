@@ -22,7 +22,7 @@ import com.extentReports.ExtentTestManager;
 
 public class MemberManagement_MemberManagementDeposit extends Base_Class{
 
-	public String spAccNum = "EXEC SPGetNotPledgeddepositdetailsTEST  '102' , '14003'";
+	public String spAccNum = "EXEC SPGetmemberDeposit '14003'";
 	public String clmnNam = "AcNO";
 	
 	public String last4DigitsOfAccNum;

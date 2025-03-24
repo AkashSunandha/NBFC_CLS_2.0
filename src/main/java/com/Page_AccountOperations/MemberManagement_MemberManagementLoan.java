@@ -24,8 +24,8 @@ import com.extentReports.ExtentTestManager;
 
 public class MemberManagement_MemberManagementLoan extends Base_Class{
 
-	public String spAccNum = "EXEC GetOtherLoanAccountNumberForTransaction";
-	public String clmnNam = "Acno";
+	public String spAccNum = "exec SPGetmemberLoan 23001";
+	public String clmnNam = "AcNO";
 	public String last4DigitsOfAccNum;
 	public String actualUserName;
 
@@ -84,6 +84,8 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "1. Select 'OTHER LOANS' from the product group dropdown.");
 		Log.info("1. Select 'OTHER LOANS' from the product group dropdown.");
 		
+		waitUntilElementDisappear(loanRepo.loader);
+		
 		if(dropdownSelectionValidation("OTHER LOANS",loanRepo.aiProductGroupDropdown)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'OTHER LOANS' is selected in the product group dropdown.");
 			Log.info("Expected Result: 'OTHER LOANS' is selected in the product group dropdown.");
@@ -94,7 +96,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 		ExtentTestManager.endTest();
 		
-
+		
 		
 		//Select Product Name - Positive Scenario
 		ExtentTestManager.startTest("Select Product Name - Positive Scenario");
