@@ -1,4 +1,4 @@
-[ERROR] 2025-03-24 12:20:17.727 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-24 12:54:11.365 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-03-24 12:20:17.742 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-24 12:54:11.379 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-03-24 12:20:17.743 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-24 12:54:11.382 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-03-24 12:20:17.749 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-24 12:54:11.388 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -210,29 +210,29 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[INFO ] 2025-03-24 12:20:18.283 [main] Log - *** Running test method GL_AC_Bulk_Transaction...
-[INFO ] 2025-03-24 12:20:21.846 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-24 12:20:22.926 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-24 12:20:25.278 [main] Log - PC Registration
-[INFO ] 2025-03-24 12:20:26.340 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-24 12:20:28.662 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-24 12:20:29.695 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-03-24 12:20:34.015 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-24 12:20:35.098 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-24 12:20:35.166 [main] Log - Valid Login
-[INFO ] 2025-03-24 12:20:36.195 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-24 12:20:37.224 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-24 12:20:44.450 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-24 12:20:45.498 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-24 12:20:45.575 [main] Log - Navigate to Closure And Renewals Tab >> Term Deposit Closure.
-[INFO ] 2025-03-24 12:20:49.852 [main] Log - Step:01 - Navigate to the Closure And Renewals module in the menu.
-[INFO ] 2025-03-24 12:20:54.698 [main] Log - Step:02 - Click on the Term_Deposit_Closure module.
-[INFO ] 2025-03-24 12:20:55.741 [main] Log - Expected Result: Term_Deposit_Closure module opens successfully.
-[INFO ] 2025-03-24 12:20:55.791 [main] Log - Select Branch
-[INFO ] 2025-03-24 12:20:57.853 [main] Log - Step:01 -  Choose 'TRIVANDRUM' for Branch.
-[INFO ] 2025-03-24 12:20:57.897 [main] Log - Select Product Group
-[INFO ] 2025-03-24 12:20:59.950 [main] Log - Step:01 -  Choose 'Fixed Deposit' for product group.
-[INFO ] 2025-03-24 12:20:59.992 [main] Log - Select Product Name
-[INFO ] 2025-03-24 12:21:02.294 [main] Log - Step:01 -  Choose 'DEBUNTURE FIXED TYPE 2 YRS' for Product Name.
-[INFO ] 2025-03-24 12:21:02.342 [main] Log - Enter account number
-[INFO ] 2025-03-24 12:21:02.750 [main] Log - Exception java.lang.NullPointerException: Cannot invoke "String.length()" because "accNum" is null
+[INFO ] 2025-03-24 12:54:12.014 [main] Log - *** Running test method GL_AC_Bulk_Transaction...
+[INFO ] 2025-03-24 12:54:15.592 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-03-24 12:54:19.676 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-03-24 12:54:21.997 [main] Log - PC Registration
+[INFO ] 2025-03-24 12:54:23.069 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-03-24 12:54:25.384 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-03-24 12:54:26.423 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-03-24 12:54:30.688 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-03-24 12:54:32.351 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-03-24 12:54:32.409 [main] Log - Valid Login
+[INFO ] 2025-03-24 12:54:33.439 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-24 12:54:34.463 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-03-24 12:54:44.031 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-03-24 12:54:46.457 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-24 12:54:46.533 [main] Log - Navigate to Closure And Renewals Tab >> Term Deposit Closure.
+[INFO ] 2025-03-24 12:54:50.820 [main] Log - Step:01 - Navigate to the Closure And Renewals module in the menu.
+[INFO ] 2025-03-24 12:54:55.413 [main] Log - Step:02 - Click on the Term_Deposit_Closure module.
+[INFO ] 2025-03-24 12:54:56.464 [main] Log - Expected Result: Term_Deposit_Closure module opens successfully.
+[INFO ] 2025-03-24 12:54:56.503 [main] Log - Select Branch
+[INFO ] 2025-03-24 12:54:58.576 [main] Log - Step:01 -  Choose 'TRIVANDRUM' for Branch.
+[INFO ] 2025-03-24 12:54:58.632 [main] Log - Select Product Group
+[INFO ] 2025-03-24 12:55:00.693 [main] Log - Step:01 -  Choose 'Fixed Deposit' for product group.
+[INFO ] 2025-03-24 12:55:00.734 [main] Log - Select Product Name
+[INFO ] 2025-03-24 12:55:03.060 [main] Log - Step:01 -  Choose 'DEBUNTURE FIXED TYPE 2 YRS' for Product Name.
+[INFO ] 2025-03-24 12:55:03.106 [main] Log - Enter account number
+[INFO ] 2025-03-24 12:55:03.391 [main] Log - Exception java.lang.NullPointerException: Cannot invoke "String.length()" because "accNum" is null

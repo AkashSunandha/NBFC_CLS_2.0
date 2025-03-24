@@ -76,20 +76,6 @@ public class AllScenarios_ClosureAndRenewals_FD_Closure_Cash {
 				FD_Closure.ClickonSubmit_TransactionButton();
 				
 				FD_Closure.authorizeCash(testdata, context);
-				
-//				transGL_AC_Bulk.Navigate_GL_AC_Bulk_Transaction();
-//
-//				transGL_AC_Bulk.GLccountinfo(testdata, context);
-//
-//				transGL_AC_Bulk.GLccountinfoDebit(testdata, context);
-//
-//				transGL_AC_Bulk.GLccountinfo(testdata, context);
-//
-//				transGL_AC_Bulk.GLccountinfoDebit(testdata, context);
-//
-//				transGL_AC_Bulk.transModeCash();
-//
-//				transGL_AC_Bulk.authorizeCash(testdata, context);
 
 				custSrchMthds.logout();
 
