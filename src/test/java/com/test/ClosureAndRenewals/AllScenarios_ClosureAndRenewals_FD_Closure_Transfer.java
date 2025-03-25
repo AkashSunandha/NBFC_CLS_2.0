@@ -19,7 +19,7 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_ClosureAndRenewals_FD_Closure_Cash {
+public class AllScenarios_ClosureAndRenewals_FD_Closure_Transfer {
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -43,7 +43,7 @@ public class AllScenarios_ClosureAndRenewals_FD_Closure_Cash {
 	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString()+"-Cash");
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()+"-Transfer");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
@@ -69,11 +69,11 @@ public class AllScenarios_ClosureAndRenewals_FD_Closure_Cash {
 				
 				FD_Closure.	ClickOnGoButton();
 				
-				FD_Closure.SelectTransactionModeCASH();
+				FD_Closure.transModeTransfer(testdata, context);
 				
 				FD_Closure.ClickonSubmit_TransactionButton();
 				
-				FD_Closure.authorizeCash(testdata, context);
+				FD_Closure.authorizeTransfer(testdata, context);
 
 				custSrchMthds.logout();
 

@@ -19,9 +19,18 @@ public class PageRepositary_ClosureAndRenewals_FD_Closure extends Base_Class{
 	public By acTransactionModeDropdown =By.xpath("//*[@title='TransactionMode']");
 	public By acAccNumTxtBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_txtAcNo_txt\"]");
 	public By acGOButton =By.xpath("//*[@value='Go']");
-
+	public By SubmitButton=By.xpath("//*[@name='btnSubmit']");
 	public By SubmitTrans=By.xpath("//*[@value='Submit'][@type='submit'][contains(@id,'_btnSubmit')]");
+	public By POstDebit =By.xpath("//*[@value='Post Debit'] | //*[@value='Post Credit']");
+	public By GL_NAME =By.xpath("//div[@class='hjsel_select']//*[@id='hyjackText0']");
+	public By GL_NAMEVValue =By.xpath("//*[@class='hjsel_options']//*[text()='ADVANCE FOR LAND']");
+	public By Amount =By.xpath("//*[@title='Amount']");
+	public By AddButton =By.xpath("//*[@value='Add'][@type='submit']");
 	
+	public By PrincipalBalance =By.xpath("//*[@title='Principal Amount Balance']");
+	public By Re_Depositing_Check_Box =By.xpath("//*[contains(@id,'_chkRenew')]");
+	public By Enter_Duration =By.xpath("//*[contains(@name,'txtDuration')][@type='text'][@title='Enter Duration']");
+	public By SelectDurationMode=By.xpath("//*[@title='Select Duration Mode']");
 	
 	public By AccountsearchBranchDropdown =By.name("ddlBranch");
 	public By SearchButton =By.name("btnSearch");
@@ -31,7 +40,7 @@ public class PageRepositary_ClosureAndRenewals_FD_Closure extends Base_Class{
 	public By TransactionModeDD =By.xpath("//*[@title='TransactionMode']");
 	public By PartyName =By.xpath("//*[contains(@id,'txtPartyName_txt')]");
 	public By Remarks =By.xpath("//*[contains(@id,'txtRemarks_txt')]");
-	public By AddButton =By.xpath("//*[@value='Add']");
+	
 	public By summaryTransId = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID\"]");
 	
 	
@@ -39,7 +48,7 @@ public class PageRepositary_ClosureAndRenewals_FD_Closure extends Base_Class{
 	
 	
 	public By userName = By.xpath("//*[@id=\"ctl00_ctl00_lblUser\"]");
-	public By autorizeAndCancelTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/div");
+	public By autorizeAndCancelTab = By.xpath("(//*[@id='CreateMenu']//li[@class=' close']//*[text()='Authorize & Cancel']//parent::li//div)[1]");
 	public By managerAuthoTab = By.xpath("//a[text()='Manager Authorisation (MNAU)']");
 	public By cashTab = By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash\"]");
 	public By refreshBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnRefresh\"]");
@@ -57,7 +66,7 @@ public class PageRepositary_ClosureAndRenewals_FD_Closure extends Base_Class{
 	public By goBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnGo\"]");
 	public By transId = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID\"]");
 	public By sTransferTab = By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
-
+	public By TransactionBasedDD =By.xpath("//table[@id='tables']//tr//td//select[@class='DropRequiedField ']");
 	public By approveCheckBoxTransfer = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect\"]");
 	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
 

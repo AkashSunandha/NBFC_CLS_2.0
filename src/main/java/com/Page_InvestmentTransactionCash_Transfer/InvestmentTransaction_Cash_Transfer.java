@@ -343,8 +343,8 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		click(InvestmentTransaction.GL_NAME);
 		Thread.sleep(2000);
 		click(InvestmentTransaction.GL_NAMEVValue);
-		ExtentSuccessMessage( "Step:01 -  Choose 'GL Code' for Transaction Based DD");
-		Log.info("Step:01 -  Choose 'GL Code' for Transaction Based DD");
+		ExtentSuccessMessage( "Step:01 -  Choose 'ADVANCE FOR LAND' for Transaction Based DD");
+		Log.info("Step:01 -  Choose 'ADVANCE FOR LAND' for Transaction Based DD");
 		ExtentTestManager.endTest();	
 	}
 	public void SelectTransactionBasedDropdown() throws InterruptedException {
