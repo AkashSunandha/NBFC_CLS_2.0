@@ -1,4 +1,4 @@
-[ERROR] 2025-03-24 15:42:12.369 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-25 16:53:55.909 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOperations.AllScenarios_AccOpr_MembMang_MembMang_DEPOSIT.gettestdate(AllScenarios_AccOpr_MembMang_MembMang_DEPOSIT.java:92) ~[test-classes/:?]
+	at com.test.AccountOperations.AllScenarios_AccOpr_NomineeManagement.gettestdate(AllScenarios_AccOpr_NomineeManagement.java:88) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-24 15:42:12.411 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-25 16:53:55.942 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -71,7 +71,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOperations.AllScenarios_AccOpr_MembMang_MembMang_DEPOSIT.gettestdate(AllScenarios_AccOpr_MembMang_MembMang_DEPOSIT.java:92) ~[test-classes/:?]
+	at com.test.AccountOperations.AllScenarios_AccOpr_NomineeManagement.gettestdate(AllScenarios_AccOpr_NomineeManagement.java:88) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-24 15:42:12.423 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-25 16:53:55.944 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -124,7 +124,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOperations.AllScenarios_AccOpr_MembMang_MembMang_DEPOSIT.gettestdate(AllScenarios_AccOpr_MembMang_MembMang_DEPOSIT.java:92) ~[test-classes/:?]
+	at com.test.AccountOperations.AllScenarios_AccOpr_NomineeManagement.gettestdate(AllScenarios_AccOpr_NomineeManagement.java:88) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-24 15:42:12.433 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-25 16:53:55.956 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.AccountOperations.AllScenarios_AccOpr_MembMang_MembMang_DEPOSIT.gettestdate(AllScenarios_AccOpr_MembMang_MembMang_DEPOSIT.java:92) ~[test-classes/:?]
+	at com.test.AccountOperations.AllScenarios_AccOpr_NomineeManagement.gettestdate(AllScenarios_AccOpr_NomineeManagement.java:88) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,75 +210,77 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-03-24 15:42:14.111 [main] Log - *** Running test method MemberManagement_Deposit...
-[INFO ] 2025-03-24 15:42:20.868 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-24 15:42:23.306 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-24 15:42:26.106 [main] Log - PC Registration
-[INFO ] 2025-03-24 15:42:27.250 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-24 15:42:29.665 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-24 15:42:30.724 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-03-24 15:42:35.062 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-24 15:42:36.737 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-24 15:42:36.852 [main] Log - Valid Login
-[INFO ] 2025-03-24 15:42:37.911 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-24 15:42:38.973 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-24 15:42:48.492 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-24 15:42:51.199 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-24 15:42:51.402 [main] Log - Open Member Management Loan Window
-[INFO ] 2025-03-24 15:42:55.745 [main] Log - 1. Expand account operation.
-[INFO ] 2025-03-24 15:43:00.068 [main] Log - 2. Expand member management.
-[INFO ] 2025-03-24 15:43:04.765 [main] Log - 3. Select member management loan.
-[INFO ] 2025-03-24 15:43:05.853 [main] Log - Expected Result: Member management loan window is opened.
-[INFO ] 2025-03-24 15:43:05.930 [main] Log - Select Product Group - Positive Scenario
-[INFO ] 2025-03-24 15:43:08.364 [main] Log - 1. Select 'Fixed Deposit' from the product group dropdown.
-[INFO ] 2025-03-24 15:43:08.588 [main] Log - Expected Result: 'Fixed Deposit' is selected in the product group dropdown.
-[INFO ] 2025-03-24 15:43:08.649 [main] Log - Select Product Name - Positive Scenario
-[INFO ] 2025-03-24 15:43:11.038 [main] Log - 1. Select a valid product name from the product dropdown.
-[INFO ] 2025-03-24 15:43:11.210 [main] Log - Expected Result: The selected product name is displayed.
-[INFO ] 2025-03-24 15:43:11.297 [main] Log - Enter Account Number - Positive Scenario
-[INFO ] 2025-03-24 15:43:12.783 [main] Log - 1. Enter a valid  account number.
-[INFO ] 2025-03-24 15:43:12.833 [main] Log - Expected Result: The  account number is displayed in the input field.
-[INFO ] 2025-03-24 15:43:12.911 [main] Log - Go Button Functionality
-[INFO ] 2025-03-24 15:43:17.243 [main] Log - 1. Click the Go button.
-[INFO ] 2025-03-24 15:43:18.334 [main] Log - Expected Result: Account details related to the account number are displayed.
-[INFO ] 2025-03-24 15:43:18.433 [main] Log - Search Customer by Name
-[INFO ] 2025-03-24 15:43:23.095 [main] Log - 1. Click on 'Select Customer' popup button
-[INFO ] 2025-03-24 15:43:24.204 [main] Log - 2. Enter alphabets in 'Name' field
-[INFO ] 2025-03-24 15:43:28.526 [main] Log - 3. Click 'Search' button
-[INFO ] 2025-03-24 15:43:29.602 [main] Log - Expected Result: Customer search results display based on name input
-[INFO ] 2025-03-24 15:43:29.693 [main] Log - Select and Add Customer
-[INFO ] 2025-03-24 15:43:33.890 [main] Log - Click on a listed customer in the results
-2. Click 'Select'
-[INFO ] 2025-03-24 15:43:33.996 [main] Log - Expected Result: Customer search results display based on name input
-[INFO ] 2025-03-24 15:43:34.101 [main] Log - Select Loanee Type - Positive Scenario
-[INFO ] 2025-03-24 15:43:36.472 [main] Log - 1. Select a valid loanee type from the dropdown.
-[INFO ] 2025-03-24 15:43:36.621 [main] Log - Expected Result: The selected loanee type is displayed.
-[INFO ] 2025-03-24 15:43:36.707 [main] Log - Add Customer
-[INFO ] 2025-03-24 15:43:41.270 [main] Log - 1. Click the Add button.
-[INFO ] 2025-03-24 15:43:42.379 [main] Log - Expected Result: Customer is added for the Deposit.
-[INFO ] 2025-03-24 15:43:42.472 [main] Log - Enter Remark - Positive Scenario
-[INFO ] 2025-03-24 15:43:43.535 [main] Log - 1. Enter a valid remark.
-[INFO ] 2025-03-24 15:43:43.587 [main] Log - Expected Result: The remark is displayed in the input field.
-[INFO ] 2025-03-24 15:43:43.660 [main] Log - Submit transaction
-[INFO ] 2025-03-24 15:43:48.013 [main] Log - 1. Click the Submit button.
-[INFO ] 2025-03-24 15:43:49.102 [main] Log - Expected Result: Transaction Submitted.
-[INFO ] 2025-03-24 15:43:53.551 [main] Log - Login with Another User
-[INFO ] 2025-03-24 15:43:58.182 [main] Log - Step:01 - Log out
-[INFO ] 2025-03-24 15:44:09.440 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-03-24 15:44:09.484 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-03-24 15:44:09.589 [main] Log - Manager Authorization
-[INFO ] 2025-03-24 15:44:13.891 [main] Log - Step:01 - Click "Authorize & Cancel"
-[INFO ] 2025-03-24 15:44:18.486 [main] Log - Step:02 - Select "Manager Authorization"
-[INFO ] 2025-03-24 15:44:22.838 [main] Log - Step:03 - Click "Others" tab
-[INFO ] 2025-03-24 15:44:22.838 [main] Log - Expected Result: Others tab load
-[INFO ] 2025-03-24 15:44:22.950 [main] Log - Refresh Loan Opening Entry
-[INFO ] 2025-03-24 15:44:27.301 [main] Log - Step:01 - Click Refresh Button
-[INFO ] 2025-03-24 15:44:28.399 [main] Log - Expected Result: Loan opening entry displayed
-[INFO ] 2025-03-24 15:44:28.487 [main] Log - Authorize Loan Entry as Manager
-[INFO ] 2025-03-24 15:44:29.578 [main] Log - entered maker ID
-[INFO ] 2025-03-24 15:44:38.253 [main] Log - Step:01 - Select loan entry checkbox
-[INFO ] 2025-03-24 15:44:42.557 [main] Log - Step:02 - Click Authorize Button
-[INFO ] 2025-03-24 15:44:43.624 [main] Log - Expected Result: Transaction gets authorised
-[INFO ] 2025-03-24 15:44:48.036 [main] Log - Logout
-[INFO ] 2025-03-24 15:44:56.636 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-03-24 15:44:57.710 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-03-25 16:53:57.868 [main] Log - *** Running test method Nominee Management...
+[INFO ] 2025-03-25 16:54:05.814 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-03-25 16:54:07.393 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-03-25 16:54:10.139 [main] Log - PC Registration
+[INFO ] 2025-03-25 16:54:11.219 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-03-25 16:54:13.586 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-03-25 16:54:14.645 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-03-25 16:54:18.961 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-03-25 16:54:23.901 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-03-25 16:54:23.971 [main] Log - Valid Login
+[INFO ] 2025-03-25 16:54:25.021 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-25 16:54:26.083 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-03-25 16:54:35.433 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-03-25 16:54:40.453 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-25 16:54:40.646 [main] Log - Nominee Management Navigation
+[INFO ] 2025-03-25 16:54:44.939 [main] Log - 1. Navigate to Account Operation.
+[INFO ] 2025-03-25 16:54:49.963 [main] Log - 2. Click on Nominee Management.
+[INFO ] 2025-03-25 16:54:51.031 [main] Log - Expected Result: The Nominee Management window opens.
+[INFO ] 2025-03-25 16:54:51.084 [main] Log - Product Group Drop-down Functional Check
+[INFO ] 2025-03-25 16:54:53.570 [main] Log - 1. Verify the 'Product Group' dropdown is present.
+2. Check the list of active product groups.
+3. Attempt to click and select a product group.
+[INFO ] 2025-03-25 16:54:53.776 [main] Log - Expected Result: Product Group' dropdown is functional, lists active groups, and allows selection.
+[INFO ] 2025-03-25 16:54:53.857 [main] Log - Product Name Drop-down Functional Check
+[INFO ] 2025-03-25 16:54:56.200 [main] Log - "1. Verify the 'Product Name' dropdown is present.
+2. Check the list of active product names post product group selection.
+3. Attempt to click and select a product name."
+[INFO ] 2025-03-25 16:54:56.333 [main] Log - Expected Result: Product Name' dropdown is functional, lists active names, and allows selection.
+[INFO ] 2025-03-25 16:54:56.383 [main] Log - Account No Field Input Validation
+[INFO ] 2025-03-25 16:54:57.992 [main] Log - "1. Verify 'Account No' field is present.
+2. Enter a valid account number.
+
+[INFO ] 2025-03-25 16:54:58.044 [main] Log - Expected Result: Account No field accepts only numeric input and shows error for non-numerics.
+[INFO ] 2025-03-25 16:54:58.100 [main] Log - Go Button Account Details Display
+[INFO ] 2025-03-25 16:55:04.054 [main] Log - "1. Click 'Go' button.
+2. Verify account details are displayed correctly.
+3. Check if nominee details are shown if already added."
+[INFO ] 2025-03-25 16:55:05.128 [main] Log - Expected Result: Account and nominee details are displayed correctly.
+[INFO ] 2025-03-25 16:55:09.539 [main] Log - Customer Search and Selection
+[INFO ] 2025-03-25 16:55:14.123 [main] Log - 1.Click the customer search icon
+[INFO ] 2025-03-25 16:55:15.215 [main] Log - Expected Result: Customer serach popup window will be displays.
+[INFO ] 2025-03-25 16:55:15.256 [main] Log - Name Field 
+[INFO ] 2025-03-25 16:55:20.616 [main] Log - "1. Enter any alhabets or any name in the ""Name"" field
+2.Click search"
+[INFO ] 2025-03-25 16:55:21.685 [main] Log - Expected Result: Details will be diaplys against the given name.
+[INFO ] 2025-03-25 16:55:21.738 [main] Log - Name Field Autofill Check
+[INFO ] 2025-03-25 16:55:25.912 [main] Log - 1. Select any one customer
+[INFO ] 2025-03-25 16:55:27.020 [main] Log - Expected Result: Popup window will be closed and customer details will be auto fill in the fields.
+[INFO ] 2025-03-25 16:55:27.069 [main] Log - Relation Drop-down Functional Check
+[INFO ] 2025-03-25 16:55:29.475 [main] Log - 1.Select a relation from drop down
+[INFO ] 2025-03-25 16:55:29.630 [main] Log - Expected Result: Relation' dropdown is functional, and selected relation is showing.
+[INFO ] 2025-03-25 16:55:29.684 [main] Log - Add Nominee Functionality
+[INFO ] 2025-03-25 16:55:35.107 [main] Log - 1.Click add button to add nominee
+[INFO ] 2025-03-25 16:55:36.164 [main] Log - Expected Result: 'Nominee has been added' validation will be displays
+[INFO ] 2025-03-25 16:55:40.529 [main] Log - Login with Another User
+[INFO ] 2025-03-25 16:55:45.268 [main] Log - Step:01 - Log out
+[INFO ] 2025-03-25 16:55:56.695 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-03-25 16:55:59.511 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-03-25 16:55:59.596 [main] Log - Manager Authorization
+[INFO ] 2025-03-25 16:56:03.896 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-03-25 16:56:08.484 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-03-25 16:56:12.800 [main] Log - Step:03 - Click "Others" tab
+[INFO ] 2025-03-25 16:56:12.801 [main] Log - Expected Result: Others tab load
+[INFO ] 2025-03-25 16:56:12.853 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-03-25 16:56:17.178 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-03-25 16:56:21.530 [main] Log - Expected Result: Loan opening entry displayed
+[INFO ] 2025-03-25 16:56:21.592 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-03-25 16:56:22.666 [main] Log - entered maker ID
+[INFO ] 2025-03-25 16:56:31.291 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-03-25 16:56:35.620 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-03-25 16:56:36.689 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-03-25 16:56:41.013 [main] Log - Logout
+[INFO ] 2025-03-25 16:56:49.610 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-03-25 16:56:50.673 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

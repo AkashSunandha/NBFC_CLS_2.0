@@ -235,7 +235,7 @@ public class Base_Class {
 //		
 //		
 //	}
-	public static boolean ElementEnableOrDisable(By locator)
+	public static boolean checkElementEnableOrDisable(By locator)
 	{
 		WebElement element = driver.findElement(locator);
 		Boolean flag = element.isEnabled();

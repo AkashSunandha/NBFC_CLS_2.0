@@ -3274,7 +3274,7 @@ public void emptyCheckAvailabilityPopup() throws InterruptedException {
     		driver.switchTo().window(mainWindowHandle);
     		
     		ScrollUntilElementVisible(quickCustRepo.saveBtn);
-    		if(ElementEnableOrDisable(quickCustRepo.saveBtn)==true) {
+    		if(checkElementEnableOrDisable(quickCustRepo.saveBtn)==true) {
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Save' button should be enabled.");
             	Log.info("Expected Result: 'Save' button should be enabled.");
     		}else {
