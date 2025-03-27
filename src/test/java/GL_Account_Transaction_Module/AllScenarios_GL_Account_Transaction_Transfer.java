@@ -98,53 +98,63 @@ public class AllScenarios_GL_Account_Transaction_Transfer extends Base_Class {
 				//TC_12 ---> TrnsmodeDropdownValidation
 				GLTransaction.TrnsmodeDropdownValidation();
 				
-				//TC_13 ---> GLTransactionCreditandCash
+				//TC_13 ---> PartynameParticularsInputValidation
 				GLTransaction.GLTransactionCreditandCash();
 				
-				//TC_14 ---> EnterPartyNameforTransaction
-				GLTransaction.EnterPartyNameforTransaction(testdata, context);
+				//TC_14 ---> AppManagerFieldEditRestriction
+				GLTransaction.PartynameParticularsInputValidation(testdata, context);
 				
-				//TC_15 ---> EnterParticularsforTransaction
-				GLTransaction.EnterParticularsforTransaction(testdata, context);
+				//TC_15 ---> GLTransactionCreditandCash
+				GLTransaction.AppManagerFieldEditRestriction();
 				
-				//TC_16 ---> GLTransactionsCreditandCash
-				GLTransaction.GLTransactionsCreditandCash();
+				//TC_16 ---> POSTDEBITpopupispresent
+				GLTransaction.POSTDEBITpopupispresent();
 				
-				//TC_17 ---> TransactionSummaryValidation
-				GLTransaction.TransactionSummaryValidation();
+				//TC_17 ---> PostDebitpopupispresent
+				GLTransaction.PostDebitpopupispresent();
 				
-				//TC_18 ---> LogintoNBFcApplicationinadifferentuser
+				//TC_18 ---> PostDebitPopUpProductGroupDropdown
+				GLTransaction.PostDebitPopUpProductGroupDropdown();
+				
+				//TC_19 ---> PostDebitPopUpProductNameDropdown
+				GLTransaction.PostDebitPopUpProductNameDropdown();
+				
+				//TC_20 ---> PostDebitPopUpBranchDropdown
+				GLTransaction.PostDebitPopUpBranchDropdown();
+				
+				//TC_21 ---> PostDebitPopUpAccountNumber
+				GLTransaction.PostDebitPopUpAccountNumber(testdata, context);
+				
+				//TC_22 ---> PostDebitPopUpEnterAmount
+				GLTransaction.PostDebitPopUpEnterAmount();
+				
+				//TC_23 ---> PostDebitPopUpAddDetails
+				GLTransaction.PostDebitPopUpAddDetails();
+				
+				//TC_24 ---> PostDebitPopUpSubmitDetails
+				GLTransaction.PostDebitPopUpSubmitDetails();
+				
+				//TC_25 ---> PostDebitPopUpSubmitDetailsSubmitsummary
+				GLTransaction.PostDebitPopUpSubmitDetailsSubmitsummary();
+				
+				//TC_26 ---> LogintoNBFcApplicationinadifferentuser
 				GLTransaction.LogintoNBFcApplicationinadifferentuser();
 				
-				//TC_19 ---> LogintoNBFcApplicationinadifferentuserlogin
-				GLTransaction.LogintoNBFcApplicationinadifferentuserlogin();
-				
-				//TC_20 ---> LogintoNBFcApplicationinadifferentuserAuthorizeandcancel
+				//TC_27 ---> LogintoNBFcApplicationinadifferentuserAuthorizeandcancel
 				GLTransaction.LogintoNBFcApplicationinadifferentuserAuthorizeandcancel();
 				
-				//TC_21 ---> CashierAuthorisationRefresh
-				GLTransaction.CashierAuthorisationRefresh();
+				//TC_28 ---> ManagerAuthorisationTransfer
+				GLTransaction.ManagerAuthorisationTransfer();
 				
-				//TC_22 ---> SelectCashierCashTransaction
-				GLTransaction.SelectCashierCashTransaction();
+				//TC_29 ---> ManagerAuthorisationRefresh
+				GLTransaction.ManagerAuthorisationRefresh();
 				
-				//TC_23 ---> CashierCashAuthorization
-				GLTransaction.CashierCashAuthorization();
+				//TC_30 ---> SelectManagerTransferTransaction
+				GLTransaction.SelectManagerTransferTransaction();
 				
-				//TC_24 ---> ManagerCashAuthorisation
-				GLTransaction.ManagerCashAuthorisation();
+				//TC_31 ---> ManagerTransferAuthorization
+				GLTransaction.ManagerTransferAuthorization();
 				
-				//TC_25 ---> CashAuthorizationRefresh
-				GLTransaction.CashAuthorizationRefresh();
-				
-				//TC_26 ---> SelectCashTransactionManagerAuthorisation
-				GLTransaction.SelectCashTransactionManagerAuthorisation();
-				
-				//TC_27 ---> CashManagerAuthorization
-				GLTransaction.CashManagerAuthorization();
-				
-			
-
 				
 				
 				// Sign out

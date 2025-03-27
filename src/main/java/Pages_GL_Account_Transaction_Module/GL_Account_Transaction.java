@@ -62,6 +62,8 @@ public class GL_Account_Transaction
 		public By CashAuthorizeBtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnSubmit']");
 		public By ManagerAuthorization = By.xpath("//a[normalize-space()='Manager Authorisation (MNAU)']");
 		public By ManagerCheckBox = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect']");
+		public By TransManagerCheckBox = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect']");
+
 		public By ManagerAuthorize = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnOtherPass']");
 		public By ItemAlready = By.xpath("//input[@id='close']");
 		public By TrasID = By.xpath("//span[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID']");
@@ -69,7 +71,7 @@ public class GL_Account_Transaction
 		public By TransferTab = By.xpath("//span[@id ='__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer']");
 		//Post debit
 		
-		public By PostDebit = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_btnAutoPost']");
+		public By PostDebit = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_btnAutoPost']");
 		public By TransactionBased = By.xpath("//select[@id='ddlTrnsBased_ddl']");
 		public By ProductGroupDropdown = By.xpath("//select[@id = 'ddlProductGroup_ddl']");
 		public By ProductNameDropdown = By.xpath("//select[@id ='ddlProductName_ddl']");
@@ -78,6 +80,10 @@ public class GL_Account_Transaction
 		public By AmountField = By.xpath("//input[@id ='txtAmount_txt']");
 		public By RemoveEntry = By.xpath("//a[@id ='lstContraEntry_ctrl0_lnkRemove']");
 		public By SubButton = By.xpath("//input[@id='btnSubmit']");
+		public By TotCredDebit = By.xpath("//input[@id = 'txtTotalCrDr_txt']");
+		public By AddButton = By.xpath("//input[@id='btnAdd']");
+		public By AccountNoCheckbox = By.xpath("//input[@id = 'lstAccountList_ctrl0_chkInvAccountList']");
+
 		
 		//Signout
 		public By custSignOut = By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");

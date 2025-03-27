@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-21T13:22:24 IST" name="Default suite" finished-at="2025-03-21T13:28:32 IST" duration-ms="367893">
+  <suite started-at="2025-03-27T11:55:36 IST" name="Default suite" finished-at="2025-03-27T11:59:18 IST" duration-ms="222006">
     <groups>
     </groups>
-    <test started-at="2025-03-21T13:22:24 IST" name="Default test" finished-at="2025-03-21T13:28:32 IST" duration-ms="367893">
-      <class name="Jewel_Loan_Transcharge_Module.AllScenarios_Jewel_Loan_Transcharge_Transfer">
-        <test-method is-config="true" signature="reference()[pri:0, instance:Jewel_Loan_Transcharge_Module.AllScenarios_Jewel_Loan_Transcharge_Transfer@5118388b]" started-at="2025-03-21T13:22:24 IST" name="reference" finished-at="2025-03-21T13:22:24 IST" duration-ms="10" status="PASS">
+    <test started-at="2025-03-27T11:55:36 IST" name="Default test" finished-at="2025-03-27T11:59:18 IST" duration-ms="222006">
+      <class name="GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer">
+        <test-method is-config="true" signature="reference()[pri:0, instance:GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer@15a902e7]" started-at="2025-03-27T11:55:36 IST" name="reference" finished-at="2025-03-27T11:55:36 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="Loan_Closure_Transfer(java.util.Map,org.testng.ITestContext)[pri:0, instance:Jewel_Loan_Transcharge_Module.AllScenarios_Jewel_Loan_Transcharge_Transfer@5118388b]" started-at="2025-03-21T13:22:25 IST" name="Loan_Closure_Transfer" data-provider="TestData" finished-at="2025-03-21T13:28:32 IST" duration-ms="367114" status="PASS">
+        <test-method signature="Loan_Closure_Cash(java.util.Map,org.testng.ITestContext)[pri:0, instance:GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer@15a902e7]" started-at="2025-03-27T11:55:37 IST" name="Loan_Closure_Cash" data-provider="TestData" finished-at="2025-03-27T11:59:18 IST" duration-ms="221179" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{=, Account_Number=3, Amount=100, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Remark=Test, Run=Yes, TestScenario=Jewel_Loan_Transcharge_Transfer, Trans_Amount=500.00}]]>
+                <![CDATA[{=, Particulars=Test, Party_Name=Test, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=GL_Acc_Transaction_Transfer, Trans_Amount=1000.00}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@70f31322]]>
+                <![CDATA[org.testng.TestRunner@66153688]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Loan_Closure_Transfer -->
-      </class> <!-- Jewel_Loan_Transcharge_Module.AllScenarios_Jewel_Loan_Transcharge_Transfer -->
+        </test-method> <!-- Loan_Closure_Cash -->
+      </class> <!-- GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
