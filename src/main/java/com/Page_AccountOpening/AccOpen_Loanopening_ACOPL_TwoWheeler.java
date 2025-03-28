@@ -535,6 +535,7 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		ExtentTestManager.startTest("TC:31-Click Get Button");
 
 		click(fixeddeposit.Getbtn);
+		INclick(fixeddeposit.loader);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Click Get Button ");
 		Log.info("Step:01 Click Get Button");
@@ -907,6 +908,7 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		String Insuredupto_Date = testdata.get("InsuredPastDate").toString();
 		input(fixeddeposit.InsureduptoDate1, Insuredupto_Date);
 		click(fixeddeposit.AddBtn1);
+		INclick(fixeddeposit.loader);
 		click(fixeddeposit.InsuredPastdateokbtn);
 		INclick(fixeddeposit.loader);
 
@@ -1035,11 +1037,12 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 				Log.info("Expected Result: customers will be display against the given details");
 
 				click(fixeddeposit.selectcustomer);
+			
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select the customer from the popup window");
 				Log.info("Step:01 - Select the customer from the popup window");
-
-				driver.switchTo().window(mainWindowHandle);
 				
+				driver.switchTo().window(mainWindowHandle);
+				 INclick(fixeddeposit.loader);
 				Thread.sleep(2000);
 				
 				String customerid1 = driver.findElement(fixeddeposit.custid1).getAttribute("value");
@@ -1391,10 +1394,11 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		}
 		click(fixeddeposit.cancelpopup);
 		Thread.sleep(2000);
-        click(fixeddeposit.signout);
+        //click(fixeddeposit.signout);
 		ExtentTestManager.endTest();
 	
 	}
+
 
 
 }

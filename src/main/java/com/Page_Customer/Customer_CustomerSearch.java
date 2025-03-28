@@ -2402,7 +2402,7 @@ return true;
 
 	click(custSearch.deleteConfirmationOkBtn);
 	click(custSearch.custClearBtn);
-	ExtentTestManager.endTest();
+	ExtentTestManager.endTest(); 
 	}
 	
 	 

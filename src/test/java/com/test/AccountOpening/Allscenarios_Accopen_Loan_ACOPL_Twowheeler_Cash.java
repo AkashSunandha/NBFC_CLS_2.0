@@ -268,12 +268,12 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 				//TC 73
 				fixeddeposit.cashierauthorizationauthorizebtn();
 			
-				 /*//Sign out
-				custSrchMthds.logout(); */
+				 //Sign out
+				custSrchMthds.logout(); 
 				
 				
 				// EndTest
-//				ExtentTestManager.endTest();
+			ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();
 			}		
 		}catch(Exception e) {

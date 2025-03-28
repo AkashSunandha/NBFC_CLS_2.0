@@ -1,6 +1,8 @@
 package com.Page_Repositary;
 
 import org.openqa.selenium.By;
+import com.aventstack.extentreports.Status;
+import com.extentReports.ExtentTestManager;
 
 public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
 	//public static final By Account_opening1 = null;
@@ -96,7 +98,7 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
    public By custid1 =By.id ("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpNominee_NF1_txtNomCust_ID_txt");
    public By Relation =By.id ("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpNominee_NF1_ddlNomRelation_ddl");
    public By Addbutton1 = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpNominee_NF1_btnAddNominee");
-   public By NextButton1 = By.id("ctl00_ctl00_CPH1_PRDCNT_btnNext");
+   public By NextButton1 = By.id("ctl00_ctl00_CPH1_PRDCNT_btnNext"); 
    
   // Loan Details
    public By sanctioned = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpLoanDet_lstLoanDetail_ctrl0_LDF_txtSactAmt_txt");
@@ -156,7 +158,55 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
 			public By successpopup11=By.id("ctl00_ctl00_lblErrorMessage");
 			public By cancelpopup1=By.id("closetop");
 	
-}
+			//Manager Authorization - Transfer Tab
+			
+			public By Transfermode =By.id("ctl00_ctl00_CPH1_PRDCNT_lstOtherInfo_ctrl0_LIF1_ddlTransactionMode_ddl");
+			public By Postdebit = By.id ("ctl00_ctl00_CPH1_PRDCNT_lstOtherInfo_ctrl0_LIF1_btnAutoPost");
+			public By Autopostingpopup= By.xpath ("/html/body/form/div[3]/div/table[1]/tbody/tr[1]/td/div/div[1]");
+			public By GLCode = By.id("ddlTrnsBased_ddl");
+	        public By optionGLCode =By.xpath("//*[@id=\"ddlTrnsBased_ddl\"]");
+	        public By GL_Name =By.id("hyjackText0");
+	        public By GL_NameOption =By.xpath("//li[@val=463 and text()='ADVERTISEMENT']");
+	        public By Balance_Amount = By.id("txtBalanceAmount_txt");
+			public By AutopostingAmount =By.id("txtAmountForGLHead_txt");
+			public By Add =By.id("btnAddGLAcHead"); 
+			public By submit =By.id("btnSubmit");
+			public By save = By.id("ctl00_ctl00_CPH1_PRDCNT_btnSave");
+			public By summary = By.id("ctl00_ctl00_CPH1_PRDCNT_SectionCaption2_lblCaption");
+			 public By existingloanokpopuptransfer = By.xpath("/html/body/div[3]/div[11]/div/button[1]/span");
+			   public By similardatapopuptransfer =By.xpath("/html/body/form/div[14]/div[3]/div/button[1]/span");
+			  public By cashtransactionidtransfer = By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
+			  
+			   
+			
+			//Login with another user
+			//logout
+			public By signout1 = By.xpath("//*[text()='Signout']");
+
+			//Login
+			public By loginUserName2 = By.xpath("//*[@id=\"txtUserName_txt\"]");
+			public By loginPasswrd2 = By.xpath("//*[@id=\"txtPassword_txt\"]");
+			public By loginButton2 = By.xpath("//*[@id=\"imgbtnSubmit\"]");
+			public By Newloginvalidate1=By.xpath("//*[@id=\"ctl00_ctl00_lblUser\"]");
+			
+			
+			//Authorize & cancel for Transfer
+			public By Authorize_canceltab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/div");
+			//public By Transfertab =By.id("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
+			public By Transfertab = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_tab\"]");
+			public By Manager_Authorization_Transfer_Tab =By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/ul/li[4]/a");
+			
+			public By Refresh_1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
+			
+			public By TransactionIDtextbox = By.id("ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt"); 
+		    public By Transactionid =By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
+			public By transferclickGo = By.id("ctl00_ctl00_CPH1_PRDCNT_btnGo");
+			
+			public By Checkboxselect1transfer =By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect");
+			public By Authorizebutton1transfer=By.id("ctl00_ctl00_CPH1_PRDCNT_btnOtherPass");
+			   public By transfersummary =By.id("ctl00_ctl00_CPH1_PRDCNT_SectionCaption2_lblCaption");
+
+			}
 
 
 

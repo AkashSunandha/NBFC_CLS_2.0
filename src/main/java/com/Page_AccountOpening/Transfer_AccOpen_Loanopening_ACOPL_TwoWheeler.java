@@ -1,5 +1,6 @@
 package com.Page_AccountOpening;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -22,14 +23,16 @@ public class Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler fixeddeposit = new PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler();
 		PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
 		com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	    String cashtranscid;
-	    String Transacid;
-	    String Transactid1;
+		//String cashtranscid;
+	    //String Transacid;
+	    //String Transactid1;
+	   String TransferTransactionid;
 	    public String spAadhaar = "EXEC GenerateNextAadharNumber";
 	    public String clmnNamAadhaar = "generated_aadhar_number";
 	    
 	    public String spMobileNum = "EXEC GenerateNextMobileNumber";
 	    public String clmnNamMobileNum = "generated_mobile_number";
+		//private Object username1;
 	    
 	    
 	    public  String generateUniqueId(String query,String columnName) throws ClassNotFoundException {
@@ -201,8 +204,8 @@ public class Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 				throws InterruptedException {
 			ExtentTestManager.startTest("TC:11 - Fill Account Info Tab ReferedBy");
 			click(fixeddeposit.Referedby);
-			INclick(fixeddeposit.loader);
 			click(fixeddeposit.optionPradeep);
+			INclick(fixeddeposit.loader);
 			// click(fixeddeposit.Popupnull);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01  Choose Referred By from dropdown");
 			Log.info("Step:01 Choose Referred By from dropdown");
@@ -532,6 +535,7 @@ public class Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 			ExtentTestManager.startTest("TC:31-Click Get Button");
 
 			click(fixeddeposit.Getbtn);
+			INclick(fixeddeposit.loader);
 
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 Click Get Button ");
 			Log.info("Step:01 Click Get Button");
@@ -904,7 +908,9 @@ public class Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 			String Insuredupto_Date = testdata.get("InsuredPastDate").toString();
 			input(fixeddeposit.InsureduptoDate1, Insuredupto_Date);
 			click(fixeddeposit.AddBtn1);
+			INclick(fixeddeposit.loader);
 			click(fixeddeposit.InsuredPastdateokbtn);
+			INclick(fixeddeposit.loader);
 
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 Choose past date from Insured Upto Date picker.");
 			Log.info("\"Step:01 Choose past date from Insured Upto Date picker.");
@@ -1030,10 +1036,12 @@ public class Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 					Log.info("Expected Result: customers will be display against the given details");
 
 					click(fixeddeposit.selectcustomer);
+					 
 					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select the customer from the popup window");
 					Log.info("Step:01 - Select the customer from the popup window");
 
 					driver.switchTo().window(mainWindowHandle);
+					INclick(fixeddeposit.loader);
 					String customerid1 = driver.findElement(fixeddeposit.custid1).getAttribute("value");
 					if (!customerid1.isBlank()) {
 						ExtentTestManager.getTest().log(Status.PASS,
@@ -1156,4 +1164,287 @@ public class Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 
 			ExtentTestManager.endTest();
 		}
+		
+		public void SelectTransactionModeTransfer() throws InterruptedException {
+			ExtentTestManager.startTest("TC:68 - Select Transaction Mode as Transfer");
+			select("TRANSFER", fixeddeposit.Transfermode);
+
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 Select Trans. Mode as 'Transfer'");
+			Log.info("Step:01 Select Trans. Mode 'Transfer'");
+
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the trans mode as Transfer");
+			Log.info("Expected Result: Possible to select the trans mode as Transfer");
+
+			ExtentTestManager.endTest();
+		}
+
+		public void Verify_Loan_Submission_with_Transfer_Mode() throws InterruptedException {
+			ExtentTestManager.startTest("TC:69 -  Verify Loan Submission with Transfer Mode");
+			click(fixeddeposit.Postdebit);
+
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 Click Post credit button");
+			Log.info("Step:01 Click Post credit button");
+			
+			ExtentTestManager.endTest();
+		}
+		
+		public void Transactionbased_GLcode () throws InterruptedException {
+			//Navigate to Pop Up Window
+			String mainWindowHandle3 = driver.getWindowHandle();
+			boolean popupAppeared3 = false;
+			for (String handle3 : driver.getWindowHandles()) {
+			if (!handle3.equals(mainWindowHandle3)) {
+			driver.switchTo().window(handle3);
+			boolean popupAppeared1 = true;
+			
+			////selecting Transaction_Based  dropdown
+		    ExtentTestManager.startTest("TC:70 - Verify Loan Submission with Transfer Mode select Transaction based");
+		  
+		select("GL Code", fixeddeposit.GLCode);
+		   
+		        ExtentTestManager.getTest().log(Status.PASS, "Step:01  1. Give transaction based as GL Code");
+				Log.info("Step:01  1. Give transaction based as GL Code");
+		        
+		  		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: possible to select the GL code from the dropdown");
+		  		Log.info("Expected Result: possible to select the GL code from the dropdown");
+		  		
+		  		
+						ExtentTestManager.endTest();
+						
+				//GL name
+						    ExtentTestManager.startTest("TC:71 - Verify Loan Submission with Transfer Mode select GL_Name");
+						  //selecting Transaction_Based  dropdown
+						click(fixeddeposit.GL_Name);
+						click(fixeddeposit.GL_NameOption);
+						        ExtentTestManager.getTest().log(Status.PASS, "Step:01  1.Select the GL Name from the drop down");
+								Log.info("Step:01  1.Select the GL Name from the drop down");
+						        
+						  		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: GL code will be autoloads while selecting the GL Name");
+						  		Log.info("Expected Result: GL code will be autoloads while selecting the GL Name");
+						  		
+						  		
+										ExtentTestManager.endTest();
+										
+										
+										//AutopostingAmount
+										 ExtentTestManager.startTest("TC:72 -Loan Submission with Transfer Mode- AutopostingAmount");
+										//String AutopostingAmount = testdata.get("Amount").toString();
+										click(fixeddeposit.AutopostingAmount);
+										String AutopostingAmount1 =driver.findElement(fixeddeposit.Balance_Amount).getAttribute("value");
+										String AutopostingAmount = AutopostingAmount1.split("\\.")[0];
+										clear(fixeddeposit.AutopostingAmount);
+											input(fixeddeposit.AutopostingAmount, AutopostingAmount );
+											ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Give the amount in Amount field");
+											Log.info("Step:01 - Give the amount in Amount field");
+											
+											click(fixeddeposit.Add);
+											
+											ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click Add button");
+											Log.info("Step:02 - Click Add button");
+											
+											ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Given details will be displays in the grid");
+												Log.info("Expected Result: Given details will be displays in the grid");
+												ExtentTestManager.endTest();
+													
+														
+														//Submit btn
+														ExtentTestManager.startTest("TC:73- Click submit button");
+														click(fixeddeposit.submit);
+														ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click submit button after adding the details in the auto posting popup window");
+															Log.info("Step:01 - .Click submit button after adding the details in the auto posting popup window");
+															
+															ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Popup window will be closed");
+															
+															
+															driver.switchTo().window(mainWindowHandle3);
+										
+	
+			}//if loop end
+		
+			
+			}//for loop end
+			ExtentTestManager.endTest();
+			}
+			
+
+public void save() throws InterruptedException {
+	ExtentTestManager.startTest("TC:75 - Click save button");
+	//ScrollUntilElementVisible(fixeddeposit.save);
+	click(fixeddeposit.save);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Save button after giving the post credit details");
+		Log.info("Step:01 -Click Save button after giving the post credit details");
+		
+		click(fixeddeposit.existingloanokpopuptransfer);
+		click (fixeddeposit.similardatapopuptransfer);
+		if (ElementDisplayed(fixeddeposit.transfersummary)) {
+			
+			ExtentTestManager.getTest().log(Status.PASS,"Transfer opening possible and Summary is generated ");
+			Log.info("ExpectedResult: Transfer opening possible and Summary is generated "  );
+			
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: Transfer opening is not possible and Summary is not generated ");
+			Log.info("ExpectedResult: Transfer opening is not possible and Summary is not generated  ");
+			Thread.sleep(1000);
+		}
+		TransferTransactionid = driver.findElement(fixeddeposit.Transactionid).getText();
+		System.out.println(TransferTransactionid );
+		click(fixeddeposit.signout);
+}
+
+
+public void Login_with_Another_User_transferauthorize(Map<Object,Object>testdata,ITestContext context) throws InterruptedException, IOException {
+	ExtentTestManager.startTest("TC:76 - Login with Another User");
+	Log.info("TC:76 - Login with Another User");
+	
+	//click(fixeddeposit.signout);
+	//ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Logout'");
+	//Log.info("Step:01 -  'Logout'");
+
+		String newuserid = configloader().getProperty("UserName1");
+		input(fixeddeposit.loginUserName1, newuserid);
+
+		String newpwd = configloader().getProperty("Password1");
+		input(fixeddeposit.loginPasswrd1, newpwd);
+
+		click(fixeddeposit.loginButton1);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Log in with another user for authorization");
+		Log.info("Step:01 -Log in with another user for authorization");
+
+		if (ElementDisplayed(fixeddeposit.Newloginvalidate)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Logging successfull with another user ");
+			Log.info("ExpectedResult: Logging successfull with another user");
+
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL,
+					"ExpectedResult: Logging is not successfull with another user");
+			Log.info("ExpectedResult: Logging is not successfull with another user");
+			Thread.sleep(1000);
+		}
+
+		ExtentTestManager.endTest();
+		
+        
+	}
+
+
+
+ public void Manager_Authorization_Transfer_Tab() throws InterruptedException {
+		ExtentTestManager.startTest("TC:77- 2.Navigate to Manager Authorization module");
+		Log.info("TC:28 -2.Navigate to Manager Authorization  module");
+		
+		ScrollUntilElementVisible(fixeddeposit.Authorize_canceltab);
+		click(fixeddeposit.Authorize_canceltab);
+		click(fixeddeposit.Manager_Authorization_Transfer_Tab);
+		//click(fixeddeposit.Transfertab);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Go to Authorize and Cancel");
+		Log.info("Step:01 -Go to Authorize and cancel");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Select Manager Authorization");
+		Log.info("Step:02 -select to Manager Authorization module");
+		
+		click(fixeddeposit.Transfertab);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 -click transfer button");
+		Log.info("Step:03 -click transfer button");
+		
+		
+		if(ElementDisplayed(fixeddeposit.Transfertab)) {
+			
+			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult:  -Transfer Tabs Load");
+			Log.info("ExpectedResult:  -Transfer Tabs Load");
+			
+		}else {
+			
+			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult:  -Transfer Tabs will not Load");
+			Log.info("ExpectedResult:  -Transfer Tabs will not Load ");
+			
+		}
+		
+		ExtentTestManager.endTest();
+	
+		
+	}	
+
+	
+	
+	/*public void RefreshLoan_Opening_TransferEntry() throws InterruptedException {
+		ExtentTestManager.startTest("TC:78- Refresh Loan Opening Entry");
+		Log.info("TC:78- Refresh Loan Opening Entry");
+		
+	
+	click(fixeddeposit.Refresh_1);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01:  -Click Refresh button");
+	Log.info("Step 01:  -Click Refresh button");
+	
+	
+	if(ElementDisplayed(fixeddeposit.Manager_Authorization_Transfer_Tab)) {
+		
+		ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult:  -Loan opening entry displayed");
+		Log.info("ExpectedResult:  -Loan opening entry displayed");
+		
+	}else {
+		
+		ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult:  -Loan opening entry displayed");
+		Log.info("ExpectedResult:  -Loan opening entry displayed");
+		
+	}
+	
+	
+	ExtentTestManager.endTest();
+	}*/
+
+	public void AuthorizeLoan_Entry_as_ManagerTransfertab() throws InterruptedException {
+		ExtentTestManager.startTest("TC:79- Authorize Loan Entry as Manager");
+		Log.info("TC: 79 - Authorize Loan Entry as Manager");
+		
+		input(fixeddeposit.TransactionIDtextbox, TransferTransactionid );
+		//input(fixeddeposit.Transacidtextbox,cashtranscid);
+
+	
+  		
+		click(fixeddeposit.transferclickGo);
+  		//click(fixeddeposit.Refresh);
+  		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Enter transaction id and click on go button");
+		Log.info("Step:01 Enter transaction id and click on go button");
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected result: Loan open entry is displayed");
+		Log.info("Expected result: Loan open entry is displayed");
+		ExtentTestManager.endTest();
+
+		Thread.sleep(20000);
+		ExtentTestManager.endTest();
+		
+	
+	}
+	
+	public void Authorize_Loan_Entry_asManagerauthorizebutton() throws InterruptedException {
+		ExtentTestManager.startTest("TC:80 - Authorize Loan Entry as Manager");
+		Log.info("TC:80- Authorize Loan Entry as Manager");
+		click(fixeddeposit.Checkboxselect1transfer);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select loan entry checkbox");
+		Log.info("Step:01 -Select loan entry checkbox");
+		
+		click(fixeddeposit.Authorizebutton1transfer);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click Authorize button");
+		Log.info("Step:02 -Click Authorize button");
+		
+		if(ElementDisplayed(fixeddeposit.cancelpopup)) {
+			ExtentTestManager.getTest().log(Status.PASS, "ExpectedResult: Entry authorized");
+			Log.info("ExpectedResult: Entry authorized");
+	
+	
+		}else {
+			
+			ExtentTestManager.getTest().log(Status.FAIL, "ExpectedResult: Entry is not  authorized");
+			Log.info("ExpectedResult: Entry is not authorized");
+
+		}
+		click(fixeddeposit.cancelpopup);
+//         click(fixeddeposit.signout);
+		ExtentTestManager.endTest();
+		
+}
 }
