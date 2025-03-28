@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-25T16:53:55 IST" name="Default suite" finished-at="2025-03-25T16:56:51 IST" duration-ms="176173">
+  <suite started-at="2025-03-27T15:58:57 IST" name="Default suite" finished-at="2025-03-27T16:02:09 IST" duration-ms="191626">
     <groups>
     </groups>
-    <test started-at="2025-03-25T16:53:55 IST" name="Default test" finished-at="2025-03-25T16:56:51 IST" duration-ms="176173">
-      <class name="com.test.AccountOperations.AllScenarios_AccOpr_NomineeManagement">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.AccountOperations.AllScenarios_AccOpr_NomineeManagement@5bf22f18]" started-at="2025-03-25T16:53:55 IST" name="reference" finished-at="2025-03-25T16:53:55 IST" duration-ms="35" status="PASS">
+    <test started-at="2025-03-27T15:58:57 IST" name="Default test" finished-at="2025-03-27T16:02:09 IST" duration-ms="191626">
+      <class name="com.test.Others.AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Others.AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER@28276e50]" started-at="2025-03-27T15:58:57 IST" name="reference" finished-at="2025-03-27T15:58:57 IST" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.AccountOperations.AllScenarios_AccOpr_NomineeManagement@5bf22f18]" started-at="2025-03-25T16:53:57 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-25T16:56:51 IST" duration-ms="174246" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Others.AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER@28276e50]" started-at="2025-03-27T15:58:59 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-27T16:02:09 IST" duration-ms="189759" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{name=q, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Nominee Management}]]>
+                <![CDATA[{amount=220, last4DigitsOfAccNum=3203, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, remarks=abcd, Run=Yes, TestScenario=CollectionImporting_CASH}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@2c43eb8]]>
+                <![CDATA[org.testng.TestRunner@76c548f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newCustomer -->
-      </class> <!-- com.test.AccountOperations.AllScenarios_AccOpr_NomineeManagement -->
+      </class> <!-- com.test.Others.AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

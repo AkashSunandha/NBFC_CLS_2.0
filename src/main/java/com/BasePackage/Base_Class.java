@@ -392,7 +392,7 @@ public class Base_Class {
     }
 	
 	 // Method to get the value of the entered account number
-    public boolean inputValidation(String input,By locator) {
+    public boolean inputValidation(By locator,String input) {
     	WebElement element = driver.findElement(locator);
     	System.out.println("InputValue: "+element.getAttribute("value"));
         return element.getAttribute("value").equals(input);

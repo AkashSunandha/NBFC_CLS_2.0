@@ -34,14 +34,6 @@ public class PageRepositary_AccOpr_NomineeManagement {
 	public By confirmationMsg = By.xpath("//*[@id=\"ctl00_ctl00_lblErrorMessage\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
+
 	
 }

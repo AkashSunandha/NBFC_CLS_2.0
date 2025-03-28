@@ -129,7 +129,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "1. Enter a valid  account number.");
 		Log.info("1. Enter a valid  account number.");
 		
-		if(inputValidation(last4DigitsOfAccNum,loanRepo.aiAccNumTxtBox)) {
+		if(inputValidation(loanRepo.aiAccNumTxtBox,last4DigitsOfAccNum)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: The  account number is displayed in the input field.");
 			Log.info("Expected Result: The  account number is displayed in the input field.");
 		}else {
@@ -289,7 +289,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "1. Enter a valid remark.");
 		Log.info("1. Enter a valid remark.");
 		
-		if(inputValidation(remark,loanRepo.anmRemarkTxtBox)) {
+		if(inputValidation(loanRepo.anmRemarkTxtBox,remark)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: The remark is displayed in the input field.");
 			Log.info("Expected Result: The remark is displayed in the input field.");
 		}else {

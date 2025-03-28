@@ -157,7 +157,7 @@ public class NomineeManagement extends Base_Class{
 		Log.info("\"1. Verify 'Account No' field is present.\r\n"
 				+ "2. Enter a valid account number.\r\n");
 		
-		if(inputValidation(last4DigitsOfAccNum,nomineeRepo.aiAccNumTxtBox)) {
+		if(inputValidation(nomineeRepo.aiAccNumTxtBox,last4DigitsOfAccNum)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account No field accepts only numeric input and shows error for non-numerics.");
 			Log.info("Expected Result: Account No field accepts only numeric input and shows error for non-numerics.");
 		}else {
