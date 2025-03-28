@@ -1,4 +1,4 @@
-[ERROR] 2025-03-27 11:55:36.736 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-28 17:18:47.649 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-27 11:55:36.752 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-28 17:18:47.666 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-27 11:55:36.754 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-28 17:18:47.667 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-27 11:55:36.761 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-03-28 17:18:47.675 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -210,123 +210,124 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-03-27 11:55:37.489 [main] Log - *** Running test method GL_Acc_Transaction_Transfer...
-[INFO ] 2025-03-27 11:55:41.141 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-27 11:55:42.021 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-27 11:55:42.285 [main] Log - PC Registration
-[INFO ] 2025-03-27 11:55:43.351 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-27 11:55:43.670 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-27 11:55:44.705 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-03-27 11:55:48.982 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-27 11:55:50.334 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-27 11:55:50.397 [main] Log - TC_01 - Login Functionality
-[INFO ] 2025-03-27 11:55:51.453 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-27 11:55:52.513 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-27 11:56:00.555 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-27 11:56:01.657 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-27 11:56:01.715 [main] Log - TC:02 - Launch GL Account Transaction Module
-[INFO ] 2025-03-27 11:56:11.695 [main] Log - Step:01 Navigate to Transactions -> GL A/c transaction
-[INFO ] 2025-03-27 11:56:12.768 [main] Log - Expected Result: Module name displayed as 'GL Account Transaction'
-[INFO ] 2025-03-27 11:56:12.814 [main] Log - TC:03 - Default Date Check
-[INFO ] 2025-03-27 11:56:12.855 [main] Log - 22/10/2300
-[INFO ] 2025-03-27 11:56:12.890 [main] Log - 22/10/2300
-[INFO ] 2025-03-27 11:56:12.890 [main] Log - Step:01 - Verify date and value date field are set to the system date by default
-[INFO ] 2025-03-27 11:56:12.891 [main] Log - Expected Result: Both dates set to system date
-[INFO ] 2025-03-27 11:56:12.939 [main] Log - TC:04 - Default Branch Check
-[INFO ] 2025-03-27 11:56:12.977 [main] Log - Step:01 - Verify the branch field is automatically set to the login branch
-[INFO ] 2025-03-27 11:56:12.977 [main] Log - Expected Result: Login branch is displayed by default
-[INFO ] 2025-03-27 11:56:13.023 [main] Log - TC:05 - GL Acc. Name Dropdown Options
-[INFO ] 2025-03-27 11:56:18.436 [main] Log - Step 1: Click on the GL Acc.Name dropdown
-[INFO ] 2025-03-27 11:56:18.699 [main] Log - Step 2:  Verify the list of active head names
-[INFO ] 2025-03-27 11:56:19.751 [main] Log - Expected Result: Option should be display
-[INFO ] 2025-03-27 11:56:19.797 [main] Log - TC:06 - GL Acc. Name to Code Mapping
-[INFO ] 2025-03-27 11:56:20.073 [main] Log - Step 1:   Select GL Acc. Name
-[INFO ] 2025-03-27 11:56:21.113 [main] Log - Expected Result: Correct GL Acc. code displayed
-[INFO ] 2025-03-27 11:56:21.161 [main] Log - TC:07 - Trans Type Dropdown Options
-[INFO ] 2025-03-27 11:56:26.550 [main] Log - Step 1: Click on the trans type dropdown
-[INFO ] 2025-03-27 11:56:26.842 [main] Log - Step 2: Verify options credit and debit are shown
-[INFO ] 2025-03-27 11:56:26.843 [main] Log - Expected Result: Credit, Debit are listed
-[INFO ] 2025-03-27 11:56:26.886 [main] Log - TC:08 - Go Button Action with Valid GL Acc. Code
-[INFO ] 2025-03-27 11:56:27.176 [main] Log - Step:01 - Click go button
-[INFO ] 2025-03-27 11:56:27.399 [main] Log - Expected Result: Proper navigation and functionality and details will be displays
-[INFO ] 2025-03-27 11:56:27.434 [main] Log - TC:09 - Display Entry on Checkbox Click
-[INFO ] 2025-03-27 11:56:27.440 [main] Log - Step:01 - Click on the previous transaction checkbox
-[INFO ] 2025-03-27 11:56:27.897 [main] Log - Expected Result : Previous transaction entries displayed
-[INFO ] 2025-03-27 11:56:27.938 [main] Log - TC:10 - Net Payable and Recovery Calculation
-[INFO ] 2025-03-27 11:56:28.344 [main] Log - Step:01 -  Enter trnamount as 1000
-[INFO ] 2025-03-27 11:56:31.431 [main] Log - Net Payable Field Value: '1000.00'
-[INFO ] 2025-03-27 11:56:31.438 [main] Log - Recovery Total Field Value: '0.00'
-[INFO ] 2025-03-27 11:56:31.438 [main] Log - Step:02 - Observe net payable and recovery totals
-[INFO ] 2025-03-27 11:56:31.439 [main] Log - Expected Result: Net payable: 1000, Recovery total: 0
-[INFO ] 2025-03-27 11:56:31.474 [main] Log - TC:11 - Field Presence Below Net Payable
-[INFO ] 2025-03-27 11:56:31.686 [main] Log - Step:01 - Verify presence of Trnsmode, partyname, Ref no, particulars, App.manager fields
-[INFO ] 2025-03-27 11:56:31.686 [main] Log - Expected Result: Fields are present
-[INFO ] 2025-03-27 11:56:31.733 [main] Log - TC:12 - Trnsmode Dropdown Validation
-[INFO ] 2025-03-27 11:56:37.052 [main] Log - Step 01:  Click on Trnsmode dropdown
-[INFO ] 2025-03-27 11:56:37.053 [main] Log - Expected Result: Options cash and transfer are listed
-[INFO ] 2025-03-27 11:56:37.094 [main] Log - TC:13 - GL Transaction - Credit and Cash
-[INFO ] 2025-03-27 11:56:42.672 [main] Log - Step 01:  Select  Trnsmode as Transfer
-[INFO ] 2025-03-27 11:56:42.673 [main] Log - Expected Result: Transfer selected
-[INFO ] 2025-03-27 11:56:42.717 [main] Log - TC:14 - Party name, Particulars Input Validation
-[INFO ] 2025-03-27 11:56:55.408 [main] Log - Step:01 - Enter numbers, alphabets, and special characters in partyname, Particulars fields
-[INFO ] 2025-03-27 11:56:55.410 [main] Log - Expected Result: All character types are accepted
-[INFO ] 2025-03-27 11:56:55.455 [main] Log - TC:15 - App. Manager Field Edit Restriction
-[INFO ] 2025-03-27 11:57:06.983 [main] Log - App Manager field is not clickable.
-[INFO ] 2025-03-27 11:57:06.984 [main] Log - TC:16 - POST DEBIT popup is present
-[INFO ] 2025-03-27 11:57:11.482 [main] Log - Step 1: Click on 'Post Debit' Popup
-[INFO ] 2025-03-27 11:57:11.491 [main] Log - Expected Result:  POST DEBIT popup is opened
-[INFO ] 2025-03-27 11:57:11.532 [main] Log - TC:17 - POST DEBIT popup is present
-[INFO ] 2025-03-27 11:57:17.214 [main] Log - Step 1: Select Account  from the 'Transaciton Based' drop down
-[INFO ] 2025-03-27 11:57:18.278 [main] Log - Expected Result: Account selected from the 'Transaciton Based' drop down
-[INFO ] 2025-03-27 11:57:18.319 [main] Log - TC:18 - POST DEBIT popup is present
-[INFO ] 2025-03-27 11:57:24.027 [main] Log - Step 1: Select Demand Investment from the 'Product group' drop down
-[INFO ] 2025-03-27 11:57:25.069 [main] Log - Expected Result: Demand Investment is selected
-[INFO ] 2025-03-27 11:57:25.114 [main] Log - TC:19 - POST DEBIT popup is present
-[INFO ] 2025-03-27 11:57:30.727 [main] Log - Step 1: Select item from the 'Product Name' drop down
-[INFO ] 2025-03-27 11:57:31.795 [main] Log - Expected Result: Product name item  is selected 
-[INFO ] 2025-03-27 11:57:31.842 [main] Log - TC:20 - POST DEBIT popup is present
-[INFO ] 2025-03-27 11:57:37.466 [main] Log - Step 1: Select an a branch  from the 'Branch  'drop down'
-[INFO ] 2025-03-27 11:57:38.512 [main] Log - Expected Result: Branch  item  is selected 
-[INFO ] 2025-03-27 11:57:38.557 [main] Log - TC:21 - POST DEBIT popup is present
-[INFO ] 2025-03-27 11:57:48.189 [main] Log - Step 1: Tick mark and select an account from the list of accounts displayed
-[INFO ] 2025-03-27 11:57:49.289 [main] Log - Expected Result: Account  is selected 
-[INFO ] 2025-03-27 11:57:49.327 [main] Log - TC:22 - POST DEBIT popup is present
-[INFO ] 2025-03-27 11:57:50.463 [main] Log - Captured Transaction Amount: 1000.00
-[INFO ] 2025-03-27 11:57:50.469 [main] Log - Step 1: Check if data is filled in the text fields
-[INFO ] 2025-03-27 11:57:50.473 [main] Log - Expected Result:  data  gets auto filled in the text fields
-[INFO ] 2025-03-27 11:57:50.510 [main] Log - TC:23 - POST DEBIT popup is present
-[INFO ] 2025-03-27 11:57:55.884 [main] Log - Step 1: Click on the ADD button 
-[INFO ] 2025-03-27 11:57:56.914 [main] Log - Expected Result: Data gets inserted in the grid below
-[INFO ] 2025-03-27 11:57:56.949 [main] Log - TC:24 - POST DEBIT popup is present
-[INFO ] 2025-03-27 11:58:02.456 [main] Log - Step 1: Click on the SUBMIT button 
-[INFO ] 2025-03-27 11:58:02.463 [main] Log - Expected Result: Popup gets closed
-[INFO ] 2025-03-27 11:58:02.506 [main] Log - TC:25 - POST DEBIT popup is present
-[INFO ] 2025-03-27 11:58:07.877 [main] Log - Step:01 - Click on the SUBMIT button in the transaction window
-[INFO ] 2025-03-27 11:58:07.881 [main] Log - Expected Result: Data gets successfully saved in the backend
-[INFO ] 2025-03-27 11:58:08.934 [main] Log - Step:01 - Verify transaction summary
-[INFO ] 2025-03-27 11:58:08.955 [main] Log - Expected Result: Summary is accurate and presents details
-[INFO ] 2025-03-27 11:58:08.992 [main] Log - TC:26 - Login to NBFc Application in a different user
-[INFO ] 2025-03-27 11:58:08.993 [main] Log - Logout
-[INFO ] 2025-03-27 11:58:16.565 [main] Log - Step 1: Open the NBFc application.
-[INFO ] 2025-03-27 11:58:18.650 [main] Log - Step:02 - Enter username and password.
-[INFO ] 2025-03-27 11:58:25.722 [main] Log - Step:01 - Login as another user.
-[INFO ] 2025-03-27 11:58:26.790 [main] Log - Expected Result: User is successfully logged in.
-[INFO ] 2025-03-27 11:58:26.833 [main] Log - TC:27 - Login to NBFc Application in a different user
-[INFO ] 2025-03-27 11:58:32.156 [main] Log - Step:01 - Navigate to AUTHORISE and Cancel in the menu
-[INFO ] 2025-03-27 11:58:36.719 [main] Log - Step:02 - Select the Manager Authorisation window
-[INFO ] 2025-03-27 11:58:37.781 [main] Log - Expected Result: ManagerAuthorisation window opened successfully
-[INFO ] 2025-03-27 11:58:37.821 [main] Log - TC:28 - Login to NBFc Application in a different user
-[INFO ] 2025-03-27 11:58:42.115 [main] Log - Step:01 - Click on the  TRANSFER  tab
-[INFO ] 2025-03-27 11:58:42.160 [main] Log - Expected Result: Moved to TRANSFER  tab
-[INFO ] 2025-03-27 11:58:42.192 [main] Log - TC:29 - Login to NBFc Application in a different user
-[INFO ] 2025-03-27 11:58:42.448 [main] Log - Step:01 - Click on the Refresh button
-[INFO ] 2025-03-27 11:58:43.507 [main] Log - Expected Result: Authorisation pending transaction gets displayed 
-[INFO ] 2025-03-27 11:58:43.546 [main] Log - TC:30 - Login to NBFc Application in a different user
-[INFO ] 2025-03-27 11:58:54.324 [main] Log - Step:01 - Select the transaction to authorise
-[INFO ] 2025-03-27 11:58:54.336 [main] Log - Expected Result: transaction to authorise is selected
-[INFO ] 2025-03-27 11:58:54.403 [main] Log - TC:31 - Login to NBFc Application in a different user
-[INFO ] 2025-03-27 11:58:59.720 [main] Log - Step:01 - Click on the Authorize button
-[INFO ] 2025-03-27 11:59:00.754 [main] Log - Expected Result: Transaction gets authorised
-[INFO ] 2025-03-27 11:59:08.086 [main] Log - Logout
-[INFO ] 2025-03-27 11:59:16.561 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-03-27 11:59:17.634 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-03-28 17:18:48.431 [main] Log - *** Running test method GL_Acc_Transaction_Transfer...
+[INFO ] 2025-03-28 17:18:52.373 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-03-28 17:18:57.934 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-03-28 17:18:58.331 [main] Log - PC Registration
+[INFO ] 2025-03-28 17:18:59.406 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-03-28 17:18:59.737 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-03-28 17:19:00.777 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-03-28 17:19:05.074 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-03-28 17:19:24.248 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-03-28 17:19:24.321 [main] Log - TC_01 - Login Functionality
+[INFO ] 2025-03-28 17:19:25.368 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-03-28 17:19:26.417 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-03-28 17:19:42.084 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-03-28 17:19:43.143 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-03-28 17:19:43.204 [main] Log - TC:02 - Launch GL Account Transaction Module
+[INFO ] 2025-03-28 17:19:53.562 [main] Log - Step:01 Navigate to Transactions -> GL A/c transaction
+[INFO ] 2025-03-28 17:19:54.605 [main] Log - Expected Result: Module name displayed as 'GL Account Transaction'
+[INFO ] 2025-03-28 17:19:54.652 [main] Log - TC:03 - Default Date Check
+[INFO ] 2025-03-28 17:19:54.697 [main] Log - 22/10/2300
+[INFO ] 2025-03-28 17:19:54.731 [main] Log - 22/10/2300
+[INFO ] 2025-03-28 17:19:54.731 [main] Log - Step:01 - Verify date and value date field are set to the system date by default
+[INFO ] 2025-03-28 17:19:54.732 [main] Log - Expected Result: Both dates set to system date
+[INFO ] 2025-03-28 17:19:54.777 [main] Log - TC:04 - Default Branch Check
+[INFO ] 2025-03-28 17:19:54.817 [main] Log - Step:01 - Verify the branch field is automatically set to the login branch
+[INFO ] 2025-03-28 17:19:54.817 [main] Log - Expected Result: Login branch is displayed by default
+[INFO ] 2025-03-28 17:19:54.860 [main] Log - TC:05 - GL Acc. Name Dropdown Options
+[INFO ] 2025-03-28 17:20:00.195 [main] Log - Step 1: Click on the GL Acc.Name dropdown
+[INFO ] 2025-03-28 17:20:00.478 [main] Log - Step 2:  Verify the list of active head names
+[INFO ] 2025-03-28 17:20:01.524 [main] Log - Expected Result: Option should be display
+[INFO ] 2025-03-28 17:20:01.567 [main] Log - TC:06 - GL Acc. Name to Code Mapping
+[INFO ] 2025-03-28 17:20:01.847 [main] Log - Step 1:   Select GL Acc. Name
+[INFO ] 2025-03-28 17:20:02.890 [main] Log - Expected Result: Correct GL Acc. code displayed
+[INFO ] 2025-03-28 17:20:02.932 [main] Log - TC:07 - Trans Type Dropdown Options
+[INFO ] 2025-03-28 17:20:08.311 [main] Log - Step 1: Click on the trans type dropdown
+[INFO ] 2025-03-28 17:20:08.639 [main] Log - Step 2: Verify options credit and debit are shown
+[INFO ] 2025-03-28 17:20:08.640 [main] Log - Expected Result: Credit, Debit are listed
+[INFO ] 2025-03-28 17:20:08.677 [main] Log - TC:08 - Go Button Action with Valid GL Acc. Code
+[INFO ] 2025-03-28 17:20:08.953 [main] Log - Step:01 - Click go button
+[INFO ] 2025-03-28 17:20:09.833 [main] Log - Expected Result: Proper navigation and functionality and details will be displays
+[INFO ] 2025-03-28 17:20:09.875 [main] Log - TC:09 - Display Entry on Checkbox Click
+[INFO ] 2025-03-28 17:20:09.881 [main] Log - Step:01 - Click on the previous transaction checkbox
+[INFO ] 2025-03-28 17:20:10.701 [main] Log - Expected Result : Previous transaction entries displayed
+[INFO ] 2025-03-28 17:20:10.750 [main] Log - TC:10 - Net Payable and Recovery Calculation
+[INFO ] 2025-03-28 17:20:11.242 [main] Log - Step:01 -  Enter trnamount as 1000
+[INFO ] 2025-03-28 17:20:14.307 [main] Log - Net Payable Field Value: '1000.00'
+[INFO ] 2025-03-28 17:20:14.316 [main] Log - Recovery Total Field Value: '0.00'
+[INFO ] 2025-03-28 17:20:14.316 [main] Log - Step:02 - Observe net payable and recovery totals
+[INFO ] 2025-03-28 17:20:14.316 [main] Log - Expected Result: Net payable: 1000, Recovery total: 0
+[INFO ] 2025-03-28 17:20:14.359 [main] Log - TC:11 - Field Presence Below Net Payable
+[INFO ] 2025-03-28 17:20:14.580 [main] Log - Step:01 - Verify presence of Trnsmode, partyname, Ref no, particulars, App.manager fields
+[INFO ] 2025-03-28 17:20:14.580 [main] Log - Expected Result: Fields are present
+[INFO ] 2025-03-28 17:20:14.628 [main] Log - TC:12 - Trnsmode Dropdown Validation
+[INFO ] 2025-03-28 17:20:19.993 [main] Log - Step 01:  Click on Trnsmode dropdown
+[INFO ] 2025-03-28 17:20:19.994 [main] Log - Expected Result: Options cash and transfer are listed
+[INFO ] 2025-03-28 17:20:20.038 [main] Log - TC:13 - GL Transaction - Credit and Cash
+[INFO ] 2025-03-28 17:20:25.646 [main] Log - Step 01:  Select  Trnsmode as Transfer
+[INFO ] 2025-03-28 17:20:25.647 [main] Log - Expected Result: Transfer selected
+[INFO ] 2025-03-28 17:20:25.681 [main] Log - TC:14 - Party name, Particulars Input Validation
+[INFO ] 2025-03-28 17:20:38.450 [main] Log - Step:01 - Enter numbers, alphabets, and special characters in partyname, Particulars fields
+[INFO ] 2025-03-28 17:20:38.451 [main] Log - Expected Result: All character types are accepted
+[INFO ] 2025-03-28 17:20:38.498 [main] Log - TC:15 - App. Manager Field Edit Restriction
+[INFO ] 2025-03-28 17:20:39.523 [main] Log - Step 1: Attempt to edit App. manager field
+[INFO ] 2025-03-28 17:20:39.544 [main] Log - Expected Result: Editing not possible
+[INFO ] 2025-03-28 17:20:39.587 [main] Log - TC:16 - POST DEBIT popup is present
+[INFO ] 2025-03-28 17:20:44.138 [main] Log - Step 1: Click on 'Post Debit' Popup
+[INFO ] 2025-03-28 17:20:44.149 [main] Log - Expected Result:  POST DEBIT popup is opened
+[INFO ] 2025-03-28 17:20:44.187 [main] Log - TC:17 - POST DEBIT popup is present
+[INFO ] 2025-03-28 17:20:49.813 [main] Log - Step 1: Select Account  from the 'Transaciton Based' drop down
+[INFO ] 2025-03-28 17:20:50.860 [main] Log - Expected Result: Account selected from the 'Transaciton Based' drop down
+[INFO ] 2025-03-28 17:20:50.900 [main] Log - TC:18 - POST DEBIT popup is present
+[INFO ] 2025-03-28 17:20:56.520 [main] Log - Step 1: Select Demand Investment from the 'Product group' drop down
+[INFO ] 2025-03-28 17:20:57.561 [main] Log - Expected Result: Demand Investment is selected
+[INFO ] 2025-03-28 17:20:57.595 [main] Log - TC:19 - POST DEBIT popup is present
+[INFO ] 2025-03-28 17:21:03.227 [main] Log - Step 1: Select item from the 'Product Name' drop down
+[INFO ] 2025-03-28 17:21:04.270 [main] Log - Expected Result: Product name item  is selected 
+[INFO ] 2025-03-28 17:21:04.314 [main] Log - TC:20 - POST DEBIT popup is present
+[INFO ] 2025-03-28 17:21:09.907 [main] Log - Step 1: Select an a branch  from the 'Branch  'drop down'
+[INFO ] 2025-03-28 17:21:10.963 [main] Log - Expected Result: Branch  item  is selected 
+[INFO ] 2025-03-28 17:21:10.998 [main] Log - TC:21 - POST DEBIT popup is present
+[INFO ] 2025-03-28 17:21:20.643 [main] Log - Step 1: Tick mark and select an account from the list of accounts displayed
+[INFO ] 2025-03-28 17:21:21.711 [main] Log - Expected Result: Account  is selected 
+[INFO ] 2025-03-28 17:21:21.749 [main] Log - TC:22 - POST DEBIT popup is present
+[INFO ] 2025-03-28 17:21:22.843 [main] Log - Captured Transaction Amount: 1000.00
+[INFO ] 2025-03-28 17:21:22.848 [main] Log - Step 1: Check if data is filled in the text fields
+[INFO ] 2025-03-28 17:21:22.853 [main] Log - Expected Result:  data  gets auto filled in the text fields
+[INFO ] 2025-03-28 17:21:22.895 [main] Log - TC:23 - POST DEBIT popup is present
+[INFO ] 2025-03-28 17:21:28.236 [main] Log - Step 1: Click on the ADD button 
+[INFO ] 2025-03-28 17:21:29.279 [main] Log - Expected Result: Data gets inserted in the grid below
+[INFO ] 2025-03-28 17:21:29.315 [main] Log - TC:24 - POST DEBIT popup is present
+[INFO ] 2025-03-28 17:21:35.904 [main] Log - Step 1: Click on the SUBMIT button 
+[INFO ] 2025-03-28 17:21:35.910 [main] Log - Expected Result: Popup gets closed
+[INFO ] 2025-03-28 17:21:35.942 [main] Log - TC:25 - POST DEBIT popup is present
+[INFO ] 2025-03-28 17:21:41.309 [main] Log - Step:01 - Click on the SUBMIT button in the transaction window
+[INFO ] 2025-03-28 17:21:41.313 [main] Log - Expected Result: Data gets successfully saved in the backend
+[INFO ] 2025-03-28 17:21:42.367 [main] Log - Step:01 - Verify transaction summary
+[INFO ] 2025-03-28 17:21:42.387 [main] Log - Expected Result: Summary is accurate and presents details
+[INFO ] 2025-03-28 17:21:42.417 [main] Log - TC:26 - Login to NBFc Application in a different user
+[INFO ] 2025-03-28 17:21:42.418 [main] Log - Logout
+[INFO ] 2025-03-28 17:21:51.454 [main] Log - Step 1: Open the NBFc application.
+[INFO ] 2025-03-28 17:21:53.535 [main] Log - Step:02 - Enter username and password.
+[INFO ] 2025-03-28 17:22:02.034 [main] Log - Step:01 - Login as another user.
+[INFO ] 2025-03-28 17:22:03.120 [main] Log - Expected Result: User is successfully logged in.
+[INFO ] 2025-03-28 17:22:03.164 [main] Log - TC:27 - Login to NBFc Application in a different user
+[INFO ] 2025-03-28 17:22:08.481 [main] Log - Step:01 - Navigate to AUTHORISE and Cancel in the menu
+[INFO ] 2025-03-28 17:22:14.259 [main] Log - Step:02 - Select the Manager Authorisation window
+[INFO ] 2025-03-28 17:22:15.317 [main] Log - Expected Result: ManagerAuthorisation window opened successfully
+[INFO ] 2025-03-28 17:22:15.359 [main] Log - TC:28 - Login to NBFc Application in a different user
+[INFO ] 2025-03-28 17:22:19.635 [main] Log - Step:01 - Click on the  TRANSFER  tab
+[INFO ] 2025-03-28 17:22:19.687 [main] Log - Expected Result: Moved to TRANSFER  tab
+[INFO ] 2025-03-28 17:22:19.715 [main] Log - TC:29 - Login to NBFc Application in a different user
+[INFO ] 2025-03-28 17:22:19.978 [main] Log - Step:01 - Click on the Refresh button
+[INFO ] 2025-03-28 17:22:21.017 [main] Log - Expected Result: Authorisation pending transaction gets displayed 
+[INFO ] 2025-03-28 17:22:21.053 [main] Log - TC:30 - Login to NBFc Application in a different user
+[INFO ] 2025-03-28 17:22:31.744 [main] Log - Step:01 - Select the transaction to authorise
+[INFO ] 2025-03-28 17:22:31.747 [main] Log - Expected Result: transaction to authorise is selected
+[INFO ] 2025-03-28 17:22:31.774 [main] Log - TC:31 - Login to NBFc Application in a different user
+[INFO ] 2025-03-28 17:22:37.078 [main] Log - Step:01 - Click on the Authorize button
+[INFO ] 2025-03-28 17:22:38.108 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-03-28 17:22:45.424 [main] Log - Logout
+[INFO ] 2025-03-28 17:22:56.793 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-03-28 17:22:57.837 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

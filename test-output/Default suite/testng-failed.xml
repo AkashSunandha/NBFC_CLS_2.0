@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer">
+      <class name="com.test.Share_Transfer_Module.AllScenarios_Share_Transfer">
         <methods>
-          <include name="Loan_Closure_Cash" invocation-numbers="0"/>
           <include name="reference"/>
+          <include name="Loan_Closure_Cash" invocation-numbers="0"/>
         </methods>
-      </class> <!-- GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer -->
+      </class> <!-- com.test.Share_Transfer_Module.AllScenarios_Share_Transfer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

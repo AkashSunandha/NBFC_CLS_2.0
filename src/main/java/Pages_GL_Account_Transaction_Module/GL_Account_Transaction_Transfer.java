@@ -524,33 +524,28 @@ public boolean AppManagerFieldEditRestriction() throws InterruptedException{
 	
 	ScrollUntilElementVisible(GLTransaction.AppManager);
 	
-	try {
-        wait.until(ExpectedConditions.elementToBeClickable(GLTransaction.AppManager));
-		click(GLTransaction.AppManager);
-		ExtentTestManager.getTest().log(Status.PASS, "Step 01: Attempt to edit App. manager field");
-		Log.info("Step 01: Attempt to edit App. manager field");
-	} catch (Exception e) {
-        ExtentTestManager.getTest().log(Status.FAIL, "App Manager field is not clickable.");
-        Log.info("App Manager field is not clickable.");
-        return false;
+	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Attempt to edit App. manager field");
+    Log.info("Step 1: Attempt to edit App. manager field");
+	
+	boolean isEnabled = appManagerField.isEnabled();
+    boolean isReadOnly = appManagerField.getAttribute("readonly") != null;
+    
+    if (!isEnabled || isReadOnly) {
+        
+    } else {
+            click(GLTransaction.AppManager);
+            ExtentTestManager.getTest().log(Status.FAIL, "Validation Failed: App Manager field is editable!");
+            Log.info("Validation Failed: App Manager field is editable!");
+            return false;
     }
-	
-	 boolean isEnabled = appManagerField.isEnabled();
-	 boolean isReadOnly = appManagerField.getAttribute("readonly") != null;
-	
-	 if (isEnabled || isReadOnly) {
-	        ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Editing not possible");
-	        Log.info("Expected Result: Editing not possible");
-	    } else {
-	        ExtentTestManager.getTest().log(Status.FAIL, "Validation Failed: App Manager field is editable!");
-	        Log.info("Validation Failed: App Manager field is editable!");
-	        return false;
-	    }
-
-	    ExtentTestManager.endTest();
-	    return true;
-	}
-
+            
+        ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Editing not possible");
+        Log.info("Expected Result: Editing not possible");
+    
+    
+    ExtentTestManager.endTest();
+    return true;
+}
 
 public boolean POSTDEBITpopupispresent() throws InterruptedException, TimeoutException{
 	

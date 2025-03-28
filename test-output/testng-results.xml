@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-27T11:55:36 IST" name="Default suite" finished-at="2025-03-27T11:59:18 IST" duration-ms="222006">
+  <suite started-at="2025-03-28T17:18:47 IST" name="Default suite" finished-at="2025-03-28T17:22:58 IST" duration-ms="251221">
     <groups>
     </groups>
-    <test started-at="2025-03-27T11:55:36 IST" name="Default test" finished-at="2025-03-27T11:59:18 IST" duration-ms="222006">
+    <test started-at="2025-03-28T17:18:47 IST" name="Default test" finished-at="2025-03-28T17:22:58 IST" duration-ms="251221">
       <class name="GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer">
-        <test-method is-config="true" signature="reference()[pri:0, instance:GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer@15a902e7]" started-at="2025-03-27T11:55:36 IST" name="reference" finished-at="2025-03-27T11:55:36 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="reference()[pri:0, instance:GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer@15a902e7]" started-at="2025-03-28T17:18:47 IST" name="reference" finished-at="2025-03-28T17:18:47 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="Loan_Closure_Cash(java.util.Map,org.testng.ITestContext)[pri:0, instance:GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer@15a902e7]" started-at="2025-03-27T11:55:37 IST" name="Loan_Closure_Cash" data-provider="TestData" finished-at="2025-03-27T11:59:18 IST" duration-ms="221179" status="PASS">
+        <test-method signature="Loan_Closure_Cash(java.util.Map,org.testng.ITestContext)[pri:0, instance:GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer@15a902e7]" started-at="2025-03-28T17:18:48 IST" name="Loan_Closure_Cash" data-provider="TestData" finished-at="2025-03-28T17:22:58 IST" duration-ms="250359" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,7 +20,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@66153688]]>
+                <![CDATA[org.testng.TestRunner@455824ad]]>
               </value>
             </param>
           </params>
