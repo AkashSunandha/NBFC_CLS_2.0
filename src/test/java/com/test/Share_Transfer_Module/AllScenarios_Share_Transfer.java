@@ -87,6 +87,24 @@ public class AllScenarios_Share_Transfer extends Base_Class {
 				//TC_08 ---> VerifyShareValueAutoload
 				sharetransfer.VerifyShareValueAutoload();
 				
+				//TC_09 ---> VerifyShareAmountAutoloadonNoofSharesEntry
+				sharetransfer.VerifyShareAmountAutoloadonNoofSharesEntry(testdata, context);
+				
+				//TC_10 ---> VerifyTransactionSuccessonSubmit
+				sharetransfer.VerifyTransactionSuccessonSubmit();
+				
+				//TC_11 ---> Logout
+				sharetransfer.Logout();
+				
+				//TC_12 ---> ManagerLoginforAuthorization
+				sharetransfer.ManagerLoginforAuthorization();
+				
+				//TC_13 ---> ManagerAuthorizationRefresh
+				sharetransfer.ManagerAuthorizationRefresh();
+				
+				//TC_14 ---> AuthorizeShareEntry
+				sharetransfer.AuthorizeShareEntry();
+				
 				// Sign out
 				Thread.sleep(3000);
 				custSrchMthds.logout();

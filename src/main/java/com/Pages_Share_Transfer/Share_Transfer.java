@@ -40,19 +40,19 @@ public class Share_Transfer
 		public By Sharedetails = By.xpath("//*[@id=\"tblShareSeriesList\"]");
 		public By Sharecheckbox = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransferDetails_lstShareSeries_ctrl0_chkList']");
 		public By Sharevalue = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransferDetails_txtShareValue_txt']");
+		public By Noofshares = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransferDetails_txtNoOfShares_txt']");
+		public By Shareamt = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransferDetails_txtShareAmount_txt']");
+		public By Submitbtn = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnSave']");
 
 		
-		
-		public By TransType = By.xpath("//Select[@id ='ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_ddlTrnType']");
 		public By AppManager = By.xpath("//select[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_ddlAppManager_ddl']");
 		public By PreviousTrans = By.xpath("//div[@id='ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_divLastNT']");
-		public By RecoveryTotal = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_ucNonProductTransactionRecovery_txtRecoveryTotal_txt']");
 		public By Netpayable = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_ucNonProductTransactionRecovery_txtGrandTotal_txt']");
 		public By TransMode = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_ddlTransactionMode_ddl']");
 		public By PartyName = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_txtPartyName_txt']");
 		public By Particulars = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_ucGLAcTransactionOtherInfo_txtRemarks_txt']");
 		public By Submitbutton = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstCurrentBalance_ctrl0_btnSubmit']");
-		public By SummaryOperation = By.xpath("(//div[@class='iframebox'])[4]");
+		public By SummaryOperation = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/table[1]");
 		public By ClosePopup = By.xpath("//img[@id ='closetop']");
 		public By TransCashID = By.xpath("//span[@id ='ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID']");
 		

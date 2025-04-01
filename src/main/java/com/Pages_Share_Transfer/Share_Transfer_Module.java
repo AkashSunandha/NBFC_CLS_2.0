@@ -42,8 +42,8 @@ public class Share_Transfer_Module extends Base_Class {
 	
 	ScreenShot sc = new ScreenShot(null);
 	
-	String transIdGLtransCash;
-    String transIdGLtransTransfer;
+	String transIdShareCash;
+    String transIdShareTransfer;
     
 public boolean FetchwithTransID(String transID) throws InterruptedException {
 		
@@ -335,6 +335,196 @@ public boolean VerifyShareValueAutoload() throws InterruptedException {
 	return true;
 
 }
+
+public boolean VerifyShareAmountAutoloadonNoofSharesEntry(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, StaleElementReferenceException, TimeoutException {
+
+	ExtentTestManager.startTest("TC:09 - Verify 'Share Amount' Autoload on 'No. of Shares' Entry");
+	Log.info("TC:09 - Verify 'Share Amount' Autoload on 'No. of Shares' Entry");
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+
+	String shares = testdata.get("NoOfShares").toString();
+	Assert.assertNotNull(shares, "Validation Failed: Shares field is null in test data");
+
+    WebElement Noofshares = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_ucTransferDetails_txtNoOfShares_txt']"))); 
+    Noofshares.click();
+    Noofshares.clear();
+    Noofshares.sendKeys(shares,Keys.TAB);
+    
+    ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter value into 'No. of Shares'.");
+	Log.info("Step:01 - Enter value into 'No. of Shares'.");
+	
+   	boolean isDataLoaded = ElementDisplayed(sharetransfer.Shareamt); 
+
+    ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Observe 'Share Amount' field.");
+   	Log.info("Step:01 - Observe 'Share Amount' field.");
+   	
+    Assert.assertTrue(isDataLoaded, "Validation Failed: Relevant data is NOT loaded after clicking 'GO'.");
+   		
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Share Amount' should be autoloaded based on the entered value in 'No. of Shares'.");
+	Log.info("Expected Result: 'Share Amount' should be autoloaded based on the entered value in 'No. of Shares'.");
+
+	ExtentTestManager.endTest();
+	return true;
+
+}
+
+public boolean VerifyTransactionSuccessonSubmit() throws InterruptedException {
+	
+	ExtentTestManager.startTest("TC:10 - Verify Transaction Success on Submit");
+	Log.info("TC:10 - Verify Transaction Success on Submit");
+	
+	ScrollUntilElementVisible(sharetransfer.Submitbtn);
+	click(sharetransfer.Submitbtn);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on Submit button.");
+	Log.info("Step:01 - Click on Submit button.");
+	
+	Assert.assertEquals(driver.getWindowHandles().size(), 1, "Validation Failed: Security Details popup window is still open.");								
+			
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction should be saved successfully, and a confirmation message displayed.");
+	Log.info("Expected Result: Transaction should be saved successfully, and a confirmation message displayed.");
+	
+	if(ElementDisplayed(sharetransfer.SummaryOperation)) {
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Verify transaction summary");
+		Log.info("Step:01 - Verify transaction summary");
+		}
+	else {
+		ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+		Log.info("ERROR");
+		}
+	transIdShareTransfer = driver.findElement(sharetransfer.TransCashID).getText();
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary is accurate and presents details");
+	Log.info("Expected Result: Summary is accurate and presents details");
+	
+	ExtentTestManager.endTest();
+	return true;
+	
+}
+
+public boolean Logout() throws InterruptedException, IOException{
+	
+	ExtentTestManager.startTest("TC:11 - Logout");
+	Log.info("TC:11 - Logout");
+		
+	Thread.sleep(2000);
+		
+	click(sharetransfer.custSignOut);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Logout' button");
+	Log.info("Step:01 - Click 'Logout' button");
+		
+	Assert.assertTrue(ElementDisplayed(sharetransfer.loginButton), "Validation Failed: User is not logged out successfully.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out and login screen is displayed again");
+	Log.info("Expected Result: User is logged out and login screen is displayed again");
+	
+	ExtentTestManager.endTest();
+	return true;		
+}
+
+public boolean ManagerLoginforAuthorization() throws InterruptedException, IOException{
+	
+	ExtentTestManager.startTest("TC:12 - Manager Login for Authorization");
+	Log.info("TC:12 - Manager Login for Authorization");
+		
+	String UserName1 = configloader().getProperty("UserName1");
+	input(sharetransfer.loginUserName, UserName1);
+				
+	String Password1 = configloader().getProperty("Password1");
+	input(sharetransfer.loginPasswrd, Password1);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter manager credentials `<manager_username>` and `<manager_password>`");
+	Log.info("Step:01 - Enter manager credentials `<manager_username>` and `<manager_password>`");
+	
+	click(sharetransfer.loginButton);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click 'Login'");
+	Log.info("Step:02 - Click 'Login'");
+		
+	Assert.assertTrue(ElementDisplayed(sharetransfer.home), "Validation Failed: 'Home' button is not displayed.");
+
+	ExtentTestManager.getTest().log(Status.PASS,"Expected Result: Manager successfully logs in and is directed to the authorization page");
+	Log.info("Expected Result: Manager successfully logs in and is directed to the authorization page");	
+
+	ExtentTestManager.endTest();
+	return true;
+
+}
+
+public boolean ManagerAuthorizationRefresh() throws InterruptedException, IOException{
+	
+	ExtentTestManager.startTest("TC:13 - Manager Authorization Refresh");
+	Log.info("TC:13 - Manager Authorization Refresh");
+	
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+
+	
+	ScrollUntilElementVisible(sharetransfer.AuthorizeCancel);
+	click(sharetransfer.AuthorizeCancel);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Go to 'Authorize & Cancel' window");
+	Log.info("Step:01 - Go to 'Authorize & Cancel' window");
+	
+	click(sharetransfer.ManagerAuthorization);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select 'Manager Authorization'");
+	Log.info("Step:02 - Select 'Manager Authorization'");
+	
+	click(sharetransfer.TransferTab);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click Transfer tab");
+	Log.info("Step:03 - Click Transfer tab");
+	
+	WebElement refreshButton = wait.until(ExpectedConditions.elementToBeClickable(sharetransfer.Refresh));
+    refreshButton.click();
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click 'Refresh' button");
+	Log.info("Step:04 - Click 'Refresh' button");
+	
+	Assert.assertTrue(ElementDisplayed(sharetransfer.Refresh), "Validation Failed: Authorisation pending transaction is not displayed after refreshing.");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Authorization entries are updated and displayed");
+	Log.info("Expected Result: Authorization entries are updated and displayed");
+
+	ExtentTestManager.endTest();
+	return true;
+
+}
+
+public boolean AuthorizeShareEntry() throws InterruptedException{
+	
+	ExtentTestManager.startTest("TC:14 - Authorize Share Entry");
+	Log.info("TC:14 - Authorize Share Entry");
+	
+	System.out.println("transIdShareTransfer "+transIdShareTransfer);
+	FetchwithTransID(transIdShareTransfer);
+	
+	WebElement Managercheckbox = driver.findElement(sharetransfer.TransManagerCheckBox);
+	
+	if(ElementDisplayed(sharetransfer.TransManagerCheckBox)) {
+	click(sharetransfer.TransManagerCheckBox);
+		
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select share entry checkbox in the transfer section");
+	Log.info("Step:01 - Select share entry checkbox in the transfer section");
+	
+	if(ElementDisplayed(sharetransfer.ManagerAuthorize)) {
+		click(sharetransfer.ManagerAuthorize);
+			
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the Authorize button");
+		Log.info("Step:01 - Click on the Authorize button");
+		
+		Assert.assertTrue(ElementDisplayed(sharetransfer.ManagerAuthorize), "Validation Failed: 'Authorize' button is not Clicked.");
+	
+		click(sharetransfer.ClosePopup);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Share entry is authorized with confirmation message");
+		Log.info("Expected Result: Share entry is authorized with confirmation message");
+}	
+	}
+	
+	ExtentTestManager.endTest();
+	return true;	
+}
+
+
 
 
 

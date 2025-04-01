@@ -549,9 +549,6 @@ public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedExcept
 	ExtentTestManager.startTest("TC:17 - Login to NBFc Application in a different user");
 	Log.info("TC:17 - Login to NBFc Application in a different user");
 		
-	ExtentTestManager.startTest("Logout");
-	Log.info("Logout");
-		
 	Thread.sleep(2000);
 		
 	click(GLTransaction.custSignOut);

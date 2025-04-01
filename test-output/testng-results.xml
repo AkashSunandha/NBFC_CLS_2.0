@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-28T17:18:47 IST" name="Default suite" finished-at="2025-03-28T17:22:58 IST" duration-ms="251221">
+  <suite started-at="2025-03-28T19:08:44 IST" name="Default suite" finished-at="2025-03-28T19:11:10 IST" duration-ms="145906">
     <groups>
     </groups>
-    <test started-at="2025-03-28T17:18:47 IST" name="Default test" finished-at="2025-03-28T17:22:58 IST" duration-ms="251221">
-      <class name="GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer">
-        <test-method is-config="true" signature="reference()[pri:0, instance:GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer@15a902e7]" started-at="2025-03-28T17:18:47 IST" name="reference" finished-at="2025-03-28T17:18:47 IST" duration-ms="11" status="PASS">
+    <test started-at="2025-03-28T19:08:44 IST" name="Default test" finished-at="2025-03-28T19:11:10 IST" duration-ms="145906">
+      <class name="com.test.Share_Transfer_Module.AllScenarios_Share_Transfer">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Share_Transfer_Module.AllScenarios_Share_Transfer@4a3e3e8b]" started-at="2025-03-28T19:08:44 IST" name="reference" finished-at="2025-03-28T19:08:44 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="Loan_Closure_Cash(java.util.Map,org.testng.ITestContext)[pri:0, instance:GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer@15a902e7]" started-at="2025-03-28T17:18:48 IST" name="Loan_Closure_Cash" data-provider="TestData" finished-at="2025-03-28T17:22:58 IST" duration-ms="250359" status="PASS">
+        <test-method signature="Loan_Closure_Cash(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Share_Transfer_Module.AllScenarios_Share_Transfer@4a3e3e8b]" started-at="2025-03-28T19:08:45 IST" name="Loan_Closure_Cash" data-provider="TestData" finished-at="2025-03-28T19:11:10 IST" duration-ms="145060" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{=, Particulars=Test, Party_Name=Test, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=GL_Acc_Transaction_Transfer, Trans_Amount=1000.00}]]>
+                <![CDATA[{=, Account_No=86, Account_No1=87, NoOfShares=10, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Share_Transfer}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@455824ad]]>
+                <![CDATA[org.testng.TestRunner@e1e2e5e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Loan_Closure_Cash -->
-      </class> <!-- GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer -->
+      </class> <!-- com.test.Share_Transfer_Module.AllScenarios_Share_Transfer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
