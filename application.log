@@ -1,4 +1,4 @@
-[ERROR] 2025-03-27 15:58:58.036 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-02 11:26:50.096 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-27 15:58:58.068 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-02 11:26:50.109 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-27 15:58:58.070 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-02 11:26:50.110 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-27 15:58:58.081 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-02 11:26:50.115 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -210,85 +210,85 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-03-27 15:58:59.714 [main] Log - *** Running test method CollectionImporting_CASH...
-[INFO ] 2025-03-27 15:59:07.293 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-27 15:59:10.194 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-27 15:59:13.244 [main] Log - PC Registration
-[INFO ] 2025-03-27 15:59:14.329 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-27 15:59:16.729 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-27 15:59:17.796 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-03-27 15:59:22.108 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-27 15:59:23.451 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-27 15:59:23.572 [main] Log - Valid Login
-[INFO ] 2025-03-27 15:59:24.635 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-27 15:59:25.730 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-27 15:59:33.477 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-27 15:59:34.541 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-27 15:59:34.617 [main] Log - Expand Module for Collection Importing
-[INFO ] 2025-03-27 15:59:38.934 [main] Log - 1. Navigate to 'others' module.
-[INFO ] 2025-03-27 15:59:43.244 [main] Log - 2. Expand 'data sharing'.
-[INFO ] 2025-03-27 15:59:48.135 [main] Log - 3. Click on 'collection importing'.
-[INFO ] 2025-03-27 15:59:49.210 [main] Log - Expected Result: Collection importing window is opened.
-[INFO ] 2025-03-27 15:59:49.257 [main] Log - Verify Auto-load of Agent Code
-[INFO ] 2025-03-27 15:59:57.967 [main] Log - 1. Select an agent name from the dropdown.
-[INFO ] 2025-03-27 15:59:58.005 [main] Log - Expected Result: Agent code is auto-loaded corresponding to the selected agent name.
-[INFO ] 2025-03-27 15:59:58.054 [main] Log - Select Main Branch from Dropdown
-[INFO ] 2025-03-27 16:00:00.165 [main] Log - 1. Select the main branch from the dropdown.
-[INFO ] 2025-03-27 16:00:00.274 [main] Log - Expected Result: Main branch is correctly selected without errors.
-[INFO ] 2025-03-27 16:00:00.321 [main] Log - Select Product Group and Name
-[INFO ] 2025-03-27 16:00:02.991 [main] Log - 1. Select a product group from the dropdown.
-[INFO ] 2025-03-27 16:00:05.329 [main] Log - 2. Select a product name from the dropdown.
-[INFO ] 2025-03-27 16:00:05.542 [main] Log - Expected Result: Product group and name are selected without errors.
-[INFO ] 2025-03-27 16:00:05.605 [main] Log - Verify Auto-load of Account Details
-[INFO ] 2025-03-27 16:00:06.664 [main] Log - 1. Enter a valid  account number.
-[INFO ] 2025-03-27 16:00:11.809 [main] Log - Expected Result: Total Duration, Total Due, Start Date, Due Date, Cust. Spl. Inst, Bill No, Ac. Spl. Inst, Amount, and Fine are auto-loaded.
-[INFO ] 2025-03-27 16:00:11.861 [main] Log - Enter Amount for Transfer
-[INFO ] 2025-03-27 16:00:12.906 [main] Log - 1. Enter the amount for transfer.
-[INFO ] 2025-03-27 16:00:12.962 [main] Log - Expected Result: Entered amount is accepted without errors.
-[INFO ] 2025-03-27 16:00:13.014 [main] Log - Add Transfer Details to Grid
-[INFO ] 2025-03-27 16:00:17.338 [main] Log - 1. Click 'Add'.
-[INFO ] 2025-03-27 16:00:18.409 [main] Log - Expected Result: Details are added to the grid of import details.
-[INFO ] 2025-03-27 16:00:18.450 [main] Log - Verify TRANSFER Collection Importing
-[INFO ] 2025-03-27 16:00:20.811 [main] Log - 1. Attempt to do collection importing using 'TRANSFER'.
-[INFO ] 2025-03-27 16:00:21.516 [main] Log - Expected Result: Collection importing using 'TRANSFER' is possible and proceeds without error.
-[INFO ] 2025-03-27 16:00:21.563 [main] Log - Enter Remark Details
-[INFO ] 2025-03-27 16:00:22.654 [main] Log - 1. Enter remarks in the provided field.
-[INFO ] 2025-03-27 16:00:22.655 [main] Log - Expected Result: Remarks are accepted without errors.
-[INFO ] 2025-03-27 16:00:22.707 [main] Log - Post credit button functionality
-[INFO ] 2025-03-27 16:00:27.382 [main] Log - Step:01 - Select Post Debit button.
-[INFO ] 2025-03-27 16:00:28.770 [main] Log - Expected Result: Auto posting popup window will be opened.
-[INFO ] 2025-03-27 16:00:28.820 [main] Log - Transaction based selection.
-[INFO ] 2025-03-27 16:00:31.192 [main] Log - Step:01 - Select transaction based as GL Code.
-[INFO ] 2025-03-27 16:00:33.336 [main] Log - Expected Result: GL code related field will be display (GL name,GL code)
-[INFO ] 2025-03-27 16:00:33.387 [main] Log - GL Name selection.
-[INFO ] 2025-03-27 16:00:42.066 [main] Log - Step:01 - Select the "GL Name" from the drop down
-[INFO ] 2025-03-27 16:00:42.102 [main] Log - Expected Result: GL code will be autoloads while selecting the GL Name.
-[INFO ] 2025-03-27 16:00:42.151 [main] Log - Add button functionality
-[INFO ] 2025-03-27 16:00:50.637 [main] Log - Step:01 - Give the amount in "Amount" field.
-[INFO ] 2025-03-27 16:00:54.956 [main] Log - Step:02 - Click add button.
-[INFO ] 2025-03-27 16:00:56.028 [main] Log - Expected Result: Given details will be displays in the grid
-[INFO ] 2025-03-27 16:00:56.078 [main] Log - Submit button functionality
-[INFO ] 2025-03-27 16:01:00.403 [main] Log - Step:01 - Click submit button after adding the details in the auto posting popup window.
-[INFO ] 2025-03-27 16:01:01.490 [main] Log - Expected Result: Popup window will be closed
-[INFO ] 2025-03-27 16:01:01.535 [main] Log - Verify Operation Summary on Submission
-[INFO ] 2025-03-27 16:01:05.869 [main] Log - 1. Click 'Submit'.
-[INFO ] 2025-03-27 16:01:06.949 [main] Log - Expected Result: Summary of operation is displayed correctly.
-[INFO ] 2025-03-27 16:01:07.039 [main] Log - Login with Another User
-[INFO ] 2025-03-27 16:01:11.632 [main] Log - Step:01 - Log out
-[INFO ] 2025-03-27 16:01:20.676 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-03-27 16:01:20.718 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-03-27 16:01:20.781 [main] Log - Manager Authorization - Transfer Tab
-[INFO ] 2025-03-27 16:01:25.079 [main] Log - Step:01 - Click "Authorize & Cancel"
-[INFO ] 2025-03-27 16:01:29.594 [main] Log - Step:02 - Select "Manager Authorization"
-[INFO ] 2025-03-27 16:01:33.882 [main] Log - Step:03 - Click "Transfer" tab
-[INFO ] 2025-03-27 16:01:33.883 [main] Log - Expected Result: Transfer tab load
-[INFO ] 2025-03-27 16:01:33.944 [main] Log - Refresh Loan Opening Entry
-[INFO ] 2025-03-27 16:01:38.266 [main] Log - Step:01 - Click Refresh Button
-[INFO ] 2025-03-27 16:01:44.697 [main] Log - Expected Result: Loan opening entry displayed
-[INFO ] 2025-03-27 16:01:44.729 [main] Log - Authorize Loan Entry as Manager
-[INFO ] 2025-03-27 16:01:49.033 [main] Log - Step:01 - Select loan entry checkbox
-[INFO ] 2025-03-27 16:01:53.349 [main] Log - Step:02 - Click Authorize Button
-[INFO ] 2025-03-27 16:01:54.421 [main] Log - Expected Result: Transaction gets authorised
-[INFO ] 2025-03-27 16:01:58.726 [main] Log - Logout
-[INFO ] 2025-03-27 16:02:07.278 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-03-27 16:02:08.350 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-04-02 11:26:50.760 [main] Log - *** Running test method ...
+[INFO ] 2025-04-02 11:26:54.859 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-02 11:26:56.333 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-02 11:26:58.602 [main] Log - PC Registration
+[INFO ] 2025-04-02 11:26:59.704 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-02 11:27:02.089 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-02 11:27:03.137 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-02 11:27:07.429 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-02 11:27:08.548 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-02 11:27:08.595 [main] Log - Valid Login
+[INFO ] 2025-04-02 11:27:09.652 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-02 11:27:10.716 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-02 11:27:18.953 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-02 11:27:20.071 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-02 11:27:20.159 [main] Log - Expand Module for Collection Importing
+[INFO ] 2025-04-02 11:27:24.465 [main] Log - 1. Navigate to 'others' module.
+[INFO ] 2025-04-02 11:27:28.764 [main] Log - 2. Expand 'data sharing'.
+[INFO ] 2025-04-02 11:27:33.624 [main] Log - 3. Click on 'collection importing'.
+[INFO ] 2025-04-02 11:27:34.685 [main] Log - Expected Result: Collection importing window is opened.
+[INFO ] 2025-04-02 11:27:34.718 [main] Log - Verify Auto-load of Agent Code
+[INFO ] 2025-04-02 11:27:43.385 [main] Log - 1. Select an agent name from the dropdown.
+[INFO ] 2025-04-02 11:27:43.443 [main] Log - Expected Result: Agent code is auto-loaded corresponding to the selected agent name.
+[INFO ] 2025-04-02 11:27:43.480 [main] Log - Select Main Branch from Dropdown
+[INFO ] 2025-04-02 11:27:45.590 [main] Log - 1. Select the main branch from the dropdown.
+[INFO ] 2025-04-02 11:27:45.681 [main] Log - Expected Result: Main branch is correctly selected without errors.
+[INFO ] 2025-04-02 11:27:45.712 [main] Log - Select Product Group and Name
+[INFO ] 2025-04-02 11:27:48.143 [main] Log - 1. Select a product group from the dropdown.
+[INFO ] 2025-04-02 11:27:50.501 [main] Log - 2. Select a product name from the dropdown.
+[INFO ] 2025-04-02 11:27:50.703 [main] Log - Expected Result: Product group and name are selected without errors.
+[INFO ] 2025-04-02 11:27:50.733 [main] Log - Verify Auto-load of Account Details
+[INFO ] 2025-04-02 11:27:51.783 [main] Log - 1. Enter a valid  account number.
+[INFO ] 2025-04-02 11:27:57.031 [main] Log - Expected Result: Total Duration, Total Due, Start Date, Due Date, Cust. Spl. Inst, Bill No, Ac. Spl. Inst, Amount, and Fine are auto-loaded.
+[INFO ] 2025-04-02 11:27:57.063 [main] Log - Enter Amount for Transfer
+[INFO ] 2025-04-02 11:27:58.111 [main] Log - 1. Enter the amount for transfer.
+[INFO ] 2025-04-02 11:27:58.150 [main] Log - Expected Result: Entered amount is accepted without errors.
+[INFO ] 2025-04-02 11:27:58.179 [main] Log - Add Transfer Details to Grid
+[INFO ] 2025-04-02 11:28:02.499 [main] Log - 1. Click 'Add'.
+[INFO ] 2025-04-02 11:28:03.555 [main] Log - Expected Result: Details are added to the grid of import details.
+[INFO ] 2025-04-02 11:28:03.597 [main] Log - Verify TRANSFER Collection Importing
+[INFO ] 2025-04-02 11:28:05.935 [main] Log - 1. Attempt to do collection importing using 'TRANSFER'.
+[INFO ] 2025-04-02 11:28:06.654 [main] Log - Expected Result: Collection importing using 'TRANSFER' is possible and proceeds without error.
+[INFO ] 2025-04-02 11:28:06.689 [main] Log - Enter Remark Details
+[INFO ] 2025-04-02 11:28:07.750 [main] Log - 1. Enter remarks in the provided field.
+[INFO ] 2025-04-02 11:28:07.750 [main] Log - Expected Result: Remarks are accepted without errors.
+[INFO ] 2025-04-02 11:28:07.784 [main] Log - Post credit button functionality
+[INFO ] 2025-04-02 11:28:12.267 [main] Log - Step:01 - Select Post Debit button.
+[INFO ] 2025-04-02 11:28:13.655 [main] Log - Expected Result: Auto posting popup window will be opened.
+[INFO ] 2025-04-02 11:28:13.696 [main] Log - Transaction based selection.
+[INFO ] 2025-04-02 11:28:16.046 [main] Log - Step:01 - Select transaction based as GL Code.
+[INFO ] 2025-04-02 11:28:18.190 [main] Log - Expected Result: GL code related field will be display (GL name,GL code)
+[INFO ] 2025-04-02 11:28:18.222 [main] Log - GL Name selection.
+[INFO ] 2025-04-02 11:28:26.882 [main] Log - Step:01 - Select the "GL Name" from the drop down
+[INFO ] 2025-04-02 11:28:26.917 [main] Log - Expected Result: GL code will be autoloads while selecting the GL Name.
+[INFO ] 2025-04-02 11:28:26.954 [main] Log - Add button functionality
+[INFO ] 2025-04-02 11:28:35.408 [main] Log - Step:01 - Give the amount in "Amount" field.
+[INFO ] 2025-04-02 11:28:39.714 [main] Log - Step:02 - Click add button.
+[INFO ] 2025-04-02 11:28:40.787 [main] Log - Expected Result: Given details will be displays in the grid
+[INFO ] 2025-04-02 11:28:40.829 [main] Log - Submit button functionality
+[INFO ] 2025-04-02 11:28:45.153 [main] Log - Step:01 - Click submit button after adding the details in the auto posting popup window.
+[INFO ] 2025-04-02 11:28:46.234 [main] Log - Expected Result: Popup window will be closed
+[INFO ] 2025-04-02 11:28:46.265 [main] Log - Verify Operation Summary on Submission
+[INFO ] 2025-04-02 11:28:50.597 [main] Log - 1. Click 'Submit'.
+[INFO ] 2025-04-02 11:28:51.669 [main] Log - Expected Result: Summary of operation is displayed correctly.
+[INFO ] 2025-04-02 11:28:51.719 [main] Log - Login with Another User
+[INFO ] 2025-04-02 11:28:56.255 [main] Log - Step:01 - Log out
+[INFO ] 2025-04-02 11:29:05.842 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-02 11:29:05.915 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-04-02 11:29:05.956 [main] Log - Manager Authorization - Transfer Tab
+[INFO ] 2025-04-02 11:29:10.263 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-04-02 11:29:14.763 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-04-02 11:29:19.065 [main] Log - Step:03 - Click "Transfer" tab
+[INFO ] 2025-04-02 11:29:19.065 [main] Log - Expected Result: Transfer tab load
+[INFO ] 2025-04-02 11:29:19.103 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-04-02 11:29:23.425 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-04-02 11:29:29.929 [main] Log - Expected Result: Loan opening entry displayed
+[INFO ] 2025-04-02 11:29:29.955 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-04-02 11:29:34.258 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-04-02 11:29:38.600 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-04-02 11:29:39.676 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-04-02 11:29:44.029 [main] Log - Logout
+[INFO ] 2025-04-02 11:29:52.549 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-04-02 11:29:53.649 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

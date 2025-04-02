@@ -1,4 +1,4 @@
-package com.test.Others;
+package com.test.Transaction;
 
 import java.io.IOException;
 import java.util.Map;
@@ -11,13 +11,15 @@ import org.testng.annotations.Test;
 import com.BasePackage.Base_Class;
 import com.Page_AccountOpening.ShareOpening_AClassShare;
 import com.Page_Others.DataSharing_CollectionImporting;
+import com.Page_Transaction.Transaction_LoanCollectionTransfer;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
+import com.test.Others.AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER;
 
-public class AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER {
+public class AllScenarios_Transaction_LoanCollectionTransfer {
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -25,12 +27,11 @@ public class AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	ShareOpening_AClassShare shareOpnMthds = new ShareOpening_AClassShare();
-	DataSharing_CollectionImporting collImportMthds = new DataSharing_CollectionImporting();
-	
+	Transaction_LoanCollectionTransfer collTransferMthds = new Transaction_LoanCollectionTransfer();
+	AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER collectionImportingTRANSFERMthds = new AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER();
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("CollectionImporting");
+		ExcelReader = new com.Utility.ExcelReader("LoanCollectionTransfer");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -39,10 +40,10 @@ public class AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER {
 	
 	
 	@Test(dataProvider = "TestData")
-	public void collectionImporting_TRANSFER(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
+	public void loanCollectionTransfer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("Collection_Importing_TRANSFER");
+				ExtentTestManager.startTest("Loan Collection Transfer");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
@@ -56,13 +57,11 @@ public class AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER {
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
-				collImportMthds.navigateToCollectionImporting();
+				collTransferMthds.navigateToLoanCollectionTransfer();
 
-				collImportMthds.agentDetails(testdata, context);
-				
-				collImportMthds.selectTransModeTransferAndSubmit(testdata, context);
+				collTransferMthds.LoanCollectionDetails(testdata, context);
 
-				collImportMthds.authorizeTransfer(testdata, context);
+				collTransferMthds.authorizeTransfer(testdata, context);
 
 				custSrchMthds.logout();
 
