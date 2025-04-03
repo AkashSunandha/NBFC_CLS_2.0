@@ -1,4 +1,4 @@
-package com.test.Agent_transfer;
+package com.test.user.TimesheetModule;
 
 import java.io.IOException;
 import java.util.Map;
@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.Agent_Transfer.Agent_Transfer;
 import com.BasePackage.Base_Class;
 import com.JewelLoan_Closure.JewelLoan_Closure_Cash_Transfer;
+import com.OLTransaction_Cash_Transfer.Multiple_FD_Intrest_Payment_Cash_and_Transfer;
 import com.OLTransaction_Cash_Transfer.OLTransaction_Cash_Transfer;
 import com.OLTransaction_Cash_Transfer.OL_Transaction_Closure_Cash_Transfer;
 import com.OLTransaction_Cash_Transfer.SusAssetTransaction_Cash_Transfer;
@@ -22,7 +23,7 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_Agent_Transfer {
+public class AllScenarios_Multiple_FD_Intrest_Payment_Cash_and_Transfer {
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -30,7 +31,7 @@ public class AllScenarios_Agent_Transfer {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 
-	public String sp = "GetSuspenseAssetAccountnumber";
+	public String sp = "GetSpMultipleFDAccountNo 102,14003,1";
 	public String columnName = "Acno";
 
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
@@ -39,11 +40,12 @@ public class AllScenarios_Agent_Transfer {
 	JewelLoan_Closure_Cash_Transfer JLoanClosure = new JewelLoan_Closure_Cash_Transfer();
 	OLTransaction_Cash_Transfer Transaction = new OLTransaction_Cash_Transfer();
 	OL_Transaction_Closure_Cash_Transfer Closuretrans = new OL_Transaction_Closure_Cash_Transfer();
-	Agent_Transfer agent = new Agent_Transfer();
+	SusAssetTransaction_Cash_Transfer suspense = new SusAssetTransaction_Cash_Transfer();
+	Multiple_FD_Intrest_Payment_Cash_and_Transfer FD = new Multiple_FD_Intrest_Payment_Cash_and_Transfer();
 
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("SuspenseAsset");
+		ExcelReader = new com.Utility.ExcelReader("MultipleFD");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -56,7 +58,7 @@ public class AllScenarios_Agent_Transfer {
 		try {
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes")) {
 				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
-				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
+				Log.info(" Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
 				// TC No. - 01 --> Application launch
@@ -68,40 +70,122 @@ public class AllScenarios_Agent_Transfer {
 				custSrchMthds.pcRegistration(testdata, context);
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
+
+				FD.NavigatetoMultipleFDInterestPayment();
+
+				FD.selectProductGroup();
+
+				FD.selectProductName();
 				
-				agent.AgentTransferNavigation();
+				FD.enterAccountNumber();
+
+				FD.checkDisplayAllAccounts1();
+
+				FD.checkDisplayAllAccounts();
+
+				FD.checkInterestPaymentDetailsGrid(testdata, context);
 				
-				agent.AgentCodeDropdown();
+				FD.enterAccountNumber2();
 				
-				agent.ProducCheckboxesFunctionality();
+				FD.checkDisplayAllAccounts();
+
+				FD.selectAnotherAccountForInterestPayment(testdata, context);
+
+
+			/*	FD.enterAccountNumber();
+
+				FD.checkDisplayAllAccounts1();
+
+				FD.checkDisplayAllAccounts();
+
+				FD.checkInterestPaymentDetailsGrid(testdata, context);
+
+				FD.selectAnotherAccountForInterestPayment(testdata, context);*/
+
+				FD.submitPaymentCashMode();
+
+				FD.verifySubmissionSummary();
+
+				suspense.logoutApplication1();
+
+				Closuretrans.AnotherUSer(testdata, context);
+
+				FD.managerauthorisation();
+
+				FD.UserloggedManagerauthorization();
+
+				FD.UserloggedManagerauthorization2();
+
+				FD.UseronManagerauthorisationwindow();
+
+				FD.cashierauthorization();
+
+				FD.cashierauthorization1();
+
+				FD.cashierauthorization2();
+
+				FD.UserisonCashierauthorisationwindow();
+
+				FD.logoutApplication4();
+
+				// Transfer
+
+				custSrchMthds.userLoginValidPaswrd(testdata, context);
+
+				FD.NavigatetoMultipleFDInterestPayment1();
+
+				FD.selectProductGroup();
+
+				FD.selectProductName();
+
+				FD.enterAccountNumber();
+
+				FD.checkDisplayAllAccounts1();
+
+				FD.checkDisplayAllAccounts();
+
+				FD.checkInterestPaymentDetailsGrid(testdata, context);
 				
-				agent.AreaCheckboxesFunctionality();
+				FD.enterAccountNumber2();
 				
-				agent.CheckTemporaryTransferCheckboxDefault();
-				
-				agent. VerifyShowButton();
-				
-				agent.ItemfromToAgentCodeDropdown();
-				
-				agent.accounttotransfer();
-				
-				agent.TransferAccountsCheckbox1();
-				
-				agent.transferAccountsCheckbox2();
-				
-				agent.VerifydataTransfer();
-				
-				agent.SingleAccountCheckbox();
-				
-				agent.Productgroup();
-				
-				agent.Productname();
-				
-				agent.Accountnumber(testdata, context);
+				FD.checkDisplayAllAccounts();
+
+				FD.selectAnotherAccountForInterestPayment(testdata, context);
+
+				FD.submitPaymenttransferMode();
+
+				FD.postDebitTransaction();
+
+				FD.searchAccountNumber(testdata, context);
+
+				FD.selectAccountNumber(testdata, context);
+
+				FD.addTransactionAmount1();
+
+				FD.addTransactionAmount();
+
+				FD.submitTransactionWindow();
+
+				suspense.logoutApplication1();
 				
 				
-			
+
 				
+				Closuretrans.AnotherUSer(testdata, context);
+				
+				FD.managerauthorisation1();
+				
+				FD.UserLoggedIntransfer();
+				
+				
+
+				FD.UserloggedManagerauthorization();
+
+				FD.UserLoggedInCheckbx1();
+				
+				FD.UseronManagerauthorisationwindow();
+				
+				FD.logoutApplication5();
 				
 				
 				

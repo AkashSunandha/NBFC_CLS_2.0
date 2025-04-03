@@ -120,8 +120,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		String valueAccNum = generateUniqueCode(sp, columnName);
 		String AccNum = valueAccNum.substring(valueAccNum.length() - 3);
 		input(JewelClosure.StoreAccun, AccNum);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -");
-		Log.info("Step:01 -");
+		
 
 		ExtentTestManager.getTest().log(Status.PASS,
 				"Expected Result:Loan number can be entered Account details are displayed ");
