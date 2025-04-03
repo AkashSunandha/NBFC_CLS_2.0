@@ -933,12 +933,15 @@ public class Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 				throws ClassNotFoundException, InterruptedException {
 			//click(fixeddeposit.insuredfuturedate);
 			ExtentTestManager.startTest("TC:55 Fill Vehicle Security Details - Choose Insured future date");
-			String Insuredfuture_Date = testdata.get("InsuredFutureDate").toString();
+			//String Insuredfuture_Date = testdata.get("InsuredFutureDate").toString();
 			//clear(fixeddeposit.clearinsureddate);
 			click (fixeddeposit.insuredfuturedate);
-			input(fixeddeposit.insuredfuturedate, Insuredfuture_Date);
-			click(fixeddeposit.AddBtn1);
-			 INclick(fixeddeposit.loader);
+			String Insuredfuture = testdata.get("InsuredFutureDate").toString();
+			input(fixeddeposit.insuredfuturedate, Insuredfuture);
+			click (fixeddeposit.AddBtn1);
+			INclick(fixeddeposit.loader);
+			//click(fixeddeposit.Okbtn);
+			//click (fixeddeposit.AddBtn1);
 
 			ExtentTestManager.getTest().log(Status.PASS,"Step:01 1. Choose future date from Insured Upto Date picker(less than tramsaction date)");
 			Log.info("\"Step:01. Choose future date from Insured Upto Date picker(less than tramsaction date)");
@@ -951,6 +954,7 @@ public class Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 			
 			//if (ElementDisplayed(fixeddeposit.Addgrid)) 
 			if (ElementDisplayed(fixeddeposit.insuredfuturedate)){
+			
 				Thread.sleep(20000);
 				ExtentTestManager.getTest().log(Status.PASS,"Expected Result: Given details should be displayed in the grid");
 				Log.info("Expected Result: Given details should be displayed in the grid");
@@ -1114,14 +1118,17 @@ public class Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 
 		public void FillLoanDetailsNoOFInstallments(Map<Object, Object> testdata, ITestContext context)
 				throws ClassNotFoundException, InterruptedException {
+			
 			click(fixeddeposit.NoOfInstallment);
 			ExtentTestManager.startTest("TC:66 Fill loan details - No.Of Installments");
 			String Installment = testdata.get("NoOfInstallement").toString();
 			clear(fixeddeposit.NoOfInstallment);
-			input(fixeddeposit.NoOfInstallment, Installment);
 			INclick(fixeddeposit.loader);
+			input(fixeddeposit.NoOfInstallment, Installment);
+
 			click(fixeddeposit.sanctioned);
 			
+			INclick(fixeddeposit.loader);
 			
 			
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01. Enter No.of Installments");
@@ -1254,6 +1261,7 @@ public class Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 															Log.info("Step:01 - .Click submit button after adding the details in the auto posting popup window");
 															
 															ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Popup window will be closed");
+															Log.info("Expected result: Popup window will be closed");
 															
 															
 															driver.switchTo().window(mainWindowHandle3);
@@ -1275,7 +1283,9 @@ public void save() throws InterruptedException {
 		Log.info("Step:01 -Click Save button after giving the post credit details");
 		
 		click(fixeddeposit.existingloanokpopuptransfer);
+		INclick(fixeddeposit.loader);
 		click (fixeddeposit.similardatapopuptransfer);
+		INclick(fixeddeposit.loader);
 		if (ElementDisplayed(fixeddeposit.transfersummary)) {
 			
 			ExtentTestManager.getTest().log(Status.PASS,"Transfer opening possible and Summary is generated ");
@@ -1333,9 +1343,9 @@ public void Login_with_Another_User_transferauthorize(Map<Object,Object>testdata
 		ExtentTestManager.startTest("TC:77- 2.Navigate to Manager Authorization module");
 		Log.info("TC:28 -2.Navigate to Manager Authorization  module");
 		
-		ScrollUntilElementVisible(fixeddeposit.Authorize_canceltab);
-		click(fixeddeposit.Authorize_canceltab);
-		click(fixeddeposit.Manager_Authorization_Transfer_Tab);
+		ScrollUntilElementVisible(fixeddeposit.Authorizecanceltab);
+		click(fixeddeposit.Authorizecanceltab);
+		click(fixeddeposit.ManagerAuthorization);
 		//click(fixeddeposit.Transfertab);
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Go to Authorize and Cancel");

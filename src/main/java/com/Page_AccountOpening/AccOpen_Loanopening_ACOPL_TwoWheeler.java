@@ -933,12 +933,15 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 			throws ClassNotFoundException, InterruptedException {
 		//click(fixeddeposit.insuredfuturedate);
 		ExtentTestManager.startTest("TC:55 Fill Vehicle Security Details - Choose Insured future date");
-		String Insuredfuture_Date = testdata.get("InsuredFutureDate").toString();
+		//String Insuredfuture_Date = testdata.get("InsuredFutureDate").toString();
 		//clear(fixeddeposit.clearinsureddate);
 		click (fixeddeposit.insuredfuturedate);
-		input(fixeddeposit.insuredfuturedate, Insuredfuture_Date);
-		click(fixeddeposit.AddBtn1);
-		 INclick(fixeddeposit.loader);
+		String Insuredfuture = testdata.get("InsuredFutureDate").toString();
+		input(fixeddeposit.insuredfuturedate, Insuredfuture);
+		click (fixeddeposit.AddBtn1);
+		INclick(fixeddeposit.loader);
+		//click(fixeddeposit.Okbtn);
+		//click (fixeddeposit.AddBtn1);
 
 		ExtentTestManager.getTest().log(Status.PASS,"Step:01 1. Choose future date from Insured Upto Date picker(less than tramsaction date)");
 		Log.info("\"Step:01. Choose future date from Insured Upto Date picker(less than tramsaction date)");
@@ -951,6 +954,7 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		
 		//if (ElementDisplayed(fixeddeposit.Addgrid)) 
 		if (ElementDisplayed(fixeddeposit.insuredfuturedate)){
+			
 			Thread.sleep(20000);
 			ExtentTestManager.getTest().log(Status.PASS,"Expected Result: Given details should be displayed in the grid");
 			Log.info("Expected Result: Given details should be displayed in the grid");
@@ -1206,6 +1210,7 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		}
         cashtranscid= driver.findElement(fixeddeposit.cashtransactionid).getText();
 		System.out.println(cashtranscid);
+		click(fixeddeposit.signout);
 
 		ExtentTestManager.endTest();
 	}
@@ -1214,9 +1219,9 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 		ExtentTestManager.startTest("TC:70 - Login with Another User");
 		Log.info("TC:70 - Login with Another User");
 
-	click(fixeddeposit.signout);
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Logout'");
-	Log.info("Step:01 -  'Logout'");
+	//click(fixeddeposit.signout);
+	//ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Logout'");
+	//Log.info("Step:01 -  'Logout'");
 
 		String newuserid = configloader().getProperty("UserName1");
 		input(fixeddeposit.loginUserName1, newuserid);

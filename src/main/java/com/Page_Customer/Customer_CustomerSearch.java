@@ -79,7 +79,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		Log.info("Step:02 - Enter PC Name in Name field.");
 		
 		click(custSearch.formBranchName);
-		click(custSearch.formBranchNameKochi);
+		click(custSearch.formBranchNameTrivandrum);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Select a Branch Name from the Dropdown.");
 		Log.info("Step:03 - Select a Branch Name from the Dropdown.");
 		

@@ -1,11 +1,12 @@
 package com.Page_Repositary;
 
+
 import org.openqa.selenium.By;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
 public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
-	//public static final By Account_opening1 = null;
+	
 
 
 	
@@ -86,8 +87,10 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
     public By purpose = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpSecurity_tbSecurity_tpVehicle_SVF_rdlPurposeCode_ddl");
     public By InsuredPastdateokbtn = By.id("closeInsdat");
     public By AddBtn1 = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpSecurity_tbSecurity_tpVehicle_SVF_btnVehADD");
+    
     public By Addgrid =By.id("//td[text()='Ex.Show Room Price']");
    public By insuredfuturedate = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpSecurity_tbSecurity_tpVehicle_SVF_dtInsuredUptoDate_txt");
+   public By Okbtn = By.id("closeInsdat");
    public By NextButton = By.id("ctl00_ctl00_CPH1_PRDCNT_btnNext");
    public By clearinsureddate = By.id("ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpSecurity_tbSecurity_tpVehicle_SVF_dtInsuredUptoDate_txt");
    
@@ -147,7 +150,7 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
 	public By cancelpopup=By.id("closetop");
 	
 	//Manager Authorization - Cash Tab
-			public By ManagerAuthorization=By.xpath("//a[text()='Manager Authorisation (MNAU)']");
+			public By ManagerAuthorization=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/ul/li[5]/a");
 			public By Refresh1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
 			public By cashtab=By.id("__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash");
 			public By cashdetails=By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_lblBatchID");
