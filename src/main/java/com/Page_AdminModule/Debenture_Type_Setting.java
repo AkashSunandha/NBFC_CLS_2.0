@@ -17,7 +17,7 @@ import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
 public class Debenture_Type_Setting extends Base_Class {
-	// Navigate to Deposit Opening Window
+	// Navigate to Debenture Type setting module
 
 	PageRepositary_Admin_Debenture_Type_Setting Debenture  = new PageRepositary_Admin_Debenture_Type_Setting();
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();

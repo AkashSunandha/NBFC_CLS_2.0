@@ -62,6 +62,13 @@ public class Base_Class {
 		return properties;
 	}
 
+	public static boolean CheckBoxStatus(By locator)
+	{
+		WebElement element = driver.findElement(locator);
+		Boolean flag = element.isSelected();
+		return flag;
+	}
+ 
 	public void SetUp() throws IOException, InterruptedException {
 		
 		String Browser = configloader().getProperty("Browser");
