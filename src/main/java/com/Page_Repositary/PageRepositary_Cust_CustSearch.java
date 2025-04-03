@@ -239,5 +239,5 @@ public class PageRepositary_Cust_CustSearch {
 //	public By variable = By.xpath("");
 	
 	//Signout
-	public By custSignOut = By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
+	public By custSignOut = By.xpath("//strong[text()='Signout']");
 }

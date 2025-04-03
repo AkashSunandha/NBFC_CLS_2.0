@@ -204,7 +204,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		return true;
 	}
 	
-	public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
+	public void userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		ExtentTestManager.startTest("Valid Login");
 		Log.info("Valid Login");
 			
@@ -263,7 +263,6 @@ public class Customer_CustomerSearch extends Base_Class{
 					
 		ExtentTestManager.endTest();
 
-		return true;
 	}
 	
 	public boolean customerSearchWindow() throws InterruptedException {
