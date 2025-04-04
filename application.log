@@ -1,4 +1,4 @@
-[ERROR] 2025-03-28 19:08:45.071 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-04 14:03:02.445 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Share_Transfer_Module.AllScenarios_Share_Transfer.gettestdate(AllScenarios_Share_Transfer.java:126) ~[test-classes/:?]
+	at com.test.Day_Begin_Module.AllScenarios_Day_Begin.gettestdate(AllScenarios_Day_Begin.java:112) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-28 19:08:45.089 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-04 14:03:02.463 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -71,7 +71,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Share_Transfer_Module.AllScenarios_Share_Transfer.gettestdate(AllScenarios_Share_Transfer.java:126) ~[test-classes/:?]
+	at com.test.Day_Begin_Module.AllScenarios_Day_Begin.gettestdate(AllScenarios_Day_Begin.java:112) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-28 19:08:45.091 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-04 14:03:02.465 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -124,7 +124,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Share_Transfer_Module.AllScenarios_Share_Transfer.gettestdate(AllScenarios_Share_Transfer.java:126) ~[test-classes/:?]
+	at com.test.Day_Begin_Module.AllScenarios_Day_Begin.gettestdate(AllScenarios_Day_Begin.java:112) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-28 19:08:45.097 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-04 14:03:02.473 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Share_Transfer_Module.AllScenarios_Share_Transfer.gettestdate(AllScenarios_Share_Transfer.java:126) ~[test-classes/:?]
+	at com.test.Day_Begin_Module.AllScenarios_Day_Begin.gettestdate(AllScenarios_Day_Begin.java:112) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,70 +210,22 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-03-28 19:08:45.841 [main] Log - *** Running test method Share_Transfer...
-[INFO ] 2025-03-28 19:08:49.712 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-28 19:08:50.655 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-28 19:08:50.992 [main] Log - PC Registration
-[INFO ] 2025-03-28 19:08:52.057 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-28 19:08:52.383 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-28 19:08:53.421 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-03-28 19:08:57.687 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-28 19:08:59.115 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-28 19:08:59.186 [main] Log - TC_01 - Login Functionality
-[INFO ] 2025-03-28 19:09:00.220 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-28 19:09:01.261 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-28 19:09:09.792 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-28 19:09:10.845 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-28 19:09:10.904 [main] Log - TC:02 - Access Share Transfer Window
-[INFO ] 2025-03-28 19:09:21.862 [main] Log - Step:01 Navigate to 'Transaction' > 'Share Transfer
-[INFO ] 2025-03-28 19:09:22.907 [main] Log - Expected Result: share transfer window displays
-[INFO ] 2025-03-28 19:09:22.952 [main] Log - TC:03 - Selection branch from drop down
-[INFO ] 2025-03-28 19:09:28.574 [main] Log - Step 1:  Select branch from drop down
-[INFO ] 2025-03-28 19:09:29.621 [main] Log - Expected Result: branch should be selected
-[INFO ] 2025-03-28 19:09:29.664 [main] Log - TC:04 - Product group selection
-[INFO ] 2025-03-28 19:09:35.018 [main] Log - Step 1:  Select 'A Class Share' from the Product Group dropdown.
-[INFO ] 2025-03-28 19:09:36.325 [main] Log - Expected Result: Product Group should be selected 
-[INFO ] 2025-03-28 19:09:36.364 [main] Log - TC:05 - Product Name selection
-[INFO ] 2025-03-28 19:09:41.701 [main] Log - Step 1: Select 'A Class Share' from the Product name dropdown.
-[INFO ] 2025-03-28 19:09:43.020 [main] Log - Expected Result: Product name should be selected and Account Info (Transfer From) section will be displays
-[INFO ] 2025-03-28 19:09:43.061 [main] Log - TC:06 - Verify Click on 'GO' After Entering Account No
-[INFO ] 2025-03-28 19:09:43.341 [main] Log - Step:01 - Valid Account No entered
-[INFO ] 2025-03-28 19:09:47.650 [main] Log - Step:01 - Click on the 'GO' button.
-[INFO ] 2025-03-28 19:09:48.701 [main] Log - Expected Result: System should proceed with the entered Account No and load relevant data.
-[INFO ] 2025-03-28 19:09:48.738 [main] Log - TC:07 - Verify Click on 'GO' After Entering Account No in 'Transfer To'
-[INFO ] 2025-03-28 19:09:49.011 [main] Log - Step:01 - Enter Account No in 'Transfer To'section
-[INFO ] 2025-03-28 19:09:53.312 [main] Log - Step:01 - Click on the 'GO' button.
-[INFO ] 2025-03-28 19:09:54.354 [main] Log - Expected Result: System should proceed with the entered Account No and load 'Transfer To' account info.
-[INFO ] 2025-03-28 19:09:54.402 [main] Log - TC:08 - Verify 'Share Value' Autoload
-[INFO ] 2025-03-28 19:09:54.410 [main] Log - Step:01 - Click on Share Series checkbox.
-[INFO ] 2025-03-28 19:09:54.655 [main] Log - Step:01 - Observe 'Share Value' field.
-[INFO ] 2025-03-28 19:09:54.700 [main] Log - Expected Result : 'Share Value' should be autoloaded after selecting the Share Series.
-[INFO ] 2025-03-28 19:09:54.742 [main] Log - TC:09 - Verify 'Share Amount' Autoload on 'No. of Shares' Entry
-[INFO ] 2025-03-28 19:09:55.029 [main] Log - Step:01 - Enter value into 'No. of Shares'.
-[INFO ] 2025-03-28 19:09:56.077 [main] Log - Step:01 - Observe 'Share Amount' field.
-[INFO ] 2025-03-28 19:09:56.078 [main] Log - Expected Result: 'Share Amount' should be autoloaded based on the entered value in 'No. of Shares'.
-[INFO ] 2025-03-28 19:09:56.120 [main] Log - TC:10 - Verify Transaction Success on Submit
-[INFO ] 2025-03-28 19:10:01.456 [main] Log - Step:01 - Click on Submit button.
-[INFO ] 2025-03-28 19:10:01.462 [main] Log - Expected Result: Transaction should be saved successfully, and a confirmation message displayed.
-[INFO ] 2025-03-28 19:10:02.497 [main] Log - Step:01 - Verify transaction summary
-[INFO ] 2025-03-28 19:10:02.515 [main] Log - Expected Result: Summary is accurate and presents details
-[INFO ] 2025-03-28 19:10:02.552 [main] Log - TC:11 - Logout
-[INFO ] 2025-03-28 19:10:09.079 [main] Log - Step:01 - Click 'Logout' button
-[INFO ] 2025-03-28 19:10:10.137 [main] Log - Expected Result: User is logged out and login screen is displayed again
-[INFO ] 2025-03-28 19:10:10.172 [main] Log - TC:12 - Manager Login for Authorization
-[INFO ] 2025-03-28 19:10:12.230 [main] Log - Step:01 - Enter manager credentials `<manager_username>` and `<manager_password>`
-[INFO ] 2025-03-28 19:10:19.235 [main] Log - Step:02 - Click 'Login'
-[INFO ] 2025-03-28 19:10:20.287 [main] Log - Expected Result: Manager successfully logs in and is directed to the authorization page
-[INFO ] 2025-03-28 19:10:20.330 [main] Log - TC:13 - Manager Authorization Refresh
-[INFO ] 2025-03-28 19:10:25.636 [main] Log - Step:01 - Go to 'Authorize & Cancel' window
-[INFO ] 2025-03-28 19:10:30.196 [main] Log - Step:02 - Select 'Manager Authorization'
-[INFO ] 2025-03-28 19:10:34.485 [main] Log - Step:03 - Click Transfer tab
-[INFO ] 2025-03-28 19:10:34.765 [main] Log - Step:04 - Click 'Refresh' button
-[INFO ] 2025-03-28 19:10:35.800 [main] Log - Expected Result: Authorization entries are updated and displayed
-[INFO ] 2025-03-28 19:10:35.844 [main] Log - TC:14 - Authorize Share Entry
-[INFO ] 2025-03-28 19:10:46.523 [main] Log - Step:01 - Select share entry checkbox in the transfer section
-[INFO ] 2025-03-28 19:10:51.812 [main] Log - Step:01 - Click on the Authorize button
-[INFO ] 2025-03-28 19:10:57.126 [main] Log - Expected Result: Share entry is authorized with confirmation message
-[INFO ] 2025-03-28 19:11:00.172 [main] Log - Logout
-[INFO ] 2025-03-28 19:11:08.678 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-03-28 19:11:09.731 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-04-04 14:03:03.425 [main] Log - *** Running test method Day_Begin...
+[INFO ] 2025-04-04 14:03:08.334 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-04 14:03:09.359 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-04 14:03:09.719 [main] Log - PC Registration
+[INFO ] 2025-04-04 14:03:10.809 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-04 14:03:11.180 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-04 14:03:12.225 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-04 14:03:16.534 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-04 14:03:18.343 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-04 14:03:18.452 [main] Log - TC_01 - Admin Login
+[INFO ] 2025-04-04 14:03:18.454 [main] Log - Step:01 - Navigate to the login screen
+[INFO ] 2025-04-04 14:03:19.492 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-04 14:03:26.045 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-04 14:03:31.530 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-04 14:03:31.631 [main] Log - TC:02 - Open Day Begin Window
+[INFO ] 2025-04-04 14:03:41.300 [main] Log - Step:01 Navigate to Processes
+[INFO ] 2025-04-04 14:03:47.217 [main] Log - Step:02 Click on Day Begin
+[INFO ] 2025-04-04 14:03:48.291 [main] Log - Expected Result: Day Begin window is opened
+[INFO ] 2025-04-04 14:03:48.383 [main] Log - TC:03 - Start Day Begin Process
