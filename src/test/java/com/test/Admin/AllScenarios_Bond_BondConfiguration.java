@@ -29,7 +29,7 @@ public class AllScenarios_Bond_BondConfiguration {
 	
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("NomineeMang");
+		ExcelReader = new com.Utility.ExcelReader("BondConfiguration");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -38,7 +38,7 @@ public class AllScenarios_Bond_BondConfiguration {
 	
 	
 	@Test(dataProvider = "TestData")
-	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
+	public void bondConfiguration(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
 				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
@@ -55,7 +55,9 @@ public class AllScenarios_Bond_BondConfiguration {
 
 				bondConfigMthds.adminLogin();
 
+				bondConfigMthds.navigateToBondConfiguration();
 
+				bondConfigMthds.bondConfiguration(testdata, context);
 
 				custSrchMthds.logout();
 
