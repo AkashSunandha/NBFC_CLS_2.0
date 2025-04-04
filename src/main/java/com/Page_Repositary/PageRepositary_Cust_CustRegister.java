@@ -17,7 +17,7 @@ public class PageRepositary_Cust_CustRegister {
 	public By logoutOk = By.xpath("/html/body/div[1]/div/div[2]/div/form/div[11]/div[3]/div/button[1]");
 
 	//Customer Register Window
-	public By cust = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/div");
+	public By cust = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/div"); 
 	public By custRegister = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/ul/li[5]");
 	public By custIDTxtBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_txtCustomerId_txt\"]");
 	public By custSrchBtn = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[2]/table/tbody/tr/td[3]/a/img");

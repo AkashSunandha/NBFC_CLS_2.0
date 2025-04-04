@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-10T11:39:27 IST" name="Default suite" finished-at="2025-03-10T11:42:45 IST" duration-ms="197606">
+  <suite started-at="2025-04-04T12:24:53 IST" name="Default suite" finished-at="2025-04-04T12:27:51 IST" duration-ms="178174">
     <groups>
     </groups>
-    <test started-at="2025-03-10T11:39:27 IST" name="Default test" finished-at="2025-03-10T11:42:45 IST" duration-ms="197606">
-      <class name="com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER@297ea53a]" started-at="2025-03-10T11:39:27 IST" name="reference" finished-at="2025-03-10T11:39:27 IST" duration-ms="19" status="PASS">
+    <test started-at="2025-04-04T12:24:53 IST" name="Default test" finished-at="2025-04-04T12:27:51 IST" duration-ms="178174">
+      <class name="com.test.AccountOpening.AllScenarios_AccOpn_InvestmentOpn_Demand">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.AccountOpening.AllScenarios_AccOpn_InvestmentOpn_Demand@674658f7]" started-at="2025-04-04T12:24:53 IST" name="reference" finished-at="2025-04-04T12:24:53 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER@297ea53a]" started-at="2025-03-10T11:39:28 IST" name="newCustomer" data-provider="TestData" finished-at="2025-03-10T11:42:45 IST" duration-ms="196650" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.AccountOpening.AllScenarios_AccOpn_InvestmentOpn_Demand@674658f7]" started-at="2025-04-04T12:24:54 IST" name="newCustomer" data-provider="TestData" finished-at="2025-04-04T12:27:51 IST" duration-ms="177407" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{accNum=3, amount=2000, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, remark=abcd, Run=Yes, TestScenario=Transactions_Jewel}]]>
+                <![CDATA[{19digitNum=19345678901234500000, 20digitNum=20345678901231400000, 21digitNum=213456789012314000000, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Investment_Opening}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@1bd0b0e5]]>
+                <![CDATA[org.testng.TestRunner@6ed06f69]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newCustomer -->
-      </class> <!-- com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER -->
+      </class> <!-- com.test.AccountOpening.AllScenarios_AccOpn_InvestmentOpn_Demand -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

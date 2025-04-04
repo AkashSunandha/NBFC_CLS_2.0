@@ -1,11 +1,11 @@
-[ERROR] 2025-03-10 11:39:28.036 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-04 12:24:53.465 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
-	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
-	at java.net.URI.<init>(URI.java:623) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3146) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3164) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3210) ~[?:?]
+	at java.net.URI.<init>(URI.java:645) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:160) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -18,47 +18,45 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER.gettestdate(AllScenarios_Transaction_Transactions_Jewel_TRANSFER.java:89) ~[test-classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at com.test.AccountOpening.AllScenarios_AccOpn_InvestmentOpn_Demand.gettestdate(AllScenarios_AccOpn_InvestmentOpn_Demand.java:89) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1597) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.11.0.r202503091654.jar:7.11.0]
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-10 11:39:28.054 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-04 12:24:53.480 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
-	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
-	at java.net.URI.<init>(URI.java:623) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3146) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3164) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3210) ~[?:?]
+	at java.net.URI.<init>(URI.java:645) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:160) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -71,47 +69,45 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER.gettestdate(AllScenarios_Transaction_Transactions_Jewel_TRANSFER.java:89) ~[test-classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at com.test.AccountOpening.AllScenarios_AccOpn_InvestmentOpn_Demand.gettestdate(AllScenarios_AccOpn_InvestmentOpn_Demand.java:89) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1597) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.11.0.r202503091654.jar:7.11.0]
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-10 11:39:28.057 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-04 12:24:53.481 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
-	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
-	at java.net.URI.<init>(URI.java:623) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3146) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3164) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3210) ~[?:?]
+	at java.net.URI.<init>(URI.java:645) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:160) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -124,47 +120,45 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER.gettestdate(AllScenarios_Transaction_Transactions_Jewel_TRANSFER.java:89) ~[test-classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at com.test.AccountOpening.AllScenarios_AccOpn_InvestmentOpn_Demand.gettestdate(AllScenarios_AccOpn_InvestmentOpn_Demand.java:89) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1597) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.11.0.r202503091654.jar:7.11.0]
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-03-10 11:39:28.066 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-04 12:24:53.487 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
-	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3127) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3145) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3191) ~[?:?]
-	at java.net.URI.<init>(URI.java:623) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3146) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3164) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3210) ~[?:?]
+	at java.net.URI.<init>(URI.java:645) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:160) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -177,141 +171,100 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Transaction.AllScenarios_Transaction_Transactions_Jewel_TRANSFER.gettestdate(AllScenarios_Transaction_Transactions_Jewel_TRANSFER.java:89) ~[test-classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:798) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:794) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestRunner.run(TestRunner.java:596) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1063) [org.testng_7.4.0.r202105021533.jar:7.4.0]
-	at org.testng.TestNG.run(TestNG.java:1031) [org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at com.test.AccountOpening.AllScenarios_AccOpn_InvestmentOpn_Demand.gettestdate(AllScenarios_AccOpn_InvestmentOpn_Demand.java:89) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1597) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.11.0.r202503091654.jar:7.11.0]
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-03-10 11:39:28.902 [main] Log - *** Running test method Transactions_Jewel...
-[INFO ] 2025-03-10 11:39:32.897 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-03-10 11:39:34.482 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-03-10 11:39:36.775 [main] Log - PC Registration
-[INFO ] 2025-03-10 11:39:37.857 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-03-10 11:39:40.263 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-03-10 11:39:41.323 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-03-10 11:39:45.641 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-03-10 11:39:47.847 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-03-10 11:39:47.970 [main] Log - Valid Login
-[INFO ] 2025-03-10 11:39:49.044 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-03-10 11:39:50.097 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-03-10 11:39:57.597 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-03-10 11:39:58.685 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-10 11:39:59.780 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-03-10 11:39:59.896 [main] Log - Open Transaction Module
-[INFO ] 2025-03-10 11:40:04.195 [main] Log - Step:01 - Navigate to the transaction module in the menu.
-[INFO ] 2025-03-10 11:40:08.789 [main] Log - Step:02 - Click on the transaction module.
-[INFO ] 2025-03-10 11:40:09.889 [main] Log - Expected Result: Transaction module opens successfully.
-[INFO ] 2025-03-10 11:40:09.982 [main] Log - Select Branch
-[INFO ] 2025-03-10 11:40:12.168 [main] Log - Step:01 -  Select a branch from the dropdown.
-[INFO ] 2025-03-10 11:40:12.168 [main] Log - Expected Result: Correct branch  selected.
-[INFO ] 2025-03-10 11:40:12.255 [main] Log - Select Product Group
-[INFO ] 2025-03-10 11:40:14.707 [main] Log - Step:01 -  Choose 'Jewel Loan' for product group.
-[INFO ] 2025-03-10 11:40:14.707 [main] Log - Expected Result: Correct product group selected.
-[INFO ] 2025-03-10 11:40:14.791 [main] Log - Select Product Name
-[INFO ] 2025-03-10 11:40:17.190 [main] Log - Step:01 - Select 'Gold Loan' for product name.
-[INFO ] 2025-03-10 11:40:17.190 [main] Log - Expected Result: Correct product Name selected.
-[INFO ] 2025-03-10 11:40:17.269 [main] Log - Enter account number
-[INFO ] 2025-03-10 11:40:18.701 [main] Log - Step:01 - Enter a valid account number in the input field.
-[INFO ] 2025-03-10 11:40:18.702 [main] Log - Expected Result: Account number is accepted.
-[INFO ] 2025-03-10 11:40:18.757 [main] Log - Select Transaction Type
-[INFO ] 2025-03-10 11:40:21.110 [main] Log - Step:01 - Select transaction type as 'Credit'.
-[INFO ] 2025-03-10 11:40:21.111 [main] Log - Expected Result: Transaction type is set.
-[INFO ] 2025-03-10 11:40:21.203 [main] Log - Transaction Window Display
-[INFO ] 2025-03-10 11:40:25.562 [main] Log - Step:01 - Click the 'Go' button.
-[INFO ] 2025-03-10 11:40:26.664 [main] Log - Expected Result: Transaction window for the selected account is displayed.
-[INFO ] 2025-03-10 11:40:26.738 [main] Log - Verify Principal Log Details
-[INFO ] 2025-03-10 11:40:32.384 [main] Log - Step:01 - Click and view Principal log details.
-[INFO ] 2025-03-10 11:40:36.736 [main] Log - Expected Result: Logs display correct interest  details.
-[INFO ] 2025-03-10 11:40:36.832 [main] Log - Verify Interest Log Details
-[INFO ] 2025-03-10 11:40:41.433 [main] Log - Step:01 - Click and view interest log details.
-[INFO ] 2025-03-10 11:40:41.493 [main] Log - Expected Result: Logs display correct interest  details.
-[INFO ] 2025-03-10 11:40:45.764 [main] Log - Enter Transaction Amount
-[INFO ] 2025-03-10 11:40:54.357 [main] Log - Step:01 - Enter a valid transaction amount in the input field.
-[INFO ] 2025-03-10 11:40:54.358 [main] Log - Expected Result: Transaction amount is accepted.
-[INFO ] 2025-03-10 11:40:58.825 [main] Log - Verify Interest and Principal Amount
-[INFO ] 2025-03-10 11:40:58.957 [main] Log - Step:01 - Check the principal amount displayed.
-[INFO ] 2025-03-10 11:40:58.958 [main] Log - Step:02 - Check the interest amount displayed.
-[INFO ] 2025-03-10 11:40:58.959 [main] Log - Expected Result: Interest and principal amounts are correct.
-[INFO ] 2025-03-10 11:40:59.043 [main] Log - Select Transaction Mode
-[INFO ] 2025-03-10 11:41:01.411 [main] Log - Step:01 - Choose 'TRANSFER' from the transaction mode dropdown.
-[INFO ] 2025-03-10 11:41:01.411 [main] Log - Expected Result: Transaction mode 'TRANSFER' is selected.
-[INFO ] 2025-03-10 11:41:01.496 [main] Log - Enter Remark 
-[INFO ] 2025-03-10 11:41:02.609 [main] Log - Step:01 - Enter a remark in the input field.
-[INFO ] 2025-03-10 11:41:02.610 [main] Log - Expected Result: Remark   accepted.
-[INFO ] 2025-03-10 11:41:02.687 [main] Log - Post credit button functionality
-[INFO ] 2025-03-10 11:41:07.444 [main] Log - Step:01 - Select Post credit button.
-[INFO ] 2025-03-10 11:41:08.889 [main] Log - Expected Result: Auto posting popup window will be opened.
-[INFO ] 2025-03-10 11:41:08.961 [main] Log - Transaction based selection.
-[INFO ] 2025-03-10 11:41:11.073 [main] Log - Step:01 - Select transaction based as Account.
-[INFO ] 2025-03-10 11:41:11.073 [main] Log - Expected Result:  ACCOunt selected from the 'Transaciton Based' drop down
-[INFO ] 2025-03-10 11:41:11.130 [main] Log - Select Product Group
-[INFO ] 2025-03-10 11:41:13.500 [main] Log - Step:01 - Select Demand Investment from the 'Product group ' drop down.
-[INFO ] 2025-03-10 11:41:13.501 [main] Log - Expected Result:  Demand Investment is selected 
-[INFO ] 2025-03-10 11:41:13.596 [main] Log - Select Product Name
-[INFO ] 2025-03-10 11:41:16.028 [main] Log - Step:01 - Select an item from the 'Product Name' drop down.
-[INFO ] 2025-03-10 11:41:16.029 [main] Log - Expected Result:  Product name item  is selected 
-[INFO ] 2025-03-10 11:41:16.098 [main] Log - Select Branch
-[INFO ] 2025-03-10 11:41:18.211 [main] Log - Step:01 - Select a branch  from the 'Branch  ' drop down.
-[INFO ] 2025-03-10 11:41:18.211 [main] Log - Expected Result:  Branch  item  is selected  
-[INFO ] 2025-03-10 11:41:18.284 [main] Log - Select Account
-[INFO ] 2025-03-10 11:41:19.359 [main] Log - Step:01 - Tick mark and select an account from the list of accounts displayed.
-[INFO ] 2025-03-10 11:41:23.754 [main] Log - Expected Result:  Account is selected 
-[INFO ] 2025-03-10 11:41:23.822 [main] Log - Enter Amount
-[INFO ] 2025-03-10 11:41:24.907 [main] Log - Step:01 - Enter a valid amount in the input field.
-[INFO ] 2025-03-10 11:41:24.908 [main] Log - Expected Result: Amount accepted
-[INFO ] 2025-03-10 11:41:25.069 [main] Log - Add button functionality
-[INFO ] 2025-03-10 11:41:29.405 [main] Log - Step:01 - Click add button.
-[INFO ] 2025-03-10 11:41:30.488 [main] Log - Expected Result: Given details will be displays in the grid
-[INFO ] 2025-03-10 11:41:30.555 [main] Log - Submit button functionality
-[INFO ] 2025-03-10 11:41:34.911 [main] Log - Step:01 - Click submit button after adding the details in the auto posting popup window.
-[INFO ] 2025-03-10 11:41:36.022 [main] Log - Expected Result: Popup window will be closed
-[INFO ] 2025-03-10 11:41:36.094 [main] Log - Submit Transaction
-[INFO ] 2025-03-10 11:41:40.444 [main] Log - Step:01 - Click the 'Submit' button.
-[INFO ] 2025-03-10 11:41:41.534 [main] Log - Expected Result: Transaction should be successful and  summary is displayed with correct details.
-[INFO ] 2025-03-10 11:41:41.623 [main] Log - Login with Another User
-[INFO ] 2025-03-10 11:41:46.367 [main] Log - Step:01 - Log out
-[INFO ] 2025-03-10 11:41:56.432 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-03-10 11:41:56.484 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-03-10 11:41:56.544 [main] Log - Manager Authorization - Transfer Tab
-[INFO ] 2025-03-10 11:42:00.863 [main] Log - Step:01 - Click "Authorize & Cancel"
-[INFO ] 2025-03-10 11:42:05.455 [main] Log - Step:02 - Select "Manager Authorization"
-[INFO ] 2025-03-10 11:42:09.764 [main] Log - Step:03 - Click "Transfer" tab
-[INFO ] 2025-03-10 11:42:09.765 [main] Log - Expected Result: Transfer tab load
-[INFO ] 2025-03-10 11:42:09.856 [main] Log - Refresh Loan Opening Entry
-[INFO ] 2025-03-10 11:42:14.221 [main] Log - Step:01 - Click Refresh Button
-[INFO ] 2025-03-10 11:42:20.722 [main] Log - Expected Result: Loan opening entry displayed
-[INFO ] 2025-03-10 11:42:20.792 [main] Log - Authorize Loan Entry as Manager
-[INFO ] 2025-03-10 11:42:25.179 [main] Log - Step:01 - Select loan entry checkbox
-[INFO ] 2025-03-10 11:42:29.523 [main] Log - Step:02 - Click Authorize Button
-[INFO ] 2025-03-10 11:42:30.598 [main] Log - Expected Result: Transaction gets authorised
-[INFO ] 2025-03-10 11:42:35.023 [main] Log - Logout
-[INFO ] 2025-03-10 11:42:43.612 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-03-10 11:42:44.711 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-04-04 12:24:54.145 [main] Log - *** Running test method Investment_Opening...
+[INFO ] 2025-04-04 12:24:58.046 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-04 12:25:01.581 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-04 12:25:04.107 [main] Log - PC Registration
+[INFO ] 2025-04-04 12:25:05.183 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-04 12:25:07.605 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-04 12:25:08.651 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-04 12:25:12.964 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-04 12:25:14.212 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-04 12:25:14.295 [main] Log - Valid Login
+[INFO ] 2025-04-04 12:25:15.374 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-04 12:25:16.404 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-04 12:25:23.707 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-04 12:25:24.773 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-04 12:25:25.835 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-04 12:25:25.900 [main] Log - Load Investment Opening Window
+[INFO ] 2025-04-04 12:25:43.303 [main] Log - Step:01 - Navigate to account opening -> Click on investment opening -> Select demand > Inv-Demand
+[INFO ] 2025-04-04 12:25:43.378 [main] Log - Investment Opening window is open
+[INFO ] 2025-04-04 12:25:45.863 [main] Log - Step:01. Click on Branch dropdown after selecting the Bank -> Select branch from drop down
+[INFO ] 2025-04-04 12:25:45.918 [main] Log - Bank and Branch fields are selected
+[INFO ] 2025-04-04 12:25:52.628 [main] Log - Step:01 - Click on Add button.
+[INFO ] 2025-04-04 12:25:52.729 [main] Log - Investment Opening window is open
+[INFO ] 2025-04-04 12:25:52.730 [main] Log - Step:01 -verify initially loaded tab
+[INFO ] 2025-04-04 12:25:52.730 [main] Log - Step:01 -Verify Open Date field.
+[INFO ] 2025-04-04 12:25:56.614 [main] Log - Investment Info tab is open
+[INFO ] 2025-04-04 12:25:58.973 [main] Log - Steps 01: Click on Principal GL Head dropdown -> Select any Bank.
+[INFO ] 2025-04-04 12:26:00.032 [main] Log - Step:01: Select a valid GL Head number.
+[INFO ] 2025-04-04 12:26:01.159 [main] Log - Step 01: Leave Receipt SL.No empty -> Enter valid numeric values.
+[INFO ] 2025-04-04 12:26:02.207 [main] Log - Step:01. Enter Deposit name
+[INFO ] 2025-04-04 12:26:03.259 [main] Log - Step:01. Enter Remark
+[INFO ] 2025-04-04 12:26:03.306 [main] Log - Investment Info tab is filled
+[INFO ] 2025-04-04 12:26:07.621 [main] Log - Step:01 -Select any one customer
+[INFO ] 2025-04-04 12:26:07.675 [main] Log - Operator tab is open
+[INFO ] 2025-04-04 12:26:18.754 [main] Log - Step 01:Enter Relation.
+[INFO ] 2025-04-04 12:26:23.074 [main] Log - Step 01:Tick Power of Attorney checkbox. -> Untick it.
+[INFO ] 2025-04-04 12:26:24.135 [main] Log - Step 01:Enter Remarks
+[INFO ] 2025-04-04 12:26:28.468 [main] Log - Step:01 Click on Add button.
+[INFO ] 2025-04-04 12:26:28.566 [main] Log - Operator tab has some entered data
+[INFO ] 2025-04-04 12:26:32.895 [main] Log - Step:23 -Click on cancel button
+[INFO ] 2025-04-04 12:26:34.067 [main] Log - Step:01. Enter text into Special Instruction field.
+[INFO ] 2025-04-04 12:26:36.424 [main] Log - Step 26 -Select transfer mode
+[INFO ] 2025-04-04 12:26:36.530 [main] Log - Summary Page is displayed After Transaction/cash is completed
+[INFO ] 2025-04-04 12:26:41.269 [main] Log - Step:01.Complete Investment account Opening -> Verify the Summary generated
+[INFO ] 2025-04-04 12:26:45.806 [main] Log - Step:01.Complete Investment account Opening -> CLick on VOucher Print Button
+[INFO ] 2025-04-04 12:26:45.935 [main] Log - Expected Result: Voucher is generated correctly.
+[INFO ] 2025-04-04 12:26:46.028 [main] Log - Summary Page is displayed After Transaction/cash is completed
+[INFO ] 2025-04-04 12:26:50.446 [main] Log - Step:01:Logout from the application
+[INFO ] 2025-04-04 12:26:50.530 [main] Log - Enter username and password.
+[INFO ] 2025-04-04 12:26:51.585 [main] Log - Step 39 -Click on Username
+[INFO ] 2025-04-04 12:26:52.656 [main] Log - Step 39 -Click on password
+[INFO ] 2025-04-04 12:26:59.488 [main] Log - Step:01 - Click the login button.
+[INFO ] 2025-04-04 12:26:59.489 [main] Log - User is logged in.
+[INFO ] 2025-04-04 12:27:03.873 [main] Log - User is in Manager authorisation windowd
+[INFO ] 2025-04-04 12:27:08.222 [main] Log - Step 01: Navigate to 'Authorize&cancel ->Manager Authorisation
+[INFO ] 2025-04-04 12:27:22.401 [main] Log - Step:42 - Select go.
+[INFO ] 2025-04-04 12:27:22.455 [main] Log - User is in cashier authorisation windowd
+[INFO ] 2025-04-04 12:27:26.857 [main] Log - Step:01. Navigate to 'Authorize&cancel ->Cashier Authorisation 
+[INFO ] 2025-04-04 12:27:32.295 [main] Log - Step:01: Select transaction ID
+[INFO ] 2025-04-04 12:27:45.308 [main] Log - Step:01 -Click the AUTHORISE button
+[INFO ] 2025-04-04 12:27:45.309 [main] Log - Logout
+[INFO ] 2025-04-04 12:27:51.401 [main] Log - Exception org.openqa.selenium.ElementClickInterceptedException: Element <strong class="toplink"> is not clickable at point (1330,20) because another element <div id="FloatingErrorMessageBoxTop" class="FloatingErrorMessageBoxTop"> obscures it
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SPBLRLAP-2288', ip: '192.168.29.189', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250327043313, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 53856, moz:profile: C:\Users\rajani.s\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: c238892d-5b60-4b79-bae9-ad5f33e2f2d7

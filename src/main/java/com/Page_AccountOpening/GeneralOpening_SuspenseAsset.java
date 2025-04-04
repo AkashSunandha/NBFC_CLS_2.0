@@ -21,7 +21,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	PageRepositary_AccOpn__GeneralLoan_SuspenseAsset suspenseAssetRepo = new PageRepositary_AccOpn__GeneralLoan_SuspenseAsset();
 	PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan depositLoanRepo = new PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan();
 
-	
+	 
 	String transId; 
 	
 	public void fetchWithTransId(String transId) throws InterruptedException {
