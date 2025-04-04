@@ -110,7 +110,7 @@ public class PageRepositary_InvestOpn_Demand {
 	public By authorise2= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]");
 	
 	// for signout
-//	public By updatedsuccessfully= By.xpath("//*[@id=\"closetop\"]");
+	public By updatedsuccessfully= By.xpath("//*[@id=\"closetop\"]");
 //	public By signout1= By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
 //			
 		private void input(String string, String invalidacctatbranch) {

@@ -414,7 +414,7 @@ public void LoadInvestmentOpeningWindow() throws InterruptedException {
 	Log.info("Step:01 -Click the AUTHORISE button");
 	
 //	//logout
-//    click(repo.updatedsuccessfully);
+    click(repo.updatedsuccessfully);
 //	click(repo.signout1);
 //	
 //	ExtentTestManager.endTest();
