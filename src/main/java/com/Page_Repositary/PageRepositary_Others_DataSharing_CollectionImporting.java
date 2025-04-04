@@ -6,8 +6,8 @@ public class PageRepositary_Others_DataSharing_CollectionImporting {
 
 	public By loader =By.xpath("//div[@id=\"progressdiv\"]");
 
-	public By othersTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[20]/div");
-	public By dataSharingTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[20]/ul/li[4]/div");
+	public By othersTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Others']/preceding-sibling::div");
+	public By dataSharingTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Data Sharing']/preceding-sibling::div");
 	public By collectionImportingTab = By.xpath("//a[text()='Collection Importing ']");
 	
 //	Agent Details - 1

@@ -8,7 +8,7 @@ public class PageRepositary_AccOpr_NomineeManagement {
 	public By loginBranch = By.xpath("//*[@id=\"ctl00_ctl00_lblBranch\"]");
 	public By actualUserName = By.xpath("//*[@id=\"ctl00_ctl00_lblUser\"]");
 
-	public By accountOperationsTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[11]/div");
+	public By accountOperationsTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Account Operations']/preceding-sibling::div");
 	public By nomineeManagementTab = By.xpath("//a[text()='Nominee Management ']");
 	public By actualBranch = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_OPNA_ddlBranch\"]/option[@selected='selected']");
 

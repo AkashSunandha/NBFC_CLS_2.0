@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_AccOpr_MembMang_MembMang_Loan {
 
-	public By accountOPerationsTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[11]/div");
-	public By memberManagementTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[11]/ul/li[9]/div");
+	public By accountOPerationsTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Account Operations']/preceding-sibling::div");
+	public By memberManagementTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Member Management']/preceding-sibling::div");
 	public By memberManagementLoanTab = By.xpath("//a[text()='Member Management Loan ']");
 	
 	//Account Info

@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
  
 public class PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan { 
 	
-	public By accountOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div");
-	public By loanOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/div");
-	public By depositLoanTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/ul/li[2]/div");
+	public By accountOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Account Opening']/preceding-sibling::div");
+	public By loanOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Loan Opening']/preceding-sibling::div");
+	public By depositLoanTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Deposit Loan ']/preceding-sibling::div");
 	public By depositLoan = By.xpath("//a[text()='DEPOSIT LOAN  (22001)']");
 	public By nextBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnNext\"]");
 	public By currentBranch = By.xpath("//*[@id=\"ctl00_ctl00_lblBranch\"]"); 

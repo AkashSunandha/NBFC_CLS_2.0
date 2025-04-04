@@ -1,4 +1,4 @@
-package com.test.Transaction;
+package com.test.GroupLoans;
 
 import java.io.IOException;
 import java.util.Map;
@@ -9,14 +9,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
-import com.Page_Transaction.Transaction_OtherLoanTransaction_Charges;
+import com.Page_GroupLoans.CentreGroupRegistration;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_OtherLoanTransaction_Charges_TRANSFER {
+public class AllScenarios_GroupLoans_CentreGroupRegistration {
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -24,12 +24,11 @@ public class AllScenarios_OtherLoanTransaction_Charges_TRANSFER {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	Transaction_OtherLoanTransaction_Charges loanChrgMths = new Transaction_OtherLoanTransaction_Charges();
-	
+	CentreGroupRegistration grpRegMthds = new CentreGroupRegistration();
 	
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("LoanChargePosting");
+		ExcelReader = new com.Utility.ExcelReader("CentreGroupRegistration");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -38,10 +37,10 @@ public class AllScenarios_OtherLoanTransaction_Charges_TRANSFER {
 	
 	
 	@Test(dataProvider = "TestData")
-	public void loanChargePosting(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
+	public void centreGroupRegistration(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("OtherLoanTransaction_Charges_TRANSFER");
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
@@ -55,19 +54,11 @@ public class AllScenarios_OtherLoanTransaction_Charges_TRANSFER {
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
-				loanChrgMths.navigateToLoanChargePosting();
+				grpRegMthds.navigateToCentreGroupRegistration();
 				
-				loanChrgMths.loanChargePosting(testdata, context);
-
-				loanChrgMths.transaction(testdata, context);
+				grpRegMthds.groupRegistration(testdata, context);
 				
-				loanChrgMths.selectTransModeAsTransfer();
-				
-				loanChrgMths.postCreditPopUpEntry(testdata, context);
-				
-				loanChrgMths.submitTrans(testdata, context);
-
-				loanChrgMths.authorizeTransfer(testdata, context);
+				grpRegMthds.groupMembers(testdata, context);
 
 				custSrchMthds.logout();
 
@@ -99,5 +90,4 @@ public class AllScenarios_OtherLoanTransaction_Charges_TRANSFER {
 		}
 		return objectarry;
 	}
-	
 }

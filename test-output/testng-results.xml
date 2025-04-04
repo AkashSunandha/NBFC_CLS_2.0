@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-03T17:48:55 IST" name="Default suite" finished-at="2025-04-03T17:50:44 IST" duration-ms="109257">
+  <suite started-at="2025-04-04T16:14:57 IST" name="Default suite" finished-at="2025-04-04T16:16:49 IST" duration-ms="112401">
     <groups>
     </groups>
-    <test started-at="2025-04-03T17:48:55 IST" name="Default test" finished-at="2025-04-03T17:50:44 IST" duration-ms="109257">
-      <class name="com.test.Admin.AllScenarios_Bond_BondConfiguration">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Admin.AllScenarios_Bond_BondConfiguration@28276e50]" started-at="2025-04-03T17:48:55 IST" name="reference" finished-at="2025-04-03T17:48:55 IST" duration-ms="36" status="PASS">
+    <test started-at="2025-04-04T16:14:57 IST" name="Default test" finished-at="2025-04-04T16:16:49 IST" duration-ms="112401">
+      <class name="com.test.GroupLoans.AllScenarios_GroupLoans_CentreGroupRegistration">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.GroupLoans.AllScenarios_GroupLoans_CentreGroupRegistration@132ddbab]" started-at="2025-04-04T16:14:57 IST" name="reference" finished-at="2025-04-04T16:14:57 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="bondConfiguration(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Admin.AllScenarios_Bond_BondConfiguration@28276e50]" started-at="2025-04-03T17:48:57 IST" name="bondConfiguration" data-provider="TestData" finished-at="2025-04-03T17:50:44 IST" duration-ms="107884" status="PASS">
+        <test-method signature="centreGroupRegistration(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.GroupLoans.AllScenarios_GroupLoans_CentreGroupRegistration@132ddbab]" started-at="2025-04-04T16:14:57 IST" name="centreGroupRegistration" data-provider="TestData" finished-at="2025-04-04T16:16:49 IST" duration-ms="111650" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{duration=12, faceValue=100, frequency=30, maxAmt=10000000, minAmt=500, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Bond_Configuration}]]>
+                <![CDATA[{custName=q, custName2=a, groupName=Group, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Centre Group Registration}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@76c548f]]>
+                <![CDATA[org.testng.TestRunner@889d9e8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bondConfiguration -->
-      </class> <!-- com.test.Admin.AllScenarios_Bond_BondConfiguration -->
+        </test-method> <!-- centreGroupRegistration -->
+      </class> <!-- com.test.GroupLoans.AllScenarios_GroupLoans_CentreGroupRegistration -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

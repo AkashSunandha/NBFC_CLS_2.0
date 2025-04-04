@@ -6,7 +6,7 @@ public class PageRepositary_Transaction_LoanCollectionTransfer {
 
 	public By loader =By.xpath("//div[@id=\"progressdiv\"]");
 
-	public By transactionTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/div");
+	public By transactionTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Transaction']/preceding-sibling::div");
 	public By loanCollectionTransfer = By.xpath("//a[text()='Loan Collection Transfer ']");
 	
 //	Loan Collection Details

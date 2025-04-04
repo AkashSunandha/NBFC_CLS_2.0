@@ -7,7 +7,7 @@ public class PageRepositary_Bond_BondConfiguration {
 	public By loader =By.xpath("//div[@id=\"progressdiv\"]");
 
 	public By continueBtn = By.xpath("//span[text()='Continue']");
-	public By bondTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[3]/div");
+	public By bondTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Bond']/preceding-sibling::div");
 	public By bondConfigTab = By.xpath("//a[text()='Bond Configuration ']");
 	
 	//Bond Configuration
