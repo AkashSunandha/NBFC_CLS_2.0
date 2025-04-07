@@ -1337,7 +1337,7 @@ public class AccOpen_Loanopening_ACOPL_TwoWheeler extends Base_Class {
 //		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Go to Authorize and cancel module");
 //		Log.info("Step:01 - Go to Authorize and cancel module");
 		
-		click(fixeddeposit.cashiersauthorize);
+		click(fixeddeposit.cashierauthorize);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click cashier authorization");
 		Log.info("Step:01 - click cashier authorization");
 		

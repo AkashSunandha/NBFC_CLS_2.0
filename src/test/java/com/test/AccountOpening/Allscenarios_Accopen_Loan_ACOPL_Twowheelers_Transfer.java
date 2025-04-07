@@ -26,7 +26,6 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheelers_Transfer {
 	TestListener TestListener; 
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	//Customer_AccountOpening_FixedDeposit fixeddeposit= new Customer_AccountOpening_FixedDeposit();
 	Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler  fixeddeposit  = new Transfer_AccOpen_Loanopening_ACOPL_TwoWheeler();
 	
 	@BeforeSuite

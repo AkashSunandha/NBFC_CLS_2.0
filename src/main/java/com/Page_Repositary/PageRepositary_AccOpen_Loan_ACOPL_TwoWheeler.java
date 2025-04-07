@@ -12,10 +12,17 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
 	
 	//Account Opening window for Two Wheeler Loan (23027)
 	
-	public By Account_opening=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div") ;
-	public By Loanopening = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/div");
-    public By LoanandAdvance = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/ul/li[3]/div");
-    public By TwoWheelerLoan = By.xpath("//*[text()='TWO WHEELER LOAN NEW  (23027)']");
+	
+	//public By Account_opening=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/div") ;
+	//public By Loanopening = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/ul/li[2]/div");
+   // public By LoanandAdvance = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/ul/li[2]/ul/li[3]/div");
+   // public By TwoWheelerLoan = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/ul/li[2]/ul/li[3]/ul/li[27]/a");
+	  public By Account_opening = By.xpath("//ul[@id='CreateMenu']//a[text()='Account Opening']/preceding-sibling::div");
+	  public By Loanopening = By.xpath("//ul[@id='CreateMenu']//a[text()='Loan Opening']/preceding-sibling::div");
+	public By LoanandAdvance = By.xpath("//ul[@id='CreateMenu']//a[text()='Loan and Advances (ACOPL)']/preceding-sibling::div");
+	// public By TwoWheelerLoan = By.xpath("//a[text()='TWO WHEELER LOAN (23027)']");
+	public By TwoWheelerLoan = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/ul/li[3]/ul/li[27]/a");
+		
     public By Depositaccountopeningwindow = By.id ("ctl00_ctl00_MasterCaption");
     
     // Customer Search Functionality
@@ -137,8 +144,12 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
 	//public By logoutOk1 = By.xpath("/html/body/div[1]/div/div[2]/div/form/div[11]/div[3]/div/button[1]");
 	
 	//Cashier Authorization
-	public By Authorizecanceltab=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/div");
-	public By cashiersauthorize=By.linkText("Cashier Authorisation (CAAU)");
+	//public By Authorizecanceltab=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[11]/div");
+	public By Authorizecanceltab = By.xpath("//ul[@id='CreateMenu']//a[text()='Authorize & Cancel']/preceding-sibling::div");
+	
+	//public By cashiersauthorize=By.linkText("Cashier Authorisation (CAAU)");
+	//public By cashierauthorize= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[11]/ul/li[9]/a");
+	public By cashierauthorize = By.xpath("//a[text()='Cashier Authorisation (CAAU)']");
 	public By Transacidtextbox =By.id("ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt");
 	public By transacid = By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
 	//public By TransactionIDtext = By.id ("ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt");
@@ -150,8 +161,9 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
 	public By cancelpopup=By.id("closetop");
 	
 	//Manager Authorization - Cash Tab
-			public By ManagerAuthorization=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/ul/li[5]/a");
-			public By Refresh1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
+			//public By ManagerAuthorization=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[11]/ul/li[4]/a");
+	public By ManagerAuthorization = By.xpath("//a[text()='Manager Authorisation (MNAU)']");
+	        public By Refresh1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
 			public By cashtab=By.id("__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash");
 			public By cashdetails=By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_lblBatchID");
 			public By managerClickGo =By.id("ctl00_ctl00_CPH1_PRDCNT_btnGo");

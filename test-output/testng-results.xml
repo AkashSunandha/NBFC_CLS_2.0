@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-03T18:59:12 IST" name="Default suite" finished-at="2025-04-03T19:01:23 IST" duration-ms="130866">
+  <suite started-at="2025-04-07T10:44:06 IST" name="Default suite" finished-at="2025-04-07T10:53:02 IST" duration-ms="536429">
     <groups>
     </groups>
-    <test started-at="2025-04-03T18:59:12 IST" name="Default test" finished-at="2025-04-03T19:01:23 IST" duration-ms="130866">
-      <class name="com.test.Admin.AllScenario_Admin_Debenture_Issue_Setting">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Admin.AllScenario_Admin_Debenture_Issue_Setting@1c3b9394]" started-at="2025-04-03T18:59:12 IST" name="reference" finished-at="2025-04-03T18:59:12 IST" duration-ms="12" status="PASS">
+    <test started-at="2025-04-07T10:44:06 IST" name="Default test" finished-at="2025-04-07T10:53:02 IST" duration-ms="536429">
+      <class name="com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheelers_Transfer">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheelers_Transfer@4c2cc639]" started-at="2025-04-07T10:44:06 IST" name="reference" finished-at="2025-04-07T10:44:06 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Admin.AllScenario_Admin_Debenture_Issue_Setting@1c3b9394]" started-at="2025-04-03T18:59:13 IST" name="customerRegister" data-provider="TestData" finished-at="2025-04-03T19:01:23 IST" duration-ms="130165" status="PASS">
+        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheelers_Transfer@4c2cc639]" started-at="2025-04-07T10:44:06 IST" name="customerRegister" data-provider="TestData" finished-at="2025-04-07T10:53:02 IST" duration-ms="535617" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{CallDate=15/03/2301, CallDatePrematureROI=7, IssueFromDate=25/12/2300, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, PutDate=20/04/2301, PutDatePrematureROI=8, ReturnROI=3, Run=Yes, TestScenario=Debenture_Type_setting, UnitValue=250}]]>
+                <![CDATA[{Agentcode=7, ChassisNo=AWZUXX8P7EA123456, customerID=102000000001, customerName=A, customerName1=M, DealerDiscount=1200, DownPayment=500, DSACode=1, EMRDate=15/04/2025, EngineNo=J3V1063002345, EquitableMortRegNo=Ad343, EXshowroomprice=9500, IDV=1800, Insurance=600, InsuranceDocNo=PAS789456321, InsuredFutureDate=25/12/2300, InsuredPastDate=14/03/2030, NoOfInstallement=36, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, PermitNo=KA0H378910039, RegDate=24/03/2025, Regotherchargers=100, ResolutionNo=1342, ResoultionDate=30/05/2025, RoadTax=700, RTODetails=DL, Run=Yes, SanctionedAmount=8519, TestScenario=AccountOpening_loanOpening_ACOPL_TwoWheeler, Variant=ZXI, VehicleColor=Black, VehicleDetails=BMW Z models, Yearofmanufacture=2025}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@d176a31]]>
+                <![CDATA[org.testng.TestRunner@392a04e7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- customerRegister -->
-      </class> <!-- com.test.Admin.AllScenario_Admin_Debenture_Issue_Setting -->
+      </class> <!-- com.test.AccountOpening.Allscenarios_Accopen_Loan_ACOPL_Twowheelers_Transfer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
