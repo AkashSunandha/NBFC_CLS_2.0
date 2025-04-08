@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-07T16:28:33 IST" name="Default suite" finished-at="2025-04-07T16:32:40 IST" duration-ms="246941">
+  <suite started-at="2025-04-08T18:27:16 IST" name="Default suite" finished-at="2025-04-08T18:42:49 IST" duration-ms="933528">
     <groups>
     </groups>
-    <test started-at="2025-04-07T16:28:33 IST" name="Default test" finished-at="2025-04-07T16:32:40 IST" duration-ms="246941">
-      <class name="com.test.Bond_Application.AllScenarios_Bond_Application">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Bond_Application.AllScenarios_Bond_Application@485e36bc]" started-at="2025-04-07T16:28:33 IST" name="reference" finished-at="2025-04-07T16:28:33 IST" duration-ms="13" status="PASS">
+    <test started-at="2025-04-08T18:27:16 IST" name="Default test" finished-at="2025-04-08T18:42:49 IST" duration-ms="933528">
+      <class name="com.MultipleFD_Intrest_Payment_Cash_Transfer.AllScenarios_Multiple_FD_Intrest_Payment_Cash_and_Transfer">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.MultipleFD_Intrest_Payment_Cash_Transfer.AllScenarios_Multiple_FD_Intrest_Payment_Cash_and_Transfer@736d6a5c]" started-at="2025-04-08T18:27:16 IST" name="reference" finished-at="2025-04-08T18:27:16 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Bond_Application.AllScenarios_Bond_Application@485e36bc]" started-at="2025-04-07T16:28:35 IST" name="newCustomer" data-provider="TestData" finished-at="2025-04-07T16:32:40 IST" duration-ms="245644" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.MultipleFD_Intrest_Payment_Cash_Transfer.AllScenarios_Multiple_FD_Intrest_Payment_Cash_and_Transfer@736d6a5c]" started-at="2025-04-08T18:27:17 IST" name="newCustomer" data-provider="TestData" finished-at="2025-04-08T18:42:49 IST" duration-ms="932511" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{AccountNumber=3, Amount=500000, Duration=1, Frequence=1, MakerID=Vinusha, Name=AAA, Openaccount=500000, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Remarks=Testing, Run=Yes, TestScenario=Bond_Application, Transferamount=300, Units=200}]]>
+                <![CDATA[{AccountNumber=3, Amount=500000, Duration=1, Name=AAA, Openaccount=500000, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Remarks=Testing, Run=Yes, TestScenario=Multiple Fd_Cash_and_transfer, Transferamount=300}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@319854f0]]>
+                <![CDATA[org.testng.TestRunner@af78c87]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newCustomer -->
-      </class> <!-- com.test.Bond_Application.AllScenarios_Bond_Application -->
+      </class> <!-- com.MultipleFD_Intrest_Payment_Cash_Transfer.AllScenarios_Multiple_FD_Intrest_Payment_Cash_and_Transfer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

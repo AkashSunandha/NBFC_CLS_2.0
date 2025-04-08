@@ -1,4 +1,4 @@
-package com.MultipleFD_Intrest_Payment_Cash_Transfer;
+package com.Bond_Issue;
 
 import java.io.IOException;
 import java.util.Map;
@@ -8,7 +8,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.Agent_Transfer.Agent_Transfer;
 import com.BasePackage.Base_Class;
 import com.JewelLoan_Closure.JewelLoan_Closure_Cash_Transfer;
 import com.OLTransaction_Cash_Transfer.Multiple_FD_Intrest_Payment_Cash_and_Transfer;
@@ -23,8 +22,9 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_Multiple_FD_Intrest_Payment_Cash_and_Transfer {
-
+public class AllScenario_Bond_Issue {
+	
+	
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
@@ -71,108 +71,6 @@ public class AllScenarios_Multiple_FD_Intrest_Payment_Cash_and_Transfer {
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
-				FD.NavigatetoMultipleFDInterestPayment();
-
-				FD.selectProductGroup();
-
-				FD.selectProductName();
-
-				FD.enterAccountNumber();
-
-				FD.checkDisplayAllAccounts1();
-
-				FD.checkDisplayAllAccounts();
-
-				FD.checkInterestPaymentDetailsGrid(testdata, context);
-               
-				//FD.enterAccountNumber();
-				
-				FD.enterAccountNumber2();
-
-				FD.checkDisplayAllAccounts();
-
-				FD.selectAnotherAccountForInterestPayment(testdata, context);
-
-				FD.submitPaymentCashMode();
-
-				FD.verifySubmissionSummary();
-
-				suspense.logoutApplication1();
-
-				Closuretrans.AnotherUSer(testdata, context);
-
-				FD.managerauthorisation();
-
-				FD.UserloggedManagerauthorization();
-
-				FD.UserloggedManagerauthorization2();
-
-				FD.UseronManagerauthorisationwindow();
-
-				FD.cashierauthorization();
-
-				FD.cashierauthorization1();
-
-				FD.cashierauthorization2();
-
-				FD.UserisonCashierauthorisationwindow();
-
-				FD.logoutApplication4();
-
-				// Transfer
-
-				custSrchMthds.userLoginValidPaswrd(testdata, context);
-
-				FD.NavigatetoMultipleFDInterestPayment1();
-
-				FD.selectProductGroup();
-
-				FD.selectProductName();
-
-				FD.enterAccountNumber();
-
-				FD.checkDisplayAllAccounts1();
-
-				FD.checkDisplayAllAccounts();
-
-				FD.checkInterestPaymentDetailsGrid(testdata, context);
-
-				FD.enterAccountNumber2();
-
-				FD.checkDisplayAllAccounts();
-
-				FD.selectAnotherAccountForInterestPayment1(testdata, context);
-
-				FD.submitPaymenttransferMode();
-
-				FD.postDebitTransaction();
-
-				FD.searchAccountNumber(testdata, context);
-
-				FD.selectAccountNumber(testdata, context);
-
-				FD.addTransactionAmount1();
-
-				FD.addTransactionAmount();
-
-				FD.submitTransactionWindow();
-
-				suspense.logoutApplication1();
-
-				Closuretrans.AnotherUSer(testdata, context);
-
-				FD.managerauthorisation1();
-
-				FD.UserLoggedIntransfer();
-
-				FD.UserloggedManagerauthorization();
-
-				FD.UserLoggedInCheckbx1();
-
-				FD.UseronManagerauthorisationwindow();
-
-				FD.logoutApplication5();
-
 				ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();
 			}
@@ -198,3 +96,6 @@ public class AllScenarios_Multiple_FD_Intrest_Payment_Cash_and_Transfer {
 	}
 
 }
+
+
+

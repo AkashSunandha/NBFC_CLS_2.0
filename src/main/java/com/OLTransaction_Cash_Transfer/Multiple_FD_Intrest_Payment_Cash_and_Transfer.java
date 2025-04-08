@@ -185,6 +185,7 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account number is accepted. ");
 		Log.info("Expected Result:Account number is accepted. ");
 		ExtentTestManager.endTest();
+		//click(FDintrest.goo);
 
 	}
 
@@ -228,6 +229,14 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 		ExtentTestManager.startTest("Display All Accounts - Checkbox");
 		Log.info("Display All Accounts - Checkbox");
 
+
+//		 try {
+//            
+//			 click(FDintrest.Ok);
+//        } catch (Exception e) {
+//            System.out.println("No second popup appeared.");
+//        }
+		
 		click(FDintrest.clickdisplayall);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Tick the 'Display all accounts' checkbox");
 		Log.info("Step:01 -Tick the 'Display all accounts' checkbox. ");
@@ -306,6 +315,9 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click Add button ");
 		Log.info("Step:03 - Click Add button.");
 
+		ScrollUntilElementVisible(FDintrest.scroll);
+		
+		
 		ExtentTestManager.getTest().log(Status.PASS,
 				"Expected Result:Interest payment details are added to the grid. ");
 		Log.info("Expected Result:Interest payment details are added to the grid. ");
@@ -331,6 +343,39 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 	}
 
 	public void selectAnotherAccountForInterestPayment(Map<Object, Object> testdata, ITestContext contex) throws InterruptedException {
+		ExtentTestManager.startTest("Select Another Account for Interest Payment");
+		Log.info("Select Another Account for Interest Payment");
+
+		//click(FDintrest.clickcheckbox);
+
+		ScrollUntilElementVisible(FDintrest.scrolldown);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Select another account");
+		Log.info("Step:01 - Select another account.");
+
+		click(FDintrest.duration);
+
+		String duration = testdata.get("Duration").toString();
+		input(FDintrest.duration, duration);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter duration 1");
+		Log.info("Step:01 - Enter duration.1 ");
+
+		select("MONTHS", FDintrest.durationmonth);
+		ExtentTestManager.getTest().log(Status.PASS, " Step:02 -Select duration mode eg:months");
+		Log.info("Step:02 -Select duration mode eg:months ");
+
+		click(FDintrest.clickadd);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click Add button ");
+		Log.info("Step:03 - Click Add button.");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Interest payment details are updated for another account.");
+		Log.info("Expected Result: Interest payment details are updated for another account.");
+		ExtentTestManager.endTest();
+
+	}
+	
+	public void selectAnotherAccountForInterestPayment1(Map<Object, Object> testdata, ITestContext contex) throws InterruptedException {
 		ExtentTestManager.startTest("Select Another Account for Interest Payment");
 		Log.info("Select Another Account for Interest Payment");
 
