@@ -2,7 +2,8 @@ package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
-public class PageRepositary_Multiple_Fd_Cash_Transfer {
+public class PageRepositary_Multiple_Fd_Cash_Transfer
+{
 	public By clickFd = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/div");
 	public By clickFDIntresrt= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/ul/li[15]/a");
 	public By selectgroup= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlProductGroup\"]");

@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.SusAssetTransaction_Cash_Transfer.AllScenario_SusAssetTransaction_Cash_Transfer">
+      <class name="com.test.Bond_Application.AllScenarios_Bond_Application">
         <methods>
           <include name="reference"/>
-          <include name="newCustomer" invocation-numbers="0"/>
+          <include name="newCustomer"/>
         </methods>
-      </class> <!-- com.test.SusAssetTransaction_Cash_Transfer.AllScenario_SusAssetTransaction_Cash_Transfer -->
+      </class> <!-- com.test.Bond_Application.AllScenarios_Bond_Application -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
