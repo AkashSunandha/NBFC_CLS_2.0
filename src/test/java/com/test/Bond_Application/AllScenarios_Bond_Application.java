@@ -62,45 +62,45 @@ public class AllScenarios_Bond_Application {
 
 				custSrchMthds.pcRegistration(testdata, context);
 
-//				custSrchMthds.userLoginValidPaswrd(testdata, context);
-//
-//				bonapp.BondApplicationWindowNavigation();
-//				bonapp.Verifyproductselection();
-//
-//				bonapp.NatureFieldDropdownselection();
-//
-//				bonapp.CustomerSearchPopupVerification(testdata, context);
-//
-//				bonapp.AddCustomerDetailstoGrid();
-//
-//				bonapp.NoofUnitFieldValidation(testdata, context);
-//
-//				bonapp.DurationFieldAutoloadVerification();
-//
-//				bonapp.GetValueButtonFunctionality();
-//
-//				// bonapp.AddButtonFunctionalitywithCompleteData();
-//
-//				bonapp.FillNomineeDetailsTab();
-//
-//				bonapp.FillNomineeDetailsTab2();
-//
-//				bonapp.FillNomineeDetailsTab3(testdata, context);
-//
-//				bonapp.FillNomineeDetailsTab33();
-//
-//				bonapp.FillNomineeDetailsTab5();
-//
-//				bonapp.NavigatetoInterestTransferTab();
-//
-//				bonapp.Fillinteresttransferdetails(testdata, context);
-//
-//				bonapp.PaymentModeSelection();
-//
-//				bonapp.SaveAllButtonFunctionalitywithPaymentMode();
-//				
-//				bonapp.logoutApplication1();
-//				
+				custSrchMthds.userLoginValidPaswrd(testdata, context);
+
+				bonapp.BondApplicationWindowNavigation();
+				bonapp.Verifyproductselection();
+
+				bonapp.NatureFieldDropdownselection();
+
+				bonapp.CustomerSearchPopupVerification(testdata, context);
+
+				bonapp.AddCustomerDetailstoGrid();
+
+				bonapp.NoofUnitFieldValidation(testdata, context);
+
+				bonapp.DurationFieldAutoloadVerification();
+
+				bonapp.GetValueButtonFunctionality();
+
+				// bonapp.AddButtonFunctionalitywithCompleteData();
+
+				bonapp.FillNomineeDetailsTab();
+
+				bonapp.FillNomineeDetailsTab2();
+
+				bonapp.FillNomineeDetailsTab3(testdata, context);
+
+				bonapp.FillNomineeDetailsTab33();
+
+				bonapp.FillNomineeDetailsTab5();
+
+				bonapp.NavigatetoInterestTransferTab();
+
+				bonapp.Fillinteresttransferdetails(testdata, context);
+
+				bonapp.PaymentModeSelection();
+
+				bonapp.SaveAllButtonFunctionalitywithPaymentMode();
+				
+				bonapp.logoutApplication1();
+				
 				bonapp.ManagerLoginforAuthorization();
 				
 				bonapp.ManagerAuthorizationRefresh();
