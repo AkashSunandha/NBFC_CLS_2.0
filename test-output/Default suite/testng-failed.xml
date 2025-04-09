@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.Grouploans.AllScenarios_Centre_Registration">
+      <class name="Debenture.Allscenaries_Debenture_series">
         <methods>
           <include name="reference"/>
-          <include name="newCustomer" invocation-numbers="0"/>
+          <include name="newCustomer"/>
         </methods>
-      </class> <!-- com.test.Grouploans.AllScenarios_Centre_Registration -->
+      </class> <!-- Debenture.Allscenaries_Debenture_series -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,4 +1,4 @@
-package com.test.AccountOpening;
+package Debenture;
 
 import java.io.IOException;
 import java.util.Map;
@@ -9,6 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
+import com.Debenture.Debenture_series;
 import com.Page_AccountOpening.GeneralOpening_SuspenseAsset;
 import com.Page_AccountOpening.InvestmentOpening_Demand;
 import com.Page_AccountOpening.LoanOpening_DepositOpn_DepositLoan;
@@ -19,8 +20,8 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_AccOpn_InvestmentOpn_Demand {
-
+public class Allscenaries_Debenture_series {
+	
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -32,10 +33,11 @@ public class AllScenarios_AccOpn_InvestmentOpn_Demand {
 	LoanOpening_LoanAndAdvances_PersonalLoanWeekly personl = new LoanOpening_LoanAndAdvances_PersonalLoanWeekly();
 	GeneralOpening_SuspenseAsset generalOpnMthds = new GeneralOpening_SuspenseAsset();
 	InvestmentOpening_Demand investment = new InvestmentOpening_Demand();
+	Debenture_series debSeriesMthds = new Debenture_series();
 	
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("InvestmentOpn");
+		ExcelReader = new com.Utility.ExcelReader("Debenture_series_setting");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -59,11 +61,11 @@ public class AllScenarios_AccOpn_InvestmentOpn_Demand {
 				
 				custSrchMthds.pcRegistration(testdata, context);
 
-				custSrchMthds.userLoginValidPaswrd(testdata, context);
-
-				investment.LoadInvestmentOpeningWindow(testdata, context);
+				debSeriesMthds.adminLogin();
+			
+//				investment.LoadInvestmentOpeningWindow();
 				
-				investment.authoriseLogin();
+//				investment.accNumBVAValidation(testdata, context);
 				
 				custSrchMthds.logout();
 
@@ -95,5 +97,4 @@ public class AllScenarios_AccOpn_InvestmentOpn_Demand {
 		}
 		return objectarry;
 	}
-	
 }

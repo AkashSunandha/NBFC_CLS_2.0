@@ -30,8 +30,9 @@ import com.extentReports.ExtentTestManager;
 public class InvestmentOpening_Demand extends Base_Class{
 	PageRepositary_InvestOpn_Demand repo = new PageRepositary_InvestOpn_Demand();
 	String transId;
+	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();	
 	
-public void LoadInvestmentOpeningWindow() throws InterruptedException {
+public void LoadInvestmentOpeningWindow(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 	
 	//Load Investment Opening Window
 	ExtentTestManager.startTest("Load Investment Opening Window");
@@ -55,6 +56,7 @@ public void LoadInvestmentOpeningWindow() throws InterruptedException {
 	
 	ExtentTestManager.startTest("Investment Opening window is open");
 	Log.info("Investment Opening window is open");
+	
 	
 	select("HDFC BANK - HDFC",repo.selectbankdrop_down);
 		
@@ -88,46 +90,44 @@ public void LoadInvestmentOpeningWindow() throws InterruptedException {
 	ExtentTestManager.startTest("Investment Opening window is open");
 	Log.info("Investment Opening window is open");
 	
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -verify initially loaded tab");
-	Log.info("Step:01 -verify initially loaded tab");
 	
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Verify Open Date field.");
-	Log.info("Step:01 -Verify Open Date field.");
+	String accAtBranch = testdata.get("accAtBranch").toString();
+	input(repo.acctatbranch, accAtBranch);
+		
+	String openAmt = testdata.get("openAmt").toString();
+	input(repo.openamount, openAmt);
 	
-	input(repo.acctatbranch, "123");
 	
-	waitTillLoaderDisappear(repo.loader);
-	
-	input(repo.openamount, "200");
-	
-	waitTillLoaderDisappear(repo.loader);
-	
-	input(repo.roi, "10");
-	
-	waitTillLoaderDisappear(repo.loader);
-	
+//	input(repo.roi, "10");
+		
 	ExtentTestManager.startTest("Investment Info tab is open");
 	Log.info("Investment Info tab is open");
 	
+
 	select("ICICI BANK CHERPULASSERY",repo.principalglhead);
 	ExtentTestManager.getTest().log(Status.PASS, "Steps 01: Click on Principal GL Head dropdown -> Select any Bank.");
 	Log.info("Steps 01: Click on Principal GL Head dropdown -> Select any Bank.");
 	
-	input(repo.interestglhead,"width:160px;");
+	String IntGLhead = testdata.get("IntGLhead").toString();
+	input(repo.interestglhead, IntGLhead);
+	
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01: Select a valid GL Head number.");
 	Log.info("Step:01: Select a valid GL Head number.");
 	
 	waitTillLoaderDisappear(repo.loader);
 		
-	input(repo.recieptno,"ctl00$ctl00$CPH1$PRDCNT$IN1$tp1$lstInvestDetails$ctrl0$INVF$txtSerialNo$txt");
+	String RceiptNo = testdata.get("RceiptNo").toString();
+	input(repo.recieptno,RceiptNo);
 	ExtentTestManager.getTest().log(Status.PASS, "Step 01: Leave Receipt SL.No empty -> Enter valid numeric values.");
 	Log.info("Step 01: Leave Receipt SL.No empty -> Enter valid numeric values.");
 	
-	input(repo.depositname,"Shrada");
+	String depstName = testdata.get("depstName").toString();
+	input(repo.depositname,depstName);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01. Enter Deposit name");
 	Log.info("Step:01. Enter Deposit name");
 	
-	input(repo.remarks,"Updated successfuly");
+	String reMarks = testdata.get("reMarks").toString();
+	input(repo.remarks,reMarks);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01. Enter Remark");
 	Log.info("Step:01. Enter Remark");
 	
@@ -172,16 +172,20 @@ public void LoadInvestmentOpeningWindow() throws InterruptedException {
     }//for loop end
     
     
-    //back to mainscreen
-    input(repo.relationdesignwindow,"Enter Relation" );
+    //back to mainscreenString reMarks = testdata.get("reMarks").toString();
+    
+    String EnterrelatioN = testdata.get("EnterrelatioN").toString();
+    input(repo.relationdesignwindow,EnterrelatioN );
     ExtentTestManager.getTest().log(Status.PASS, "Step 01:Enter Relation.");
 	Log.info("Step 01:Enter Relation.");
+	
 	
 	click(repo.powerofattorney);
 	ExtentTestManager.getTest().log(Status.PASS, "Step 01:Tick Power of Attorney checkbox. -> Untick it.");
 	Log.info("Step 01:Tick Power of Attorney checkbox. -> Untick it.");
 	
-	input(repo.remarks_toentry, "No remarks");
+	String RemarksTOenter = testdata.get("RemarksTOenter").toString();
+	input(repo.remarks_toentry, RemarksTOenter );
 	ExtentTestManager.getTest().log(Status.PASS, "Step 01:Enter Remark");
 	Log.info("Step 01:Enter Remarks");
 	
@@ -206,13 +210,14 @@ public void LoadInvestmentOpeningWindow() throws InterruptedException {
 	ExtentTestManager.endTest();
 	
 	// other Info	
-	input(repo.specialinformation,"");
+	String SPiinfo = testdata.get("SPiinfo").toString();
+	input(repo.specialinformation,SPiinfo);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01. Enter text into Special Instruction field.");
 	Log.info("Step:01. Enter text into Special Instruction field.");
 	
 		
 	select("CASH",repo.transmode);
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01. Open Trans Mode dropdown.-> Select Cash from the options.");
+	ExtentTestManager.getTest().log(Status.PASS, "Step 26 -Select transfer mode");
 	Log.info("Step 26 -Select transfer mode");	
 	
 	waitTillLoaderDisappear(repo.loader);
@@ -310,11 +315,11 @@ public void LoadInvestmentOpeningWindow() throws InterruptedException {
                  ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
                  Log.info("ERROR");
            }
+         
+           driver.close();
+           driver.switchTo().window(mainWindowHandle3);
            
            ExtentTestManager.endTest();
-           
-
-           driver.switchTo().window(mainWindowHandle3);
            
          break;  
          
@@ -332,29 +337,81 @@ public void LoadInvestmentOpeningWindow() throws InterruptedException {
 	Log.info("Step:01:Logout from the application");
 	
 	ExtentTestManager.endTest();
-	
-	//Login to NBFc Application in a different user
-	ExtentTestManager.startTest("Enter username and password.");
-	Log.info("Enter username and password.");
-	
-	input(repo.authorise, "authorise");
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click on Username");
-	Log.info("Step 39 -Click on Username");
-	
-	input(repo.password, "test123");
-	ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click on password");
-	Log.info("Step 39 -Click on password");
-	
-	click(repo.login);
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the login button.");
-	Log.info("Step:01 - Click the login button.");
-	
-	//load investment tab
-	ExtentTestManager.startTest("User is logged in");
+}
+	//Login to authorise
+//	ExtentTestManager.startTest("Enter username and password.");
+//	Log.info("Enter username and password.");
+//	
+//	input(repo.authorise, "authorise");
+//	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click on Username");
+//	Log.info("Step 39 -Click on Username");
+//	
+//	input(repo.password, "test123");
+//	ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click on password");
+//	Log.info("Step 39 -Click on password");
+//	
+//	click(repo.login);
+//	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the login button.");
+//	Log.info("Step:01 - Click the login button.");
+//	
+//	
+
+	public void authoriseLogin() throws ClassNotFoundException, InterruptedException, IOException  {
+		ExtentTestManager.startTest("**Basic Login Functionality**");
+		Log.info("**Basic Login Functionality**");
+			
+			
+		String UserName = configloader().getProperty("UserName2");
+		input(custSearch.loginUserName,UserName );
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");
+		Log.info("Step:01 - Enetered valid User Name");
+		
+		String Password = configloader().getProperty("Password2");
+		input(custSearch.loginPasswrd, Password);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Eneter valid Password");
+		Log.info("Step:02 - Enetered valid Password");
+		
+		click(custSearch.loginButton);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click on Login Button");
+		Log.info("Step:03 - Click on Login Button");
+		
+		try {
+		ElementDisplayed(custSearch.home);
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+		Log.info("Expected Result: User is logged in successfully and dashboard visible");
+		}
+		catch(Exception e) {
+			ElementDisplayed(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
+			Log.info("Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
+
+			click(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+			Log.info("Step:01 - Click on OK button");
+			
+			input(custSearch.loginUserName, UserName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+			Log.info("Step:02 - Enetered valid User Name");
+			
+			input(custSearch.loginPasswrd, Password);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+			Log.info("Step:03 - Entered valid Password");
+			
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+			Log.info("Step:04 - Click on Login Button");
+			
+						ElementDisplayed(custSearch.home);
+						ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+						Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+				}
+					
+    //load investment tab
+    ExtentTestManager.startTest("User is logged in");
 	Log.info("User is logged in.");
 	
 	click(repo.authorisecancel);
-		
+						
 	ExtentTestManager.endTest();
 	
 	//manager 
@@ -366,11 +423,13 @@ public void LoadInvestmentOpeningWindow() throws InterruptedException {
 	ExtentTestManager.getTest().log(Status.PASS, "Step 01: Navigate to 'Authorize&cancel ->Manager Authorisation");
 	Log.info("Step 01: Navigate to 'Authorize&cancel ->Manager Authorisation");
 	
-	//click(repo.refresh1);
-		
+	click(repo.refresh_01);
+	
 	waitTillLoaderDisappear(repo.loader);
 			
 	input(repo.transactionid,transId);
+	
+	waitTillLoaderDisappear(repo.loader);
 		
 	click(repo.go);
 	
@@ -378,6 +437,7 @@ public void LoadInvestmentOpeningWindow() throws InterruptedException {
 	
 	click(repo.select11);
 	
+	waitTillLoaderDisappear(repo.loader);
 	
 	click(repo.authorise1);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01: Clcik the AUTHORISE button");

@@ -1,4 +1,4 @@
-[ERROR] 2025-04-04 14:52:16.668 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-09 16:30:55.085 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -49,7 +49,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-04 14:52:16.680 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-09 16:30:55.100 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -100,7 +100,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-04 14:52:16.682 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-09 16:30:55.102 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -151,7 +151,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-04 14:52:16.686 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-09 16:30:55.107 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -202,65 +202,64 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-04-04 14:52:17.337 [main] Log - *** Running test method Investment_Opening...
-[INFO ] 2025-04-04 14:52:21.251 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-04-04 14:52:22.486 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-04-04 14:52:24.898 [main] Log - PC Registration
-[INFO ] 2025-04-04 14:52:25.987 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-04-04 14:52:28.343 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-04-04 14:52:29.400 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-04-04 14:52:33.705 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-04-04 14:52:35.337 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-04-04 14:52:35.410 [main] Log - Valid Login
-[INFO ] 2025-04-04 14:52:36.470 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-04-04 14:52:37.517 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-04-04 14:52:45.170 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-04 14:52:46.235 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-04 14:52:47.309 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-04 14:52:47.368 [main] Log - Load Investment Opening Window
-[INFO ] 2025-04-04 14:53:04.850 [main] Log - Step:01 - Navigate to account opening -> Click on investment opening -> Select demand > Inv-Demand
-[INFO ] 2025-04-04 14:53:04.952 [main] Log - Investment Opening window is open
-[INFO ] 2025-04-04 14:53:07.399 [main] Log - Step:01. Click on Branch dropdown after selecting the Bank -> Select branch from drop down
-[INFO ] 2025-04-04 14:53:07.438 [main] Log - Bank and Branch fields are selected
-[INFO ] 2025-04-04 14:53:14.206 [main] Log - Step:01 - Click on Add button.
-[INFO ] 2025-04-04 14:53:14.311 [main] Log - Investment Opening window is open
-[INFO ] 2025-04-04 14:53:14.311 [main] Log - Step:01 -verify initially loaded tab
-[INFO ] 2025-04-04 14:53:14.311 [main] Log - Step:01 -Verify Open Date field.
-[INFO ] 2025-04-04 14:53:18.138 [main] Log - Investment Info tab is open
-[INFO ] 2025-04-04 14:53:20.466 [main] Log - Steps 01: Click on Principal GL Head dropdown -> Select any Bank.
-[INFO ] 2025-04-04 14:53:21.518 [main] Log - Step:01: Select a valid GL Head number.
-[INFO ] 2025-04-04 14:53:22.642 [main] Log - Step 01: Leave Receipt SL.No empty -> Enter valid numeric values.
-[INFO ] 2025-04-04 14:53:23.696 [main] Log - Step:01. Enter Deposit name
-[INFO ] 2025-04-04 14:53:24.764 [main] Log - Step:01. Enter Remark
-[INFO ] 2025-04-04 14:53:24.814 [main] Log - Investment Info tab is filled
-[INFO ] 2025-04-04 14:53:29.130 [main] Log - Step:01 -Select any one customer
-[INFO ] 2025-04-04 14:53:29.224 [main] Log - Operator tab is open
-[INFO ] 2025-04-04 14:53:40.325 [main] Log - Step 01:Enter Relation.
-[INFO ] 2025-04-04 14:53:44.643 [main] Log - Step 01:Tick Power of Attorney checkbox. -> Untick it.
-[INFO ] 2025-04-04 14:53:45.723 [main] Log - Step 01:Enter Remarks
-[INFO ] 2025-04-04 14:53:50.044 [main] Log - Step:01 Click on Add button.
-[INFO ] 2025-04-04 14:53:50.145 [main] Log - Operator tab has some entered data
-[INFO ] 2025-04-04 14:53:54.436 [main] Log - Step:23 -Click on cancel button
-[INFO ] 2025-04-04 14:53:55.607 [main] Log - Step:01. Enter text into Special Instruction field.
-[INFO ] 2025-04-04 14:53:57.978 [main] Log - Step 26 -Select transfer mode
-[INFO ] 2025-04-04 14:53:58.081 [main] Log - Summary Page is displayed After Transaction/cash is completed
-[INFO ] 2025-04-04 14:54:02.699 [main] Log - Step:01.Complete Investment account Opening -> Verify the Summary generated
-[INFO ] 2025-04-04 14:54:07.218 [main] Log - Step:01.Complete Investment account Opening -> CLick on VOucher Print Button
-[INFO ] 2025-04-04 14:54:07.345 [main] Log - Expected Result: Voucher is generated correctly.
-[INFO ] 2025-04-04 14:54:07.417 [main] Log - Summary Page is displayed After Transaction/cash is completed
-[INFO ] 2025-04-04 14:54:11.845 [main] Log - Step:01:Logout from the application
-[INFO ] 2025-04-04 14:54:11.886 [main] Log - Enter username and password.
-[INFO ] 2025-04-04 14:54:12.937 [main] Log - Step 39 -Click on Username
-[INFO ] 2025-04-04 14:54:13.991 [main] Log - Step 39 -Click on password
-[INFO ] 2025-04-04 14:54:20.839 [main] Log - Step:01 - Click the login button.
-[INFO ] 2025-04-04 14:54:20.839 [main] Log - User is logged in.
-[INFO ] 2025-04-04 14:54:25.229 [main] Log - User is in Manager authorisation windowd
-[INFO ] 2025-04-04 14:54:29.669 [main] Log - Step 01: Navigate to 'Authorize&cancel ->Manager Authorisation
-[INFO ] 2025-04-04 14:54:43.816 [main] Log - Step:42 - Select go.
-[INFO ] 2025-04-04 14:54:43.912 [main] Log - User is in cashier authorisation windowd
-[INFO ] 2025-04-04 14:54:48.404 [main] Log - Step:01. Navigate to 'Authorize&cancel ->Cashier Authorisation 
-[INFO ] 2025-04-04 14:54:53.875 [main] Log - Step:01: Select transaction ID
-[INFO ] 2025-04-04 14:55:06.942 [main] Log - Step:01 -Click the AUTHORISE button
-[INFO ] 2025-04-04 14:55:11.258 [main] Log - Logout
-[INFO ] 2025-04-04 14:55:19.697 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-04-04 14:55:20.787 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-04-09 16:30:55.795 [main] Log - *** Running test method Investment_Opening...
+[INFO ] 2025-04-09 16:30:59.774 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-09 16:31:01.291 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-09 16:31:03.574 [main] Log - PC Registration
+[INFO ] 2025-04-09 16:31:04.661 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-09 16:31:07.061 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-09 16:31:08.115 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-09 16:31:12.421 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-09 16:31:14.573 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-09 16:31:14.653 [main] Log - Valid Login
+[INFO ] 2025-04-09 16:31:15.732 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-09 16:31:16.806 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-09 16:31:24.830 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-09 16:31:25.913 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-09 16:31:26.984 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-09 16:31:27.051 [main] Log - Load Investment Opening Window
+[INFO ] 2025-04-09 16:31:44.691 [main] Log - Step:01 - Navigate to account opening -> Click on investment opening -> Select demand > Inv-Demand
+[INFO ] 2025-04-09 16:31:44.802 [main] Log - Investment Opening window is open
+[INFO ] 2025-04-09 16:31:47.288 [main] Log - Step:01. Click on Branch dropdown after selecting the Bank -> Select branch from drop down
+[INFO ] 2025-04-09 16:31:47.342 [main] Log - Bank and Branch fields are selected
+[INFO ] 2025-04-09 16:31:54.653 [main] Log - Step:01 - Click on Add button.
+[INFO ] 2025-04-09 16:31:54.742 [main] Log - Investment Opening window is open
+[INFO ] 2025-04-09 16:31:56.866 [main] Log - Investment Info tab is open
+[INFO ] 2025-04-09 16:31:59.220 [main] Log - Steps 01: Click on Principal GL Head dropdown -> Select any Bank.
+[INFO ] 2025-04-09 16:32:00.263 [main] Log - Step:01: Select a valid GL Head number.
+[INFO ] 2025-04-09 16:32:01.354 [main] Log - Step 01: Leave Receipt SL.No empty -> Enter valid numeric values.
+[INFO ] 2025-04-09 16:32:02.405 [main] Log - Step:01. Enter Deposit name
+[INFO ] 2025-04-09 16:32:03.460 [main] Log - Step:01. Enter Remark
+[INFO ] 2025-04-09 16:32:03.521 [main] Log - Investment Info tab is filled
+[INFO ] 2025-04-09 16:32:07.858 [main] Log - Step:01 -Select any one customer
+[INFO ] 2025-04-09 16:32:07.911 [main] Log - Operator tab is open
+[INFO ] 2025-04-09 16:32:19.079 [main] Log - Step 01:Enter Relation.
+[INFO ] 2025-04-09 16:32:23.399 [main] Log - Step 01:Tick Power of Attorney checkbox. -> Untick it.
+[INFO ] 2025-04-09 16:32:24.453 [main] Log - Step 01:Enter Remarks
+[INFO ] 2025-04-09 16:32:28.793 [main] Log - Step:01 Click on Add button.
+[INFO ] 2025-04-09 16:32:28.910 [main] Log - Operator tab has some entered data
+[INFO ] 2025-04-09 16:32:33.244 [main] Log - Step:23 -Click on cancel button
+[INFO ] 2025-04-09 16:32:34.419 [main] Log - Step:01. Enter text into Special Instruction field.
+[INFO ] 2025-04-09 16:32:36.808 [main] Log - Step 26 -Select transfer mode
+[INFO ] 2025-04-09 16:32:36.913 [main] Log - Summary Page is displayed After Transaction/cash is completed
+[INFO ] 2025-04-09 16:32:41.742 [main] Log - Step:01.Complete Investment account Opening -> Verify the Summary generated
+[INFO ] 2025-04-09 16:32:46.292 [main] Log - Step:01.Complete Investment account Opening -> CLick on VOucher Print Button
+[INFO ] 2025-04-09 16:32:46.450 [main] Log - Expected Result: Voucher is generated correctly.
+[INFO ] 2025-04-09 16:32:46.556 [main] Log - Summary Page is displayed After Transaction/cash is completed
+[INFO ] 2025-04-09 16:32:51.010 [main] Log - Step:01:Logout from the application
+[INFO ] 2025-04-09 16:32:51.107 [main] Log - **Basic Login Functionality**
+[INFO ] 2025-04-09 16:32:52.185 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-09 16:32:53.242 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-09 16:33:00.661 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-09 16:33:01.730 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-09 16:33:01.731 [main] Log - User is logged in.
+[INFO ] 2025-04-09 16:33:06.116 [main] Log - User is in Manager authorisation windowd
+[INFO ] 2025-04-09 16:33:10.503 [main] Log - Step 01: Navigate to 'Authorize&cancel ->Manager Authorisation
+[INFO ] 2025-04-09 16:33:29.024 [main] Log - Step:42 - Select go.
+[INFO ] 2025-04-09 16:33:29.109 [main] Log - User is in cashier authorisation windowd
+[INFO ] 2025-04-09 16:33:33.585 [main] Log - Step:01. Navigate to 'Authorize&cancel ->Cashier Authorisation 
+[INFO ] 2025-04-09 16:33:39.049 [main] Log - Step:01: Select transaction ID
+[INFO ] 2025-04-09 16:33:52.081 [main] Log - Step:01 -Click the AUTHORISE button
+[INFO ] 2025-04-09 16:33:56.377 [main] Log - Logout
+[INFO ] 2025-04-09 16:34:04.850 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-04-09 16:34:05.922 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

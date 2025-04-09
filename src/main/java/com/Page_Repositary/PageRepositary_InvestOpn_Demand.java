@@ -12,12 +12,14 @@ import com.extentReports.ExtentTestManager;
 
 public class PageRepositary_InvestOpn_Demand {
 
+	
+
 	public By loader =By.xpath("//div[@id=\"progressdiv\"]");
 	
-	public By accountOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[5]/div");
-	public By investmentOPeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[5]/ul/li[5]/div");
-    public By demandOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[5]/ul/li[5]/ul/li/div");
-	public By investmentAccountNewTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[5]/ul/li[5]/ul/li/ul/li/a");
+	public By accountOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Account Opening']/preceding-sibling::div");
+	public By investmentOPeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Investment Opening']/preceding-sibling::div");
+    public By demandOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Demand ']/preceding-sibling::div");
+	public By investmentAccountNewTab = By.xpath("//a[text()='INV-DEMAND-CA  (44001)']");
    
 	// Account opening
 	public By selectbankdrop_down = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstInvAccInfo_ctrl0_INIO_ddlBank_ddl\"]");
@@ -83,18 +85,20 @@ public class PageRepositary_InvestOpn_Demand {
 	
 	
 	//signout
-	public By signout= By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
+	public By signout= By.xpath("//strong[text()='Signout']");
 	
-	//signin authorise
-	public By authorise= By.xpath("//*[@id=\"txtUserName_txt\"]");
-	public By password= By.xpath("//*[@id=\"txtPassword_txt\"]");
-	public By login= By.xpath("//*[@id=\"imgbtnSubmit\"]");
 	
-	public By authorisecancel= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[12]/div");
+	
+//	//signin authorise
+//	public By authorise= By.xpath("//*[@id=\"txtUserName_txt\"]");
+//	public By password= By.xpath("//*[@id=\"txtPassword_txt\"]");
+//	public By login= By.xpath("//*[@id=\"imgbtnSubmit\"]");
+	
+	public By authorisecancel= By.xpath("//ul[@id='CreateMenu']//a[text()='Authorize & Cancel']/preceding-sibling::div");
 	
 	// manager
-	public By managerauthorise= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[12]/ul/li[4]/a");
-	//public By refresh1= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnRefresh\"]");
+	public By managerauthorise= By.xpath("//a[text()='Manager Authorisation (MNAU)']");
+	public By refresh_01= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnRefresh\"]");
 	public By transactionid= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt\"]");
 	public By go= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnGo\"]");
 	public By select11= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect\"]");
@@ -102,7 +106,7 @@ public class PageRepositary_InvestOpn_Demand {
 			
 	
 	// for cashier
-	public By cashier= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[12]/ul/li[8]/a");
+	public By cashier= By.xpath("//a[text()='Cashier Authorisation (CAAU)']");
 	public By refresh12= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnRefresh\"]");
 	public By transactionionid2= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt\"]");
 	public By go1= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnGo\"]");
@@ -111,12 +115,13 @@ public class PageRepositary_InvestOpn_Demand {
 	
 	// for signout
 	public By updatedsuccessfully= By.xpath("//*[@id=\"closetop\"]");
-//	public By signout1= By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
-//			
-		private void input(String string, String invalidacctatbranch) {
-			// TODO Auto-generated method stub
+
+	
+    // for authorise
+	public By loginUserName = By.xpath("//*[@id=\"txtUserName_txt\"]");
+	public By loginPasswrd = By.xpath("//*[@id=\"txtPassword_txt\"]");
+	public By loginButton0 = By.xpath("//*[@id=\"imgbtnSubmit\"]");
+	
+	
 			
-		}
-	
-	
 }
