@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-08T12:11:43 IST" name="Default suite" finished-at="2025-04-08T12:13:27 IST" duration-ms="104324">
+  <suite started-at="2025-04-09T12:55:47 IST" name="Default suite" finished-at="2025-04-09T12:57:10 IST" duration-ms="83581">
     <groups>
     </groups>
-    <test started-at="2025-04-08T12:11:43 IST" name="Default test" finished-at="2025-04-08T12:13:27 IST" duration-ms="104324">
-      <class name="com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanApplication">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanApplication@acb0951]" started-at="2025-04-08T12:11:43 IST" name="reference" finished-at="2025-04-08T12:11:43 IST" duration-ms="17" status="PASS">
+    <test started-at="2025-04-09T12:55:47 IST" name="Default test" finished-at="2025-04-09T12:57:10 IST" duration-ms="83581">
+      <class name="com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanSanction">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanSanction@132ddbab]" started-at="2025-04-09T12:55:47 IST" name="reference" finished-at="2025-04-09T12:55:47 IST" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="groupLoanApplication(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanApplication@acb0951]" started-at="2025-04-08T12:11:45 IST" name="groupLoanApplication" data-provider="TestData" finished-at="2025-04-08T12:13:27 IST" duration-ms="102806" status="PASS">
+        <test-method signature="groupLoanSanction(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanSanction@132ddbab]" started-at="2025-04-09T12:55:47 IST" name="groupLoanSanction" data-provider="TestData" finished-at="2025-04-09T12:57:10 IST" duration-ms="82851" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{loan=25000, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Group Loan Application}]]>
+                <![CDATA[{pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Group Loan Sanction}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@5c10285a]]>
+                <![CDATA[org.testng.TestRunner@4c4f4365]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- groupLoanApplication -->
-      </class> <!-- com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanApplication -->
+        </test-method> <!-- groupLoanSanction -->
+      </class> <!-- com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanSanction -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
