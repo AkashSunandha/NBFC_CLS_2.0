@@ -63,7 +63,7 @@ public class AllScenarios_Centre_Registration {
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
-				centreRegMthds.navigateToCentreReg();
+				centreRegMthds.navigateToCentreReg(testdata, context);
 				
 				custSrchMthds.logout();
 

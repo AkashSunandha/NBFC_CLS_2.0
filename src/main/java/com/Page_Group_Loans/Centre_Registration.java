@@ -1,4 +1,4 @@
-package com.Page_Group_Loans;
+  package com.Page_Group_Loans;
 
 import com.BasePackage.Base_Class;
 import com.Utility.Log;
@@ -22,10 +22,9 @@ public class Centre_Registration extends Base_Class{
 
 	PageRepositary_Centre_Registration grploansrepo = new PageRepositary_Centre_Registration();
 
-	public void navigateToCentreReg() throws InterruptedException {
+	public void navigateToCentreReg(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		
 	//Navigate to General Opening
-	ExtentTestManager.startTest("Navigate to General Opening");
 	Log.info("Navigate to General Opening");
 	
 	click(grploansrepo.grp_loans);
@@ -67,7 +66,9 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.startTest("Street Name Field Enable"); 
 	Log.info("Street Name Field Enable"); 
 	 
-	input(grploansrepo.strt_name,"Rockstar"); 
+	
+	String StreetName = testdata.get("StreetName").toString();
+	input(grploansrepo.strt_name,StreetName); 
 	ExtentTestManager.getTest().log(Status.PASS,"Step:01 - 1.Check if Street Name field is enabled -> Enter street name in the 'Street name'field");
 	Log.info("Step:01 - 1.Check if Street Name field is enabled -> Enter street name in the 'Street name'field"); 
 	ExtentTestManager.endTest(); 
@@ -102,7 +103,8 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.startTest("Panchayath Field Enabled and Selectable");
 	Log.info("Panchayath Field Enabled and Selectable");
 		 
-	input(grploansrepo.cntr_name,"KHUSHI");
+	String CentrName = testdata.get("CentrName").toString();
+	input(grploansrepo.cntr_name,CentrName);
 	ExtentTestManager.getTest().log(Status.PASS,"Step:01 - 1.Open Panchayath dropdown ->Select a Panchayath");
 	Log.info("Step:01 - 1.Open Panchayath dropdown->Select a Panchayath");
 		  
@@ -125,8 +127,9 @@ public class Centre_Registration extends Base_Class{
 	//Distance from Branch to Centre Field Enabled
 	ExtentTestManager.startTest("Distance from Branch to Centre Field Enabled");
 	Log.info("Distance from Branch to Centre Field Enabled");
-			 
-	input(grploansrepo.distanceFrmdtoc,"10kms");
+			
+	String DisfromBranch = testdata.get("DisfromBranch").toString();
+	input(grploansrepo.distanceFrmdtoc,DisfromBranch);
 	ExtentTestManager.getTest().log(Status.PASS,"Step:01 - 1. Enter 'Distance from Branch to Centre");
 	Log.info("Step:01 - 1.Enter 'Distance from Branch to Centre");
 				  
@@ -149,8 +152,9 @@ public class Centre_Registration extends Base_Class{
 	//Block Field Enabled Enter block
 	ExtentTestManager.startTest("Block Field Enabled Enter block");
 	Log.info("Block Field Enabled Enter block");
-					 
-	input(grploansrepo.blockfield,"3block");
+			
+	String BlockFld = testdata.get("BlockFld").toString();
+	input(grploansrepo.blockfield,BlockFld);
 	ExtentTestManager.getTest().log(Status.PASS,"Step:01 - 1.Open Village dropdown -> Select a Village");
 	Log.info("Step:01 - 1.Open Village dropdown -> Select a Village");
 						  
@@ -161,8 +165,9 @@ public class Centre_Registration extends Base_Class{
 	//LandMark Field Enabled Enter Landmark
 	ExtentTestManager.startTest("LandMark Field Enabled Enter Landmark");
 	Log.info("Block Field Enabled Enter block");
-							 
-	input(grploansrepo.landmark,"next ashok ");
+	
+	String LandMark = testdata.get("LandMark").toString();
+	input(grploansrepo.landmark,LandMark);
 	ExtentTestManager.getTest().log(Status.PASS,"Step:01 - 1.Check if LandMark field is enabled -> Enter LandMark field data ");
 	Log.info("Step:01 - 1.Check if LandMark field is enabled -> Enter LandMark field data");
 								  
@@ -210,12 +215,14 @@ public class Centre_Registration extends Base_Class{
 	//Enter meeting time
 	ExtentTestManager.startTest("Post Office Field Enabled and Selectable");
 	Log.info("Post Office Field Enabled and Selectable");
-											 
-	input(grploansrepo.Meeting_time,"10");
+	
+	String Meeting_Time= testdata.get("Meeting_Time").toString();
+	input(grploansrepo.Meeting_time,Meeting_Time);
 	ExtentTestManager.getTest().log(Status.PASS,"Step:01 - 1.Enter 10 in Hours text field ");
 	Log.info("Step:01 - 1.Enter 10 in Hours text field ");
-													  
-	input(grploansrepo.Meeting_minutes,"30");
+		
+	String Meeting_Min= testdata.get("Meeting_Min").toString();
+	input(grploansrepo.Meeting_minutes,Meeting_Min);
 	ExtentTestManager.getTest().log(Status.PASS,"Step:02 - 1.Enter 30 in Minutes text field");
 	Log.info("Step:01 - 1.Enter 30 in Minutes text field ");
 	
@@ -251,6 +258,11 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 	
 	}
+
+//	public void navigateToCentreReg(Map<Object, Object> testdata, ITestContext context) {
+//		// TODO Auto-generated method stub
+//		
+//	}
 }	
 
 
