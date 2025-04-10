@@ -30,8 +30,7 @@ public class AllScenarios_GLAccBulk_Trans_Impo_Cash {
 //	LoanOpening_DepositOpn_DepositLoan bondCumulativeMthds = new LoanOpening_DepositOpn_DepositLoan();
 //	LoanOpening_LoanAndAdvances_PersonalLoanWeekly personl = new LoanOpening_LoanAndAdvances_PersonalLoanWeekly();
 //	GeneralOpening_SuspenseAsset generalOpnMthds = new GeneralOpening_SuspenseAsset();
-//Silpa
-	
+
 	@BeforeSuite
 	public void reference() { 
 		ExcelReader = new com.Utility.ExcelReader("GLaccBulkTransImport");
