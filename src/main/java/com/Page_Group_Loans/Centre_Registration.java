@@ -23,6 +23,7 @@ public class Centre_Registration extends Base_Class{
 	PageRepositary_Centre_Registration grploansrepo = new PageRepositary_Centre_Registration();
 
 	public void navigateToCentreReg(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+	
 		
 	//Navigate to General Opening
 	Log.info("Navigate to General Opening");

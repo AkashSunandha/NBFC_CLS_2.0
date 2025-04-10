@@ -32,6 +32,7 @@ public class InvestmentOpening_Demand extends Base_Class{
 	String transId;
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();	
 	
+	
 public void LoadInvestmentOpeningWindow(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 	
 	//Load Investment Opening Window
