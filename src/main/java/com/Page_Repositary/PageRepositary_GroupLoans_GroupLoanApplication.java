@@ -27,5 +27,21 @@ public class PageRepositary_GroupLoans_GroupLoanApplication {
 	public By popUpCloseBtn = By.xpath("//*[@id=\"closetop\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
-
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
+//	public By variable = By.xpath("");
 }
