@@ -59,6 +59,15 @@ public class AllScenario_Debenture_Application_Cashflow {
 				//User Login
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 				
+				//TC 04
+				DebApp.Navigate_Debenture_Application();
+				
+				//TC 05
+				DebApp.Verify_Branch_Field();
+				
+				//TC 06
+				DebApp.Verify_Application_DateField();
+								
 				//TC 11
 				DebApp.Select_Debenture_Type();
 				
@@ -69,12 +78,50 @@ public class AllScenario_Debenture_Application_Cashflow {
 				DebApp.Select_Series_Type();
 				
 				//TC 14
+				DebApp.Verify_Nature_Field();
 				 
 				//TC 15
-				DebApp.Se
+				DebApp.Select_customer_Category();
 				
-				//TC 03
+				//TC 07,08,09,10 and 16
 				DebApp.AddcustomerviacustID(testdata, context);
+
+				
+				//TC 17
+				
+				//TC 18
+				DebApp.Validate_No_of_Units(testdata, context);
+				
+				//TC 19
+				DebApp.Calculate_Total_Value();
+				
+				//TC 20
+				
+				//TC 21
+				DebApp.Select_DP_Name();
+				
+				//TC 22
+				DebApp.Validate_Demat_AccNo_Entry(testdata, context);
+				
+				//TC 23
+				
+				//TC 24
+				
+				//TC 25
+				DebApp.Select_Referred_By();
+				
+				//TC 26
+				DebApp.untickNomineeNotRequired();
+				
+				//TC 27
+				DebApp.AddNomineeBySearch(testdata, context);
+				
+				//TC 32
+				DebApp.Select_Relation_Dropdown();
+				
+				//TC 31
+				DebApp.Add_nominee();
+				
 				
 				/* //Sign out
 				custSrchMthds.logout(); */

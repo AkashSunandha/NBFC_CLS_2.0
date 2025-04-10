@@ -21,7 +21,7 @@ public class PageRepositary_AccOpen_Loan_ACOPL_TwoWheeler {
 	  public By Loanopening = By.xpath("//ul[@id='CreateMenu']//a[text()='Loan Opening']/preceding-sibling::div");
 	public By LoanandAdvance = By.xpath("//ul[@id='CreateMenu']//a[text()='Loan and Advances (ACOPL)']/preceding-sibling::div");
 	// public By TwoWheelerLoan = By.xpath("//a[text()='TWO WHEELER LOAN (23027)']");
-	public By TwoWheelerLoan = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/ul/li[3]/ul/li[27]/a");
+	public By TwoWheelerLoan = By.xpath("//*[text()='TWO WHEELER LOAN NEW  (23027)']");
 		
     public By Depositaccountopeningwindow = By.id ("ctl00_ctl00_MasterCaption");
     

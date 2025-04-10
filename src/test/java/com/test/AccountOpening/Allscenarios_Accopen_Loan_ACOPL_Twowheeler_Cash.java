@@ -43,8 +43,8 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheeler_Cash {
 	public void customerRegister( Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
-				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
+				ExtentTestManager.startTest("AccountOpening_loanOpening_ACOPL_TwoWheeler_Cash");
+				Log.info("AccountOpening_loanOpening_ACOPL_TwoWheeler_Cash");
 				context.setAttribute("fileName", "Login");
 //				ExtentTestManager.endTest();
 				

@@ -55,10 +55,10 @@ public class AllScenario_Admin_Debenture_Issue_Setting {
 				ExtentTestManager.endTest();
 				
 		
-				//PC Registration
+				
 				
 				//TC 01
-				
+				//PC Registration
 				custSrchMthds.pcRegistration(testdata, context);
 				
 				//TC 02
@@ -113,7 +113,8 @@ public class AllScenario_Admin_Debenture_Issue_Setting {
 				
 				Debenture.Submit_Issue_Details();
 				
-				//
+				 //Sign out
+				custSrchMthds.logout(); 
 			
 			
 			// EndTest

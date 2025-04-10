@@ -9,11 +9,16 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
+
+import bsh.ParseException;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -163,7 +168,37 @@ public class Base_Class {
 		wait.until(ExpectedConditions.elementToBeClickable(element)).clear();
 		Thread.sleep(2000);
 	}
-
+    // Method to verify drop down selection
+	public boolean dropdownSelectionValidation(String expectedOption,By locator) {
+    	WebElement element = driver.findElement(locator);
+        Select dropdown = new Select(element);
+        System.out.println(dropdown.getFirstSelectedOption().getText());
+        return dropdown.getFirstSelectedOption().getText().equals(expectedOption);
+    }
+    public String dateConversion(String inputDate) throws ParseException, java.text.ParseException {
+    	
+        // Define the original format of the date string
+        SimpleDateFormat originalFormat = new SimpleDateFormat("EEEE, MMMM dd yyyy", Locale.ENGLISH);
+ 
+        // Parse the input date string
+        Date date = originalFormat.parse(inputDate);
+ 
+        // Define the desired output format (DD/MM/YYYY)
+        SimpleDateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");
+ 
+        // Format the parsed date into the desired format
+        String formattedDate = targetFormat.format(date);
+        
+    	return formattedDate;
+    }
+ 
+	 // Method to get the value of the entered account number
+    public boolean inputValidation(By locator,String input) {
+    	WebElement element = driver.findElement(locator);
+    	System.out.println("InputValue: "+element.getAttribute("value"));
+        return element.getAttribute("value").equals(input);
+    }
+ 
 
 	public void AcceptAlert()
 	{

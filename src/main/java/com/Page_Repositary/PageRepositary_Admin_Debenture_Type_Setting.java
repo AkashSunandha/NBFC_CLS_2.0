@@ -9,8 +9,13 @@ public class PageRepositary_Admin_Debenture_Type_Setting {
 	public By popcontinue =By.className("ui-button-text");
 	public By Continuebtn = By.xpath("/html/body/div[1]/div[3]/div/button/span");
 	public By cancelcontinuepopup = By.xpath("/html/body/div[1]/div[1]/a/span");
-	public By Debenturesettings =By.xpath ("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/div");
-	public By DebentureTypeSetting = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/ul/li[1]/a");
+	
+	//Relative Xpath added for Debenture and Debenture Type Settings
+	public By Debenturesettings =By.xpath ("//ul[@id='CreateMenu']//a[text()='Debenture']/preceding-sibling::div");
+	//public By Debenturesettings =By.xpath ("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/div");
+	public By DebentureTypeSetting = By.xpath("//a[text()='Debenture Type Settings ']");
+	
+	//public By DebentureTypeSetting = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/ul/li[1]/a");
 	public By DebentureTypeWindow = By.xpath ("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div/div[1]/div/div[1]");
 	
 	//Debenture Type Setting Window

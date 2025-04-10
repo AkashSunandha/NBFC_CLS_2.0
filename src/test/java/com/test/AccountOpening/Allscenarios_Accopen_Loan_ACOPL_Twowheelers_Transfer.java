@@ -42,8 +42,8 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheelers_Transfer {
 	public void customerRegister( Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
-				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
+				ExtentTestManager.startTest("AccountOpening_loanOpening_ACOPL_TwoWheeler_Transfer");
+				Log.info("AccountOpening_loanOpening_ACOPL_TwoWheeler_Transfer");
 				context.setAttribute("fileName", "Login");
 //				ExtentTestManager.endTest();
 				
@@ -55,7 +55,7 @@ public class Allscenarios_Accopen_Loan_ACOPL_Twowheelers_Transfer {
 				
 
 
-				 //PC Registration
+				 //PC Registration TC 01
 				custSrchMthds.pcRegistration(testdata, context);
 			
 			     //TC 02

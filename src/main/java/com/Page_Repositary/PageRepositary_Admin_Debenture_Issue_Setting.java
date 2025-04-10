@@ -5,10 +5,15 @@ import org.openqa.selenium.By;
 public class PageRepositary_Admin_Debenture_Issue_Setting {
 	
 	//Debenture Issue Setting
-	
+
 	public By Continuebtn = By.xpath("/html/body/div[1]/div[3]/div/button/span");
-	public By Debenturesettings =By.xpath ("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/div");
-    public By DebentureIssuesetting = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/ul/li[2]/a");
+	
+	//Relative Xpath added for Debenture and Debenture Type Settings
+	//public By Debenturesettings =By.xpath ("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/div");
+	public By Debenturesettings =By.xpath ("//ul[@id='CreateMenu']//a[text()='Debenture']/preceding-sibling::div");
+    public By DebentureIssuesetting = By.xpath("//a[text()='Debenture Issue Settings ']");
+   // public By DebentureIssuesetting = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[2]/ul/li[2]/a");
+    
     public By Debentureissuewindow = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div/div[1]/div/div[1]");
     public By DebentureType =By.id("ctl00_ctl00_CPH1_PRDCNT_ddlDebentureType_ddl");
     public By IssueName = By.id("ctl00_ctl00_CPH1_PRDCNT_txtIssueName_txt");
