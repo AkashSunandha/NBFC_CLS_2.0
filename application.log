@@ -1,4 +1,4 @@
-[ERROR] 2025-04-10 10:36:35.392 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-14 11:58:15.284 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Grouploans.AllScenarios_Centre_Registration.gettestdate(AllScenarios_Centre_Registration.java:89) ~[test-classes/:?]
+	at Debenture.Allscenaries_Debenture_series.gettestdate(Allscenaries_Debenture_series.java:91) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
@@ -49,7 +49,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-10 10:36:35.407 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-14 11:58:15.298 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -69,7 +69,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Grouploans.AllScenarios_Centre_Registration.gettestdate(AllScenarios_Centre_Registration.java:89) ~[test-classes/:?]
+	at Debenture.Allscenaries_Debenture_series.gettestdate(Allscenaries_Debenture_series.java:91) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
@@ -100,7 +100,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-10 10:36:35.410 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-14 11:58:15.299 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -120,7 +120,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Grouploans.AllScenarios_Centre_Registration.gettestdate(AllScenarios_Centre_Registration.java:89) ~[test-classes/:?]
+	at Debenture.Allscenaries_Debenture_series.gettestdate(Allscenaries_Debenture_series.java:91) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
@@ -151,7 +151,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-10 10:36:35.416 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-14 11:58:15.306 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -171,7 +171,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Grouploans.AllScenarios_Centre_Registration.gettestdate(AllScenarios_Centre_Registration.java:89) ~[test-classes/:?]
+	at Debenture.Allscenaries_Debenture_series.gettestdate(Allscenaries_Debenture_series.java:91) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
@@ -202,58 +202,46 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-04-10 10:36:36.264 [main] Log - *** Running test method Centre_Registration...
-[INFO ] 2025-04-10 10:36:40.950 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-04-10 10:36:43.072 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-04-10 10:36:45.438 [main] Log - PC Registration
-[INFO ] 2025-04-10 10:36:46.578 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-04-10 10:36:49.024 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-04-10 10:36:50.080 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-04-10 10:36:54.411 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-04-10 10:36:57.039 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-04-10 10:36:57.226 [main] Log - Valid Login
-[INFO ] 2025-04-10 10:36:58.283 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-04-10 10:36:59.359 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-04-10 10:37:10.010 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-10 10:37:11.119 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-10 10:37:12.265 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-10 10:37:12.370 [main] Log - Navigate to General Opening
-[INFO ] 2025-04-10 10:37:16.710 [main] Log - Step:01 - 1. Navigate to Group Loan
-[INFO ] 2025-04-10 10:37:24.158 [main] Log - Step:02 - 2. Click on Centre Registration
-[INFO ] 2025-04-10 10:37:24.314 [main] Log - Select Branch
-[INFO ] 2025-04-10 10:37:27.056 [main] Log - Step:01 - 1. Open Branch dropdown-> Select branch
-[INFO ] 2025-04-10 10:37:27.151 [main] Log - Select district
-[INFO ] 2025-04-10 10:37:29.555 [main] Log - Step:01 - 1. Open District dropdown
-[INFO ] 2025-04-10 10:37:30.893 [main] Log - Street Name Field Enable
-[INFO ] 2025-04-10 10:37:32.026 [main] Log - Step:01 - 1.Check if Street Name field is enabled -> Enter street name in the 'Street name'field
-[INFO ] 2025-04-10 10:37:32.171 [main] Log - Taluk Field Enabled and Selectablee
-[INFO ] 2025-04-10 10:37:33.247 [main] Log - Step:01 - 1.  Open Taluk dropdown
-[INFO ] 2025-04-10 10:37:33.388 [main] Log - Panchayath Field Enabled and Selectable
-[INFO ] 2025-04-10 10:37:34.451 [main] Log - Step:01 - 1.Open Panchayath dropdown->Select a Panchayath
-[INFO ] 2025-04-10 10:37:34.590 [main] Log - Panchayath Field Enabled and Selectable
-[INFO ] 2025-04-10 10:37:35.663 [main] Log - Step:01 - 1.Open Panchayath dropdown->Select a Panchayath
-[INFO ] 2025-04-10 10:37:35.789 [main] Log - Meeting Day Field Enabled and Selectable
-[INFO ] 2025-04-10 10:37:36.865 [main] Log - Step:01 - 1.Open Meeting Day dropdown ->Select a Meeting Day
-[INFO ] 2025-04-10 10:37:37.005 [main] Log - Distance from Branch to Centre Field Enabled
-[INFO ] 2025-04-10 10:37:38.077 [main] Log - Step:01 - 1.Enter 'Distance from Branch to Centre
-[INFO ] 2025-04-10 10:37:38.178 [main] Log - Village Field Enabled and Selectable
-[INFO ] 2025-04-10 10:37:39.300 [main] Log - Step:01 - 1.Open Village dropdown -> Select a Village
-[INFO ] 2025-04-10 10:37:39.431 [main] Log - Block Field Enabled Enter block
-[INFO ] 2025-04-10 10:37:40.483 [main] Log - Step:01 - 1.Open Village dropdown -> Select a Village
-[INFO ] 2025-04-10 10:37:40.600 [main] Log - Block Field Enabled Enter block
-[INFO ] 2025-04-10 10:37:41.676 [main] Log - Step:01 - 1.Check if LandMark field is enabled -> Enter LandMark field data
-[INFO ] 2025-04-10 10:37:41.777 [main] Log - Post Office Field Enabled and Selectable
-[INFO ] 2025-04-10 10:37:42.895 [main] Log - Step:01 - 1.Open Post Office dropdown-> Select a Post Office
-[INFO ] 2025-04-10 10:37:43.611 [main] Log - Field Officer Field Enabled and Selectable
-[INFO ] 2025-04-10 10:37:44.731 [main] Log - Step:01 - 1.Open Field Officer dropdown -> Select a Field Officer 
-[INFO ] 2025-04-10 10:37:44.864 [main] Log - Post Office Field Enabled and Selectable
-[INFO ] 2025-04-10 10:37:45.943 [main] Log - Step:01 - 1.Enter 10 in Hours text field 
-[INFO ] 2025-04-10 10:37:47.014 [main] Log - Step:01 - 1.Enter 30 in Minutes text field 
-[INFO ] 2025-04-10 10:37:48.100 [main] Log - Step:01 - 1.Select AM from Meridians dropdown  
-[INFO ] 2025-04-10 10:37:48.235 [main] Log - Save Centre Registration
-[INFO ] 2025-04-10 10:37:52.637 [main] Log - Step:01 - 1.Centre is created successfully
-[INFO ] 2025-04-10 10:37:52.741 [main] Log - Save Centre Registration
-[INFO ] 2025-04-10 10:37:57.090 [main] Log - Step:01 - 1.Centre is created successfully
-[INFO ] 2025-04-10 10:37:57.215 [main] Log - Logout
-[INFO ] 2025-04-10 10:38:08.546 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-04-10 10:38:09.649 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-04-14 11:58:15.903 [main] Log - *** Running test method Debenture Series Setting...
+[INFO ] 2025-04-14 11:58:19.510 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-14 11:58:34.842 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-14 11:58:37.179 [main] Log - PC Registration
+[INFO ] 2025-04-14 11:58:38.281 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-14 11:58:40.668 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-14 11:58:41.721 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-14 11:58:46.026 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-14 11:59:03.667 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-14 11:59:03.737 [main] Log - **Basic Login Functionality**
+[INFO ] 2025-04-14 11:59:04.809 [main] Log - Step:01 - Enetered valid Admin User Name
+[INFO ] 2025-04-14 11:59:05.877 [main] Log - Step:02 - Enetered valid Admin Password
+[INFO ] 2025-04-14 11:59:23.806 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-14 11:59:24.864 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-14 11:59:29.225 [main] Log - Step:05 - Click on continue
+[INFO ] 2025-04-14 11:59:29.225 [main] Log - Debenture Type Selection
+[INFO ] 2025-04-14 11:59:33.538 [main] Log - Step:01 - 1. Navigate to Admin > Debenture > Debenture Series Settings.-> Attempt to select a Debenture Type from dropdown.
+[INFO ] 2025-04-14 11:59:33.671 [main] Log - Debenture Type Selection
+[INFO ] 2025-04-14 11:59:40.705 [main] Log - Step:01 - 1. Select a Debenture Type ->  Attempt to select a Debenture Issue from dropdown.
+[INFO ] 2025-04-14 11:59:40.811 [main] Log - Debenture type Selection
+[INFO ] 2025-04-14 11:59:42.057 [main] Log - Step:01 - 1.Verify text in  the 'Series Name' field.
+[INFO ] 2025-04-14 11:59:48.863 [main] Log - Series Name InputDebenture Issue Selection
+[INFO ] 2025-04-14 11:59:49.972 [main] Log - Step:01 - 1.Verify text in  the 'Series Name' field.
+[INFO ] 2025-04-14 11:59:54.584 [main] Log - Series Name Input
+[INFO ] 2025-04-14 11:59:55.766 [main] Log - ISIN No Input Validation
+[INFO ] 2025-04-14 11:59:56.912 [main] Log - Interest Payment Method Selection
+[INFO ] 2025-04-14 11:59:58.068 [main] Log - ROI Input Validation
+[INFO ] 2025-04-14 11:59:59.186 [main] Log - GL Acc Code/Name Dependency Loading
+[INFO ] 2025-04-14 12:00:00.333 [main] Log - Int GL Acc Code/Name Dependency Loading
+[INFO ] 2025-04-14 12:00:05.396 [main] Log - Int GL Acc Code/Name Dependency Loading
+[INFO ] 2025-04-14 12:00:06.545 [main] Log - Int GL Acc Code/Name Dependency Loading
+[INFO ] 2025-04-14 12:00:07.705 [main] Log - Int GL Acc Code/Name Dependency Loading
+[INFO ] 2025-04-14 12:00:08.835 [main] Log - Int GL Acc Code/Name Dependency Loading
+[INFO ] 2025-04-14 12:00:15.218 [main] Log - Int GL Acc Code/Name Dependency Loading
+[INFO ] 2025-04-14 12:00:16.373 [main] Log - ROI Effect From Date Selection
+[INFO ] 2025-04-14 12:00:21.744 [main] Log - Step:01 - 1. Use calendar to select 'ROI Effect From' date -> Enter date manually as 'DD-MM-YYYY'
+[INFO ] 2025-04-14 12:00:21.785 [main] Log - ROI Effect From Date Selection
+[INFO ] 2025-04-14 12:00:27.183 [main] Log - Step:01 - 1. Use calendar to select 'ROI Effect To' date -> Enter date manually as 'DD-MM-YYYY'
+[INFO ] 2025-04-14 12:00:27.212 [main] Log - Save this
+[INFO ] 2025-04-14 12:00:31.536 [main] Log - 1. Click 'Save' button.
+[INFO ] 2025-04-14 12:00:39.416 [main] Log - Logout
+[INFO ] 2025-04-14 12:00:50.413 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-04-14 12:00:51.479 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

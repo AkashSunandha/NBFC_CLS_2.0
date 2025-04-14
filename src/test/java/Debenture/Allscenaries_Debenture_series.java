@@ -37,7 +37,7 @@ public class Allscenaries_Debenture_series {
 	
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("Debenture_series_setting");
+		ExcelReader = new com.Utility.ExcelReader("DebentureSeriesSetting");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -61,9 +61,9 @@ public class Allscenaries_Debenture_series {
 				
 				custSrchMthds.pcRegistration(testdata, context);
 
-				debSeriesMthds.adminLogin();
+				debSeriesMthds.adminLogin(testdata, context);
 			
-//				investment.LoadInvestmentOpeningWindow();
+//				investment.LoadInvestmentOpeningWindow(testdata, context);
 				
 //				investment.accNumBVAValidation(testdata, context);
 				
@@ -97,4 +97,5 @@ public class Allscenaries_Debenture_series {
 		}
 		return objectarry;
 	}
+	
 }

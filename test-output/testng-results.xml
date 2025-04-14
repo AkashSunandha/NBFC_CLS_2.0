@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-10T10:36:35 IST" name="Default suite" finished-at="2025-04-10T10:38:10 IST" duration-ms="95786">
+  <suite started-at="2025-04-14T11:58:15 IST" name="Default suite" finished-at="2025-04-14T12:00:52 IST" duration-ms="156922">
     <groups>
     </groups>
-    <test started-at="2025-04-10T10:36:35 IST" name="Default test" finished-at="2025-04-10T10:38:10 IST" duration-ms="95786">
-      <class name="com.test.Grouploans.AllScenarios_Centre_Registration">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Grouploans.AllScenarios_Centre_Registration@565b064f]" started-at="2025-04-10T10:36:35 IST" name="reference" finished-at="2025-04-10T10:36:35 IST" duration-ms="15" status="PASS">
+    <test started-at="2025-04-14T11:58:15 IST" name="Default test" finished-at="2025-04-14T12:00:52 IST" duration-ms="156922">
+      <class name="Debenture.Allscenaries_Debenture_series">
+        <test-method is-config="true" signature="reference()[pri:0, instance:Debenture.Allscenaries_Debenture_series@565b064f]" started-at="2025-04-14T11:58:15 IST" name="reference" finished-at="2025-04-14T11:58:15 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Grouploans.AllScenarios_Centre_Registration@565b064f]" started-at="2025-04-10T10:36:36 IST" name="newCustomer" data-provider="TestData" finished-at="2025-04-10T10:38:10 IST" duration-ms="94826" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:Debenture.Allscenaries_Debenture_series@565b064f]" started-at="2025-04-14T11:58:15 IST" name="newCustomer" data-provider="TestData" finished-at="2025-04-14T12:00:52 IST" duration-ms="156210" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{=, BlockFld=3rd, CentrName=KHUSHI, DisfromBranch=10, LandMark=next to goeri appartments, Meeting_Min=30, Meeting_Time=10, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, StreetName=2nd cross ashok nagar, TestScenario=Centre_Registration}]]>
+                <![CDATA[{Acc_Code=11, Int_Acc_Code=10, ISIN=888888889, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Print_GL_Acc_Code=12, RoI=12, ROI_Effect_From_Date_Selection=09/04/2025, ROI_Effect_To_Date_Selection=10/04/2027, Run=Yes, TempROI=10, TestScenario=Debenture Series Setting}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@39109136]]>
+                <![CDATA[org.testng.TestRunner@5a6482a9]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newCustomer -->
-      </class> <!-- com.test.Grouploans.AllScenarios_Centre_Registration -->
+      </class> <!-- Debenture.Allscenaries_Debenture_series -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
