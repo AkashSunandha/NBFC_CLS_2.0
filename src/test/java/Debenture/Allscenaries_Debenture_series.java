@@ -28,6 +28,7 @@ public class Allscenaries_Debenture_series {
 	Log log;
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
+	
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	LoanOpening_DepositOpn_DepositLoan bondCumulativeMthds = new LoanOpening_DepositOpn_DepositLoan();
 	LoanOpening_LoanAndAdvances_PersonalLoanWeekly personl = new LoanOpening_LoanAndAdvances_PersonalLoanWeekly();
