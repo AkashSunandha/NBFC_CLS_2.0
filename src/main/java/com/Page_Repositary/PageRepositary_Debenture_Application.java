@@ -24,7 +24,7 @@ public class PageRepositary_Debenture_Application {
     public By selectcustomer = By.id("PopQuick1_lst_ctrl0_linkSelect");
     
     //Account Info
-    public By UnitValue = By.id("ctl00_ctl00_CPH1_PRDCNT_TabContainer1_TabPanel1_txtUnitValue_txt");
+    public By UnitValuetextbox = By.id("ctl00_ctl00_CPH1_PRDCNT_TabContainer1_TabPanel1_txtUnitValue_txt");
     public By Noofunit = By.id("ctl00_ctl00_CPH1_PRDCNT_TabContainer1_TabPanel1_txtNoUnit_txt");
     public By GetValue = By.id("ctl00_ctl00_CPH1_PRDCNT_TabContainer1_TabPanel1_btnGet");
     public By TotalValue = By.id("ctl00_ctl00_CPH1_PRDCNT_TabContainer1_TabPanel1_txtTotal_txt");
@@ -51,8 +51,55 @@ public class PageRepositary_Debenture_Application {
     public By Interestrequiredcheckbox = By.id("ctl00_ctl00_CPH1_PRDCNT_TabContainer1_TabPanel3_chkIntrestTransferRequired");
     public By Clickinteresttranscheckbox = By.id("ctl00_ctl00_CPH1_PRDCNT_TabContainer1_TabPanel3_chkIntrestTransferRequired");
     public By ExternalAccountcheckbox = By.id("ctl00_ctl00_CPH1_PRDCNT_TabContainer1_TabPanel3_chkExternal");
+    public By Externalaccountgridcheckbox = By.id("ctl00_ctl00_CPH1_PRDCNT_TabContainer1_TabPanel3_lstInvAccountList_ctrl0_chkInvAccountList");
+    public By Transmodecash = By.id("ctl00_ctl00_CPH1_PRDCNT_AIF1_ddlTransMode_ddl");
+    public By Save = By.id("ctl00_ctl00_CPH1_PRDCNT_btnSave");
+    public By SummaryTranscid = By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
+    public By Printvoucher = By.id("ctl00_ctl00_CPH1_PRDCNT_btnPrintSingleVr1");
+    public By signout = By.xpath("//*[text()='Signout']");
     
+	//Login with Another User
+	public By loginUserName1 = By.xpath("//*[@id=\"txtUserName_txt\"]");
+	public By loginPasswrd1 = By.xpath("//*[@id=\"txtPassword_txt\"]");
+	public By loginButton1 = By.xpath("//*[@id=\"imgbtnSubmit\"]");
+	public By Newloginvalidate=By.id("ctl00_ctl00_lblUser");
     
+	
+	//Cashier Authorization - Cash Tab
+		
+		public By Authorizecanceltab = By.xpath("//ul[@id='CreateMenu']//a[text()='Authorize & Cancel']/preceding-sibling::div");
+		public By cashierauthorize = By.xpath("//a[text()='Cashier Authorisation (CAAU)']");
+		public By Transacidtextbox =By.id("ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt");
+		public By transacid = By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
+		public By ClickGo =By.id("ctl00_ctl00_CPH1_PRDCNT_btnGo");
+		public By Refresh=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
+		public By checkboxselect1=By.id("ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect");
+		public By Authorizebtn=By.id("ctl00_ctl00_CPH1_PRDCNT_btnSubmit"); 
+		public By successpopup1=By.id("ctl00_ctl00_lblErrorMessage");
+		public By cancelpopup=By.id("closetop");
+		
+		//Manager Authorization - Cash Tab
+				
+		public By ManagerAuthorization = By.xpath("//a[text()='Manager Authorisation (MNAU)']");
+		        public By Refresh1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
+				public By cashtab=By.id("__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash");
+				public By cashdetails=By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_lblBatchID");
+				public By managerClickGo =By.id("ctl00_ctl00_CPH1_PRDCNT_btnGo");
+				public By checkboxselect11=By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect");
+				public By Transactid1 = By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
+				public By Authorizebutton1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnOtherPass");
+				public By successpopup11=By.id("ctl00_ctl00_lblErrorMessage");
+				public By cancelpopup1=By.id("closetop");
+    
+				//Transfer flow
+				public By TransmodeTransfer = By.id("ctl00_ctl00_CPH1_PRDCNT_AIF1_ddlTransMode_ddl");
+				public By postdebit =By.id("ctl00_ctl00_CPH1_PRDCNT_AIF1_btnAutoPost");
+				
+				//Autoposting Window
+				public By TransactionBasedaccount = By.id("ddlTrnsBased_ddl");
+				public By Productgroup = By.id("ddlProductGroup_ddl");
+				
+				
     
 
 

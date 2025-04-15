@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
-import com.Pages_DebentureApplication.Debenture_Application_Cashflow;
+import com.Pages_DebentureApplication.Debenture_Application_Transferflow;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
@@ -17,7 +17,7 @@ import com.extentReports.ExtentTestManager;
 import com.github.dockerjava.api.model.Driver;
 import com.listeners.TestListener;
 
-public class AllScenario_Debenture_Application_Cashflow {
+public class AllScenario_Debenture_Application_Transfer {
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
@@ -25,7 +25,7 @@ public class AllScenario_Debenture_Application_Cashflow {
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	
-	Debenture_Application_Cashflow DebApp = new Debenture_Application_Cashflow();
+	Debenture_Application_Transferflow DebApp = new Debenture_Application_Transferflow();
 	@BeforeSuite
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("Debenture_Application");
@@ -41,7 +41,7 @@ public class AllScenario_Debenture_Application_Cashflow {
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
 				ExtentTestManager.startTest("Debenture_Application_Transfer");
-				Log.info("Debenture_Application_Cash");
+				Log.info("Debenture_Application_Transfer");
 				context.setAttribute("fileName", "Login");
 //				ExtentTestManager.endTest();
 				
@@ -137,48 +137,7 @@ public class AllScenario_Debenture_Application_Cashflow {
 				//TC 35
 				DebApp.Enable_External_Account_click();
 				
-				//TC  37
-				DebApp.Submission_with_cash_transmode();
 				
-				//TC 38
-				DebApp.Submission_with_cash_transmode_Save();
-				
-				//TC 39
-				DebApp.Validate_summary();
-				
-				//TC 40
-				DebApp.Print_Voucher_Summary();
-				
-				//TC 42
-				DebApp.Summary_Displayed_Logout(); 
-				
-				//TC 43
-				DebApp.Login_with_AnotherUser(testdata, context);
-				
-				//TC 45
-				DebApp.CashierAuthorization();
-				
-				//TC 46
-				DebApp.Cashierrefresh();
-				
-				//TC 47
-				DebApp.Select_the_transaction(testdata, context);
-				
-				//TC 48
-				DebApp.cashierauthorizationauthorizebtn();
-				
-				//TC 49
-				
-				DebApp.Manager_Authorization_CashTab();
-				
-				//TC 50
-				DebApp.Refresh_Loan_OpeningEntry(testdata, context);
-				
-				//TC 51
-				DebApp.Select_the_transaction_asmanager(testdata, context);
-				
-				//TC 52
-				DebApp.Authorize_Loan_Entry_asManager();
 				
 				
 				//Sign out
@@ -224,4 +183,5 @@ public class AllScenario_Debenture_Application_Cashflow {
 	}
 
 }
+
 
