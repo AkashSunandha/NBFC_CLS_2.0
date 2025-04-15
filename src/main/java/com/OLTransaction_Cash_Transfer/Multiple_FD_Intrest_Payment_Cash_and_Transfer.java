@@ -311,7 +311,10 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, " Step:02 -Select duration mode eg:months");
 		Log.info("Step:02 -Select duration mode eg:months ");
 
-		click(FDintrest.clickadd);
+		ScrollUntilElementVisible(FDintrest.scrolldown2);
+		
+		
+		click(FDintrest.clickadd2);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click Add button ");
 		Log.info("Step:03 - Click Add button.");
 
@@ -364,6 +367,9 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, " Step:02 -Select duration mode eg:months");
 		Log.info("Step:02 -Select duration mode eg:months ");
 
+
+		ScrollUntilElementVisible(FDintrest.scrolldown2);
+		
 		click(FDintrest.clickadd);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click Add button ");
 		Log.info("Step:03 - Click Add button.");
@@ -397,7 +403,7 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, " Step:02 -Select duration mode eg:months");
 		Log.info("Step:02 -Select duration mode eg:months ");
 
-		click(FDintrest.clickadd);
+		click(FDintrest.clickonadd);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click Add button ");
 		Log.info("Step:03 - Click Add button.");
 

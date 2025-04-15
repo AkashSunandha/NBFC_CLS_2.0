@@ -21,6 +21,7 @@ public class PageRepositary_Multiple_Fd_Cash_Transfer
 	public By durationmonth= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstProductAccIntPayment_ctrl0_ucProductAccIntPayment_ddlDurationMode_ddl\"]");
 	public By duration = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstProductAccIntPayment_ctrl0_ucProductAccIntPayment_txtDuration_txt\"]");
 	public By clickadd = By.xpath("//input[@id='ctl00_ctl00_CPH1_PRDCNT_btnAdd']");
+	public By clickadd2= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnAdd\"]");
 	public By onemoreYES=  By.xpath("/html/body/form/div[12]/div[3]/div/button[1]/span");
 	public By submitcash= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucOtherInfoForm_ddlTransactionMode_ddl\"]");
 	public By clicksubmit= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]");
@@ -44,6 +45,7 @@ public By authorize= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]");
 public By clickcheckbox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstCustAccounts_ctrl135_chkCustAccountList\"]");
 
 public By scrolldown= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_UTFORM\"]");
+public By scrolldown2 = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_UTFORM\"]");
 
 public By scroll= By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/div");
 
@@ -56,6 +58,8 @@ public By submitend = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]")
 public By chheecckk = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect\"]");
 
 public By Ok= By.xpath("//*[@id=\"closewarning\"]");
+
+public By clickonadd= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnAdd\"]");
 }
 
 

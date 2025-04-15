@@ -18,13 +18,13 @@ import com.Page_Customer.Customer_NewCustomer;
 import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
+import com.bondApplication.Bond_Issue;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
 public class AllScenario_Bond_Issue {
-	
-	
+
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
@@ -42,10 +42,11 @@ public class AllScenario_Bond_Issue {
 	OL_Transaction_Closure_Cash_Transfer Closuretrans = new OL_Transaction_Closure_Cash_Transfer();
 	SusAssetTransaction_Cash_Transfer suspense = new SusAssetTransaction_Cash_Transfer();
 	Multiple_FD_Intrest_Payment_Cash_and_Transfer FD = new Multiple_FD_Intrest_Payment_Cash_and_Transfer();
+	Bond_Issue Issue = new Bond_Issue();
 
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("MultipleFD");
+		ExcelReader = new com.Utility.ExcelReader("Bondissue");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -69,7 +70,45 @@ public class AllScenario_Bond_Issue {
 
 				custSrchMthds.pcRegistration(testdata, context);
 
+//				custSrchMthds.userLoginValidPaswrd(testdata, context);
+//
+//				Issue.verifyBondIssuePage();
+//
+//				Issue.selectProductAll();
+//
+//				Issue.verifyNameFieldFunctionality(testdata, context);
+//
+//				Issue.verifyApplicationDetailsPopupFunctionality();
+//
+//				Issue.closeApplicationDetailsPopup();
+//
+//				Issue.verifyIssueButtonFunctionality();
+//
+//				Issue.confirmIssueApplication();
+//
+//				suspense.logoutApplication1();
+//
+//				Closuretrans.AnotherUSer(testdata, context);
+//
+//				Issue.cashierAuthorizationRefresh();
+//				
+//				Issue.authorizeBondIssueEntry();
+//
+//				suspense.logoutApplication1();
+
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
+
+				Issue.verifyBondIssuePage1();
+
+				Issue.selectProductAll1();
+
+				Issue.verifyNameFieldFunctionality(testdata, context);
+				
+				Issue.clickRejectButtonAgain(testdata, context);
+				
+				
+				
+				
 
 				ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();
@@ -96,6 +135,3 @@ public class AllScenario_Bond_Issue {
 	}
 
 }
-
-
-

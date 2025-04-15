@@ -1,4 +1,4 @@
-[ERROR] 2025-04-08 18:27:16.227 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-15 10:29:52.951 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -49,7 +49,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-08 18:27:16.244 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-15 10:29:52.964 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -100,7 +100,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-08 18:27:16.245 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-15 10:29:52.966 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -151,7 +151,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-08 18:27:16.254 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-15 10:29:52.969 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -202,201 +202,201 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-04-08 18:27:17.157 [main] Log -  Running test method Multiple Fd_Cash_and_transfer...
-[INFO ] 2025-04-08 18:27:21.493 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-04-08 18:27:23.025 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-04-08 18:27:25.343 [main] Log - PC Registration
-[INFO ] 2025-04-08 18:27:26.433 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-04-08 18:27:28.814 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-04-08 18:27:29.877 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-04-08 18:27:34.206 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-04-08 18:27:35.910 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-04-08 18:27:36.011 [main] Log - Valid Login
-[INFO ] 2025-04-08 18:27:37.067 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-04-08 18:27:38.125 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-04-08 18:27:46.659 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-08 18:27:47.748 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-08 18:27:48.827 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-08 18:27:48.927 [main] Log - Navigate to Multiple FD Interest Payment
-[INFO ] 2025-04-08 18:27:53.258 [main] Log - Step:01 - Navigate to Transactions..
-[INFO ] 2025-04-08 18:27:57.799 [main] Log - Step:02 - Select Multiple FD Interest Payment..
-[INFO ] 2025-04-08 18:27:57.801 [main] Log - Expected Result: The Multiple FD Interest Payment window is displayed.
-[INFO ] 2025-04-08 18:27:57.876 [main] Log - Select Product Group - Fixed Deposit
-[INFO ] 2025-04-08 18:28:00.273 [main] Log - Step:01 - Open Product Group dropdown
-[INFO ] 2025-04-08 18:28:00.274 [main] Log - Step:02 -Select Fixed Deposit 
-[INFO ] 2025-04-08 18:28:00.275 [main] Log - Expected Result: 'Fixed Deposit' is selected in the Product Group dropdown.
-[INFO ] 2025-04-08 18:28:00.348 [main] Log - Select Product name - Fixed Deposit
-[INFO ] 2025-04-08 18:28:02.716 [main] Log - Step:01 - Open Product name dropdown
-[INFO ] 2025-04-08 18:28:02.717 [main] Log - Step:02 -Select Fixed Deposit 
-[INFO ] 2025-04-08 18:28:02.718 [main] Log - Expected Result: 'Fixed Deposit' is selected in the Product name dropdown.
-[INFO ] 2025-04-08 18:28:02.789 [main] Log - Enter Valid Account Number
-[INFO ] 2025-04-08 18:28:02.790 [main] Log - Enter  Account Number
-[INFO ] 2025-04-08 18:28:04.293 [main] Log - Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. 
-[INFO ] 2025-04-08 18:28:04.293 [main] Log - Expected Result:Account number is accepted. 
-[INFO ] 2025-04-08 18:28:04.372 [main] Log - Display All Accounts - Checkbox
-[INFO ] 2025-04-08 18:28:08.705 [main] Log - Step:01 -Tick the 'Display all accounts' checkbox. 
-[INFO ] 2025-04-08 18:28:13.031 [main] Log - Step:02-Click the 'Go' button. 
-[INFO ] 2025-04-08 18:28:13.031 [main] Log - Expected Result:A list of account numbers that match the criteria are displayed. 
-[INFO ] 2025-04-08 18:28:13.111 [main] Log - Display All Accounts - Checkbox
-[INFO ] 2025-04-08 18:28:13.112 [main] Log - Step:01 - Click the 'Go' button. 
-[INFO ] 2025-04-08 18:28:13.112 [main] Log - Expected Result:GO button clicked 
-[INFO ] 2025-04-08 18:28:17.505 [main] Log - Warning Validation Popup window
-[INFO ] 2025-04-08 18:30:19.570 [main] Log - Interest Payment Details - Grid Check
-[INFO ] 2025-04-08 18:30:25.052 [main] Log - Step:01 - Enter duration.1 
-[INFO ] 2025-04-08 18:30:27.559 [main] Log - Step:02 -Select duration mode eg:months 
-[INFO ] 2025-04-08 18:30:31.877 [main] Log - Step:03 - Click Add button.
-[INFO ] 2025-04-08 18:30:32.930 [main] Log - Expected Result:Interest payment details are added to the grid. 
-[INFO ] 2025-04-08 18:30:33.008 [main] Log - Enter Valid Account Number
-[INFO ] 2025-04-08 18:30:36.145 [main] Log - Enter  Account Number
-[INFO ] 2025-04-08 18:30:37.900 [main] Log - Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. 
-[INFO ] 2025-04-08 18:30:37.901 [main] Log - Expected Result:Account number is accepted. 
-[INFO ] 2025-04-08 18:30:42.327 [main] Log - Display All Accounts - Checkbox
-[INFO ] 2025-04-08 18:30:42.327 [main] Log - Step:01 - Click the 'Go' button. 
-[INFO ] 2025-04-08 18:30:42.329 [main] Log - Expected Result:GO button clicked 
-[INFO ] 2025-04-08 18:30:46.721 [main] Log - Warning Validation Popup window
-[INFO ] 2025-04-08 18:32:48.759 [main] Log - Select Another Account for Interest Payment
-[INFO ] 2025-04-08 18:32:49.806 [main] Log - Step:01 - Select another account.
-[INFO ] 2025-04-08 18:32:55.246 [main] Log - Step:01 - Enter duration.1 
-[INFO ] 2025-04-08 18:32:57.831 [main] Log - Step:02 -Select duration mode eg:months 
-[INFO ] 2025-04-08 18:33:02.167 [main] Log - Step:03 - Click Add button.
-[INFO ] 2025-04-08 18:33:02.168 [main] Log - Expected Result: Interest payment details are updated for another account.
-[INFO ] 2025-04-08 18:33:02.246 [main] Log - Submit Payment - Cash Mode
-[INFO ] 2025-04-08 18:33:04.606 [main] Log - Step:01 - Select trans.mode as 'cash'. 
-[INFO ] 2025-04-08 18:33:04.607 [main] Log - Step:02 -Click Submit button. 
-[INFO ] 2025-04-08 18:33:04.607 [main] Log - Expected Result:Payment details are submitted successfully. 
-[INFO ] 2025-04-08 18:33:04.685 [main] Log - Verify Submission Summary
-[INFO ] 2025-04-08 18:33:09.013 [main] Log - Step:01 -Verify the summary of the transaction. 
-[INFO ] 2025-04-08 18:33:09.013 [main] Log - Expected Result: Summary matches the transaction details entered.
-[INFO ] 2025-04-08 18:33:09.111 [main] Log - Logged out from application.
-[INFO ] 2025-04-08 18:33:13.600 [main] Log - Step:1 - Click Logout Option.
-[INFO ] 2025-04-08 18:33:13.601 [main] Log - Expected Result: Login page will be displayed
-[INFO ] 2025-04-08 18:33:23.199 [main] Log - Login with Another User
-[INFO ] 2025-04-08 18:33:23.200 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-04-08 18:33:23.233 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-04-08 18:33:23.302 [main] Log - Manager authorization
-[INFO ] 2025-04-08 18:35:02.331 [main] Log - Step:01 - Click the authoirze & Cancel module from the taskbar 
-[INFO ] 2025-04-08 18:35:06.956 [main] Log - Step:02 - Click Manager authorisation Submodule
-[INFO ] 2025-04-08 18:35:06.957 [main] Log - Manager authorization window will be display
-[INFO ] 2025-04-08 18:35:06.957 [main] Log - User is logged in Manager authorization
-[INFO ] 2025-04-08 18:35:11.281 [main] Log - Step:01 - Click the Refresh tab
-[INFO ] 2025-04-08 18:35:11.282 [main] Log - Tranacation entry will be display after clicking the refresh button
-[INFO ] 2025-04-08 18:35:21.049 [main] Log - User is logged in Manager authorization
-[INFO ] 2025-04-08 18:35:25.379 [main] Log - Step:01 -Select the checbox of   transaction   
-[INFO ] 2025-04-08 18:35:25.380 [main] Log - Possible to select the entry and selected entry is hghlighted
-[INFO ] 2025-04-08 18:35:25.380 [main] Log - cashier authorization
-[INFO ] 2025-04-08 18:35:29.688 [main] Log - Step:01 - Click Authorise button
-[INFO ] 2025-04-08 18:35:29.689 [main] Log - Transaction entry is authorised
-[INFO ] 2025-04-08 18:35:29.689 [main] Log - cashier authorization
-[INFO ] 2025-04-08 18:35:34.166 [main] Log - Step:01 -Click the authoirze & Cancel module from the taskbar 
-[INFO ] 2025-04-08 18:35:34.168 [main] Log - Step:02 - Click cashier authorisation Submodule 
-[INFO ] 2025-04-08 18:35:34.168 [main] Log - Cashier authorization window will be display
-[INFO ] 2025-04-08 18:35:34.168 [main] Log - cashier authorization
-[INFO ] 2025-04-08 18:35:38.495 [main] Log - Step:01 - Click the Refresh tab 
-[INFO ] 2025-04-08 18:35:38.497 [main] Log - Transaction entry will be diaply after clicking the refresh button
-[INFO ] 2025-04-08 18:35:48.248 [main] Log - cashier authorization
-[INFO ] 2025-04-08 18:35:52.588 [main] Log - Step:01 - Select the checbox of transaction 
-[INFO ] 2025-04-08 18:35:52.589 [main] Log - Possible to select the transaction entry and selected entry is hghlighted
-[INFO ] 2025-04-08 18:35:52.592 [main] Log - User is on Cashier authorisation windowv
-[INFO ] 2025-04-08 18:35:56.919 [main] Log - Step:01 - Click Authorise button 
-[INFO ] 2025-04-08 18:35:56.920 [main] Log - Transaction entry is authorised
-[INFO ] 2025-04-08 18:35:56.920 [main] Log - Logged out from application.
-[INFO ] 2025-04-08 18:36:05.716 [main] Log - Step:1 - Click Logout Option.
-[INFO ] 2025-04-08 18:36:05.716 [main] Log - Expected Result: Login page will be displayed
-[INFO ] 2025-04-08 18:36:05.785 [main] Log - Valid Login
-[INFO ] 2025-04-08 18:36:06.833 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-04-08 18:36:07.894 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-04-08 18:36:15.119 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-08 18:36:16.196 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-08 18:36:17.265 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-08 18:36:17.326 [main] Log - Navigate to Multiple FD Interest Payment
-[INFO ] 2025-04-08 18:36:17.327 [main] Log - Step:01 - Navigate to Transactions..
-[INFO ] 2025-04-08 18:36:21.790 [main] Log - Step:02 - Select Multiple FD Interest Payment..
-[INFO ] 2025-04-08 18:36:21.791 [main] Log - Expected Result: The Multiple FD Interest Payment window is displayed.
-[INFO ] 2025-04-08 18:36:21.855 [main] Log - Select Product Group - Fixed Deposit
-[INFO ] 2025-04-08 18:36:24.255 [main] Log - Step:01 - Open Product Group dropdown
-[INFO ] 2025-04-08 18:36:24.255 [main] Log - Step:02 -Select Fixed Deposit 
-[INFO ] 2025-04-08 18:36:24.256 [main] Log - Expected Result: 'Fixed Deposit' is selected in the Product Group dropdown.
-[INFO ] 2025-04-08 18:36:24.325 [main] Log - Select Product name - Fixed Deposit
-[INFO ] 2025-04-08 18:36:26.655 [main] Log - Step:01 - Open Product name dropdown
-[INFO ] 2025-04-08 18:36:26.656 [main] Log - Step:02 -Select Fixed Deposit 
-[INFO ] 2025-04-08 18:36:26.657 [main] Log - Expected Result: 'Fixed Deposit' is selected in the Product name dropdown.
-[INFO ] 2025-04-08 18:36:26.725 [main] Log - Enter Valid Account Number
-[INFO ] 2025-04-08 18:36:26.726 [main] Log - Enter  Account Number
-[INFO ] 2025-04-08 18:36:28.120 [main] Log - Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. 
-[INFO ] 2025-04-08 18:36:28.121 [main] Log - Expected Result:Account number is accepted. 
-[INFO ] 2025-04-08 18:36:28.198 [main] Log - Display All Accounts - Checkbox
-[INFO ] 2025-04-08 18:36:32.490 [main] Log - Step:01 -Tick the 'Display all accounts' checkbox. 
-[INFO ] 2025-04-08 18:36:36.830 [main] Log - Step:02-Click the 'Go' button. 
-[INFO ] 2025-04-08 18:36:36.830 [main] Log - Expected Result:A list of account numbers that match the criteria are displayed. 
-[INFO ] 2025-04-08 18:36:36.897 [main] Log - Display All Accounts - Checkbox
-[INFO ] 2025-04-08 18:36:36.898 [main] Log - Step:01 - Click the 'Go' button. 
-[INFO ] 2025-04-08 18:36:36.899 [main] Log - Expected Result:GO button clicked 
-[INFO ] 2025-04-08 18:36:41.281 [main] Log - Warning Validation Popup window
-[INFO ] 2025-04-08 18:38:43.327 [main] Log - Interest Payment Details - Grid Check
-[INFO ] 2025-04-08 18:38:48.810 [main] Log - Step:01 - Enter duration.1 
-[INFO ] 2025-04-08 18:38:51.316 [main] Log - Step:02 -Select duration mode eg:months 
-[INFO ] 2025-04-08 18:38:55.629 [main] Log - Step:03 - Click Add button.
-[INFO ] 2025-04-08 18:38:56.677 [main] Log - Expected Result:Interest payment details are added to the grid. 
-[INFO ] 2025-04-08 18:38:56.735 [main] Log - Enter Valid Account Number
-[INFO ] 2025-04-08 18:38:59.865 [main] Log - Enter  Account Number
-[INFO ] 2025-04-08 18:39:01.271 [main] Log - Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. 
-[INFO ] 2025-04-08 18:39:01.271 [main] Log - Expected Result:Account number is accepted. 
-[INFO ] 2025-04-08 18:39:05.649 [main] Log - Display All Accounts - Checkbox
-[INFO ] 2025-04-08 18:39:05.649 [main] Log - Step:01 - Click the 'Go' button. 
-[INFO ] 2025-04-08 18:39:05.649 [main] Log - Expected Result:GO button clicked 
-[INFO ] 2025-04-08 18:39:10.037 [main] Log - Warning Validation Popup window
-[INFO ] 2025-04-08 18:41:12.084 [main] Log - Select Another Account for Interest Payment
-[INFO ] 2025-04-08 18:41:13.133 [main] Log - Step:01 - Select another account.
-[INFO ] 2025-04-08 18:41:18.572 [main] Log - Step:01 - Enter duration.1 
-[INFO ] 2025-04-08 18:41:21.134 [main] Log - Step:02 -Select duration mode eg:months 
-[INFO ] 2025-04-08 18:41:25.480 [main] Log - Step:03 - Click Add button.
-[INFO ] 2025-04-08 18:41:25.480 [main] Log - Expected Result: Interest payment details are updated for another account.
-[INFO ] 2025-04-08 18:41:25.543 [main] Log - Submit Payment - Cash Mode
-[INFO ] 2025-04-08 18:41:27.932 [main] Log - Step:01 - Select trans.mode as 'cash'. 
-[INFO ] 2025-04-08 18:41:27.933 [main] Log - Step:02 -Click Submit button. 
-[INFO ] 2025-04-08 18:41:27.933 [main] Log - Expected Result:Payment details are submitted successfully. 
-[INFO ] 2025-04-08 18:41:27.994 [main] Log - Debit Transaction Posted
-[INFO ] 2025-04-08 18:41:32.581 [main] Log - Step: 1 -Click on the POST DEBIT button.
-[INFO ] 2025-04-08 18:41:32.581 [main] Log - Expected Result:Auto posting popup window will be display .
-[INFO ] 2025-04-08 18:41:32.644 [main] Log - Searched for Account Number
-[INFO ] 2025-04-08 18:41:35.293 [main] Log - Step:02 -Select a product group.
-[INFO ] 2025-04-08 18:41:37.649 [main] Log - Step:02 -Select a product name.
-[INFO ] 2025-04-08 18:41:37.650 [main] Log - Expected Result:Possible to select the product group and product name 
-[INFO ] 2025-04-08 18:41:37.718 [main] Log - Account Number Selected
-[INFO ] 2025-04-08 18:41:38.787 [main] Log - Step: 1 - 1. Give account number as '3'.
-[INFO ] 2025-04-08 18:41:38.788 [main] Log - Expected Result: Given account number details will be display.
-[INFO ] 2025-04-08 18:41:39.944 [main] Log - Transaction Amount Added
-[INFO ] 2025-04-08 18:41:39.945 [main] Log - Step: 1 - Enter amount.
-[INFO ] 2025-04-08 18:41:44.256 [main] Log - Step: 2 - Click ADD.
-[INFO ] 2025-04-08 18:41:44.257 [main] Log - Expected Result:Amount and details is added in the grid in the auto posting popup window  .
-[INFO ] 2025-04-08 18:41:44.317 [main] Log - Transaction Amount Added
-[INFO ] 2025-04-08 18:41:48.682 [main] Log - Step: 1 - Enter submit in the auto posting popu window .
-[INFO ] 2025-04-08 18:41:48.702 [main] Log - Expected Result:Details is added and auto posting popu window closes .
-[INFO ] 2025-04-08 18:41:49.807 [main] Log - Submitted Transaction Window
-[INFO ] 2025-04-08 18:41:54.122 [main] Log - Step: 1 - Click Submit button.
-[INFO ] 2025-04-08 18:41:54.122 [main] Log - Expected Result: User navigates to the summary page.
-[INFO ] 2025-04-08 18:41:54.214 [main] Log - Logged out from application.
-[INFO ] 2025-04-08 18:41:58.776 [main] Log - Step:1 - Click Logout Option.
-[INFO ] 2025-04-08 18:41:58.777 [main] Log - Expected Result: Login page will be displayed
-[INFO ] 2025-04-08 18:42:08.271 [main] Log - Login with Another User
-[INFO ] 2025-04-08 18:42:08.272 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-04-08 18:42:08.307 [main] Log - Expected Result: Logging successfull with another user
-[INFO ] 2025-04-08 18:42:08.369 [main] Log - Manager authorization
-[INFO ] 2025-04-08 18:42:08.370 [main] Log - Step:01 - Click the authoirze & Cancel module from the taskbar 
-[INFO ] 2025-04-08 18:42:12.788 [main] Log - Step:02 - Click Manager authorisation Submodule
-[INFO ] 2025-04-08 18:42:12.789 [main] Log - Manager authorization window will be display
-[INFO ] 2025-04-08 18:42:12.789 [main] Log - User successfully logged in
-[INFO ] 2025-04-08 18:42:17.115 [main] Log - Step: 1 -Click the Transfer tab  .
-[INFO ] 2025-04-08 18:42:17.116 [main] Log - Expected Result: Transfer tab will be display.
-[INFO ] 2025-04-08 18:42:17.182 [main] Log - User is logged in Manager authorization
-[INFO ] 2025-04-08 18:42:21.507 [main] Log - Step:01 - Click the Refresh tab
-[INFO ] 2025-04-08 18:42:21.508 [main] Log - Tranacation entry will be display after clicking the refresh button
-[INFO ] 2025-04-08 18:42:31.248 [main] Log - User successfully logged in
-[INFO ] 2025-04-08 18:42:35.570 [main] Log - Step: 1 -1.Select the checbox of transaction suspense Asset transaction .
-[INFO ] 2025-04-08 18:42:35.571 [main] Log - Expected Result: Possible to select the transaction entry and selected entry is hghlighted.
-[INFO ] 2025-04-08 18:42:35.629 [main] Log - cashier authorization
-[INFO ] 2025-04-08 18:42:39.957 [main] Log - Step:01 - Click Authorise button
-[INFO ] 2025-04-08 18:42:39.958 [main] Log - Transaction entry is authorised
-[INFO ] 2025-04-08 18:42:39.958 [main] Log - Logged out from application.
-[INFO ] 2025-04-08 18:42:48.714 [main] Log - Step:1 - Click Logout Option.
-[INFO ] 2025-04-08 18:42:48.714 [main] Log - Expected Result: Login page will be displayed
+[INFO ] 2025-04-15 10:29:53.586 [main] Log -  Running test method Multiple Fd_Cash_and_transfer...
+[INFO ] 2025-04-15 10:29:57.016 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-15 10:29:58.299 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-15 10:30:00.552 [main] Log - PC Registration
+[INFO ] 2025-04-15 10:30:01.639 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-15 10:30:04.087 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-15 10:30:05.149 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-15 10:30:09.515 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-15 10:30:11.549 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-15 10:30:11.642 [main] Log - Valid Login
+[INFO ] 2025-04-15 10:30:12.702 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-15 10:30:13.776 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-15 10:30:23.458 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-15 10:30:24.547 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-15 10:30:25.628 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-15 10:30:25.721 [main] Log - Navigate to Multiple FD Interest Payment
+[INFO ] 2025-04-15 10:30:30.039 [main] Log - Step:01 - Navigate to Transactions..
+[INFO ] 2025-04-15 10:30:34.665 [main] Log - Step:02 - Select Multiple FD Interest Payment..
+[INFO ] 2025-04-15 10:30:34.666 [main] Log - Expected Result: The Multiple FD Interest Payment window is displayed.
+[INFO ] 2025-04-15 10:30:34.771 [main] Log - Select Product Group - Fixed Deposit
+[INFO ] 2025-04-15 10:30:37.183 [main] Log - Step:01 - Open Product Group dropdown
+[INFO ] 2025-04-15 10:30:37.184 [main] Log - Step:02 -Select Fixed Deposit 
+[INFO ] 2025-04-15 10:30:37.184 [main] Log - Expected Result: 'Fixed Deposit' is selected in the Product Group dropdown.
+[INFO ] 2025-04-15 10:30:37.287 [main] Log - Select Product name - Fixed Deposit
+[INFO ] 2025-04-15 10:30:39.728 [main] Log - Step:01 - Open Product name dropdown
+[INFO ] 2025-04-15 10:30:39.730 [main] Log - Step:02 -Select Fixed Deposit 
+[INFO ] 2025-04-15 10:30:39.730 [main] Log - Expected Result: 'Fixed Deposit' is selected in the Product name dropdown.
+[INFO ] 2025-04-15 10:30:39.830 [main] Log - Enter Valid Account Number
+[INFO ] 2025-04-15 10:30:39.830 [main] Log - Enter  Account Number
+[INFO ] 2025-04-15 10:30:41.540 [main] Log - Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. 
+[INFO ] 2025-04-15 10:30:41.540 [main] Log - Expected Result:Account number is accepted. 
+[INFO ] 2025-04-15 10:30:41.628 [main] Log - Display All Accounts - Checkbox
+[INFO ] 2025-04-15 10:30:45.961 [main] Log - Step:01 -Tick the 'Display all accounts' checkbox. 
+[INFO ] 2025-04-15 10:30:50.323 [main] Log - Step:02-Click the 'Go' button. 
+[INFO ] 2025-04-15 10:30:50.324 [main] Log - Expected Result:A list of account numbers that match the criteria are displayed. 
+[INFO ] 2025-04-15 10:30:50.410 [main] Log - Display All Accounts - Checkbox
+[INFO ] 2025-04-15 10:30:50.411 [main] Log - Step:01 - Click the 'Go' button. 
+[INFO ] 2025-04-15 10:30:50.411 [main] Log - Expected Result:GO button clicked 
+[INFO ] 2025-04-15 10:30:54.818 [main] Log - Warning Validation Popup window
+[INFO ] 2025-04-15 10:32:56.862 [main] Log - Interest Payment Details - Grid Check
+[INFO ] 2025-04-15 10:33:02.305 [main] Log - Step:01 - Enter duration.1 
+[INFO ] 2025-04-15 10:33:04.659 [main] Log - Step:02 -Select duration mode eg:months 
+[INFO ] 2025-04-15 10:33:10.010 [main] Log - Step:03 - Click Add button.
+[INFO ] 2025-04-15 10:33:11.058 [main] Log - Expected Result:Interest payment details are added to the grid. 
+[INFO ] 2025-04-15 10:33:11.107 [main] Log - Enter Valid Account Number
+[INFO ] 2025-04-15 10:33:14.219 [main] Log - Enter  Account Number
+[INFO ] 2025-04-15 10:33:15.771 [main] Log - Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. 
+[INFO ] 2025-04-15 10:33:15.771 [main] Log - Expected Result:Account number is accepted. 
+[INFO ] 2025-04-15 10:33:20.131 [main] Log - Display All Accounts - Checkbox
+[INFO ] 2025-04-15 10:33:20.132 [main] Log - Step:01 - Click the 'Go' button. 
+[INFO ] 2025-04-15 10:33:20.132 [main] Log - Expected Result:GO button clicked 
+[INFO ] 2025-04-15 10:33:24.532 [main] Log - Warning Validation Popup window
+[INFO ] 2025-04-15 10:35:26.562 [main] Log - Select Another Account for Interest Payment
+[INFO ] 2025-04-15 10:35:27.610 [main] Log - Step:01 - Select another account.
+[INFO ] 2025-04-15 10:35:33.036 [main] Log - Step:01 - Enter duration.1 
+[INFO ] 2025-04-15 10:35:35.604 [main] Log - Step:02 -Select duration mode eg:months 
+[INFO ] 2025-04-15 10:35:41.013 [main] Log - Step:03 - Click Add button.
+[INFO ] 2025-04-15 10:35:41.014 [main] Log - Expected Result: Interest payment details are updated for another account.
+[INFO ] 2025-04-15 10:35:41.114 [main] Log - Submit Payment - Cash Mode
+[INFO ] 2025-04-15 10:35:43.514 [main] Log - Step:01 - Select trans.mode as 'cash'. 
+[INFO ] 2025-04-15 10:35:43.516 [main] Log - Step:02 -Click Submit button. 
+[INFO ] 2025-04-15 10:35:43.517 [main] Log - Expected Result:Payment details are submitted successfully. 
+[INFO ] 2025-04-15 10:35:43.619 [main] Log - Verify Submission Summary
+[INFO ] 2025-04-15 10:35:47.947 [main] Log - Step:01 -Verify the summary of the transaction. 
+[INFO ] 2025-04-15 10:35:47.948 [main] Log - Expected Result: Summary matches the transaction details entered.
+[INFO ] 2025-04-15 10:35:48.064 [main] Log - Logged out from application.
+[INFO ] 2025-04-15 10:35:52.713 [main] Log - Step:1 - Click Logout Option.
+[INFO ] 2025-04-15 10:35:52.714 [main] Log - Expected Result: Login page will be displayed
+[INFO ] 2025-04-15 10:36:02.230 [main] Log - Login with Another User
+[INFO ] 2025-04-15 10:36:02.231 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-15 10:36:02.278 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-04-15 10:36:02.357 [main] Log - Manager authorization
+[INFO ] 2025-04-15 10:36:06.689 [main] Log - Step:01 - Click the authoirze & Cancel module from the taskbar 
+[INFO ] 2025-04-15 10:36:11.336 [main] Log - Step:02 - Click Manager authorisation Submodule
+[INFO ] 2025-04-15 10:36:11.336 [main] Log - Manager authorization window will be display
+[INFO ] 2025-04-15 10:36:11.337 [main] Log - User is logged in Manager authorization
+[INFO ] 2025-04-15 10:36:15.708 [main] Log - Step:01 - Click the Refresh tab
+[INFO ] 2025-04-15 10:36:15.708 [main] Log - Tranacation entry will be display after clicking the refresh button
+[INFO ] 2025-04-15 10:36:25.525 [main] Log - User is logged in Manager authorization
+[INFO ] 2025-04-15 10:36:29.811 [main] Log - Step:01 -Select the checbox of   transaction   
+[INFO ] 2025-04-15 10:36:29.811 [main] Log - Possible to select the entry and selected entry is hghlighted
+[INFO ] 2025-04-15 10:36:29.812 [main] Log - cashier authorization
+[INFO ] 2025-04-15 10:36:34.098 [main] Log - Step:01 - Click Authorise button
+[INFO ] 2025-04-15 10:36:34.099 [main] Log - Transaction entry is authorised
+[INFO ] 2025-04-15 10:36:34.099 [main] Log - cashier authorization
+[INFO ] 2025-04-15 10:36:38.650 [main] Log - Step:01 -Click the authoirze & Cancel module from the taskbar 
+[INFO ] 2025-04-15 10:36:38.651 [main] Log - Step:02 - Click cashier authorisation Submodule 
+[INFO ] 2025-04-15 10:36:38.652 [main] Log - Cashier authorization window will be display
+[INFO ] 2025-04-15 10:36:38.652 [main] Log - cashier authorization
+[INFO ] 2025-04-15 10:36:42.997 [main] Log - Step:01 - Click the Refresh tab 
+[INFO ] 2025-04-15 10:36:42.998 [main] Log - Transaction entry will be diaply after clicking the refresh button
+[INFO ] 2025-04-15 10:36:52.737 [main] Log - cashier authorization
+[INFO ] 2025-04-15 10:36:57.052 [main] Log - Step:01 - Select the checbox of transaction 
+[INFO ] 2025-04-15 10:36:57.053 [main] Log - Possible to select the transaction entry and selected entry is hghlighted
+[INFO ] 2025-04-15 10:36:57.053 [main] Log - User is on Cashier authorisation windowv
+[INFO ] 2025-04-15 10:37:01.358 [main] Log - Step:01 - Click Authorise button 
+[INFO ] 2025-04-15 10:37:01.358 [main] Log - Transaction entry is authorised
+[INFO ] 2025-04-15 10:37:01.359 [main] Log - Logged out from application.
+[INFO ] 2025-04-15 10:37:10.218 [main] Log - Step:1 - Click Logout Option.
+[INFO ] 2025-04-15 10:37:10.219 [main] Log - Expected Result: Login page will be displayed
+[INFO ] 2025-04-15 10:37:10.306 [main] Log - Valid Login
+[INFO ] 2025-04-15 10:37:11.362 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-15 10:37:12.413 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-15 10:37:17.292 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-15 10:37:18.369 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-15 10:37:19.463 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-15 10:37:19.545 [main] Log - Navigate to Multiple FD Interest Payment
+[INFO ] 2025-04-15 10:37:19.545 [main] Log - Step:01 - Navigate to Transactions..
+[INFO ] 2025-04-15 10:37:24.306 [main] Log - Step:02 - Select Multiple FD Interest Payment..
+[INFO ] 2025-04-15 10:37:24.308 [main] Log - Expected Result: The Multiple FD Interest Payment window is displayed.
+[INFO ] 2025-04-15 10:37:24.395 [main] Log - Select Product Group - Fixed Deposit
+[INFO ] 2025-04-15 10:37:26.808 [main] Log - Step:01 - Open Product Group dropdown
+[INFO ] 2025-04-15 10:37:26.809 [main] Log - Step:02 -Select Fixed Deposit 
+[INFO ] 2025-04-15 10:37:26.809 [main] Log - Expected Result: 'Fixed Deposit' is selected in the Product Group dropdown.
+[INFO ] 2025-04-15 10:37:26.879 [main] Log - Select Product name - Fixed Deposit
+[INFO ] 2025-04-15 10:37:29.278 [main] Log - Step:01 - Open Product name dropdown
+[INFO ] 2025-04-15 10:37:29.279 [main] Log - Step:02 -Select Fixed Deposit 
+[INFO ] 2025-04-15 10:37:29.280 [main] Log - Expected Result: 'Fixed Deposit' is selected in the Product name dropdown.
+[INFO ] 2025-04-15 10:37:29.364 [main] Log - Enter Valid Account Number
+[INFO ] 2025-04-15 10:37:29.364 [main] Log - Enter  Account Number
+[INFO ] 2025-04-15 10:37:30.942 [main] Log - Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. 
+[INFO ] 2025-04-15 10:37:30.942 [main] Log - Expected Result:Account number is accepted. 
+[INFO ] 2025-04-15 10:37:31.016 [main] Log - Display All Accounts - Checkbox
+[INFO ] 2025-04-15 10:37:35.352 [main] Log - Step:01 -Tick the 'Display all accounts' checkbox. 
+[INFO ] 2025-04-15 10:37:39.708 [main] Log - Step:02-Click the 'Go' button. 
+[INFO ] 2025-04-15 10:37:39.709 [main] Log - Expected Result:A list of account numbers that match the criteria are displayed. 
+[INFO ] 2025-04-15 10:37:39.807 [main] Log - Display All Accounts - Checkbox
+[INFO ] 2025-04-15 10:37:39.808 [main] Log - Step:01 - Click the 'Go' button. 
+[INFO ] 2025-04-15 10:37:39.810 [main] Log - Expected Result:GO button clicked 
+[INFO ] 2025-04-15 10:37:44.242 [main] Log - Warning Validation Popup window
+[INFO ] 2025-04-15 10:39:46.286 [main] Log - Interest Payment Details - Grid Check
+[INFO ] 2025-04-15 10:39:51.740 [main] Log - Step:01 - Enter duration.1 
+[INFO ] 2025-04-15 10:39:54.225 [main] Log - Step:02 -Select duration mode eg:months 
+[INFO ] 2025-04-15 10:39:59.568 [main] Log - Step:03 - Click Add button.
+[INFO ] 2025-04-15 10:40:00.620 [main] Log - Expected Result:Interest payment details are added to the grid. 
+[INFO ] 2025-04-15 10:40:00.687 [main] Log - Enter Valid Account Number
+[INFO ] 2025-04-15 10:40:03.856 [main] Log - Enter  Account Number
+[INFO ] 2025-04-15 10:40:05.434 [main] Log - Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. 
+[INFO ] 2025-04-15 10:40:05.434 [main] Log - Expected Result:Account number is accepted. 
+[INFO ] 2025-04-15 10:40:09.845 [main] Log - Display All Accounts - Checkbox
+[INFO ] 2025-04-15 10:40:09.845 [main] Log - Step:01 - Click the 'Go' button. 
+[INFO ] 2025-04-15 10:40:09.846 [main] Log - Expected Result:GO button clicked 
+[INFO ] 2025-04-15 10:40:14.267 [main] Log - Warning Validation Popup window
+[INFO ] 2025-04-15 10:42:16.301 [main] Log - Select Another Account for Interest Payment
+[INFO ] 2025-04-15 10:42:17.359 [main] Log - Step:01 - Select another account.
+[INFO ] 2025-04-15 10:42:22.760 [main] Log - Step:01 - Enter duration.1 
+[INFO ] 2025-04-15 10:42:25.303 [main] Log - Step:02 -Select duration mode eg:months 
+[INFO ] 2025-04-15 10:42:29.723 [main] Log - Step:03 - Click Add button.
+[INFO ] 2025-04-15 10:42:29.723 [main] Log - Expected Result: Interest payment details are updated for another account.
+[INFO ] 2025-04-15 10:42:29.801 [main] Log - Submit Payment - Cash Mode
+[INFO ] 2025-04-15 10:42:32.216 [main] Log - Step:01 - Select trans.mode as 'cash'. 
+[INFO ] 2025-04-15 10:42:32.217 [main] Log - Step:02 -Click Submit button. 
+[INFO ] 2025-04-15 10:42:32.218 [main] Log - Expected Result:Payment details are submitted successfully. 
+[INFO ] 2025-04-15 10:42:32.304 [main] Log - Debit Transaction Posted
+[INFO ] 2025-04-15 10:42:36.889 [main] Log - Step: 1 -Click on the POST DEBIT button.
+[INFO ] 2025-04-15 10:42:36.889 [main] Log - Expected Result:Auto posting popup window will be display .
+[INFO ] 2025-04-15 10:42:36.967 [main] Log - Searched for Account Number
+[INFO ] 2025-04-15 10:42:39.634 [main] Log - Step:02 -Select a product group.
+[INFO ] 2025-04-15 10:42:41.980 [main] Log - Step:02 -Select a product name.
+[INFO ] 2025-04-15 10:42:41.981 [main] Log - Expected Result:Possible to select the product group and product name 
+[INFO ] 2025-04-15 10:42:42.054 [main] Log - Account Number Selected
+[INFO ] 2025-04-15 10:42:43.123 [main] Log - Step: 1 - 1. Give account number as '3'.
+[INFO ] 2025-04-15 10:42:43.123 [main] Log - Expected Result: Given account number details will be display.
+[INFO ] 2025-04-15 10:42:44.266 [main] Log - Transaction Amount Added
+[INFO ] 2025-04-15 10:42:44.267 [main] Log - Step: 1 - Enter amount.
+[INFO ] 2025-04-15 10:42:48.588 [main] Log - Step: 2 - Click ADD.
+[INFO ] 2025-04-15 10:42:48.588 [main] Log - Expected Result:Amount and details is added in the grid in the auto posting popup window  .
+[INFO ] 2025-04-15 10:42:48.670 [main] Log - Transaction Amount Added
+[INFO ] 2025-04-15 10:42:52.990 [main] Log - Step: 1 - Enter submit in the auto posting popu window .
+[INFO ] 2025-04-15 10:42:53.008 [main] Log - Expected Result:Details is added and auto posting popu window closes .
+[INFO ] 2025-04-15 10:42:54.147 [main] Log - Submitted Transaction Window
+[INFO ] 2025-04-15 10:42:58.502 [main] Log - Step: 1 - Click Submit button.
+[INFO ] 2025-04-15 10:42:58.502 [main] Log - Expected Result: User navigates to the summary page.
+[INFO ] 2025-04-15 10:42:58.576 [main] Log - Logged out from application.
+[INFO ] 2025-04-15 10:43:03.099 [main] Log - Step:1 - Click Logout Option.
+[INFO ] 2025-04-15 10:43:03.100 [main] Log - Expected Result: Login page will be displayed
+[INFO ] 2025-04-15 10:43:12.758 [main] Log - Login with Another User
+[INFO ] 2025-04-15 10:43:12.759 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-15 10:43:12.801 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-04-15 10:43:12.871 [main] Log - Manager authorization
+[INFO ] 2025-04-15 10:43:12.871 [main] Log - Step:01 - Click the authoirze & Cancel module from the taskbar 
+[INFO ] 2025-04-15 10:43:17.353 [main] Log - Step:02 - Click Manager authorisation Submodule
+[INFO ] 2025-04-15 10:43:17.353 [main] Log - Manager authorization window will be display
+[INFO ] 2025-04-15 10:43:17.353 [main] Log - User successfully logged in
+[INFO ] 2025-04-15 10:43:21.702 [main] Log - Step: 1 -Click the Transfer tab  .
+[INFO ] 2025-04-15 10:43:21.702 [main] Log - Expected Result: Transfer tab will be display.
+[INFO ] 2025-04-15 10:43:21.781 [main] Log - User is logged in Manager authorization
+[INFO ] 2025-04-15 10:43:26.127 [main] Log - Step:01 - Click the Refresh tab
+[INFO ] 2025-04-15 10:43:26.128 [main] Log - Tranacation entry will be display after clicking the refresh button
+[INFO ] 2025-04-15 10:43:35.851 [main] Log - User successfully logged in
+[INFO ] 2025-04-15 10:43:40.194 [main] Log - Step: 1 -1.Select the checbox of transaction suspense Asset transaction .
+[INFO ] 2025-04-15 10:43:40.195 [main] Log - Expected Result: Possible to select the transaction entry and selected entry is hghlighted.
+[INFO ] 2025-04-15 10:43:40.269 [main] Log - cashier authorization
+[INFO ] 2025-04-15 10:43:44.603 [main] Log - Step:01 - Click Authorise button
+[INFO ] 2025-04-15 10:43:44.604 [main] Log - Transaction entry is authorised
+[INFO ] 2025-04-15 10:43:44.605 [main] Log - Logged out from application.
+[INFO ] 2025-04-15 10:43:53.400 [main] Log - Step:1 - Click Logout Option.
+[INFO ] 2025-04-15 10:43:53.401 [main] Log - Expected Result: Login page will be displayed
