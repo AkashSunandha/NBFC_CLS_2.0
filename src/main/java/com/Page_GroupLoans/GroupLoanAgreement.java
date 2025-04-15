@@ -1,5 +1,8 @@
 package com.Page_GroupLoans;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import com.BasePackage.Base_Class;
 import com.Page_Repositary.PageRepositary_GroupLoans_GroupLoanAgreement;
 import com.Page_Repositary.PageRepositary_GroupLoans_GroupLoanApplication;
@@ -8,7 +11,8 @@ import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
 public class GroupLoanAgreement extends Base_Class{
-
+	By lastSelectXPath;
+	int lastRow;
 	PageRepositary_GroupLoans_GroupLoanAgreement grpLoanAgrRegRepo = new PageRepositary_GroupLoans_GroupLoanAgreement();
 
 	public void groupLoanAgreement() throws InterruptedException {
@@ -136,8 +140,33 @@ public void groupInfo() throws InterruptedException {
 		//Click 'Select' to View Customer List
 		ExtentTestManager.startTest("Click 'Select' to View Customer List");
 		Log.info("Click 'Select' to View Customer List");
-				
-		click(grpLoanAgrRegRepo.alSelectBtn);
+		
+	       WebElement table = driver.findElement(By.xpath("//*[@id=\"tblLoanAgreement\"]"));
+	       
+	        // Find all <tr> elements in the table
+	        java.util.List<WebElement> rows = table.findElements(By.tagName("tr"));
+	 	        
+	        // Output the number of <tr> tags
+	        System.out.println("Number of rows in the table: " + rows.size());
+	        lastRow = rows.size();
+	        System.out.println("lastRow: " + lastRow);
+	        
+	        if(lastRow>1) {
+	        	lastRow=lastRow-2;
+	        	System.out.println("updatedlastRow:" + lastRow);
+	        if(lastRow<10) {
+			String xpath = "//*[@id='ctl00_ctl00_CPH1_PRDCNT_lstLoanAgreement_ctrl"+ lastRow +"_lnkSelect']";
+			lastSelectXPath = By.xpath(xpath);
+	        }else {
+				String xpath = "//*[@id='ctl00_ctl00_CPH1_PRDCNT_lstLoanAgreement_ctrl"+ lastRow +"_lnkSelect']";
+				lastSelectXPath = By.xpath(xpath);
+	        }
+	        }
+	        else {
+	        	
+	        }
+	        
+		click(lastSelectXPath);
 		ExtentTestManager.getTest().log(Status.PASS, "1. Click on 'Select' button next to an application number.");
 		Log.info("1. Click on 'Select' button next to an application number.");
 		
@@ -218,6 +247,8 @@ public void groupInfo() throws InterruptedException {
 		}
 		
 		ExtentTestManager.endTest();
+		
+
 	}//end
 
 

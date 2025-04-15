@@ -1,4 +1,4 @@
-package com.test.Transaction;
+package com.test.GroupLoans;
 
 import java.io.IOException;
 import java.util.Map;
@@ -9,17 +9,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
-import com.Page_AccountOpening.GeneralOpening_SuspenseAsset;
-import com.Page_AccountOpening.LoanOpening_DepositOpn_DepositLoan;
-import com.Page_AccountOpening.LoanOpening_LoanAndAdvances_PersonalLoanWeekly;
-import com.Page_Transaction.Transaction_OtherLoanTransaction_Charges;
+import com.Page_GroupLoans.GroupLoanPayment;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_OtherLoanTransaction_Charges_CASH {
+public class AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER {
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -27,12 +24,12 @@ public class AllScenarios_OtherLoanTransaction_Charges_CASH {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	Transaction_OtherLoanTransaction_Charges loanChrgMths = new Transaction_OtherLoanTransaction_Charges();
+	GroupLoanPayment grpLoanCollMths = new GroupLoanPayment();
 	
 	
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("LoanChargePosting");
+		ExcelReader = new com.Utility.ExcelReader("GroupLoanCollection");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -41,11 +38,11 @@ public class AllScenarios_OtherLoanTransaction_Charges_CASH {
 	
 	
 	@Test(dataProvider = "TestData")
-	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
+	public void groupLoanCollection_CASH(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("OtherLoanTransaction_Charges_CASH");
-				Log.info("OtherLoanTransaction_Charges_CASH");
+				ExtentTestManager.startTest("GroupLoans_GroupLoanCollection_TRANSFER");
+				Log.info("GroupLoans_GroupLoanCollection_TRANSFER");
 				context.setAttribute("fileName", "Login");
 
 				//TC No. - 01 --> Application launch
@@ -58,17 +55,7 @@ public class AllScenarios_OtherLoanTransaction_Charges_CASH {
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
-				loanChrgMths.navigateToLoanChargePosting();
-				
-				loanChrgMths.loanChargePosting(testdata, context);
 
-				loanChrgMths.transaction(testdata, context);
-
-				loanChrgMths.selectTransModeAsCash();
-
-				loanChrgMths.submitTrans(testdata, context);
-
-				loanChrgMths.authorizeCash();
 
 				custSrchMthds.logout();
 
@@ -100,5 +87,4 @@ public class AllScenarios_OtherLoanTransaction_Charges_CASH {
 		}
 		return objectarry;
 	}
-	
 }

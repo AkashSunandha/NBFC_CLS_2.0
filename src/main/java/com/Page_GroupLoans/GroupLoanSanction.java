@@ -1,5 +1,8 @@
 package com.Page_GroupLoans;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import com.BasePackage.Base_Class;
 import com.Page_Repositary.PageRepositary_GroupLoans_GroupLoanAgreement;
 import com.Page_Repositary.PageRepositary_GroupLoans_GroupLoanSanction;
@@ -8,6 +11,8 @@ import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
 public class GroupLoanSanction extends Base_Class{
+	By lastSelectXPath;
+	int lastRow;
 
 	PageRepositary_GroupLoans_GroupLoanSanction grpLoanSactRepo = new PageRepositary_GroupLoans_GroupLoanSanction();
 
@@ -87,7 +92,7 @@ public class GroupLoanSanction extends Base_Class{
 
 		
 		
-		//Select Group from Dropdown
+		//Select Group from Drop down
 		ExtentTestManager.startTest("Select Group from Dropdown");
 		Log.info("Select Group from Dropdown");
 		
@@ -137,7 +142,35 @@ public class GroupLoanSanction extends Base_Class{
 		ExtentTestManager.startTest("Display Application Details");
 		Log.info("Display Application Details");
 				
-		click(grpLoanSactRepo.gdSelect);
+		
+	       WebElement table = driver.findElement(By.xpath("//*[@id=\"tblLoanApplications\"]"));
+	       
+	        // Find all <tr> elements in the table
+	        java.util.List<WebElement> rows = table.findElements(By.tagName("tr"));
+	 	        
+	        // Output the number of <tr> tags
+	        System.out.println("Number of rows in the table: " + rows.size());
+	        lastRow = rows.size();
+	        System.out.println("lastRow: " + lastRow);
+	        
+	        if(lastRow>1) {
+	        	lastRow=lastRow-2;
+	        	System.out.println("updatedlastRow:" + lastRow);
+	        
+	        if(lastRow<10) {
+			String xpath = "//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstLoanApplications_ctrl"+ lastRow +"_lnkSelect\"]";
+			lastSelectXPath = By.xpath(xpath);
+	        }else {
+				String xpath = "//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstLoanApplications_ctrl"+ lastRow +"_lnkSelect\"]";
+				lastSelectXPath = By.xpath(xpath);
+	        }
+	        }
+	        else {
+	        	
+	        }
+	        ScrollUntilElementVisible(lastSelectXPath);
+
+		click(lastSelectXPath);
 		ExtentTestManager.getTest().log(Status.PASS, "1. Click the 'Select' button for an application");
 		Log.info("1. Click the 'Select' button for an application");
 		

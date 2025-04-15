@@ -146,7 +146,6 @@ public class GroupLoanApplication extends Base_Class{
 	
 	public void customerDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		
 		//Select Product from Product Name Dropdown
 		ExtentTestManager.startTest("Select Product from Product Name Dropdown");
 		Log.info("Select Product from Product Name Dropdown");
