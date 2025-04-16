@@ -18,7 +18,7 @@ public class PageRepositary_Debenture_Application {
 	//public By CustIDsearch = By.id("ctl00_ctl00_CPH1_PRDCNT_txtCustomerId_txt");
 	public By CustIDsearch = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td/div/table/tbody/tr[1]/td[6]/table/tbody/tr/td[2]/a/img");
 	public By CustName = By.id("PopQuick1_txtName");
-    public By Nature = By.id("ctl00_ctl00_CPH1_PRDCNT_ddlNature_ddl");
+    public By Nature = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ddlNature_ddl\"]//option[@selected='selected']");
     public By Add = By.id("ctl00_ctl00_CPH1_PRDCNT_btnAddCustomer");
     public By customersearch = By.id("PopQuick1_btnSearch");
     public By selectcustomer = By.id("PopQuick1_lst_ctrl0_linkSelect");
@@ -98,6 +98,8 @@ public class PageRepositary_Debenture_Application {
 				//Autoposting Window
 				public By TransactionBasedaccount = By.id("ddlTrnsBased_ddl");
 				public By Productgroup = By.id("ddlProductGroup_ddl");
+				public By ProductName = By.id("ddlProductName_ddl");
+				
 				
 				
     

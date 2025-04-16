@@ -113,9 +113,10 @@ public class Debenture_Application_Cashflow  extends Base_Class {
     	ExtentTestManager.startTest("Tc: 06 Verify Application Date Field");
     	  
     		  String Date = driver.findElement(DebApp.Date).getText();
+    		  String ApplicationDate = driver.findElement(DebApp.ApplicationDate).getAttribute("value");
     		  String Datevalue =dateConversion(Date);
 
-    		   if(!Date.equals(Datevalue)) {
+    		   if(ApplicationDate.equals(Datevalue)) {
     		  
     		  ExtentTestManager.getTest().log(Status.PASS, "Step:01 Observe the application date field ");
     	    	Log.info("Step:01 Observe the application date Field");
@@ -251,8 +252,9 @@ public class Debenture_Application_Cashflow  extends Base_Class {
     	ExtentTestManager.startTest("Tc: 14 Verify Nature Field");
     	  
     	  String nature = driver.findElement(DebApp.Nature).getText();
+    	 System.out.println("nature: " + nature);
     	 
-    	  if(!nature.equals("Single")) {
+    	  if(nature.equals("Single")) {
     		  ExtentTestManager.getTest().log(Status.PASS, "Step:01 Observe the Nature field ");
     	    	Log.info("Step:01 Observe the Nature Field");
     	    	
@@ -331,7 +333,7 @@ public class Debenture_Application_Cashflow  extends Base_Class {
     }
     
     //Click get value and Total value willbe calculated
-    public void Calculate_Total_Value() throws InterruptedException {
+    public void Calculate_Total_Value(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
     	ExtentTestManager.startTest("Tc:19 Calculate Total Value");
     	 
     	click (DebApp.GetValue);
@@ -339,17 +341,19 @@ public class Debenture_Application_Cashflow  extends Base_Class {
     	Log.info("Step:01 Click Get Button Value");
 
     	
-    	/*String unitValue = driver.findElement(DebApp.UnitValuetextbox).getAttribute("value");
+    	String unitValue = driver.findElement(DebApp.UnitValuetextbox).getAttribute("value");
 		double num1 = Double.parseDouble(unitValue);
 		
-		//String numOfUnits = null;
-		String noOfUnits = driver.findElement(DebApp.Noofunit).getAttribute("value");
-		double num2 = Double.parseDouble(noOfUnits);
+	
+		//String noOfUnits = driver.findElement(DebApp.Noofunit).getAttribute("value");
+		String numOfUnits = testdata.get("NoofUnit").toString();
+		double num2 = Double.parseDouble(numOfUnits);
 		
 		String totalValue = driver.findElement(DebApp.TotalValue).getAttribute("value");
 		double actualTotalValue = Double.parseDouble(totalValue);
-		
+		System.out.println("Actual Value: " +actualTotalValue);
 		double expectedTotalValue = num1*num2;
+		System.out.println("Expected Value: " +expectedTotalValue);
 		
 		if(actualTotalValue == expectedTotalValue) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Total value is correctly calculated and displayed");
@@ -357,7 +361,7 @@ public class Debenture_Application_Cashflow  extends Base_Class {
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		}*/
+		}
 		
     	ExtentTestManager.endTest();
     
@@ -435,15 +439,20 @@ public class Debenture_Application_Cashflow  extends Base_Class {
 			
 			 String ROIValue = driver.findElement(DebApp.ROI).getAttribute("value");
 				double num1 = Double.parseDouble(ROIValue);
-				double roiValue = num1%100;
+				double roiValue = num1/100;
+				System.out.println("roiValue: " + roiValue);
 				
-				double actualTotalValue = 0;
+				String totalValue = driver.findElement(DebApp.TotalValue).getAttribute("value");
+				double actualTotalValue = Double.parseDouble(totalValue);
+				System.out.println("Actual Value: " +actualTotalValue);
+			
 				double num2 = actualTotalValue*roiValue;
-				
 				double expectedMaturityValue = actualTotalValue+num2;
+				System.out.println("expectedMaturityVal: " +expectedMaturityValue);
 				
 				String maturityValue = driver.findElement(DebApp.MaturityValue).getAttribute("value");
 				double actualMaturityValue = Double.parseDouble(maturityValue);
+				System.out.println("Actualmaturityval: " +actualMaturityValue);
 				
 				if(actualMaturityValue == expectedMaturityValue) {
 					 ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Maturity value is calculated and displayed correctly");

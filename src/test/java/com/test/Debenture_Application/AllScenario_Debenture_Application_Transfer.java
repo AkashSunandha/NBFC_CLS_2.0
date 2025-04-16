@@ -95,7 +95,7 @@ public class AllScenario_Debenture_Application_Transfer {
 				DebApp.Validate_No_of_Units(testdata, context);
 				
 				//TC 19
-				DebApp.Calculate_Total_Value();
+				DebApp.Calculate_Total_Value(testdata, context);
 				
 				//TC 20
 				DebApp.Verify_Default_ROI();
@@ -137,8 +137,14 @@ public class AllScenario_Debenture_Application_Transfer {
 				//TC 35
 				DebApp.Enable_External_Account_click();
 				
+				//TC 36
+				DebApp.Submission_with_Transfer_transmode();
 				
+				//TC 37
+				DebApp.Verify_Loan_Submission_with_Transfer_Mode_postDebit();
 				
+				//TC 38
+				DebApp.Transactionbased_account();
 				
 				//Sign out
 				custSrchMthds.logout();

@@ -2,25 +2,25 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-15T21:40:06 IST" name="Default suite" finished-at="2025-04-15T21:44:23 IST" duration-ms="256572">
+  <suite started-at="2025-04-16T16:42:15 IST" name="Default suite" finished-at="2025-04-16T16:46:24 IST" duration-ms="249941">
     <groups>
     </groups>
-    <test started-at="2025-04-15T21:40:06 IST" name="Default test" finished-at="2025-04-15T21:44:23 IST" duration-ms="256572">
+    <test started-at="2025-04-16T16:42:15 IST" name="Default test" finished-at="2025-04-16T16:46:24 IST" duration-ms="249941">
       <class name="com.test.Debenture_Application.AllScenario_Debenture_Application_Cashflow">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Debenture_Application.AllScenario_Debenture_Application_Cashflow@1c3b9394]" started-at="2025-04-15T21:40:06 IST" name="reference" finished-at="2025-04-15T21:40:06 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Debenture_Application.AllScenario_Debenture_Application_Cashflow@7f6f61c8]" started-at="2025-04-16T16:42:15 IST" name="reference" finished-at="2025-04-16T16:42:15 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Debenture_Application.AllScenario_Debenture_Application_Cashflow@1c3b9394]" started-at="2025-04-15T21:40:07 IST" name="customerRegister" data-provider="TestData" finished-at="2025-04-15T21:44:23 IST" duration-ms="255814" status="PASS">
+        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Debenture_Application.AllScenario_Debenture_Application_Cashflow@7f6f61c8]" started-at="2025-04-16T16:42:15 IST" name="customerRegister" data-provider="TestData" finished-at="2025-04-16T16:46:24 IST" duration-ms="249204" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{CustID=102000000001, customerName=A, DematAccNo=32985342, NomineeName=I, NoofUnit=20, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Debenture_Application}]]>
+                <![CDATA[{CustID=102000000001, customerName=A, DematAccNo=923814321, NomineeName=I, NoofUnit=20, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Debenture_Application}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6f952d6c]]>
+                <![CDATA[org.testng.TestRunner@6d4a65c6]]>
               </value>
             </param>
           </params>

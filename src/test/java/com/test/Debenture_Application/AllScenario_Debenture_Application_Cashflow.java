@@ -40,7 +40,7 @@ public class AllScenario_Debenture_Application_Cashflow {
 	public void customerRegister( Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("Debenture_Application_Transfer");
+				ExtentTestManager.startTest("Debenture_Application_Cash");
 				Log.info("Debenture_Application_Cash");
 				context.setAttribute("fileName", "Login");
 //				ExtentTestManager.endTest();
@@ -95,7 +95,7 @@ public class AllScenario_Debenture_Application_Cashflow {
 				DebApp.Validate_No_of_Units(testdata, context);
 				
 				//TC 19
-				DebApp.Calculate_Total_Value();
+				DebApp.Calculate_Total_Value(testdata, context);
 				
 				//TC 20
 				DebApp.Verify_Default_ROI();

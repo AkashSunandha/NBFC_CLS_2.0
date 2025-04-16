@@ -106,14 +106,15 @@ public class Debenture_Application_Transferflow extends Base_Class{
 	    		  
 	    }
 	    
-	    //Observers Application Date Field
+	  //Observers Application Date Field
 	    public void Verify_Application_DateField() throws InterruptedException, ParseException, java.text.ParseException {
 	    	ExtentTestManager.startTest("Tc: 06 Verify Application Date Field");
 	    	  
 	    		  String Date = driver.findElement(DebApp.Date).getText();
+	    		  String ApplicationDate = driver.findElement(DebApp.ApplicationDate).getAttribute("value");
 	    		  String Datevalue =dateConversion(Date);
 
-	    		   if(!Date.equals(Datevalue)) {
+	    		   if(ApplicationDate.equals(Datevalue)) {
 	    		  
 	    		  ExtentTestManager.getTest().log(Status.PASS, "Step:01 Observe the application date field ");
 	    	    	Log.info("Step:01 Observe the application date Field");
@@ -132,6 +133,7 @@ public class Debenture_Application_Transferflow extends Base_Class{
 	    		 
 
 	}
+	    
 	    
 	    public void AddcustomerviacustID(Map<Object, Object> testdata, ITestContext context)throws ClassNotFoundException, InterruptedException {
 			ExtentTestManager.startTest("TC:07 Add Customer Via Cust ID");
@@ -249,8 +251,9 @@ public class Debenture_Application_Transferflow extends Base_Class{
 	    	ExtentTestManager.startTest("Tc: 14 Verify Nature Field");
 	    	  
 	    	  String nature = driver.findElement(DebApp.Nature).getText();
+	    	 System.out.println("nature: " + nature);
 	    	 
-	    	  if(!nature.equals("Single")) {
+	    	  if(nature.equals("Single")) {
 	    		  ExtentTestManager.getTest().log(Status.PASS, "Step:01 Observe the Nature field ");
 	    	    	Log.info("Step:01 Observe the Nature Field");
 	    	    	
@@ -267,7 +270,6 @@ public class Debenture_Application_Transferflow extends Base_Class{
 	    	ExtentTestManager.endTest();
 	    		  
 	    }
-	    
 	    public void Select_customer_Category() throws InterruptedException {
 	    	ExtentTestManager.startTest("Tc:15 Select customer category");
 	    	  select("Normal",DebApp.Category);
@@ -328,8 +330,8 @@ public class Debenture_Application_Transferflow extends Base_Class{
 
 	    }
 	    
-	    //Click get value and Total value willbe calculated
-	    public void Calculate_Total_Value() throws InterruptedException {
+	  //Click get value and Total value willbe calculated
+	    public void Calculate_Total_Value(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 	    	ExtentTestManager.startTest("Tc:19 Calculate Total Value");
 	    	 
 	    	click (DebApp.GetValue);
@@ -340,13 +342,16 @@ public class Debenture_Application_Transferflow extends Base_Class{
 	    	String unitValue = driver.findElement(DebApp.UnitValuetextbox).getAttribute("value");
 			double num1 = Double.parseDouble(unitValue);
 			
-			String numOfUnits = null;
+		
+			//String noOfUnits = driver.findElement(DebApp.Noofunit).getAttribute("value");
+			String numOfUnits = testdata.get("NoofUnit").toString();
 			double num2 = Double.parseDouble(numOfUnits);
 			
 			String totalValue = driver.findElement(DebApp.TotalValue).getAttribute("value");
 			double actualTotalValue = Double.parseDouble(totalValue);
-			
+			System.out.println("Actual Value: " +actualTotalValue);
 			double expectedTotalValue = num1*num2;
+			System.out.println("Expected Value: " +expectedTotalValue);
 			
 			if(actualTotalValue == expectedTotalValue) {
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Total value is correctly calculated and displayed");
@@ -357,8 +362,8 @@ public class Debenture_Application_Transferflow extends Base_Class{
 			}
 			
 	    	ExtentTestManager.endTest();
-
-	    }
+	    
+	    } 
 	    
 	    //TC  20 Verify DEfault ROI
 	    
@@ -425,34 +430,40 @@ public class Debenture_Application_Transferflow extends Base_Class{
 	    
 	    //TC  23 check matuirty value
 	    
-	  public void Calculate_Maturity_Value() throws InterruptedException {
-			 ExtentTestManager.startTest("TC:23 Calculate Maturity Value"); 
-				ExtentTestManager.getTest().log(Status.PASS, "Step:01 Check maturity Value field");
-				Log.info("Step:01 Check maturity value field");
-				
-				 String ROIValue = driver.findElement(DebApp.ROI).getAttribute("value");
-					double num1 = Double.parseDouble(ROIValue);
-					double roiValue = num1%100;
-					
-					double actualTotalValue = 0;
-					double num2 = actualTotalValue*roiValue;
-					
-					double expectedMaturityValue = actualTotalValue+num2;
-					
-					String maturityValue = driver.findElement(DebApp.MaturityValue).getAttribute("value");
-					double actualMaturityValue = Double.parseDouble(maturityValue);
-					
-					if(actualMaturityValue == expectedMaturityValue) {
-						 ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Maturity value is calculated and displayed correctly");
-							Log.info("Expected Result: Maturity value is calculated and displayed correctly");
+	    public void Calculate_Maturity_Value() throws InterruptedException {
+	  		 ExtentTestManager.startTest("TC:23 Calculate Maturity Value"); 
+	  			ExtentTestManager.getTest().log(Status.PASS, "Step:01 Check maturity Value field");
+	  			Log.info("Step:01 Check maturity value field");
+	  			
+	  			 String ROIValue = driver.findElement(DebApp.ROI).getAttribute("value");
+	  				double num1 = Double.parseDouble(ROIValue);
+	  				double roiValue = num1/100;
+	  				System.out.println("roiValue: " + roiValue);
+	  				
+	  				String totalValue = driver.findElement(DebApp.TotalValue).getAttribute("value");
+	  				double actualTotalValue = Double.parseDouble(totalValue);
+	  				System.out.println("Actual Value: " +actualTotalValue);
+	  			
+	  				double num2 = actualTotalValue*roiValue;
+	  				double expectedMaturityValue = actualTotalValue+num2;
+	  				System.out.println("expectedMaturityVal: " +expectedMaturityValue);
+	  				
+	  				String maturityValue = driver.findElement(DebApp.MaturityValue).getAttribute("value");
+	  				double actualMaturityValue = Double.parseDouble(maturityValue);
+	  				System.out.println("Actualmaturityval: " +actualMaturityValue);
+	  				
+	  				if(actualMaturityValue == expectedMaturityValue) {
+	  					 ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Maturity value is calculated and displayed correctly");
+	  						Log.info("Expected Result: Maturity value is calculated and displayed correctly");
 
-					}else {
-						ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-						Log.info("ERROR");
-					}
-					
-					ExtentTestManager.endTest();
-			 }
+	  				}else {
+	  					ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+	  					Log.info("ERROR");
+	  				}
+	  				
+	  				ExtentTestManager.endTest();
+	  		 }
+
 
 
 	    // TC 24 Observe interest pay mode
@@ -683,19 +694,31 @@ public class Debenture_Application_Transferflow extends Base_Class{
 			  		
 							ExtentTestManager.endTest();
 							
-					//GL name
+							//selecting Product Group dropdown
 							    ExtentTestManager.startTest("TC:39 - Verify Loan Submission with Transfer Mode select product group");
-							  //selecting Transaction_Based  dropdown
+							  
 							select("Demand Investment", DebApp.Productgroup);
-							        ExtentTestManager.getTest().log(Status.PASS, "Step:01  1.Select the GL Name from the drop down");
-									Log.info("Step:01  1.Select the GL Name from the drop down");
+							        ExtentTestManager.getTest().log(Status.PASS, "Step:01 Select Demant Investment from the 'product group' dropdown");
+									Log.info("Step:01 Select Demant Investment from the 'product group' dropdown");
 							        
-							  		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: GL code will be autoloads while selecting the GL Name");
-							  		Log.info("Expected Result: GL code will be autoloads while selecting the GL Name");
+							  		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Demant Investment is selected");
+							  		Log.info("Expected Resul: Demant Investment is selected");
 							  		
-							  		
+							 
 											ExtentTestManager.endTest();
 											
+											//selecting Product Name from the Dropdown
+										    ExtentTestManager.startTest("TC:40 - Verify Loan Submission with Transfer Mode select product group");
+											  
+											select("INV-DEMAND-CA", DebApp.ProductName);
+											        ExtentTestManager.getTest().log(Status.PASS, "Step:01 Select Demant Investment from the 'product group' dropdown");
+													Log.info("Step:01 Select Demant Investment from the 'product group' dropdown");
+											        
+											  		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Demant Investment is selected");
+											  		Log.info("Expected Resul: Demant Investment is selected");
+											  		
+											 
+															ExtentTestManager.endTest();
 				}						
 										
 				}
