@@ -20,6 +20,8 @@ import com.listeners.TestListener;
 
 public class AllScenarios_GLAccBulk_Trans_Imp_Transfer {
 	public String TransactionId;
+	public String NetAmount;
+	public String VoucherId;
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
@@ -69,7 +71,7 @@ public class AllScenarios_GLAccBulk_Trans_Imp_Transfer {
 				try {
 					AccessGLAccBlkTransImp = GLBlkTrnImpTransfer.AccessGLAccBlkTransImp();
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+					// TODO Auto-generated catch block 
 					e.printStackTrace();
 				}
 				ExtentTestManager.getTest().log(Status.PASS,"Attempt to navigate to GL A/C Bulk Transaction Import" + AccessGLAccBlkTransImp);
@@ -156,8 +158,163 @@ public class AllScenarios_GLAccBulk_Trans_Imp_Transfer {
 					e.printStackTrace();
 				}
 				ExtentTestManager.getTest().log(Status.PASS,"Select transaction based as GL Code." + GLCode);
-				ExtentTestManager.getTest().log(Status.PASS,"GL code related field will be display (GL name,GL code)" + GLCode);
+				ExtentTestManager.getTest().log(Status.PASS,"GL code related field will be display" + GLCode);
 				ExtentTestManager.endTest();
+				
+				
+				//TC010
+				ExtentTestManager.startTest("TC010 - Select GL Name");
+				//boolean MeansOfFinance = MeansOfFinance_Module.Navigatetomeansoffinance();
+				boolean GLName = true;
+				try {
+					GLName = GLBlkTrnImpTransfer.GLName();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				ExtentTestManager.getTest().log(Status.PASS,"Select GL name" + GLName);
+				ExtentTestManager.getTest().log(Status.PASS,"GL code will be autoloads while selecting the GL Name" + GLName);
+				ExtentTestManager.endTest();
+				
+				
+				
+				//TC011
+				ExtentTestManager.startTest("TC011 - Enter amount");
+				boolean EnterAmount = GLBlkTrnImpTransfer.EnterAmount();
+				ExtentTestManager.getTest().log(Status.PASS,"Enter Transaction Id and serach" + EnterAmount);
+				ExtentTestManager.getTest().log(Status.PASS,"Select checkbox of the transaction Id" +EnterAmount );
+				ExtentTestManager.endTest();
+			
+				
+				
+				//TC012
+				ExtentTestManager.startTest("TC012 - Add post debit");
+				//boolean MeansOfFinance = MeansOfFinance_Module.Navigatetomeansoffinance();
+				boolean AddPostDebitAmount = true;
+				try {
+					AddPostDebitAmount = GLBlkTrnImpTransfer.AddPostDebitAmount();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				ExtentTestManager.getTest().log(Status.PASS,"Add Amount" + AddPostDebitAmount);
+				ExtentTestManager.getTest().log(Status.PASS,"Th amount is accepted" + AddPostDebitAmount);
+				ExtentTestManager.endTest();
+				
+				
+				
+				//TC013
+				ExtentTestManager.startTest("TC013 - Submit post debit");
+				//boolean MeansOfFinance = MeansOfFinance_Module.Navigatetomeansoffinance();
+				boolean SubmitPostDebit = true;
+				try {
+					SubmitPostDebit = GLBlkTrnImpTransfer.SubmitPostDebit();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				ExtentTestManager.getTest().log(Status.PASS,"Submit post debit" + SubmitPostDebit);
+				ExtentTestManager.getTest().log(Status.PASS,"Popup window will be closed" + SubmitPostDebit);
+				ExtentTestManager.endTest();
+				
+				
+				
+				//TC014
+				ExtentTestManager.startTest("TC014 - Submit Summary");
+				//boolean MeansOfFinance = MeansOfFinance_Module.Navigatetomeansoffinance();
+				boolean SubmitSummary = true;
+				try {
+					SubmitSummary = GLBlkTrnImpTransfer.SubmitSummary();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				ExtentTestManager.getTest().log(Status.PASS,"Click on the submit" + SubmitSummary);
+				ExtentTestManager.getTest().log(Status.PASS,"Summary is generated for authorization." + SubmitSummary);
+				ExtentTestManager.endTest();
+				
+				
+				//TC015
+				GLBlkTrnImpTransfer.Signout(testdata, context);
+				
+				//TC016
+				GLBlkTrnImpTransfer.signinforauthorisation(testdata, context);
+				
+				
+				//TC017
+				ExtentTestManager.startTest("TC017 - Navigate to Manager authorisation");
+				boolean ManagerAuthorisation = true;
+				try {
+					ManagerAuthorisation = GLBlkTrnImpTransfer.ManagerAuthorisation();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				ExtentTestManager.getTest().log(Status.PASS,"Attempt to navigate to manager authorisation" + ManagerAuthorisation);
+				ExtentTestManager.getTest().log(Status.PASS,"User is navigated to manager authorisation" + ManagerAuthorisation);
+				ExtentTestManager.endTest();
+				
+				
+				//TC018
+				ExtentTestManager.startTest("TC018 - Click on the transfer");
+				//boolean MeansOfFinance = MeansOfFinance_Module.Navigatetomeansoffinance();
+				boolean Transfertab = true;
+				try {
+					Transfertab = GLBlkTrnImpTransfer.Transfertab();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				ExtentTestManager.getTest().log(Status.PASS,"Transsfer tab will be display" + Transfertab);
+				ExtentTestManager.getTest().log(Status.PASS,"Transfer tab displayed " + Transfertab);
+				ExtentTestManager.endTest();
+				
+				
+				//TC019
+				ExtentTestManager.startTest("TC019 - Click on the refresh");
+				//boolean MeansOfFinance = MeansOfFinance_Module.Navigatetomeansoffinance();
+				boolean Refresh = true;
+				try {
+					Refresh = GLBlkTrnImpTransfer.Refresh();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				ExtentTestManager.getTest().log(Status.PASS,"Attempt to refresh the pagey" + Refresh);
+				ExtentTestManager.getTest().log(Status.PASS,"The page is refreshed " + Refresh);
+				ExtentTestManager.endTest();
+				
+				
+				//TC020
+				 ExtentTestManager.startTest("TC020 - Authorize the transaction");
+					boolean Selectuploadedfile = GLBlkTrnImpTransfer.Selectuploadedfile(); 
+					ExtentTestManager.getTest().log(Status.PASS,"Autherize the transaction" + Selectuploadedfile);
+					ExtentTestManager.getTest().log(Status.PASS,"Transaction is authorised" +Selectuploadedfile );
+					ExtentTestManager.endTest();
+					
+					
+				//TC021	
+					ExtentTestManager.startTest("TC019 - Signout the application");
+					//boolean MeansOfFinance = MeansOfFinance_Module.Navigatetomeansoffinance();
+					boolean SignOut = true;
+					try {
+						SignOut = GLBlkTrnImpTransfer.SignOut();
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					ExtentTestManager.getTest().log(Status.PASS,"Attempt to signout" + SignOut);
+					ExtentTestManager.getTest().log(Status.PASS,"The user is signed out" + SignOut);
+					ExtentTestManager.endTest();
+					
+				
+					
+					
+					
+					
+				
+				
+				
 				
 				
 				

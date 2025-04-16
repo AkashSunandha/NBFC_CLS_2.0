@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-10T09:42:48 IST" name="Default suite" finished-at="2025-04-10T09:48:29 IST" duration-ms="341522">
+  <suite started-at="2025-04-16T09:49:02 IST" name="Default suite" finished-at="2025-04-16T09:52:27 IST" duration-ms="205530">
     <groups>
     </groups>
-    <test started-at="2025-04-10T09:42:48 IST" name="Default test" finished-at="2025-04-10T09:48:29 IST" duration-ms="341522">
+    <test started-at="2025-04-16T09:49:02 IST" name="Default test" finished-at="2025-04-16T09:52:27 IST" duration-ms="205530">
       <class name="com.test.Others.AllScenarios_GLAccBulk_Trans_Imp_Transfer">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Others.AllScenarios_GLAccBulk_Trans_Imp_Transfer@37f21974]" started-at="2025-04-10T09:42:48 IST" name="reference" finished-at="2025-04-10T09:42:48 IST" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Others.AllScenarios_GLAccBulk_Trans_Imp_Transfer@37f21974]" started-at="2025-04-16T09:49:02 IST" name="reference" finished-at="2025-04-16T09:49:02 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Others.AllScenarios_GLAccBulk_Trans_Imp_Transfer@37f21974]" started-at="2025-04-10T09:42:49 IST" name="newCustomer" data-provider="TestData" finished-at="2025-04-10T09:48:29 IST" duration-ms="340514" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Others.AllScenarios_GLAccBulk_Trans_Imp_Transfer@37f21974]" started-at="2025-04-16T09:49:03 IST" name="newCustomer" data-provider="TestData" finished-at="2025-04-16T09:52:27 IST" duration-ms="204320" status="PASS">
           <params>
             <param index="0">
               <value>

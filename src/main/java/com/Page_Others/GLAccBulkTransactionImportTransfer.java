@@ -19,7 +19,16 @@ import com.extentReports.ExtentTestManager;
 public class GLAccBulkTransactionImportTransfer extends Base_Class {
 	public String actualUserName;
 	public String TransactionId;
+	public String VoucherId;
 	public String NetAmount;
+	 public String removeCrFromAmount(String NetAmount) {
+	        if (NetAmount != null) {
+	            return NetAmount.replace("Cr", "").trim();
+	        }
+	        return "";
+	    }
+    String mainWindowHandle;
+   
 	
 	PageRepositary_GL_AccBulkTran_Imp_Transfer GLAccBulkTranImpTran = new PageRepositary_GL_AccBulkTran_Imp_Transfer();
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
@@ -62,6 +71,9 @@ public class GLAccBulkTransactionImportTransfer extends Base_Class {
 	}
 	
 	
+	
+
+
 	//TC003
 	public boolean AccessGLAccBlkTransImp() throws InterruptedException {
 		Thread.sleep(5000);
@@ -119,26 +131,53 @@ public class GLAccBulkTransactionImportTransfer extends Base_Class {
 		Thread.sleep(1000);
 		click(GLAccBulkTranImpTran.Tranfermode);
 		Thread.sleep(1000);
-		TransactionId = driver.findElement(GLAccBulkTranImpTran.TransactionId).getText();
+	//	TransactionId = driver.findElement(GLAccBulkTranImpTran.TransactionId).getText();
 		NetAmount = driver.findElement(GLAccBulkTranImpTran.NetAmount).getText();
+		 NetAmount = removeCrFromAmount(NetAmount);
 		return false;
 		
 	}
+	
 		
 		
 		
   //TC008
 		public boolean PostDebit() throws InterruptedException {
+			
+	waitUntilElementDisappear(GLAccBulkTranImpTran.loader);
+
 		click(GLAccBulkTranImpTran.Postdebit);
 		Thread.sleep(1000);
-		return false;
 		
-		
-		
+		//Navigate to Pop Up Window
+		mainWindowHandle = driver.getWindowHandle();
+	    boolean popupAppeared = false;
+	    for (String handle : driver.getWindowHandles()) {
+	        if (!handle.equals(mainWindowHandle)) {
+	            driver.switchTo().window(handle);
+	            driver.manage().window().maximize();
+	            popupAppeared = true;
+
+//driver.switchTo().window(mainWindowHandle);
+
+	        }
+}
+	    
+	
+	    return false;	
 		}
+		
+		
+	
+	    
+		
+		
+		
 		
 		//TC009
 		public boolean GLCode() throws InterruptedException {
+		click(GLAccBulkTranImpTran.TransactionBased);
+		Thread.sleep(1000);
 		click(GLAccBulkTranImpTran.GLCode);
 		Thread.sleep(1000);
 		return false;
@@ -146,5 +185,189 @@ public class GLAccBulkTransactionImportTransfer extends Base_Class {
 		
 		
 	}
+		
+		
+		//TC010
+		public boolean GLName() throws InterruptedException {
+			click(GLAccBulkTranImpTran.DropdownofGLname);
+			Thread.sleep(1000);
+			click(GLAccBulkTranImpTran.GLName);
+			Thread.sleep(1000);
+			return false;
+			
+			
+			
+		}
+		
+		
+		//TC011
+		
+		public boolean EnterAmount() throws InterruptedException {
+			driver.findElement(GLAccBulkTranImpTran.Amount).clear();
+			input(GLAccBulkTranImpTran.Amount , NetAmount);
+			Thread.sleep(1000);
+			
+			return false;
+			
+			
+			
+		}
+		
+		
+		
+		//TC012
+		public boolean AddPostDebitAmount() throws InterruptedException {
+			click(GLAccBulkTranImpTran.Add);
+			Thread.sleep(1000);
+			return false;
+			
+		
+			
+		}
+		
+		
+		
+		//TC013
+		public boolean SubmitPostDebit() throws InterruptedException {
+			click(GLAccBulkTranImpTran.SubmitPostDebit);
+			Thread.sleep(1000);
+			return false;
+			
+		
+			
+		}
+	
+		
+		//TC0014
+		public boolean SubmitSummary() throws InterruptedException {
+			driver.switchTo().window(mainWindowHandle);
+			click(GLAccBulkTranImpTran.Submit);
+			Thread.sleep(1000);
+			TransactionId = driver.findElement(GLAccBulkTranImpTran.TransactionId).getText();
+			VoucherId = driver.findElement(GLAccBulkTranImpTran.VoucherId).getText();
+			return false;
+			
+		
+			
+		}
+		
+		
+		
+		//TC015
+		public void Signout(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {
+			
+			
+			//Login with Another User
+			ExtentTestManager.startTest("Logout");
+			Log.info("Login with Another User");
+			
+			click(custSearch.custSignOut);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Log out");
+			Log.info("Step:01 - Log out");
+			ExtentTestManager.endTest();
+		}
+		
+		//TC016
+		public boolean signinforauthorisation(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
+			ExtentTestManager.startTest("Login with Another User");
+			String UserName = configloader().getProperty("UserName2");
+			input(custSearch.loginUserName,UserName );
+			String Password = configloader().getProperty("Password2");
+			input(custSearch.loginPasswrd, Password);
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
+			Log.info("Step:02 - Log in with another user for authorization");
+
+			String authorizeUserName = driver.findElement(goaldLoanRepo.userName).getText();
+			System.out.println(authorizeUserName);
+			
+			
+			
+			if(!authorizeUserName.equalsIgnoreCase(actualUserName)) {
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
+				Log.info("Expected Result: Logging successfull with another user");
+				}else {
+					ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+					Log.info("ERROR");
+				}
+			
+			ExtentTestManager.endTest();
+			return false;
+			
+
+		}
+		
+		//TC017
+		public boolean ManagerAuthorisation() throws InterruptedException {
+			click(GLAccBulkTranImpTran.AuthorizeandCancel);
+			Thread.sleep(1000);
+			click(GLAccBulkTranImpTran.ManagerAuthorisation);
+			Thread.sleep(1000);
+			
+	        return false;
+			
+		
+			
+		}
+		
+		//TC018
+		public boolean Transfertab() throws InterruptedException {
+			click(GLAccBulkTranImpTran.Transfertab);
+			Thread.sleep(1000);
+	        return false;
+			
+		
+			
+		}
+		
+		
+		//TC019
+		public boolean Refresh() throws InterruptedException {
+			click(GLAccBulkTranImpTran.Refresh);
+			Thread.sleep(1000);
+	        return false;
+			
+		
+			
+		}
+		
+		//TC020
+		public boolean Selectuploadedfile() throws InterruptedException {
+			input(GLAccBulkTranImpTran.TransactionIdSearch , TransactionId);
+			Thread.sleep(1000);
+			click(GLAccBulkTranImpTran.Go);
+			Thread.sleep(1000);
+			click(GLAccBulkTranImpTran.Checkbox);
+			Thread.sleep(1000);
+			click(GLAccBulkTranImpTran.Authorize);
+			Thread.sleep(1000);
+			return false;
+			
+			
+			
+		}
+		
+		
+		//TC021
+		public boolean SignOut() throws InterruptedException {
+			click(GLAccBulkTranImpTran.Closetop);
+			Thread.sleep(1000);
+			click(GLAccBulkTranImpTran.Signout);
+			Thread.sleep(1000);
+	        return false;
+			
+		
+			
+		}
+		
+		
+		
+		
+		
+			
+		
+		
+		
+		
 	
 }
