@@ -34,11 +34,14 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 
 	String transId;
 	String transIdTransfer;
-	String mainWindowHandle;
+	String mainWindowHandleParent;
 	String Display;
-
-	public String sp = "GetSpMultipleFDAccountNo 102,14003,1";
-	public String columnName = "Acno";
+	  String firstRowValue;
+      String secondRowValue;
+      String mainWindowHandlechild;
+      
+	public String sp = "EXEC GetSpMultipleFDAccountNo 102,14003,1";
+	public String columnName = "AcNO";
 
 	public void fetchWithTransId(String transId) throws InterruptedException {
 		input(goaldLoanRepo.transIdTxtBox, transId);
@@ -55,11 +58,15 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 
 		ExtentTestManager.startTest("Navigate to Multiple FD Interest Payment");
 		Log.info("Navigate to Multiple FD Interest Payment");
-
+		
+		
+		
 		click(FDintrest.clickFd);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Transactions..");
 		Log.info("Step:01 - Navigate to Transactions..");
 
+		ScrollUntilElementVisible(FDintrest.clickFDIntresrt);
+		Thread.sleep(5000);
 		click(FDintrest.clickFDIntresrt);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Select Multiple FD Interest Payment. ");
 		Log.info("Step:02 - Select Multiple FD Interest Payment..");
@@ -80,6 +87,8 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Transactions..");
 		Log.info("Step:01 - Navigate to Transactions..");
 
+		ScrollUntilElementVisible(FDintrest.clickFDIntresrt);
+		Thread.sleep(5000);
 		click(FDintrest.clickFDIntresrt);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Select Multiple FD Interest Payment. ");
 		Log.info("Step:02 - Select Multiple FD Interest Payment..");
@@ -149,16 +158,55 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 					Statement statement = connection.createStatement();
 					ResultSet resultSet = statement.executeQuery(query)) {
 
-				if (resultSet.next()) {
-					value = resultSet.getString(columnName); // DB column name
-					System.out.println("Generated Unique ID: " + value);
+//				if (resultSet.next()) {
+//					value = resultSet.getString(columnName); // DB column name
+//					System.out.println("Generated Unique ID: " + value);
+//
+//					// vinusha
+//
+//				} else {
+//					System.out.println("Unique ID not generated.");
+//				}
 
-					// vinusha
-
-				} else {
-					System.out.println("Unique ID not generated.");
-				}
-
+				
+				
+				
+				//Execute query
+	            Statement stmt = connection.createStatement();
+	            ResultSet rs = stmt.executeQuery(query);
+	 
+	            firstRowValue = null;
+	            secondRowValue = null;
+	 
+	            int rowCount = 0;
+	            while (rs.next()) {
+	                rowCount++;
+	                if (rowCount == 1) {
+	                    firstRowValue = rs.getString(columnName);
+	                } else if (rowCount == 2) {
+	                    secondRowValue = rs.getString(columnName);
+	                    break; // Exit after getting both
+	                }
+	            }
+	 
+	            if (firstRowValue != null) {
+	                System.out.println("First row value: " + firstRowValue);
+	            }
+	            if (secondRowValue != null) {
+	                System.out.println("Second row value: " + secondRowValue);
+	            }
+	 
+	            // Use these values in Selenium if needed
+	            // Example:
+	            // driver.findElement(By.id("firstInput")).sendKeys(firstRowValue);
+	            // driver.findElement(By.id("secondInput")).sendKeys(secondRowValue);
+	 
+	            //Close resources
+	            rs.close();
+	            stmt.close();
+	            connection.close();
+	            
+	            
 			} catch (SQLException e) {
 				System.out.println("Error executing the SQL query or processing the result set.");
 				e.printStackTrace();
@@ -175,9 +223,14 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 
 		// click(FDintrest.accnumber);
 
-		String valueAccNum = generateUniqueCode(sp, columnName);
-		String AccNum = valueAccNum.substring(valueAccNum.length() - 3);
+		generateUniqueCode(sp, columnName);
+		
+//	      String secondRowValue;
+	      
+		String AccNum = firstRowValue.substring(firstRowValue.length() - 3);
 		input(FDintrest.accnumber, AccNum);
+		
+		
 		ExtentTestManager.getTest().log(Status.PASS,
 				"Step :01-Enter a valid fixed deposit account number in the 'Account No' field. ");
 		Log.info("Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. ");
@@ -189,6 +242,32 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 
 	}
 
+	public void enterAccountNumberr() throws InterruptedException, ClassNotFoundException {
+		ExtentTestManager.startTest("Enter Valid Account Number");
+		Log.info("Enter Valid Account Number");
+
+		// click(FDintrest.accnumber);
+		ScrollUntilElementVisible(FDintrest.accnumber);
+		Thread.sleep(5000);
+click(FDintrest.accnumber);
+clear(FDintrest.accnumber);
+
+//		String valueAccNum = generateUniqueCode(sp, columnName);
+
+		String AccNum = secondRowValue.substring(secondRowValue.length() - 3);
+		input(FDintrest.accnumber, AccNum);
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Step :01-Enter a valid fixed deposit account number in the 'Account No' field. ");
+		Log.info("Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. ");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account number is accepted. ");
+		Log.info("Expected Result:Account number is accepted. ");
+		ExtentTestManager.endTest();
+		click(FDintrest.goo);
+
+	}
 	public void enterAccountNumber2() throws InterruptedException, ClassNotFoundException {
 		ExtentTestManager.startTest("Enter Valid Account Number");
 		Log.info("Enter Valid Account Number");
@@ -724,10 +803,10 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 		ExtentTestManager.startTest("Search Account Number");
 		Log.info("Searched for Account Number");
 
-		 mainWindowHandle = driver.getWindowHandle();
+		 mainWindowHandleParent = driver.getWindowHandle();
 		boolean popupAppeared = false;
 		for (String handle : driver.getWindowHandles()) {
-			if (!handle.equals(mainWindowHandle)) {
+			if (!handle.equals(mainWindowHandleParent)) {
 				driver.switchTo().window(handle);
 				driver.manage().window().maximize();
 				popupAppeared = true;
@@ -747,6 +826,8 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 				"Expected Result:Possible to select the product group and product name ");
 		Log.info("Expected Result:Possible to select the product group and product name ");
 		ExtentTestManager.endTest();
+		
+		click(FDintrest.clickonsearch);
 	
 
 	}
@@ -757,12 +838,34 @@ public void selectAccountNumber(Map<Object, Object> testdata, ITestContext conte
  ExtentTestManager.startTest("Select Account Number");
  Log.info("Account Number Selected");
  
- String AccountNumber = testdata.get("AccountNumber").toString();
-	input(JewelClosure.accnumber, AccountNumber);
+// String AccountNumber = testdata.get("AccountNumber").toString();
+//	input(JewelClosure.accnumber, AccountNumber);
+// 
+// ExtentTestManager.getTest().log(Status.PASS, "Step: 1 -1. Give account number as '3' ");
+// Log.info("Step: 1 - 1. Give account number as '3'.");
+
+ mainWindowHandlechild = driver.getWindowHandle();
+boolean popupAppeared = false;
+for (String handle : driver.getWindowHandles()) {
+	if (!handle.equals(mainWindowHandlechild)) {
+		driver.switchTo().window(handle);
+		driver.manage().window().maximize();
+		popupAppeared = true;
+	}
+}
+
+
+select("Demand Investment", FDintrest.group);
+select("INV-DEMAND-CA",FDintrest.product);
+select("TRIVANDRUM",FDintrest.branch);
+
+click(FDintrest.clicksearch);
+
+click(FDintrest.select);
  
- ExtentTestManager.getTest().log(Status.PASS, "Step: 1 -1. Give account number as '3' ");
- Log.info("Step: 1 - 1. Give account number as '3'.");
- 
+driver.switchTo().window(mainWindowHandlechild);
+
+// click(FDintrest.clickonsearch);
  ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Given account number details will be display .");
  Log.info("Expected Result: Given account number details will be display.");
  
@@ -807,13 +910,13 @@ public void addTransactionAmount() throws InterruptedException {
 	Log.info("Step: 1 - Enter submit in the auto posting popu window .");
 
 	
-	driver.switchTo().window(mainWindowHandle);
+	driver.switchTo().window(mainWindowHandleParent);
 	
 	ExtentTestManager.getTest().log(Status.PASS,
 			"Expected Result:Details is added and auto posting popu window closes .");
 	Log.info("Expected Result:Details is added and auto posting popu window closes .");
 
-	ScrollUntilElementVisible(OLtrans.scrolldwn);
+//	ScrollUntilElementVisible(OLtrans.scrolldwn);
 	
 	ExtentTestManager.endTest();
 }
@@ -822,7 +925,9 @@ public void submitTransactionWindow() throws InterruptedException {
 	ExtentTestManager.startTest("Submit in Transaction Window");
 	Log.info("Submitted Transaction Window");
 
-
+	ScrollUntilElementVisible(FDintrest.submitend);
+//	Thread.sleep(5000);
+	
 	click(FDintrest.submitend);
 	ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Click Submit button.");
 	Log.info("Step: 1 - Click Submit button.");

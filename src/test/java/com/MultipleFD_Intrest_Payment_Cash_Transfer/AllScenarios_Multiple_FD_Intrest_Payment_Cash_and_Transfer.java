@@ -87,7 +87,7 @@ public class AllScenarios_Multiple_FD_Intrest_Payment_Cash_and_Transfer {
                
 				//FD.enterAccountNumber();
 				
-				FD.enterAccountNumber2();
+				FD.enterAccountNumberr();
 
 				FD.checkDisplayAllAccounts();
 
@@ -137,7 +137,7 @@ public class AllScenarios_Multiple_FD_Intrest_Payment_Cash_and_Transfer {
 
 				FD.checkInterestPaymentDetailsGrid(testdata, context);
 
-				FD.enterAccountNumber2();
+				FD.enterAccountNumberr();
 
 				FD.checkDisplayAllAccounts();
 

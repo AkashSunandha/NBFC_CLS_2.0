@@ -70,31 +70,36 @@ public class AllScenario_Bond_Issue {
 
 				custSrchMthds.pcRegistration(testdata, context);
 
-//				custSrchMthds.userLoginValidPaswrd(testdata, context);
-//
-//				Issue.verifyBondIssuePage();
-//
-//				Issue.selectProductAll();
-//
-//				Issue.verifyNameFieldFunctionality(testdata, context);
-//
-//				Issue.verifyApplicationDetailsPopupFunctionality();
-//
-//				Issue.closeApplicationDetailsPopup();
-//
-//				Issue.verifyIssueButtonFunctionality();
-//
-//				Issue.confirmIssueApplication();
-//
-//				suspense.logoutApplication1();
-//
-//				Closuretrans.AnotherUSer(testdata, context);
-//
-//				Issue.cashierAuthorizationRefresh();
-//				
-//				Issue.authorizeBondIssueEntry();
-//
-//				suspense.logoutApplication1();
+				custSrchMthds.userLoginValidPaswrd(testdata, context);
+
+				Issue.verifyBondIssuePage();
+
+				Issue.selectProductAll();
+
+				Issue.verifyNameFieldFunctionality(testdata, context);
+
+				Issue.verifyApplicationDetailsPopupFunctionality();
+
+				Issue.closeApplicationDetailsPopup();
+
+				Issue.verifyIssueButtonFunctionality();
+
+				Issue.confirmIssueApplication();
+
+				suspense.logoutApplication1();
+
+				Closuretrans.AnotherUSer(testdata, context);
+
+				//Issue.cashierAuthorizationRefresh();
+				
+				Issue.managerAuthorizationRefreshFinal();
+				
+				Issue.authorizeBondIssueEntry();
+
+				suspense.logoutApplication1();
+				
+				
+				
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
@@ -106,6 +111,47 @@ public class AllScenario_Bond_Issue {
 				
 				Issue.clickRejectButtonAgain(testdata, context);
 				
+				Issue.selectTransactionModeCash();
+				
+				Issue.submitRejection();	
+				
+				suspense.logoutApplication1();
+				
+				Closuretrans.AnotherUSer(testdata, context);
+				
+				Issue.managerauthorisation();
+				
+				Issue.authorizeRejectedEntry();
+				
+				Issue.logoutApplication1();
+			
+				
+				
+				custSrchMthds.userLoginValidPaswrd(testdata, context);
+				
+				Issue.verifyBondIssuePage1();
+
+				Issue.selectProductAll1();
+
+				Issue.verifyNameFieldFunctionality(testdata, context);
+				
+				Issue.clickRejectButtonAgain(testdata, context);
+				
+				Issue.selectTransactionModeTransfer();
+				
+				Issue.verifyPostCreditButtonFunctionality(testdata, context);
+				
+				Issue.clickSubmitButton();
+				
+				suspense.logoutApplication1();
+				
+				Closuretrans.AnotherUSer(testdata, context);
+				
+				Issue.managerauthorisation();
+				
+				Issue.authorizeRejectedEntry();
+				
+				FD.logoutApplication5();
 				
 				
 				

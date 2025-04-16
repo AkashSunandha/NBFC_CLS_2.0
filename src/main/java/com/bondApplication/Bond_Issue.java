@@ -1,5 +1,6 @@
 package com.bondApplication;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -42,7 +43,9 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void displayamount(String Display) throws InterruptedException {
-		input(JewelClosure.enteramount, Display);
+		clear(Bondissue.enteramount);
+		click(Bondissue.enteramount);
+		input(Bondissue.enteramount, Display);
 	}
 
 	public void verifyBondIssuePage() throws InterruptedException {
@@ -120,7 +123,7 @@ public class Bond_Issue extends Base_Class {
 		ExtentTestManager.startTest("Select Product as All");
 		Log.info("Selecting product as All");
 
-		select("DEBUNTURE SCHEME 1", Bondissue.product);
+		// select("DEBUNTURE SCHEME 2", Bondissue.product);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - select the product ");
 		Log.info("Step:01 - select the product ");
 
@@ -128,13 +131,13 @@ public class Bond_Issue extends Base_Class {
 		Log.info("product as been selected");
 
 	}
-	
+
 	public void selectProductAll1() throws InterruptedException {
 
 		ExtentTestManager.startTest("Select Product as All");
 		Log.info("Selecting product as All");
 
-		select("ALL", Bondissue.product);
+		// select("DEBUNTURE SCHEME 2", Bondissue.product);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - select the product ");
 		Log.info("Step:01 - select the product ");
 
@@ -180,44 +183,63 @@ public class Bond_Issue extends Base_Class {
 
 	}
 
-	public void closeApplicationDetailsPopup() {
+	public void closeApplicationDetailsPopup() throws InterruptedException {
 
 		ExtentTestManager.startTest("Close Application Details Popup");
 		Log.info("Closing application details popup");
 
 		// Navigate to Pop Up Window
-		String mainWindowHandle = driver.getWindowHandle();
-		boolean popupAppeared = false;
-		for (String handle : driver.getWindowHandles()) {
-			if (!handle.equals(mainWindowHandle)) {
-				driver.switchTo().window(handle);
-				driver.manage().window().maximize();
-				popupAppeared = true;
-				// Thread.sleep(5000);
-				String currentUrl = driver.getCurrentUrl();
-				System.out.println("currentUrl: " + currentUrl);
-				if (currentUrl.endsWith(".pdf")) {
-					ExtentTestManager.getTest().log(Status.PASS,
-							"Expected Result: Popup is closed, return to application listing..");
-					Log.info("Expected Result: Popup is closed, return to application listing..");
-				} else {
-					ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-					Log.info("ERROR");
-				}
-
-				ExtentTestManager.getTest().log(Status.PASS,
-						"Expected Result:Popup is closed, return to application listing.");
-				Log.info("Expected Result: Popup is closed, return to application listing.");
-				ExtentTestManager.endTest();
-
+		
+		
+		 mainWindowHandle = driver.getWindowHandle();
+		 boolean popupAppeared = false;
+		 for (String handle : driver.getWindowHandles()) {
+		 	if (!handle.equals(mainWindowHandle)) {
+		 		driver.switchTo().window(handle);
+		 		driver.manage().window().maximize();
+		 		popupAppeared = true;
+		 	}
+		 }
+//		
+//		String mainWindowHandle = driver.getWindowHandle();
+//		boolean popupAppeared = false;
+//		for (String handle : driver.getWindowHandles()) {
+//			if (!handle.equals(mainWindowHandle)) {
+//				driver.switchTo().window(handle);
+//				driver.manage().window().maximize();
+//				popupAppeared = true;
+//				// Thread.sleep(5000);
+//				String currentUrl = driver.getCurrentUrl();
+//				System.out.println("currentUrl: " + currentUrl);
+//				
+		 
+//		 ScrollUntilElementVisible(Bondissue.frame);
+//			Thread.sleep(5000);
+			
+			
+//				if (currentUrl.endsWith(".pdf")) {
+//					ExtentTestManager.getTest().log(Status.PASS,
+//							"Expected Result: Popup is closed, return to application listing..");
+//					Log.info("Expected Result: Popup is closed, return to application listing..");
+//				} else {
+//					ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+//					Log.info("ERROR");
+//				}
+//
+//				ExtentTestManager.getTest().log(Status.PASS,
+//						"Expected Result:Popup is closed, return to application listing.");
+//				Log.info("Expected Result: Popup is closed, return to application listing.");
+//				ExtentTestManager.endTest();
+//
 				driver.close();
+				
 				driver.switchTo().window(mainWindowHandle);
-
-				break;
-
-			}
-
-		} // for loop end
+////
+////				break;
+//
+//			}
+//
+//		} // for loop end
 
 	}
 
@@ -355,7 +377,7 @@ public class Bond_Issue extends Base_Class {
 		ExtentTestManager.startTest("Authorize Bond Issue Entry");
 		Log.info("Authorizing bond issue entry");
 
-		click(Bondissue.checkbox);
+		click(Bondissue.check);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select bond issue entry checkbox in the cash section  ");
 		Log.info("Step:01 - Select bond issue entry checkbox in the cash section ");
 
@@ -372,8 +394,6 @@ public class Bond_Issue extends Base_Class {
 		ExtentTestManager.startTest("Manager Authorization Module");
 		Log.info("Verifying manager authorization module");
 
-		ExtentTestManager.startTest("User is logged in");
-		Log.info("User is logged in");
 		click(JewelClosure.managertab);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 - Navigated to Manager Authorization submodule.");
@@ -440,16 +460,36 @@ public class Bond_Issue extends Base_Class {
 		Log.info("Entering rejection remark");
 	}
 
-	public void selectTransactionModeCash() {
+	public void selectTransactionModeCash() throws InterruptedException {
 
 		ExtentTestManager.startTest("Select Transaction Mode as Cash");
 		Log.info("Selecting transaction mode as Cash");
 
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 -Open dropdown.");
+		Log.info("Step: 01 - Open dropdown..");
+
+		select("CASH", Bondissue.selectCASH);
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 02 -  Select 'Cash'..");
+		Log.info("Step: 02 - Select 'Cash'..");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - 'Cash' is selected in Transaction Mode dropdown..");
+		Log.info("Step: 1 - 'Cash' is selected in Transaction Mode dropdown..");
+
 	}
 
-	public void submitRejection() {
+	public void submitRejection() throws InterruptedException {
 		ExtentTestManager.startTest("Submit Rejection (Cash Mode)");
 		Log.info("Submitting rejection in cash mode");
+
+		click(Bondissue.clicksubmit);
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 -  Click Submit.");
+		Log.info("Step: 01 -Click Submit..");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Step: 1 - Application is rejected successfully and summary page is displayed.");
+		Log.info("Step: 1 -Application is rejected successfully and summary page is displayed.");
+
+		transId = driver.findElement(Bondissue.Transid).getText();
 
 	}
 
@@ -466,15 +506,68 @@ public class Bond_Issue extends Base_Class {
 
 	}
 
+	public void managerauthorisation() throws InterruptedException {
+
+		ExtentTestManager.startTest("Manager authorization");
+		Log.info("Manager authorization");
+
+		// click(FDintrest.clickonauth);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the authoirze & Cancel module from the taskbar ");
+		Log.info("Step:01 - Click the authoirze & Cancel module from the taskbar ");
+
+		click(FDintrest.clickonmanger);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click Manager authorisation Submodule ");
+		Log.info("Step:02 - Click Manager authorisation Submodule");
+
+		click(Bondissue.clickonothers);
+
+		click(FDintrest.clickrefresh);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the Refresh tab");
+		Log.info("Step:01 - Click the Refresh tab");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Authorization entries are updated and displayed");
+		Log.info("Authorization entries are updated and displayed");
+
+		System.out.println("transIdCashPersonal " + transId);
+		fetchWithTransId(transId);
+	}
+
+	public void logoutApplication1() throws InterruptedException {
+		ExtentTestManager.startTest("Logout in application");
+		Log.info("Logged out from application.");
+
+		click(JewelClosure.close);
+		click(JewelClosure.Singout);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:1 - Click Logout Option.");
+		Log.info("Step:1 - Click Logout Option.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login page will be displayed");
+		Log.info("Expected Result: Login page will be displayed");
+		ExtentTestManager.endTest();
+
+	}
+
 	public void managerAuthorizationRefresh() {
 		ExtentTestManager.startTest("Manager Authorization Refresh (Cash Rejection)");
 		Log.info("Refreshing manager authorization list for cash rejection");
 
 	}
 
-	public void authorizeRejectedEntry() {
+	public void authorizeRejectedEntry() throws InterruptedException {
 		ExtentTestManager.startTest("Authorize Rejected Entry (Cash Mode)");
 		Log.info("Authorizing rejected entry submitted in cash mode");
+
+		click(Bondissue.clickcheckbox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select Reject entry checkbox in the Others section");
+		Log.info("Step:01 - Select Reject entry checkbox in the Others section");
+
+		click(Bondissue.clickauthoriz);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Authorize' button");
+		Log.info("Step:01 - Click 'Authorize' button");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Rejected entry is authorized with confirmation message");
+		Log.info("Rejected entry is authorized with confirmation message");
 
 	}
 
@@ -510,10 +603,9 @@ public class Bond_Issue extends Base_Class {
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click Reject button.");
 		Log.info("Step:02 - Click Reject button. ");
-		
+
 		ExtentTestManager.getTest().log(Status.PASS, "Redirected to Reject page.");
 		Log.info("Redirected to Reject page.");
-
 
 		ExtentTestManager.startTest("Enter Rejection Remark (Transfer Mode)");
 		Log.info("Entering rejection remark for transfer mode");
@@ -521,10 +613,9 @@ public class Bond_Issue extends Base_Class {
 		String Reject = testdata.get("Reject").toString();
 		input(Bondissue.rejectionremarks, Reject);
 
-
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01: Enter 'Rejected' in the Remark field.");
 		Log.info("Step:01 - Enter 'Rejected' in the Remark field. ");
-		
+
 		ExtentTestManager.getTest().log(Status.PASS, "Remark is added successfully..");
 		Log.info("Remark is added successfully..");
 	}
@@ -533,39 +624,138 @@ public class Bond_Issue extends Base_Class {
 		ExtentTestManager.startTest("Enter Rejection Remark (Transfer Mode)");
 		Log.info("Entering rejection remark for transfer mode");
 
-		
-		
 		ExtentTestManager.startTest("Submit Rejection");
 		Log.info("Submit Rejection");
-		
-		
+
 		click(Bondissue.clicksubmit);
-		
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01: Click Submit.");
 		Log.info("Step:01 -Click Submit.. ");
-		
-		ExtentTestManager.getTest().log(Status.PASS, "Application is rejected successfully and summary page is displayed..");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Application is rejected successfully and summary page is displayed..");
 		Log.info("Application is rejected successfully and summary page is displayed.");
-		
-		
+
 	}
 
-	public void selectTransactionModeTransfer() {
+	public void selectTransactionModeTransfer() throws InterruptedException {
 		ExtentTestManager.startTest("Select Transaction Mode as Transfer");
 		Log.info("Selecting transaction mode as Transfer");
 
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 -Open dropdown.");
+		Log.info("Step: 01 - Open dropdown..");
+
+		select("TRANSFER", Bondissue.selectCASH);
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 02 -  Select 'Cash'..");
+		Log.info("Step: 02 - Select 'Cash'..");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - 'TRANSFER' is selected in Transaction Mode dropdown..");
+		Log.info("Step: 1 - 'TRANSEFR' is selected in Transaction Mode dropdown..");
+
 	}
 
-	public void verifyPostCreditButtonFunctionality() {
+	public void verifyPostCreditButtonFunctionality(Map<Object, Object> testdata, ITestContext context)
+			throws InterruptedException {
 		ExtentTestManager.startTest("Post Credit Button Functionality");
 		Log.info("Verifying post credit button functionality");
 
+		click(Bondissue.Postdebit);
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Click on the POST DEBIT button ");
+		Log.info("Step: 1 -Click on the POST DEBIT button.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Auto posting popup window will be display .");
+		Log.info("Expected Result:Auto posting popup window will be display .");
+
+		ExtentTestManager.endTest();
+
+		ExtentTestManager.startTest("Search Account Number");
+		Log.info("Searched for Account Number");
+
+		mainWindowHandle = driver.getWindowHandle();
+		boolean popupAppeared = false;
+		for (String handle : driver.getWindowHandles()) {
+			if (!handle.equals(mainWindowHandle)) {
+				driver.switchTo().window(handle);
+				driver.manage().window().maximize();
+				popupAppeared = true;
+			}
+		}
+
+		select("GL Code", Bondissue.GLcode);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01- Select the GL Name from the drop down.");
+		Log.info("Step:02 -Select the GL Name from the drop down.");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result:GL code will be autoloads while selecting the GL Name ");
+		Log.info("Expected Result:GL code will be autoloads while selecting the GL Name");
+		ExtentTestManager.endTest();
+
+		ExtentTestManager.startTest("Add button functionality");
+		Log.info("Add button functionality");
+
+		click(Bondissue.clickonglname);
+
+		click(Bondissue.clickonGL);
+		// select("ADVERTISEMENT",Bondissue.clickonglname);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 -Give the amount in Amount field");
+		Log.info("Step: 1 -Give the amount in Amount field");
+
+		String amntValue = driver.findElement(Bondissue.accounttag).getAttribute("value");
+		String amntValue1 = amntValue.split("\\.")[0];		
+		
+		displayamount(amntValue1);
+
+		click(Bondissue.clickonadddd);
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 2 -Click add button");
+		Log.info("Step: 2 -Click add button");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Given details will be displays in the grid .");
+		Log.info("Given details will be displays in the grid.");
+
+		ExtentTestManager.endTest();
+
+		ExtentTestManager.startTest("Add Transaction Amount");
+		Log.info("Transaction Amount Added");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Enter amount.");
+		Log.info("Step: 1 - Enter amount.");
+
+	//	click(JewelClosure.CliADD);
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 2- Click ADD.");
+		Log.info("Step: 2 - Click ADD.");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result:Amount and details is added in the grid in the auto posting popup window.");
+		Log.info("Expected Result:Amount and details is added in the grid in the auto posting popup window  .");
+
+		ExtentTestManager.endTest();
+
+		ExtentTestManager.startTest("Submit button functionality");
+		Log.info("Submit button functionality");
+
+		click(Bondissue.clickonsubmitt);
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 -Enter submit in the auto posting popu window ");
+		Log.info("Step: 1 - Enter submit in the auto posting popu window .");
+
+		driver.switchTo().window(mainWindowHandle);
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result:Details is added and auto posting popu window closes .");
+		Log.info("Expected Result:Details is added and auto posting popu window closes .");
+
+		ExtentTestManager.endTest();
 	}
 
 	public void selectGLName() {
 		ExtentTestManager.startTest("GL Name Selection");
 		Log.info("Selecting GL name");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 -  Click Post Credit button.");
+		Log.info("Step: 01 - Click Post Credit button..");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Auto posting popup window will be opened");
+		Log.info("Step: 1 - Auto posting popup window will be opened");
 
 	}
 
@@ -575,9 +765,18 @@ public class Bond_Issue extends Base_Class {
 
 	}
 
-	public void clickSubmitButton() {
+	public void clickSubmitButton() throws InterruptedException {
 		ExtentTestManager.startTest("Submit Button Functionality");
 		Log.info("Verifying submit button functionality");
+
+		click(Bondissue.clickonsubmut);
+		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Click Submit button.");
+		Log.info("Step: 1 - Click Submit button.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User navigates to the summary page.");
+		Log.info("Expected Result: User navigates to the summary page.");
+
+		transId = driver.findElement(Bondissue.Transid).getText();
 
 	}
 
@@ -600,11 +799,58 @@ public class Bond_Issue extends Base_Class {
 
 	}
 
-	public void managerAuthorizationRefreshFinal() {
+	public void managerAuthorizationRefreshFinal1() throws InterruptedException {
 
 		ExtentTestManager.startTest("Manager Authorization Refresh (Transfer Rejection)");
 		Log.info("Refreshing manager authorization list for transfer rejection");
 
+		// click(FDintrest.clickonauth);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the authoirze & Cancel module from the taskbar ");
+		Log.info("Step:01 - Click the authoirze & Cancel module from the taskbar ");
+
+		click(FDintrest.clickonmanger);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click Manager authorisation Submodule ");
+		Log.info("Step:02 - Click Manager authorisation Submodule");
+
+		click(Bondissue.clickonTransfer);
+
+		click(FDintrest.clickrefresh);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the Refresh tab");
+		Log.info("Step:01 - Click the Refresh tab");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Authorization entries are updated and displayed");
+		Log.info("Authorization entries are updated and displayed");
+
+		System.out.println("transIdCashPersonal " + transId);
+		fetchWithTransId(transId);
+	}
+
+	public void managerAuthorizationRefreshFinal() throws InterruptedException {
+
+		ExtentTestManager.startTest("Manager Authorization Refresh (Transfer Rejection)");
+		Log.info("Refreshing manager authorization list for transfer rejection");
+
+		click(FDintrest.clickonauth);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the authoirze & Cancel module from the taskbar ");
+		Log.info("Step:01 - Click the authoirze & Cancel module from the taskbar ");
+
+		click(FDintrest.clickonmanger);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click Manager authorisation Submodule ");
+		Log.info("Step:02 - Click Manager authorisation Submodule");
+
+		click(Bondissue.clickonTransfer);
+
+		click(FDintrest.clickrefresh);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the Refresh tab");
+		Log.info("Step:01 - Click the Refresh tab");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Authorization entries are updated and displayed");
+		Log.info("Authorization entries are updated and displayed");
+
+		System.out.println("transIdCashPersonal " + transId);
+		fetchWithTransId(transId);
 	}
 
 	public void authorizeRejectedEntryFinal() {

@@ -60,6 +60,24 @@ public By chheecckk = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransf
 public By Ok= By.xpath("//*[@id=\"closewarning\"]");
 
 public By clickonadd= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnAdd\"]");
+
+public By clickonsearch= By.xpath("/html/body/form/div[3]/div/table[1]/tbody/tr[4]/td[4]/a/img");
+
+public By group = By.xpath("//*[@id=\"ucddlSchema_ddl\"]");
+
+public By product = By.xpath("//*[@id=\"ucddlProduct_ddl\"]");
+
+public By branch = By.xpath("//*[@id=\"ddlBranch\"]");
+
+public By clicksearch = By.xpath("//*[@id=\"btnSearch\"]");
+
+public By select = By.xpath("//*[@id=\"lstAccount_ctrl0_btnView\"]");
+//public By name = By.xpath("");
+//public By name = By.xpath("");
+
+
+
+
 }
 
 
