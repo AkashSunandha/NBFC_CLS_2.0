@@ -1,4 +1,4 @@
-[ERROR] 2025-04-15 15:54:54.215 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 15:27:12.354 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanPayment_CASH.gettestdate(AllScenarios_GroupLoans_GroupLoanPayment_CASH.java:91) ~[test-classes/:?]
+	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER.gettestdate(AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER.java:94) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-15 15:54:54.228 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 15:27:12.374 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -71,7 +71,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanPayment_CASH.gettestdate(AllScenarios_GroupLoans_GroupLoanPayment_CASH.java:91) ~[test-classes/:?]
+	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER.gettestdate(AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER.java:94) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-15 15:54:54.230 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 15:27:12.377 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -124,7 +124,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanPayment_CASH.gettestdate(AllScenarios_GroupLoans_GroupLoanPayment_CASH.java:91) ~[test-classes/:?]
+	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER.gettestdate(AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER.java:94) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-15 15:54:54.236 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 15:27:12.384 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanPayment_CASH.gettestdate(AllScenarios_GroupLoans_GroupLoanPayment_CASH.java:91) ~[test-classes/:?]
+	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER.gettestdate(AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER.java:94) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,45 +210,83 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-04-15 15:54:55.056 [main] Log - GroupLoans_GroupLoanPayment_CASH
-[INFO ] 2025-04-15 15:54:59.647 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-04-15 15:55:01.003 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-04-15 15:55:03.776 [main] Log - PC Registration
-[INFO ] 2025-04-15 15:55:04.840 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-04-15 15:55:07.310 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-04-15 15:55:08.373 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-04-15 15:55:12.693 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-04-15 15:55:13.744 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-04-15 15:55:13.818 [main] Log - Valid Login
-[INFO ] 2025-04-15 15:55:14.871 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-04-15 15:55:15.923 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-04-15 15:55:21.383 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-15 15:55:22.442 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-15 15:55:22.497 [main] Log - Navigation of  group loan Payment page
-[INFO ] 2025-04-15 15:55:31.744 [main] Log - "1. Navigate to Group Loans section.
-2. Open Group Loan Payment page."
-[INFO ] 2025-04-15 15:55:32.827 [main] Log - Expected Result: Retrieving data. Wait a few seconds and try to cut or copy again.
-[INFO ] 2025-04-15 15:55:32.859 [main] Log - Centre Selection
-[INFO ] 2025-04-15 15:55:35.238 [main] Log - "1. Open centre dropdown
-2. Select any centre
-[INFO ] 2025-04-15 15:55:35.441 [main] Log - Expected Result: Centre is selected from dropdown 
-[INFO ] 2025-04-15 15:55:35.474 [main] Log - Group Selection
-[INFO ] 2025-04-15 15:55:37.847 [main] Log - "1. Open group dropdown
-2. Select a group
-3. Verify selection"
-[INFO ] 2025-04-15 15:55:38.003 [main] Log - Expected Result: Group is selected from dropdown
-[INFO ] 2025-04-15 15:55:38.044 [main] Log - GO Button Functionality
-[INFO ] 2025-04-15 15:55:42.343 [main] Log - 1. Click on the Go button.
-[INFO ] 2025-04-15 15:55:43.446 [main] Log - Expected Result: Applications are listed in a grid
-[INFO ] 2025-04-15 15:55:43.474 [main] Log - Loan Details Loading
-[INFO ] 2025-04-15 15:55:47.815 [main] Log - 1. Click on Select button
-[INFO ] 2025-04-15 15:55:49.985 [main] Log - Expected Result: Loan Details are loaded
-[INFO ] 2025-04-15 15:55:50.019 [main] Log - Checkbox Selection
-[INFO ] 2025-04-15 15:55:55.400 [main] Log - 1. Tick the checkbox is  near 'payment status'
-[INFO ] 2025-04-15 15:55:59.344 [main] Log - Exception org.openqa.selenium.WebDriverException: Failed to decode response from marionette
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SPTVMLAP-2124', ip: '10.212.136.148', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250407111027, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20676, moz:profile: C:\Users\AKASH~1.VEN\AppDat..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: b4b68790-7a78-4fb4-8bf1-2989a88463d7
-*** Element info: {Using=xpath, value=//div[@id="progressdiv"]}
+[INFO ] 2025-04-17 15:27:13.225 [main] Log - GroupLoans_GroupLoanCollection_TRANSFER
+[INFO ] 2025-04-17 15:27:17.647 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-17 15:27:19.232 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-17 15:27:21.785 [main] Log - PC Registration
+[INFO ] 2025-04-17 15:27:22.916 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-17 15:27:25.374 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-17 15:27:26.488 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-17 15:27:30.800 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-17 15:27:33.472 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-17 15:27:33.640 [main] Log - Valid Login
+[INFO ] 2025-04-17 15:27:34.691 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-17 15:27:35.743 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-17 15:27:44.608 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-17 15:27:45.704 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-17 15:27:45.786 [main] Log - Navigation to Group Loan collection page.
+[INFO ] 2025-04-17 15:27:50.117 [main] Log - 1. Navigate to Group Loans section.
+[INFO ] 2025-04-17 15:27:55.052 [main] Log - 2. Open Group Loan collection page.
+[INFO ] 2025-04-17 15:27:56.153 [main] Log - Expected Result: Group Loan collection page opened
+[INFO ] 2025-04-17 15:27:56.243 [main] Log - Center Dropdown Selections - Basic Functionality
+[INFO ] 2025-04-17 15:27:58.660 [main] Log -  Select a Center from Center dropdown
+[INFO ] 2025-04-17 15:27:58.965 [main] Log - Expected Result: Centre is selected from dropdown 
+[INFO ] 2025-04-17 15:27:59.050 [main] Log - Group Dropdown Selections - Basic Functionality
+[INFO ] 2025-04-17 15:28:01.471 [main] Log - Select a Group from Group dropdown.
+[INFO ] 2025-04-17 15:28:01.597 [main] Log - Expected Result: Group is selected from dropdown 
+[INFO ] 2025-04-17 15:28:01.693 [main] Log - GO Button Functionality
+[INFO ] 2025-04-17 15:28:06.006 [main] Log - 1. Click on the Go button.
+[INFO ] 2025-04-17 15:28:07.190 [main] Log - Expected Result: Applications are listed in a grid
+[INFO ] 2025-04-17 15:28:07.263 [main] Log - Select and Load Loan Collection Details
+[INFO ] 2025-04-17 15:28:11.588 [main] Log - 1. Click on the 'Select' button against the last group listed
+[INFO ] 2025-04-17 15:28:12.700 [main] Log - Expected Result: Loan Collection Details are loaded with 'No.Of Inst' header visible
+[INFO ] 2025-04-17 15:28:12.788 [main] Log - Select and Load Loan Collection Details
+[INFO ] 2025-04-17 15:28:13.865 [main] Log - 1. Enter 'No.Of Inst' as 1 in the loan collection grid for one account
+[INFO ] 2025-04-17 15:28:13.906 [main] Log - 2. Press TAB
+[INFO ] 2025-04-17 15:28:14.579 [main] Log - Expected Result: Amount to be paid is autoloaded
+[INFO ] 2025-04-17 15:28:14.628 [main] Log - Amount Entry
+[INFO ] 2025-04-17 15:28:21.190 [main] Log - 1. Enter the amount 100 for another account
+[INFO ] 2025-04-17 15:28:21.221 [main] Log - 2. Press TAB
+[INFO ] 2025-04-17 15:28:21.832 [main] Log - Expected Result: Amount entered correctly; no errors
+[INFO ] 2025-04-17 15:28:21.912 [main] Log - Transaction Mode Selection
+[INFO ] 2025-04-17 15:28:24.308 [main] Log - 1. Select 'Transfer' in transaction mode
+[INFO ] 2025-04-17 15:28:24.496 [main] Log - Expected Result: Transfer' is selected as transaction mode
+[INFO ] 2025-04-17 15:28:24.590 [main] Log - Post credit button functionality
+[INFO ] 2025-04-17 15:28:29.216 [main] Log - Step:01 - Select Post credit button.
+[INFO ] 2025-04-17 15:28:30.665 [main] Log - Expected Result: Auto posting popup window will be opened.
+[INFO ] 2025-04-17 15:28:30.744 [main] Log - Transaction based selection.
+[INFO ] 2025-04-17 15:28:33.104 [main] Log - Step:01 - Select transaction based as GL Code.
+[INFO ] 2025-04-17 15:28:35.295 [main] Log - Expected Result: GL code related field will be display (GL name,GL code)
+[INFO ] 2025-04-17 15:28:35.359 [main] Log - GL Name selection.
+[INFO ] 2025-04-17 15:28:44.129 [main] Log - Step:01 - Select the "GL Name" from the drop down
+[INFO ] 2025-04-17 15:28:44.195 [main] Log - Expected Result: GL code will be autoloads while selecting the GL Name.
+[INFO ] 2025-04-17 15:28:44.279 [main] Log - Add button functionality
+[INFO ] 2025-04-17 15:28:52.875 [main] Log - Step:01 - Give the amount in "Amount" field.
+[INFO ] 2025-04-17 15:28:57.198 [main] Log - Step:02 - Click add button.
+[INFO ] 2025-04-17 15:28:58.322 [main] Log - Expected Result: Given details will be displays in the grid
+[INFO ] 2025-04-17 15:28:58.446 [main] Log - Submit button functionality
+[INFO ] 2025-04-17 15:29:02.876 [main] Log - Step:01 - Click submit button after adding the details in the auto posting popup window.
+[INFO ] 2025-04-17 15:29:03.992 [main] Log - Expected Result: Popup window will be closed
+[INFO ] 2025-04-17 15:29:04.084 [main] Log - Complete Entry and Submit
+[INFO ] 2025-04-17 15:29:05.215 [main] Log - 1.Give particulars.
+[INFO ] 2025-04-17 15:29:09.559 [main] Log - 2. Click on Submit button
+[INFO ] 2025-04-17 15:29:11.054 [main] Log - Expected Result: Collection saved successfully; redirected to Summary page
+[INFO ] 2025-04-17 15:29:11.161 [main] Log - Login with Another User
+[INFO ] 2025-04-17 15:29:15.805 [main] Log - Step:01 - Log out
+[INFO ] 2025-04-17 15:29:25.821 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-17 15:29:25.879 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-04-17 15:29:25.977 [main] Log - Manager Authorization - Transfer Tab
+[INFO ] 2025-04-17 15:29:30.396 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-04-17 15:29:35.271 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-04-17 15:29:39.707 [main] Log - Step:03 - Click "Transfer" tab
+[INFO ] 2025-04-17 15:29:39.708 [main] Log - Expected Result: Transfer tab load
+[INFO ] 2025-04-17 15:29:39.792 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-04-17 15:29:44.105 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-04-17 15:29:50.638 [main] Log - Expected Result: Loan opening entry displayed
+[INFO ] 2025-04-17 15:29:50.700 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-04-17 15:29:54.996 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-04-17 15:29:59.329 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-04-17 15:30:00.436 [main] Log - Expected Result: Entry authorized
+[INFO ] 2025-04-17 15:30:04.879 [main] Log - Logout
+[INFO ] 2025-04-17 15:30:13.519 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-04-17 15:30:14.645 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

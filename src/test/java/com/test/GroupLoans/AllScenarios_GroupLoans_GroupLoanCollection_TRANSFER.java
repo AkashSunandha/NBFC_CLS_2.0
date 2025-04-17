@@ -9,6 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
+import com.Page_GroupLoans.GroupLoanCollection;
 import com.Page_GroupLoans.GroupLoanPayment;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
@@ -24,7 +25,7 @@ public class AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	GroupLoanPayment grpLoanCollMths = new GroupLoanPayment();
+	GroupLoanCollection grpLoanCollMths = new GroupLoanCollection();
 	
 	
 	@BeforeSuite
@@ -55,7 +56,19 @@ public class AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER {
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
+				grpLoanCollMths.groupLoanCollection();
 
+				grpLoanCollMths.groupInfo();
+
+				grpLoanCollMths.loanDetails(testdata, context);
+
+				grpLoanCollMths.transModeTransfer();
+
+				grpLoanCollMths.postCreditPopUpEntry();
+
+				grpLoanCollMths.submitTransaction(testdata, context);
+
+				grpLoanCollMths.authorizeTransfer();
 
 				custSrchMthds.logout();
 

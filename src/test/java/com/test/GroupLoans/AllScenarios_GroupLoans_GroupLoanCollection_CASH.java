@@ -58,6 +58,15 @@ public class AllScenarios_GroupLoans_GroupLoanCollection_CASH {
 
 				grpLoanCollMths.groupLoanCollection();
 
+				grpLoanCollMths.groupInfo();
+
+				grpLoanCollMths.loanDetails(testdata, context);
+
+				grpLoanCollMths.transModeCash();
+
+				grpLoanCollMths.submitTransaction(testdata, context);
+				
+				grpLoanCollMths.authorizeCash(testdata, context);
 
 				custSrchMthds.logout();
 

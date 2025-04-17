@@ -65,7 +65,9 @@ public class Base_Class {
 		properties.load(File);
 		return properties;
 	}
-
+	
+	
+	
 	public void SetUp() throws IOException, InterruptedException {
 		
 		String Browser = configloader().getProperty("Browser");
