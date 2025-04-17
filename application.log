@@ -1,10 +1,10 @@
-[ERROR] 2025-04-07 11:47:14.093 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 13:36:58.983 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
-	at java.net.URI$Parser.fail(URI.java:2966) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3094) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3117) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3135) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3181) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3125) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3143) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3189) ~[?:?]
 	at java.net.URI.<init>(URI.java:623) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -18,11 +18,11 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Admin.AllScenarios_Bond_BondConfiguration.gettestdate(AllScenarios_Bond_BondConfiguration.java:83) ~[test-classes/:?]
+	at com.test.Debenture_Application.AllScenario_Debenture_Allotment.gettestdate(AllScenario_Debenture_Allotment.java:186) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
 	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -51,13 +51,13 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-04-07 11:47:14.133 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 13:36:58.993 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
-	at java.net.URI$Parser.fail(URI.java:2966) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3094) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3117) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3135) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3181) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3125) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3143) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3189) ~[?:?]
 	at java.net.URI.<init>(URI.java:623) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -71,11 +71,11 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Admin.AllScenarios_Bond_BondConfiguration.gettestdate(AllScenarios_Bond_BondConfiguration.java:83) ~[test-classes/:?]
+	at com.test.Debenture_Application.AllScenario_Debenture_Allotment.gettestdate(AllScenario_Debenture_Allotment.java:186) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
 	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -104,13 +104,13 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-04-07 11:47:14.137 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 13:36:58.995 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
-	at java.net.URI$Parser.fail(URI.java:2966) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3094) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3117) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3135) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3181) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3125) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3143) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3189) ~[?:?]
 	at java.net.URI.<init>(URI.java:623) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -124,11 +124,11 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Admin.AllScenarios_Bond_BondConfiguration.gettestdate(AllScenarios_Bond_BondConfiguration.java:83) ~[test-classes/:?]
+	at com.test.Debenture_Application.AllScenario_Debenture_Allotment.gettestdate(AllScenario_Debenture_Allotment.java:186) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
 	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -157,13 +157,13 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-04-07 11:47:14.177 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 13:36:58.998 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
-	at java.net.URI$Parser.fail(URI.java:2966) ~[?:?]
-	at java.net.URI$Parser.scanEscape(URI.java:3094) ~[?:?]
-	at java.net.URI$Parser.scan(URI.java:3117) ~[?:?]
-	at java.net.URI$Parser.checkChars(URI.java:3135) ~[?:?]
-	at java.net.URI$Parser.parse(URI.java:3181) ~[?:?]
+	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
+	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
+	at java.net.URI$Parser.scan(URI.java:3125) ~[?:?]
+	at java.net.URI$Parser.checkChars(URI.java:3143) ~[?:?]
+	at java.net.URI$Parser.parse(URI.java:3189) ~[?:?]
 	at java.net.URI.<init>(URI.java:623) ~[?:?]
 	at org.apache.poi.openxml4j.opc.PackagingURIHelper.toURI(PackagingURIHelper.java:723) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:358) ~[poi-ooxml-5.2.3.jar:5.2.3]
@@ -177,11 +177,11 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Admin.AllScenarios_Bond_BondConfiguration.gettestdate(AllScenarios_Bond_BondConfiguration.java:83) ~[test-classes/:?]
+	at com.test.Debenture_Application.AllScenario_Debenture_Allotment.gettestdate(AllScenario_Debenture_Allotment.java:186) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
 	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -210,93 +210,222 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[INFO ] 2025-04-07 11:47:15.649 [main] Log - *** Running test method Bond_Configuration...
-[INFO ] 2025-04-07 11:47:24.428 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-04-07 11:47:26.764 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-04-07 11:47:29.913 [main] Log - PC Registration
-[INFO ] 2025-04-07 11:47:31.027 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-04-07 11:47:33.417 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-04-07 11:47:34.485 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-04-07 11:47:38.812 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-04-07 11:47:40.845 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-04-07 11:47:41.005 [main] Log - **Basic Login Functionality**
-[INFO ] 2025-04-07 11:47:42.071 [main] Log - Step:01 - Enetered valid Admin User Name
-[INFO ] 2025-04-07 11:47:43.114 [main] Log - Step:02 - Enetered valid Admin Password
-[INFO ] 2025-04-07 11:47:49.351 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-07 11:47:50.416 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-07 11:47:50.549 [main] Log - **Open Bond Configuration**
-[INFO ] 2025-04-07 11:47:59.181 [main] Log - 1. Navigate to 'Bond' section
-[INFO ] 2025-04-07 11:48:04.329 [main] Log - 2. Click on Bond Configuration.
-[INFO ] 2025-04-07 11:48:05.399 [main] Log - Expected Result: Bond configuration window is opened.
-[INFO ] 2025-04-07 11:48:05.482 [main] Log - **Select Product Name**
-[INFO ] 2025-04-07 11:48:07.877 [main] Log - "1. Open Product Name dropdown
-2. Select a valid product name"
-[INFO ] 2025-04-07 11:48:07.993 [main] Log - Expected Result: Product Name is selected.
-[INFO ] 2025-04-07 11:48:08.062 [main] Log - **Enter Face Value**
-[INFO ] 2025-04-07 11:48:09.112 [main] Log - 1. Enter '100' in Face Value field
-[INFO ] 2025-04-07 11:48:09.156 [main] Log - Expected Result: Face Value is entered as 100
-[INFO ] 2025-04-07 11:48:09.267 [main] Log - **Select App. GLAcc Name and Verify Code**
-[INFO ] 2025-04-07 11:48:11.619 [main] Log - 1. Open App. GLAcc Name dropdown
-2. Select an account name
-[INFO ] 2025-04-07 11:48:11.975 [main] Log - 3. Verify the App. GLAcc code is autoloaded
-[INFO ] 2025-04-07 11:48:11.975 [main] Log - Expected Result: App. GLAcc code is autoloaded correctly
-[INFO ] 2025-04-07 11:48:12.105 [main] Log - **Enter Duration and Select Frequency**
-[INFO ] 2025-04-07 11:48:13.244 [main] Log - 1. Enter '12' in Duration field
-[INFO ] 2025-04-07 11:48:15.606 [main] Log - 2. Select 'monthly' from Duration dropdown
-[INFO ] 2025-04-07 11:48:15.743 [main] Log - Expected Result: Duration is set correctly
-[INFO ] 2025-04-07 11:48:15.828 [main] Log - **Enter Int.Transfer Frequency and Select Unit**
-[INFO ] 2025-04-07 11:48:16.888 [main] Log - 1. Enter '30' in Int.Transfer Frequency
-[INFO ] 2025-04-07 11:48:19.284 [main] Log - 2. Select 'days' from the dropdown
-[INFO ] 2025-04-07 11:48:19.719 [main] Log - Expected Result: Int. Transfer Frequency set to 30 days
-[INFO ] 2025-04-07 11:48:19.814 [main] Log - **Enter Minimum and Maximum Amt**
-[INFO ] 2025-04-07 11:48:20.857 [main] Log - 1. Enter '500' in Minimum Amt
-[INFO ] 2025-04-07 11:48:21.919 [main] Log - 2. Enter '10000000' in Maximum Amt
-[INFO ] 2025-04-07 11:48:21.919 [main] Log - Expected Result: Minimum and Maximum amounts are set
-[INFO ] 2025-04-07 11:48:22.044 [main] Log - **Select Int. Calc Method**
-[INFO ] 2025-04-07 11:48:24.366 [main] Log - "1. Open Int. Calc Method dropdown
-2. Select a calculation method"
-[INFO ] 2025-04-07 11:48:24.453 [main] Log - Expected Result: Int. Calc Method is selected
-[INFO ] 2025-04-07 11:48:24.523 [main] Log - **Allow Premature Closure**
-[INFO ] 2025-04-07 11:48:24.540 [main] Log - 1. Click 'Allow Premature Closure' checkbox
-[INFO ] 2025-04-07 11:48:24.555 [main] Log - Expected Result: Checkbox is selected
-[INFO ] 2025-04-07 11:48:24.624 [main] Log - **Block Issue For Realization**
-[INFO ] 2025-04-07 11:48:24.636 [main] Log - 1. Click 'Block Issue For Realization On Application Date' checkbox
-[INFO ] 2025-04-07 11:48:24.652 [main] Log - Expected Result: Checkbox is selected
-[INFO ] 2025-04-07 11:48:24.719 [main] Log - **Select Cheque Head/Account**
-[INFO ] 2025-04-07 11:48:24.733 [main] Log - 1. Select 'GL head' checkbox
-[INFO ] 2025-04-07 11:48:27.047 [main] Log - 2. Open App. GLAcc Name dropdown
-3. Select an account name
-[INFO ] 2025-04-07 11:48:27.155 [main] Log - 4. Verify App. GLAcc code is autoloaded
-[INFO ] 2025-04-07 11:48:27.156 [main] Log - Expected Result: App. GLAcc code is autoloaded correctly
-[INFO ] 2025-04-07 11:48:27.229 [main] Log - **Select EFT Head/Account**
-[INFO ] 2025-04-07 11:48:27.249 [main] Log - 1. Select 'GL head' checkbox
-[INFO ] 2025-04-07 11:48:29.652 [main] Log - 2. Open App. GLAcc Name dropdown
-3. Select an account name
-[INFO ] 2025-04-07 11:48:29.734 [main] Log - 4. Verify App. GLAcc code is autoloaded
-[INFO ] 2025-04-07 11:48:29.735 [main] Log - Expected Result: App. GLAcc code is autoloaded correctly
-[INFO ] 2025-04-07 11:48:29.796 [main] Log - **Select DD Head/Account**
-[INFO ] 2025-04-07 11:48:29.811 [main] Log - 1. Select 'GL head' checkbox
-[INFO ] 2025-04-07 11:48:32.218 [main] Log - 2. Open App. GLAcc Name dropdown
-3. Select an account name
-[INFO ] 2025-04-07 11:48:32.378 [main] Log - 4. Verify App. GLAcc code is autoloaded
-[INFO ] 2025-04-07 11:48:32.379 [main] Log - Expected Result: App. GLAcc code is autoloaded correctly
-[INFO ] 2025-04-07 11:48:32.461 [main] Log - **Select UPI Head/Account**
-[INFO ] 2025-04-07 11:48:32.482 [main] Log - 1. Select 'GL head' checkbox
-[INFO ] 2025-04-07 11:48:34.883 [main] Log - 2. Open App. GLAcc Name dropdown
-3. Select an account name
-[INFO ] 2025-04-07 11:48:34.941 [main] Log - 4. Verify App. GLAcc code is autoloaded
-[INFO ] 2025-04-07 11:48:34.941 [main] Log - Expected Result: App. GLAcc code is autoloaded correctly
-[INFO ] 2025-04-07 11:48:35.026 [main] Log - **Select Pooling Head**
-[INFO ] 2025-04-07 11:48:37.446 [main] Log - 1. Open App. GLAcc Name dropdown
-2. Select an account name
-[INFO ] 2025-04-07 11:48:37.517 [main] Log - 3. Verify App. GLAcc code is autoloaded
-[INFO ] 2025-04-07 11:48:37.517 [main] Log - Expected Result: App. GLAcc code is autoloaded correctly
-[INFO ] 2025-04-07 11:48:37.583 [main] Log - **Save Bond Configuration**
-[INFO ] 2025-04-07 11:48:41.893 [main] Log - 1. Click 'Save' button
-[INFO ] 2025-04-07 11:48:42.967 [main] Log - Expected Result: Bond Configuration Added successfully' message appears
-[INFO ] 2025-04-07 11:48:47.373 [main] Log - **Verify Bond Configuration in Grid**
-[INFO ] 2025-04-07 11:48:48.518 [main] Log - 1. Observe Bond Configuration Details grid
-[INFO ] 2025-04-07 11:48:48.518 [main] Log - Expected Result: Configuration details appear in grid
-[INFO ] 2025-04-07 11:48:48.576 [main] Log - Logout
-[INFO ] 2025-04-07 11:48:57.392 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-04-07 11:48:58.456 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-04-17 13:36:59.578 [main] Log - Debenture_Application_Cash
+[INFO ] 2025-04-17 13:37:02.632 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-17 13:37:04.135 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-17 13:37:04.420 [main] Log - PC Registration
+[INFO ] 2025-04-17 13:37:05.471 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-17 13:37:07.753 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-17 13:37:08.782 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-17 13:37:13.054 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-17 13:37:14.917 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-17 13:37:14.967 [main] Log - Valid Login
+[INFO ] 2025-04-17 13:37:15.989 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-17 13:37:17.021 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-17 13:37:25.563 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-17 13:37:26.596 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-17 13:37:31.952 [main] Log - Step:01 Navigate to Debenture
+[INFO ] 2025-04-17 13:37:36.765 [main] Log - Step:02 Click on Debenture Application
+[INFO ] 2025-04-17 13:37:36.766 [main] Log - Expected result:Debenture application window will be opened
+[INFO ] 2025-04-17 13:37:36.800 [main] Log - Step:01 Observe the Branch Field
+[INFO ] 2025-04-17 13:37:36.801 [main] Log - Expected result:Branch field displays logged in branch and is not editable.
+[INFO ] 2025-04-17 13:37:36.812 [main] Log - Step:01 Observe the application date Field
+[INFO ] 2025-04-17 13:37:36.812 [main] Log - Expected result:Application Date displays the current date and is not changeable
+[INFO ] 2025-04-17 13:37:39.121 [main] Log - Step:01 Open Debenture Type Dropdown
+[INFO ] 2025-04-17 13:37:39.122 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 13:37:39.122 [main] Log - Expected result:Debenture Type can be selected
+[INFO ] 2025-04-17 13:37:41.426 [main] Log - Step:01 Open Issue Type Dropdown
+[INFO ] 2025-04-17 13:37:41.426 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 13:37:41.427 [main] Log - Expected result:Issue Type can be selected
+[INFO ] 2025-04-17 13:37:43.737 [main] Log - Step:01 Open Series Type Dropdown
+[INFO ] 2025-04-17 13:37:43.737 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 13:37:43.738 [main] Log - Expected result: Series Type can be selected
+[INFO ] 2025-04-17 13:37:43.754 [main] Log - Step:01 Observe the Nature Field
+[INFO ] 2025-04-17 13:37:43.755 [main] Log - Expected result:Nature field displays 'Single' by default
+[INFO ] 2025-04-17 13:37:46.079 [main] Log - Step:01 Open Category Dropdown
+[INFO ] 2025-04-17 13:37:46.079 [main] Log - Step:02 Select Normal
+[INFO ] 2025-04-17 13:37:46.079 [main] Log - Expected result:Normal can be selected as customer category
+[INFO ] 2025-04-17 13:37:50.542 [main] Log - Step:01 - Click the customer popup button
+[INFO ] 2025-04-17 13:37:50.542 [main] Log - Expected Result: Customer popup Generates
+[INFO ] 2025-04-17 13:37:51.599 [main] Log - Step:01 Enter an alphabet in the name field
+[INFO ] 2025-04-17 13:37:55.865 [main] Log - click on search button
+[INFO ] 2025-04-17 13:37:55.866 [main] Log - Expected Result:List of customers starting letter given is listed
+[INFO ] 2025-04-17 13:37:59.979 [main] Log - Step:01 - Select a customer
+[INFO ] 2025-04-17 13:37:59.980 [main] Log - Expected Result:Customer is selected
+[INFO ] 2025-04-17 13:38:04.291 [main] Log - Step:01 Try to Add Customer
+[INFO ] 2025-04-17 13:38:04.291 [main] Log - Expected Result: Customer is Added
+[INFO ] 2025-04-17 13:38:04.311 [main] Log - Expected result: Unit Value is not automatically loaded based on product
+[INFO ] 2025-04-17 13:38:09.682 [main] Log - Step:01 Enter value '20' in No of Units field.
+[INFO ] 2025-04-17 13:38:09.682 [main] Log - Expected result:Field accepts the value.
+[INFO ] 2025-04-17 13:38:13.996 [main] Log - Step:01 Click Get Button Value
+[INFO ] 2025-04-17 13:38:14.033 [main] Log - Expected result:Total value is correctly calculated and displayed
+[INFO ] 2025-04-17 13:38:18.576 [main] Log - Step:01 -  Click on POst Debit Button
+[INFO ] 2025-04-17 13:38:19.920 [main] Log - Expected Result: Auto posting popup window will be opened.
+[INFO ] 2025-04-17 13:38:19.949 [main] Log - Select Transaction Based Dropdown
+[INFO ] 2025-04-17 13:38:22.234 [main] Log - Step:01 -  Choose 'GL Code' for Transaction Based DD
+[INFO ] 2025-04-17 13:38:22.262 [main] Log - Select Transaction Based Dropdown
+[INFO ] 2025-04-17 13:38:32.836 [main] Log - Step:01 -  Choose 'ADVANCE FOR LAND' for Transaction Based DD
+[INFO ] 2025-04-17 13:38:32.861 [main] Log - Enter Amount
+[INFO ] 2025-04-17 13:38:41.195 [main] Log - Step:01 - Enter a valid transaction amount in the input field.
+[INFO ] 2025-04-17 13:38:45.511 [main] Log - Step:01 -  Click on Add Button
+[INFO ] 2025-04-17 13:38:49.800 [main] Log - Step:01 -  Click on Submit Transaction Button
+[INFO ] 2025-04-17 13:38:50.866 [main] Log - Expected Result: Popup window will be closed
+[INFO ] 2025-04-17 13:38:55.156 [main] Log - Step:01 Save Application
+[INFO ] 2025-04-17 13:38:55.156 [main] Log - Expected Result: Debenture Application save successfully
+[INFO ] 2025-04-17 13:38:56.185 [main] Log - Expected Result: Transaction should be successful and  summary is displayed with correct details.
+[INFO ] 2025-04-17 13:38:57.242 [main] Log - Login with Another User
+[INFO ] 2025-04-17 13:39:01.734 [main] Log - Step:01 - Log out
+[INFO ] 2025-04-17 13:39:08.175 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-17 13:40:38.916 [main] Log - Manager Authorization - Transfer Tab
+[INFO ] 2025-04-17 13:40:43.200 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-04-17 13:40:47.712 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-04-17 13:40:51.991 [main] Log - Step:03 - Click "Transfer" tab
+[INFO ] 2025-04-17 13:40:51.991 [main] Log - Expected Result: Transfer tab load
+[INFO ] 2025-04-17 13:40:52.046 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-04-17 13:40:56.331 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-04-17 13:41:01.655 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-04-17 13:41:05.927 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-04-17 13:41:10.207 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-04-17 13:41:11.239 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-04-17 13:41:20.003 [main] Log - Step:01 - Log out
+[INFO ] 2025-04-17 13:41:29.403 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-17 13:41:34.757 [main] Log - Navigate To Debenture_Allotment
+[INFO ] 2025-04-17 13:41:39.029 [main] Log - Clicked on Debenture
+[INFO ] 2025-04-17 13:41:43.518 [main] Log - Clicked on Debenture_Allotment
+[INFO ] 2025-04-17 13:41:43.551 [main] Log - System able to found the element :By.xpath: //*[@class='SecCapLeft']//span
+[INFO ] 2025-04-17 13:41:45.663 [main] Log - Step:01 -  Choose 'TRIVANDRUM' for Allotment Branch.
+[INFO ] 2025-04-17 13:41:45.663 [main] Log - Select Debenture Type
+[INFO ] 2025-04-17 13:41:47.950 [main] Log - Step:01 -  Choose 'DEB TRAIL TRANSFER' for Debenture Type.
+[INFO ] 2025-04-17 13:41:47.988 [main] Log - Select Issue Type
+[INFO ] 2025-04-17 13:41:50.270 [main] Log - Step:01 -  Choose 'ISSUE-DEB TRAIL TRANSFER-65' for Issue Type.
+[INFO ] 2025-04-17 13:41:50.321 [main] Log - Select Debenture Series
+[INFO ] 2025-04-17 13:41:52.630 [main] Log - Step:01 -  Choose 'SERIES-ISSUE-DEB TRAIL TRANSFER-65-SERIES-2062' for Debenture Series.
+[INFO ] 2025-04-17 13:41:52.668 [main] Log - Select Allotment Status
+[INFO ] 2025-04-17 13:41:54.725 [main] Log - Step:01 -  Choose 'Application Received' for Allotment Status.
+[INFO ] 2025-04-17 13:41:54.766 [main] Log - Search Button Functionality
+[INFO ] 2025-04-17 13:41:59.039 [main] Log - Clicked on Allotment Search
+[INFO ] 2025-04-17 13:41:59.092 [main] Log - Process Button Functionality
+[INFO ] 2025-04-17 13:42:03.734 [main] Log - Clicked on Allotment Process
+[INFO ] 2025-04-17 13:42:17.886 [main] Log - System able to found the element :By.xpath: //span[contains(@id,'PRDCNT_lvwProcessQueueList_ctrl0_lblPv')]
+[INFO ] 2025-04-17 13:42:17.886 [main] Log - Login with Another User
+[INFO ] 2025-04-17 13:42:22.355 [main] Log - Step:01 - Log out
+[INFO ] 2025-04-17 13:42:29.274 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-17 13:42:34.618 [main] Log - Manager Authorization - Transfer Tab
+[INFO ] 2025-04-17 13:42:38.894 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-04-17 13:42:46.045 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-04-17 13:42:50.303 [main] Log - Step:03 - Click "Transfer" tab
+[INFO ] 2025-04-17 13:42:50.303 [main] Log - Expected Result: Transfer tab load
+[INFO ] 2025-04-17 13:42:50.342 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-04-17 13:42:54.618 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-04-17 13:43:02.215 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-04-17 13:43:06.496 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-04-17 13:43:10.777 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-04-17 13:43:11.809 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-04-17 13:43:20.661 [main] Log - Step:01 - Log out
+[INFO ] 2025-04-17 13:43:30.046 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-17 13:43:35.383 [main] Log - Step:01 Navigate to Debenture
+[INFO ] 2025-04-17 13:43:40.264 [main] Log - Step:02 Click on Debenture Application
+[INFO ] 2025-04-17 13:43:40.265 [main] Log - Expected result:Debenture application window will be opened
+[INFO ] 2025-04-17 13:43:40.297 [main] Log - Step:01 Observe the Branch Field
+[INFO ] 2025-04-17 13:43:40.297 [main] Log - Expected result:Branch field displays logged in branch and is not editable.
+[INFO ] 2025-04-17 13:43:40.306 [main] Log - Step:01 Observe the application date Field
+[INFO ] 2025-04-17 13:43:40.307 [main] Log - Expected result:Application Date displays the current date and is not changeable
+[INFO ] 2025-04-17 13:43:42.603 [main] Log - Step:01 Open Debenture Type Dropdown
+[INFO ] 2025-04-17 13:43:42.603 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 13:43:42.604 [main] Log - Expected result:Debenture Type can be selected
+[INFO ] 2025-04-17 13:43:44.916 [main] Log - Step:01 Open Issue Type Dropdown
+[INFO ] 2025-04-17 13:43:44.916 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 13:43:44.917 [main] Log - Expected result:Issue Type can be selected
+[INFO ] 2025-04-17 13:43:47.225 [main] Log - Step:01 Open Series Type Dropdown
+[INFO ] 2025-04-17 13:43:47.225 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 13:43:47.225 [main] Log - Expected result: Series Type can be selected
+[INFO ] 2025-04-17 13:43:47.241 [main] Log - Step:01 Observe the Nature Field
+[INFO ] 2025-04-17 13:43:47.241 [main] Log - Expected result:Nature field displays 'Single' by default
+[INFO ] 2025-04-17 13:43:49.559 [main] Log - Step:01 Open Category Dropdown
+[INFO ] 2025-04-17 13:43:49.559 [main] Log - Step:02 Select Normal
+[INFO ] 2025-04-17 13:43:49.559 [main] Log - Expected result:Normal can be selected as customer category
+[INFO ] 2025-04-17 13:43:54.042 [main] Log - Step:01 - Click the customer popup button
+[INFO ] 2025-04-17 13:43:54.042 [main] Log - Expected Result: Customer popup Generates
+[INFO ] 2025-04-17 13:43:55.080 [main] Log - Step:01 Enter an alphabet in the name field
+[INFO ] 2025-04-17 13:43:59.351 [main] Log - click on search button
+[INFO ] 2025-04-17 13:43:59.351 [main] Log - Expected Result:List of customers starting letter given is listed
+[INFO ] 2025-04-17 13:44:03.510 [main] Log - Step:01 - Select a customer
+[INFO ] 2025-04-17 13:44:03.510 [main] Log - Expected Result:Customer is selected
+[INFO ] 2025-04-17 13:44:07.840 [main] Log - Step:01 Try to Add Customer
+[INFO ] 2025-04-17 13:44:07.841 [main] Log - Expected Result: Customer is Added
+[INFO ] 2025-04-17 13:44:07.863 [main] Log - Expected result: Unit Value is not automatically loaded based on product
+[INFO ] 2025-04-17 13:44:13.210 [main] Log - Step:01 Enter value '20' in No of Units field.
+[INFO ] 2025-04-17 13:44:13.210 [main] Log - Expected result:Field accepts the value.
+[INFO ] 2025-04-17 13:44:17.523 [main] Log - Step:01 Click Get Button Value
+[INFO ] 2025-04-17 13:44:17.562 [main] Log - Expected result:Total value is correctly calculated and displayed
+[INFO ] 2025-04-17 13:44:21.886 [main] Log - Step:01 Save Application
+[INFO ] 2025-04-17 13:44:21.886 [main] Log - Expected Result: Debenture Application save successfully
+[INFO ] 2025-04-17 13:44:22.915 [main] Log - Expected Result: Transaction should be successful and  summary is displayed with correct details.
+[INFO ] 2025-04-17 13:44:23.972 [main] Log - Login with Another User
+[INFO ] 2025-04-17 13:44:28.438 [main] Log - Step:01 - Log out
+[INFO ] 2025-04-17 13:44:35.376 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-17 13:44:40.686 [main] Log - Cashier Authorization
+[INFO ] 2025-04-17 13:44:44.953 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-04-17 13:44:51.873 [main] Log - Step:01 - Navigate to Cashier Authorization
+[INFO ] 2025-04-17 13:44:56.142 [main] Log - Step:02 - Click Refresh Button
+[INFO ] 2025-04-17 13:45:05.737 [main] Log - Step:03 - Select checkbox
+[INFO ] 2025-04-17 13:45:10.023 [main] Log - Step:04 - Click Authorize Button
+[INFO ] 2025-04-17 13:45:11.053 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-04-17 13:45:15.326 [main] Log - Manager Authorization - Cash Tab
+[INFO ] 2025-04-17 13:45:19.834 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-04-17 13:45:24.126 [main] Log - Step:03 - Click "Cash" tab
+[INFO ] 2025-04-17 13:45:24.126 [main] Log - Expected Result: Cash tab load
+[INFO ] 2025-04-17 13:45:24.127 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-04-17 13:45:28.385 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-04-17 13:45:34.758 [main] Log - Expected Result: Loan opening entry displayed
+[INFO ] 2025-04-17 13:45:34.758 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-04-17 13:45:39.025 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-04-17 13:45:43.299 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-04-17 13:45:44.331 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-04-17 13:45:53.067 [main] Log - Step:01 - Log out
+[INFO ] 2025-04-17 13:46:02.543 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-17 13:46:07.922 [main] Log - Navigate To Debenture_Allotment
+[INFO ] 2025-04-17 13:46:12.198 [main] Log - Clicked on Debenture
+[INFO ] 2025-04-17 13:46:16.704 [main] Log - Clicked on Debenture_Allotment
+[INFO ] 2025-04-17 13:46:16.732 [main] Log - System able to found the element :By.xpath: //*[@class='SecCapLeft']//span
+[INFO ] 2025-04-17 13:46:18.831 [main] Log - Step:01 -  Choose 'TRIVANDRUM' for Allotment Branch.
+[INFO ] 2025-04-17 13:46:18.831 [main] Log - Select Debenture Type
+[INFO ] 2025-04-17 13:46:21.127 [main] Log - Step:01 -  Choose 'DEB CASH' for Debenture Type.
+[INFO ] 2025-04-17 13:46:21.178 [main] Log - Select Issue Type
+[INFO ] 2025-04-17 13:46:23.463 [main] Log - Step:01 -  Choose 'ISSUE-DEB CASH-66' for Issue Type.
+[INFO ] 2025-04-17 13:46:23.499 [main] Log - Select Debenture Series
+[INFO ] 2025-04-17 13:46:25.774 [main] Log - Step:01 -  Choose 'SERIES-ISSUE-DEB CASH-66-SERIES-2063' for Debenture Series.
+[INFO ] 2025-04-17 13:46:25.809 [main] Log - Select Allotment Status
+[INFO ] 2025-04-17 13:46:27.865 [main] Log - Step:01 -  Choose 'Application Received' for Allotment Status.
+[INFO ] 2025-04-17 13:46:27.891 [main] Log - Search Button Functionality
+[INFO ] 2025-04-17 13:46:32.158 [main] Log - Clicked on Allotment Search
+[INFO ] 2025-04-17 13:46:32.211 [main] Log - Return Button Functionality
+[INFO ] 2025-04-17 13:46:36.732 [main] Log - Clicked on Allotment Return
+[INFO ] 2025-04-17 13:46:36.772 [main] Log - Return Submit Button Functionality
+[INFO ] 2025-04-17 13:46:41.554 [main] Log - Clicked on Allotment Return Submit Button
+[INFO ] 2025-04-17 13:46:42.586 [main] Log - Expected Result: Transaction should be successful and  summary is displayed with correct details.
+[INFO ] 2025-04-17 13:46:43.638 [main] Log - Expected Result: Transaction should be successful and  summary is displayed with correct details.
+[INFO ] 2025-04-17 13:46:43.682 [main] Log - Login with Another User
+[INFO ] 2025-04-17 13:46:48.134 [main] Log - Step:01 - Log out
+[INFO ] 2025-04-17 13:46:57.785 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-17 13:46:57.799 [main] Log - Cashier Authorization
+[INFO ] 2025-04-17 13:47:02.072 [main] Log - Step:01 - Click "Authorize & Cancel"
+[INFO ] 2025-04-17 13:47:06.630 [main] Log - Step:01 - Navigate to Cashier Authorization
+[INFO ] 2025-04-17 13:47:10.910 [main] Log - Step:02 - Click Refresh Button
+[INFO ] 2025-04-17 13:47:22.839 [main] Log - Step:03 - Select checkbox
+[INFO ] 2025-04-17 13:47:27.121 [main] Log - Step:04 - Click Authorize Button
+[INFO ] 2025-04-17 13:47:28.163 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-04-17 13:47:32.442 [main] Log - Manager Authorization - Cash Tab
+[INFO ] 2025-04-17 13:47:36.936 [main] Log - Step:02 - Select "Manager Authorization"
+[INFO ] 2025-04-17 13:47:41.212 [main] Log - Step:03 - Click "Cash" tab
+[INFO ] 2025-04-17 13:47:41.212 [main] Log - Expected Result: Cash tab load
+[INFO ] 2025-04-17 13:47:41.212 [main] Log - Refresh Loan Opening Entry
+[INFO ] 2025-04-17 13:47:45.499 [main] Log - Step:01 - Click Refresh Button
+[INFO ] 2025-04-17 13:47:51.863 [main] Log - Expected Result: Loan opening entry displayed
+[INFO ] 2025-04-17 13:47:51.863 [main] Log - Authorize Loan Entry as Manager
+[INFO ] 2025-04-17 13:47:56.142 [main] Log - Step:01 - Select loan entry checkbox
+[INFO ] 2025-04-17 13:48:00.402 [main] Log - Step:02 - Click Authorize Button
+[INFO ] 2025-04-17 13:48:01.434 [main] Log - Expected Result: Transaction gets authorised
+[INFO ] 2025-04-17 13:48:05.707 [main] Log - Logout
+[INFO ] 2025-04-17 13:48:15.750 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-04-17 13:48:16.781 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.

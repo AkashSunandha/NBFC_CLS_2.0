@@ -208,12 +208,11 @@ public class Debenture_Allotment  extends Base_Class {
 	}
 
 	public void Verify_Debenture_Allotment_Process_Completion() throws InterruptedException {
-		//		do {
+		do {
+			Thread.sleep(2000);
+			System.out.println("wait");
+		}while(!ElementDisplayed(DebAllRepo.VerifyProductProcessingStatus));
 		Thread.sleep(8000);
-		//		}while(ElementDisplayed(DebAllRepo.ValidationDebenture_AllotmentPage));
-
-
-		//		waitUntilElementDisplayed(DebAllRepo.ValidationDebenture_AllotmentPage);
 		String Progress =GetElementText(DebAllRepo.VerifyProductProcessingProgress);
 		Assert.assertEquals(Progress, "100");
 		ExtentSuccessMessage("Successfully User Verify Product Processing Progress");
@@ -512,11 +511,11 @@ public class Debenture_Allotment  extends Base_Class {
 		//ExtentTestManager.startTest("Tc:4 Navigate to Debenture Application");
 		ScrollUntilElementVisible(DebApp.Debenture);
 		click(DebApp.Debenture);
-		click(DebApp.DebentureApplication);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Navigate to Debenture");
 		Log.info("Step:01 Navigate to Debenture");
 
+		click(DebApp.DebentureApplication);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 Click on Debenture Application");
 		Log.info("Step:02 Click on Debenture Application");
 
@@ -980,6 +979,9 @@ public class Debenture_Allotment  extends Base_Class {
 
 		//Cashier Authorization
 		//ExtentTestManager.startTest("Cashier Authorization");
+		if(ElementDisplayed(DebAllRepo.CollapseAll)) {
+			click(DebAllRepo.CollapseAll);
+		}
 		Log.info("Cashier Authorization");
 
 		click(DebAllRepo.autorizeAndCancelTab);
