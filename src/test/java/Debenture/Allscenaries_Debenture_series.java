@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import com.BasePackage.Base_Class;
 import com.Debenture.Debenture_series;
 import com.Page_AccountOpening.GeneralOpening_SuspenseAsset;
-import com.Page_AccountOpening.InvestmentOpening_Demand;
+import com.Page_AccountOpening.Investment_Opening_Cash;
 import com.Page_AccountOpening.LoanOpening_DepositOpn_DepositLoan;
 import com.Page_AccountOpening.LoanOpening_LoanAndAdvances_PersonalLoanWeekly;
 import com.Utility.Log;
@@ -33,7 +33,7 @@ public class Allscenaries_Debenture_series {
 	LoanOpening_DepositOpn_DepositLoan bondCumulativeMthds = new LoanOpening_DepositOpn_DepositLoan();
 	LoanOpening_LoanAndAdvances_PersonalLoanWeekly personl = new LoanOpening_LoanAndAdvances_PersonalLoanWeekly();
 	GeneralOpening_SuspenseAsset generalOpnMthds = new GeneralOpening_SuspenseAsset();
-	InvestmentOpening_Demand investment = new InvestmentOpening_Demand();
+	Investment_Opening_Cash investment = new Investment_Opening_Cash();
 	Debenture_series debSeriesMthds = new Debenture_series();
 	
 	@BeforeSuite

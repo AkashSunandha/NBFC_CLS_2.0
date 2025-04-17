@@ -1,4 +1,4 @@
-package Debenture;
+package com.test.AccountOpening;
 
 import java.io.IOException;
 import java.util.Map;
@@ -9,8 +9,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
-import com.Debenture.DebentureTransfer;
-import com.Debenture.Debenture_series;
 import com.Page_AccountOpening.GeneralOpening_SuspenseAsset;
 import com.Page_AccountOpening.Investment_Opening_Cash;
 import com.Page_AccountOpening.LoanOpening_DepositOpn_DepositLoan;
@@ -21,7 +19,9 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class Allscenaries_Debenture_Transfer {
+public class AllScenarios_AccOpn_Investment_Opening_Cash {
+
+
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
@@ -32,11 +32,10 @@ public class Allscenaries_Debenture_Transfer {
 	LoanOpening_LoanAndAdvances_PersonalLoanWeekly personl = new LoanOpening_LoanAndAdvances_PersonalLoanWeekly();
 	GeneralOpening_SuspenseAsset generalOpnMthds = new GeneralOpening_SuspenseAsset();
 	Investment_Opening_Cash investment = new Investment_Opening_Cash();
-	DebentureTransfer tranferDeb = new DebentureTransfer();
 	
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("Debenture_Transfer");
+		ExcelReader = new com.Utility.ExcelReader("Investment_Opening_Cash");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -62,11 +61,9 @@ public class Allscenaries_Debenture_Transfer {
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
-	//			investment.LoadInvestmentOpeningWindow(testdata, context);
+				investment.LoadInvestmentOpeningWindow(testdata, context);
 				
-	//			investment.authoriseLogin();
-				
-				tranferDeb.load_Debenture_Transfer(testdata, context);
+				investment.authoriseLogin();
 				
 				custSrchMthds.logout();
 
@@ -98,4 +95,5 @@ public class Allscenaries_Debenture_Transfer {
 		}
 		return objectarry;
 	}
+	
 }

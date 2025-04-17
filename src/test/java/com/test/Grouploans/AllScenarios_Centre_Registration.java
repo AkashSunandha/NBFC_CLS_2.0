@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
 import com.Page_AccountOpening.GeneralOpening_SuspenseAsset;
-import com.Page_AccountOpening.InvestmentOpening_Demand;
+import com.Page_AccountOpening.Investment_Opening_Cash;
 import com.Page_AccountOpening.LoanOpening_DepositOpn_DepositLoan;
 import com.Page_AccountOpening.LoanOpening_LoanAndAdvances_PersonalLoanWeekly;
 import com.Page_Group_Loans.Centre_Registration;
@@ -32,7 +32,7 @@ public class AllScenarios_Centre_Registration {
 	LoanOpening_DepositOpn_DepositLoan bondCumulativeMthds = new LoanOpening_DepositOpn_DepositLoan();
 	LoanOpening_LoanAndAdvances_PersonalLoanWeekly personl = new LoanOpening_LoanAndAdvances_PersonalLoanWeekly();
 	GeneralOpening_SuspenseAsset generalOpnMthds = new GeneralOpening_SuspenseAsset();
-	InvestmentOpening_Demand investment = new InvestmentOpening_Demand();
+	Investment_Opening_Cash investment = new Investment_Opening_Cash();
 	Centre_Registration centreRegMthds = new Centre_Registration();
 	
 	@BeforeSuite

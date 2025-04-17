@@ -18,5 +18,18 @@ public class PageRepositary_Debenture_Tranfer {
 	//Verify Debenture type Based on Type
 	public By Deb_Type = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucDebentureAccInfo_ddlDebentureType_ddl\"]");
 	 
-
+	//Verify Debenture Series Based on Issue
+	public By Issue_Type = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucDebentureAccInfo_ddlDebentureType_ddl\"]");
+	
+	//Verify Debenture Series Based on Issue
+	public By Series_1 = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucDebentureAccInfo_ddlDebentureType_ddl\"]");
+		
+	//Verify Debenture Series Based on Issue
+	public By ACC_No = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucDebentureAccInfo_txtAcNo_txt\"]");
+	
+	//Verify Customer Checkbox Functionality
+	public By gO = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucDebentureAccInfo_btnGo\"]");
+		
+		
+	
 }
