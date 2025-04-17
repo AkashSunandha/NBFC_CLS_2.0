@@ -1,4 +1,4 @@
-[ERROR] 2025-04-16 16:42:15.179 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 11:49:52.478 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -49,7 +49,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-16 16:42:15.189 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 11:49:52.491 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -100,7 +100,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-16 16:42:15.191 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-17 11:49:52.492 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -151,132 +151,105 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-04-16 16:42:15.867 [main] Log - Debenture_Application_Cash
-[INFO ] 2025-04-16 16:42:19.275 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-04-16 16:42:21.102 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-04-16 16:42:21.360 [main] Log - PC Registration
-[INFO ] 2025-04-16 16:42:22.418 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-04-16 16:42:23.474 [main] Log - Step:02 - Enter PC Name in Name field.
-[INFO ] 2025-04-16 16:42:32.170 [main] Log - Step:03 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-04-16 16:42:36.502 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-04-16 16:42:40.040 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-04-16 16:42:40.245 [main] Log - Valid Login
-[INFO ] 2025-04-16 16:42:41.321 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-04-16 16:42:42.389 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-04-16 16:42:52.510 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-16 16:42:53.630 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-16 16:43:04.912 [main] Log - Step:01 Navigate to Debenture
-[INFO ] 2025-04-16 16:43:04.915 [main] Log - Step:02 Click on Debenture Application
-[INFO ] 2025-04-16 16:43:04.916 [main] Log - Expected result:Debenture application window will be opened
-[INFO ] 2025-04-16 16:43:05.041 [main] Log - Step:01 Observe the Branch Field
-[INFO ] 2025-04-16 16:43:05.041 [main] Log - Expected result:Branch field displays logged in branch and is not editable.
-[INFO ] 2025-04-16 16:43:05.150 [main] Log - Step:01 Observe the application date Field
-[INFO ] 2025-04-16 16:43:05.151 [main] Log - Expected result:Application Date displays the current date and is not changeable
-[INFO ] 2025-04-16 16:43:07.636 [main] Log - Step:01 Open Debenture Type Dropdown
-[INFO ] 2025-04-16 16:43:07.637 [main] Log - Step:02 Select an option
-[INFO ] 2025-04-16 16:43:07.637 [main] Log - Expected result:Debenture Type can be selected
-[INFO ] 2025-04-16 16:43:10.231 [main] Log - Step:01 Open Issue Type Dropdown
-[INFO ] 2025-04-16 16:43:10.233 [main] Log - Step:02 Select an option
-[INFO ] 2025-04-16 16:43:10.234 [main] Log - Expected result:Issue Type can be selected
-[INFO ] 2025-04-16 16:43:12.650 [main] Log - Step:01 Open Series Type Dropdown
-[INFO ] 2025-04-16 16:43:12.650 [main] Log - Step:02 Select an option
-[INFO ] 2025-04-16 16:43:12.651 [main] Log - Expected result: Series Type can be selected
-[INFO ] 2025-04-16 16:43:12.746 [main] Log - Step:01 Observe the Nature Field
-[INFO ] 2025-04-16 16:43:12.746 [main] Log - Expected result:Nature field displays 'Single' by default
-[INFO ] 2025-04-16 16:43:15.216 [main] Log - Step:01 Open Category Dropdown
-[INFO ] 2025-04-16 16:43:15.217 [main] Log - Step:02 Select Normal
-[INFO ] 2025-04-16 16:43:15.217 [main] Log - Expected result:Normal can be selected as customer category
-[INFO ] 2025-04-16 16:43:19.911 [main] Log - Step:01 - Click the customer popup button
-[INFO ] 2025-04-16 16:43:19.912 [main] Log - Expected Result: Customer popup Generates
-[INFO ] 2025-04-16 16:43:21.129 [main] Log - Step:01 Enter an alphabet in the name field
-[INFO ] 2025-04-16 16:43:25.436 [main] Log - click on search button
-[INFO ] 2025-04-16 16:43:25.437 [main] Log - Expected Result:List of customers starting letter given is listed
-[INFO ] 2025-04-16 16:43:29.763 [main] Log - Step:01 - Select a customer
-[INFO ] 2025-04-16 16:43:29.764 [main] Log - Expected Result:Customer is selected
-[INFO ] 2025-04-16 16:43:34.227 [main] Log - Step:01 Try to Add Customer
-[INFO ] 2025-04-16 16:43:34.228 [main] Log - Expected Result: Customer is Added
-[INFO ] 2025-04-16 16:43:34.495 [main] Log - Expected result: Unit Value is automatically loaded based on product
-[INFO ] 2025-04-16 16:43:39.972 [main] Log - Step:01 Enter value '20' in No of Units field.
-[INFO ] 2025-04-16 16:43:39.974 [main] Log - Expected result:Field accepts the value.
-[INFO ] 2025-04-16 16:43:44.383 [main] Log - Step:01 Click Get Button Value
-[INFO ] 2025-04-16 16:43:44.452 [main] Log - Expected result:Total value is correctly calculated and displayed
-[INFO ] 2025-04-16 16:43:44.505 [main] Log - Tc:20 - Verify Default ROI
-[INFO ] 2025-04-16 16:43:44.505 [main] Log - Step:01 Observe ROI field
-[INFO ] 2025-04-16 16:43:44.545 [main] Log - ExpectedResult: ROI is automatically displayed based on product
-[INFO ] 2025-04-16 16:43:46.995 [main] Log - Step:01 Open DP Name Dropdown
-[INFO ] 2025-04-16 16:43:46.996 [main] Log - Step:02 Select an option
-[INFO ] 2025-04-16 16:43:46.997 [main] Log - Expected result: DP Name can be selected
-[INFO ] 2025-04-16 16:43:52.487 [main] Log - Step:01 Enter a valid Demat Account Number.
-[INFO ] 2025-04-16 16:43:52.487 [main] Log - Step:02 Validate entry
-[INFO ] 2025-04-16 16:43:52.487 [main] Log - Expected result: System accepts Demat Account Number
-[INFO ] 2025-04-16 16:43:52.539 [main] Log - Step:01 Check maturity value field
-[INFO ] 2025-04-16 16:43:52.631 [main] Log - Expected Result: Maturity value is calculated and displayed correctly
-[INFO ] 2025-04-16 16:43:55.083 [main] Log - Step:01 Open Referred By Dropdown
-[INFO ] 2025-04-16 16:43:55.084 [main] Log - Step:02 Select an option
-[INFO ] 2025-04-16 16:43:55.085 [main] Log - Expected result: 'Referred by' value can be selected
-[INFO ] 2025-04-16 16:44:03.813 [main] Log - Step:01 -  Untick 'Nominee Not required' checkbox
-[INFO ] 2025-04-16 16:44:03.813 [main] Log - Expected Result: Nominee details fields will be display
-[INFO ] 2025-04-16 16:44:08.475 [main] Log - Step:01 - Click customer search button
-[INFO ] 2025-04-16 16:44:08.476 [main] Log - Expected Result: Customer popup Generates
-[INFO ] 2025-04-16 16:44:09.693 [main] Log - Step:01 Enter an alphabet in the name field
-[INFO ] 2025-04-16 16:44:13.995 [main] Log - click on search button
-[INFO ] 2025-04-16 16:44:13.996 [main] Log - Expected Result:List of customers starting letter given is listed
-[INFO ] 2025-04-16 16:44:18.245 [main] Log - Step:01 - Select a customer
-[INFO ] 2025-04-16 16:44:18.245 [main] Log - Expected Result:Customer is selected
-[INFO ] 2025-04-16 16:44:20.794 [main] Log - Step:01 Select any Relation
-[INFO ] 2025-04-16 16:44:20.794 [main] Log - Expected result:Relation is selected
-[INFO ] 2025-04-16 16:44:25.187 [main] Log - Step:01 Try to Add Nominee
-[INFO ] 2025-04-16 16:44:25.189 [main] Log - Expected Result: Nominee is Added
-[INFO ] 2025-04-16 16:44:29.613 [main] Log - Step:01 Open Interest Transfer Tab
-[INFO ] 2025-04-16 16:44:29.646 [main] Log - Step:02 Check checkbox status
-[INFO ] 2025-04-16 16:44:29.647 [main] Log - Expected Result: Interest Transfer required checkbox is unchecked by default
-[INFO ] 2025-04-16 16:44:34.084 [main] Log - Step:01 1. Enable Interest Transfer checkbox
-[INFO ] 2025-04-16 16:44:34.085 [main] Log - Expected Result:  Interest Transfer checkbox enabled
-[INFO ] 2025-04-16 16:44:38.464 [main] Log - Step:01 Click external account checkbox
-[INFO ] 2025-04-16 16:44:42.786 [main] Log - Expected Result: External account details load successfully
-[INFO ] 2025-04-16 16:44:42.841 [main] Log - Step:01 Check if Transmode is Cash
-[INFO ] 2025-04-16 16:44:42.927 [main] Log - Expected Result: Cash Selected
-[INFO ] 2025-04-16 16:44:47.416 [main] Log - Step:01 Save Application
-[INFO ] 2025-04-16 16:44:47.417 [main] Log - Expected Result: Debenture Application save successfully
-[INFO ] 2025-04-16 16:44:47.465 [main] Log - Step:01 Observe the summary
-[INFO ] 2025-04-16 16:44:48.536 [main] Log - Expected Result: Summary Details are displayed correctly
-[INFO ] 2025-04-16 16:44:53.134 [main] Log - Expected Result: PDF page is generated with agreement details.
-[INFO ] 2025-04-16 16:44:53.241 [main] Log - Step:01 Observe the Summary
-[INFO ] 2025-04-16 16:44:53.241 [main] Log - Expected Result: Voucher prints correctly
-[INFO ] 2025-04-16 16:44:57.984 [main] Log - Step:01 Click signout
-[INFO ] 2025-04-16 16:44:57.986 [main] Log - Expected Result: Signout from the Application
-[INFO ] 2025-04-16 16:44:58.033 [main] Log - TC:43 - Login with Another User
-[INFO ] 2025-04-16 16:45:08.701 [main] Log - Step:02 -Log in with another user for authorization
-[INFO ] 2025-04-16 16:45:09.807 [main] Log - ExpectedResult: Logging successfull with another user
-[INFO ] 2025-04-16 16:45:10.190 [main] Log - TC45 - Cashier Authorization
-[INFO ] 2025-04-16 16:45:21.347 [main] Log - Step:01 - Navigate to 'Authorize&cancel ->Cashier Authorisation 
-[INFO ] 2025-04-16 16:45:22.426 [main] Log - ExpectedResult:Cashier authorization window will be opened
-[INFO ] 2025-04-16 16:45:22.477 [main] Log - Tc:46 - Click refresh button
-[INFO ] 2025-04-16 16:45:26.842 [main] Log - Step:01 -Click refresh button
-[INFO ] 2025-04-16 16:45:26.843 [main] Log - Expected result: Transaction is displayed
-[INFO ] 2025-04-16 16:45:26.900 [main] Log - Tc: 47 pass the transactionid
-[INFO ] 2025-04-16 16:45:28.031 [main] Log - Step:01 -Enter Transaction id
-[INFO ] 2025-04-16 16:45:32.378 [main] Log - Step:02 -Click Go Button
-[INFO ] 2025-04-16 16:45:32.379 [main] Log - Expected result: Transaction is selected
-[INFO ] 2025-04-16 16:45:32.433 [main] Log - Tc:48 - Cashier authorization
-[INFO ] 2025-04-16 16:45:36.785 [main] Log - Step:01 select checkbox
-[INFO ] 2025-04-16 16:45:41.121 [main] Log - Step:02 click authorize button
-[INFO ] 2025-04-16 16:45:42.195 [main] Log - ExpectedResult: Transacction is authorized
-[INFO ] 2025-04-16 16:45:48.599 [main] Log - TC:49- Manager Authorization - Cash Tab
-[INFO ] 2025-04-16 16:45:48.599 [main] Log - Step:01 - Go to Authorize & cancel module
-[INFO ] 2025-04-16 16:45:53.389 [main] Log - Step:02 -Select Manager Authorization
-[INFO ] 2025-04-16 16:45:54.468 [main] Log - ExpectedResult:  -Cash tab will be displaying
-[INFO ] 2025-04-16 16:45:54.517 [main] Log - TC:50 - Refresh Loan Opening Entry
-[INFO ] 2025-04-16 16:45:58.874 [main] Log - Step:01 -Click refresh button
-[INFO ] 2025-04-16 16:45:58.875 [main] Log - Expected result: Transaction is displayed
-[INFO ] 2025-04-16 16:45:58.933 [main] Log - Tc: 51 pass the transactionid
-[INFO ] 2025-04-16 16:46:00.073 [main] Log - Step:01 -Enter Transaction id
-[INFO ] 2025-04-16 16:46:04.376 [main] Log - Step:02 -Click Go Button
-[INFO ] 2025-04-16 16:46:04.376 [main] Log - Expected result: Transaction is selected
-[INFO ] 2025-04-16 16:46:04.426 [main] Log - TC:52- Authorize Loan Entry as Manager
-[INFO ] 2025-04-16 16:46:08.745 [main] Log - Step:01 -Select loan entry checkbox
-[INFO ] 2025-04-16 16:46:13.057 [main] Log - Step:02 -Click Authorize button
-[INFO ] 2025-04-16 16:46:14.134 [main] Log - ExpectedResult: Transaction is authorized
-[INFO ] 2025-04-16 16:46:18.481 [main] Log - Logout
-[INFO ] 2025-04-16 16:46:23.098 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-04-16 16:46:24.167 [main] Log - Expected Result: User is logged out successfully, login screen is disappered.
+[INFO ] 2025-04-17 11:49:53.020 [main] Log - Debenture_Application_Cash
+[INFO ] 2025-04-17 11:49:55.958 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-17 11:49:58.485 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-17 11:49:58.648 [main] Log - PC Registration
+[INFO ] 2025-04-17 11:49:59.715 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-17 11:50:00.760 [main] Log - Step:02 - Enter PC Name in Name field.
+[INFO ] 2025-04-17 11:50:09.420 [main] Log - Step:03 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-17 11:50:13.731 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-17 11:50:17.397 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-17 11:50:17.508 [main] Log - Valid Login
+[INFO ] 2025-04-17 11:50:18.563 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-17 11:50:19.616 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-17 11:50:29.760 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-17 11:50:30.825 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-17 11:50:41.487 [main] Log - Step:01 Navigate to Debenture
+[INFO ] 2025-04-17 11:50:41.487 [main] Log - Step:02 Click on Debenture Application
+[INFO ] 2025-04-17 11:50:41.488 [main] Log - Expected result:Debenture application window will be opened
+[INFO ] 2025-04-17 11:50:41.622 [main] Log - Step:01 Observe the Branch Field
+[INFO ] 2025-04-17 11:50:41.622 [main] Log - Expected result:Branch field displays logged in branch and is not editable.
+[INFO ] 2025-04-17 11:50:41.746 [main] Log - Step:01 Observe the application date Field
+[INFO ] 2025-04-17 11:50:41.746 [main] Log - Expected result:Application Date displays the current date and is not changeable
+[INFO ] 2025-04-17 11:50:44.178 [main] Log - Step:01 Open Debenture Type Dropdown
+[INFO ] 2025-04-17 11:50:44.179 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 11:50:44.180 [main] Log - Expected result:Debenture Type can be selected
+[INFO ] 2025-04-17 11:50:46.643 [main] Log - Step:01 Open Issue Type Dropdown
+[INFO ] 2025-04-17 11:50:46.644 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 11:50:46.644 [main] Log - Expected result:Issue Type can be selected
+[INFO ] 2025-04-17 11:50:49.066 [main] Log - Step:01 Open Series Type Dropdown
+[INFO ] 2025-04-17 11:50:49.067 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 11:50:49.067 [main] Log - Expected result: Series Type can be selected
+[INFO ] 2025-04-17 11:50:49.178 [main] Log - Step:01 Observe the Nature Field
+[INFO ] 2025-04-17 11:50:49.178 [main] Log - Expected result:Nature field displays 'Single' by default
+[INFO ] 2025-04-17 11:50:51.601 [main] Log - Step:01 Open Category Dropdown
+[INFO ] 2025-04-17 11:50:51.602 [main] Log - Step:02 Select Normal
+[INFO ] 2025-04-17 11:50:51.602 [main] Log - Expected result:Normal can be selected as customer category
+[INFO ] 2025-04-17 11:50:56.130 [main] Log - Step:01 - Click the customer popup button
+[INFO ] 2025-04-17 11:50:56.131 [main] Log - Expected Result: Customer popup Generates
+[INFO ] 2025-04-17 11:50:57.333 [main] Log - Step:01 Enter an alphabet in the name field
+[INFO ] 2025-04-17 11:51:01.628 [main] Log - click on search button
+[INFO ] 2025-04-17 11:51:01.628 [main] Log - Expected Result:List of customers starting letter given is listed
+[INFO ] 2025-04-17 11:51:05.809 [main] Log - Step:01 - Select a customer
+[INFO ] 2025-04-17 11:51:05.810 [main] Log - Expected Result:Customer is selected
+[INFO ] 2025-04-17 11:51:10.247 [main] Log - Step:01 Try to Add Customer
+[INFO ] 2025-04-17 11:51:10.248 [main] Log - Expected Result: Customer is Added
+[INFO ] 2025-04-17 11:51:10.395 [main] Log - Expected result: Unit Value is automatically loaded based on product
+[INFO ] 2025-04-17 11:51:15.825 [main] Log - Step:01 Enter value '20' in No of Units field.
+[INFO ] 2025-04-17 11:51:15.826 [main] Log - Expected result:Field accepts the value.
+[INFO ] 2025-04-17 11:51:20.211 [main] Log - Step:01 Click Get Button Value
+[INFO ] 2025-04-17 11:51:20.283 [main] Log - Expected result:Total value is correctly calculated and displayed
+[INFO ] 2025-04-17 11:51:20.345 [main] Log - Tc:20 - Verify Default ROI
+[INFO ] 2025-04-17 11:51:20.345 [main] Log - Step:01 Observe ROI field
+[INFO ] 2025-04-17 11:51:20.377 [main] Log - ExpectedResult: ROI is automatically displayed based on product
+[INFO ] 2025-04-17 11:51:22.813 [main] Log - Step:01 Open DP Name Dropdown
+[INFO ] 2025-04-17 11:51:22.814 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 11:51:22.814 [main] Log - Expected result: DP Name can be selected
+[INFO ] 2025-04-17 11:51:29.371 [main] Log - Step:01 Enter a valid Demat Account Number.
+[INFO ] 2025-04-17 11:51:29.371 [main] Log - Step:02 Validate entry
+[INFO ] 2025-04-17 11:51:29.372 [main] Log - Expected result: System accepts Demat Account Number
+[INFO ] 2025-04-17 11:51:29.423 [main] Log - Step:01 Check maturity value field
+[INFO ] 2025-04-17 11:51:29.523 [main] Log - Expected Result: Maturity value is calculated and displayed correctly
+[INFO ] 2025-04-17 11:51:31.943 [main] Log - Step:01 Open Referred By Dropdown
+[INFO ] 2025-04-17 11:51:31.943 [main] Log - Step:02 Select an option
+[INFO ] 2025-04-17 11:51:31.944 [main] Log - Expected result: 'Referred by' value can be selected
+[INFO ] 2025-04-17 11:51:40.598 [main] Log - Step:01 -  Untick 'Nominee Not required' checkbox
+[INFO ] 2025-04-17 11:51:40.599 [main] Log - Expected Result: Nominee details fields will be display
+[INFO ] 2025-04-17 11:51:45.104 [main] Log - Step:01 - Click customer search button
+[INFO ] 2025-04-17 11:51:45.105 [main] Log - Expected Result: Customer popup Generates
+[INFO ] 2025-04-17 11:51:46.288 [main] Log - Step:01 Enter an alphabet in the name field
+[INFO ] 2025-04-17 11:51:50.570 [main] Log - click on search button
+[INFO ] 2025-04-17 11:51:50.571 [main] Log - Expected Result:List of customers starting letter given is listed
+[INFO ] 2025-04-17 11:51:54.745 [main] Log - Step:01 - Select a customer
+[INFO ] 2025-04-17 11:51:54.745 [main] Log - Expected Result:Customer is selected
+[INFO ] 2025-04-17 11:51:57.230 [main] Log - Step:01 Select any Relation
+[INFO ] 2025-04-17 11:51:57.230 [main] Log - Expected result:Relation is selected
+[INFO ] 2025-04-17 11:52:01.600 [main] Log - Step:01 Try to Add Nominee
+[INFO ] 2025-04-17 11:52:01.601 [main] Log - Expected Result: Nominee is Added
+[INFO ] 2025-04-17 11:52:05.972 [main] Log - Step:01 Open Interest Transfer Tab
+[INFO ] 2025-04-17 11:52:06.001 [main] Log - Step:02 Check checkbox status
+[INFO ] 2025-04-17 11:52:06.002 [main] Log - Expected Result: Interest Transfer required checkbox is unchecked by default
+[INFO ] 2025-04-17 11:52:10.360 [main] Log - Step:01 1. Enable Interest Transfer checkbox
+[INFO ] 2025-04-17 11:52:10.360 [main] Log - Expected Result:  Interest Transfer checkbox enabled
+[INFO ] 2025-04-17 11:52:14.735 [main] Log - Step:01 Click external account checkbox
+[INFO ] 2025-04-17 11:52:19.048 [main] Log - Expected Result: External account details load successfully
+[INFO ] 2025-04-17 11:52:19.100 [main] Log - Step:01 Check if Transmode is Cash
+[INFO ] 2025-04-17 11:52:19.192 [main] Log - Expected Result: Cash Selected
+[INFO ] 2025-04-17 11:52:23.584 [main] Log - Step:01 Save Application
+[INFO ] 2025-04-17 11:52:23.584 [main] Log - Expected Result: Debenture Application save successfully
+[INFO ] 2025-04-17 11:52:23.617 [main] Log - Step:01 Observe the summary
+[INFO ] 2025-04-17 11:52:24.689 [main] Log - Expected Result: Summary Details are displayed correctly
+[INFO ] 2025-04-17 11:52:29.214 [main] Log - Expected Result: PDF page is generated with agreement details.
+[INFO ] 2025-04-17 11:52:29.304 [main] Log - Step:01 Observe the Summary
+[INFO ] 2025-04-17 11:52:29.304 [main] Log - Expected Result: Voucher prints correctly
+[INFO ] 2025-04-17 11:52:34.080 [main] Log - Step:01 Click signout
+[INFO ] 2025-04-17 11:52:34.080 [main] Log - Expected Result: Signout from the Application
+[INFO ] 2025-04-17 11:52:34.127 [main] Log - TC:43 - Login with Another User
+[INFO ] 2025-04-17 11:52:44.378 [main] Log - Exception org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SPTVMLAP-2631', ip: '192.168.136.164', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250407111027, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9500, moz:profile: C:\Users\VIJAYA~1.A\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 4f9f360e-4889-48ff-b430-5cc83f3e4b57
+*** Element info: {Using=xpath, value=//*[@id="txtPassword_txt"]}

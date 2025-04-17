@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
 import java.util.Map;
 
 import org.testng.ITestContext;
@@ -16,7 +17,8 @@ import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
-import bsh.ParseException;
+//import bsh.ParseException;
+
 
 import com.Page_Repositary.PageRepositary_Cust_CustSearch;
 
@@ -32,6 +34,10 @@ public class Debenture_Application_Cashflow  extends Base_Class {
     
     public String spMobileNum = "EXEC GenerateNextMobileNumber";
     public String clmnNamMobileNum = "generated_mobile_number";
+    
+    public String  spDematAccNum = "EXEC GenerateDematAccountNumber";
+    public String clmnDematAccNum = "Random4DigitNumber";
+
 
     String cashtranscid;
     
@@ -412,10 +418,11 @@ public class Debenture_Application_Cashflow  extends Base_Class {
     public void Validate_Demat_AccNo_Entry(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
     	ExtentTestManager.startTest("Tc:22 Validate Demat Accno Entry");
     	click (DebApp.DemateAcNolargetextbox);
-		String Demat = testdata.get("DematAccNo").toString();
+//		String Demat = testdata.get("DematAccNo").toString();
+//		input(DebApp.DemateAcNolargetextbox, Demat);
+    	
+    	String Demat = generateUniqueId(spDematAccNum,clmnDematAccNum);
 		input(DebApp.DemateAcNolargetextbox, Demat);
-    	//String Demat = generateUniqueId(spMobileNum,clmnNamMobileNum);
-		//input(DebApp.DemateAcNolargetextbox, Demat);
     	  
     	ExtentTestManager.getTest().log(Status.PASS, "Step:01 Enter a valid Demat Account Number.");
     	Log.info("Step:01 Enter a valid Demat Account Number.");
