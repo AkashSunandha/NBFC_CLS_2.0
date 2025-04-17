@@ -1,4 +1,4 @@
-package com.test.Transaction;
+package com.test.Debenture_Application;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,68 +10,130 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
-import com.Page_Transaction.Transaction_GL_AC_Bulk_Transaction;
-import com.Page_Transaction.Transaction_Transactions_Jewel;
-import com.Page_Transaction.Transaction_Transactions_Suspense_liability;
+import com.Pages_DebentureApplication.Debenture_Allotment;
+import com.Pages_DebentureApplication.Debenture_Application_Cashflow;
+import com.Pages_DebentureApplication.Debenture_Application_Transferflow;
 import com.Utility.Log;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
+import com.github.dockerjava.api.model.Driver;
 import com.listeners.TestListener;
 
-public class AllScenarios_Transaction_GL_AC_Bulk_Transaction_Transfer extends Base_Class {
-
+public class AllScenario_Debenture_Allotment extends Base_Class {
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
-	TestListener TestListener;
+	TestListener TestListener; 
 	com.Utility.ScreenShot screenShot;
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
-	Transaction_Transactions_Suspense_liability transSusliability = new Transaction_Transactions_Suspense_liability();
-	Transaction_GL_AC_Bulk_Transaction transGL_AC_Bulk =new Transaction_GL_AC_Bulk_Transaction();
-
+	Debenture_Application_Transferflow DebApp = new Debenture_Application_Transferflow();
+	Debenture_Allotment DebeAllot = new Debenture_Allotment();
 
 	@BeforeSuite
-	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("GL_AC_Bulk_Transaction");
+	public void reference() {
+		ExcelReader = new com.Utility.ExcelReader("Debenture_Application");
+
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
 		Base_Class = new Base_Class();
 	}
 
-
 	@Test(dataProvider = "TestData")
-	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
+	public void customerRegister( Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString()+"-Transfer");
-				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
+				ExtentTestManager.startTest("Debenture_Application_Transfer");
+				Log.info("Debenture_Application_Cash");
 				context.setAttribute("fileName", "Login");
+				//				ExtentTestManager.endTest();
 
-				//TC No. - 01 --> Application launch
-				ExtentTestManager.startTest("Application launch");
+
+				//Application launch
+				ExtentTestManager.startTest("Firefox Driver & Application Launch");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
-				Thread.sleep(2000);
 
+
+				//PC Registration
 				custSrchMthds.pcRegistration(testdata, context);
 
+
+				//User Login
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
-				transGL_AC_Bulk.Navigate_GL_AC_Bulk_Transaction();
+				//Precondition 
+				DebeAllot.Precondition(testdata, context);
 
-				transGL_AC_Bulk.GLccountinfo(testdata, context);
 
-				transGL_AC_Bulk.GLccountinfoDebit(testdata, context);
+				DebeAllot.NavigateToDebenture_Allotment();
 
-				transGL_AC_Bulk.transModeTransfer();
 
-				transGL_AC_Bulk.authorizeTransfer(testdata, context);
+				DebeAllot.SelectAllotmentBranch();
 
+
+				DebeAllot.SelectDebentureType();
+
+
+				DebeAllot.SelectIssueType();
+
+
+				DebeAllot.SelectDebentureSeries();
+
+
+				DebeAllot.SelectAllotmentStatus();
+
+
+				DebeAllot.ClickOnAllotmentSearch();
+
+
+
+				DebeAllot.ClickOnAllotmentProcess();
+
+
+				DebeAllot.Verify_Debenture_Allotment_Process_Completion();
+
+				DebeAllot.authorizeTransfer(testdata, context);
+
+				DebeAllot.Signout();
+
+				DebeAllot.Signin();
+				/////////////////
+
+				DebeAllot.PreconditionCash(testdata, context);
+
+
+				DebeAllot.NavigateToDebenture_Allotment();
+
+
+				DebeAllot.SelectAllotmentBranch();
+
+
+				DebeAllot.SelectDebentureTypeCash();
+
+
+				DebeAllot.SelectIssueTypeCash();
+
+
+				DebeAllot.SelectDebentureSeriesCash();
+
+
+				DebeAllot.SelectAllotmentStatus();
+
+
+				DebeAllot.ClickOnAllotmentSearch();				
+
+
+				DebeAllot.ClickOnAllotmentReturn();
+
+				DebeAllot.ClickOnAllotmentReturnSubmit();
+
+				DebeAllot.authorizeCash1(testdata, context);
+
+				//Sign out
 				custSrchMthds.logout();
-
 
 				// EndTest
 				ExtentTestManager.endTest();
@@ -117,8 +179,6 @@ public class AllScenarios_Transaction_GL_AC_Bulk_Transaction_Transfer extends Ba
 		}
 	}
 
-
-
 	@DataProvider(name = "TestData")
 	public static Object[][] gettestdate() throws IOException {
 
@@ -134,3 +194,4 @@ public class AllScenarios_Transaction_GL_AC_Bulk_Transaction_Transfer extends Ba
 	}
 
 }
+

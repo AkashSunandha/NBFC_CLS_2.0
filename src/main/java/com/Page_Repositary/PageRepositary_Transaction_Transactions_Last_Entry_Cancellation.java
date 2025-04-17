@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 import com.BasePackage.Base_Class;
 
-public class PageRepositary_Transaction_Transactions_Suspense_Liability extends Base_Class{
+public class PageRepositary_Transaction_Transactions_Last_Entry_Cancellation extends Base_Class{
 
 	public By transactionTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/div");
 	public By transactionsTab = By.xpath("//*[text()='Transactions ']");
@@ -109,7 +109,7 @@ public class PageRepositary_Transaction_Transactions_Suspense_Liability extends 
 
 	public By userName = By.xpath("//*[@id=\"ctl00_ctl00_lblUser\"]");
 	public By autorizeAndCancelTab = By.xpath("(//*[@id='CreateMenu']//*[text()='Authorize & Cancel']//parent::li//div)[1]");
-	public By TransactionCancellations =By.xpath("//*[text()='Transaction Cancellation ']");
+	public By Cancellations =By.xpath("//*[text()='Cancellations']");
 	public By LastEntryCancellation=By.xpath("//*[text()='Last Entry Cancellation ']");
 	
 	public By managerAuthoTab = By.xpath("//a[text()='Manager Authorisation (MNAU)']");
@@ -120,7 +120,7 @@ public class PageRepositary_Transaction_Transactions_Suspense_Liability extends 
 	public By cashierAuthoTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/ul/li[8]/a");
 	public By cashierRefreshBtn = By.xpath(" //*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnRefresh\"]");
 	public By cashierAuthorizeBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]");
-	public By cashierCheckBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect\"]");
+	public By cashierCheckBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect\"] | //*[@id='ctl00_ctl00_CPH1_PRDCNT_CancelTrans1_lvwTransDetails_ctrl0_chkSelect']");
 	public By confirmationPopUp = By.xpath("//*[@id='closetop']");
 	public By othersTab = By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers\"]");
 	public By othersCheckBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers_ucMAOthers_lvwOtherDetails_ctrl0_chkSelect\"]");
@@ -129,13 +129,17 @@ public class PageRepositary_Transaction_Transactions_Suspense_Liability extends 
 	public By goBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnGo\"]");
 	public By transId = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID\"]");
 	public By sTransferTab = By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
-	public By sOthersTab =By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers\"]");
 
-	public By approveCheckBoxTransfer = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect\"]");
+	public By approveCheckBoxTransfer = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect\"] | //*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers_ucMAOthers_lvwOtherDetails_ctrl0_chkSelect\"]");
 	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
+	
+	public By ProductOperation =By.xpath("//*[@title='Select Product Operation']");
 	public By HeaderDate =By.xpath("//*[contains(@id,'HeaderDate')]");
 	public By TransactionDate =By.xpath("//*[@title='Transaction Date']");
-
-
+	public By Cancel =By.xpath("//*[@value='Cancel']");
+	public By CancelRemark =By.xpath("//*[@title='Reason For Cancellation']");
+	public By sOthersTab =By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers\"]");
+	public By CollapseAll =By.xpath("//*[@title='Collapse all']");
+	
 
 }

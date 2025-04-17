@@ -94,6 +94,8 @@ public class Base_Class {
 			FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);   
 			//			DesiredCapabilities desired = DesiredCapabilities.firefox();
 			FirefoxOptions options1 = new FirefoxOptions();
+			// Use a temporary clean profile (no extensions)
+			options1.addArguments("--safe-mode");
 			options1.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options1.setBinary(firefoxBinary));
 			driver = new FirefoxDriver(options1);
 			//			FirefoxOptions options1 = new FirefoxOptions();
@@ -150,8 +152,7 @@ public class Base_Class {
 
 	}
 
-	public static void clear(By element)throws InterruptedException
-	{
+	public static void clear(By element)throws InterruptedException	{
 		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(element)).clear();
@@ -319,7 +320,7 @@ public class Base_Class {
 		//	}
 
 	}
-	
+
 	public static void ExtentSuccessMessage(String strPassSuccessMessage) {
 		ExtentTestManager.getTest().log(Status.PASS, strPassSuccessMessage);
 	}
@@ -340,76 +341,83 @@ public class Base_Class {
 		}
 		return stxt;
 	}
+
+	public static String GetElementAttribute(By locator,String Values)
+	{
+		WebElement element = driver.findElement(locator);
+		String flags = element.getAttribute(Values);
+		return flags;
+	}
 	public void PageRefresh() {
 		driver.navigate().refresh();
 	}
 
-   	
-	
-    public String dateConversion(String inputDate) throws ParseException {
-    	
-        // Define the original format of the date string
-        SimpleDateFormat originalFormat = new SimpleDateFormat("EEEE, MMMM dd yyyy", Locale.ENGLISH);
-
-        // Parse the input date string
-        Date date = originalFormat.parse(inputDate);
-
-        // Define the desired output format (DD/MM/YYYY)
-        SimpleDateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");
-
-        // Format the parsed date into the desired format
-        String formattedDate = targetFormat.format(date);
-        
-    	return formattedDate;
-    }
 
 
-    public static void waitForSpinnerToStop(WebDriver driver, By spinnerLocator) {
-         int MAX_WAIT_TIME = 60;  // Max total wait time in seconds
-         int POLL_INTERVAL = 1;   // Poll interval in seconds
-         int CONSECUTIVE_DISAPPEAR_COUNT = 3;  // Number of consecutive times the spinner must disappear
-         
-        int remainingTime = MAX_WAIT_TIME;
-        int disappearCount = 0;
+	public String dateConversion(String inputDate) throws ParseException {
 
-        // WebDriverWait setup
-        WebDriverWait wait = new WebDriverWait(driver, POLL_INTERVAL);
+		// Define the original format of the date string
+		SimpleDateFormat originalFormat = new SimpleDateFormat("EEEE, MMMM dd yyyy", Locale.ENGLISH);
 
-        // Loop until the spinner disappears for the set number of cycles or time runs out
-        while (remainingTime > 0) {
-            try {
-                // Wait until the spinner becomes invisible
-                wait.until(ExpectedConditions.invisibilityOfElementLocated(spinnerLocator));
+		// Parse the input date string
+		Date date = originalFormat.parse(inputDate);
 
-                // If spinner disappeared, increment the disappearCount
-                disappearCount++;
+		// Define the desired output format (DD/MM/YYYY)
+		SimpleDateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");
 
-                // If spinner has disappeared for enough consecutive cycles, we stop the wait
-                if (disappearCount >= CONSECUTIVE_DISAPPEAR_COUNT) {
-                    System.out.println("Spinner has stopped appearing.");
-                    return;
-                }
+		// Format the parsed date into the desired format
+		String formattedDate = targetFormat.format(date);
 
-            } catch (Exception e) {
-                // Spinner is still visible, reset disappearCount
-                disappearCount = 0;
-                System.out.println("Spinner is still visible. Waiting...");
-            }
+		return formattedDate;
+	}
 
-            // Sleep for the polling interval before checking again
-            try {
-                Thread.sleep(POLL_INTERVAL * 1000); // Polling interval
-            } catch (InterruptedException ie) {
-                Thread.currentThread().interrupt();
-            }
 
-            // Reduce the remaining time
-            remainingTime -= POLL_INTERVAL;
-        }
+	public static void waitForSpinnerToStop(WebDriver driver, By spinnerLocator) {
+		int MAX_WAIT_TIME = 60;  // Max total wait time in seconds
+		int POLL_INTERVAL = 1;   // Poll interval in seconds
+		int CONSECUTIVE_DISAPPEAR_COUNT = 3;  // Number of consecutive times the spinner must disappear
 
-        System.out.println("Timeout reached, spinner still shows up intermittently.");
-    }
-    public static void KeyOperation(String strKey) {
+		int remainingTime = MAX_WAIT_TIME;
+		int disappearCount = 0;
+
+		// WebDriverWait setup
+		WebDriverWait wait = new WebDriverWait(driver, POLL_INTERVAL);
+
+		// Loop until the spinner disappears for the set number of cycles or time runs out
+		while (remainingTime > 0) {
+			try {
+				// Wait until the spinner becomes invisible
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(spinnerLocator));
+
+				// If spinner disappeared, increment the disappearCount
+				disappearCount++;
+
+				// If spinner has disappeared for enough consecutive cycles, we stop the wait
+				if (disappearCount >= CONSECUTIVE_DISAPPEAR_COUNT) {
+					System.out.println("Spinner has stopped appearing.");
+					return;
+				}
+
+			} catch (Exception e) {
+				// Spinner is still visible, reset disappearCount
+				disappearCount = 0;
+				System.out.println("Spinner is still visible. Waiting...");
+			}
+
+			// Sleep for the polling interval before checking again
+			try {
+				Thread.sleep(POLL_INTERVAL * 1000); // Polling interval
+			} catch (InterruptedException ie) {
+				Thread.currentThread().interrupt();
+			}
+
+			// Reduce the remaining time
+			remainingTime -= POLL_INTERVAL;
+		}
+
+		System.out.println("Timeout reached, spinner still shows up intermittently.");
+	}
+	public static void KeyOperation(String strKey) {
 		Actions act = new Actions(driver);
 		String str = strKey.toUpperCase();
 		switch (str) {
@@ -468,7 +476,31 @@ public class Base_Class {
 
 		}
 	}
+	// Method to get the value of the entered account number
+	public boolean inputValidation(By locator,String input) {
+		WebElement element = driver.findElement(locator);
+		System.out.println("InputValue: "+element.getAttribute("value"));
+		return element.getAttribute("value").equals(input);
+	}
+	// Method to verify drop down selection
+	public boolean dropdownSelectionValidation(String expectedOption,By locator) {
+		WebElement element = driver.findElement(locator);
+		Select dropdown = new Select(element);
+		System.out.println(dropdown.getFirstSelectedOption().getText());
+		return dropdown.getFirstSelectedOption().getText().equals(expectedOption);
+	}
 
-	
+	public static boolean waitUntilElementDisplayed(By locator) {
+	    try {
+	        WebDriverWait wait = new WebDriverWait(driver,90);
+	        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	        return element.isDisplayed();
+	    } catch (Exception e) {
+	        System.out.println("Element not visible: " + e.getMessage());
+	        return false;
+	    }
+	}
+
+
 
 }

@@ -1,5 +1,6 @@
 package com.test.Transaction;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
@@ -11,15 +12,17 @@ import org.testng.annotations.Test;
 import com.BasePackage.Base_Class;
 import com.Page_ClosureAndRenewals.ClosureAndRenewals_FD_Closure;
 import com.Page_Transaction.Transaction_GL_AC_Bulk_Transaction;
+import com.Page_Transaction.Transaction_Transactions_Cancellations;
 import com.Page_Transaction.Transaction_Transactions_Jewel;
 import com.Page_Transaction.Transaction_Transactions_Suspense_liability;
 import com.Utility.Log;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_Transaction_GL_AC_Bulk_Transaction_Cash {
+public class AllScenarios_Transaction_Transaction_Cancellation_Cash extends Base_Class {
 
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
@@ -30,6 +33,7 @@ public class AllScenarios_Transaction_GL_AC_Bulk_Transaction_Cash {
 	Transaction_Transactions_Suspense_liability transSusliability = new Transaction_Transactions_Suspense_liability();
 	Transaction_GL_AC_Bulk_Transaction transGL_AC_Bulk =new Transaction_GL_AC_Bulk_Transaction();
 	ClosureAndRenewals_FD_Closure FD_Closure =new ClosureAndRenewals_FD_Closure();
+	Transaction_Transactions_Cancellations TrnsCancellation =new Transaction_Transactions_Cancellations();
 
 	@BeforeSuite
 	public void reference() { 
@@ -58,20 +62,24 @@ public class AllScenarios_Transaction_GL_AC_Bulk_Transaction_Cash {
 				custSrchMthds.pcRegistration(testdata, context);
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
-				
+
 				transGL_AC_Bulk.Navigate_GL_AC_Bulk_Transaction();
 
 				transGL_AC_Bulk.GLccountinfo(testdata, context);
 
-				transGL_AC_Bulk.GLccountinfoDebit(testdata, context);
-
-//				transGL_AC_Bulk.GLccountinfo(testdata, context);
-//
-//				transGL_AC_Bulk.GLccountinfoDebit(testdata, context);
-
 				transGL_AC_Bulk.transModeCash();
 
-				transGL_AC_Bulk.authorizeCash(testdata, context);
+				transGL_AC_Bulk.NavigateToLastEntryCancellation();
+
+				transGL_AC_Bulk.VerifyTrnDate();
+
+				TrnsCancellation.ClickOnCheckBox();
+
+				TrnsCancellation.EnterRemarkCancelBtn();
+
+				TrnsCancellation.ClickonCancelBtn();
+
+				transGL_AC_Bulk.authorizeCash(testdata, context);	
 
 				custSrchMthds.logout();
 
@@ -80,14 +88,45 @@ public class AllScenarios_Transaction_GL_AC_Bulk_Transaction_Cash {
 				ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();
 			}		
-		}catch(Exception e) {
-			ExtentTestManager.getTest().log(Status.FAIL, e);
-			Log.info("Exception "+e);
-			ExtentTestManager.endTest();
+		} catch (Exception e) {
 
+			System.out.println("<----------------Failed--- Test execution " + testdata.get("TestScenario").toString()+ " ---Failed ---------------->");
+			Log.error("" + e.getMessage());
+			String fileName = (String) context.getAttribute("fileName");
+			try {
+				File file = new com.Utility.ScreenShot(driver).takeScreenShot(fileName,testdata.get("TestScenario").toString());
+				ExtentTestManager.getTest().fail(e.getMessage(),MediaEntityBuilder.createScreenCaptureFromPath(file.toString()).build());
+			} catch (Exception NoSuchWindowException) {
+				System.out.println("Catch File not found error");
+			}
+			ExtentErrorMessage("Test Failed");
+			System.out.println(("*** Test Suite " + testdata.get("TestScenario").toString() + " ending ***"));
+			ExtentTestManager.endTest();
+			ExtentManager.getInstance().flush();
+			Log.info("*** Test Suite " + testdata.get("TestScenario").toString() + " ending ***");
+		} catch (AssertionError e) {
+			System.out.println("*** Test execution " + testdata.get("TestScenario").toString() + " failed...");
+			Log.error("*** Test execution " + testdata.get("TestScenario").toString() + " failed...");
+			Log.error("" + e.getMessage());
+			String fileName = (String) context.getAttribute("fileName");
+
+			try {
+				File file = new com.Utility.ScreenShot(driver).takeScreenShot(fileName,testdata.get("TestScenario").toString());
+				ExtentTestManager.getTest().fail(e.getMessage(),MediaEntityBuilder.createScreenCaptureFromPath(file.toString()).build());
+			} catch (Exception NoSuchWindowException) {
+				System.out.println("File not found error");
+			}
+			ExtentErrorMessage("Test Failed");
+			ExtentTestManager.endTest();
+			ExtentManager.getInstance().flush();
+			Log.info("************************ Test Suite " + testdata.get("TestScenario").toString()
+					+ " ending ****************************");
+
+		} finally {
+			if (driver != null)
+				driver.quit();
 		}
 	}
-
 
 
 	@DataProvider(name = "TestData")

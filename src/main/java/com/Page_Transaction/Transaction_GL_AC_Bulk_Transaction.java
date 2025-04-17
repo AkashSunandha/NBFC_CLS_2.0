@@ -6,12 +6,16 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.internal.TestMethodWithDataProviderMethodWorker;
 
@@ -22,6 +26,7 @@ import com.Page_Repositary.PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan;
 import com.Page_Repositary.PageRepositary_Cust_CustSearch;
 import com.Page_Repositary.PageRepositary_Transaction_GL_AC_Bulk_Transaction;
 import com.Page_Repositary.PageRepositary_Transaction_Transactions_Jewel;
+import com.Page_Repositary.PageRepositary_Transaction_Transactions_Last_Entry_Cancellation;
 import com.Page_Repositary.PageRepositary_Transaction_Transactions_Suspense_Liability;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
@@ -33,6 +38,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan depositLoanRepo = new PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan();
 	PageRepositary_Transaction_GL_AC_Bulk_Transaction transaction_GL_AC_BulkRepo  =new PageRepositary_Transaction_GL_AC_Bulk_Transaction();
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
+	PageRepositary_Transaction_Transactions_Last_Entry_Cancellation Transactions_Last_Entry_CancellationRepo =new PageRepositary_Transaction_Transactions_Last_Entry_Cancellation();
 	PageRepositary_Transaction_Transactions_Suspense_Liability Transactions_SusLiabilityRepo = new PageRepositary_Transaction_Transactions_Suspense_Liability();
 	Transaction_Transactions_Jewel Transactions_Jewel = new Transaction_Transactions_Jewel();
 	public String spAccNum = "exec GetJewelloanAccountnumber;";
@@ -41,6 +47,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	String transId;
 	String lastValue;
 	String Acc_No;
+	String formattedDate;
 	public String sp = "GetSuspenseLiabilityAccountnumber";
 	public String columnName = "Acno";
 
@@ -49,14 +56,14 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		click(Transactions_SusLiabilityRepo.goBtn);
 	}
 
-	
+
 	public void AddButton() throws InterruptedException {
 		Thread.sleep(2000);
 		click(transaction_GL_AC_BulkRepo.AddButton);
-		ExtentSuccessMessage("Step:01 - Click on the Add Button.");
-		Log.info("Step:01 - Click on the Add Buttone.");
+		ExtentSuccessMessage("Step:02 - Click on the Add Button.");
+		Log.info("Step:02 - Click on the Add Button.");
 	}
-	
+
 	public void Navigate_GL_AC_Bulk_Transaction() throws InterruptedException {
 
 		//Open Transaction Module
@@ -99,7 +106,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	public void GLccountinfo(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 		//Select Branch
-		ExtentTestManager.startTest("Select Branch");
+		//		ExtentTestManager.startTest("Select Branch");
 		Log.info("Select Branch");
 
 		select("TRIVANDRUM", transaction_GL_AC_BulkRepo.aiBranchDropdown);
@@ -113,9 +120,9 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 		SelectTranscationType("Credit");
 
-		ExtentTestManager.endTest();
+		//		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Account Type");
+		//		ExtentTestManager.startTest("Select Account Type");
 		Log.info("Select Account Type");
 
 		select("Accounts", transaction_GL_AC_BulkRepo.aiAccountTypeDropdown);
@@ -125,14 +132,14 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentSuccessMessage("Expected Result: Correct Account Type  selected.");
 		Log.info("Expected Result: Correct Account Type  selected.");
 
-		ExtentTestManager.endTest();
+		//		ExtentTestManager.endTest();
 		SearchAccountpopup();
 
 		EnterTransactionAmount(testdata);
 		AddButton();
 		AddButton();
-		
-//		transModeCash();
+
+		//		transModeCash();
 
 	}
 	public void GLccountinfoDebit(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
@@ -169,14 +176,14 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		EnterTransactionAmount(testdata);
 		AddButton();
 		AddButton();
-		
-//		transModSeCash();
+
+		//		transModSeCash();
 
 	}
 
 	public void SelectTranscationType(String Value) throws InterruptedException {
 		//Select Transaction Type
-		ExtentTestManager.startTest("Select Transaction Type");
+		//		ExtentTestManager.startTest("Select Transaction Type");
 		Log.info("Select Transaction Type");
 
 		select(Value, transaction_GL_AC_BulkRepo.aiTransactionTypeDropdown);
@@ -186,7 +193,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 		ExtentSuccessMessage("Expected Result: Correct Transaction Type selected.");
 		Log.info("Expected Result: Correct Transaction Type selected.");
-		ExtentTestManager.endTest();
+		//		ExtentTestManager.endTest();
 	}
 	public void SearchAccountpopup() throws InterruptedException {
 		//		Accountpopup
@@ -220,8 +227,8 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		SelectBranch();
 
 		click(transaction_GL_AC_BulkRepo.SearchButton);
-		ExtentSuccessMessage("Step:01 - Click on the Search Button.");
-		Log.info("Step:01 - Click on the Search Button.");
+		ExtentSuccessMessage("Step:03 - Click on the Search Button.");
+		Log.info("Step:03 - Click on the Search Button.");
 
 		click(transaction_GL_AC_BulkRepo.SelectAccountFromList);
 		ExtentSuccessMessage("Step:01 - Click on the Search Button from the list.");
@@ -273,21 +280,83 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	}
 
 	public void SelectBranch() throws InterruptedException {
-		ExtentTestManager.startTest("Select Branch");
+		//		ExtentTestManager.startTest("Select Branch");
 		Log.info("Select Branch");
 
 		select("TRIVANDRUM", transaction_GL_AC_BulkRepo.AccountsearchBranchDropdown);
 
-		ExtentSuccessMessage("Step:01 -  Choose 'TRIVANDRUM' for Branch.");
-		Log.info("Step:01 -  Choose 'TRIVANDRUM' for Branch.");
+		ExtentSuccessMessage("Step:02 -  Choose 'TRIVANDRUM' for Branch.");
+		Log.info("Step:02 -  Choose 'TRIVANDRUM' for Branch.");
 
 		ExtentSuccessMessage("Expected Result: Correct Branch selected.");
 		Log.info("Expected Result: Correct Branch selected.");
 
-		ExtentTestManager.endTest();
+		//		ExtentTestManager.endTest();
 	}
 
+	public void ClickOnCashier_Authorization() throws InterruptedException {
+		//Cashier Authorization
+		ExtentTestManager.startTest("Cashier Authorization");
+		Log.info("Cashier Authorization");
 
+		click(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
+		ExtentSuccessMessage("Step:01 - Click \"Authorize & Cancel\"");
+		Log.info("Step:01 - Click \"Authorize & Cancel\"");
+		
+	}
+	
+	public void ClickOnTransactionCancellations() throws InterruptedException {
+		click(Transactions_SusLiabilityRepo.TransactionCancellations);
+		ExtentSuccessMessage("Step:02 - Click on Transaction Cancellations");
+		Log.info("Step:02 - Click on Transaction Cancellations");
+	}
+	public void ClickOnLastEntryCancellation()throws InterruptedException {
+		click(Transactions_SusLiabilityRepo.LastEntryCancellation);
+		ExtentSuccessMessage("Step:03 - Click on Last Entry Cancellation");
+		Log.info("Step:03 - Click on Last Entry Cancellation");
+	}
+	
+	public void NavigateToLastEntryCancellation()throws InterruptedException {
+		click(Transactions_Last_Entry_CancellationRepo.CollapseAll);
+		ClickOnCashier_Authorization();
+		ClickOnTransactionCancellations();	
+		ExtentTestManager.endTest();
+	}
+	
+
+	public void CovertDateFormate(String dateString) {	 
+
+        // Define the input date format
+        SimpleDateFormat inputFormat = new SimpleDateFormat("EEEE, MMMM dd yyyy");
+
+        // Define the output date format
+        SimpleDateFormat outputFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+        try {
+            // Parse the input string into a Date object
+            Date date = inputFormat.parse(dateString);
+
+            // Format the Date object into the desired output format
+            formattedDate = outputFormat.format(date);
+
+            // Output the formatted date
+            System.out.println("Formatted Date: " + formattedDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        
+	}
+	public void VerifyTrnDate() throws InterruptedException {
+		System.out.println("transId:-"+transId);
+		fetchWithTransId(transId);
+		String HeaderDate=GetElementText(Transactions_SusLiabilityRepo.HeaderDate);
+		CovertDateFormate(HeaderDate);
+		String TransactionDate =GetElementAttribute(Transactions_SusLiabilityRepo.TransactionDate,"value");
+		Assert.assertEquals(TransactionDate, formattedDate);
+		ExtentSuccessMessage("Successfully Verified the TransactionDate");
+		Log.info("Successfully Verified the TransactionDate");
+
+	}
 
 	public void authorizeCash(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
@@ -311,7 +380,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		System.out.println(userName);
 
 		ExtentTestManager.endTest();
-
+		click(Transactions_Last_Entry_CancellationRepo.CollapseAll);
 		//Cashier Authorization
 		ExtentTestManager.startTest("Cashier Authorization");
 		Log.info("Cashier Authorization");
@@ -320,7 +389,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentSuccessMessage("Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
 
-		
+
 
 		//Manager Authorization - Cash Tab
 		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
@@ -382,7 +451,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		}
 
 		ExtentTestManager.endTest();
-		
+
 		click(Transactions_SusLiabilityRepo.cashierAuthoTab);
 		ExtentSuccessMessage("Step:01 - Navigate to Cashier Authorization");
 		Log.info("Step:01 - Navigate to Cashier Authorization");
@@ -437,7 +506,10 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 		String userName = driver.findElement(Transactions_SusLiabilityRepo.userName).getText();
 		System.out.println(userName);
-
+		if(ElementDisplayed(Transactions_Last_Entry_CancellationRepo.CollapseAll)) {
+			click(Transactions_Last_Entry_CancellationRepo.CollapseAll);
+		}
+		
 
 		ExtentTestManager.endTest();
 
@@ -520,29 +592,29 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentSuccessMessage("Expected Result: Transaction mode 'Cash' is selected.");
 		Log.info("Expected Result: Transaction mode 'Cash' is selected.");
 
-		ExtentTestManager.endTest();
+		//		ExtentTestManager.endTest();
 
 		//Enter Part Name
-		ExtentTestManager.startTest("Enter Part Name");
+		//		ExtentTestManager.startTest("Enter Part Name");
 		Log.info("Enter Part Name");
 
 		String PartyName = "Automationtest";
 		click(transaction_GL_AC_BulkRepo.PartyName);
 		input(transaction_GL_AC_BulkRepo.PartyName, PartyName);
-		ExtentSuccessMessage("Step:01 - Enter a valid Party Name in the input field.");
-		Log.info("Step:01 - Enter a valid Party Name in the input field.");
-		ExtentTestManager.endTest();
+		ExtentSuccessMessage("Step:02 - Enter a valid Party Name in the input field.");
+		Log.info("Step:02 - Enter a valid Party Name in the input field.");
+		//		ExtentTestManager.endTest();
 
 
 		//Enter Part Name
-		ExtentTestManager.startTest("Enter Remarks");
+		//		ExtentTestManager.startTest("Enter Remarks");
 		Log.info("Enter Remarks");
 
 		String Remarks = "Automation_Remarks";
 		click(transaction_GL_AC_BulkRepo.Remarks);
 		input(transaction_GL_AC_BulkRepo.Remarks, Remarks);
-		ExtentSuccessMessage("Step:01 - Enter a valid Remarks in the input field.");
-		Log.info("Step:01 - Enter a valid Remarks in the input field.");
+		ExtentSuccessMessage("Step:03 - Enter a valid Remarks in the input field.");
+		Log.info("Step:03 - Enter a valid Remarks in the input field.");
 		ExtentTestManager.endTest();
 
 
@@ -632,7 +704,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-	
+
 	} //end
 
 	public String generateUniqueCode(String query, String columnName) throws ClassNotFoundException {
@@ -768,5 +840,97 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		driver.switchTo().window(mainWindowHandle);
 		InvestmentTransaction.CheckPostDebitButton();
 	}
+	
+	public void authorizeOthers(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
+
+		//Login with Another User
+		ExtentTestManager.startTest("Login with Another User");
+		Log.info("Login with Another User");
+
+		click(custSearch.custSignOut);
+		ExtentSuccessMessage("Step:01 - Log out");
+		Log.info("Step:01 - Log out");
+
+		String UserName = configloader().getProperty("UserName2");
+		input(custSearch.loginUserName, UserName);
+		String Password = configloader().getProperty("Password2");
+		input(custSearch.loginPasswrd, Password);
+		click(custSearch.loginButton);
+		ExtentSuccessMessage("Step:02 - Log in with another user for authorization");
+		Log.info("Step:02 - Log in with another user for authorization");
+
+		String userName = driver.findElement(Transactions_Last_Entry_CancellationRepo.userName).getText();
+		System.out.println(userName);
+
+		ExtentTestManager.endTest();
+		click(Transactions_Last_Entry_CancellationRepo.CollapseAll);
+
+		//Manager Authorization - Transfer Tab
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		Log.info("Manager Authorization - Transfer Tab");
+
+		click(Transactions_Last_Entry_CancellationRepo.autorizeAndCancelTab);
+		ExtentSuccessMessage("Step:01 - Click \"Authorize & Cancel\"");
+		Log.info("Step:01 - Click \"Authorize & Cancel\"");
+
+		click(Transactions_Last_Entry_CancellationRepo.managerAuthoTab);
+		ExtentSuccessMessage("Step:02 - Select \"Manager Authorization\"");
+		Log.info("Step:02 - Select \"Manager Authorization\"");
+
+		click(Transactions_Last_Entry_CancellationRepo.sOthersTab);
+		ExtentSuccessMessage("Step:03 - Click \"Others\" tab");
+		Log.info("Step:03 - Click \"Others\" tab");
+
+		ExtentSuccessMessage("Expected Result: Others tab load");
+		Log.info("Expected Result: Others tab load");
+
+		ExtentTestManager.endTest();
+
+		//Refresh Loan Opening Entry
+		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		Log.info("Refresh Loan Opening Entry");
+
+		click(Transactions_Last_Entry_CancellationRepo.refreshBtn);
+		ExtentSuccessMessage("Step:01 - Click Refresh Button");
+		Log.info("Step:01 - Click Refresh Button");
+
+		System.out.println("transIdTransferPersonal " + transId);
+		fetchWithTransId(transId);
+
+		if (ElementDisplayed(Transactions_Last_Entry_CancellationRepo.approveCheckBoxTransfer)) {
+			ExtentSuccessMessage("Expected Result: Loan opening entry displayed");
+			Log.info("Expected Result: Loan opening entry displayed");
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+		ExtentTestManager.endTest();
+
+		//Authorize Loan Entry as Manager
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		Log.info("Authorize Loan Entry as Manager");
+
+		click(Transactions_Last_Entry_CancellationRepo.approveCheckBoxTransfer);
+		ExtentSuccessMessage("Step:01 - Select loan entry checkbox");
+		Log.info("Step:01 - Select loan entry checkbox");
+
+		click(Transactions_Last_Entry_CancellationRepo.authorizeBtn);
+		ExtentSuccessMessage("Step:02 - Click Authorize Button");
+		Log.info("Step:02 - Click Authorize Button");
+
+		if (ElementDisplayed(Transactions_Last_Entry_CancellationRepo.confirmationPopUp)) {
+			ExtentSuccessMessage("Expected Result: Transaction gets authorised");
+			Log.info("Expected Result: Transaction gets authorised");
+			click(Transactions_Last_Entry_CancellationRepo.confirmationPopUp);
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
+		ExtentTestManager.endTest();
+
+	} //end
+
+	
 
 }
