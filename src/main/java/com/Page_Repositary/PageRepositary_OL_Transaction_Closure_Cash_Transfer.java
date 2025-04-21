@@ -11,7 +11,7 @@ public class PageRepositary_OL_Transaction_Closure_Cash_Transfer {
 	public By Clickgo = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_btnGo\"]");
 	public By ClickNo = By.xpath("");
 	public By selectcash = By.xpath("");
-	public By Clicksubmit = By.xpath("");
+	public By Username = By.xpath("//*[@id=\"ctl00_ctl00_lblUser\"]");
 	
 	
 

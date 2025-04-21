@@ -30,8 +30,12 @@ public class Customer_CustomerSearch extends Base_Class{
 	com.Utility.ExcelReader ExcelReader = new com.Utility.ExcelReader("Customer_CustSearch");
 	Base_Class Base_Class= new Base_Class();
 	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
+public static String Firstusername;
 	
-	
+	public void username() {
+		Firstusername = getActualUserName(custSearch.firstUsername);
+		System.out.println("Firstusername: " + Firstusername);
+	}
 	
 	public static  String generateCustId() throws ClassNotFoundException {
 		 // Method that returns the first customer ID (String) from the database
@@ -257,6 +261,8 @@ public class Customer_CustomerSearch extends Base_Class{
 					Log.info("Expected Result: User is logged in successfully and dashboard visible");
 		ExtentTestManager.endTest();
 
+		username();
+		
 		return true;
 	}
 	

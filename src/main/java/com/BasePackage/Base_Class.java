@@ -122,6 +122,14 @@ public class Base_Class {
 //		Thread.sleep(1000);
 	}
 
+	public String getActualUserName(By locator) {
+		String actualUserName = driver.findElement(locator).getText();
+		System.out.println("actualUserName: "+actualUserName);
+		return actualUserName;
+		
+	}
+	
+	
 	public static void input(By element, String Value) throws InterruptedException {
 		Thread.sleep(1000);
 		WebDriverWait wait2 = new WebDriverWait(driver, 120);

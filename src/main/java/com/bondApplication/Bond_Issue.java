@@ -28,11 +28,14 @@ public class Bond_Issue extends Base_Class {
 	PageRepositary_Jewel_Loan_Closure_Cash_Transfer JewelClosure = new PageRepositary_Jewel_Loan_Closure_Cash_Transfer();
 	PageRepositary_Multiple_Fd_Cash_Transfer FDintrest = new PageRepositary_Multiple_Fd_Cash_Transfer();
 	PageRepositary_Bond_Issue Bondissue = new PageRepositary_Bond_Issue();
+	PageRepositary_OL_Transaction_Closure_Cash_Transfer ClosureTrans = new PageRepositary_OL_Transaction_Closure_Cash_Transfer();
+	
 	String transId;
 	String transIdTransfer;
 	String mainWindowHandle;
 	String Display;
-
+	
+	String Actualusername;
 	public String sp = "GetSpMultipleFDAccountNo 102,14003,1";
 	public String columnName = "Acno";
 
@@ -42,16 +45,30 @@ public class Bond_Issue extends Base_Class {
 
 	}
 
+	public void username() {
+		Actualusername = getActualUserName(ClosureTrans.Username);
+		System.out.println("Firstusername: " + Actualusername);
+	}
 	public void displayamount(String Display) throws InterruptedException {
 		clear(Bondissue.enteramount);
 		click(Bondissue.enteramount);
 		input(Bondissue.enteramount, Display);
 	}
 
+	public String getActualUserName(By locator) {
+		String actualUserName = driver.findElement(locator).getText();
+		System.out.println("actualUserName: "+actualUserName);
+		return actualUserName;
+		
+		
+	}
+	
 	public void verifyBondIssuePage() throws InterruptedException {
 		ExtentTestManager.startTest("Verify Bond Issue Page");
 		Log.info("Verifying bond issue page");
 
+		
+		ScrollUntilElementVisible(Bondissue.clickonBond);
 		click(Bondissue.clickonBond);
 		click(Bondissue.clickonBondissue);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to the Bond Issue page. ");

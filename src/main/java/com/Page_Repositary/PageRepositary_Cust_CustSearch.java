@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_Cust_CustSearch {
 	
+	public By firstUsername = By.xpath("//*[@id=\"ctl00_ctl00_lblUser\"]");
+
+	
 	//PC Registration
 	public By formName = By.xpath("//*[@id='Username']");
 	public By formBranchName = By.xpath("//select[@id='ddlBranches']");
