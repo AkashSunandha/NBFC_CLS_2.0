@@ -191,11 +191,43 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 		click(custSearch.loginButton);
 		ExtentSuccessMessage("Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		try {
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");
+		}
+		catch(Exception e) {
+			ElementDisplayed(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
+			Log.info("Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
 
+			click(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+			Log.info("Step:01 - Click on OK button");
+
+			//					String loginUserName = testdata.get("loginUserName").toString();
+			input(custSearch.loginUserName, UserName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+			Log.info("Step:02 - Enetered valid User Name");
+
+			//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+			input(custSearch.loginPasswrd, Password);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+			Log.info("Step:03 - Entered valid Password");
+
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+			Log.info("Step:04 - Click on Login Button");
+
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+		}
+		ExtentTestManager.endTest();
 		String userName = driver.findElement(FD_ClosureRepo.userName).getText();
 		System.out.println(userName);
 
-		ExtentTestManager.endTest();
+//		ExtentTestManager.endTest();
 
 		//Cashier Authorization
 		ExtentTestManager.startTest("Cashier Authorization");
@@ -548,12 +580,44 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 		click(custSearch.loginButton);
 		ExtentSuccessMessage("Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		try {
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");
+		}
+		catch(Exception e) {
+			ElementDisplayed(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
+			Log.info("Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
 
+			click(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+			Log.info("Step:01 - Click on OK button");
+
+			//					String loginUserName = testdata.get("loginUserName").toString();
+			input(custSearch.loginUserName, UserName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+			Log.info("Step:02 - Enetered valid User Name");
+
+			//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+			input(custSearch.loginPasswrd, Password);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+			Log.info("Step:03 - Entered valid Password");
+
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+			Log.info("Step:04 - Click on Login Button");
+
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+		}
+		ExtentTestManager.endTest();
 		String userName = driver.findElement(FD_ClosureRepo.userName).getText();
 		System.out.println(userName);
 
 
-		ExtentTestManager.endTest();
+//		ExtentTestManager.endTest();
 
 		//Manager Authorization - Transfer Tab
 		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");

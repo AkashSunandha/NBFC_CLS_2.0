@@ -37,7 +37,7 @@ public class AllScenarios_Transaction_Transaction_Cancellation_Transfer extends 
 
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("GL_AC_Bulk_Transaction");
+		ExcelReader = new com.Utility.ExcelReader("Transaction_Cancellation");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);

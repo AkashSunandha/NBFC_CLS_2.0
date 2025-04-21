@@ -37,7 +37,7 @@ public class AllScenarios_Transaction_Transaction_Cancellation_Cash extends Base
 
 	@BeforeSuite
 	public void reference() { 
-		ExcelReader = new com.Utility.ExcelReader("GL_AC_Bulk_Transaction");
+		ExcelReader = new com.Utility.ExcelReader("Transaction_Cancellation");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -79,7 +79,7 @@ public class AllScenarios_Transaction_Transaction_Cancellation_Cash extends Base
 
 				TrnsCancellation.ClickonCancelBtn();
 
-				transGL_AC_Bulk.authorizeCash(testdata, context);	
+				transGL_AC_Bulk.authorizeCash1(testdata, context);	
 
 				custSrchMthds.logout();
 

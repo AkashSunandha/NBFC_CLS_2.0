@@ -399,12 +399,12 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentSuccessMessage("Step:02 - Select \"Manager Authorization\"");
 		Log.info("Step:02 - Select \"Manager Authorization\"");
 
-		click(Transactions_SusLiabilityRepo.cashTab);
-		ExtentSuccessMessage("Step:03 - Click \"Cash\" tab");
-		Log.info("Step:03 - Click \"Cash\" tab");
+		click(Transactions_Last_Entry_CancellationRepo.sOthersTab);
+		ExtentSuccessMessage("Step:03 - Click \"Others\" tab");
+		Log.info("Step:03 - Click \"Others\" tab");
 
-		ExtentSuccessMessage("Expected Result: Cash tab load");
-		Log.info("Expected Result: Cash tab load");
+		ExtentSuccessMessage("Expected Result: Others tab load");
+		Log.info("Expected Result: Others tab load");
 
 		ExtentTestManager.endTest();
 
@@ -420,7 +420,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 		fetchWithTransId(transId);
 
-		if (ElementDisplayed(Transactions_SusLiabilityRepo.approveCheckBox)) {
+		if (ElementDisplayed(Transactions_SusLiabilityRepo.ApproveCheckBoxOthers)) {
 			ExtentSuccessMessage("Expected Result: Loan opening entry displayed");
 			Log.info("Expected Result: Loan opening entry displayed");
 		} else {
@@ -433,7 +433,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
 		Log.info("Authorize Loan Entry as Manager");
 
-		click(Transactions_SusLiabilityRepo.approveCheckBox);
+		click(Transactions_SusLiabilityRepo.ApproveCheckBoxOthers);
 		ExtentSuccessMessage("Step:01 - Select loan entry checkbox");
 		Log.info("Step:01 - Select loan entry checkbox");
 
@@ -931,6 +931,132 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	} //end
 
-	
+	public void authorizeCash1(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
+
+		//Login with Another User
+		ExtentTestManager.startTest("Login with Another User");
+		Log.info("Login with Another User");
+
+		click(custSearch.custSignOut);
+		ExtentSuccessMessage("Step:01 - Log out");
+		Log.info("Step:01 - Log out");
+
+		String UserName = configloader().getProperty("UserName2");
+		input(custSearch.loginUserName, UserName);
+		String Password = configloader().getProperty("Password2");
+		input(custSearch.loginPasswrd, Password);
+		click(custSearch.loginButton);
+		ExtentSuccessMessage("Step:02 - Log in with another user for authorization");
+		Log.info("Step:02 - Log in with another user for authorization");
+
+		String userName = driver.findElement(Transactions_SusLiabilityRepo.userName).getText();
+		System.out.println(userName);
+
+		ExtentTestManager.endTest();
+		click(Transactions_Last_Entry_CancellationRepo.CollapseAll);
+		//Cashier Authorization
+		ExtentTestManager.startTest("Cashier Authorization");
+		Log.info("Cashier Authorization");
+
+		click(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
+		ExtentSuccessMessage("Step:01 - Click \"Authorize & Cancel\"");
+		Log.info("Step:01 - Click \"Authorize & Cancel\"");
+
+
+
+		//Manager Authorization - Cash Tab
+		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		Log.info("Manager Authorization - Cash Tab");
+
+		click(Transactions_SusLiabilityRepo.managerAuthoTab);
+		ExtentSuccessMessage("Step:02 - Select \"Manager Authorization\"");
+		Log.info("Step:02 - Select \"Manager Authorization\"");
+
+		click(Transactions_Last_Entry_CancellationRepo.sOthersTab);
+		ExtentSuccessMessage("Step:03 - Click \"Others\" tab");
+		Log.info("Step:03 - Click \"Others\" tab");
+
+		ExtentSuccessMessage("Expected Result: Others tab load");
+		Log.info("Expected Result: Others tab load");
+
+		ExtentTestManager.endTest();
+
+		//Refresh Loan Opening Entry
+		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		Log.info("Refresh Loan Opening Entry");
+
+		click(Transactions_SusLiabilityRepo.refreshBtn);
+		ExtentSuccessMessage("Step:01 - Click Refresh Button");
+		Log.info("Step:01 - Click Refresh Button");
+
+		System.out.println("transIdCashPersonal " + transId);
+
+		fetchWithTransId(transId);
+
+		if (ElementDisplayed(Transactions_SusLiabilityRepo.ApproveCheckBoxOthers)) {
+			ExtentSuccessMessage("Expected Result: Loan opening entry displayed");
+			Log.info("Expected Result: Loan opening entry displayed");
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+		ExtentTestManager.endTest();
+
+		//Authorize Loan Entry as Manager
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		Log.info("Authorize Loan Entry as Manager");
+
+		click(Transactions_SusLiabilityRepo.ApproveCheckBoxOthers);
+		ExtentSuccessMessage("Step:01 - Select loan entry checkbox");
+		Log.info("Step:01 - Select loan entry checkbox");
+
+		click(Transactions_SusLiabilityRepo.authorizeBtn);
+		ExtentSuccessMessage("Step:02 - Click Authorize Button");
+		Log.info("Step:02 - Click Authorize Button");
+
+		if (ElementDisplayed(Transactions_SusLiabilityRepo.confirmationPopUp)) {
+			ExtentSuccessMessage("Expected Result: Transaction gets authorised");
+			Log.info("Expected Result: Transaction gets authorised");
+			click(Transactions_SusLiabilityRepo.confirmationPopUp);
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
+		ExtentTestManager.endTest();
+
+		//		click(Transactions_SusLiabilityRepo.cashierAuthoTab);
+		//		ExtentSuccessMessage("Step:01 - Navigate to Cashier Authorization");
+		//		Log.info("Step:01 - Navigate to Cashier Authorization");
+		//
+		//		click(Transactions_SusLiabilityRepo.cashierRefreshBtn);
+		//		ExtentSuccessMessage("Step:02 - Click Refresh Button");
+		//		Log.info("Step:02 - Click Refresh Button");
+		//
+		//		System.out.println("transIdCashPersonal " + transId);
+		//		fetchWithTransId(transId);
+		//
+		//		click(Transactions_SusLiabilityRepo.cashierCheckBox);
+		//		ExtentSuccessMessage("Step:03 - Select checkbox");
+		//		Log.info("Step:03 - Select checkbox");
+		//
+		//		click(Transactions_SusLiabilityRepo.cashierAuthorizeBtn);
+		//		ExtentSuccessMessage("Step:04 - Click Authorize Button");
+		//		Log.info("Step:04 - Click Authorize Button");
+		//
+		//		if (ElementDisplayed(Transactions_SusLiabilityRepo.confirmationPopUp)) {
+		//			ExtentSuccessMessage("Expected Result: Transaction gets authorised");
+		//			Log.info("Expected Result: Transaction gets authorised");
+		//			click(Transactions_SusLiabilityRepo.confirmationPopUp);
+		//		} else {
+		//			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+		//			Log.info("ERROR");
+		//		}
+		//
+		//		ExtentTestManager.endTest();
+		//
+		//		click(prsnlLoanWeeklyRepo.errorPopUpCloseIcon);
+
+	} //end
 
 }

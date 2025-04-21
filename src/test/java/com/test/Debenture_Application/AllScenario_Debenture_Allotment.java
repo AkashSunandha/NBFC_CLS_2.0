@@ -33,7 +33,7 @@ public class AllScenario_Debenture_Allotment extends Base_Class {
 
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("Debenture_Application");
+		ExcelReader = new com.Utility.ExcelReader("Debenture_Allotment");
 
 		log = new Log();
 		TestListener = new TestListener();
@@ -45,8 +45,8 @@ public class AllScenario_Debenture_Allotment extends Base_Class {
 	public void customerRegister( Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("Debenture_Application_Transfer");
-				Log.info("Debenture_Application_Cash");
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 				//				ExtentTestManager.endTest();
 

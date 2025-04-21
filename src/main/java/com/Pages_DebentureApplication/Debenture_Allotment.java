@@ -48,7 +48,7 @@ public class Debenture_Allotment  extends Base_Class {
 		input(DebAllRepo.BatchIDTxtBox, BatchID);
 		click(DebAllRepo.goBtn);
 	}
-	
+
 	public void NavigateToDebenture_Allotment() throws InterruptedException {
 		if(ElementDisplayed(DebAllRepo.CollapseAll)) {
 			click(DebAllRepo.CollapseAll);
@@ -81,7 +81,7 @@ public class Debenture_Allotment  extends Base_Class {
 		Log.info("Clicked on Allotment Process");
 		ExtentTestManager.endTest();
 	}
-	
+
 	public void ClickOnAllotmentReturn() throws InterruptedException {
 		ExtentTestManager.startTest("Return Button Functionality");
 		Log.info("Return Button Functionality");		
@@ -90,7 +90,7 @@ public class Debenture_Allotment  extends Base_Class {
 		Log.info("Clicked on Allotment Return");
 		ExtentTestManager.endTest();
 	}
-	
+
 	public void ClickOnAllotmentReturnSubmit() throws InterruptedException {
 		ExtentTestManager.startTest("Return Submit Button Functionality");
 		Log.info("Return Submit Button Functionality");		
@@ -120,12 +120,12 @@ public class Debenture_Allotment  extends Base_Class {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
 		}
-		
+
 		ExtentTestManager.endTest();
 	}
-	
-	
-	
+
+
+
 
 	public void ClickonDebenture_Allotment() throws InterruptedException {
 		click(DebAllRepo.Debenture_Allotment);
@@ -233,9 +233,42 @@ public class Debenture_Allotment  extends Base_Class {
 		click(custSearch.loginButton);
 		ExtentSuccessMessage("Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		try {
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");
+		}
+		catch(Exception e) {
+			ElementDisplayed(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
+			Log.info("Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
 
+			click(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+			Log.info("Step:01 - Click on OK button");
+
+			//					String loginUserName = testdata.get("loginUserName").toString();
+			input(custSearch.loginUserName, UserName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+			Log.info("Step:02 - Enetered valid User Name");
+
+			//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+			input(custSearch.loginPasswrd, Password);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+			Log.info("Step:03 - Entered valid Password");
+
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+			Log.info("Step:04 - Click on Login Button");
+
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+		}
+		ExtentTestManager.endTest();
 		String userName = driver.findElement(DebAllRepo.userName).getText();
 		System.out.println(userName);
+		
 	}
 
 	public void authorizeTransfer(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
@@ -255,7 +288,40 @@ public class Debenture_Allotment  extends Base_Class {
 		click(custSearch.loginButton);
 		ExtentSuccessMessage("Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		try {
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");
+		}
+		catch(Exception e) {
+			ElementDisplayed(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
+			Log.info("Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
 
+			click(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+			Log.info("Step:01 - Click on OK button");
+
+			//					String loginUserName = testdata.get("loginUserName").toString();
+			input(custSearch.loginUserName, UserName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+			Log.info("Step:02 - Enetered valid User Name");
+
+			//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+			input(custSearch.loginPasswrd, Password);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+			Log.info("Step:03 - Entered valid Password");
+
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+			Log.info("Step:04 - Click on Login Button");
+
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+		}
+		ExtentTestManager.endTest();
+		
 		String userName = driver.findElement(DebAllRepo.userName).getText();
 		System.out.println(userName);
 		if(ElementDisplayed(DebAllRepo.CollapseAll)) {
@@ -409,7 +475,7 @@ public class Debenture_Allotment  extends Base_Class {
 
 	//Click get value and Total value willbe calculated
 	public void Calculate_Total_Value() throws InterruptedException {
-//		ExtentTestManager.startTest("Tc:19 Calculate Total Value");
+		//		ExtentTestManager.startTest("Tc:19 Calculate Total Value");
 
 		click (DebApp.GetValue);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Click Get Button Value");
@@ -439,7 +505,7 @@ public class Debenture_Allotment  extends Base_Class {
 			Log.info("ERROR");
 		}
 
-//		ExtentTestManager.endTest();
+		//		ExtentTestManager.endTest();
 
 	}
 
@@ -852,108 +918,108 @@ public class Debenture_Allotment  extends Base_Class {
 		ExtentTestManager.startTest("Precondition"); 
 		//TC 04
 		Navigate_Debenture_Application();
-		
+
 		//TC 05
 		Verify_Branch_Field();
-		
+
 		//TC 06
 		Verify_Application_DateField();
-						
+
 		//TC 11
 		Select_Debenture_Type();
-		
+
 		//TC 12
 		Select_Debenture_Issue();
-		
+
 		//TC 13
 		Select_Series_Type();
-		
+
 		//TC 14
 		Verify_Nature_Field();
-		 
+
 		//TC 15
 		Select_customer_Category();
-		
+
 		//TC 07,08,09,10 and 16
 		AddcustomerviacustID(testdata, context);
 
-		
+
 		//TC 17
-		
+
 		Verify_Unit_Value();
-		
+
 		//TC 18
 		Validate_No_of_Units(testdata, context);
-		
+
 		//TC 19
 		Calculate_Total_Value();
-		
+
 		postCreditPopUpEntry(testdata);
-		
+
 		Submission_with_cash_transmode_Save();
-		
+
 		authorizeTransferApplication(testdata, context);
-		
+
 		Signout();
-		
+
 		Signin();
 		ExtentTestManager.endTest();
 	}
-	
-	
-	
+
+
+
 	public void PreconditionCash ( Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ParseException, java.text.ParseException, ClassNotFoundException, IOException {
 		ExtentTestManager.startTest("Precondition"); 
 		//TC 04
 		Navigate_Debenture_Application();
-		
+
 		//TC 05
 		Verify_Branch_Field();
-		
+
 		//TC 06
 		Verify_Application_DateField();
-						
+
 		//TC 11
 		Select_Debenture_TypeCash();
-		
+
 		//TC 12
 		Select_Debenture_IssueCash();
-		
+
 		//TC 13
 		Select_Series_TypeCash();
-		
+
 		//TC 14
 		Verify_Nature_Field();
-		 
+
 		//TC 15
 		Select_customer_Category();
-		
+
 		//TC 07,08,09,10 and 16
 		AddcustomerviacustID(testdata, context);
 
-		
+
 		//TC 17
-		
+
 		Verify_Unit_Value();
-		
+
 		//TC 18
 		Validate_No_of_Units(testdata, context);
-		
+
 		//TC 19
 		Calculate_Total_Value();
-		
-//		postCreditPopUpEntry(testdata);
-		
+
+		//		postCreditPopUpEntry(testdata);
+
 		Submission_with_cash_transmode_Save();
-		
+
 		authorizeCash(testdata, context);
-		
+
 		Signout();
-		
+
 		Signin();
 		ExtentTestManager.endTest();
 	}
-	
+
 	public void authorizeCash(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
 		//Login with Another User
@@ -996,9 +1062,9 @@ public class Debenture_Allotment  extends Base_Class {
 		ExtentSuccessMessage("Step:02 - Click Refresh Button");
 		Log.info("Step:02 - Click Refresh Button");
 
-//		System.out.println("BatchIDCashPersonal " + BatchID);
-//		fetchWithBatchID(BatchID);
-		
+		//		System.out.println("BatchIDCashPersonal " + BatchID);
+		//		fetchWithBatchID(BatchID);
+
 		System.out.println("transIdCashPersonal " + transId);
 		fetchWithTransId(transId);
 
@@ -1085,7 +1151,7 @@ public class Debenture_Allotment  extends Base_Class {
 		//		click(prsnlLoanWeeklyRepo.errorPopUpCloseIcon);
 
 	} //end
-	
+
 	public void authorizeCash1(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
 		//Login with Another User
@@ -1103,7 +1169,39 @@ public class Debenture_Allotment  extends Base_Class {
 		click(custSearch.loginButton);
 		ExtentSuccessMessage("Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		try {
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");
+		}
+		catch(Exception e) {
+			ElementDisplayed(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
+			Log.info("Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
 
+			click(custSearch.loginWarningOkBtn);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+			Log.info("Step:01 - Click on OK button");
+
+			//					String loginUserName = testdata.get("loginUserName").toString();
+			input(custSearch.loginUserName, UserName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+			Log.info("Step:02 - Enetered valid User Name");
+
+			//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+			input(custSearch.loginPasswrd, Password);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+			Log.info("Step:03 - Entered valid Password");
+
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+			Log.info("Step:04 - Click on Login Button");
+
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+		}
+		ExtentTestManager.endTest();
 		String userName = driver.findElement(DebAllRepo.userName).getText();
 		System.out.println(userName);
 
@@ -1129,11 +1227,11 @@ public class Debenture_Allotment  extends Base_Class {
 
 		input(DebAllRepo.MarkerID,userName1);
 		click(DebAllRepo.Gobutton);
-//		System.out.println("BatchIDCashPersonal " + BatchID);
-//		fetchWithBatchID(BatchID);
-		
-//		System.out.println("transIdCashPersonal " + transId);
-//		fetchWithTransId(transId);
+		//		System.out.println("BatchIDCashPersonal " + BatchID);
+		//		fetchWithBatchID(BatchID);
+
+		//		System.out.println("transIdCashPersonal " + transId);
+		//		fetchWithTransId(transId);
 
 		click(DebAllRepo.cashierCheckBox);
 		ExtentSuccessMessage("Step:03 - Select checkbox");
@@ -1218,5 +1316,5 @@ public class Debenture_Allotment  extends Base_Class {
 		//		click(prsnlLoanWeeklyRepo.errorPopUpCloseIcon);
 
 	} //end
-	
+
 }
