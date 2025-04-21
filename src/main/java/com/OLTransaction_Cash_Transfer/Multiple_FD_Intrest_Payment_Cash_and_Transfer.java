@@ -564,6 +564,9 @@ clear(FDintrest.accnumber);
 		ExtentTestManager.startTest("Manager authorization");
 		Log.info("Manager authorization");
 
+		
+		ScrollUntilElementVisible(FDintrest.clickonauth);
+		Thread.sleep(5000);
 		click(FDintrest.clickonauth);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the authoirze & Cancel module from the taskbar ");
@@ -587,6 +590,8 @@ clear(FDintrest.accnumber);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the authoirze & Cancel module from the taskbar ");
 		Log.info("Step:01 - Click the authoirze & Cancel module from the taskbar ");
 
+		ScrollUntilElementVisible(FDintrest.clickonauth);
+		Thread.sleep(5000);
 		click(FDintrest.clickonmanger);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click Manager authorisation Submodule ");
 		Log.info("Step:02 - Click Manager authorisation Submodule");

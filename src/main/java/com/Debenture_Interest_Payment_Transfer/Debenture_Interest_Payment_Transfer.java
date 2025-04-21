@@ -1,5 +1,37 @@
 package com.Debenture_Interest_Payment_Transfer;
 
-public class Debenture_Interest_Payment_Transfer {
+import com.BasePackage.Base_Class;
+import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
+import com.Page_Repositary.PageRepositary_Bond_Issue;
+import com.Page_Repositary.PageRepositary_Cust_CustSearch;
+import com.Page_Repositary.PageRepositary_Jewel_Loan_Closure_Cash_Transfer;
+import com.Page_Repositary.PageRepositary_Multiple_Fd_Cash_Transfer;
+
+public class Debenture_Interest_Payment_Transfer extends Base_Class {
+	
+	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
+	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
+	PageRepositary_Jewel_Loan_Closure_Cash_Transfer JewelClosure = new PageRepositary_Jewel_Loan_Closure_Cash_Transfer();
+	PageRepositary_Multiple_Fd_Cash_Transfer FDintrest = new PageRepositary_Multiple_Fd_Cash_Transfer();
+	PageRepositary_Bond_Issue Bondissue = new PageRepositary_Bond_Issue();
+	String transId;
+	String transIdTransfer;
+	String mainWindowHandle;
+	String Display;
+
+	public String sp = "GetSpMultipleFDAccountNo 102,14003,1";
+	public String columnName = "Acno";
+
+	public void fetchWithTransId(String transId) throws InterruptedException {
+		input(goaldLoanRepo.transIdTxtBox, transId);
+		click(goaldLoanRepo.goBtn);
+
+	}
+
+	public void displayamount(String Display) throws InterruptedException {
+		clear(Bondissue.enteramount);
+		click(Bondissue.enteramount);
+		input(Bondissue.enteramount, Display);
+	}
 
 }
