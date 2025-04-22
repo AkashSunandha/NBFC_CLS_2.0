@@ -36,10 +36,12 @@ import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
-public class Customer_QuickCustomer extends Base_Class{
+public class Customer_QuickCustomer extends Base_Class
+{
 	com.Utility.ExcelReader ExcelReader = new com.Utility.ExcelReader("Customer_CustSearch");
 	Base_Class Base_Class= new Base_Class();
 	Log log= new Log();
+	
 	PageRepositary_Cust_QuickCustomer quickCustRepo = new PageRepositary_Cust_QuickCustomer();
 //	private static long lastGeneratedNumber = 100000000000L;
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
@@ -88,7 +90,8 @@ public class Customer_QuickCustomer extends Base_Class{
 	        return value; // Return the firstCustId
 	    }
 	
-	public void openQuickCustomerWindow() throws InterruptedException {
+	public void openQuickCustomerWindow() throws InterruptedException 
+	{
 		
 		ExtentTestManager.startTest("Open Quick Customer Window");
 		Log.info("Open Quick Customer Window");

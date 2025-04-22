@@ -74,8 +74,10 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		//Navigate to Pop Up Window
 	    String mainWindowHandle = driver.getWindowHandle();
 	    boolean popupAppeared = false;
-	    for (String handle : driver.getWindowHandles()) {
-	        if (!handle.equals(mainWindowHandle)) {
+	    for (String handle : driver.getWindowHandles()) 
+	    {
+	        if (!handle.equals(mainWindowHandle)) 
+	        {
 	            driver.switchTo().window(handle);
 	            driver.manage().window().maximize();
 	            popupAppeared = true;
@@ -108,10 +110,13 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	    		
 	    		String flag = driver.findElement(goaldLoanRepo.aiCustIdTxtBox).getAttribute("value");
 	    		
-	    		if(!flag.isBlank()) {
+	    		if(!flag.isBlank()) 
+	    		{
 					ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Customer id should be display in the custid feild.");
 					Log.info("Expected Result: Customer id should be display in the custid feild.");
-	    		}else {
+	    		}
+	    		else 
+	    		{
 	    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 	    			Log.info("ERROR");
 	    		}
@@ -1163,8 +1168,6 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		Log.info("ERROR");
 	}
 		ExtentTestManager.endTest();
-		
-		
 		
 
 		//Authorize Loan Entry as Manager

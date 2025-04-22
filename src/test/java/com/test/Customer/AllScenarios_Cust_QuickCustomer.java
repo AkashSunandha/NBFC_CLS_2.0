@@ -22,6 +22,7 @@ public class AllScenarios_Cust_QuickCustomer extends Base_Class{
 	Log log;
 	TestListener TestListener; 
 	com.Utility.ScreenShot screenShot;
+	
 	Customer_QuickCustomer quickCustomerAllMthds = new Customer_QuickCustomer();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 

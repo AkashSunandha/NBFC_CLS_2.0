@@ -2613,7 +2613,8 @@ return true;
 	
 	
 	
-	public boolean logout() throws InterruptedException {
+	public boolean logout() throws InterruptedException 
+	{
 		ExtentTestManager.startTest("Logout");
 		Log.info("Logout");
 		
