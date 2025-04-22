@@ -132,8 +132,18 @@ public class Customer_CustomerSearch extends Base_Class{
 		
 		String pcRegFormPcName = testdata.get("pcRegFormPcName").toString();	
 		input(custSearch.formComputerName, pcRegFormPcName);
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter PC Name in Name field.");
 		Log.info("Step:03 - Enter PC Name in Name field.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter PC Name in Name field.");
+		Log.info("Step:02 - Enter PC Name in Name field.");
+		
+		click(custSearch.formBranchName);
+		click(custSearch.formBranchNameTrivandrum);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Select a Branch Name from the Dropdown.");
+		Log.info("Step:03 - Select a Branch Name from the Dropdown.");
+
 		
 		click(custSearch.formSubmitBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Submit Button.");
@@ -208,6 +218,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		ExtentTestManager.startTest("Valid Login");
 		Log.info("Valid Login");
 			
+
 			
 					String UserName = configloader().getProperty("UserName");
 					input(custSearch.loginUserName,UserName );
@@ -217,6 +228,19 @@ public class Customer_CustomerSearch extends Base_Class{
 					String Password = configloader().getProperty("Password");
 //					String loginValidPassword = testdata.get("loginValidPassword").toString();
 					input(custSearch.loginPasswrd, Password);
+
+				//	String loginUserName = testdata.get("loginUserName").toString();
+		String loginUserName=configloader().getProperty("UserName");
+					input(custSearch.loginUserName, loginUserName);
+					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");
+					Log.info("Step:01 - Enetered valid User Name");
+					
+					
+				//	String loginValidPassword = testdata.get("loginValidPassword").toString();
+					String loginValidPassword=configloader().getProperty("Password");
+					input(custSearch.loginPasswrd, loginValidPassword);
+					
+
 					ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Eneter valid Password");
 					Log.info("Step:02 - Enetered valid Password");
 					
@@ -2631,5 +2655,13 @@ return true;
 		return true;
 	}
 	
+
+	public boolean signOut() throws InterruptedException {
+		click(custSearch.custSignOut);
+		ExtentTestManager.getTest().log(Status.PASS, "User SignedOut");
+		Log.info("User SignedOut");
+		return true;
+	}
+
 }
 
