@@ -400,5 +400,44 @@ public class Base_Class {
         return element.getAttribute("value").equals(input);
     }
     
+    public static void ExtentSuccessMessage(String strPassSuccessMessage) {
+		ExtentTestManager.getTest().log(Status.PASS, strPassSuccessMessage);
+	}
+ 
+	public static void ExtentErrorMessage(String strPassErrorMessage) {
+		ExtentTestManager.getTest().log(Status.FAIL, strPassErrorMessage);
+	}
+	
+	public static String GetElementText(By locator) throws InterruptedException {
+		 
+		String stxt = null;
+		WebElement element = driver.findElement(locator);
+		if (element.isDisplayed()) {
+			stxt = element.getText();
+			Log.info("System able to found the element :" + locator);
+		} else {
+			Log.error("System not able to found the element :" + locator);
+		}
+		return stxt;
+	}
+	
+	public void PageRefresh() {
+		driver.navigate().refresh();
+	}
+	
+	public static String GetElementAttribute(By locator,String Values)
+	{
+		WebElement element = driver.findElement(locator);
+		String flags = element.getAttribute(Values);
+		return flags;
+	}
+	
+	public static boolean ElementEnableOrDisable(By locator)
+	{
+		WebElement element = driver.findElement(locator);
+		Boolean flag = element.isEnabled();
+		return flag;
+	}
+    
     
 }

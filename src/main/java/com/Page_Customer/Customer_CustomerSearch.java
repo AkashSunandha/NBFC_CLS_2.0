@@ -2618,7 +2618,7 @@ return true;
 		Log.info("Logout");
 		
 		Thread.sleep(4000);
-		
+		PageRefresh();
 		click(custSearch.custSignOut);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click on 'Signout'");
 		Log.info("Step:01 -  Click on 'Signout'");
@@ -2630,5 +2630,6 @@ return true;
 		ExtentTestManager.endTest();
 		return true;
 	}
+	
 }
 
