@@ -557,7 +557,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	}
 
 	//TC-TC-34(2)
-	public void testDistrictDropdown() {
+	public void testDistrictDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 34 --> Validate district dropdown");
 
 		select("89",loanOpen.district_dropdown);
@@ -569,7 +569,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 
 
 	//TC-35(2)
-	public void testPostDropdown() {
+	public void testPostDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 35 --> Validate post dropdown");
 
 		select("13406",loanOpen.post_dropdown);

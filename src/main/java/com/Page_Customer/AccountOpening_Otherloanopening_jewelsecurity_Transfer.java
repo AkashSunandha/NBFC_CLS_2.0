@@ -396,7 +396,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 	}
 
 	//TC-25(2)
-	public void testDistrictDropdown() {
+	public void testDistrictDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 25 --> Validate district dropdown");
 
 		select("89",loanOpen.district_dropdown);
@@ -408,7 +408,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 
 	//TC-26(2)
-	public void testPostDropdown() {
+	public void testPostDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 26 --> Validate post dropdown");
 
 		select("13406",loanOpen.post_dropdown);

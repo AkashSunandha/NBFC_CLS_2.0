@@ -551,7 +551,7 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 	}
 
 	//TC-29(2)
-	public void testDistrictDropdown() {
+	public void testDistrictDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 29 --> Validate district dropdown");
 
 		select("89",loanOpen.district_dropdown);
@@ -563,7 +563,7 @@ public class AccountOpening_Otherloanopening_documentsecurity_Transfer extends B
 
 
 	//TC-30(2)
-	public void testPostDropdown() {
+	public void testPostDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 30 --> Validate post dropdown");
 
 		select("13406",loanOpen.post_dropdown);
