@@ -43,10 +43,11 @@ public class AllScenarios_Debenture_Interest_Payment_Transfer {
 	SusAssetTransaction_Cash_Transfer suspense = new SusAssetTransaction_Cash_Transfer();
 	Multiple_FD_Intrest_Payment_Cash_and_Transfer FD = new Multiple_FD_Intrest_Payment_Cash_and_Transfer();
 	Bond_Issue Issue = new Bond_Issue();
+	Debenture_Interest_Payment_Transfer Deb = new Debenture_Interest_Payment_Transfer();
 
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("Bondissue");
+		ExcelReader = new com.Utility.ExcelReader("Debenture");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
@@ -71,6 +72,34 @@ public class AllScenarios_Debenture_Interest_Payment_Transfer {
 				custSrchMthds.pcRegistration(testdata, context);
 
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
+				
+				Deb.NavigatetoDebentureinterestpayment();
+				
+				Deb.verifyBranchParameterDefaults();
+				
+				Deb.verifyAccountNumberEntry();
+				
+				Deb.verifyDurationValueEntry();
+				
+				Deb.verifyPostCreditPopupDisplay(testdata, context);
+				
+				Deb.printButtonTest();
+				
+				suspense.logoutApplication1();
+
+				Closuretrans.AnotherUSer(testdata, context);
+
+				FD.managerauthorisation1();
+
+				FD.UserLoggedIntransfer();
+
+				FD.UserloggedManagerauthorization();
+
+				FD.UserLoggedInCheckbx1();
+
+				FD.UseronManagerauthorisationwindow();
+
+				FD.logoutApplication5();
 
 				
 				
