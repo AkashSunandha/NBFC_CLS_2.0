@@ -1,0 +1,459 @@
+package com.Page_AgentTransferModule;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Map;
+
+import org.testng.ITestContext;
+
+import com.BasePackage.Base_Class;
+import com.Page_Repositary.PageRepositary_AgentTransfer;
+import com.Page_Repositary.PageRepositary_Cust_CustSearch;
+import com.Utility.Log;
+
+import com.aventstack.extentreports.Status;
+import com.extentReports.ExtentTestManager;
+
+public class Agent_Transfer extends Base_Class {
+	PageRepositary_AgentTransfer Agent = new PageRepositary_AgentTransfer();
+	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
+	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
+	
+	
+	public String sp = "GetSuspenseAssetAccountnumber";
+	public String columnName = "Acno";
+
+	
+    public String spAadhaar = "EXEC GenerateNextAadharNumber";
+    public String clmnNamAadhaar = "generated_aadhar_number";
+    
+    public String spMobileNum = "EXEC GenerateNextMobileNumber";
+    public String clmnNamMobileNum = "generated_mobile_number";
+	
+    
+    
+    public  String generateUniqueId(String query,String columnName) throws ClassNotFoundException {
+           // Method that returns the first customer ID (String) from the database
+            // Database connection details
+    // Database connection details
+    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+           String UserName = "sqa";
+           String Password = "SPQA@sql2019" ;
+           String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
+
+           
+            String value = null; // Declare and initialize the return variable
+
+            // Establish the connection to the database
+            try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
+                 Statement statement = connection.createStatement();
+                 ResultSet resultSet = statement.executeQuery(query)) {
+                 
+                 if (resultSet.next()) {
+                        value = resultSet.getString(columnName); // DB column name
+                    System.out.println("Generated Unique ID: " + value);
+                } else {
+                    System.out.println("Unique ID not generated.");
+                }
+
+            } catch (SQLException e) {
+                System.out.println("Error executing the SQL query or processing the result set.");
+                e.printStackTrace();
+            }
+
+            return value; // Return the firstCustId
+        }
+   
+    public void AgentTransferNavigation() throws InterruptedException {
+		ExtentTestManager.startTest("TC:VerifyAgentTransferNavigation");
+		Log.info("VerifyAgentTransferNavigation");
+
+		click(Agent.clickonAgenttransfer);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Agent Transfer.");
+		Log.info("Step:01 - Navigate to Agent Transfer.");
+
+		click(Agent.agentTransfer);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click on Agent Transfer ");
+		Log.info("Step:02 - Click on Agent Transfer.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: The Agent Transfer  is displayed");
+		Log.info("Expected Result: The Agent Transfer  is displayed");
+		ExtentTestManager.endTest();
+	}
+
+	public void AgentCodeDropdown() throws InterruptedException {
+
+		ExtentTestManager.startTest("Agent Code dropdown is present");
+		Log.info("Agent Code dropdown is present ");
+
+		click(Agent.seecltagentcode);
+		click(Agent.clickdhanya);
+		 //select("DHANYA K - 1", Agent.seecltagentcode);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on Agent Code dropdown.");
+		Log.info("Step:01 - Click on Agent Code dropdown.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select an AGENT from the dropdown.");
+		Log.info("Step:02 - Select an AGENT from the dropdown.");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: An agent from the Agent Code dropdown is selected");
+		Log.info("Expected Result: An agent from the Agent Code dropdown is selected");
+		
+		ExtentTestManager.endTest();
+		
+
+	}
+
+	public void ProducCheckboxesFunctionality() throws InterruptedException {
+
+		ExtentTestManager.startTest("Verify Product Checkboxes Functionality");
+		Log.info("Verify Product Checkboxes Functionality ");
+
+		click(Agent.selectallproduct);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select All option in products option.");
+		Log.info("Step:01 - Select All option in products option.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: All product will be selected");
+		Log.info("Expected Result: All product will be selected");
+		
+		ExtentTestManager.endTest();
+		
+
+	}
+
+	public void AreaCheckboxesFunctionality() throws InterruptedException {
+
+		ExtentTestManager.startTest("Selection of Area field");
+		Log.info("Selection of Area field ");
+
+		click(Agent.selectallarea);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select the All in the Area field.");
+		Log.info("Step:01 - Select the All in the Area field.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the Area");
+		Log.info("Expected Result:Possible to select the Area");
+		
+		ExtentTestManager.endTest();
+
+	}
+
+	public void CheckTemporaryTransferCheckboxDefault() throws InterruptedException {
+		ExtentTestManager.startTest("Check Temporary Transfer Checkbox Default");
+		Log.info("Check Temporary Transfer Checkbox Default");
+
+		if (ElementDisplayed(Agent.visible)) {
+			ExtentTestManager.getTest().log(Status.PASS,
+					"Expected Result: Temporary Transfer checkbox is present and ticked by default.");
+			Log.info("Expected Result: Temporary Transfer checkbox is present and ticked by default.");
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Temporary Transfer checkbox is present and ticked by default.");
+		Log.info("Expected Result: Temporary Transfer checkbox is present and ticked by default..");
+
+		ExtentTestManager.endTest();
+	}
+
+	public void VerifyShowButton() throws InterruptedException {
+
+		ExtentTestManager.startTest("Selection of Area field");
+		Log.info("Selection of Area field ");
+
+		click(Agent.clickshow);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select the All in the Area field.");
+		Log.info("Step:01 - Select the All in the Area field.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the Area");
+		Log.info("Expected Result:Possible to select the Area");
+		
+		ExtentTestManager.endTest();
+
+	}
+
+	public void ItemfromToAgentCodeDropdown() throws InterruptedException {
+
+		ExtentTestManager.startTest("Select an Item from To Agent Code Dropdown");
+		Log.info("Select an Item from To Agent Code Dropdown ");
+
+		click(Agent.agentnamecode);
+		click(Agent.selectname);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click to agent name.");
+		Log.info("Step:01 - Click to agent name.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select item from dropdown.");
+		Log.info("Step:01 - select item from drop down.");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result:Selected agent displayed and 'Agent Code' field auto-filled");
+		Log.info("Expected Result:Selected agent displayed and 'Agent Code' field auto-filled");
+		
+		ExtentTestManager.endTest();
+
+	}
+
+	public void accounttotransfer() throws InterruptedException {
+		ExtentTestManager.startTest("Select an account to transfer ");
+		Log.info("Select an account to transfer  ");
+
+		
+		click(Agent.clickofAC);
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Step:01 - Select the account number which to transfer (Multiple).");
+		Log.info("Step:01 - Select the account number which to transfer (Multiple)");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Possibel to select the multiple account number to transfer");
+		Log.info("Possibel to select the multiple account number to transfer");
+
+		ExtentTestManager.endTest();
+	}
+
+	public void TransferAccountsCheckbox1() throws InterruptedException {
+		ExtentTestManager.startTest("Verify Transfer Accounts Checkbox");
+		Log.info("Verify Transfer Accounts Checkbox ");
+
+		
+		click(Agent.downarrow);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the down arrow mark .");
+		Log.info("Step:01 - Click the down arrow mark ");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Selected account will be display in the  another grid");
+		Log.info("Selected account will be display in the  another grid");
+		
+		ExtentTestManager.endTest();
+
+	}
+
+	public void transferAccountsCheckbox2() throws InterruptedException {
+		ExtentTestManager.startTest("Verify Transfer Accounts Checkbox");
+		Log.info("Verify Transfer Accounts Checkbox ");
+
+		click(Agent.AllAC);
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Step:01 -Tick checkboxes against displayed accounts which to transfer.");
+		Log.info("Step:01 -  Tick checkboxes against displayed accounts which to transfer.");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Account checkboxes can be ticked and verified the include radio button is selected");
+		Log.info("Expected Result:Account checkboxes can be ticked and verified the include radio button is selected");
+		
+		ExtentTestManager.endTest();
+
+	}
+
+	public void VerifydataTransfer() throws InterruptedException {
+		ExtentTestManager.startTest("Click and Verify Data Transfer");
+		Log.info("Click and Verify Data Transfer");
+
+		click(Agent.clicktransfer1);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click 'TRANSFER' button");
+		Log.info("Step:01 - Click 'TRANSFER' button.");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Data saved in backend tablesAgent transfered sucessfully validation message will be displays");
+		Log.info(
+				"Expected Result:Data saved in backend tablesAgent transfered sucessfully validation message will be displays");
+		click(Agent.Cancelpopup);
+		ExtentTestManager.endTest();
+	}
+//Single Account Agent Code Transfer
+	public void SingleAccountCheckbox() throws InterruptedException {
+
+		ExtentTestManager.startTest("Verify Transfer Single Account ");
+		Log.info("Verify Transfer Single Account ");
+
+		click(Agent.clicktransfer);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - 1. Verify checkbox Transfer Single Account present.");
+		Log.info("Step:01 - Verify checkbox Transfer Single Account present.");
+		
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Checkbox 'Transfer Single Account' can be clicked/ticked");
+		Log.info(
+				"Expected Result:Checkbox 'Transfer Single Account' can be clicked/ticked");
+		
+		ExtentTestManager.endTest();
+
+		//select("OTHER LOANS", Agent.SelectOtherloan);
+		//select("OTHER LOANS", Agent.selectproname);
+	}
+
+	
+	
+	
+	public void Productgroup() throws InterruptedException {
+
+		ExtentTestManager.startTest("Verify Product Group Dropdown Selection");
+		Log.info("Verify Product Group Dropdown Selection ");
+
+		select("OTHER LOANS", Agent.SelectOtherloan);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'PRODUCT GROUP' dropdown");
+		Log.info("Step:01 -Click 'PRODUCT GROUP' dropdown");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Select a group");
+		Log.info("Step:01 - Select a group");
+		
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Correct product group is selected from dropdown");
+		Log.info(
+				"Expected Result:Correct product group is selected from dropdown");
+
+		ExtentTestManager.endTest();
+		
+	}
+	
+	
+	public void Productname() throws InterruptedException {
+
+		ExtentTestManager.startTest("Verify Transfer Single Account ");
+		Log.info("Verify Transfer Single Account ");
+
+		
+		select("PERSONAL LOAN WEEKLY", Agent.selectproname);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'PRODUCT GROUP name' dropdown");
+		Log.info("Step:01 -Click 'PRODUCT GROUP name' dropdown");
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Select a group");
+		Log.info("Step:01 - Select a group");
+		
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Correct product group name is selected from dropdown");
+		Log.info(
+				"Expected Result:Correct product group name is selected from dropdown");
+
+		ExtentTestManager.endTest();
+
+		//select("OTHER LOANS", Agent.SelectOtherloan);
+		//select("OTHER LOANS", Agent.selectproname);
+	}
+	
+
+	public void Accountnumber(Map<Object, Object> testdata, ITestContext context)
+			throws ClassNotFoundException, InterruptedException {
+
+click (Agent.Accountnumbertextbox);
+String AccountNum = testdata.get("AccountNo").toString();
+input(Agent.Accountnumbertextbox, AccountNum);
+
+		ExtentTestManager.getTest().log(Status.PASS,"Expected Result:Loan number can be entered Account details are displayed ");
+		Log.info("Expected Result: Loan number can be entered Account details are displayed");
+		
+
+		ExtentTestManager.endTest();
+
+}
+	
+	
+	public void gobutton() throws InterruptedException{
+		
+		ExtentTestManager.startTest("Verify GO Button Functional ");
+		Log.info("Verify GO Button Functional ");
+
+		
+	click(Agent.clickongo);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Enter valid Account No");
+		Log.info("Step:01 - Enter valid Account No");
+		
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: AccountNo accepted without errors");
+		Log.info(
+				"Expected Result:AccountNo accepted without errors");
+		
+		ExtentTestManager.endTest();
+
+	}
+	
+public void showbutton() throws InterruptedException{
+	ExtentTestManager.startTest("Check SHOW Button in Account Transfer");
+	Log.info("Check SHOW Button in Account Transfer");
+
+	
+	click(Agent.clickonshow);
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'SHOW' after entering details");
+	Log.info("Step:01 -  Click 'SHOW' after entering details");
+	
+	
+	
+	ExtentTestManager.getTest().log(Status.PASS,
+			"Expected Result: Selected account is displayed");
+	Log.info(
+			"Expected Result:Selected account is displayed");
+		
+	ExtentTestManager.endTest();
+	}
+
+public void agentcodedropwn() throws InterruptedException {
+	
+	ExtentTestManager.startTest("Verify To Agent Code Dropdown after SHOW");
+	Log.info("Verify To Agent Code Dropdown after SHOW");
+
+	select("GIRIJA AGENT", Agent.Agentname);
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click To Agent Code");
+	Log.info("Step:01 -Click To Agent Code");
+	
+	ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Select agent");
+	Log.info("Step:02 - Select agent");
+	
+	ExtentTestManager.getTest().log(Status.PASS,
+			"Expected Result:'Agent Code' field is auto-filled correctly");
+	Log.info(
+			"Expected Result:'Agent Code' field is auto-filled correctly");
+	
+	ExtentTestManager.endTest();
+	
+}
+	public void accountbumcheckbox() throws InterruptedException {
+		
+		ExtentTestManager.startTest("Select the account number checkbox");
+		Log.info("Select the account number checkbox");
+
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Tick the checkbox of the accountber");
+		Log.info("Step:01 - Tick the checkbox of the accountber");
+		
+		click(Agent.tickcheckbox);
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: 'Possible to tick the checkbox");
+		Log.info(
+				"Expected Result:'Possible to tick the checkbox");
+		
+		
+		ExtentTestManager.endTest();
+	}
+	
+	public void clicktransfer() throws InterruptedException {
+		
+		ExtentTestManager.startTest("Finalize and Click Transfer");
+		Log.info("Finalize and Click Transfer ");
+
+		
+		click (Agent.clicktransfer);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'TRANSFER' button");
+		Log.info("Step:01 -Click 'TRANSFER' button");
+		
+		
+		
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Data saved and transfer successful validation message displays");
+		Log.info(
+				"Expected Result:Data saved and transfer successful validation message displays");
+		
+		click(Agent.Cancelpopup);
+		ExtentTestManager.endTest();
+	}	
+		
+}
+
+

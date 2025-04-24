@@ -70,6 +70,7 @@ public class PageRepositary_Debenture_Application {
 		public By Authorizecanceltab = By.xpath("//ul[@id='CreateMenu']//a[text()='Authorize & Cancel']/preceding-sibling::div");
 		public By cashierauthorize = By.xpath("//a[text()='Cashier Authorisation (CAAU)']");
 		public By Transacidtextbox =By.id("ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt");
+		
 		public By transacid = By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
 		public By ClickGo =By.id("ctl00_ctl00_CPH1_PRDCNT_btnGo");
 		public By Refresh=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
@@ -86,6 +87,7 @@ public class PageRepositary_Debenture_Application {
 				public By cashdetails=By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_lblBatchID");
 				public By managerClickGo =By.id("ctl00_ctl00_CPH1_PRDCNT_btnGo");
 				public By checkboxselect11=By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect");
+				
 				public By Transactid1 = By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
 				public By Authorizebutton1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnOtherPass");
 				public By successpopup11=By.id("ctl00_ctl00_lblErrorMessage");
@@ -101,8 +103,35 @@ public class PageRepositary_Debenture_Application {
 				public By ProductName = By.id("ddlProductName_ddl");
 				
 				
+				public By Branchfiled =By.id("ddlBranch_ddl");
+
+				public By Accountsearchicon = By.xpath ("/html/body/form/div[3]/div/table[1]/tbody/tr[4]/td[4]/a/img");
+				public By Group = By.id("ucddlSchema_ddl");
+				public By BranchTVM = By.id("ddlBranch");
+				public By Product = By.id("ucddlProduct_ddl");
+				public By Accountsearchbutton = By.id("btnSearch");
+				//public By selectaccount = By.id("lstAccount_ctrl0_btnView");
+				public By selectaccount = By.id("lstAccount_ctrl9_btnView");
+				public By Balance_Amount =By.id("txtBalAmount_txt");
+				public By AutopostingAmount = By.id("txtAmount_txt");
+				public By Addbtn = By.id("btnAdd");
+				public By submit = By.id("btnSubmit");
+				public By savebtn = By.id("ctl00_ctl00_CPH1_PRDCNT_btnSave");
+				public By Summarytransfer = By.id("ctl00_ctl00_CPH1_PRDCNT_SectionCaption2_lblCaption");
+				public By transfercheckbox = By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_ucMATransfer_lvwBatchDetails_ctrl0_chkSelect");
+				public By Transfertab = By.id("__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer");
+				
+				//Child popup window auto load
+				public By DisplayName = By.id("txtDisplayName_txt");
+				public By AccountNosmalltextbox = By.id("txtChildBGPAcNo_txt");
+				public By AccountNolargetextbox = By.id("txtChildAcNo_txt");
+				} 
+
+
+				
+				
 				
     
 
 
-}
+

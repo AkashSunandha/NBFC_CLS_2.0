@@ -1,47 +1,52 @@
-package com.test.Debenture_Application;
+package com.test.AgentTransfer;
 
 import java.io.IOException;
 import java.util.Map;
-
-import org.testng.ITestContext;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
-import com.BasePackage.Base_Class;
-import com.Pages_DebentureApplication.Debenture_Application_Transferflow;
+import com.Page_AgentTransferModule.Agent_Transfer;
 import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.github.dockerjava.api.model.Driver;
+
+import org.testng.ITestContext;
+import org.testng.annotations.Test;
+import com.BasePackage.Base_Class;
+
 import com.listeners.TestListener;
 
-public class AllScenario_Debenture_Application_Transfer {
+public class Allscenarios_AgentTransfer {
+
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
 	TestListener TestListener; 
 	com.Utility.ScreenShot screenShot;
+	
+	Agent_Transfer Agent = new Agent_Transfer();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	
-	Debenture_Application_Transferflow DebApp = new Debenture_Application_Transferflow();
+
+	
+	
 	@BeforeSuite
 	public void reference() {
-		ExcelReader = new com.Utility.ExcelReader("Debenture_Application");
-		
+		ExcelReader = new com.Utility.ExcelReader("Agent_Transfer");
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
 		Base_Class = new Base_Class();
 	}
 	
+	
 	@Test(dataProvider = "TestData")
 	public void customerRegister( Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("Debenture_Application_Transfer");
-				Log.info("Debenture_Application_Transfer");
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 //				ExtentTestManager.endTest();
 				
@@ -51,7 +56,8 @@ public class AllScenario_Debenture_Application_Transfer {
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 				
-			 //TC 01
+				
+				 //TC 01
 				//PC Registration
 				custSrchMthds.pcRegistration(testdata, context);
 			
@@ -59,126 +65,48 @@ public class AllScenario_Debenture_Application_Transfer {
 				//User Login
 				custSrchMthds.userLoginValidPaswrd(testdata, context);
 				
-				//TC 04
-				DebApp.Navigate_Debenture_Application();
+                Agent.AgentTransferNavigation();
 				
-				//TC 05
-				DebApp.Verify_Branch_Field();
+				Agent.AgentCodeDropdown();
 				
-				//TC 06
-				DebApp.Verify_Application_DateField();
-								
-				//TC 11
-				DebApp.Select_Debenture_Type();
+				Agent.ProducCheckboxesFunctionality();
 				
-				//TC 12
-				DebApp.Select_Debenture_Issue();
+				Agent.AreaCheckboxesFunctionality();
 				
-				//TC 13
-				DebApp.Select_Series_Type();
+				Agent.CheckTemporaryTransferCheckboxDefault();
 				
-				//TC 14
-				DebApp.Verify_Nature_Field();
-				 
-				//TC 15
-				DebApp.Select_customer_Category();
+				Agent. VerifyShowButton();
 				
-				//TC 07,08,09,10 and 16
-				DebApp.AddcustomerviacustID(testdata, context);
+				Agent.ItemfromToAgentCodeDropdown();
+				
+				Agent.accounttotransfer();
+				
+				Agent.TransferAccountsCheckbox1();
+				
+				Agent.transferAccountsCheckbox2();
+				
+				Agent.VerifydataTransfer();
+				
+				//Single Account Agent code Transfer
+				
+				Agent.SingleAccountCheckbox();
+				
+				Agent.Productgroup();
+				
+				Agent.Productname();
+				
+				Agent.Accountnumber(testdata, context); 
+				
+				Agent.gobutton();
 
+				Agent.showbutton();
 				
-				//TC 17
+				Agent.agentcodedropwn();
 				
-				DebApp.Verify_Unit_Value();
+				Agent.accountbumcheckbox();
 				
-				//TC 18
-				DebApp.Validate_No_of_Units(testdata, context);
-				
-				//TC 19
-				DebApp.Calculate_Total_Value(testdata, context);
-				
-				//TC 20
-				DebApp.Verify_Default_ROI();
-				
-				//TC 21
-				DebApp.Select_DP_Name();
-				
-				//TC 22
-				DebApp.Validate_Demat_AccNo_Entry(testdata, context);
-				
-				//TC 23
-				DebApp.Calculate_Maturity_Value();
-				
-				//TC 24
-				
-				//TC 25
-				DebApp.Select_Referred_By();
-				
-				//TC 26
-				DebApp.untickNomineeNotRequired();
-				
-				//TC 27
-				DebApp.AddNomineeBySearch(testdata, context);
-				
-				//TC 32
-				DebApp.Select_Relation_Dropdown();
-				
-				//TC 31
-				DebApp.Add_nominee();
-				
-				//TC32  (invalid)
-				
-				//TC 33
-				DebApp.Verify_Internet_transfer_tab();
-				
-				//TC 34
-				DebApp.Enable_interesttransfer();
-				
-				//TC 35
-				DebApp.Enable_External_Account_click();
-				
-				//TC 36
-				DebApp.Submission_with_Transfer_transmode();
-				
-				DebApp.random();
-				
-//				//TC 37
-//				DebApp.Verify_Loan_Submission_with_Transfer_Mode_postDebit();
-//				
-//				//TC 38
-//				DebApp.Transactionbased_account();
-//				
-//				/* //TC 43
-//				DebApp.Groupdropdown(); */
-//				
-			//TC 53
-			DebApp.Submission_with_Transfer_TransMode_Save();
-//				
-			//TC 54
-			DebApp.Validate_Summary();
-				
-				//TC 55
-			DebApp.Print_Voucher_Summary();
-			  
-			//TC 56
-			DebApp.Summary_Displayed_Logout();
-		
-		//TC 56
-			DebApp.Login_with_AnotherUser(testdata, context);
-
-			//TC 57
-		DebApp.Manager_Authorization_Transfertab();
+				Agent.clicktransfer();
 			
-			//TC 58
-			DebApp.Refresh_Loan_OpeningEntry(testdata, context);
-			
-				//TC 59
-			DebApp.Select_the_transaction_asmanager(testdata, context);
-			
-			//TC 60
-			DebApp.Authorize_Loan_Entry_asManager();
-
-
 				
 				//Sign out
 				custSrchMthds.logout();
@@ -223,5 +151,6 @@ public class AllScenario_Debenture_Application_Transfer {
 	}
 
 }
+
 
 
