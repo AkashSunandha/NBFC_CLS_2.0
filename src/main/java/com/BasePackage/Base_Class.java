@@ -565,6 +565,16 @@ public static  void DatabaseConnector() throws ClassNotFoundException {
 		Boolean flag = element.isEnabled();
 		return flag;
 	}
+	
+	public static  void INclick(By element) throws InterruptedException {
+		 
+		//Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
+		//Thread.sleep(2000);
+ 
+	}
+	
     
     
 }
