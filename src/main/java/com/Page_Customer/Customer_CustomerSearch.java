@@ -29,14 +29,24 @@ public class Customer_CustomerSearch extends Base_Class{
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
 	com.Utility.ExcelReader ExcelReader = new com.Utility.ExcelReader("Customer_CustSearch");
 	Base_Class Base_Class= new Base_Class();
-	Customer_QuickCustomer quickCust = new Customer_QuickCustomer(); 
+
+	//Customer_QuickCustomer quickCust = new Customer_QuickCustomer(); 
 	public String actualUserName;
+	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
+	public static String Firstusername;
 
 	
 	public String getActualUserName(By locator) {
 		String actualUserName = driver.findElement(locator).getText();
 		System.out.println("actualUserName: "+actualUserName);
 		return actualUserName;
+
+	}
+	
+	public void username() {
+		Firstusername = getActualUserName(custSearch.firstUsername);
+		System.out.println("Firstusername: " + Firstusername);
+
 	}
 	
 	public static  String generateCustId() throws ClassNotFoundException {
@@ -214,7 +224,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		return true;
 	}
 	
-	public void userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
+	public boolean  userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		ExtentTestManager.startTest("Valid Login");
 		Log.info("Valid Login");
 			
@@ -286,6 +296,11 @@ public class Customer_CustomerSearch extends Base_Class{
 //					Log.info("Expected Result: User is logged in successfully and dashboard visible");
 					
 		ExtentTestManager.endTest();
+
+
+		username();
+		
+		return true;
 
 	}
 	
