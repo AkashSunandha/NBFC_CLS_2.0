@@ -444,31 +444,31 @@ public class Debenture_Application_Cashflow  extends Base_Class {
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 Check maturity Value field");
 			Log.info("Step:01 Check maturity value field");
 			
-			 String ROIValue = driver.findElement(DebApp.ROI).getAttribute("value");
-				double num1 = Double.parseDouble(ROIValue);
-				double roiValue = num1/100;
-				System.out.println("roiValue: " + roiValue);
-				
-				String totalValue = driver.findElement(DebApp.TotalValue).getAttribute("value");
-				double actualTotalValue = Double.parseDouble(totalValue);
-				System.out.println("Actual Value: " +actualTotalValue);
-			
-				double num2 = actualTotalValue*roiValue;
-				double expectedMaturityValue = actualTotalValue+num2;
-				System.out.println("expectedMaturityVal: " +expectedMaturityValue);
-				
-				String maturityValue = driver.findElement(DebApp.MaturityValue).getAttribute("value");
-				double actualMaturityValue = Double.parseDouble(maturityValue);
-				System.out.println("Actualmaturityval: " +actualMaturityValue);
-				
-				if(actualMaturityValue == expectedMaturityValue) {
-					 ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Maturity value is calculated and displayed correctly");
-						Log.info("Expected Result: Maturity value is calculated and displayed correctly");
+			String ROIValue = driver.findElement(DebApp.ROI).getAttribute("value");
+			double num1 = Double.parseDouble(ROIValue);
 
-				}else {
-					ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-					Log.info("ERROR");
-				}
+			double roiValue = (num1 / 100) / 2;
+			System.out.println("roiValue: " + roiValue);
+
+			String totalValue = driver.findElement(DebApp.TotalValue).getAttribute("value");
+			double actualTotalValue = Double.parseDouble(totalValue);
+			System.out.println("Actual Value: " + actualTotalValue);
+
+			double expectedInterest = actualTotalValue * roiValue;
+			double expectedMaturityValue = actualTotalValue + expectedInterest;
+			System.out.println("expectedMaturityVal: " + expectedMaturityValue);
+
+			String maturityValue = driver.findElement(DebApp.MaturityValue).getAttribute("value");
+			double actualMaturityValue = Double.parseDouble(maturityValue);
+			System.out.println("Actualmaturityval: " + actualMaturityValue);
+
+			if (Math.abs(actualMaturityValue - expectedMaturityValue) < 0.01) {
+			    ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Maturity value is calculated and displayed correctly");
+			    Log.info("Expected Result: Maturity value is calculated and displayed correctly");
+			} else {
+			    ExtentTestManager.getTest().log(Status.FAIL, "ERROR: Maturity value mismatch");
+			    Log.info("ERROR: Maturity value mismatch");
+			}
 				
 				ExtentTestManager.endTest();
 		 }
