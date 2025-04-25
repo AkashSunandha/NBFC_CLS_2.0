@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly {
 
-	public By accountOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div");
-	public By loanOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/div");
-	public By loanAndAdvancesTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/ul/li[3]/div");
-	public By personalLoanWeeeklyTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[2]/ul/li[3]/ul/li[1]/a");
+	public By accountOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Account Opening']/preceding-sibling::div");
+	public By loanOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Loan Opening']/preceding-sibling::div");
+	public By loanAndAdvancesTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Loan and Advances (ACOPL)']/preceding-sibling::div");
+	public By personalLoanWeeeklyTab = By.xpath("//a[text()='PERSONAL LOAN WEEKLY   (23001)']");
 	 
 	//Account Info
 	public By aciCustSearchIcon = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[8]/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]/table/tbody/tr/td[2]/a/img");

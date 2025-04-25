@@ -225,6 +225,7 @@ public class Customer_CustomerSearch extends Base_Class{
 					Log.info("Expected Result: User is logged in successfully and dashboard visible");
 					}
 					catch(Exception e) {
+						System.out.println("Error:-"+e);
 						ElementDisplayed(custSearch.loginWarningOkBtn);
 						ExtentTestManager.getTest().log(Status.PASS, "Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
 						Log.info("Error Message displayed: Already Logged in another system/browser.. Do you want to log out?");
@@ -2624,6 +2625,7 @@ return true;
 			Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 		}
 		driver.close();
+//		driver.quit();
 		ExtentTestManager.endTest();
 		return true;
 	}

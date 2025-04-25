@@ -1,31 +1,48 @@
 package com.Utility;
 
 import java.io.FileInputStream;
-
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelReader {
+import com.google.common.collect.Table.Cell;
+import com.microsoft.schemas.office.visio.x2012.main.CellType;
 
+
+
+public class ExcelReader
+{
+	private static List<HashMap<String,String>> lstMap;
 	private static String sheetName;
-	public  ExcelReader(String sheetName){
+	public  ExcelReader(String sheetName) {
 		this.sheetName = sheetName;
-	}
-	private  static XSSFSheet getSheet() throws IOException {
+}
+private  static XSSFSheet getSheet() throws IOException
+{
 		FileInputStream fis = new FileInputStream(".\\src\\test\\resources\\TestData.xlsx");
 		try (XSSFWorkbook workbook = new XSSFWorkbook(fis)) {
 			XSSFSheet sheet = workbook.getSheet(sheetName);
 			return sheet;
 		}
-	}
-	public static java.util.List<Map<String,String>> getdata() throws IOException {
+}
+public static java.util.List<Map<String,String>> getdata() throws IOException 
+{
 		XSSFSheet sheet = getSheet();
 		java.util.List<Map<String,String>> completedata = null;
 
@@ -65,7 +82,19 @@ public class ExcelReader {
 		}
 		return completedata;	
 
-	}
+}
 
+	 public static HashMap<String,String> getUserNamesByRandomRow()
+{
 
+	        int row=getRandomNumber(lstMap.size()-1);
+	        return lstMap.get(row);
+
+}
+
+	    public static int getRandomNumber(int max)
+	    {
+	        return (int) ((Math.random() * (max)));
+
+	    }
 }

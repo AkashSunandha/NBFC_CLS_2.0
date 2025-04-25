@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.Transaction.AllScenarios_Transaction_Transaction_Cancellation_Transfer">
+      <class name="com.test.AccountOpening.AllScenariosAccountOpening">
         <methods>
           <include name="newCustomer" invocation-numbers="0"/>
           <include name="reference"/>
         </methods>
-      </class> <!-- com.test.Transaction.AllScenarios_Transaction_Transaction_Cancellation_Transfer -->
+      </class> <!-- com.test.AccountOpening.AllScenariosAccountOpening -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

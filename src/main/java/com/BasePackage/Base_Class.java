@@ -1,6 +1,7 @@
 package com.BasePackage;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.CallableStatement;
@@ -11,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Properties;
@@ -19,6 +21,8 @@ import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
+import org.apache.commons.io.comparator.LastModifiedFileComparator;
+import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -66,7 +70,21 @@ public class Base_Class {
 		properties.load(File);
 		return properties;
 	}
+	public static File getLatestFileFromFolder(String filePath, String ext) {
+		File theNewestFile = null;
+		File dir = new File(filePath);
+		FileFilter fileFilter = new WildcardFileFilter("*." + ext);
+		File[] files = dir.listFiles(fileFilter);
 
+		if (files.length > 0) {
+			/** The newest file comes first **/
+			Arrays.sort(files, LastModifiedFileComparator.LASTMODIFIED_REVERSE);
+			theNewestFile = files[0];
+			// System.out.println("Print latest file name :"+theNewestFile.getName());
+		}
+
+		return theNewestFile;
+	}
 	public void SetUp() throws IOException, InterruptedException {
 
 		String Browser = configloader().getProperty("Browser");

@@ -1,4 +1,4 @@
-[ERROR] 2025-04-21 18:30:25.357 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-25 12:51:19.033 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -16,9 +16,9 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
-	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Transaction.AllScenarios_Transaction_Transaction_Cancellation_Transfer.gettestdate(AllScenarios_Transaction_Transaction_Cancellation_Transfer.java:138) ~[test-classes/:?]
+	at com.Utility.ExcelReader.getSheet(ExcelReader.java:39) ~[classes/:?]
+	at com.Utility.ExcelReader.getdata(ExcelReader.java:46) ~[classes/:?]
+	at com.test.AccountOpening.AllScenariosAccountOpening.gettestdate(AllScenariosAccountOpening.java:163) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-04-21 18:30:25.370 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-25 12:51:19.047 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -69,9 +69,9 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
-	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Transaction.AllScenarios_Transaction_Transaction_Cancellation_Transfer.gettestdate(AllScenarios_Transaction_Transaction_Cancellation_Transfer.java:138) ~[test-classes/:?]
+	at com.Utility.ExcelReader.getSheet(ExcelReader.java:39) ~[classes/:?]
+	at com.Utility.ExcelReader.getdata(ExcelReader.java:46) ~[classes/:?]
+	at com.test.AccountOpening.AllScenariosAccountOpening.gettestdate(AllScenariosAccountOpening.java:163) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-04-21 18:30:25.373 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-25 12:51:19.049 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -122,9 +122,9 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
-	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Transaction.AllScenarios_Transaction_Transaction_Cancellation_Transfer.gettestdate(AllScenarios_Transaction_Transaction_Cancellation_Transfer.java:138) ~[test-classes/:?]
+	at com.Utility.ExcelReader.getSheet(ExcelReader.java:39) ~[classes/:?]
+	at com.Utility.ExcelReader.getdata(ExcelReader.java:46) ~[classes/:?]
+	at com.test.AccountOpening.AllScenariosAccountOpening.gettestdate(AllScenariosAccountOpening.java:163) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[ERROR] 2025-04-21 18:30:25.379 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-25 12:51:19.054 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2974) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3102) ~[?:?]
@@ -175,9 +175,9 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
-	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
-	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Transaction.AllScenarios_Transaction_Transaction_Cancellation_Transfer.gettestdate(AllScenarios_Transaction_Transaction_Cancellation_Transfer.java:138) ~[test-classes/:?]
+	at com.Utility.ExcelReader.getSheet(ExcelReader.java:39) ~[classes/:?]
+	at com.Utility.ExcelReader.getdata(ExcelReader.java:46) ~[classes/:?]
+	at com.test.AccountOpening.AllScenariosAccountOpening.gettestdate(AllScenariosAccountOpening.java:163) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,115 +210,11 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
-[INFO ] 2025-04-21 18:30:26.020 [main] Log - *** Running test method Transaction_Cancellation...
-[INFO ] 2025-04-21 18:30:29.380 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-04-21 18:30:30.920 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-04-21 18:30:33.136 [main] Log - PC Registration
-[INFO ] 2025-04-21 18:30:34.194 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-04-21 18:30:36.529 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-04-21 18:30:37.559 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-04-21 18:30:41.849 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-04-21 18:30:43.904 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-04-21 18:30:43.974 [main] Log - Valid Login
-[INFO ] 2025-04-21 18:30:45.004 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-04-21 18:30:46.039 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-04-21 18:30:54.842 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-21 18:30:55.877 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-21 18:30:55.940 [main] Log - Navigate to Transactions >> GL A/c Bulk Transaction.
-[INFO ] 2025-04-21 18:31:00.229 [main] Log - Step:01 - Navigate to the transaction module in the menu.
-[INFO ] 2025-04-21 18:31:05.119 [main] Log - Step:02 - Click on the GL_AC_Bulk_Transaction module.
-[INFO ] 2025-04-21 18:31:06.153 [main] Log - Expected Result: GL_AC_Bulk_Transaction module opens successfully.
-[INFO ] 2025-04-21 18:31:06.191 [main] Log - Select Branch
-[INFO ] 2025-04-21 18:31:08.250 [main] Log - Step:01 -  Select a branch from the dropdown.
-[INFO ] 2025-04-21 18:31:08.250 [main] Log - Expected Result: Correct branch  selected.
-[INFO ] 2025-04-21 18:31:08.293 [main] Log - Select Transaction Type
-[INFO ] 2025-04-21 18:31:10.352 [main] Log - Step:01 -  Choose 'Credit' for Transaction Type.
-[INFO ] 2025-04-21 18:31:10.353 [main] Log - Expected Result: Correct Transaction Type selected.
-[INFO ] 2025-04-21 18:31:10.353 [main] Log - Select Account Type
-[INFO ] 2025-04-21 18:31:12.655 [main] Log - Step:01 -  Choose 'Accounts' for Transaction Type.
-[INFO ] 2025-04-21 18:31:12.656 [main] Log - Expected Result: Correct Account Type  selected.
-[INFO ] 2025-04-21 18:31:12.656 [main] Log - Search Account popup
-[INFO ] 2025-04-21 18:31:17.182 [main] Log - Step:01 - Click on the Search Account popup.
-[INFO ] 2025-04-21 18:31:18.496 [main] Log - Expected Result: Accoount Search popup window will be opened.
-[INFO ] 2025-04-21 18:31:18.497 [main] Log - Select Transaction Type
-[INFO ] 2025-04-21 18:31:20.744 [main] Log - Step:01 -  Choose 'Suspense Asset' for Group Name.
-[INFO ] 2025-04-21 18:31:20.746 [main] Log - Expected Result: Correct Group Name selected.
-[INFO ] 2025-04-21 18:31:20.790 [main] Log - Select Product Name
-[INFO ] 2025-04-21 18:31:23.064 [main] Log - Step:01 -  Choose 'SUSPENSE ASSET' for Product Name.
-[INFO ] 2025-04-21 18:31:23.065 [main] Log - Expected Result: Correct Product Name selected.
-[INFO ] 2025-04-21 18:31:23.124 [main] Log - Select Branch
-[INFO ] 2025-04-21 18:31:25.408 [main] Log - Step:02 -  Choose 'TRIVANDRUM' for Branch.
-[INFO ] 2025-04-21 18:31:25.409 [main] Log - Expected Result: Correct Branch selected.
-[INFO ] 2025-04-21 18:31:29.769 [main] Log - Step:03 - Click on the Search Button.
-[INFO ] 2025-04-21 18:31:34.101 [main] Log - Step:01 - Click on the Search Button from the list.
-[INFO ] 2025-04-21 18:31:35.143 [main] Log - Expected Result: Popup window will be closed
-[INFO ] 2025-04-21 18:31:35.157 [main] Log - Acc_No:-102310020000064
-[INFO ] 2025-04-21 18:31:35.157 [main] Log - Enter Transaction Amount
-[INFO ] 2025-04-21 18:31:43.540 [main] Log - Step:01 - Enter a valid transaction amount in the input field.
-[INFO ] 2025-04-21 18:31:49.937 [main] Log - Step:02 - Click on the Add Button.
-[INFO ] 2025-04-21 18:31:56.251 [main] Log - Step:02 - Click on the Add Button.
-[INFO ] 2025-04-21 18:31:56.251 [main] Log - Select Branch
-[INFO ] 2025-04-21 18:31:58.321 [main] Log - Step:01 -  Select a branch from the dropdown.
-[INFO ] 2025-04-21 18:31:58.322 [main] Log - Expected Result: Correct branch  selected.
-[INFO ] 2025-04-21 18:31:58.363 [main] Log - Select Transaction Type
-[INFO ] 2025-04-21 18:32:00.646 [main] Log - Step:01 -  Choose 'Debit' for Transaction Type.
-[INFO ] 2025-04-21 18:32:00.646 [main] Log - Expected Result: Correct Transaction Type selected.
-[INFO ] 2025-04-21 18:32:00.692 [main] Log - Select Account Type
-[INFO ] 2025-04-21 18:32:02.749 [main] Log - Step:01 -  Choose 'Accounts' for Transaction Type.
-[INFO ] 2025-04-21 18:32:02.749 [main] Log - Expected Result: Correct Account Type  selected.
-[INFO ] 2025-04-21 18:32:02.786 [main] Log - Search Account popup
-[INFO ] 2025-04-21 18:32:07.312 [main] Log - Step:01 - Click on the Search Account popup.
-[INFO ] 2025-04-21 18:32:08.629 [main] Log - Expected Result: Accoount Search popup window will be opened.
-[INFO ] 2025-04-21 18:32:08.630 [main] Log - Select Transaction Type
-[INFO ] 2025-04-21 18:32:10.867 [main] Log - Step:01 -  Choose 'Suspense Asset' for Group Name.
-[INFO ] 2025-04-21 18:32:10.869 [main] Log - Expected Result: Correct Group Name selected.
-[INFO ] 2025-04-21 18:32:10.912 [main] Log - Select Product Name
-[INFO ] 2025-04-21 18:32:13.190 [main] Log - Step:01 -  Choose 'SUSPENSE ASSET' for Product Name.
-[INFO ] 2025-04-21 18:32:13.190 [main] Log - Expected Result: Correct Product Name selected.
-[INFO ] 2025-04-21 18:32:13.249 [main] Log - Select Branch
-[INFO ] 2025-04-21 18:32:15.527 [main] Log - Step:02 -  Choose 'TRIVANDRUM' for Branch.
-[INFO ] 2025-04-21 18:32:15.528 [main] Log - Expected Result: Correct Branch selected.
-[INFO ] 2025-04-21 18:32:19.778 [main] Log - Step:03 - Click on the Search Button.
-[INFO ] 2025-04-21 18:32:24.086 [main] Log - Step:01 - Click on the Search Button from the list.
-[INFO ] 2025-04-21 18:32:25.135 [main] Log - Expected Result: Popup window will be closed
-[INFO ] 2025-04-21 18:32:25.149 [main] Log - Acc_No:-102310020000064
-[INFO ] 2025-04-21 18:32:25.149 [main] Log - Enter Transaction Amount
-[INFO ] 2025-04-21 18:32:33.545 [main] Log - Step:01 - Enter a valid transaction amount in the input field.
-[INFO ] 2025-04-21 18:32:39.943 [main] Log - Step:02 - Click on the Add Button.
-[INFO ] 2025-04-21 18:32:46.249 [main] Log - Step:02 - Click on the Add Button.
-[INFO ] 2025-04-21 18:32:46.249 [main] Log - Select Transaction Mode
-[INFO ] 2025-04-21 18:32:48.550 [main] Log - Step:01 - Choose 'Cash' from the transaction mode dropdown.
-[INFO ] 2025-04-21 18:32:48.550 [main] Log - Expected Result: Transaction mode 'Cash' is selected.
-[INFO ] 2025-04-21 18:32:48.591 [main] Log - Enter Part Name
-[INFO ] 2025-04-21 18:32:53.898 [main] Log - Step:01 - Enter a valid Party Name in the input field.
-[INFO ] 2025-04-21 18:32:53.949 [main] Log - Enter Remarks
-[INFO ] 2025-04-21 18:32:59.251 [main] Log - Step:01 - Enter a valid Remarks in the input field.
-[INFO ] 2025-04-21 18:32:59.288 [main] Log - Submit Transaction
-[INFO ] 2025-04-21 18:33:03.581 [main] Log - Step:01 - Click the 'Submit' button.
-[INFO ] 2025-04-21 18:33:04.615 [main] Log - Expected Result: Transaction should be successful and  summary is displayed with correct details.
-[INFO ] 2025-04-21 18:33:08.916 [main] Log - Cashier Authorization
-[INFO ] 2025-04-21 18:33:13.206 [main] Log - Step:01 - Click "Authorize & Cancel"
-[INFO ] 2025-04-21 18:33:17.725 [main] Log - Step:02 - Click on Transaction Cancellations
-[INFO ] 2025-04-21 18:33:23.109 [main] Log - System able to found the element :By.xpath: //*[contains(@id,'HeaderDate')]
-[INFO ] 2025-04-21 18:33:23.128 [main] Log - Successfully Verified the TransactionDate
-[INFO ] 2025-04-21 18:33:27.415 [main] Log - Step:03 - Select checkbox
-[INFO ] 2025-04-21 18:33:32.804 [main] Log - Step:01 -  Enter Cancel Remark
-[INFO ] 2025-04-21 18:33:37.123 [main] Log - Step:01 -  Click on Cancel Button
-[INFO ] 2025-04-21 18:33:38.624 [main] Log - Login with Another User
-[INFO ] 2025-04-21 18:33:43.188 [main] Log - Step:01 - Log out
-[INFO ] 2025-04-21 18:33:54.051 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-04-21 18:33:58.381 [main] Log - Manager Authorization - Transfer Tab
-[INFO ] 2025-04-21 18:34:02.666 [main] Log - Step:01 - Click "Authorize & Cancel"
-[INFO ] 2025-04-21 18:34:07.326 [main] Log - Step:02 - Select "Manager Authorization"
-[INFO ] 2025-04-21 18:34:11.616 [main] Log - Step:03 - Click "Others" tab
-[INFO ] 2025-04-21 18:34:11.616 [main] Log - Expected Result: Others tab load
-[INFO ] 2025-04-21 18:34:11.659 [main] Log - Refresh Loan Opening Entry
-[INFO ] 2025-04-21 18:34:15.941 [main] Log - Step:01 - Click Refresh Button
-[INFO ] 2025-04-21 18:34:22.329 [main] Log - Expected Result: Loan opening entry displayed
-[INFO ] 2025-04-21 18:34:22.362 [main] Log - Authorize Loan Entry as Manager
-[INFO ] 2025-04-21 18:34:26.645 [main] Log - Step:01 - Select loan entry checkbox
-[INFO ] 2025-04-21 18:34:30.927 [main] Log - Step:02 - Click Authorize Button
-[INFO ] 2025-04-21 18:34:31.959 [main] Log - Expected Result: Transaction gets authorised
-[INFO ] 2025-04-21 18:34:36.282 [main] Log - Logout
-[INFO ] 2025-04-21 18:34:46.539 [main] Log - Step:01 -  Click on 'Signout'
-[INFO ] 2025-04-21 18:34:47.568 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
+[INFO ] 2025-04-25 12:51:20.159 [main] Log - *** Running test method Gold Loan...
+[INFO ] 2025-04-25 12:51:20.159 [main] Log - *** Running test method Gold Loan...
+[INFO ] 2025-04-25 12:51:20.166 [main] Log - Exception java.lang.NullPointerException: Cannot invoke "com.BasePackage.Base_Class.SetUp()" because "this.Base_Class" is null
+[INFO ] 2025-04-25 12:51:20.685 [main] Log - *** Test Suite Gold Loan ending ***
+[INFO ] 2025-04-25 12:51:20.693 [main] Log - *** Running test method Personal Loan Weekly...
+[INFO ] 2025-04-25 12:51:20.694 [main] Log - *** Running test method Personal Loan Weekly...
+[INFO ] 2025-04-25 12:51:20.697 [main] Log - Exception java.lang.NullPointerException: Cannot invoke "com.BasePackage.Base_Class.SetUp()" because "this.Base_Class" is null
+[INFO ] 2025-04-25 12:51:20.911 [main] Log - *** Test Suite Personal Loan Weekly ending ***
