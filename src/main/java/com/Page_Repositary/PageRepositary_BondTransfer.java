@@ -72,6 +72,8 @@ public class PageRepositary_BondTransfer
 		public By selectauthentry= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers_ucMAOthers_lvwOtherDetails_ctrl0_chkSelect\"]");
 		public By authbutton= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnOtherPass\"]");
 		public By authsuccessmsg= By.xpath("//*[@id=\"FloatingErrorMessageBoxTop\"]");
+	//success close button
+		public By successclosebutton= By.xpath("//*[@id=\"closetop\"]");
 
 		
 		

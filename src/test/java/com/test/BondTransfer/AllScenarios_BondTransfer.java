@@ -85,48 +85,13 @@ public class AllScenarios_BondTransfer extends Base_Class{
 				
 				//Authorisation
 				bondtrMthds.authorizeCash(testdata, context);
-				//goaldLoan.authorizeCash(testdata, context);
 				
 				
-				/*//TC No. - 16 --> Error Handling - Invalid Characters in Customer ID text box
-				custRgstrMthds.viewByInValidCustId3(testdata, context);
-				
-				//TC No. - 07 --> Pop UP Window should appear
-				custRgstrMthds.srchBtnFunctionality(testdata, context);
-				
-				//TC No. - 08 --> Multiple Search Parameters Selection
-				custRgstrMthds.srchBtnFuntnWithParameters(testdata, context);
-				
-				//TC No. - 09 --> View & Cancel Button Availability
-				custRgstrMthds.viewAndCancelBtnAvailability();
-				
-				//TC No. - 10 --> View Loan Account details of Customer
-				custRgstrMthds.viewByLoan(testdata, context);
-				
-				//TC No. - 11 --> View Deposit Account details of Customer
-				custRgstrMthds.viewByDeposits(testdata, context);
-				
-				//TC No. - 12 --> View Loan & Deposit Account details of Customer
-				//& TC No. - 17 -->Search Parameter - Check/Uncheck Options
-				Thread.sleep(3000);
-				custRgstrMthds.viewByLoanAndDeposits(testdata, context);
-				
-				//TC No. - 13 --> View Button - No Search Parameters (fetch without any parameters)
-				Thread.sleep(3000);
-				custRgstrMthds.viewWithoutParameters(testdata, context);
-				
-				//TC No. - 15 --> Cancel Button Functionality
-				Thread.sleep(3000);
-				custRgstrMthds.cancelBtnFunctionality(testdata, context);
-				
-
 				
 				//Sign out
 				Thread.sleep(3000);
-				custSrchMthds.logout();   */
+				bondtrMthds.logout();   
 				
-				// EndTest
-//				ExtentTestManager.endTest();
 				ExtentManager.getInstance().flush();
 			}		
 		}

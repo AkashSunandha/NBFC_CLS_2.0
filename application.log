@@ -1,4 +1,4 @@
-[ERROR] 2025-04-22 16:02:12.146 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-25 17:13:16.839 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.BondTransfer.AllScenarios_BondTransfer.gettestdate(AllScenarios_BondTransfer.java:144) ~[test-classes/:?]
+	at com.test.BondTransfer.AllScenarios_BondTransfer.gettestdate(AllScenarios_BondTransfer.java:109) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -51,7 +51,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-22 16:02:12.185 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-25 17:13:16.875 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -71,7 +71,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.BondTransfer.AllScenarios_BondTransfer.gettestdate(AllScenarios_BondTransfer.java:144) ~[test-classes/:?]
+	at com.test.BondTransfer.AllScenarios_BondTransfer.gettestdate(AllScenarios_BondTransfer.java:109) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,7 +104,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-22 16:02:12.191 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-25 17:13:16.879 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -124,7 +124,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.BondTransfer.AllScenarios_BondTransfer.gettestdate(AllScenarios_BondTransfer.java:144) ~[test-classes/:?]
+	at com.test.BondTransfer.AllScenarios_BondTransfer.gettestdate(AllScenarios_BondTransfer.java:109) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -157,7 +157,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-22 16:02:12.214 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-25 17:13:16.898 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2976) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3104) ~[?:?]
@@ -177,7 +177,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.BondTransfer.AllScenarios_BondTransfer.gettestdate(AllScenarios_BondTransfer.java:144) ~[test-classes/:?]
+	at com.test.BondTransfer.AllScenarios_BondTransfer.gettestdate(AllScenarios_BondTransfer.java:109) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -210,69 +210,58 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-04-22 16:02:14.273 [main] Log - *** Running test method Bond_Transfer...
-[INFO ] 2025-04-22 16:02:28.301 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-04-22 16:02:31.193 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-04-22 16:02:32.809 [main] Log - PC Registration
-[INFO ] 2025-04-22 16:02:33.972 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-04-22 16:02:36.400 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-04-22 16:02:37.485 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-04-22 16:02:41.846 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-04-22 16:02:43.880 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-04-22 16:02:44.198 [main] Log - Valid Login
-[INFO ] 2025-04-22 16:02:45.273 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-04-22 16:02:46.349 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-04-22 16:02:55.159 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-22 16:02:56.263 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-22 16:02:56.430 [main] Log - Navigate to Bond Transfer Page
-[INFO ] 2025-04-22 16:03:02.858 [main] Log - Step:01 - Expand the Bond tab in the left menu bar.
-[INFO ] 2025-04-22 16:03:07.753 [main] Log - Step:02 - Click on Bond Transfer
-[INFO ] 2025-04-22 16:03:08.817 [main] Log - Expected Result: Bond Transfer is displayed.
-[INFO ] 2025-04-22 16:03:08.912 [main] Log - Select a branch from Dropdown
-[INFO ] 2025-04-22 16:03:08.913 [main] Log - Step:01 - Click 'branch' dropdown
-[INFO ] 2025-04-22 16:03:11.119 [main] Log - Select a Product from Dropdown
-[INFO ] 2025-04-22 16:03:11.119 [main] Log - Step:01 - Click 'Product' dropdown and select value
-[INFO ] 2025-04-22 16:03:13.575 [main] Log - Expected Result: Selected product from dropdown.
-[INFO ] 2025-04-22 16:03:13.664 [main] Log - Enter Account Number
-[INFO ] 2025-04-22 16:03:13.665 [main] Log - Step:01 - Enter last three digit of account number
-[INFO ] 2025-04-22 16:03:14.776 [main] Log - Expected Result: Entered last three digit of account number
-[INFO ] 2025-04-22 16:03:14.777 [main] Log - Click on Go button
-[INFO ] 2025-04-22 16:03:14.778 [main] Log - Step:01 - Click on Go button
-[INFO ] 2025-04-22 16:03:21.161 [main] Log - Expected Result: Account details are loaded successfully
-[INFO ] 2025-04-22 16:03:21.301 [main] Log - Open Customer search Popup on Transfer to section
-[INFO ] 2025-04-22 16:03:21.303 [main] Log - Step 1: Click search button present near 'CustomerID' field
-[INFO ] 2025-04-22 16:03:27.637 [main] Log - Expected Result: Customer search window is displayed.
-[INFO ] 2025-04-22 16:03:27.637 [main] Log - Search for customer
-[INFO ] 2025-04-22 16:03:27.638 [main] Log - Step 1: Enter 'Name' in the field
-[INFO ] 2025-04-22 16:03:28.728 [main] Log - Step:02 - Enter Customer number.
-[INFO ] 2025-04-22 16:03:29.813 [main] Log - Step 3: Click on Search button
-[INFO ] 2025-04-22 16:03:35.229 [main] Log - Expected Result: Customer IDs list matching 'First Name' and 'Customer id' is displayed
-[INFO ] 2025-04-22 16:03:35.229 [main] Log - Select Customer ID from List
-[INFO ] 2025-04-22 16:03:35.230 [main] Log - Step 1:Click on Select button against any Customer ID
-[INFO ] 2025-04-22 16:03:39.569 [main] Log - Expected Result: Customer is selected
-[INFO ] 2025-04-22 16:03:39.570 [main] Log - Add customer
-[INFO ] 2025-04-22 16:03:39.571 [main] Log - Step 1: Click on 'Add' button
-[INFO ] 2025-04-22 16:03:44.604 [main] Log - Expected Result: Customer added successfully
-[INFO ] 2025-04-22 16:03:44.604 [main] Log - Adding remarks
-[INFO ] 2025-04-22 16:03:44.605 [main] Log - Step:01 - Enter Remarks
-[INFO ] 2025-04-22 16:03:45.850 [main] Log - Expected Result: Remarks have added
-[INFO ] 2025-04-22 16:03:45.852 [main] Log - Bond Transfer submit
-[INFO ] 2025-04-22 16:03:45.852 [main] Log - Step 1: click on submit button
-[INFO ] 2025-04-22 16:03:53.893 [main] Log - Expected Result: Bond transfer submitted successfully and summary page is loaded
-[INFO ] 2025-04-22 16:03:54.008 [main] Log - Signout from user
-[INFO ] 2025-04-22 16:03:58.898 [main] Log - Step 1: Click on sign out button
-[INFO ] 2025-04-22 16:03:58.900 [main] Log - Expected result: Signed out successfully
-[INFO ] 2025-04-22 16:03:58.901 [main] Log - Manager login for Authorisation
-[INFO ] 2025-04-22 16:03:58.903 [main] Log - Step 1: Login to manager user
-[INFO ] 2025-04-22 16:04:08.791 [main] Log - Step 2: Click on 'Authorisation and cancel' tab
-[INFO ] 2025-04-22 16:04:13.121 [main] Log - Step 3: Click on Manager Authorisation tab
-[INFO ] 2025-04-22 16:04:18.823 [main] Log - Expected Result: Manager authorisation and cancel window have loaded
-[INFO ] 2025-04-22 16:04:18.824 [main] Log - Manager Authorization Refresh
-[INFO ] 2025-04-22 16:04:18.826 [main] Log - Step 1: Click on 'Others' tab
-[INFO ] 2025-04-22 16:04:23.154 [main] Log - Step 2: Click on 'Refresh' button
-[INFO ] 2025-04-22 16:04:28.544 [main] Log - Expected Result: Authorization entries are updated and displayed
-[INFO ] 2025-04-22 16:04:28.545 [main] Log - Authorize Transfer Entry
-[INFO ] 2025-04-22 16:04:28.545 [main] Log - Step 1: Enter Makerid field value
-[INFO ] 2025-04-22 16:04:29.835 [main] Log - Step 2: Click on go button
-[INFO ] 2025-04-22 16:04:34.162 [main] Log - tep 3: Select Entry for authorization
-[INFO ] 2025-04-22 16:04:38.452 [main] Log - Step 4: Click on Authorise button
+[INFO ] 2025-04-25 17:13:18.765 [main] Log - *** Running test method Bond_Transfer...
+[INFO ] 2025-04-25 17:13:29.190 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-25 17:13:32.243 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-25 17:13:33.474 [main] Log - PC Registration
+[INFO ] 2025-04-25 17:13:34.645 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-25 17:13:37.056 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-25 17:13:38.129 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-25 17:13:42.513 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-25 17:13:46.108 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-25 17:13:46.329 [main] Log - Valid Login
+[INFO ] 2025-04-25 17:13:47.410 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-25 17:13:48.487 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-25 17:13:59.639 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-25 17:14:00.740 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-25 17:14:01.036 [main] Log - Navigate to Bond Transfer Page
+[INFO ] 2025-04-25 17:14:08.390 [main] Log - Step:01 - Expand the Bond tab in the left menu bar.
+[INFO ] 2025-04-25 17:14:13.746 [main] Log - Step:02 - Click on Bond Transfer
+[INFO ] 2025-04-25 17:14:14.818 [main] Log - Expected Result: Bond Transfer is displayed.
+[INFO ] 2025-04-25 17:14:14.967 [main] Log - Select a branch from Dropdown
+[INFO ] 2025-04-25 17:14:14.968 [main] Log - Step:01 - Click 'branch' dropdown
+[INFO ] 2025-04-25 17:14:17.164 [main] Log - Select a Product from Dropdown
+[INFO ] 2025-04-25 17:14:17.165 [main] Log - Step:01 - Click 'Product' dropdown and select value
+[INFO ] 2025-04-25 17:14:19.619 [main] Log - Expected Result: Selected product from dropdown.
+[INFO ] 2025-04-25 17:14:19.721 [main] Log - Enter Account Number
+[INFO ] 2025-04-25 17:14:19.721 [main] Log - Step:01 - Enter last three digit of account number
+[INFO ] 2025-04-25 17:14:20.836 [main] Log - Expected Result: Entered last three digit of account number
+[INFO ] 2025-04-25 17:14:20.836 [main] Log - Click on Go button
+[INFO ] 2025-04-25 17:14:20.837 [main] Log - Step:01 - Click on Go button
+[INFO ] 2025-04-25 17:14:28.119 [main] Log - Expected Result: Account details are loaded successfully
+[INFO ] 2025-04-25 17:14:28.239 [main] Log - Open Customer search Popup on Transfer to section
+[INFO ] 2025-04-25 17:14:28.240 [main] Log - Step 1: Click search button present near 'CustomerID' field
+[INFO ] 2025-04-25 17:14:34.293 [main] Log - Expected Result: Customer search window is displayed.
+[INFO ] 2025-04-25 17:14:34.293 [main] Log - Search for customer
+[INFO ] 2025-04-25 17:14:34.294 [main] Log - Step 1: Enter 'Name' in the field
+[INFO ] 2025-04-25 17:14:35.388 [main] Log - Step:02 - Enter Customer number.
+[INFO ] 2025-04-25 17:14:36.477 [main] Log - Step 3: Click on Search button
+[INFO ] 2025-04-25 17:14:41.885 [main] Log - Expected Result: Customer IDs list matching 'First Name' and 'Customer id' is displayed
+[INFO ] 2025-04-25 17:14:41.885 [main] Log - Select Customer ID from List
+[INFO ] 2025-04-25 17:14:41.886 [main] Log - Step 1:Click on Select button against any Customer ID
+[INFO ] 2025-04-25 17:14:46.163 [main] Log - Expected Result: Customer is selected
+[INFO ] 2025-04-25 17:14:46.164 [main] Log - Add customer
+[INFO ] 2025-04-25 17:14:46.164 [main] Log - Step 1: Click on 'Add' button
+[INFO ] 2025-04-25 17:14:51.452 [main] Log - Expected Result: Customer added successfully
+[INFO ] 2025-04-25 17:14:51.453 [main] Log - Adding remarks
+[INFO ] 2025-04-25 17:14:51.462 [main] Log - Step:01 - Enter Remarks
+[INFO ] 2025-04-25 17:14:52.618 [main] Log - Expected Result: Remarks have added
+[INFO ] 2025-04-25 17:14:52.618 [main] Log - Bond Transfer submit
+[INFO ] 2025-04-25 17:14:52.619 [main] Log - Step 1: click on submit button
+[INFO ] 2025-04-25 17:15:01.105 [main] Log - Exception org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SPCLTLAP-0319', ip: '10.212.136.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 130.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240829075237, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9028, moz:profile: C:\Users\FATHIM~1.PUL\AppDa..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 67d32346-13c4-4a7e-8f5b-26b5e5c152b3
+*** Element info: {Using=xpath, value=//*[@id="ctl00_ctl00_CPH1_PRDCNT_SectionCaption2_lblCaption"]}

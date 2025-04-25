@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-22T16:02:11 IST" name="Default suite" finished-at="2025-04-22T16:04:43 IST" duration-ms="151569">
+  <suite started-at="2025-04-25T17:13:16 IST" name="Default suite" finished-at="2025-04-25T17:15:01 IST" duration-ms="104799">
     <groups>
     </groups>
-    <test started-at="2025-04-22T16:02:11 IST" name="Default test" finished-at="2025-04-22T16:04:43 IST" duration-ms="151569">
+    <test started-at="2025-04-25T17:13:16 IST" name="Default test" finished-at="2025-04-25T17:15:01 IST" duration-ms="104799">
       <class name="com.test.BondTransfer.AllScenarios_BondTransfer">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.BondTransfer.AllScenarios_BondTransfer@31024624]" started-at="2025-04-22T16:02:11 IST" name="reference" finished-at="2025-04-22T16:02:11 IST" duration-ms="33" status="PASS">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.BondTransfer.AllScenarios_BondTransfer@31024624]" started-at="2025-04-25T17:13:16 IST" name="reference" finished-at="2025-04-25T17:13:16 IST" duration-ms="33" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="bondtransfer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.BondTransfer.AllScenarios_BondTransfer@31024624]" started-at="2025-04-22T16:02:13 IST" name="bondtransfer" data-provider="TestData" finished-at="2025-04-22T16:04:43 IST" duration-ms="149244" status="PASS">
+        <test-method signature="bondtransfer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.BondTransfer.AllScenarios_BondTransfer@31024624]" started-at="2025-04-25T17:13:18 IST" name="bondtransfer" data-provider="TestData" finished-at="2025-04-25T17:15:01 IST" duration-ms="102666" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{bankDetailsAccNum=102140040000114, Custid=102000000322, Custname=fath, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Remarks=Test Remarks, Run=Yes, TestScenario=Bond_Transfer}]]>
+                <![CDATA[{bankDetailsAccNum=102140040000118, Custid=102000000401, Custname=g, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Remarks=Test Remarks, Run=Yes, TestScenario=Bond_Transfer}]]>
               </value>
             </param>
             <param index="1">

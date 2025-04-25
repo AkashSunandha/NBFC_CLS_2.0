@@ -101,6 +101,7 @@ public class BondTransfer_mainpage extends Base_Class
 		ExtentTestManager.startTest("Navigate to Bond Transfer Page");
 		Log.info("Navigate to Bond Transfer Page");
 		
+		ScrollUntilElementVisible(bondtrRepo.BondTab);
 		click(bondtrRepo.BondTab);
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Expand the Bond tab in the left menu bar.");
@@ -467,11 +468,20 @@ public class BondTransfer_mainpage extends Base_Class
 			Log.info("Expected Result: Authorization done successfully");
 		} 
 		
-		
-		
-		
-		
+		click(bondtrRepo.successclosebutton);
 		ExtentTestManager.endTest();
 	}
-		
+	
+	public void logout() throws InterruptedException 
+	{
+	//Sign out
+		ExtentTestManager.startTest("Logout from user");
+		Log.info("Logout from user");
+		click(bondtrRepo.signout);
+		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on sign out button");
+		Log.info("Step 1: Click on sign out button");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected result: Signed out successfully");
+		Log.info("Expected result: Signed out successfully");
+		driver.quit();
+	}
  }
