@@ -575,6 +575,15 @@ public static  void DatabaseConnector() throws ClassNotFoundException {
  
 	}
 	
+	public static  void waitTillLoaderDisappear(By element) throws InterruptedException {
+		 
+		//Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
+		//Thread.sleep(2000);
+ 
+	}
+	
     
     
 }
