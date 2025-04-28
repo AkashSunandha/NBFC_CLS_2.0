@@ -40,9 +40,13 @@ public class Customer_QuickCustomer extends Base_Class{
 	com.Utility.ExcelReader ExcelReader = new com.Utility.ExcelReader("Customer_CustSearch");
 	Base_Class Base_Class= new Base_Class();
 	Log log= new Log();
+	
 	PageRepositary_Cust_QuickCustomer quickCustRepo = new PageRepositary_Cust_QuickCustomer();
+	
 //	private static long lastGeneratedNumber = 100000000000L;
+	
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
+	
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
 
 	
