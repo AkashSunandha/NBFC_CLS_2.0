@@ -31,6 +31,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.xml.sax.Locator;
 
 import com.Page_Repositary.PageRepositary_Cust_CustSearch;
 import com.Utility.Log;
@@ -179,7 +180,22 @@ public class Base_Class {
 		// Thread.sleep(2000);
 
 	}
+	
+	//vinusha
+public static void doubleclick(String elementName ) throws InterruptedException{
+	WebDriverWait wait = new WebDriverWait(driver, 120);
 
+	WebElement element = driver.findElement(By.id(elementName)); // or any locator
+	    Actions actions = new Actions(driver);
+	    actions.doubleClick(element).perform();
+	
+	
+	
+	
+	
+
+
+}
 	public static void SwitchToFrame(By frameName) throws InterruptedException {
 		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);

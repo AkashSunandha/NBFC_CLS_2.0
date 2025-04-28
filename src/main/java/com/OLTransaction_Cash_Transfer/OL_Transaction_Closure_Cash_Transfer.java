@@ -33,7 +33,7 @@ public class OL_Transaction_Closure_Cash_Transfer extends Base_Class {
 	String transIdTransfer;
 
 	String Display;
-String Actualusername;
+	String Actualusername;
 	public String sp = "GetOtherloanAccountnumberForTransaction";
 	public String columnName = "Acno";
 
@@ -280,94 +280,90 @@ String Actualusername;
 
 		ExtentTestManager.endTest();
 
-	
-
-	String authoeizeUserName = driver.findElement(goaldLoanRepo.userName).getText();
-	System.out.println("authoeizeUserName: " + authoeizeUserName);
+		String authoeizeUserName = driver.findElement(goaldLoanRepo.userName).getText();
+		System.out.println("authoeizeUserName: " + authoeizeUserName);
 
 //	String flag = "vinusha";
 
-	System.out.println("Firstusername: " + Customer_CustomerSearch.Firstusername);
-	
-	if(!authoeizeUserName.equalsIgnoreCase(Customer_CustomerSearch.Firstusername))
-	{
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
-		Log.info("Expected Result: Logging successfull with another user");
-	}else
-	{
-		ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-		Log.info("ERROR");
-	}
+		System.out.println("Firstusername: " + Customer_CustomerSearch.Firstusername);
 
-	ExtentTestManager.endTest();
-	}
-
-	//public String getActualUserName(By locator) {
-		//String actualUserName = driver.findElement(locator).getText();
-		//System.out.println("actualUserName: "+actualUserName);
-		//return actualUserName;
-	//}
-	
-	public void Cashier() throws InterruptedException {
-			ExtentTestManager.startTest("User is logged in");
-			Log.info("User is logged in");
-
-			click(JewelClosure.authandcancel);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -.Click the authoirze & Cancel module from the taskbar");
-			Log.info("Step:01 -.Click the authoirze & Cancel module from the taskbar");
-
-			click(JewelClosure.Clickcashierauth);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:02 -.Click cashier authorisation Submodule");
-			Log.info("Step:02 -Click cashier authorisation Submodule");
-
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result:  Cashier authorization window will be display.");
-			Log.info("Expected Result: Cashier authorization window will be display");
-
-			ExtentTestManager.endTest();
-
-			ExtentTestManager.startTest("User is logged in");
-			Log.info("User is logged in");
-
-			click(JewelClosure.clickrefresh);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click the Refresh tab");
-			Log.info("Step:01 -Click the Refresh tab");
-
-			System.out.println("transIdCashPersonal " + transId);
-			fetchWithTransId(transId);
-
-			ExtentTestManager.getTest().log(Status.PASS,
-					"Expected Result:  Closure entry will be diaply after clicking the refresh button.");
-			Log.info("Expected Result:Closure entry will be diaply after clicking the refresh button");
-
-			ExtentTestManager.endTest();
-
-			ExtentTestManager.startTest("User is logged in");
-			Log.info("User is logged in");
-
-			click(JewelClosure.checkbox);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select the checbox of jewel loan closure ");
-			Log.info("Step:01 -Select the checbox of jewel loan closure ");
-
-			ExtentTestManager.getTest().log(Status.PASS,
-					"Expected Result: Possible to select the closure entry and selected entry is hghlighted");
-			Log.info("Expected Result:Possible to select the closure entry and selected entry is hghlighted");
-
-			ExtentTestManager.endTest();
-
-			ExtentTestManager.startTest("User is on Cashier authorisation window");
-			Log.info("User is on Cashier authorisation window");
-
-			click(JewelClosure.clickauths);
-			ExtentTestManager.getTest().log(Status.PASS, "Step:01 -1.Click Authorise button");
-			Log.info("Step:01 -1.Click Authorise button");
-			click(JewelClosure.close);
-
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure entry is authorised");
-			Log.info("Expected Result:Closure entry is authorised");
-
-			ExtentTestManager.endTest();
-
+		if (!authoeizeUserName.equalsIgnoreCase(Customer_CustomerSearch.Firstusername)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
+			Log.info("Expected Result: Logging successfull with another user");
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
 		}
+
+		ExtentTestManager.endTest();
+	}
+
+	// public String getActualUserName(By locator) {
+	// String actualUserName = driver.findElement(locator).getText();
+	// System.out.println("actualUserName: "+actualUserName);
+	// return actualUserName;
+	// }
+
+	public void Cashier() throws InterruptedException {
+		ExtentTestManager.startTest("User is logged in");
+		Log.info("User is logged in");
+
+		click(JewelClosure.authandcancel);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -.Click the authoirze & Cancel module from the taskbar");
+		Log.info("Step:01 -.Click the authoirze & Cancel module from the taskbar");
+
+		click(JewelClosure.Clickcashierauth);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -.Click cashier authorisation Submodule");
+		Log.info("Step:02 -Click cashier authorisation Submodule");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:  Cashier authorization window will be display.");
+		Log.info("Expected Result: Cashier authorization window will be display");
+
+		ExtentTestManager.endTest();
+
+		ExtentTestManager.startTest("User is logged in");
+		Log.info("User is logged in");
+
+		click(JewelClosure.clickrefresh);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Click the Refresh tab");
+		Log.info("Step:01 -Click the Refresh tab");
+
+		System.out.println("transIdCashPersonal " + transId);
+		fetchWithTransId(transId);
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result:  Closure entry will be diaply after clicking the refresh button.");
+		Log.info("Expected Result:Closure entry will be diaply after clicking the refresh button");
+
+		ExtentTestManager.endTest();
+
+		ExtentTestManager.startTest("User is logged in");
+		Log.info("User is logged in");
+
+		click(JewelClosure.checkbox);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Select the checbox of jewel loan closure ");
+		Log.info("Step:01 -Select the checbox of jewel loan closure ");
+
+		ExtentTestManager.getTest().log(Status.PASS,
+				"Expected Result: Possible to select the closure entry and selected entry is hghlighted");
+		Log.info("Expected Result:Possible to select the closure entry and selected entry is hghlighted");
+
+		ExtentTestManager.endTest();
+
+		ExtentTestManager.startTest("User is on Cashier authorisation window");
+		Log.info("User is on Cashier authorisation window");
+
+		click(JewelClosure.clickauths);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -1.Click Authorise button");
+		Log.info("Step:01 -1.Click Authorise button");
+		click(JewelClosure.close);
+
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Closure entry is authorised");
+		Log.info("Expected Result:Closure entry is authorised");
+
+		ExtentTestManager.endTest();
+
+	}
 
 	public void Manager() throws InterruptedException {
 

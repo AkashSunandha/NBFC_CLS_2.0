@@ -1,4 +1,4 @@
-[ERROR] 2025-04-22 12:50:31.749 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-28 11:10:28.309 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Agent_transfer.AllScenarios_Agent_Transfer.gettestdate(AllScenarios_Agent_Transfer.java:123) ~[test-classes/:?]
+	at com.Debenture_Interest_Payment_Transfer.AllScenarios_Debenture_Interest_Payment_Transfer.gettestdate(AllScenarios_Debenture_Interest_Payment_Transfer.java:132) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -49,7 +49,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-22 12:50:31.769 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-28 11:10:28.321 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -69,7 +69,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Agent_transfer.AllScenarios_Agent_Transfer.gettestdate(AllScenarios_Agent_Transfer.java:123) ~[test-classes/:?]
+	at com.Debenture_Interest_Payment_Transfer.AllScenarios_Debenture_Interest_Payment_Transfer.gettestdate(AllScenarios_Debenture_Interest_Payment_Transfer.java:132) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -100,7 +100,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-22 12:50:31.772 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-28 11:10:28.322 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -120,7 +120,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Agent_transfer.AllScenarios_Agent_Transfer.gettestdate(AllScenarios_Agent_Transfer.java:123) ~[test-classes/:?]
+	at com.Debenture_Interest_Payment_Transfer.AllScenarios_Debenture_Interest_Payment_Transfer.gettestdate(AllScenarios_Debenture_Interest_Payment_Transfer.java:132) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -151,7 +151,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-22 12:50:31.780 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-28 11:10:28.327 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -171,7 +171,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Agent_transfer.AllScenarios_Agent_Transfer.gettestdate(AllScenarios_Agent_Transfer.java:123) ~[test-classes/:?]
+	at com.Debenture_Interest_Payment_Transfer.AllScenarios_Debenture_Interest_Payment_Transfer.gettestdate(AllScenarios_Debenture_Interest_Payment_Transfer.java:132) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -202,26 +202,84 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-04-22 12:50:32.898 [main] Log - *** Running test method SusAssetTransaction-Cash_Transfer...
-[INFO ] 2025-04-22 12:50:37.811 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-04-22 12:50:39.295 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-04-22 12:50:41.701 [main] Log - PC Registration
-[INFO ] 2025-04-22 12:50:42.834 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-04-22 12:50:45.275 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-04-22 12:50:46.329 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-04-22 12:50:50.648 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-04-22 12:50:53.313 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-04-22 12:50:53.434 [main] Log - Valid Login
-[INFO ] 2025-04-22 12:50:54.501 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-04-22 12:50:55.568 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-04-22 12:51:03.899 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-22 12:51:04.986 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-22 12:51:06.089 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-22 12:51:06.230 [main] Log - VerifyAgentTransferNavigation
-[INFO ] 2025-04-22 12:51:10.575 [main] Log - Step:01 - Navigate to Agent Transfer.
-[INFO ] 2025-04-22 12:51:12.706 [main] Log - Exception org.openqa.selenium.ElementClickInterceptedException: Element <a href="javascript:void(0);"> is not clickable at point (126,249) because another element <div class=" symbol-close"> obscures it
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SPMUMLAP-4102', ip: '192.168.1.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250414091429, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 5064, moz:profile: C:\Users\VINUSH~1.SHE\AppDa..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 1db6b490-2af3-41ad-b26d-d4d73d2b2029
+[INFO ] 2025-04-28 11:10:28.895 [main] Log -  Running test method Debenutre_Interest_Payment_Transfer...
+[INFO ] 2025-04-28 11:10:31.909 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-28 11:10:33.362 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-28 11:10:35.569 [main] Log - PC Registration
+[INFO ] 2025-04-28 11:10:36.650 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-28 11:10:39.026 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-28 11:10:40.085 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-28 11:10:44.367 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-28 11:10:46.087 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-28 11:10:46.138 [main] Log - Valid Login
+[INFO ] 2025-04-28 11:10:47.191 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-28 11:10:48.234 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-28 11:10:58.763 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-28 11:10:59.829 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-28 11:11:00.894 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-28 11:11:00.985 [main] Log - Navigate to Debenture interest payment
+[INFO ] 2025-04-28 11:11:10.768 [main] Log - Step:01 - Navigate to Debenture Debenture Interest Payment.
+[INFO ] 2025-04-28 11:11:10.768 [main] Log - Loaded Debenture Interest payment
+[INFO ] 2025-04-28 11:11:10.769 [main] Log - Verify Dropdown for Debenture Type
+[INFO ] 2025-04-28 11:11:13.121 [main] Log - Step:01 -Select 'Debenture Type options from the dropdown.
+[INFO ] 2025-04-28 11:11:13.121 [main] Log - appropriate values load according to selection.
+[INFO ] 2025-04-28 11:11:13.121 [main] Log - Verify Dropdown for Debenture Issue
+[INFO ] 2025-04-28 11:11:15.450 [main] Log - Step:01 -Select ' Issue Type' options from the dropdown..
+[INFO ] 2025-04-28 11:11:15.450 [main] Log - appropriate values load according to selection.
+[INFO ] 2025-04-28 11:11:15.450 [main] Log - Verify Dropdown for Debenture Series
+[INFO ] 2025-04-28 11:11:17.786 [main] Log - Step:01 -Select 'Debenture series options from the dropdown.
+[INFO ] 2025-04-28 11:11:17.786 [main] Log - appropriate values load according to selection.
+[INFO ] 2025-04-28 11:11:17.786 [main] Log - Enter  Account Number
+[INFO ] 2025-04-28 11:11:19.258 [main] Log - Step:01 - Enter a valid fixed deposit account number in the 'Account No' field. 
+[INFO ] 2025-04-28 11:11:19.259 [main] Log - Expected Result:Account number is accepted. 
+[INFO ] 2025-04-28 11:11:19.311 [main] Log - Step:01 -Enter a valid account number in the 'Ac No' field..
+[INFO ] 2025-04-28 11:11:23.600 [main] Log - Step:02 -Press Enter or click Go button.
+[INFO ] 2025-04-28 11:11:23.600 [main] Log - System proceeds to the interest payment window of the account with entered Ac No..
+[INFO ] 2025-04-28 11:11:23.601 [main] Log - Debenture duration
+[INFO ] 2025-04-28 11:11:24.663 [main] Log - Step:01 -Enter a valid duration value into the 'duration' field. then click tab.
+[INFO ] 2025-04-28 11:11:24.663 [main] Log - Accepted when within duration constraints otherwise error message is shown.
+[INFO ] 2025-04-28 11:11:24.664 [main] Log - Debit Transaction Posted
+[INFO ] 2025-04-28 11:11:33.403 [main] Log - Step: 1 -Click on the POST DEBIT button.
+[INFO ] 2025-04-28 11:11:33.404 [main] Log - Expected Result:Auto posting popup window will be display .
+[INFO ] 2025-04-28 11:11:33.468 [main] Log - Searched for Account Number
+[INFO ] 2025-04-28 11:11:36.094 [main] Log - Step:02 -Select a product group.
+[INFO ] 2025-04-28 11:11:38.409 [main] Log - Step:02 -Select a product name.
+[INFO ] 2025-04-28 11:11:38.409 [main] Log - Expected Result:Possible to select the product group and product name 
+[INFO ] 2025-04-28 11:11:42.935 [main] Log - Account Number Selected
+[INFO ] 2025-04-28 11:11:58.777 [main] Log - Expected Result: Given account number details will be display.
+[INFO ] 2025-04-28 11:11:59.918 [main] Log - Transaction Amount Added
+[INFO ] 2025-04-28 11:11:59.918 [main] Log - Step: 1 - Enter amount.
+[INFO ] 2025-04-28 11:12:04.216 [main] Log - Step: 2 - Click ADD.
+[INFO ] 2025-04-28 11:12:04.217 [main] Log - Expected Result:Amount and details is added in the grid in the auto posting popup window  .
+[INFO ] 2025-04-28 11:12:04.278 [main] Log - Transaction Amount Added
+[INFO ] 2025-04-28 11:12:08.575 [main] Log - Step: 1 - Enter submit in the auto posting popu window .
+[INFO ] 2025-04-28 11:12:08.595 [main] Log - Expected Result:Details is added and auto posting popu window closes .
+[INFO ] 2025-04-28 11:12:08.645 [main] Log - Submitted Transaction Window
+[INFO ] 2025-04-28 11:12:14.425 [main] Log - Step: 1 - Click Submit button.
+[INFO ] 2025-04-28 11:12:14.425 [main] Log - Expected Result: User navigates to the summary page.
+[INFO ] 2025-04-28 11:12:14.502 [main] Log - Logged out from application.
+[INFO ] 2025-04-28 11:12:18.896 [main] Log - Step:1 - Click Logout Option.
+[INFO ] 2025-04-28 11:12:18.897 [main] Log - Expected Result: Login page will be displayed
+[INFO ] 2025-04-28 11:12:27.796 [main] Log - Login with Another User
+[INFO ] 2025-04-28 11:12:27.796 [main] Log - Step:02 - Log in with another user for authorization
+[INFO ] 2025-04-28 11:12:28.861 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-04-28 11:12:28.941 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-04-28 11:12:28.981 [main] Log - Manager authorization
+[INFO ] 2025-04-28 11:12:33.253 [main] Log - Step:01 - Click the authoirze & Cancel module from the taskbar 
+[INFO ] 2025-04-28 11:12:43.902 [main] Log - Step:02 - Click Manager authorisation Submodule
+[INFO ] 2025-04-28 11:12:43.902 [main] Log - Manager authorization window will be display
+[INFO ] 2025-04-28 11:12:43.903 [main] Log - User successfully logged in
+[INFO ] 2025-04-28 11:12:48.183 [main] Log - Step: 1 -Click the Transfer tab  .
+[INFO ] 2025-04-28 11:12:48.184 [main] Log - Expected Result: Transfer tab will be display.
+[INFO ] 2025-04-28 11:12:48.234 [main] Log - User is logged in Manager authorization
+[INFO ] 2025-04-28 11:12:52.552 [main] Log - Step:01 - Click the Refresh tab
+[INFO ] 2025-04-28 11:12:52.552 [main] Log - Tranacation entry will be display after clicking the refresh button
+[INFO ] 2025-04-28 11:13:02.200 [main] Log - User successfully logged in
+[INFO ] 2025-04-28 11:13:06.483 [main] Log - Step: 1 -1.Select the checbox of transaction suspense Asset transaction .
+[INFO ] 2025-04-28 11:13:06.483 [main] Log - Expected Result: Possible to select the transaction entry and selected entry is hghlighted.
+[INFO ] 2025-04-28 11:13:06.559 [main] Log - cashier authorization
+[INFO ] 2025-04-28 11:13:10.843 [main] Log - Step:01 - Click Authorise button
+[INFO ] 2025-04-28 11:13:10.843 [main] Log - Transaction entry is authorised
+[INFO ] 2025-04-28 11:13:10.844 [main] Log - Logged out from application.
+[INFO ] 2025-04-28 11:13:19.534 [main] Log - Step:1 - Click Logout Option.
+[INFO ] 2025-04-28 11:13:19.535 [main] Log - Expected Result: Login page will be displayed

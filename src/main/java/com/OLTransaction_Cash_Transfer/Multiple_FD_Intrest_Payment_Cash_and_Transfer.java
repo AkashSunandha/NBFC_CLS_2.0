@@ -843,11 +843,6 @@ public void selectAccountNumber(Map<Object, Object> testdata, ITestContext conte
  ExtentTestManager.startTest("Select Account Number");
  Log.info("Account Number Selected");
  
-// String AccountNumber = testdata.get("AccountNumber").toString();
-//	input(JewelClosure.accnumber, AccountNumber);
-// 
-// ExtentTestManager.getTest().log(Status.PASS, "Step: 1 -1. Give account number as '3' ");
-// Log.info("Step: 1 - 1. Give account number as '3'.");
 
  mainWindowHandlechild = driver.getWindowHandle();
 boolean popupAppeared = false;
