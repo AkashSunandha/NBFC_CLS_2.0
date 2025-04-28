@@ -160,7 +160,7 @@ public class BondTransfer_mainpage extends Base_Class
 		Log.info("Step:01 - Click 'Product' dropdown and select value");
 		
 		
-		select("DEBUNTURE SCHEME 1",bondtrRepo.productfieldvalue);
+		select("SUBORDINATE DEBT",bondtrRepo.productfieldvalue);
 		
 		String prodvalue = driver.findElement(bondtrRepo.productfieldvalue).getAttribute("value");
 		if(!prodvalue.isBlank()) 
@@ -183,7 +183,7 @@ public class BondTransfer_mainpage extends Base_Class
 		ExtentTestManager.startTest("Enter Account Number");
 		Log.info("Enter Account Number");
 		
-	String AccNumber = testdata.get("bankDetailsAccNum").toString();
+	String AccNumber = generateAccountNumber();
 	String lastthreedigit=AccNumber.substring(AccNumber.length() - 3);
 	
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter last three digit of account number");
@@ -203,28 +203,63 @@ public class BondTransfer_mainpage extends Base_Class
 		ExtentTestManager.getTest().log(Status.FAIL, "Account number not entered");
 		Log.info("Account number not entered");
 	}
-	//click on go button
-	
-	ExtentTestManager.startTest("Click on Go button");
-	Log.info("Click on Go button");
-	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on Go button");
-	Log.info("Step:01 - Click on Go button");
-	
-	click(bondtrRepo.bondsubmit);
-	if(ElementDisplayed(bondtrRepo.accinfo)) 
-	{
-		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account details are loaded successfully");
-		Log.info("Expected Result: Account details are loaded successfully");
-	}
-	
-	ExtentTestManager.endTest();
 	return true;
 	}
+	public static  String generateAccountNumber() throws ClassNotFoundException 
+	{
+	    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		String UserName = "sqa";
+		String Password = "SPQA@sql2019" ;
+		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
+
+		String query = "EXEC GetSpBondAcNo '102','14006'";
+		String AccountNum = null; 
+		try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
+		Statement statement = connection.createStatement();
+		ResultSet resultSet = statement.executeQuery(query)) 
+		{
+		        	
+		if (resultSet.next()) 
+		{
+		    AccountNum = resultSet.getString("Acno");
+		    System.out.println("Account Number of Loan Opening: " + AccountNum);
+		} else 
+		{
+		    System.out.println("No Account Number found.");
+		 }
+
+		    } catch (SQLException e) 
+		{
+		    System.out.println("Error executing the SQL query or processing the result set.");
+		    e.printStackTrace();
+		  }
+		    	return AccountNum;  
+		    	
+		    	
+	}	
+	
+	
 	
 	
 	public boolean searchcust() throws InterruptedException
 	
 	{
+		//click on go button
+    	
+    	ExtentTestManager.startTest("Click on Go button");
+    	Log.info("Click on Go button");
+    	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on Go button");
+    	Log.info("Step:01 - Click on Go button");
+    	
+    	click(bondtrRepo.bondsubmit);
+    	if(ElementDisplayed(bondtrRepo.accinfo)) 
+    	{
+    		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Account details are loaded successfully");
+    		Log.info("Expected Result: Account details are loaded successfully");
+    	}
+    	
+	
+	
 		ExtentTestManager.startTest("Open Customer search Popup on Transfer to section");
 		Log.info("Open Customer search Popup on Transfer to section");
 		
@@ -250,7 +285,7 @@ public class BondTransfer_mainpage extends Base_Class
 	        }
 		
 	        
-	}
+	    }
 	    
 		if(ElementDisplayed(bondtrRepo.custsearchwindow)) 
 		{
@@ -259,7 +294,10 @@ public class BondTransfer_mainpage extends Base_Class
 		}
 		
 
-		return false;
+		//return false;
+		ExtentTestManager.endTest();
+    	return true;
+    	
 		}
 	
 	
