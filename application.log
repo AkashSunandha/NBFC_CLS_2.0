@@ -1,4 +1,4 @@
-[ERROR] 2025-04-16 09:49:02.492 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-24 11:34:34.752 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Others.AllScenarios_GLAccBulk_Trans_Imp_Transfer.gettestdate(AllScenarios_GLAccBulk_Trans_Imp_Transfer.java:350) ~[test-classes/:?]
+	at com.test.ProcessingAndPosting.AllScenarios_DayEnd.gettestdate(AllScenarios_DayEnd.java:176) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -49,7 +49,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-16 09:49:02.517 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-24 11:34:34.780 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -69,7 +69,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Others.AllScenarios_GLAccBulk_Trans_Imp_Transfer.gettestdate(AllScenarios_GLAccBulk_Trans_Imp_Transfer.java:350) ~[test-classes/:?]
+	at com.test.ProcessingAndPosting.AllScenarios_DayEnd.gettestdate(AllScenarios_DayEnd.java:176) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -100,7 +100,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-16 09:49:02.519 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-24 11:34:34.783 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -120,7 +120,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Others.AllScenarios_GLAccBulk_Trans_Imp_Transfer.gettestdate(AllScenarios_GLAccBulk_Trans_Imp_Transfer.java:350) ~[test-classes/:?]
+	at com.test.ProcessingAndPosting.AllScenarios_DayEnd.gettestdate(AllScenarios_DayEnd.java:176) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -151,7 +151,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-04-16 09:49:02.526 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-04-24 11:34:34.791 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -171,7 +171,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.Others.AllScenarios_GLAccBulk_Trans_Imp_Transfer.gettestdate(AllScenarios_GLAccBulk_Trans_Imp_Transfer.java:350) ~[test-classes/:?]
+	at com.test.ProcessingAndPosting.AllScenarios_DayEnd.gettestdate(AllScenarios_DayEnd.java:176) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
@@ -202,22 +202,23 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-04-16 09:49:03.596 [main] Log - *** Running test method GLAccBulk Transaction Import Cash...
-[INFO ] 2025-04-16 09:49:09.027 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-04-16 09:49:10.219 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-04-16 09:49:12.852 [main] Log - PC Registration
-[INFO ] 2025-04-16 09:49:13.994 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-04-16 09:49:16.510 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-04-16 09:49:17.609 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-04-16 09:49:21.995 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-04-16 09:49:23.394 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-04-16 09:49:23.470 [main] Log - Valid Login
-[INFO ] 2025-04-16 09:49:24.556 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-04-16 09:49:25.632 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-04-16 09:49:33.684 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-04-16 09:49:34.771 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-04-16 09:50:10.991 [main] Log - path is :C:\Users\silpa.sivanandan\Desktop\NBFC_CLS_2.0-master
-[INFO ] 2025-04-16 09:51:21.914 [main] Log - Login with Another User
-[INFO ] 2025-04-16 09:51:26.414 [main] Log - Step:01 - Log out
-[INFO ] 2025-04-16 09:51:35.980 [main] Log - Step:02 - Log in with another user for authorization
-[INFO ] 2025-04-16 09:51:36.032 [main] Log - Expected Result: Logging successfull with another user
+[INFO ] 2025-04-24 11:34:36.535 [main] Log - *** Running test method Day End...
+[INFO ] 2025-04-24 11:34:45.035 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-04-24 11:34:47.431 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-04-24 11:34:50.063 [main] Log - PC Registration
+[INFO ] 2025-04-24 11:34:51.145 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-04-24 11:34:53.532 [main] Log - Step:02 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-04-24 11:34:54.591 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-04-24 11:34:58.894 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-04-24 11:35:02.022 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-04-24 11:35:02.091 [main] Log - Valid Login
+[INFO ] 2025-04-24 11:35:03.157 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-04-24 11:35:04.214 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-04-24 11:35:08.582 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-04-24 11:35:14.681 [main] Log - Exception org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TCCOKLAP-5162', ip: '192.168.1.7', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250414091429, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8544, moz:profile: C:\Users\SILPA~1.SIV\AppDat..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 23ccf5c9-69f1-4d2a-96d6-805f8c62add2
+*** Element info: {Using=xpath, value=//span[@class='ui-button-text' and contains(text(), 'OK')]}

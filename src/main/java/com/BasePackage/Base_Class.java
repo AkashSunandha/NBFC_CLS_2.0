@@ -156,7 +156,7 @@ public class Base_Class {
 	}
 
 
-	public void AcceptAlert()
+	public static void AcceptAlert()
 	{
 		driver.switchTo().alert().accept();
 		//driver.switchTo().alert().dismiss();	
