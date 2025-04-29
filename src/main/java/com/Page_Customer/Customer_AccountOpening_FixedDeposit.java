@@ -34,7 +34,7 @@ public class Customer_AccountOpening_FixedDeposit extends Base_Class
 		ExtentTestManager.startTest("TC:03 - Navigate to Deposit Opening Window");
 		click(fixeddeposit.Accountopening);
 		click(fixeddeposit.Depositopening);
-		click(fixeddeposit.FixedDeposit);
+		click(fixeddeposit.fixedDeposit);
 		click(fixeddeposit.Bondcumulativetpe);
 		
 		username1 = driver.findElement(fixeddeposit.Newloginvalidate1).getText();

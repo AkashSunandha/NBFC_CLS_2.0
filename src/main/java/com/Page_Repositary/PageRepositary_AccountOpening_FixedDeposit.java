@@ -20,13 +20,28 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 		
 
 	
-	//Deposit Opening window
+	//Deposit Opening window absoulte xapth
 	
-	public By Accountopening=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div") ;
-	public By Depositopening= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[1]/div");
-	public By FixedDeposit=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[1]/ul/li/div");
-	public By Bondcumulativetpe=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[1]/ul/li/ul/li[1]/a");
+	//public By Accountopening=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div") ;
+	//public By Depositopening= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[1]/div");
+	//public By FixedDeposit=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[1]/ul/li/div");
+	//public By Bondcumulativetpe=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[1]/ul/li/ul/li[1]/a");
+	//public By Depositwindow=By.id("ctl00_ctl00_CPH1_PRDCNT_lstProAccInfo_ctrl0_PAI_txtProduct_txt");
+	
+	//Deposit opening window relative xpath
+	
+	public By Accountopening = By.xpath("//ul[@id='CreateMenu']//a[text()='Account Opening']/preceding-sibling::div");
+	public By Depositopening = By.xpath("//ul[@id='CreateMenu']//a[text()='Deposit Opening']/preceding-sibling::div");
+	//public By fixedDeposit = By.xpath("//ul[@id='CreateMenu']//a[text()='Fixed Deposit']/preceding-sibling::div");
+	public By fixedDeposit = By.xpath("//ul[@id='CreateMenu']//a[text()='Fixed Deposit ']/preceding-sibling::div");
+	
+	//public By Bondcumulativetpe = By.xpath("//*[text()='Bond Cumulative Type  (14002)']");
+	
+	public By Bondcumulativetpe = By.xpath("//*[text()='BOND CUMULATIVE TYPE  (14002)']");
 	public By Depositwindow=By.id("ctl00_ctl00_CPH1_PRDCNT_lstProAccInfo_ctrl0_PAI_txtProduct_txt");
+	
+	//*[@id="searchlink0"]//preceding-sibling::div
+	
 	
 	//CustmerID search
 	public By customerIDsearchbutton=By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[1]/table/tbody/tr[2]/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[2]/a/img") ;
@@ -151,8 +166,10 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 		//public By logoutOk1 = By.xpath("/html/body/div[1]/div/div[2]/div/form/div[11]/div[3]/div/button[1]");
 		
 		//Cashier Authorization
-		public By Authorizeandcanceltab=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/div");
-		public By cashierauthorization=By.linkText("Cashier Authorisation (CAAU)");
+		//public By Authorizeandcanceltab=By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/div");
+		public By Authorizeandcanceltab = By.xpath("//ul[@id='CreateMenu']//a[text()='Authorize & Cancel']/preceding-sibling::div");
+		//public By cashierauthorization=By.linkText("Cashier Authorisation (CAAU)");
+		public By cashierauthorization = By.xpath("//a[text()='Cashier Authorisation (CAAU)']");
 		//public By Transacid =By.id("ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID");
 		//public By TransactionIDtext = By.id ("ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt");
 		public By Refresh=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
@@ -162,7 +179,8 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 		public By cancelpopup=By.id("closetop");
 		
 		//Manager Authorization - Cash Tab
-		public By ManagerAuthorization=By.linkText("Manager Authorisation (MNAU)");
+		//public By ManagerAuthorization=By.linkText("Manager Authorisation (MNAU)");
+		public By ManagerAuthorization = By.xpath("//a[text()='Manager Authorisation (MNAU)']");
 		public By Refresh1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
 		public By cashtab=By.id("__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash");
 		public By cashdetails=By.id("ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_lblBatchID");
@@ -200,10 +218,10 @@ public class PageRepositary_AccountOpening_FixedDeposit {
 				
 				
 				//Authorize & cancel for Transfer
-				public By Authorize_canceltab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/div");
+				public By Authorize_canceltab =  By.xpath("//ul[@id='CreateMenu']//a[text()='Authorize & Cancel']/preceding-sibling::div");
 				//public By Transfertab =By.id("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer\"]");
 				public By Transfertab = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer_tab\"]");
-				public By Manager_Authorization_Transfer_Tab =By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/ul/li[4]/a");
+				public By Manager_Authorization_Transfer_Tab =By.xpath("//a[text()='Manager Authorisation (MNAU)']");
 				public By Refresh_1=By.id("ctl00_ctl00_CPH1_PRDCNT_btnRefresh");
 				
 				public By TransactionIDtextbox = By.id("ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt"); 
