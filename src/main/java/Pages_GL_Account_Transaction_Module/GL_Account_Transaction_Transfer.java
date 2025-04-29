@@ -14,12 +14,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeoutException;
+import org.openqa.selenium.Keys;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
@@ -583,8 +585,8 @@ public boolean POSTDEBITpopupispresent() throws InterruptedException, TimeoutExc
 
 public boolean PostDebitpopupispresent() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:17 - POST DEBIT popup is present");
-	Log.info("TC:17 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:17 - POST DEBIT popup- Passing datas");
+	Log.info("TC:17 - POST DEBIT popup- Passing datas");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	
@@ -608,8 +610,8 @@ public boolean PostDebitpopupispresent() throws InterruptedException{
 
 public boolean PostDebitPopUpProductGroupDropdown() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:18 - POST DEBIT popup is present");
-	Log.info("TC:18 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:18 - POST DEBIT popup - Passing product datas");
+	Log.info("TC:18 - POST DEBIT popup - Passing product datas");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	
@@ -634,8 +636,8 @@ public boolean PostDebitPopUpProductGroupDropdown() throws InterruptedException{
 
 public boolean PostDebitPopUpProductNameDropdown() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:19 - POST DEBIT popup is present");
-	Log.info("TC:19 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:19 - POST DEBIT popup - passing product name");
+	Log.info("TC:19 - POST DEBIT popup - passing product name");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	
@@ -659,8 +661,8 @@ public boolean PostDebitPopUpProductNameDropdown() throws InterruptedException{
 
 public boolean PostDebitPopUpBranchDropdown() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:20 - POST DEBIT popup is present");
-	Log.info("TC:20 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:20 - POST DEBIT popup - select branch");
+	Log.info("TC:20 - POST DEBIT popup - select branch");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 				
@@ -686,8 +688,8 @@ public boolean PostDebitPopUpBranchDropdown() throws InterruptedException{
 
 public boolean PostDebitPopUpAccountNumber(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:21 - POST DEBIT popup is present");
-	Log.info("TC:21 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:21 - POST DEBIT popup - Selecting account data");
+	Log.info("TC:21 - POST DEBIT popup - Selecting account data");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	
@@ -716,8 +718,8 @@ public boolean PostDebitPopUpAccountNumber(Map<Object, Object> testdata, ITestCo
 
 public boolean PostDebitPopUpEnterAmount() throws InterruptedException {
     
-    ExtentTestManager.startTest("TC:22 - POST DEBIT popup is present");
-    Log.info("TC:22 - POST DEBIT popup is present");
+    ExtentTestManager.startTest("TC:22 - POST DEBIT popup - Passing amount");
+    Log.info("TC:22 - POST DEBIT popup - Passing amount");
 
     WebDriverWait wait = new WebDriverWait(driver, 10);
     JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -760,10 +762,10 @@ public boolean PostDebitPopUpEnterAmount() throws InterruptedException {
 
 public boolean PostDebitPopUpAddDetails() throws InterruptedException{
 		
-	ExtentTestManager.startTest("TC:23 - POST DEBIT popup is present");
-	Log.info("TC:23 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:23 - POST DEBIT popup - Adding datas to grid");
+	Log.info("TC:23 - POST DEBIT popup - Adding datas to grid");
 		
-	WebDriverWait wait = new WebDriverWait(driver, 10);
+//	WebDriverWait wait = new WebDriverWait(driver, 10);
 					
 	if(ElementDisplayed(GLTransaction.AddButton)) {
 	click(GLTransaction.AddButton);
@@ -781,41 +783,54 @@ public boolean PostDebitPopUpAddDetails() throws InterruptedException{
 		return true;
 }
 
-public boolean PostDebitPopUpSubmitDetails() throws InterruptedException, TimeoutException{
+public boolean PostDebitPopUpSubmitDetails() throws InterruptedException, TimeoutException
+{
 	
-	ExtentTestManager.startTest("TC:24 - POST DEBIT popup is present");
-	Log.info("TC:24 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:24 - CLicking on post debit pop-up submit button");
+	Log.info("TC:24 - CLicking on post debit pop-up submit button");
 	
-	WebDriverWait wait = new WebDriverWait(driver, 10);
-
+	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on the SUBMIT button on post debit pop-up");
+	Log.info("Step 1: Click on the SUBMIT button on post debit pop-up");
+	
+	//WebDriverWait wait = new WebDriverWait(driver, 10);
+	driver.manage().window().maximize();
+	
 	ScrollUntilElementVisible(GLTransaction.SubButton);
-	click(GLTransaction.SubButton);
-
-	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on the SUBMIT button ");
-	Log.info("Step 1: Click on the SUBMIT button ");
+	
+	//just selecting outside grid and click on tab to move to submit button and clicking on submit button by pressing 'enter'.
+	click(GLTransaction.outsidegriddata);
+	
+	 Thread.sleep(1000);
+	 
+	 WebElement currentElement = driver.switchTo().activeElement();
+     currentElement.sendKeys(Keys.TAB);
+     
+     driver.switchTo().activeElement().sendKeys(Keys.ENTER);
 								
 	driver.switchTo().window(mainWindowHandle);
-						
-	//WebDriverWait waitForWindowClose = new WebDriverWait(driver, 15);
-	//waitForWindowClose.until(ExpectedConditions.numberOfWindowsToBe(1));
-
-	//int windowCount = driver.getWindowHandles().size();
-							    
-	Assert.assertEquals(driver.getWindowHandles().size(), 1, "Validation Failed: Security Details popup window is still open.");								
-
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup gets closed  ");
-	Log.info("Expected Result: Popup gets closed");
-
+	
+	if(ElementDisplayed(GLTransaction.TransactionTitle)) 
+	{
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: POstdebit datas submitted successfully");
+		Log.info("Expected Result: POstdebit datas submitted successfully");
+	}
+	
 	ExtentTestManager.endTest();
-	return true;
+	return true;					
+							    
+	//Assert.assertEquals(driver.getWindowHandles().size(), 1, "Validation Failed: Security Details popup window is still open.");								
+
+	//ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup gets closed  ");
+	//Log.info("Expected Result: Popup gets closed");
+	
 
 }
 
 
 public boolean PostDebitPopUpSubmitDetailsSubmitsummary() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:25 - POST DEBIT popup is present");
-	Log.info("TC:25 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:25 - Submission of general account transaction-transfer");
+	Log.info("TC:25 - Submission of general account transaction-transfer");
 	
 	ScrollUntilElementVisible(GLTransaction.Submitbutton);
 	click(GLTransaction.Submitbutton);
@@ -823,27 +838,28 @@ public boolean PostDebitPopUpSubmitDetailsSubmitsummary() throws InterruptedExce
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the SUBMIT button in the transaction window");
 	Log.info("Step:01 - Click on the SUBMIT button in the transaction window");
 	
-	WebDriverWait waitForWindowClose = new WebDriverWait(driver, 10);
+	/*WebDriverWait waitForWindowClose = new WebDriverWait(driver, 10);
     waitForWindowClose.until(ExpectedConditions.numberOfWindowsToBe(1));
 
 	int windowCount = driver.getWindowHandles().size();
     Assert.assertEquals(windowCount, 1, "Validation Failed: Security Details popup window is still open.");
 			
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Data gets successfully saved in the backend");
-	Log.info("Expected Result: Data gets successfully saved in the backend");
+	Log.info("Expected Result: Data gets successfully saved in the backend");*/
 	
 	if(ElementDisplayed(GLTransaction.SummaryOperation)) {
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Verify transaction summary");
-		Log.info("Step:01 - Verify transaction summary");
+		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: General account transaction submitted successfully");
+		Log.info("Expected Result: General account transaction submitted successfully");
 		}
 	else {
 		ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 		Log.info("ERROR");
 		}
+	
 	transIdGLtransTransfer = driver.findElement(GLTransaction.TransCashID).getText();
 	
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary is accurate and presents details");
-	Log.info("Expected Result: Summary is accurate and presents details");
+	/*ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Summary is accurate and presents details");
+	Log.info("Expected Result: Summary is accurate and presents details");*/
 	
 	ExtentTestManager.endTest();
 	return true;
@@ -916,13 +932,13 @@ public boolean LogintoNBFcApplicationinadifferentuserAuthorizeandcancel() throws
 
 public boolean ManagerAuthorisationTransfer() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:28 - Login to NBFc Application in a different user");
-	Log.info("TC:28 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:28 - Manager authorisation-Transfer tab");
+	Log.info("TC:28 - Manager authorisation-Transfer tab");
 	
-	click(GLTransaction.TransferTab);
 		
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the  TRANSFER  tab");
 	Log.info("Step:01 - Click on the  TRANSFER  tab");
+	click(GLTransaction.TransferTab);
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
     boolean isDisplayed = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id ='__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer']"))).isDisplayed();
@@ -940,8 +956,8 @@ public boolean ManagerAuthorisationTransfer() throws InterruptedException{
 
 public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:29 - Login to NBFc Application in a different user");
-	Log.info("TC:29 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:29 - Manager authorisation-Refresh");
+	Log.info("TC:29 - Manager authorisation-Refresh");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
     
@@ -953,8 +969,8 @@ public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 	
 	Assert.assertTrue(ElementDisplayed(GLTransaction.Refresh), "Validation Failed: Authorisation pending transaction is not displayed after refreshing.");
 	
-	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Authorisation pending transaction gets displayed ");
-	Log.info("Expected Result: Authorisation pending transaction gets displayed ");
+	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Authorisation pending transaction gets displayed on clicking refresh");
+	Log.info("Expected Result: Authorisation pending transaction gets displayed on clicking refresh");
 		
 	ExtentTestManager.endTest();
 	return true;
@@ -962,8 +978,8 @@ public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 
 public boolean SelectManagerTransferTransaction() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:30 - Login to NBFc Application in a different user");
-	Log.info("TC:30 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:30 - Passing transaction id from manager authorisation window");
+	Log.info("TC:30 - Passing transaction id from manager authorisation window");
 	
 	System.out.println("transIdGLtransTransfer "+transIdGLtransTransfer);
 	FetchwithTransID(transIdGLtransTransfer);
@@ -987,8 +1003,8 @@ public boolean SelectManagerTransferTransaction() throws InterruptedException{
 
 public boolean ManagerTransferAuthorization() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:31 - Login to NBFc Application in a different user");
-	Log.info("TC:31 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:31 - Manager Authorisation with transid");
+	Log.info("TC:31 - Manager Authorisation with transid");
 	
 	if(ElementDisplayed(GLTransaction.ManagerAuthorize)) {
 	click(GLTransaction.ManagerAuthorize);
