@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_Cust_CustSearch {  
 	
+	public By firstUsername = By.xpath("//*[@id=\"ctl00_ctl00_lblUser\"]");
+
+	
 	//PC Registration
 	public By formName = By.xpath("//*[@id='Username']");
 	public By formBranchName = By.xpath("//select[@id='ddlBranches']");
@@ -29,8 +32,8 @@ public class PageRepositary_Cust_CustSearch {
 //	public By variable = By.xpath("");
 	
 	//Customer Search Window
-	public By cust = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/div");
-	public By custSrch = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/ul/li[2]/a");
+	public By cust = By.xpath("//ul[@id='CreateMenu']//a[text()='Customer']/preceding-sibling::div");
+	public By custSrch = By.xpath("//a[text()='Customer Search ']");
 	public By custId = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_CustContent_ucCustomerSearch_txtCust_Id_txt\"]");
 	public By custPanNum = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_CustContent_ucCustomerSearch_txtPAN\"]");
 	public By custDocType = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_CustContent_ucCustomerSearch_ddlDocType_ID\"]");
@@ -161,7 +164,7 @@ public class PageRepositary_Cust_CustSearch {
 	public By mangrAuthorCloseBtn = By.xpath("//input[@value='Close']");
 	public By mangrAuthorOthersBtn = By.xpath("//span[text()='Others']");
 	public By selectToAuthorize = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpOthers_ucMAOthers_lvwOtherDetails_ctrl0_chkSelect\"]");
-	public By authorizeAndCancelBtn = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]");
+	public By authorizeAndCancelBtn = By.xpath("//ul[@id='CreateMenu']//a[text()='Authorize & Cancel']/preceding-sibling::div");
 	public By noData = By.xpath("//div[contains(text(),'No Data Found.....!')]");
 	
 	public By deleteConfirmationOkBtn = By.xpath("//*[@id=\"closeSeltio\"]");
@@ -239,5 +242,5 @@ public class PageRepositary_Cust_CustSearch {
 //	public By variable = By.xpath("");
 	
 	//Signout
-	public By custSignOut = By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
+	public By custSignOut = By.xpath("//strong[text()='Signout']");
 }

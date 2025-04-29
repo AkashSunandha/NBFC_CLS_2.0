@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_ProcessAndPosting_ChargePosting_LoanChargePosting {
 
-	public By processingPostingTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[12]/div");
-	public By chargePOstingTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[12]/ul/li[1]/div");
+	public By processingPostingTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Processing & Posting']/preceding-sibling::div");
+	public By chargePOstingTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Charge Posting']/preceding-sibling::div");
 	public By loanChargePostingTab = By.xpath("//a[text()='Loan Charge Posting ']");
 	
 	//Loan Charge Posting
@@ -33,50 +33,6 @@ public class PageRepositary_ProcessAndPosting_ChargePosting_LoanChargePosting {
 	public By addChargesGridAmtValue = By.xpath("//*[@id=\"ctl00_CPH1_lstAddCharges_ctrl0_lblAmount\"]");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
+
 	
 }

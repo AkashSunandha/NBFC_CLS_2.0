@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_AccOpn_ShareOpn_AClassShare {
 
-	public By accountOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div");
-	public By shareOpnTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[3]/div");
-	public By AClassShareTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[3]/ul/li/div");
+	public By accountOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Account Opening']/preceding-sibling::div");
+	public By shareOpnTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Share Opening']/preceding-sibling::div");
+	public By AClassShareTab = By.xpath("//ul[@id='CreateMenu']//a[text()='A Class Share (ACOPS)']/preceding-sibling::div");
 	public By aClassShare = By.xpath("//a[text()='A CLASS SHARE  (1001)']");
 	
 //	Share Acc Info

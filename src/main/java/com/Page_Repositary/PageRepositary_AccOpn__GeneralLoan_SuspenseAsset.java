@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_AccOpn__GeneralLoan_SuspenseAsset {
 
-	public By accountOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div");
-	public By generalOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[4]/div");
-	public By suspenseAssetTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[4]/ul/li[2]/div");
+	public By accountOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Account Opening']/preceding-sibling::div");
+	public By generalOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='General Opening']/preceding-sibling::div");
+	public By suspenseAssetTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Suspense Asset ']/preceding-sibling::div");
 	public By suspenseAssetTab_31002 = By.xpath("//*[text()='SUSPENSE ASSET  (31002)']");
 	
 	//Product Acc Info

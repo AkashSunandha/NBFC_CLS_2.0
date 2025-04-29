@@ -29,10 +29,25 @@ public class Customer_CustomerSearch extends Base_Class{
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
 	com.Utility.ExcelReader ExcelReader = new com.Utility.ExcelReader("Customer_CustSearch");
 	Base_Class Base_Class= new Base_Class();
-	Customer_QuickCustomer quickCust = new Customer_QuickCustomer(); 
+
+	//Customer_QuickCustomer quickCust = new Customer_QuickCustomer(); 
 	public String actualUserName;
+	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
+	public static String Firstusername;
 
 	
+	public String getActualUserName(By locator) {
+		String actualUserName = driver.findElement(locator).getText();
+		System.out.println("actualUserName: "+actualUserName);
+		return actualUserName;
+
+	}
+	
+	public void username() {
+		Firstusername = getActualUserName(custSearch.firstUsername);
+		System.out.println("Firstusername: " + Firstusername);
+
+	}
 	
 	public static  String generateCustId() throws ClassNotFoundException {
 		 // Method that returns the first customer ID (String) from the database
@@ -127,8 +142,18 @@ public class Customer_CustomerSearch extends Base_Class{
 		
 		String pcRegFormPcName = testdata.get("pcRegFormPcName").toString();	
 		input(custSearch.formComputerName, pcRegFormPcName);
+
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter PC Name in Name field.");
 		Log.info("Step:03 - Enter PC Name in Name field.");
+
+		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter PC Name in Name field.");
+		Log.info("Step:02 - Enter PC Name in Name field.");
+		
+		click(custSearch.formBranchName);
+		click(custSearch.formBranchNameTrivandrum);
+		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Select a Branch Name from the Dropdown.");
+		Log.info("Step:03 - Select a Branch Name from the Dropdown.");
+
 		
 		click(custSearch.formSubmitBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Submit Button.");
@@ -199,10 +224,11 @@ public class Customer_CustomerSearch extends Base_Class{
 		return true;
 	}
 	
-	public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
+	public boolean  userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		ExtentTestManager.startTest("Valid Login");
 		Log.info("Valid Login");
 			
+
 			
 					String UserName = configloader().getProperty("UserName");
 					input(custSearch.loginUserName,UserName );
@@ -212,6 +238,19 @@ public class Customer_CustomerSearch extends Base_Class{
 					String Password = configloader().getProperty("Password");
 //					String loginValidPassword = testdata.get("loginValidPassword").toString();
 					input(custSearch.loginPasswrd, Password);
+
+				//	String loginUserName = testdata.get("loginUserName").toString();
+		String loginUserName=configloader().getProperty("UserName");
+					input(custSearch.loginUserName, loginUserName);
+					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");
+					Log.info("Step:01 - Enetered valid User Name");
+					
+					
+				//	String loginValidPassword = testdata.get("loginValidPassword").toString();
+					String loginValidPassword=configloader().getProperty("Password");
+					input(custSearch.loginPasswrd, loginValidPassword);
+					
+
 					ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Eneter valid Password");
 					Log.info("Step:02 - Enetered valid Password");
 					
@@ -258,9 +297,12 @@ public class Customer_CustomerSearch extends Base_Class{
 //					Log.info("Expected Result: User is logged in successfully and dashboard visible");
 					
 		ExtentTestManager.endTest();
-						actualUserName = driver.findElement(custSearch.actualUserName).getText();
-						System.out.println("actualUserName: "+actualUserName);
+
+
+		username();
+		
 		return true;
+
 	}
 	
 	public boolean customerSearchWindow() throws InterruptedException {
@@ -2630,5 +2672,13 @@ return true;
 		return true;
 	}
 	
+
+	public boolean signOut() throws InterruptedException {
+		click(custSearch.custSignOut);
+		ExtentTestManager.getTest().log(Status.PASS, "User SignedOut");
+		Log.info("User SignedOut");
+		return true;
+	}
+
 }
 

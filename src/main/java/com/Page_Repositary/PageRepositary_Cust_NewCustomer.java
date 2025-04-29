@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_Cust_NewCustomer { 
 
-	public By customerTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/div");
+	public By customerTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Customer']/preceding-sibling::div");
 	public By newCustomerTab = By.xpath("//a[text()='New Customer (CUST)']"); 
 	
 	//Personal Details

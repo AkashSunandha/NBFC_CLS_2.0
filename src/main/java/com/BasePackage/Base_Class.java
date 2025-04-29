@@ -15,18 +15,14 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import com.Utility.Log;
-import com.aventstack.extentreports.Status;
-import com.extentReports.ExtentTestManager;
-
 import org.apache.commons.io.comparator.LastModifiedFileComparator;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -41,8 +37,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.Page_Repositary.PageRepositary_Cust_CustSearch;
+import com.Page_Customer.Customer_CustomerSearch;
 import com.Utility.Log;
+import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -50,18 +47,32 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Base_Class {
 
 	public static RemoteWebDriver driver = null;
+	
+	public String spPAN = "GenerateNextPAN";
+    public String clmnNamPAN = "generated_pan";
+    
+    public String spAadhaar = "GenerateNextAadharNumber";
+    public String clmnNamAadhaar = "generated_aadhar_number";
+    
+    public String spMobileNum = "GenerateNextMobileNumber";
+    public String clmnNamMobileNum = "generated_mobile_number";
+    
+    public String spIdentityNo = "GenerateNextIdentityNo";
+    public String clmnNamIdentityNo = "generated_identity_no";
 
+	
 	public WebDriver getDriver() {
 		return driver;
 	} 
-
-	private static By L_username = By.id("Username");
-	private static By L_password = By.id("Password");
-	private static  By L_SignIn = By.xpath("//span[text()=' Sign In ']");
+	
+	private static By L_username = By.id("txtUserName_txt");
+	private static By L_password = By.id("txtPassword_txt");
+	//private static  By L_SignIn = By.xpath("//span[text()=' Sign In ']");
+	private static  By L_SignIn = By.id("imgbtnSubmit");
 	private static By DesktopNot = By.xpath("//button[text()='OK']");
 	//private static By L_LogOut= By.xpath("//div[@class='user position ng-tns-c3-15 ng-star-inserted']");
 	//private static By L_LogAlert= By.xpath("//button[text()='Sign out']");
-
+	
 	public static String Pagetitle;
 
 	public static Properties configloader() throws IOException {
@@ -76,6 +87,7 @@ public class Base_Class {
 		FileFilter fileFilter = new WildcardFileFilter("*." + ext);
 		File[] files = dir.listFiles(fileFilter);
 
+
 		if (files.length > 0) {
 			/** The newest file comes first **/
 			Arrays.sort(files, LastModifiedFileComparator.LASTMODIFIED_REVERSE);
@@ -85,13 +97,14 @@ public class Base_Class {
 
 		return theNewestFile;
 	}
-	public void SetUp() throws IOException, InterruptedException {
 
+	public void SetUp() throws IOException, InterruptedException {
+		
 		String Browser = configloader().getProperty("Browser");
 		String Url = configloader().getProperty("URL");
 		String UserName = configloader().getProperty("UserName");
 		String Password = configloader().getProperty("Password");
-
+		
 		switch (Browser.toUpperCase()) {
 
 		case "CHROME":
@@ -103,6 +116,7 @@ public class Base_Class {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(options);		
 			break;
+
 
 		case "FIREFOX":
 
@@ -122,6 +136,13 @@ public class Base_Class {
 			//			driver = new FirefoxDriver(options1);
 			ExtentTestManager.getTest().log(Status.PASS, "Firefox Driver & Application Launched successfully.");
 			break;
+			
+			
+//		case "FIREFOX":
+//
+//			WebDriverManager.firefoxdriver().setup();
+//			driver = new FirefoxDriver();			
+//			break;
 
 		default:
 			System.err.println("The Driver is not defined");
@@ -134,18 +155,26 @@ public class Base_Class {
 		driver.get(Url);
 		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
-		//		Thread.sleep(9000);
+//		Thread.sleep(9000);
 		Pagetitle = driver.getTitle();
 		Log.info("Title is displayed : "+Pagetitle);
-		//		input(L_username, UserName);
-		//		input(L_password, Password);
-		//		click(L_SignIn);
-		//		Thread.sleep(4000);
-		//		click(DesktopNot);
-		//		Thread.sleep(1000);
+	
+//		input(L_username, UserName);
+//		Log.info("Username is added");
+//		input(L_password, Password);
+//		Log.info("Password is added");
+//		click(L_SignIn);
+//		Log.info("Signed In");
+//		Thread.sleep(4000);
+//		click(DesktopNot);
+//		Thread.sleep(1000);
 	}
 
-
+	
+	public static String getValue(By path) {
+		return driver.findElement(path).getText(); 
+	}
+	
 	public static  void input(By element, String Value) throws InterruptedException {
 		Thread.sleep(1000);
 		WebDriverWait wait2 = new WebDriverWait(driver, 30);
@@ -156,7 +185,6 @@ public class Base_Class {
 
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.presenceOfElementLocated(element));
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 		Thread.sleep(2000);
 	}
@@ -166,23 +194,30 @@ public class Base_Class {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		Select selWeekDayDropDown = new Select(driver.findElement(element));
-		selWeekDayDropDown.selectByVisibleText(value);
-
+//		selWeekDayDropDown.selectByVisibleText(value);
+//		selWeekDayDropDown.selectByValue(value);
+		try {
+		    selWeekDayDropDown.selectByVisibleText(value);
+		} catch (NoSuchElementException e) {
+		    // If the visible text is not found, fall back to selecting by value
+		    selWeekDayDropDown.selectByValue(value);
+		}
 	}
 
-	public static void clear(By element)throws InterruptedException	{
+	public static void clear(By element)throws InterruptedException
+	{
 		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(element)).clear();
 		Thread.sleep(2000);
 	}
 
-
-	public void AcceptAlert()
+	public static void AcceptAlert()
 	{
 		driver.switchTo().alert().accept();
 		//driver.switchTo().alert().dismiss();	
 	}
+	
 	public static void DismissAlert()
 	{
 		//driver.switchTo().alert().accept();
@@ -197,14 +232,14 @@ public class Base_Class {
 		//Thread.sleep(2000);
 
 	}
-
+	
 	public static void SwitchToFrame(By frameName) throws InterruptedException
 	{
 		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameName));
 	}
-
+	
 	public static void ScrollUntilElementVisible(By locator) throws InterruptedException
 	{ 
 		Thread.sleep(1000);
@@ -222,133 +257,318 @@ public class Base_Class {
 		Boolean flag = element.isDisplayed();
 		return flag;
 	}
-
+	
 	public static boolean ElementEnabled(By locator)
 	{
 		WebElement element = driver.findElement(locator);
 		Boolean flag = element.isEnabled();
 		return flag;
 	}
-
+	
 	public static boolean CheckBoxStatus(By locator)
 	{
 		WebElement element = driver.findElement(locator);
 		Boolean flag = element.isSelected();
 		return flag;
 	}
-
+	
 	public static void UploadFile(By locator, String path)
 	{
 		WebElement uploadElement = driver.findElement(locator);
 		String path1=System.getProperty("user.dir");
 		Log.info("path is :" + path1);
 		uploadElement.sendKeys(path1 + path);
-
+		
 	}
-
-
-	//	public static void UploadFile(By locator)
-	//	{
-	//		WebElement uploadElement = driver.findElement(locator);
-	//		 String path=System.getProperty("user.dir");
-	//		 Log.info("path is :" + path);
-	//		//System.out.Directory.GetParent(this.GetType().Assembly.Location).ToString();
-	//		uploadElement.sendKeys(path);
-	//		
-	//		
-	//	}
-	public static boolean ElementEnableOrDisable(By locator)
+	
+	
+//	public static void UploadFile(By locator)
+//	{
+//		WebElement uploadElement = driver.findElement(locator);
+//		 String path=System.getProperty("user.dir");
+//		 Log.info("path is :" + path);
+//		//System.out.Directory.GetParent(this.GetType().Assembly.Location).ToString();
+//		uploadElement.sendKeys(path);
+//		
+//		
+//	}
+	public static boolean checkElementEnableOrDisable(By locator)
 	{
 		WebElement element = driver.findElement(locator);
 		Boolean flag = element.isEnabled();
 		return flag;
 	}
-
+	
 	public static boolean CheckElementDisable(By locator)
 	{  
 		//disable
 		WebElement element = driver.findElement(locator);
 		Boolean flag = element.isEnabled();	
-
+		
 		if (flag==false) {
 			flag=true;
 		}else if(flag==true)
 			flag=false;
-
+		
 		return flag;
 	}
-
-
+	
+	
 	public static  void Hover(By element) throws InterruptedException {
 		WebElement element1 = driver.findElement(element);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element1).perform();
 	}
-
-
-
-
-
-	public static  void DatabaseConnector() throws ClassNotFoundException {
-
-
+	
+	
+public static  void DatabaseConnector() throws ClassNotFoundException {
+		
+		
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		String UserName = "sqa";
 		String Password = "SPQA@sql2019" ;
 		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
 
+		
+		try(Connection connection = DriverManager.getConnection(Url,UserName,Password)){
+		//con = DriverManager.getConnection(Url,UserName,Password);
+		System.out.println("Class: Common Method: DatabaseConnector: Connected");
+		
+		//Execute Query for getting approval
+		CallableStatement callableStatement = connection.prepareCall("{call cl}");
+		//callableStatement.setLong(1, 9999999991L);
+		//System.out.println("Stored procedure called with parameter: 9999999991");
+		
+		 // Execute stored procedure
+        callableStatement.executeQuery();
+//        while (resultSet.next()) {
+//            String column1 = resultSet.getString("O");
+//            System.out.println("OTP : " + column1  );
+//
+//		
+//        }
+		
+	}catch(Exception e)
+	{
+		System.out.println("Class: Common Method: DatabaseConnector: Not Connected");
+		//e.printStackTrace();
+	
+	}  
+}
+	
+	
+//	public static  void DatabaseConnector() throws ClassNotFoundException {
+//		
+//		
+//		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+//		String UserName = "sqa";
+//		String Password = "SPQA@sql2019" ;
+//		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
+//
+//		
+////		try(Connection connection = DriverManager.getConnection(Url,UserName,Password)){
+////		//con = DriverManager.getConnection(Url,UserName,Password);
+////		System.out.println("Class: Common Method: DatabaseConnector: Connected");
+////		
+////		//Execute Query for getting approval
+////		CallableStatement callableStatement = connection.prepareCall("{call cl}");
+////		//callableStatement.setLong(1, 9999999991L);
+////		//System.out.println("Stored procedure called with parameter: 9999999991");
+////		
+////		 // Execute stored procedure
+////        callableStatement.executeQuery();
+////        System.out.println("Stored procedure executed successfully.");
+//////        while (resultSet.next()) {
+//////            String column1 = resultSet.getString("O");
+//////            System.out.println("OTP : " + column1  );
+//////
+//////		
+//////        }
+//		String query = "cl;";
+//        try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
+//	             Statement statement = connection.createStatement();
+//	             ResultSet resultSet = statement.executeQuery(query)) {
+//
+//	        } catch (SQLException e) {
+//	            System.out.println("Error executing the SQL query.");
+//	            //e.printStackTrace();
+//	        }
+//        
+//
+//        
+//		
+//	}catch(Exception e)
+//	{
+//		System.out.println("Class: Common Method: DatabaseConnector: Not Connected");
+//		//e.printStackTrace();
+//	
+//	}
+//   
+//}
+	
+	 public  String generateUniqueId(String query,String columnName) throws ClassNotFoundException {
+	        // Method that returns the first customer ID (String) from the database
+	         // Database connection details
+	 // Database connection details
+	 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+	        String UserName = "sqa";
+	        String Password = "SPQA@sql2019" ;
+	        String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
 
-		//		try(Connection connection = DriverManager.getConnection(Url,UserName,Password)){
-		//		//con = DriverManager.getConnection(Url,UserName,Password);
-		//		System.out.println("Class: Common Method: DatabaseConnector: Connected");
-		//		
-		//		//Execute Query for getting approval
-		//		CallableStatement callableStatement = connection.prepareCall("{call cl}");
-		//		//callableStatement.setLong(1, 9999999991L);
-		//		//System.out.println("Stored procedure called with parameter: 9999999991");
-		//		
-		//		 // Execute stored procedure
-		//        callableStatement.executeQuery();
-		//        System.out.println("Stored procedure executed successfully.");
-		////        while (resultSet.next()) {
-		////            String column1 = resultSet.getString("O");
-		////            System.out.println("OTP : " + column1  );
-		////
-		////		
-		////        }
-		String query = "cl;";
-		try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
-				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery(query)) {
+	        
+	         String value = null; // Declare and initialize the return variable
 
-		} catch (SQLException e) {
-			System.out.println("Error executing the SQL query.");
+	         // Establish the connection to the database
+	         try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
+	              Statement statement = connection.createStatement();
+	              ResultSet resultSet = statement.executeQuery(query)) {
+	              
+	              if (resultSet.next()) {
+	                     value = resultSet.getString(columnName); // Get the first Cust_ID
+	                 System.out.println("Generated Unique ID: " + value);
+	             } else {
+	                 System.out.println("Unique ID not generated.");
+	             }
+
+	         } catch (SQLException e) {
+	             System.out.println("Error executing the SQL query or processing the result set.");
+	             e.printStackTrace();
+	         }
+
+	         return value; // Return the firstCustId
+	     }
+
+		
+		
+		
+	public static  void DatabaseConnector1() throws ClassNotFoundException {
+			
+			
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			String UserName = "sqa";
+			String Password = "SPQA@sql2019" ;
+			String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
+
+			
+			try(Connection connection = DriverManager.getConnection(Url,UserName,Password)){
+			//con = DriverManager.getConnection(Url,UserName,Password);
+			System.out.println("Class: Common Method: DatabaseConnector: Connected");
+			
+			//Execute Query for getting approval
+			CallableStatement callableStatement = connection.prepareCall("update users set RecordStatus=3");
+			
+			//callableStatement.setLong(1, 9999999991L);
+			//System.out.println("Stored procedure called with parameter: 9999999991");
+			
+			 // Execute stored procedure
+	        callableStatement.executeQuery();
+	        System.out.println("Query Executed");
+//	        while (resultSet.next()) {
+//	            String column1 = resultSet.getString("O");
+//	            System.out.println("OTP : " + column1  );
+	//
+//			
+//	        }
+			
+		}catch(Exception e)
+		{
+			System.out.println("Class: Common Method: DatabaseConnector: Not Connected");
 			//e.printStackTrace();
-		}
-
-
-
-
-
-		//	}catch(Exception e)
-		//	{
-		//		System.out.println("Class: Common Method: DatabaseConnector: Not Connected");
-		//		//e.printStackTrace();
-		//	
-		//	}
-
+		
+		}  
 	}
+	
+	
+    public String dateConversion(String inputDate) throws ParseException {
+    	
+        // Define the original format of the date string
+        SimpleDateFormat originalFormat = new SimpleDateFormat("EEEE, MMMM dd yyyy", Locale.ENGLISH);
 
-	public static void ExtentSuccessMessage(String strPassSuccessMessage) {
+        // Parse the input date string
+        Date date = originalFormat.parse(inputDate);
+
+        // Define the desired output format (DD/MM/YYYY)
+        SimpleDateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+        // Format the parsed date into the desired format
+        String formattedDate = targetFormat.format(date);
+        
+    	return formattedDate;
+    }
+
+
+    public static void waitForSpinnerToStop(WebDriver driver, By spinnerLocator) {
+         int MAX_WAIT_TIME = 60;  // Max total wait time in seconds
+         int POLL_INTERVAL = 1;   // Poll interval in seconds
+         int CONSECUTIVE_DISAPPEAR_COUNT = 3;  // Number of consecutive times the spinner must disappear
+         
+        int remainingTime = MAX_WAIT_TIME;
+        int disappearCount = 0;
+
+        // WebDriverWait setup
+        WebDriverWait wait = new WebDriverWait(driver, POLL_INTERVAL);
+
+        // Loop until the spinner disappears for the set number of cycles or time runs out
+        while (remainingTime > 0) {
+            try {
+                // Wait until the spinner becomes invisible
+                wait.until(ExpectedConditions.invisibilityOfElementLocated(spinnerLocator));
+
+                // If spinner disappeared, increment the disappearCount
+                disappearCount++;
+
+                // If spinner has disappeared for enough consecutive cycles, we stop the wait
+                if (disappearCount >= CONSECUTIVE_DISAPPEAR_COUNT) {
+                    System.out.println("Spinner has stopped appearing.");
+                    return;
+                }
+
+            } catch (Exception e) {
+                // Spinner is still visible, reset disappearCount
+                disappearCount = 0;
+                System.out.println("Spinner is still visible. Waiting...");
+            }
+
+            // Sleep for the polling interval before checking again
+            try {
+                Thread.sleep(POLL_INTERVAL * 1000); // Polling interval
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+            }
+
+            // Reduce the remaining time
+            remainingTime -= POLL_INTERVAL;
+        }
+
+        System.out.println("Timeout reached, spinner still shows up intermittently.");
+    }//end
+    
+    
+    // Method to verify drop down selection
+	public boolean dropdownSelectionValidation(String expectedOption,By locator) {
+    	WebElement element = driver.findElement(locator);
+        Select dropdown = new Select(element);
+        System.out.println(dropdown.getFirstSelectedOption().getText());
+        return dropdown.getFirstSelectedOption().getText().equals(expectedOption);
+    }
+	
+	 // Method to get the value of the entered account number
+    public boolean inputValidation(By locator,String input) {
+    	WebElement element = driver.findElement(locator);
+    	System.out.println("InputValue: "+element.getAttribute("value"));
+        return element.getAttribute("value").equals(input);
+    }
+    
+    public static void ExtentSuccessMessage(String strPassSuccessMessage) {
 		ExtentTestManager.getTest().log(Status.PASS, strPassSuccessMessage);
 	}
-
+ 
 	public static void ExtentErrorMessage(String strPassErrorMessage) {
 		ExtentTestManager.getTest().log(Status.FAIL, strPassErrorMessage);
 	}
-
+	
 	public static String GetElementText(By locator) throws InterruptedException {
-
+		 
 		String stxt = null;
 		WebElement element = driver.findElement(locator);
 		if (element.isDisplayed()) {
@@ -359,166 +579,36 @@ public class Base_Class {
 		}
 		return stxt;
 	}
-
+	
+	public void PageRefresh() {
+		driver.navigate().refresh();
+	}
+	
 	public static String GetElementAttribute(By locator,String Values)
 	{
 		WebElement element = driver.findElement(locator);
 		String flags = element.getAttribute(Values);
 		return flags;
 	}
-	public void PageRefresh() {
-		driver.navigate().refresh();
-	}
-
-
-
-	public String dateConversion(String inputDate) throws ParseException {
-
-		// Define the original format of the date string
-		SimpleDateFormat originalFormat = new SimpleDateFormat("EEEE, MMMM dd yyyy", Locale.ENGLISH);
-
-		// Parse the input date string
-		Date date = originalFormat.parse(inputDate);
-
-		// Define the desired output format (DD/MM/YYYY)
-		SimpleDateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");
-
-		// Format the parsed date into the desired format
-		String formattedDate = targetFormat.format(date);
-
-		return formattedDate;
-	}
-
-
-	public static void waitForSpinnerToStop(WebDriver driver, By spinnerLocator) {
-		int MAX_WAIT_TIME = 60;  // Max total wait time in seconds
-		int POLL_INTERVAL = 1;   // Poll interval in seconds
-		int CONSECUTIVE_DISAPPEAR_COUNT = 3;  // Number of consecutive times the spinner must disappear
-
-		int remainingTime = MAX_WAIT_TIME;
-		int disappearCount = 0;
-
-		// WebDriverWait setup
-		WebDriverWait wait = new WebDriverWait(driver, POLL_INTERVAL);
-
-		// Loop until the spinner disappears for the set number of cycles or time runs out
-		while (remainingTime > 0) {
-			try {
-				// Wait until the spinner becomes invisible
-				wait.until(ExpectedConditions.invisibilityOfElementLocated(spinnerLocator));
-
-				// If spinner disappeared, increment the disappearCount
-				disappearCount++;
-
-				// If spinner has disappeared for enough consecutive cycles, we stop the wait
-				if (disappearCount >= CONSECUTIVE_DISAPPEAR_COUNT) {
-					System.out.println("Spinner has stopped appearing.");
-					return;
-				}
-
-			} catch (Exception e) {
-				// Spinner is still visible, reset disappearCount
-				disappearCount = 0;
-				System.out.println("Spinner is still visible. Waiting...");
-			}
-
-			// Sleep for the polling interval before checking again
-			try {
-				Thread.sleep(POLL_INTERVAL * 1000); // Polling interval
-			} catch (InterruptedException ie) {
-				Thread.currentThread().interrupt();
-			}
-
-			// Reduce the remaining time
-			remainingTime -= POLL_INTERVAL;
-		}
-
-		System.out.println("Timeout reached, spinner still shows up intermittently.");
-	}
-	public static void KeyOperation(String strKey) {
-		Actions act = new Actions(driver);
-		String str = strKey.toUpperCase();
-		switch (str) {
-		case "ENTER":
-			act.sendKeys(Keys.ENTER).build().perform();
-			ExtentSuccessMessage("Successfully click on 'ENTER' Key");
-			break;
-		case "TAB":
-			act.sendKeys(Keys.TAB).build().perform();
-			ExtentSuccessMessage("Successfully click on 'TAB' Key");
-			break;
-		case "DELETE":
-			act.sendKeys(Keys.DELETE).build().perform();
-			ExtentSuccessMessage("Successfully click on 'DELETE' Key");
-			break;
-		case "BACK_SPACE":
-			act.sendKeys(Keys.BACK_SPACE).build().perform();
-			ExtentSuccessMessage("Successfully click on 'BACK_SPACE' Key");
-			break;
-		case "LEFT":
-			act.sendKeys(Keys.LEFT).build().perform();
-			ExtentSuccessMessage("Successfully click on 'LEFT' Key");
-			break;
-		case "DOWN":
-			act.sendKeys(Keys.DOWN).build().perform();
-			ExtentSuccessMessage("Successfully click on 'DOWN' Key");
-			break;
-		case "UP":
-			act.sendKeys(Keys.UP).build().perform();
-			ExtentSuccessMessage("Successfully click on 'UP' Key");
-			break;
-		case "RIGHT":
-			act.sendKeys(Keys.RIGHT).build().perform();
-			ExtentSuccessMessage("Successfully click on 'BACK_SPACE' Key");
-			break;
-		case "SUBTRACT":
-			act.sendKeys(Keys.SUBTRACT).build().perform();
-			ExtentSuccessMessage("Successfully click on 'BACK_SPACE' Key");
-			break;
-		case "CONTROL":
-			act.sendKeys(Keys.CONTROL).build().perform();
-			ExtentSuccessMessage("Successfully click on 'CTRL' Key");
-			break;
-		case "ARROW_LEFT":
-			act.sendKeys(Keys.ARROW_LEFT).build().perform();
-			ExtentSuccessMessage("Successfully click on 'BACK_SPACE' Key");
-			break;
-		case "ESC":
-			act.sendKeys(Keys.ESCAPE).build().perform();
-			ExtentSuccessMessage("Successfully click on 'ESC' Key");
-			break;
-		case "V":
-			act.sendKeys("V").build().perform();
-			ExtentSuccessMessage("Successfully click on 'V' Key");
-			break;
-
-		}
-	}
-	// Method to get the value of the entered account number
-	public boolean inputValidation(By locator,String input) {
+	
+	public static boolean ElementEnableOrDisable(By locator)
+	{
 		WebElement element = driver.findElement(locator);
-		System.out.println("InputValue: "+element.getAttribute("value"));
-		return element.getAttribute("value").equals(input);
+		Boolean flag = element.isEnabled();
+		return flag;
 	}
-	// Method to verify drop down selection
-	public boolean dropdownSelectionValidation(String expectedOption,By locator) {
-		WebElement element = driver.findElement(locator);
-		Select dropdown = new Select(element);
-		System.out.println(dropdown.getFirstSelectedOption().getText());
-		return dropdown.getFirstSelectedOption().getText().equals(expectedOption);
+	
+	public static  void INclick(By element) throws InterruptedException {
+		 
+		//Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
+		//Thread.sleep(2000);
+ 
 	}
-
-	public static boolean waitUntilElementDisplayed(By locator) {
-	    try {
-	        WebDriverWait wait = new WebDriverWait(driver,90);
-	        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-	        return element.isDisplayed();
-	    } catch (Exception e) {
-	        System.out.println("Element not visible: " + e.getMessage());
-	        return false;
-	    }
-	}
-
-
-
+	
+    
+    
 }
+
+
