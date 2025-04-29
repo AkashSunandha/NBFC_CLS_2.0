@@ -42,7 +42,7 @@ public class AllScenarios_Debenture_DebentureRedemption_CASH {
 	public void debentureRedemption_CASH(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("Debenture_DebentureRedemption_CASH");
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()+"_CASH");
 				Log.info("Debenture_DebentureRedemption_CASH");
 				context.setAttribute("fileName", "Login");
 

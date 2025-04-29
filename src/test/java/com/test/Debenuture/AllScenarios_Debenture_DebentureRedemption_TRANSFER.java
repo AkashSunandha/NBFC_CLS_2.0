@@ -41,7 +41,7 @@ public class AllScenarios_Debenture_DebentureRedemption_TRANSFER {
 	public void debentureRedemption_TRANSFER(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("Debenture_DebentureRedemption_TRANSFER");
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()+"_TRANSFER");
 				Log.info("Debenture_DebentureRedemption_TRANSFER");
 				context.setAttribute("fileName", "Login");
 
