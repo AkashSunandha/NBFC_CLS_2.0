@@ -20,42 +20,41 @@ import com.listeners.TestListener;
 
 public class AllScenarios_AccOpn_LoanOpn_DepoOpn_DepoLoan_CASH extends Base_Class {
 
-
 	Base_Class Base_Class=new Base_Class();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	LoanOpening_DepositOpn_DepositLoan bondCumulativeMthds = new LoanOpening_DepositOpn_DepositLoan();
 	LoanOpening_LoanAndAdvances_PersonalLoanWeekly personl = new LoanOpening_LoanAndAdvances_PersonalLoanWeekly();
-	
+
 	public void DepoLoan_CASH(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
-		
-				//TC No. - 01 --> Application launch
-				ExtentTestManager.startTest("Application launch");
-				Base_Class.SetUp();
-				ExtentTestManager.endTest();
-				Thread.sleep(2000);
-				
-				custSrchMthds.pcRegistration(testdata, context);
 
-				custSrchMthds.userLoginValidPaswrd(testdata, context);
+		//TC No. - 01 --> Application launch
+		ExtentSuccessMessage("Application launch");
+		Base_Class.SetUp();
+		ExtentTestManager.endTest();
+		Thread.sleep(2000);
 
-				bondCumulativeMthds.openDepositLoan();
-				
-				bondCumulativeMthds.accInfo(testdata, context);
+		custSrchMthds.pcRegistration(testdata, context);
 
-				bondCumulativeMthds.securities(testdata, context);
+		custSrchMthds.userLoginValidPaswrd(testdata, context);
 
-				bondCumulativeMthds.nominee(testdata, context);
+		bondCumulativeMthds.openDepositLoan();
 
-				bondCumulativeMthds.loanDetails();
+		bondCumulativeMthds.accInfo(testdata, context);
 
-				bondCumulativeMthds.transModeCASH();
+		bondCumulativeMthds.securities(testdata, context);
 
-				bondCumulativeMthds.authorizeCash(testdata, context);
-				
-				custSrchMthds.logout();
+		bondCumulativeMthds.nominee(testdata, context);
 
-				
-		
+		bondCumulativeMthds.loanDetails();
+
+		bondCumulativeMthds.transModeCASH();
+
+		bondCumulativeMthds.authorizeCash(testdata, context);
+
+		custSrchMthds.logout();
+
+
+
 	}
-	
+
 }

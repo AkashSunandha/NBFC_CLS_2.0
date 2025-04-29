@@ -128,7 +128,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	    System.out.println("Deleted Duplicate.");    
 	}
 	public boolean pcRegistration(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("PC Registration");
+		ExtentSuccessMessage("PC Registration");
 		Log.info("PC Registration");
 		
 		String pcRegFormName = testdata.get("pcRegFormName").toString();
@@ -170,7 +170,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	}
 	
 	public boolean userLoginInValidPaswrd(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("Login with Invalid Credentials");
+		ExtentSuccessMessage("Login with Invalid Credentials");
 		Log.info("Login with Invalid Credentials");
 		
 		String loginInValidUsername = testdata.get("loginInValidUsername").toString();
@@ -197,7 +197,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		
 		
 		
-		ExtentTestManager.startTest("Invalid Login - Incorrect Password");
+		ExtentSuccessMessage("Invalid Login - Incorrect Password");
 		Log.info("Invalid Login - Incorrect Password");
 		
 		String loginUserName = testdata.get("loginUserName").toString();
@@ -225,7 +225,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	}
 	
 	public boolean  userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("Valid Login");
+		ExtentSuccessMessage("Valid Login");
 		Log.info("Valid Login");
 			
 
@@ -240,15 +240,15 @@ public class Customer_CustomerSearch extends Base_Class{
 					input(custSearch.loginPasswrd, Password);
 
 				//	String loginUserName = testdata.get("loginUserName").toString();
-		String loginUserName=configloader().getProperty("UserName");
-					input(custSearch.loginUserName, loginUserName);
-					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");
-					Log.info("Step:01 - Enetered valid User Name");
-					
-					
-				//	String loginValidPassword = testdata.get("loginValidPassword").toString();
-					String loginValidPassword=configloader().getProperty("Password");
-					input(custSearch.loginPasswrd, loginValidPassword);
+//		String loginUserName=configloader().getProperty("UserName");
+//					input(custSearch.loginUserName, loginUserName);
+//					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");
+//					Log.info("Step:01 - Enetered valid User Name");
+//					
+//					
+//				//	String loginValidPassword = testdata.get("loginValidPassword").toString();
+//					String loginValidPassword=configloader().getProperty("Password");
+//					input(custSearch.loginPasswrd, loginValidPassword);
 					
 
 					ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Eneter valid Password");
@@ -274,6 +274,7 @@ public class Customer_CustomerSearch extends Base_Class{
 						Log.info("Step:01 - Click on OK button");
 						
 	//					String loginUserName = testdata.get("loginUserName").toString();
+						clear(custSearch.loginUserName);
 						input(custSearch.loginUserName, UserName);
 						ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
 						Log.info("Step:02 - Enetered valid User Name");
@@ -306,7 +307,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	}
 	
 	public boolean customerSearchWindow() throws InterruptedException {
-		ExtentTestManager.startTest("Navigate to Customer Search");
+		ExtentSuccessMessage("Navigate to Customer Search");
 		Log.info("Navigate to Customer Search");
 		
 		click(custSearch.cust);
@@ -328,7 +329,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	
 	public boolean mobileFieldBVA(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		
-		ExtentTestManager.startTest("Mobile Field - BVA Validations");
+		ExtentSuccessMessage("Mobile Field - BVA Validations");
 		Log.info("Mobile Field - BVA Validations");
 		
 				//Min-1 & Max-1 (<10 digits)
@@ -397,7 +398,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	
 	public boolean nameFieldECP(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 
-		ExtentTestManager.startTest("Name Field - ECP Validations");
+		ExtentSuccessMessage("Name Field - ECP Validations");
 		Log.info("Name Field - ECP Validations");
 		
 		
@@ -463,7 +464,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		
 		
 		//Customer Search by Non-Existent Name
-		ExtentTestManager.startTest("Customer Search - Invalid Name");
+		ExtentSuccessMessage("Customer Search - Invalid Name");
 		Log.info("Customer Search - Invalid Name");
 		
 		String invalidName = testdata.get("invalidName").toString();				
@@ -490,7 +491,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		
 		
 		//Error Guessing - Special Characters in Name Field
-		ExtentTestManager.startTest("Error Guessing - Special Characters in Name Field");
+		ExtentSuccessMessage("Error Guessing - Special Characters in Name Field");
 		Log.info("Error Guessing - Special Characters in Name Field");
 		
 		String nameSpecialChar = testdata.get("nameSpecialChar").toString();				
@@ -518,7 +519,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	
 	public boolean searchWithoutInputs() throws InterruptedException {
 		
-		ExtentTestManager.startTest("Customer Search with No Filter");
+		ExtentSuccessMessage("Customer Search with No Filter");
 		Log.info("Customer Search with No Filter");
 		
 		click(custSearch.custClearBtn);
@@ -549,7 +550,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	public boolean searchByInvalidAadhaar(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 				//AADHAAR No < 12 digits.
 		
-		ExtentTestManager.startTest("Invalid Aadhaar Number");
+		ExtentSuccessMessage("Invalid Aadhaar Number");
 		Log.info("Invalid Aadhaar Number");
 		
 		String invalidAadhaar = testdata.get("invalidAadhaar").toString();
@@ -578,7 +579,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	
 	public boolean clearFunctionality(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
-		ExtentTestManager.startTest("Clear Functionality");
+		ExtentSuccessMessage("Clear Functionality");
 		Log.info("Clear Functionality");
 		
         String nameTextBoxId = "ctl00_ctl00_CPH1_CustContent_ucCustomerSearch_txtFirstName";
@@ -613,7 +614,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	public boolean fetchInstitutions() throws InterruptedException {
 				click(custSearch.custClearBtn);
 				
-				ExtentTestManager.startTest("Toggle Is Institutional Checkbox");
+				ExtentSuccessMessage("Toggle Is Institutional Checkbox");
 				Log.info("Toggle Is Institutional Checkbox");
 				
 				click(custSearch.custKYCCompliantOnly);
@@ -656,7 +657,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	
 	public boolean houseName(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 				
-		ExtentTestManager.startTest("Verify the field House Name");
+		ExtentSuccessMessage("Verify the field House Name");
 		Log.info("Verify the field House Name");
 		
 				//Alphanumeric
@@ -714,7 +715,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	
 	public boolean docTypeAndDocNo(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
-		ExtentTestManager.startTest("Verify the field Doc Type");
+		ExtentSuccessMessage("Verify the field Doc Type");
 		Log.info("Verify the field Doc Type");
 		
 		click(custSearch.custDocType);
@@ -736,7 +737,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		ExtentTestManager.endTest();
 		
 		
-		ExtentTestManager.startTest("Verify the field Doc No");
+		ExtentSuccessMessage("Verify the field Doc No");
 		Log.info("Verify the field Doc No");
 		
 		String docNum = testdata.get("docNum").toString();
@@ -761,7 +762,7 @@ public class Customer_CustomerSearch extends Base_Class{
 	
 	public boolean panNum(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
-		ExtentTestManager.startTest("Verify the field PAN No");
+		ExtentSuccessMessage("Verify the field PAN No");
 		Log.info("Verify the field PAN No");
 		
 		String alphanumericPanNum = testdata.get("alphanumericPanNum").toString();				
@@ -781,7 +782,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		
 		
 		
-		ExtentTestManager.startTest("Customer details in grid");
+		ExtentSuccessMessage("Customer details in grid");
 		Log.info("Customer details in grid");
 		
 		boolean flag1 = ElementDisplayed(custSearch.columnCustId);
@@ -845,7 +846,7 @@ return true;
 	
 	public boolean kycCompliantOnly() throws InterruptedException {
 		
-		ExtentTestManager.startTest("Check KYC Compliant Only Checkbox.");
+		ExtentSuccessMessage("Check KYC Compliant Only Checkbox.");
 		Log.info("Check KYC Compliant Only Checkbox.");
 		
 		click(custSearch.custActiveOnly);
@@ -872,7 +873,7 @@ return true;
 	
 	public boolean isActiveOnly() throws InterruptedException {
 		
-		ExtentTestManager.startTest("Check Active Only, Checkbox");
+		ExtentSuccessMessage("Check Active Only, Checkbox");
 		Log.info("Check Active Only, Checkbox");
 		
 		click(custSearch.custKYCCompliantOnly);
@@ -899,7 +900,7 @@ return true;
 	
 	public boolean prospectsOnly() throws InterruptedException {
 		
-		ExtentTestManager.startTest("Check Prospects Only Checkbox");
+		ExtentSuccessMessage("Check Prospects Only Checkbox");
 		Log.info("Check Prospects Only Checkbox");
 		
 		click(custSearch.custKYCCompliantOnly);
@@ -926,7 +927,7 @@ return true;
 	
 	public boolean includeReject() throws InterruptedException {
 		
-		ExtentTestManager.startTest("Check Include Reject Checkbox");
+		ExtentSuccessMessage("Check Include Reject Checkbox");
 		Log.info("Check Include Reject Checkbox");
 		click(custSearch.custKYCCompliantOnly);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Uncheck KYC Compliant Only checkbox");
@@ -1089,7 +1090,7 @@ return true;
 	
 	public boolean lastNameECP(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
-		ExtentTestManager.startTest("Last Name Field - ECP Validations");
+		ExtentSuccessMessage("Last Name Field - ECP Validations");
 		Log.info("Last Name Field - ECP Validations");
 		
 		String validCustId3 = testdata.get("validCustId3").toString();
@@ -1139,7 +1140,7 @@ return true;
 		
 		//Special Characters Name input
 		
-		ExtentTestManager.startTest("Invalid Data Format in Last Name");
+		ExtentSuccessMessage("Invalid Data Format in Last Name");
 		Log.info("Invalid Data Format in Last Name");
 		click(custSearch.custLastName);
 		clear(custSearch.custLastName);
@@ -1180,7 +1181,7 @@ return true;
 	public boolean viewCustomerDetails(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
 		//View Customer Details
-		ExtentTestManager.startTest("View Customer Details");
+		ExtentSuccessMessage("View Customer Details");
 		Log.info("View Customer Details");
 		String validCustId = testdata.get("validCustId").toString();
 		click(custSearch.custId);
@@ -1208,7 +1209,7 @@ return true;
 		
 		//Verify Non-Editable Customer Details
 		
-		ExtentTestManager.startTest("Verify Non-Editable Customer Details");
+		ExtentSuccessMessage("Verify Non-Editable Customer Details");
 		Log.info("Verify Non-Editable Customer Details");
 		String tagName = driver.findElement(custSearch.nonEditableField).getTagName();
 		if(tagName.equalsIgnoreCase("input") || tagName.equalsIgnoreCase("textarea")) {
@@ -1248,7 +1249,7 @@ return true;
 		
 		
 		
-		ExtentTestManager.startTest("Attachment Popup");
+		ExtentSuccessMessage("Attachment Popup");
 		Log.info("Attachment Popup");
 		String custIDAttachments = testdata.get("custIDAttachments").toString();
 		click(custSearch.custId);
@@ -1287,7 +1288,7 @@ return true;
         		
         		
         		
-        		ExtentTestManager.startTest("Attachment Popup Image Display");
+        		ExtentSuccessMessage("Attachment Popup Image Display");
         		Log.info("Attachment Popup Image Display");
         		if(ElementDisplayed(custSearch.attachmentImg)) {
         			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Image is visible in the attachment popup");
@@ -1298,7 +1299,7 @@ return true;
         		
         		
         		
-        		ExtentTestManager.startTest("Rotate Button Functionality");
+        		ExtentSuccessMessage("Rotate Button Functionality");
         		Log.info("Rotate Button Functionality");
         		click(custSearch.attachmentRotate);
         		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on Rotate button.");
@@ -1311,7 +1312,7 @@ return true;
         		
         		
         		
-        		ExtentTestManager.startTest("Image Button Functionality");
+        		ExtentSuccessMessage("Image Button Functionality");
         		Log.info("Image Button Functionality");
         		click(custSearch.attachmentImg);
         		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the image button.");
@@ -1324,7 +1325,7 @@ return true;
         		
         		
         		
-        		ExtentTestManager.startTest("Close Button Functionality");
+        		ExtentSuccessMessage("Close Button Functionality");
         		Log.info("Close Button Functionality");	
         		click(custSearch.attachmentClose);
         		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on Close button.");
@@ -1337,7 +1338,7 @@ return true;
         		
         		
         		
-        		ExtentTestManager.startTest("Zoom Image Functionality");
+        		ExtentSuccessMessage("Zoom Image Functionality");
         		Log.info("Zoom Image Functionality");
         		
         		click(custSearch.attachmentImg);
@@ -1362,7 +1363,7 @@ return true;
 	
 	public boolean freeze(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
-		ExtentTestManager.startTest("Freeze Customer");
+		ExtentSuccessMessage("Freeze Customer");
 		Log.info("Freeze Customer");
 		
 		//freeze window
@@ -1394,7 +1395,7 @@ return true;
 		
 		
 		//Verify Customer Details in Freeze Window
-		ExtentTestManager.startTest("Verify Customer Details in Freeze Window");
+		ExtentSuccessMessage("Verify Customer Details in Freeze Window");
 		Log.info("Verify Customer Details in Freeze Window");
 		boolean flag1 = ElementDisplayed(custSearch.freezeCustId);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Verify the Presence of Column - Customer ID.");
@@ -1430,7 +1431,7 @@ return true;
 		
 		
 		//fAttempt to Freeze Without Checkbox
-		ExtentTestManager.startTest("Attempt to Freeze Without Checkbox");
+		ExtentSuccessMessage("Attempt to Freeze Without Checkbox");
 		Log.info("Attempt to Freeze Without Checkbox");
 		click(custSearch.freezeSubmitBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Submit button without checking the freeze checkbox");
@@ -1448,7 +1449,7 @@ return true;
 		
 		
 		//cancel freeze
-		ExtentTestManager.startTest("Cancel Freeze Operation");
+		ExtentSuccessMessage("Cancel Freeze Operation");
 		Log.info("Cancel");
 		click(custSearch.freezeCancelBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on Cancel button.");
@@ -1471,7 +1472,7 @@ return true;
 					String generatedCustId = generateCustId();
 		            
 		             //Enter Valid Freeze Remark and Submit
-		        	ExtentTestManager.startTest("Enter Valid Freeze Remark and Submit");
+		        	ExtentSuccessMessage("Enter Valid Freeze Remark and Submit");
 		        	click(custSearch.custClearBtn);
 		        	Log.info("Enter Valid Freeze Remark and Submit");
 		       		 input(custSearch.custId, generatedCustId);
@@ -1514,7 +1515,7 @@ return true;
 	
 	public boolean activate(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
-		ExtentTestManager.startTest("Select Customer and Open Active Window");
+		ExtentSuccessMessage("Select Customer and Open Active Window");
 		Log.info("Select Customer and Open Active Window");
 		
 		//Select Customer and Open Active Window
@@ -1545,7 +1546,7 @@ return true;
 		
 		
 		//Verify Customer Details Display
-		ExtentTestManager.startTest("Verify Customer Details Display");
+		ExtentSuccessMessage("Verify Customer Details Display");
 		Log.info("Verify Customer Details Display");
 		
 		boolean flag1 = ElementDisplayed(custSearch.freezeCustId);
@@ -1580,7 +1581,7 @@ return true;
 		ExtentTestManager.endTest();
 		
 		//Submit De-activation Without Date
-		ExtentTestManager.startTest("Submit Deactivation Without Date");
+		ExtentSuccessMessage("Submit Deactivation Without Date");
 		Log.info("Submit Deactivation Without Date");
 		click(custSearch.deactiveCheckBox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Check the Deactivate Checkbox");
@@ -1602,7 +1603,7 @@ return true;
 		
 		
 		//Deactivate a Customer with Valid Date
-//		ExtentTestManager.startTest("Deactivate a Customer with Valid Date");
+//		ExtentSuccessMessage("Deactivate a Customer with Valid Date");
 //		
 //		String freezeFutureDate = testdata.get("freezeFutureDate").toString();
 //		click(custSearch.activateDateTxtBox);
@@ -1629,7 +1630,7 @@ return true;
 			
 		
 		//Cancel De-activation Process
-		ExtentTestManager.startTest("Cancel Deactivation Process");
+		ExtentSuccessMessage("Cancel Deactivation Process");
 		Log.info("Cancel Deactivation Process");
 		click(custSearch.freezeCancelBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click Cancel button.");
@@ -1651,7 +1652,7 @@ return true;
 			 String generatedCustId = generateCustId();
 			 
 		             //Enter Valid Remark and Submit
-		        	ExtentTestManager.startTest("Deactivate a Customer with Valid Date");
+		        	ExtentSuccessMessage("Deactivate a Customer with Valid Date");
 		        	Log.info("Deactivate a Customer with Valid Date");
 		       		 input(custSearch.custId, generatedCustId);
 //		       		 click(custSearch.custActiveOnly);
@@ -1701,7 +1702,7 @@ return true;
 		
 		click(custSearch.custClearBtn);
 		
-		ExtentTestManager.startTest("Delete Customer - Authorized Customer");
+		ExtentSuccessMessage("Delete Customer - Authorized Customer");
 		Log.info("Delete Customer - Authorized Customer");
 		
 		String authorizedCustomer = generateCustId();
@@ -1737,7 +1738,7 @@ return true;
 		
 		//Verify Validation Message on Delete
 		
-		ExtentTestManager.startTest("Verify Validation Message on Delete");
+		ExtentSuccessMessage("Verify Validation Message on Delete");
 		Log.info("Verify Validation Message on Delete");
 		
 		click(custSearch.custClearBtn);
@@ -1767,7 +1768,7 @@ return true;
 		//cancel delete
 		click(custSearch.custClearBtn);
 		
-		ExtentTestManager.startTest("Cancel Deletion Confirmation");
+		ExtentSuccessMessage("Cancel Deletion Confirmation");
 		Log.info("Cancel Deletion Confirmation");
 		
 		input(custSearch.custId, authorizedCustomer);
@@ -1801,7 +1802,7 @@ return true;
 
 			//Click Delete Without Selection
 
-			ExtentTestManager.startTest("Click Delete Without Selection");
+			ExtentSuccessMessage("Click Delete Without Selection");
 			Log.info("Click Delete Without Selection");
 			
 			click(custSearch.custClearBtn);
@@ -1829,7 +1830,7 @@ return true;
 	public boolean mark(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		
 		//Select Customer and Mark - Valid Data
-		ExtentTestManager.startTest("Select Customer and Mark - Valid Data");
+		ExtentSuccessMessage("Select Customer and Mark - Valid Data");
 		Log.info("Select Customer and Mark - Valid Data");
 		click(custSearch.custProspectsOnly);
 		
@@ -1870,7 +1871,7 @@ return true;
 		
 		
 		//Verify Customer Mark Details
-		ExtentTestManager.startTest("Verify Customer Mark Details");
+		ExtentSuccessMessage("Verify Customer Mark Details");
 		Log.info("Verify Customer Mark Details");
 //		String custSrchCustIdTxtBoxValue = driver.findElement(custSearch.custSrchCustIdTxtBox).getAttribute("value");
 //		String custSrchDispNameTxtBoxValue = driver.findElement(custSearch.custSrchDispName).getAttribute("value");
@@ -1889,7 +1890,7 @@ return true;
 		
 		
 		//Leave Remarks Empty
-		ExtentTestManager.startTest("Leave Remarks Empty");
+		ExtentSuccessMessage("Leave Remarks Empty");
 		Log.info("Leave Remarks Empty");
 		clear(custSearch.markRemarkTxtBox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Verify Customer ID & Display Name.");
@@ -1910,7 +1911,7 @@ return true;
 		
 		
 		//Status Required
-		ExtentTestManager.startTest("Status Required");
+		ExtentSuccessMessage("Status Required");
 		Log.info("Status Required");
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Do not select any option in the Status drop down");
@@ -1937,7 +1938,7 @@ return true;
 		
 		
 		//Select Valid Status
-		ExtentTestManager.startTest("Select Valid Status");
+		ExtentSuccessMessage("Select Valid Status");
 		Log.info("Select Valid Status");
 //		click(custSearch.markStatusDropDown);
 		select("BANKRUPT",custSearch.markStatusDropDown);
@@ -1952,7 +1953,7 @@ return true;
 		
 		
 		//Invalid Date Format
-		ExtentTestManager.startTest("Invalid Date Format");
+		ExtentSuccessMessage("Invalid Date Format");
 		Log.info("Invalid Date Format");
 		String invalidDate = testdata.get("invalidDate").toString();
 		click(custSearch.markEffDate);
@@ -1975,7 +1976,7 @@ return true;
 		
 		
 		//Select Effect Date - Valid Past or Current Date
-		ExtentTestManager.startTest("Select Effect Date - Valid Past or Current Date");
+		ExtentSuccessMessage("Select Effect Date - Valid Past or Current Date");
 		Log.info("Select Effect Date - Valid Past or Current Date");
 		String freezeFutureDate = testdata.get("freezeFutureDate").toString();
 		click(custSearch.markEffDate);
@@ -1990,7 +1991,7 @@ return true;
 		
 
 		//Submit and Close Window
-		ExtentTestManager.startTest("Submit and Close Window");
+		ExtentSuccessMessage("Submit and Close Window");
 		Log.info("Submit and Close Window");
 		click(custSearch.markCloseBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click 'Close' button.");
@@ -2013,7 +2014,7 @@ return true;
 
 		//Verify Customer Expire Details
 		
-		ExtentTestManager.startTest("Verify Customer Expire Details");
+		ExtentSuccessMessage("Verify Customer Expire Details");
 		Log.info("Verify Customer Expire Details");
 		
 		click(custSearch.custClearBtn);
@@ -2120,7 +2121,7 @@ return true;
 		
 		//Verify IFSC Code After Branch Selection
 		
-		ExtentTestManager.startTest("Verify IFSC Code After Branch Selection");
+		ExtentSuccessMessage("Verify IFSC Code After Branch Selection");
 		Log.info("Verify IFSC Code After Branch Selection");
 		click(custSearch.bankDetailsBranchIdDropDown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on Branch ID drop down.");
@@ -2166,7 +2167,7 @@ return true;
 		
 		
 		//Add Customer Details to Grid
-				ExtentTestManager.startTest("Add Customer Details to Grid");
+				ExtentSuccessMessage("Add Customer Details to Grid");
 				Log.info("Add Customer Details to Grid");
 				input(custSearch.bankDetailsCustName, expireCustName);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter Customer Name in Cust Name field.");
@@ -2199,7 +2200,7 @@ return true;
 				
 				//Validate Retype Bank Acc No
 				
-				ExtentTestManager.startTest("Validate Retype Bank Acc No");
+				ExtentSuccessMessage("Validate Retype Bank Acc No");
 				Log.info("Validate Retype Bank Acc No");
 				click(custSearch.bankDetailsAccNumTxtBox);
 				
@@ -2228,7 +2229,7 @@ return true;
 				
 				//Error Handling for Empty Fields
 				
-				ExtentTestManager.startTest("Error Handling for Empty Fields");
+				ExtentSuccessMessage("Error Handling for Empty Fields");
 				Log.info("Error Handling for Empty Fields");
 				click(custSearch.expireSubmitBtn);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click 'Submit' button.");
@@ -2247,7 +2248,7 @@ return true;
 				
 				//Cancel and Redirect to Customer Search
 				
-				ExtentTestManager.startTest("Cancel and Redirect to Customer Search");
+				ExtentSuccessMessage("Cancel and Redirect to Customer Search");
 				Log.info("Cancel and Redirect to Customer Search");
 				click(custSearch.expireCloseBtn);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click 'Close' button.");
@@ -2374,7 +2375,7 @@ return true;
 					String generatedCustId = generateCustId();
 		             
 		             //Activate de-active member
-		        	ExtentTestManager.startTest("Activate Deactive Customer");
+		        	ExtentSuccessMessage("Activate Deactive Customer");
 //		        	customerSearchWindow();
 		        	Log.info("Activate Deactive Customer");
 		        	input(custSearch.custId, generatedCustId);
@@ -2399,7 +2400,7 @@ return true;
 		    		
 		        	
 		    		
-		    		ExtentTestManager.startTest("Activate Customer with Current Date");
+		    		ExtentSuccessMessage("Activate Customer with Current Date");
 		        	Log.info("Activate Customer with Current Date");
 		    		
 		    		click(custSearch.deactiveCheckBox);
@@ -2571,7 +2572,7 @@ return true;
 		             
 		             
 		             //Enter Remark and Submit
-		        	ExtentTestManager.startTest("Enter Remark and Submit");
+		        	ExtentSuccessMessage("Enter Remark and Submit");
 //		        	customerSearchWindow();
 		        	Log.info("Enter Remark and Submit");
 		        	input(custSearch.custId, generatedCustId);
@@ -2616,7 +2617,7 @@ return true;
 	
 	
 	public void deleteUnauthorisedCust (Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException{
-		ExtentTestManager.startTest("Delete Customer - Unauthorized Customer");
+		ExtentSuccessMessage("Delete Customer - Unauthorized Customer");
 		Log.info("Delete Customer - Unauthorized Customer");
 		
 		String generatedCustId = generateCustId();
@@ -2654,7 +2655,7 @@ return true;
 	
 	
 	public boolean logout() throws InterruptedException {
-		ExtentTestManager.startTest("Logout");
+		ExtentSuccessMessage("Logout");
 		Log.info("Logout");
 		
 		Thread.sleep(4000);
