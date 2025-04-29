@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-29T11:27:42 IST" name="Default suite" finished-at="2025-04-29T11:37:28 IST" duration-ms="586047">
+  <suite started-at="2025-04-29T16:55:26 IST" name="Default suite" finished-at="2025-04-29T16:59:58 IST" duration-ms="271239">
     <groups>
     </groups>
-    <test started-at="2025-04-29T11:27:42 IST" name="Default test" finished-at="2025-04-29T11:37:28 IST" duration-ms="586047">
-      <class name="com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit@25e2ab5a]" started-at="2025-04-29T11:27:42 IST" name="reference" finished-at="2025-04-29T11:27:42 IST" duration-ms="6" status="PASS">
+    <test started-at="2025-04-29T16:55:26 IST" name="Default test" finished-at="2025-04-29T16:59:58 IST" duration-ms="271239">
+      <class name="com.test.Debenture_Application.AllScenario_Debenture_Application_Transfer">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.Debenture_Application.AllScenario_Debenture_Application_Transfer@1c3b9394]" started-at="2025-04-29T16:55:26 IST" name="reference" finished-at="2025-04-29T16:55:26 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit@25e2ab5a]" started-at="2025-04-29T11:27:43 IST" name="customerRegister" data-provider="TestData" finished-at="2025-04-29T11:37:28 IST" duration-ms="585252" status="PASS">
+        <test-method signature="customerRegister(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.Debenture_Application.AllScenario_Debenture_Application_Transfer@1c3b9394]" started-at="2025-04-29T16:55:27 IST" name="customerRegister" data-provider="TestData" finished-at="2025-04-29T16:59:58 IST" duration-ms="270491" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{AccountNo=1, Amount=200,000.00, customerID=102000000001, Duration=5, Foliono=5, Frequency=2, InterestTransferAmount=1,000.00, LedgerNo=11, Lien Amount=1,000.00, Lien Remark=test01, NomineeCustomerID=102000000084, OperatorCustomerID=102000000099, OperatorRemark=Adding new operator, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, ReferenceBy=NITHIN, Relation/Desig.=Father, Remark=test, Run=Yes, TestScenario=AccountOpening_FixedDeposit, Transactionid=617339}]]>
+                <![CDATA[{CustID=102000000001, customerName=A, DematAccNo=923914143, NomineeName=I, NoofUnit=20, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Debenture_Application}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@4c98a6d5]]>
+                <![CDATA[org.testng.TestRunner@5965844d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- customerRegister -->
-      </class> <!-- com.test.Customer.AllScenarios_Cust_AccountOpening_FixedDeposit -->
+      </class> <!-- com.test.Debenture_Application.AllScenario_Debenture_Application_Transfer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
