@@ -1,3 +1,4 @@
+
 package com.Page_GeneralOpening;
 
 import org.openqa.selenium.By;
@@ -149,20 +150,5 @@ public class PageRepositary_GeneralOpening_Cash_Transfer {
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-}
 
-	
+}

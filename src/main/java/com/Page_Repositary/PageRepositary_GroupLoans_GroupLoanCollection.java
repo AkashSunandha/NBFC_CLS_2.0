@@ -52,12 +52,6 @@ public class PageRepositary_GroupLoans_GroupLoanCollection {
 
 //	public By variable = By.xpath("");
 
-//<<<<<<< HEAD
-//}
-//=======
-//
-//
-//}
-//>>>>>>> 83ee7e2c024bb7837d2c073a108478dba38cb369
+
 
 }

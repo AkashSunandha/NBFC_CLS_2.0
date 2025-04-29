@@ -1,3 +1,4 @@
+
 package com.Page_Repositary;
 
 import org.openqa.selenium.By;
@@ -91,22 +92,6 @@ public class PageRepositary_Bond_Application {
 	
 	public By go = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnGo\"]");
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }
