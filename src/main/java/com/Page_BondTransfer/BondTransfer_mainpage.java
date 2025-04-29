@@ -46,16 +46,6 @@ public class BondTransfer_mainpage extends Base_Class
 //	private static long lastGeneratedNumber = 100000000000L;
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
 	//PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
-
-	
-	//public String spPAN = "EXEC GenerateNextPAN"; 
-	//public String clmnNamPAN = "generated_pan";
-	
-	/*public String spAadhaar = "EXEC GenerateNextAadharNumber";
-	public String clmnNamAadhaar = "generated_aadhar_number";
-	
-	public String spMobileNum = "EXEC GenerateNextMobileNumber";
-	public String clmnNamMobileNum = "generated_mobile_number";*/
 	
 	
 	public  String generateUniqueId(String query,String columnName) throws ClassNotFoundException 
