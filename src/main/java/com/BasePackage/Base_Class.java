@@ -1,6 +1,6 @@
+
 package com.BasePackage;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.CallableStatement;
@@ -15,29 +15,23 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import com.Utility.Log;
-import com.aventstack.extentreports.Status;
-import com.extentReports.ExtentTestManager;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.Page_Repositary.PageRepositary_Cust_CustSearch;
+import com.Page_Customer.Customer_CustomerSearch;
 import com.Utility.Log;
+import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -46,13 +40,27 @@ public class Base_Class {
 
 	public static RemoteWebDriver driver = null;
 	
+	public String spPAN = "GenerateNextPAN";
+    public String clmnNamPAN = "generated_pan";
+    
+    public String spAadhaar = "GenerateNextAadharNumber";
+    public String clmnNamAadhaar = "generated_aadhar_number";
+    
+    public String spMobileNum = "GenerateNextMobileNumber";
+    public String clmnNamMobileNum = "generated_mobile_number";
+    
+    public String spIdentityNo = "GenerateNextIdentityNo";
+    public String clmnNamIdentityNo = "generated_identity_no";
+
+	
 	public WebDriver getDriver() {
 		return driver;
 	} 
 	
-	private static By L_username = By.id("Username");
-	private static By L_password = By.id("Password");
-	private static  By L_SignIn = By.xpath("//span[text()=' Sign In ']");
+	private static By L_username = By.id("txtUserName_txt");
+	private static By L_password = By.id("txtPassword_txt");
+	//private static  By L_SignIn = By.xpath("//span[text()=' Sign In ']");
+	private static  By L_SignIn = By.id("imgbtnSubmit");
 	private static By DesktopNot = By.xpath("//button[text()='OK']");
 	//private static By L_LogOut= By.xpath("//div[@class='user position ng-tns-c3-15 ng-star-inserted']");
 	//private static By L_LogAlert= By.xpath("//button[text()='Sign out']");
@@ -65,7 +73,7 @@ public class Base_Class {
 		properties.load(File);
 		return properties;
 	}
-	
+
 	
 	
 	public void SetUp() throws IOException, InterruptedException {
@@ -87,20 +95,27 @@ public class Base_Class {
 			driver = new ChromeDriver(options);		
 			break;
 
-		case "FIREFOX":
-			
-			System.setProperty("webdriver.gecko.driver","D:\\Testing\\geckodriver.exe");
-			File pathBinary = new File("C:\\Users\\akash.venkatesh\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
-			FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);   
-			DesiredCapabilities desired = DesiredCapabilities.firefox();
-			FirefoxOptions options1 = new FirefoxOptions();
-			desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options1.setBinary(firefoxBinary));
-			driver = new FirefoxDriver(options1);
+//		case "FIREFOX":
+//			
+//			System.setProperty("webdriver.gecko.driver","D:\\Testing\\geckodriver.exe");
+//			File pathBinary = new File("C:\\Users\\akash.venkatesh\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
+//			FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);   
+//			DesiredCapabilities desired = DesiredCapabilities.firefox();
 //			FirefoxOptions options1 = new FirefoxOptions();
-//			WebDriverManager.firefoxdriver().setup();
-//			//System.setProperty("webdriver.gecko.driver", "./Drivers\\geckodriver.exe");
+//			desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options1.setBinary(firefoxBinary));
 //			driver = new FirefoxDriver(options1);
-			ExtentTestManager.getTest().log(Status.PASS, "Firefox Driver & Application Launched successfully.");
+////			FirefoxOptions options1 = new FirefoxOptions();
+////			WebDriverManager.firefoxdriver().setup();
+////			//System.setProperty("webdriver.gecko.driver", "./Drivers\\geckodriver.exe");
+////			driver = new FirefoxDriver(options1);
+//			ExtentTestManager.getTest().log(Status.PASS, "Firefox Driver & Application Launched successfully.");
+//			break;
+			
+			
+		case "FIREFOX":
+
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();			
 			break;
 
 		default:
@@ -117,15 +132,23 @@ public class Base_Class {
 //		Thread.sleep(9000);
 		Pagetitle = driver.getTitle();
 		Log.info("Title is displayed : "+Pagetitle);
+	
 //		input(L_username, UserName);
+//		Log.info("Username is added");
 //		input(L_password, Password);
+//		Log.info("Password is added");
 //		click(L_SignIn);
+//		Log.info("Signed In");
 //		Thread.sleep(4000);
 //		click(DesktopNot);
 //		Thread.sleep(1000);
 	}
 
-
+	
+	public static String getValue(By path) {
+		return driver.findElement(path).getText(); 
+	}
+	
 	public static  void input(By element, String Value) throws InterruptedException {
 		Thread.sleep(1000);
 		WebDriverWait wait2 = new WebDriverWait(driver, 30);
@@ -145,8 +168,8 @@ public class Base_Class {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		Select selWeekDayDropDown = new Select(driver.findElement(element));
-		selWeekDayDropDown.selectByVisibleText(value);
-		
+		//selWeekDayDropDown.selectByVisibleText(value);
+		selWeekDayDropDown.selectByValue(value);
 	}
 
 	public static void clear(By element)throws InterruptedException
@@ -157,12 +180,12 @@ public class Base_Class {
 		Thread.sleep(2000);
 	}
 
-
-	public void AcceptAlert()
+	public static void AcceptAlert()
 	{
 		driver.switchTo().alert().accept();
 		//driver.switchTo().alert().dismiss();	
 	}
+	
 	public static void DismissAlert()
 	{
 		//driver.switchTo().alert().accept();
@@ -227,16 +250,16 @@ public class Base_Class {
 	}
 	
 	
-//	public static void UploadFile(By locator)
-//	{
-//		WebElement uploadElement = driver.findElement(locator);
-//		 String path=System.getProperty("user.dir");
-//		 Log.info("path is :" + path);
-//		//System.out.Directory.GetParent(this.GetType().Assembly.Location).ToString();
-//		uploadElement.sendKeys(path);
-//		
-//		
-//	}
+	public static void UploadFile(By locator)
+	{
+		WebElement uploadElement = driver.findElement(locator);
+		 String path=System.getProperty("user.dir");
+		 Log.info("path is :" + path);
+		//System.out.Directory.GetParent(this.GetType().Assembly.Location).ToString();
+		uploadElement.sendKeys(path);
+		
+		
+	}
 	public static boolean checkElementEnableOrDisable(By locator)
 	{
 		WebElement element = driver.findElement(locator);
@@ -266,10 +289,7 @@ public class Base_Class {
 	}
 	
 	
-
-	
-	
-	public static  void DatabaseConnector() throws ClassNotFoundException {
+public static  void DatabaseConnector() throws ClassNotFoundException {
 		
 		
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -278,46 +298,153 @@ public class Base_Class {
 		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
 
 		
-//		try(Connection connection = DriverManager.getConnection(Url,UserName,Password)){
-//		//con = DriverManager.getConnection(Url,UserName,Password);
-//		System.out.println("Class: Common Method: DatabaseConnector: Connected");
-//		
-//		//Execute Query for getting approval
-//		CallableStatement callableStatement = connection.prepareCall("{call cl}");
-//		//callableStatement.setLong(1, 9999999991L);
-//		//System.out.println("Stored procedure called with parameter: 9999999991");
-//		
-//		 // Execute stored procedure
-//        callableStatement.executeQuery();
-//        System.out.println("Stored procedure executed successfully.");
-////        while (resultSet.next()) {
-////            String column1 = resultSet.getString("O");
-////            System.out.println("OTP : " + column1  );
-////
-////		
-////        }
-		String query = "cl;";
-        try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
-	             Statement statement = connection.createStatement();
-	             ResultSet resultSet = statement.executeQuery(query)) {
-
-	        } catch (SQLException e) {
-	            System.out.println("Error executing the SQL query.");
-	            //e.printStackTrace();
-	        }
-        
-
-        
+		try(Connection connection = DriverManager.getConnection(Url,UserName,Password)){
+		//con = DriverManager.getConnection(Url,UserName,Password);
+		System.out.println("Class: Common Method: DatabaseConnector: Connected");
 		
+		//Execute Query for getting approval
+		CallableStatement callableStatement = connection.prepareCall("{call cl}");
+		//callableStatement.setLong(1, 9999999991L);
+		//System.out.println("Stored procedure called with parameter: 9999999991");
+		
+		 // Execute stored procedure
+        callableStatement.executeQuery();
+//        while (resultSet.next()) {
+//            String column1 = resultSet.getString("O");
+//            System.out.println("OTP : " + column1  );
+//
+//		
+//        }
+		
+	}catch(Exception e)
+	{
+		System.out.println("Class: Common Method: DatabaseConnector: Not Connected");
+		//e.printStackTrace();
+	
+	}  
+}
+	
+	
+//	public static  void DatabaseConnector() throws ClassNotFoundException {
+//		
+//		
+//		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+//		String UserName = "sqa";
+//		String Password = "SPQA@sql2019" ;
+//		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
+//
+//		
+////		try(Connection connection = DriverManager.getConnection(Url,UserName,Password)){
+////		//con = DriverManager.getConnection(Url,UserName,Password);
+////		System.out.println("Class: Common Method: DatabaseConnector: Connected");
+////		
+////		//Execute Query for getting approval
+////		CallableStatement callableStatement = connection.prepareCall("{call cl}");
+////		//callableStatement.setLong(1, 9999999991L);
+////		//System.out.println("Stored procedure called with parameter: 9999999991");
+////		
+////		 // Execute stored procedure
+////        callableStatement.executeQuery();
+////        System.out.println("Stored procedure executed successfully.");
+//////        while (resultSet.next()) {
+//////            String column1 = resultSet.getString("O");
+//////            System.out.println("OTP : " + column1  );
+//////
+//////		
+//////        }
+//		String query = "cl;";
+//        try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
+//	             Statement statement = connection.createStatement();
+//	             ResultSet resultSet = statement.executeQuery(query)) {
+//
+//	        } catch (SQLException e) {
+//	            System.out.println("Error executing the SQL query.");
+//	            //e.printStackTrace();
+//	        }
+//        
+//
+//        
+//		
 //	}catch(Exception e)
 //	{
 //		System.out.println("Class: Common Method: DatabaseConnector: Not Connected");
 //		//e.printStackTrace();
 //	
 //	}
-   
-}
+//   
+//}
 	
+	 public  String generateUniqueId(String query,String columnName) throws ClassNotFoundException {
+	        // Method that returns the first customer ID (String) from the database
+	         // Database connection details
+	 // Database connection details
+	 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+	        String UserName = "sqa";
+	        String Password = "SPQA@sql2019" ;
+	        String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
+
+	        
+	         String value = null; // Declare and initialize the return variable
+
+	         // Establish the connection to the database
+	         try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
+	              Statement statement = connection.createStatement();
+	              ResultSet resultSet = statement.executeQuery(query)) {
+	              
+	              if (resultSet.next()) {
+	                     value = resultSet.getString(columnName); // Get the first Cust_ID
+	                 System.out.println("Generated Unique ID: " + value);
+	             } else {
+	                 System.out.println("Unique ID not generated.");
+	             }
+
+	         } catch (SQLException e) {
+	             System.out.println("Error executing the SQL query or processing the result set.");
+	             e.printStackTrace();
+	         }
+
+	         return value; // Return the firstCustId
+	     }
+
+		
+		
+		
+	public static  void DatabaseConnector1() throws ClassNotFoundException {
+			
+			
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			String UserName = "sqa";
+			String Password = "SPQA@sql2019" ;
+			String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
+
+			
+			try(Connection connection = DriverManager.getConnection(Url,UserName,Password)){
+			//con = DriverManager.getConnection(Url,UserName,Password);
+			System.out.println("Class: Common Method: DatabaseConnector: Connected");
+			
+			//Execute Query for getting approval
+			CallableStatement callableStatement = connection.prepareCall("update users set RecordStatus=3");
+			
+			//callableStatement.setLong(1, 9999999991L);
+			//System.out.println("Stored procedure called with parameter: 9999999991");
+			
+			 // Execute stored procedure
+	        callableStatement.executeQuery();
+	        System.out.println("Query Executed");
+//	        while (resultSet.next()) {
+//	            String column1 = resultSet.getString("O");
+//	            System.out.println("OTP : " + column1  );
+	//
+//			
+//	        }
+			
+		}catch(Exception e)
+		{
+			System.out.println("Class: Common Method: DatabaseConnector: Not Connected");
+			//e.printStackTrace();
+		
+		}  
+	}
 	
 	
     public String dateConversion(String inputDate) throws ParseException {
@@ -400,5 +527,98 @@ public class Base_Class {
         return element.getAttribute("value").equals(input);
     }
     
+    public static void ExtentSuccessMessage(String strPassSuccessMessage) {
+		ExtentTestManager.getTest().log(Status.PASS, strPassSuccessMessage);
+	}
+ 
+	public static void ExtentErrorMessage(String strPassErrorMessage) {
+		ExtentTestManager.getTest().log(Status.FAIL, strPassErrorMessage);
+	}
+	
+	public static String GetElementText(By locator) throws InterruptedException {
+		 
+		String stxt = null;
+		WebElement element = driver.findElement(locator);
+		if (element.isDisplayed()) {
+			stxt = element.getText();
+			Log.info("System able to found the element :" + locator);
+		} else {
+			Log.error("System not able to found the element :" + locator);
+		}
+		return stxt;
+	}
+	
+	public void PageRefresh() {
+		driver.navigate().refresh();
+	}
+	
+	public static String GetElementAttribute(By locator,String Values)
+	{
+		WebElement element = driver.findElement(locator);
+		String flags = element.getAttribute(Values);
+		return flags;
+	}
+	
+	public static boolean ElementEnableOrDisable(By locator)
+	{
+		WebElement element = driver.findElement(locator);
+		Boolean flag = element.isEnabled();
+		return flag;
+	}
+	
+	public static  void INclick(By element) throws InterruptedException {
+		 
+		//Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
+		//Thread.sleep(2000);
+ 
+	}
+	
+	public static  void waitTillLoaderDisappear(By element) throws InterruptedException {
+		 
+		//Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
+		//Thread.sleep(2000);
+ 
+	}
+	
+    
+    
+//	public  String generateUniqueId(String query,String columnName) throws ClassNotFoundException {
+//		 // Method that returns the first customer ID (String) from the database
+//	        // Database connection details
+//      // Database connection details
+//      Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+//		String UserName = "sqa";
+//		String Password = "SPQA@sql2019" ;
+//		String Url = "jdbc:sqlserver://192.168.32.32\\QA;DatabaseName=NBFC_adithyan;encrypt=true;trustServerCertificate=true";
+//
+//		
+//	        String value = null; // Declare and initialize the return variable
+//
+//	        // Establish the connection to the database
+//	        try (Connection connection = DriverManager.getConnection(Url, UserName, Password);
+//	             Statement statement = connection.createStatement();
+//	             ResultSet resultSet = statement.executeQuery(query)) {
+//	        	
+//	        	if (resultSet.next()) {
+//	        		value = resultSet.getString(columnName); // Get the first Cust_ID
+//	                System.out.println("Generated Unique ID: " + value);
+//	            } else {
+//	                System.out.println("Unique ID not generated.");
+//	            }
+//
+//	        } catch (SQLException e) {
+//	            System.out.println("Error executing the SQL query or processing the result set.");
+//	            e.printStackTrace();
+//	        }
+//
+//	        return value; // Return the firstCustId
+//	    }//end
+    
     
 }
+
+

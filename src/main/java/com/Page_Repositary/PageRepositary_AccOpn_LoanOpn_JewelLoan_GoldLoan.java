@@ -2,12 +2,16 @@ package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
+
 public class PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan { 
 
 	public By accOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Account Opening']/preceding-sibling::div");
 	public By loanOpeningTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Loan Opening']/preceding-sibling::div");
 	public By jewelLoanTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Jewel Loan ']/preceding-sibling::div");
 	public By goaldLoanTab = By.xpath("//a[text()='GOLD LOAN  (21001)']");
+
+
+                                  
 	
 	//Account Info
 	public By aiCustSrchBtn = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[8]/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]/table/tbody/tr/td[2]/a/img");
@@ -61,7 +65,7 @@ public class PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan {
 	public By ldROITxtBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpLoanDet_lstLoanDetail_ctrl0_LDF_txtROI_txt\"]");
 	public By ldDueDateTxtBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbLoan_tpLoanDet_lstLoanDetail_ctrl0_LDF_dtDueDate_txt\"]");
 	public By ldTransModeDropdown = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstOtherInfo_ctrl0_LIF1_ddlTransactionMode_ddl\"]");
-//	
+//	                                                
 	public By saveBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSave\"]");
 	public By summaryPage = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_txtAccountDisplayName\"]");
 	public By summaryCloseBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnClose\"]");
