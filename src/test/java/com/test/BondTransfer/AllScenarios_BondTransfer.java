@@ -42,6 +42,7 @@ public class AllScenarios_BondTransfer extends Base_Class{
 	}
 	
 	@Test(dataProvider = "TestData")
+	
 	public void bondtransfer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException
 	{
 		try {
