@@ -66,6 +66,8 @@ import com.Page_Repositary.PageRepositary_GroupLoans_CentreGroupRegistration;
 			private Map<Object, Object> testdata;	
 			
 
+			public String sp = "Exec GetDebAcNo 102,90068";
+			public String clmnNam = "AcNO";
 			
 			
 			public  String generateUniqueId(String query,String columnName) throws ClassNotFoundException {
@@ -373,18 +375,18 @@ import com.Page_Repositary.PageRepositary_GroupLoans_CentreGroupRegistration;
 				
 			}
 
+			
 			// account number field entry
 			
 			public boolean  accnumber(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 				// TODO Auto-generated method stub
 			
-				
 				ExtentTestManager.startTest("Enter account number");
 				Log.info("Enter account number");
 				
-				String bankDetailsAccNum = testdata.get("accnumber").toString();
-				
+				String bankDetailsAccNum = generateUniqueId(sp,clmnNam);
 				String lastthreedigit=bankDetailsAccNum.substring(bankDetailsAccNum.length() - 3);
+				System.out.println("lastthreedigit: " + lastthreedigit);
 				
 				input(IntCash.bankDetailsAccNumTxtBox, lastthreedigit);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter Bank Account number in BankAccNo field.");
@@ -393,7 +395,6 @@ import com.Page_Repositary.PageRepositary_GroupLoans_CentreGroupRegistration;
 				click(IntCash.GoButton);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the 'Go' button.");
 				Log.info("Step:01 - Click the 'Go' button.");
-				
 				
 				ExtentTestManager.endTest();
 				return true;
