@@ -31,9 +31,10 @@ public class PageRepositary_Jewel_Loan_Closure_Cash_Transfer {
 
 	// another user
 
-	public By authandcancel = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/div");
+	public By authandcancel = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[9]/div");
 	public By Clickcashierauth = By
-			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/ul/li[8]/a");
+			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[9]/ul/li[8]/a");
+	
 	public By clickrefresh = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnRefresh\"]");
 	public By checkbox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect\"]");
 	public By transIdd = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl1_lbllstTransID\"]");
@@ -42,7 +43,7 @@ public class PageRepositary_Jewel_Loan_Closure_Cash_Transfer {
 	
 	//manager
 	
-	public By managertab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/ul/li[4]/a");
+	public By managertab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[9]/ul/li[7]/a");
 	public By cashtab = By.xpath("//*[@id=\"__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash\"]");
 	public By refreshtab = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnRefresh\"]");
 	public By checkboxman = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect\"]");

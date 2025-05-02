@@ -136,18 +136,15 @@ public class Customer_CustomerSearch extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter User Name in Name field.");
 		Log.info("Step:01 - Enter User Name in Name field.");
 		
-		select("TRIVANDRUM",custSearch.formBranchName);
+		/*select("TRIVANDRUM",custSearch.formBranchNameTrivandrum);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select a Branch Name from the Dropdown.");
-		Log.info("Step:02 - Select a Branch Name from the Dropdown.");
+		Log.info("Step:02 - Select a Branch Name from the Dropdown.");*/
 		
 		String pcRegFormPcName = testdata.get("pcRegFormPcName").toString();	
 		input(custSearch.formComputerName, pcRegFormPcName);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter PC Name in Name field.");
 		Log.info("Step:03 - Enter PC Name in Name field.");
-
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter PC Name in Name field.");
-		Log.info("Step:02 - Enter PC Name in Name field.");
 		
 		click(custSearch.formBranchName);
 		click(custSearch.formBranchNameTrivandrum);
@@ -239,8 +236,8 @@ public class Customer_CustomerSearch extends Base_Class{
 //					String loginValidPassword = testdata.get("loginValidPassword").toString();
 					input(custSearch.loginPasswrd, Password);
 
-				//	String loginUserName = testdata.get("loginUserName").toString();
-		String loginUserName=configloader().getProperty("UserName");
+				/*	String loginUserName = testdata.get("loginUserName").toString();
+		            String loginUserName=configloader().getProperty("UserName");
 					input(custSearch.loginUserName, loginUserName);
 					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");
 					Log.info("Step:01 - Enetered valid User Name");
@@ -248,7 +245,7 @@ public class Customer_CustomerSearch extends Base_Class{
 					
 				//	String loginValidPassword = testdata.get("loginValidPassword").toString();
 					String loginValidPassword=configloader().getProperty("Password");
-					input(custSearch.loginPasswrd, loginValidPassword);
+					input(custSearch.loginPasswrd, loginValidPassword);*/
 					
 
 					ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Eneter valid Password");
