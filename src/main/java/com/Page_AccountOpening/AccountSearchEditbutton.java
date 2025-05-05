@@ -46,7 +46,7 @@ public class AccountSearchEditbutton extends Base_Class {
 	}
 
 	public void ClickOnSearchButton() throws InterruptedException {
-		ExtentTestManager.startTest("Clicked on Search Button");
+		ExtentSuccessMessage("Clicked on Search Button");
 		click(AccountSearchRepo.SearchButton);
 		ExtentSuccessMessage("Clicked on Search Button");
 		Log.info("Clicked on Search Button");
@@ -54,7 +54,7 @@ public class AccountSearchEditbutton extends Base_Class {
 	}
 
 	public void ClickOnClearButton() throws InterruptedException {
-		ExtentTestManager.startTest("Clicked on Clear Button");
+		ExtentSuccessMessage("Clicked on Clear Button");
 		click(AccountSearchRepo.ClearButton);
 		ExtentSuccessMessage("Clicked on Clear Button");
 		Log.info("Clicked on Clear Button");
@@ -67,7 +67,7 @@ public class AccountSearchEditbutton extends Base_Class {
 		if(ElementDisplayed(AccountSearchRepo.CollapseAll)) {
 			click(AccountSearchRepo.CollapseAll);
 		}
-		ExtentTestManager.startTest("Navigate to Account Search Window");
+		ExtentSuccessMessage("Navigate to Account Search Window");
 		Log.info("Navigate to Account Search Window");
 		ClickOnaccountOpeningTab();
 		ClickOnSearchTab();
@@ -76,7 +76,7 @@ public class AccountSearchEditbutton extends Base_Class {
 	}
 
 	public void SelectAllDropdown() throws InterruptedException {	
-		ExtentTestManager.startTest("Select Group, Subgroup, and Product");
+		ExtentSuccessMessage("Select Group, Subgroup, and Product");
 		Log.info("Select Group, Subgroup, and Product");
 		SelectGroupDropdown();
 		SelectSubGroupDropdown();
@@ -155,7 +155,7 @@ public class AccountSearchEditbutton extends Base_Class {
 		ExtentTestManager.endTest();
 		ClickOnClearButton();
 		ExtentTestManager.endTest();
-		ExtentTestManager.startTest("Select Group, Subgroup, and Product");
+		ExtentSuccessMessage("Select Group, Subgroup, and Product");
 		Log.info("Select Group, Subgroup, and Product");
 		SelectAllDropdown();
 		EnterHouseName(testdata);
@@ -238,7 +238,7 @@ public class AccountSearchEditbutton extends Base_Class {
 
 	public void SelectFirstCheckBox() throws InterruptedException {			
 		if(ElementDisplayed(AccountSearchRepo.FirstCheckBox)) {
-			ExtentTestManager.startTest("Verify checkbox presence");
+			ExtentSuccessMessage("Verify checkbox presence");
 			click(AccountSearchRepo.FirstCheckBox);
 			ExtentSuccessMessage("Selected the First Check Box");
 			Log.info("Selected the First Check Box");
@@ -339,7 +339,7 @@ public class AccountSearchEditbutton extends Base_Class {
 	}
 
 	public void SelectGroupDropdown() throws InterruptedException {
-		//		ExtentTestManager.startTest("Select Group Dropdown");
+		//		ExtentSuccessMessage("Select Group Dropdown");
 		//		Log.info("Select Group Dropdown");
 		select("Loan",AccountSearchRepo.GroupDropdown);
 		ExtentSuccessMessage( "Step:01 -  Choose 'Loan' for Group Dropdown.");
@@ -348,7 +348,7 @@ public class AccountSearchEditbutton extends Base_Class {
 	}
 
 	public void SelectSubGroupDropdown() throws InterruptedException {
-		//		ExtentTestManager.startTest("Select Sub Group Dropdown");
+		//		ExtentSuccessMessage("Select Sub Group Dropdown");
 		//		Log.info("Select Sub Group Dropdown");
 		select("OTHER LOANS",AccountSearchRepo.SubGroupDropdown);
 		ExtentSuccessMessage( "Step:01 -  Choose 'OTHER LOANS' for Sub Group Dropdown.");
@@ -356,7 +356,7 @@ public class AccountSearchEditbutton extends Base_Class {
 		//		ExtentTestManager.endTest();	
 	}
 	public void SelectProductDropdown() throws InterruptedException {
-		//		ExtentTestManager.startTest("Select Product Dropdown");
+		//		ExtentSuccessMessage("Select Product Dropdown");
 		//		Log.info("Select Product Dropdown");
 		System.out.println("debug");
 		click(AccountSearchRepo.ProductDropdown);
@@ -367,7 +367,7 @@ public class AccountSearchEditbutton extends Base_Class {
 	}
 	public void EnterName (Map<Object, Object> testdata) throws InterruptedException {
 
-		ExtentTestManager.startTest("Enter an alphabet in the name field.");
+		ExtentSuccessMessage("Enter an alphabet in the name field.");
 		Log.info("Enter an alphabet in the name field.");
 		String Alphabet=testdata.get("Alphabet").toString();
 		clear(AccountSearchRepo.Name);
@@ -379,7 +379,7 @@ public class AccountSearchEditbutton extends Base_Class {
 	}
 
 	public void EnterHouseName(Map<Object, Object> testdata) throws InterruptedException {
-		ExtentTestManager.startTest("Enter an alphabet in the House Name field.");
+		ExtentSuccessMessage("Enter an alphabet in the House Name field.");
 		Log.info("Enter an alphabet in the House Name field.");
 		String Alphabet=testdata.get("HouseName").toString();
 		clear(AccountSearchRepo.HouseName);
@@ -392,7 +392,7 @@ public class AccountSearchEditbutton extends Base_Class {
 
 	public String generateUniqueCode(String query, String columnName) throws ClassNotFoundException {
 
-		ExtentTestManager.startTest("Enter Loan Account Number");
+		ExtentSuccessMessage("Enter Loan Account Number");
 		Log.info("Enter Loan Account Number");
 
 		{
@@ -425,10 +425,10 @@ public class AccountSearchEditbutton extends Base_Class {
 	}
 	public void EnterAccNo(String AccNo) throws InterruptedException {			
 		if(ElementDisplayed(AccountSearchRepo.AccNoField)) {
-			ExtentTestManager.startTest("Verify the presence of 'Account no' text field");
+			ExtentSuccessMessage("Verify the presence of 'Account no' text field");
 			ExtentTestManager.endTest();
-			ExtentTestManager.startTest("Enter an Valid Account no in the field.");
-			Log.info("Enter an Valid Account no in the field.");
+			ExtentSuccessMessage("Enter an Valid Account no in the field."+AccNo);
+			Log.info("Enter an Valid Account no in the field."+AccNo);
 			clear(AccountSearchRepo.AccNoField);
 			click(AccountSearchRepo.AccNoField);
 			input(AccountSearchRepo.AccNoField,AccNo);
@@ -440,7 +440,7 @@ public class AccountSearchEditbutton extends Base_Class {
 	}
 
 	public void EnterRemark(String AccNo) throws InterruptedException {
-		ExtentTestManager.startTest("Enter an Valid Remark in the field.");
+		ExtentSuccessMessage("Enter an Valid Remark in the field.");
 		Log.info("Enter an Valid Remark  in the field.");
 		String Get=GetElementAttribute(AccountSearchRepo.Agentnamefield, "value");
 		System.out.println("Get:-"+Get);
@@ -455,7 +455,7 @@ public class AccountSearchEditbutton extends Base_Class {
 	public void authorizeOthers(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentSuccessMessage("Login with Another User");
 		Log.info("Login with Another User");
 
 		click(AccountSearchRepo.custSignOut);
@@ -479,7 +479,7 @@ public class AccountSearchEditbutton extends Base_Class {
 
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentSuccessMessage("Manager Authorization - Transfer Tab");
 		Log.info("Manager Authorization - Transfer Tab");
 
 		click(AccountSearchRepo.autorizeAndCancelTab);
@@ -500,7 +500,7 @@ public class AccountSearchEditbutton extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentSuccessMessage("Refresh Loan Opening Entry");
 		Log.info("Refresh Loan Opening Entry");
 
 		click(AccountSearchRepo.refreshBtn);
@@ -523,7 +523,7 @@ public class AccountSearchEditbutton extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentSuccessMessage("Authorize Loan Entry as Manager");
 		Log.info("Authorize Loan Entry as Manager");
 
 		click(approveCheckBoxTransfer);

@@ -9,7 +9,7 @@ import com.BasePackage.Base_Class;
 import com.Page_AccountOpening.LoanOpening_DepositOpn_DepositLoan;
 import com.extentReports.ExtentTestManager;
 
-public class AllScenarios_AccOpn_LoanOpn_DepoOpn_DepoLoan_TRANSFER {
+public class AllScenarios_AccOpn_LoanOpn_DepoOpn_DepoLoan_TRANSFER extends Base_Class {
 	Base_Class Base_Class =new Base_Class();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	LoanOpening_DepositOpn_DepositLoan bondCumulativeMthds = new LoanOpening_DepositOpn_DepositLoan();
@@ -18,7 +18,7 @@ public class AllScenarios_AccOpn_LoanOpn_DepoOpn_DepoLoan_TRANSFER {
 	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 
 		//TC No. - 01 --> Application launch
-		ExtentTestManager.startTest("Application launch");
+		ExtentSuccessMessage("Application launch");
 		Base_Class.SetUp();
 		ExtentTestManager.endTest();
 		Thread.sleep(2000);

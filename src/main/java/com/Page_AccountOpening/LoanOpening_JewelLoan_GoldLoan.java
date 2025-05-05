@@ -28,7 +28,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	 
 	public void openGoaldLoanWindow() throws InterruptedException {
 		
-		ExtentTestManager.startTest("Access Gold Loan Opening Window");
+		ExtentSuccessMessage("Access Gold Loan Opening Window");
 		Log.info("Access Gold Loan Opening Window");
 		
 		click(goaldLoanRepo.accOpeningTab);
@@ -64,7 +64,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Name Field Validation
-		ExtentTestManager.startTest("Name Field Validation");
+		ExtentSuccessMessage("Name Field Validation");
 		Log.info("Name Field Validation");
 		
 		click(goaldLoanRepo.aiCustSrchBtn);
@@ -93,7 +93,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	    		
 	    		
 	    		//Search and Select a Customer
-	    		ExtentTestManager.startTest("Search and Select a Customer");
+	    		ExtentSuccessMessage("Search and Select a Customer");
 	    		Log.info("Search and Select a Customer");
 	    		
 	    		click(goaldLoanRepo.popUpWndSrchBtn);
@@ -126,7 +126,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Add Selected Customer
-		ExtentTestManager.startTest("Add Selected Customer");
+		ExtentSuccessMessage("Add Selected Customer");
 		Log.info("Add Selected Customer");
 	    
 		click(goaldLoanRepo.aiAddBtn);
@@ -164,7 +164,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Resolution Information
-		ExtentTestManager.startTest("Enter Resolution Information");
+		ExtentSuccessMessage("Enter Resolution Information");
 		Log.info("Enter Resolution Information");
 	    
 		String resolutionNum = testdata.get("resolutionNum").toString();
@@ -180,7 +180,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Resolution Date
-		ExtentTestManager.startTest("Enter Resolution Date");
+		ExtentSuccessMessage("Enter Resolution Date");
 		Log.info("Enter Resolution Date");
 		
 		click(goaldLoanRepo.aiResolutionDate);
@@ -197,7 +197,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Select Refered By from Dropdown
-		ExtentTestManager.startTest("Select Refered By from Dropdown");
+		ExtentSuccessMessage("Select Refered By from Dropdown");
 		Log.info("Select Refered By from Dropdown");
 		
 		select("EDUCATION",goaldLoanRepo.aiPurposeDropdown);
@@ -212,7 +212,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Reference No. 
-		ExtentTestManager.startTest("Enter Reference No.");
+		ExtentSuccessMessage("Enter Reference No.");
 		Log.info("Enter Reference No.");
 	    
 		String referenceNum = testdata.get("referenceNum").toString();
@@ -228,7 +228,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Select Source Of Loan
-		ExtentTestManager.startTest("Select Source Of Loan");
+		ExtentSuccessMessage("Select Source Of Loan");
 		Log.info("Select Source Of Loan");
 		
 		select("Direct",goaldLoanRepo.aiSourceOfLoanDropdown);
@@ -243,7 +243,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Remarks
-		ExtentTestManager.startTest("Enter Remarks");
+		ExtentSuccessMessage("Enter Remarks");
 		Log.info("Enter Remarks");
 	    
 		String remarks = testdata.get("remarks").toString();
@@ -261,7 +261,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 
 		
 		//Navigate to Security Details Tab
-		ExtentTestManager.startTest("Navigate to Security Details Tab");
+		ExtentSuccessMessage("Navigate to Security Details Tab");
 		Log.info("Navigate to Security Details Tab");
 	    
 		click(goaldLoanRepo.aiNextBtn);
@@ -289,7 +289,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Jewelry Details - Select Item Group
-		ExtentTestManager.startTest("Enter Jewelry Details - Select Item Group");
+		ExtentSuccessMessage("Enter Jewelry Details - Select Item Group");
 		Log.info("Enter Jewelry Details - Select Item Group");
 		
 		select("Gold",goaldLoanRepo.sItemGroupDropdpown);
@@ -304,7 +304,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Jewelry Details - Select Item Name
-		ExtentTestManager.startTest("Enter Jewelry Details - Select Item Name");
+		ExtentSuccessMessage("Enter Jewelry Details - Select Item Name");
 		Log.info("Enter Jewelry Details - Select Item Name");
 		
 		select("BANGLE,BIG-1,SMALL-2",goaldLoanRepo.sItemNameDropdown);
@@ -319,7 +319,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Jewelry Details - Item Description
-		ExtentTestManager.startTest("Enter Jewelry Details - Item Description");
+		ExtentSuccessMessage("Enter Jewelry Details - Item Description");
 		Log.info("Enter Jewelry Details - Item Description");
 	    
 		String remarks = testdata.get("remarks").toString();
@@ -335,7 +335,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Jewelry Details - Item Qty
-		ExtentTestManager.startTest("Enter Jewelry Details - Item Qty");
+		ExtentSuccessMessage("Enter Jewelry Details - Item Qty");
 		Log.info("Enter Jewelry Details - Item Qty");
 	    
 		String itemQty = testdata.get("itemQty").toString();
@@ -351,7 +351,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Jewelry Details - Item Weight
-		ExtentTestManager.startTest("Enter Jewelry Details - Item Weight");
+		ExtentSuccessMessage("Enter Jewelry Details - Item Weight");
 		Log.info("Enter Jewelry Details - Item Weight");
 	    
 		String itemWeight = testdata.get("itemWeight").toString();
@@ -368,7 +368,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Jewelry Details - Stone Weight
-		ExtentTestManager.startTest("Enter Jewelry Details - Stone Weight");
+		ExtentSuccessMessage("Enter Jewelry Details - Stone Weight");
 		Log.info("Enter Jewelry Details - Stone Weight");
 	    
 		click(goaldLoanRepo.sStoneWeightTxtBox);
@@ -384,7 +384,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Jewelry Details - Dirt Weight
-		ExtentTestManager.startTest("Enter Jewelry Details - Dirt Weight");
+		ExtentSuccessMessage("Enter Jewelry Details - Dirt Weight");
 		Log.info("Enter Jewelry Details - Dirt Weight");
 	    
 		click(goaldLoanRepo.sDirtWeightTxtBox);
@@ -400,7 +400,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter Jewelry Details - Purity
-		ExtentTestManager.startTest("Enter Jewelry Details - Purity");
+		ExtentSuccessMessage("Enter Jewelry Details - Purity");
 		Log.info("Enter Jewelry Details - Purity");
 	    
 		String purity = testdata.get("purity").toString();
@@ -416,7 +416,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Add Jewelry Item to Grid
-		ExtentTestManager.startTest("Add Jewelry Item to Grid");
+		ExtentSuccessMessage("Add Jewelry Item to Grid");
 		Log.info("Add Jewelry Item to Grid");
 	    
 		click(goaldLoanRepo.sAddBtn);
@@ -436,7 +436,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Upload Security Ornament Image - Pop Window Opened
-		ExtentTestManager.startTest("Upload Security Ornament Image - Pop Window Opened");
+		ExtentSuccessMessage("Upload Security Ornament Image - Pop Window Opened");
 		Log.info("Upload Security Ornament Image - Pop Window Opened");
 	    
 		ScrollUntilElementVisible(goaldLoanRepo.aiNextBtn);
@@ -466,7 +466,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	    		
 	    		
 	    		//Upload Security Ornament Image - Select Item 
-	    		ExtentTestManager.startTest("Upload Security Ornament Image - Select Item");
+	    		ExtentSuccessMessage("Upload Security Ornament Image - Select Item");
 	    		Log.info("Upload Security Ornament Image - Select Item");
 	    		
 	    		select("All Items",goaldLoanRepo.sSelectItemDropdown);
@@ -485,7 +485,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	    		
 	    		
 	    		//Upload Security Ornament Image - Add Item 
-	    		ExtentTestManager.startTest("Upload Security Ornament Image - Add Item");
+	    		ExtentSuccessMessage("Upload Security Ornament Image - Add Item");
 	    		Log.info("Upload Security Ornament Image - Add Item");
 	    		
 	    		click(goaldLoanRepo.sImgAddBtn);
@@ -505,7 +505,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	    		
 	    		
 	    		//Upload Security Ornament Image - Submit Button
-	    		ExtentTestManager.startTest("Upload Security Ornament Image - Submit Button");
+	    		ExtentSuccessMessage("Upload Security Ornament Image - Submit Button");
 	    		Log.info("Upload Security Ornament Image - Submit Button");
 	    		
 	    		click(goaldLoanRepo.sSubmitBtn);
@@ -533,7 +533,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Navigate to Nominee Tab
-		ExtentTestManager.startTest("Navigate to Nominee Tab");
+		ExtentSuccessMessage("Navigate to Nominee Tab");
 		Log.info("Navigate to Nominee Tab");
 	    
 		ScrollUntilElementVisible(goaldLoanRepo.aiNextBtn);
@@ -560,7 +560,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 
 		
 		//Add Nominee - Untick 'Nominee Not Required'
-		ExtentTestManager.startTest("Add Nominee - Untick 'Nominee Not Required'");
+		ExtentSuccessMessage("Add Nominee - Untick 'Nominee Not Required'");
 		Log.info("Add Nominee - Untick 'Nominee Not Required'");
 	    
 		click(goaldLoanRepo.nNomineeNotReqCheckBox);
@@ -580,7 +580,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Add Nominee - Click the customer search icon
-		ExtentTestManager.startTest("Click the customer search icon");
+		ExtentSuccessMessage("Click the customer search icon");
 		Log.info("Click the customer search icon");
 	    
 		click(goaldLoanRepo.nSearchIcon);
@@ -610,7 +610,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	    		
 	    		
 	    		//Add Nominee - Search Cust
-	    		ExtentTestManager.startTest("Add Nominee - Search Cust");
+	    		ExtentSuccessMessage("Add Nominee - Search Cust");
 	    		Log.info("Add Nominee - Search Cust");
 	            
 	    		String nomineeName = testdata.get("nomineeName").toString();
@@ -632,7 +632,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	    		
 	    		
 	    		//Select a Customer
-	    		ExtentTestManager.startTest("Select a Customer");
+	    		ExtentSuccessMessage("Select a Customer");
 	    		Log.info("Select a Customer");
 	    		
 	    		click(goaldLoanRepo.popUpWndSelectLink);
@@ -662,7 +662,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Navigate to Loan Details Tab - Relation drop down
-		ExtentTestManager.startTest("Navigate to Loan Details Tab - Relation drop down");
+		ExtentSuccessMessage("Navigate to Loan Details Tab - Relation drop down");
 		Log.info("Navigate to Loan Details Tab - Relation drop down");
 		
 		select("FRIEND",goaldLoanRepo.nRelationDropdown);
@@ -678,7 +678,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Navigate to Loan Details Tab - Add button
-		ExtentTestManager.startTest("Navigate to Loan Details Tab - Add button");
+		ExtentSuccessMessage("Navigate to Loan Details Tab - Add button");
 		Log.info("Navigate to Loan Details Tab - Add button");
 	    
 		click(goaldLoanRepo.nAddBtn);
@@ -698,7 +698,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Navigate to Loan Details Tab - Next button
-		ExtentTestManager.startTest("Navigate to Loan Details Tab - Next button");
+		ExtentSuccessMessage("Navigate to Loan Details Tab - Next button");
 		Log.info("Navigate to Loan Details Tab - Next button");
 	    
 		ScrollUntilElementVisible(goaldLoanRepo.aiNextBtn);
@@ -726,7 +726,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter and Verify Loan Details
-		ExtentTestManager.startTest("Enter and Verify Loan Details");
+		ExtentSuccessMessage("Enter and Verify Loan Details");
 		Log.info("Enter and Verify Loan Details");
 	    
 		String limitValue = driver.findElement(goaldLoanRepo.ldLimitTxtBox).getAttribute("value");
@@ -743,7 +743,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Enter and Verify Loan Details - Get values
-		ExtentTestManager.startTest("Enter and Verify Loan Details - Get values");
+		ExtentSuccessMessage("Enter and Verify Loan Details - Get values");
 		Log.info("Enter and Verify Loan Details - Get values");
 	    
 		click(goaldLoanRepo.ldGetValuesBtn);
@@ -769,7 +769,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Select Transaction Mode - Select Trans. Mode 'Cash'
-		ExtentTestManager.startTest("Select Transaction Mode - Select Trans. Mode 'Cash'.");
+		ExtentSuccessMessage("Select Transaction Mode - Select Trans. Mode 'Cash'.");
 		Log.info("Select Transaction Mode - Select Trans. Mode 'Cash'.");
 		
 		select("CASH",goaldLoanRepo.ldTransModeDropdown);
@@ -785,7 +785,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 		
 		//Select Transaction Mode - Save
-		ExtentTestManager.startTest("Select Transaction Mode - Save.");
+		ExtentSuccessMessage("Select Transaction Mode - Save.");
 		Log.info("Select Transaction Mode - Save.");
 		
 		click(goaldLoanRepo.saveBtn);
@@ -822,7 +822,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	public void transfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {		
 		
 		//Verify Loan Submission with Transfer Mode - Select Trans. Mode 'Transfer'
-		ExtentTestManager.startTest("Verify Loan Submission with Transfer Mode - Select Trans. Mode 'Transfer'");
+		ExtentSuccessMessage("Verify Loan Submission with Transfer Mode - Select Trans. Mode 'Transfer'");
 		Log.info("Verify Loan Submission with Transfer Mode - Select Trans. Mode 'Transfer'");
 		
 		click(goaldLoanRepo.summaryCloseBtn);
@@ -919,7 +919,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 				
 				
 				//Verify Loan Submission with Transfer Mode - Click on Post credit button
-				ExtentTestManager.startTest("Verify Loan Submission with Transfer Mode - Click on Post credit button");
+				ExtentSuccessMessage("Verify Loan Submission with Transfer Mode - Click on Post credit button");
 				Log.info("Verify Loan Submission with Transfer Mode - Click on Post credit button");
 				
 				click(goaldLoanRepo.tPostCreditBtn);
@@ -950,7 +950,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 						
 						
 						//Verify Loan Submission with Transfer Mode - Click on Post credit button
-						ExtentTestManager.startTest("Verify Loan Submission with Transfer Mode - Click on Post credit button");
+						ExtentSuccessMessage("Verify Loan Submission with Transfer Mode - Click on Post credit button");
 						Log.info("Verify Loan Submission with Transfer Mode - Click on Post credit button");
 			    		
 			    		select("GL Code",goaldLoanRepo.apTransBasedDropdown);
@@ -971,7 +971,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 						
 						
 						//Verify Loan Submission with Transfer Mode - Select the 'GL Name'
-						ExtentTestManager.startTest("Verify Loan Submission with Transfer Mode - Select the 'GL Name'");
+						ExtentSuccessMessage("Verify Loan Submission with Transfer Mode - Select the 'GL Name'");
 						Log.info("Verify Loan Submission with Transfer Mode - Select the 'GL Name'");
 						
 			    		click(goaldLoanRepo.apGLNameTxtBox);
@@ -994,7 +994,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 
 
 						//Verify Loan Submission with Transfer Mode - Add Amount & Click Add
-						ExtentTestManager.startTest("Verify Loan Submission with Transfer Mode - Add Amount & Click Add");
+						ExtentSuccessMessage("Verify Loan Submission with Transfer Mode - Add Amount & Click Add");
 						Log.info("Verify Loan Submission with Transfer Mode - Add Amount & Click Add");
 						
 			    		click(goaldLoanRepo.apAmountTxtBox);
@@ -1020,7 +1020,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 			    		
 
 						//Verify Loan Submission with Transfer Mode - Click Submit
-						ExtentTestManager.startTest("Verify Loan Submission with Transfer Mode - Click Submit");
+						ExtentSuccessMessage("Verify Loan Submission with Transfer Mode - Click Submit");
 						Log.info("Verify Loan Submission with Transfer Mode - Click Submit");
 						
 			    		click(goaldLoanRepo.apSubmitBtn);
@@ -1045,7 +1045,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 			    
 
 				//Verify Loan Submission with Transfer Mode - Click Save
-				ExtentTestManager.startTest("Verify Loan Submission with Transfer Mode - Click Save");
+				ExtentSuccessMessage("Verify Loan Submission with Transfer Mode - Click Save");
 				Log.info("Verify Loan Submission with Transfer Mode - Click Save");
 				
 	    		click(goaldLoanRepo.saveBtn);
@@ -1087,7 +1087,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	public void authorizeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentSuccessMessage("Login with Another User");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -1121,7 +1121,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		ExtentSuccessMessage("Manager Authorization - Cash Tab");
 		Log.info("Manager Authorization - Cash Tab");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -1145,7 +1145,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentSuccessMessage("Refresh Loan Opening Entry");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -1168,7 +1168,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentSuccessMessage("Authorize Loan Entry as Manager");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		
@@ -1189,7 +1189,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentSuccessMessage("Cashier Authorization");
 		Log.info("Cashier Authorization");
 		 
 
@@ -1231,7 +1231,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 	public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 //		//Login with Another User
-//		ExtentTestManager.startTest("Login with Another User");
+//		ExtentSuccessMessage("Login with Another User");
 //		Log.info("Login with Another User");
 //		
 //		click(custSearch.custSignOut);
@@ -1265,7 +1265,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 //		
 //
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentSuccessMessage("Manager Authorization - Transfer Tab");
 		Log.info("Manager Authorization - Transfer Tab");
 //		
 //		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -1289,7 +1289,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentSuccessMessage("Refresh Loan Opening Entry");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -1312,7 +1312,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentSuccessMessage("Authorize Loan Entry as Manager");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		click(goaldLoanRepo.approveCheckBoxTransfer);

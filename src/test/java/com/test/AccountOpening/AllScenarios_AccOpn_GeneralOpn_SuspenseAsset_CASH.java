@@ -18,7 +18,7 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_CASH {
+public class AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_CASH extends Base_Class {
 
 	Base_Class Base_Class=new Base_Class();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
@@ -33,7 +33,7 @@ public class AllScenarios_AccOpn_GeneralOpn_SuspenseAsset_CASH {
 
 
 		//TC No. - 01 --> Application launch
-		ExtentTestManager.startTest("Application launch");
+		ExtentSuccessMessage("Application launch");
 		Base_Class.SetUp();
 		ExtentTestManager.endTest();
 		Thread.sleep(2000);

@@ -29,7 +29,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 	public void openPersonalLoanWindow() throws InterruptedException {
 		
 		//Open Personal Loan Weekly window
-		ExtentTestManager.startTest("Open Personal Loan Weekly window");
+		ExtentSuccessMessage("Open Personal Loan Weekly window");
 		Log.info("Open Personal Loan Weekly window");
 		
 		click(prsnlLoanWeeklyRepo.accountOpeningTab);
@@ -64,7 +64,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 	public void accInfo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
 		//Select Customer from Customer pop up - Pop up displayed
-		ExtentTestManager.startTest("Select Customer from Customer pop up - Pop up displayed");
+		ExtentSuccessMessage("Select Customer from Customer pop up - Pop up displayed");
 		Log.info("Select Customer from Customer pop up - Pop up displayed");
 		
 		click(prsnlLoanWeeklyRepo.aciCustSearchIcon);
@@ -93,7 +93,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 	    		
 
 	    		//Select Customer from Customer pop up - Customer Search
-	    		ExtentTestManager.startTest("Select Customer from Customer pop up - Customer Search");
+	    		ExtentSuccessMessage("Select Customer from Customer pop up - Customer Search");
 	    		Log.info("Select Customer from Customer pop up - Customer Search");
 	    		
 	    		String custName = testdata.get("custName").toString();
@@ -118,7 +118,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 	    		
 	    		
 	    		//Select Customer from Customer pop up
-	    		ExtentTestManager.startTest("Select Customer from Customer pop up");
+	    		ExtentSuccessMessage("Select Customer from Customer pop up");
 	    		Log.info("Select Customer from Customer pop up");
 	    		
 	    		click(prsnlLoanWeeklyRepo.popUpWndSelectBtn);
@@ -148,7 +148,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 		
 		//Add Button functionality
-		ExtentTestManager.startTest("Add Button functionality");
+		ExtentSuccessMessage("Add Button functionality");
 		Log.info("Add Button functionality");
 		
 		click(prsnlLoanWeeklyRepo.aciAddBtn);
@@ -186,7 +186,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Resolution No Field - BVA Validations
-		ExtentTestManager.startTest("Resolution No Field - BVA Validations");
+		ExtentSuccessMessage("Resolution No Field - BVA Validations");
 		Log.info("Resolution No Field - BVA Validations");
 		
 		String resolutionNum = testdata.get("resolutionNum").toString();
@@ -202,7 +202,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 		
 		//Enter Resolution Date
-		ExtentTestManager.startTest("Enter Resolution Date");
+		ExtentSuccessMessage("Enter Resolution Date");
 		Log.info("Enter Resolution Date");
 		
 		click(prsnlLoanWeeklyRepo.aciResolutionDate);
@@ -219,7 +219,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 		
 		//Referred By Dropdown Selection
-		ExtentTestManager.startTest("Referred By Dropdown Selection");
+		ExtentSuccessMessage("Referred By Dropdown Selection");
 		Log.info("Referred By Dropdown Selection");
 		
 		click(prsnlLoanWeeklyRepo.aciReferedByDropdown);
@@ -245,7 +245,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Enter Equitable Mort Reg.No
-		ExtentTestManager.startTest("Enter Equitable Mort Reg.No");
+		ExtentSuccessMessage("Enter Equitable Mort Reg.No");
 		Log.info("Enter Equitable Mort Reg.No");
 		
 		String MortgagerRegNo = testdata.get("MortgagerRegNo").toString();
@@ -261,7 +261,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 		
 		//EMR Date Field - BVA Validations
-		ExtentTestManager.startTest("EMR Date Field - BVA Validations");
+		ExtentSuccessMessage("EMR Date Field - BVA Validations");
 		Log.info("EMR Date Field - BVA Validations");
 		
 		//invalid
@@ -298,7 +298,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Agent Code Field - ECP Validations
-		ExtentTestManager.startTest("Agent Code Field - ECP Validations");
+		ExtentSuccessMessage("Agent Code Field - ECP Validations");
 		Log.info("Agent Code Field - ECP Validations");
 		
 		//invalid code
@@ -345,7 +345,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//DSA Code Field - ECP Validations
-		ExtentTestManager.startTest("DSA Code Field - ECP Validations");
+		ExtentSuccessMessage("DSA Code Field - ECP Validations");
 		Log.info("DSA Code Field - ECP Validations");
 		
 		//invalid code
@@ -391,7 +391,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Remarks Field
-		ExtentTestManager.startTest("Remarks Field");
+		ExtentSuccessMessage("Remarks Field");
 		Log.info("Remarks Field");
 		
 		String remarks = testdata.get("resolutionNum").toString();
@@ -407,7 +407,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Move to Securities Tab
-		ExtentTestManager.startTest("Move to Securities Tab");
+		ExtentSuccessMessage("Move to Securities Tab");
 		Log.info("Move to Securities Tab");
 
 		click(prsnlLoanWeeklyRepo.nextBtn);
@@ -432,7 +432,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Select Personal Sureties Tab
-		ExtentTestManager.startTest("Select Personal Sureties Tab");
+		ExtentSuccessMessage("Select Personal Sureties Tab");
 		Log.info("Select Personal Sureties Tab");
 
 		click(prsnlLoanWeeklyRepo.psPersonalSuretiesTab);
@@ -454,7 +454,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 		
 		//Customer added in security tab
-				ExtentTestManager.startTest("Customer added in security tab");
+				ExtentSuccessMessage("Customer added in security tab");
 				Log.info("Customer added in security tab");
 				
 				click(prsnlLoanWeeklyRepo.psCustSrchIcon);
@@ -507,7 +507,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 				
 
 				//Security Addition Process
-				ExtentTestManager.startTest("Security Addition Process");
+				ExtentSuccessMessage("Security Addition Process");
 				Log.info("Security Addition Process");
 
 				click(prsnlLoanWeeklyRepo.psSalaryCertCheckBox);
@@ -528,7 +528,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 				
 
 				//Enter Basic Pay, Net salary, Retd. Date & Remark
-				ExtentTestManager.startTest("Enter Basic Pay, Net salary, Retd. Date & Remark");
+				ExtentSuccessMessage("Enter Basic Pay, Net salary, Retd. Date & Remark");
 				Log.info("Enter Basic Pay, Net salary, Retd. Date & Remark");
 
 				click(prsnlLoanWeeklyRepo.psBasicPayTxtBox);
@@ -559,7 +559,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 				
 
 				//Add Button functionality
-				ExtentTestManager.startTest("Add Button functionality");
+				ExtentSuccessMessage("Add Button functionality");
 				Log.info("Add Button functionality");
 
 				click(prsnlLoanWeeklyRepo.psAddBtn);
@@ -595,7 +595,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 				
 
 				//Navigate to Nominee Tab
-				ExtentTestManager.startTest("Navigate to Nominee Tab");
+				ExtentSuccessMessage("Navigate to Nominee Tab");
 				Log.info("Navigate to Nominee Tab");
 
 				ScrollUntilElementVisible(prsnlLoanWeeklyRepo.nextBtn);
@@ -622,7 +622,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 
 
 		//Add Nominee - Untick 'Nominee Not Required'
-		ExtentTestManager.startTest("Add Nominee - Untick 'Nominee Not Required'");
+		ExtentSuccessMessage("Add Nominee - Untick 'Nominee Not Required'");
 		Log.info("Add Nominee - Untick 'Nominee Not Required'");
 
 		click(prsnlLoanWeeklyRepo.nNomineeNotReqCheckBox);
@@ -644,7 +644,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 		
 		//Customer search icon functionality
-				ExtentTestManager.startTest("Customer search icon functionality");
+				ExtentSuccessMessage("Customer search icon functionality");
 				Log.info("Customer search icon functionality");
 				
 				click(prsnlLoanWeeklyRepo.nNomineeCustSrchIcon);
@@ -674,7 +674,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 			    		
 			    		
 			    		//Search button functionality
-			    				ExtentTestManager.startTest("Search button functionality");
+			    				ExtentSuccessMessage("Search button functionality");
 			    				Log.info("Search button functionality");   					    		
 			    		
 			    		String custName = testdata.get("securitiesCustName").toString();
@@ -700,7 +700,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 				    		
 				    		
 				    		//Select Customer from Customer popup
-				    				ExtentTestManager.startTest("Select Customer from Customer popup");
+				    				ExtentSuccessMessage("Select Customer from Customer popup");
 				    				Log.info("Select Customer from Customer popup");
 			    		
 			    		click(prsnlLoanWeeklyRepo.popUpWndSelectBtn);
@@ -731,7 +731,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 				
 				
 				//Relation drop down selection
-						ExtentTestManager.startTest("Relation drop down selection");
+						ExtentSuccessMessage("Relation drop down selection");
 						Log.info("Relation drop down selection");
 						
 						select("FRIEND",prsnlLoanWeeklyRepo.nRelationDropdown);
@@ -746,7 +746,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 						
 						
 						//Add Button functionality
-							ExtentTestManager.startTest("Add Button functionality");
+							ExtentSuccessMessage("Add Button functionality");
 							Log.info("Add Button functionality");
 								
 							click(prsnlLoanWeeklyRepo.nAddBtn);
@@ -766,7 +766,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 							
 							
 							//Move to Loan Details Tab
-								ExtentTestManager.startTest("Move to Loan Details Tab");
+								ExtentSuccessMessage("Move to Loan Details Tab");
 								Log.info("Move to Loan Details Tab");
 									
 								click(prsnlLoanWeeklyRepo.nextBtn);
@@ -791,7 +791,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 
 	
 		//Limit/Sanctioned Field - ECP Validations
-		ExtentTestManager.startTest("Limit/Sanctioned Field - ECP Validations");
+		ExtentSuccessMessage("Limit/Sanctioned Field - ECP Validations");
 		Log.info("Limit/Sanctioned Field - ECP Validations");
 		
 		String limitAmt = testdata.get("sanctionedAmt").toString();
@@ -808,7 +808,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Get Values button functionality
-			ExtentTestManager.startTest("Get Values button functionality");
+			ExtentSuccessMessage("Get Values button functionality");
 			Log.info("Get Values button functionality");
 				
 			click(prsnlLoanWeeklyRepo.ldGetValues);
@@ -834,7 +834,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 
 			
 			//Transmode Selection
-			ExtentTestManager.startTest("Transmode Selection");
+			ExtentSuccessMessage("Transmode Selection");
 			Log.info("Transmode Selection and Save");
 			
 			ScrollUntilElementVisible(prsnlLoanWeeklyRepo.ldTransModeDropdown);
@@ -850,7 +850,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 			
 			
 			//Save functionality Trans. Mode - CASH
-			ExtentTestManager.startTest("Save functionality Trans. Mode - CASH");
+			ExtentSuccessMessage("Save functionality Trans. Mode - CASH");
 			Log.info("Save functionality Trans. Mode - CASH");
 			
 			click(prsnlLoanWeeklyRepo.ldSaveBtn);
@@ -885,7 +885,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 			
 			
 			//Voucher Generation Verification
-			ExtentTestManager.startTest("Voucher Generation Verification");
+			ExtentSuccessMessage("Voucher Generation Verification");
 			Log.info("Voucher Generation Verification");
 			
 			click(prsnlLoanWeeklyRepo.sPrintBtn);
@@ -934,7 +934,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 
 		
 		//Limit/Sanctioned Field - ECP Validations
-		ExtentTestManager.startTest("Limit/Sanctioned Field - ECP Validations");
+		ExtentSuccessMessage("Limit/Sanctioned Field - ECP Validations");
 		Log.info("Limit/Sanctioned Field - ECP Validations");
 		
 		String limitAmt = testdata.get("sanctionedAmt").toString();
@@ -951,7 +951,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Get Values button functionality
-			ExtentTestManager.startTest("Get Values button functionality");
+			ExtentSuccessMessage("Get Values button functionality");
 			Log.info("Get Values button functionality");
 				
 			click(prsnlLoanWeeklyRepo.ldGetValues);
@@ -977,7 +977,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 
 			
 			//Transmode Selection
-			ExtentTestManager.startTest("Transmode Selection");
+			ExtentSuccessMessage("Transmode Selection");
 			Log.info("Transmode Selection and Save");
 			
 			ScrollUntilElementVisible(prsnlLoanWeeklyRepo.ldTransModeDropdown);
@@ -993,7 +993,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 			
 			
 			//Post credit button functionality
-			ExtentTestManager.startTest("Post credit button functionality");
+			ExtentSuccessMessage("Post credit button functionality");
 			Log.info("Post credit button functionality");
 			
 			click(prsnlLoanWeeklyRepo.ldPostCreditBtn);
@@ -1024,7 +1024,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 
 					
 					//Transaction based selection.
-					ExtentTestManager.startTest("Transaction based selection.");
+					ExtentSuccessMessage("Transaction based selection.");
 					Log.info("Transaction based selection.");
 					
 					select("GL Code",prsnlLoanWeeklyRepo.ldTransBasedDropdown);
@@ -1044,7 +1044,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 					
 					
 					//GL Name selection.
-					ExtentTestManager.startTest("GL Name selection.");
+					ExtentSuccessMessage("GL Name selection.");
 					Log.info("GL Name selection.");
 					
 					click(prsnlLoanWeeklyRepo.ldGLNameTxtBox);
@@ -1067,7 +1067,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 
 					
 					//Add button functionality
-					ExtentTestManager.startTest("Add button functionality");
+					ExtentSuccessMessage("Add button functionality");
 					Log.info("Add button functionality");
 					
 					String amntValue = driver.findElement(prsnlLoanWeeklyRepo.ldBalanceAmtTxtBox).getAttribute("value");
@@ -1096,7 +1096,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 					
 					
 					//Submit button functionality
-					ExtentTestManager.startTest("Submit button functionality");
+					ExtentSuccessMessage("Submit button functionality");
 					Log.info("Submit button functionality");
 					
 					click(prsnlLoanWeeklyRepo.ldSubmitBtn);
@@ -1125,7 +1125,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 			
 			
 			//Save functionality Trans. Mode - TRANSFER
-			ExtentTestManager.startTest("Save functionality Trans. Mode - TRANSFER");
+			ExtentSuccessMessage("Save functionality Trans. Mode - TRANSFER");
 			Log.info("Save functionality Trans. Mode - TRANSFER");
 			
 			click(prsnlLoanWeeklyRepo.ldSaveBtn);
@@ -1172,7 +1172,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 	public void authorizeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentSuccessMessage("Login with Another User");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -1206,7 +1206,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		ExtentSuccessMessage("Manager Authorization - Cash Tab");
 		Log.info("Manager Authorization - Cash Tab");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -1230,7 +1230,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentSuccessMessage("Refresh Loan Opening Entry");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -1254,7 +1254,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentSuccessMessage("Authorize Loan Entry as Manager");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		
@@ -1275,7 +1275,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentSuccessMessage("Cashier Authorization");
 		Log.info("Cashier Authorization");
 		 
 
@@ -1319,7 +1319,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 	public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentSuccessMessage("Login with Another User");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -1353,7 +1353,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentSuccessMessage("Manager Authorization - Transfer Tab");
 		Log.info("Manager Authorization - Transfer Tab");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -1377,7 +1377,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentSuccessMessage("Refresh Loan Opening Entry");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -1400,7 +1400,7 @@ public class LoanOpening_LoanAndAdvances_PersonalLoanWeekly extends Base_Class {
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentSuccessMessage("Authorize Loan Entry as Manager");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		click(goaldLoanRepo.approveCheckBoxTransfer);

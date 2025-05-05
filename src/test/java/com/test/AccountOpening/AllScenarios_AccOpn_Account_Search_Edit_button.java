@@ -36,7 +36,7 @@ public class AllScenarios_AccOpn_Account_Search_Edit_button extends Base_Class {
 	public void Account_Search_Edit_button(Map<Object, Object> testdata, ITestContext context) throws SMTPSendFailedException, Exception{
 
 		//TC No. - 01 --> Application launch
-		ExtentTestManager.startTest("Application launch");
+		ExtentSuccessMessage("Application launch");
 		Base_Class.SetUp();
 		ExtentTestManager.endTest();
 		Thread.sleep(2000);

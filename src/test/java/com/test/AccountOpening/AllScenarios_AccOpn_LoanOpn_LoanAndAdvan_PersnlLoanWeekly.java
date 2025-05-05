@@ -28,7 +28,7 @@ public class AllScenarios_AccOpn_LoanOpn_LoanAndAdvan_PersnlLoanWeekly extends B
 	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 
 		//TC No. - 01 --> Application launch
-		ExtentTestManager.startTest("Application launch");
+		ExtentSuccessMessage("Application launch");
 		Base_Class.SetUp();
 		ExtentTestManager.endTest();
 		Thread.sleep(2000);

@@ -66,8 +66,8 @@ public class AllScenariosAccountOpening extends Base_Class {
 //			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
 //			Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 //		}
-		driver.close();
-//		driver.quit();
+//		driver.close();
+		driver.quit();
 		ExtentTestManager.endTest();
 		return true;
 	}

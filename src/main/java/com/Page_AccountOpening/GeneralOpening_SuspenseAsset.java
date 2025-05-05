@@ -34,7 +34,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	public void generalOpening() throws InterruptedException {
 		
 		//Navigate to General Opening
-		ExtentTestManager.startTest("Navigate to General Opening");
+		ExtentSuccessMessage("Navigate to General Opening");
 		Log.info("Navigate to General Opening");
 		
 		click(suspenseAssetRepo.accountOpeningTab);
@@ -64,7 +64,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	public void productAccInfo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		
 		//Customer Search Popup
-		ExtentTestManager.startTest("Customer Search Popup");
+		ExtentSuccessMessage("Customer Search Popup");
 		Log.info("Customer Search Popup");
 		
 		click(suspenseAssetRepo.paiCustSrchIcon);
@@ -93,7 +93,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	    		
 
 	    		//Search Customer by Name
-	    		ExtentTestManager.startTest("Search Customer by Name");
+	    		ExtentSuccessMessage("Search Customer by Name");
 	    		Log.info("Search Customer by Name");
 	    		
 	    		String custName = testdata.get("custName").toString();
@@ -118,7 +118,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	    		
 	    		
 	    		//Select and Open Customer Details
-	    		ExtentTestManager.startTest("Select and Open Customer Details");
+	    		ExtentSuccessMessage("Select and Open Customer Details");
 	    		Log.info("Select and Open Customer Details");
 	    		
 	    		click(suspenseAssetRepo.popUpSelect);
@@ -153,7 +153,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 		
 		
 		//Enter Opening Amount
-		ExtentTestManager.startTest("Enter Opening Amount");
+		ExtentSuccessMessage("Enter Opening Amount");
 		Log.info("Enter Opening Amount");
 		
 		String openingAmt = testdata.get("openingAmt").toString();
@@ -170,10 +170,10 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 		
 		
 		//Enter Remarks
-		ExtentTestManager.startTest("Enter Remarks");
+		ExtentSuccessMessage("Enter Remarks");
 		Log.info("Enter Remarks");
 		
-		String remark = testdata.get("remark").toString();
+		String remark = testdata.get("remarks").toString();
 		input(suspenseAssetRepo.paiRemarkTxtBox, remark);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter text into the Remarks field.");
 		Log.info("Step:01 - Enter text into the Remarks field.");
@@ -194,7 +194,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	public void authorizeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentSuccessMessage("Login with Another User");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -227,7 +227,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 		
 
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		ExtentSuccessMessage("Manager Authorization - Cash Tab");
 		Log.info("Manager Authorization - Cash Tab");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -251,7 +251,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentSuccessMessage("Refresh Loan Opening Entry");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -275,7 +275,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentSuccessMessage("Authorize Loan Entry as Manager");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		
@@ -296,7 +296,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 		
 
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentSuccessMessage("Cashier Authorization");
 		Log.info("Cashier Authorization");
 		 
 
@@ -341,7 +341,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentSuccessMessage("Login with Another User");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut); 
@@ -375,7 +375,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 		
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentSuccessMessage("Manager Authorization - Transfer Tab");
 		Log.info("Manager Authorization - Transfer Tab");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -399,7 +399,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentSuccessMessage("Refresh Loan Opening Entry");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -422,7 +422,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentSuccessMessage("Authorize Loan Entry as Manager");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		click(goaldLoanRepo.approveCheckBoxTransfer);
@@ -453,7 +453,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	public void transModeCash() throws InterruptedException {
 		
 		//Select Transaction Mode as Cash
-		ExtentTestManager.startTest("Select Transaction Mode and Submit Loan");
+		ExtentSuccessMessage("Select Transaction Mode and Submit Loan");
 		Log.info("Select Transaction Mode and Submit Loan");
 		
 		select("CASH",suspenseAssetRepo.paiTransModeDropdown);
@@ -471,7 +471,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	public void transModeTransfer() throws InterruptedException {
 		
 		//Select Transaction Mode as TRANSFER
-		ExtentTestManager.startTest("Select Transaction Mode and Submit Loan");
+		ExtentSuccessMessage("Select Transaction Mode and Submit Loan");
 		Log.info("Select Transaction Mode and Submit Loan");
 		
 		select("TRANSFER",suspenseAssetRepo.paiTransModeDropdown);
@@ -488,7 +488,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	public void submitTrans() throws InterruptedException {
 		
 		//Submit the transaction
-				ExtentTestManager.startTest("Submit the Transaction");
+				ExtentSuccessMessage("Submit the Transaction");
 				Log.info("Submit the transaction");
 				
 				click(suspenseAssetRepo.paiSaveBtn);
@@ -531,7 +531,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 	
 	public void postCreditPopUpEntry() throws InterruptedException {
 		//Post credit button functionality
-				ExtentTestManager.startTest("Post credit button functionality");
+				ExtentSuccessMessage("Post credit button functionality");
 				Log.info("Post credit button functionality");
 				
 				click(suspenseAssetRepo.paiPostCreditBtn);
@@ -561,7 +561,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 
 						
 						//Transaction based selection.
-						ExtentTestManager.startTest("Transaction based selection.");
+						ExtentSuccessMessage("Transaction based selection.");
 						Log.info("Transaction based selection.");
 						
 						select("GL Code",depositLoanRepo.oiTransBasedDropdown);
@@ -581,7 +581,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 						
 						
 						//GL Name selection.
-						ExtentTestManager.startTest("GL Name selection.");
+						ExtentSuccessMessage("GL Name selection.");
 						Log.info("GL Name selection.");
 						
 						click(depositLoanRepo.oiGLNameTxtBox);
@@ -604,7 +604,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 
 						
 						//Add button functionality
-						ExtentTestManager.startTest("Add button functionality");
+						ExtentSuccessMessage("Add button functionality");
 						Log.info("Add button functionality");
 						
 						String amntValue = driver.findElement(depositLoanRepo.oiBalanceAmtTxtBox).getAttribute("value");
@@ -633,7 +633,7 @@ public class GeneralOpening_SuspenseAsset extends Base_Class{
 						
 						
 						//Submit button functionality
-						ExtentTestManager.startTest("Submit button functionality");
+						ExtentSuccessMessage("Submit button functionality");
 						Log.info("Submit button functionality");
 						
 						click(depositLoanRepo.oiSubmitBtn);
