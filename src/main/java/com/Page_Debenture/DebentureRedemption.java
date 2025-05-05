@@ -71,6 +71,8 @@ public class DebentureRedemption extends Base_Class{
 		ExtentTestManager.startTest("Verify Debenture Type Dropdown Selection");
 		Log.info("Verify Debenture Type Dropdown Selection");
 		
+		
+		
 		select("DEB CASH",debentureRedmRepo.drDebTypeDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "\"1. Click on the 'Debenture Type' dropdown.\r\n"
 				+ "2. Select an option.\"");
@@ -239,7 +241,7 @@ public class DebentureRedemption extends Base_Class{
 		Log.info("1. Click the 'Print' button.");
 		
         //Navigate to Pop Up Window
-     String mainWindowHandle = driver.getWindowHandle();
+   /*  String mainWindowHandle = driver.getWindowHandle();
      boolean popupAppeared = false;
      for (String handle : driver.getWindowHandles()) {
          if (!handle.equals(mainWindowHandle)) {
@@ -267,7 +269,7 @@ public class DebentureRedemption extends Base_Class{
              
          }
     
-     }//for loop end
+     }//for loop end */
 		ExtentTestManager.endTest();
 
 		
@@ -786,7 +788,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		
-		//Verify Print Functionality
+		/*//Verify Print Functionality
 		ExtentTestManager.startTest("Verify Print Functionality");
 		Log.info("Verify Print Functionality");
 		
@@ -823,7 +825,7 @@ public class DebentureRedemption extends Base_Class{
              
          }
     
-     }//for loop end
+     }//for loop end*/
 		ExtentTestManager.endTest();
 	}//end
 

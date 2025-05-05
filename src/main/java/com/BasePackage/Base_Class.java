@@ -169,8 +169,18 @@ public class Base_Class {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		Select selWeekDayDropDown = new Select(driver.findElement(element));
 		//selWeekDayDropDown.selectByVisibleText(value);
-		selWeekDayDropDown.selectByValue(value);
+		//selWeekDayDropDown.selectByValue(value);
+		selWeekDayDropDown.selectByVisibleText(value);
 	}
+	
+	/* public static void select(String value,By element) throws  {
+		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		Select selWeekDayDropDown = new Select(driver.findElement(element));
+		selWeekDayDropDown.selectByVisibleText(value);
+//		selWeekDayDropDown.selectByValue(value);
+	}*/
 
 	public static void clear(By element)throws InterruptedException
 	{
@@ -617,6 +627,8 @@ public static  void DatabaseConnector() throws ClassNotFoundException {
 //
 //	        return value; // Return the firstCustId
 //	    }//end
+	
+	
     
 
     
