@@ -154,10 +154,11 @@ public class GroupLoanCollection extends Base_Class{
 		
 
 		
-//		Select and Load Loan Collection Details
+//		 Select and Load Loan Collection Details
 		ExtentTestManager.startTest("Select and Load Loan Collection Details");
 		Log.info("Select and Load Loan Collection Details");
-				
+		
+		clear(grpLoanCollRepo.ldNumOfIntTxtBox);
 		String numOfInt = testdata.get("numOfInt").toString();
 		input(grpLoanCollRepo.ldNumOfIntTxtBox,numOfInt);
 		ExtentTestManager.getTest().log(Status.PASS, "1. Enter 'No.Of Inst' as 1 in the loan collection grid for one account");
@@ -169,7 +170,7 @@ public class GroupLoanCollection extends Base_Class{
 		Log.info("2. Press TAB");
 		
 		waitUntilElementDisappear(grpLoanCollRepo.loader);
-
+ 
 		String amtValue = driver.findElement(grpLoanCollRepo.ldAmtToBePaidTxtBox1).getAttribute("value");
 		double ldAmtToBePaid = Double.parseDouble(amtValue);
 		System.out.println("ldAmtToBePaid: " + ldAmtToBePaid);

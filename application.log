@@ -1,4 +1,4 @@
-[ERROR] 2025-05-05 12:21:40.785 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-05-06 15:05:03.806 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^&* in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -18,7 +18,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanCollection_CASH.gettestdate(AllScenarios_GroupLoans_GroupLoanCollection_CASH.java:92) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_Account_Search_Edit_button.gettestdate(AllScenarios_AccOpn_Account_Search_Edit_button.java:86) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
@@ -49,7 +49,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&*
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-05-05 12:21:40.809 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-05-06 15:05:03.824 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$% in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -69,7 +69,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanCollection_CASH.gettestdate(AllScenarios_GroupLoans_GroupLoanCollection_CASH.java:92) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_Account_Search_Edit_button.gettestdate(AllScenarios_AccOpn_Account_Search_Edit_button.java:86) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
@@ -100,7 +100,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-05-05 12:21:40.812 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-05-06 15:05:03.828 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%^ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -120,7 +120,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanCollection_CASH.gettestdate(AllScenarios_GroupLoans_GroupLoanCollection_CASH.java:92) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_Account_Search_Edit_button.gettestdate(AllScenarios_AccOpn_Account_Search_Edit_button.java:86) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
@@ -151,7 +151,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[ERROR] 2025-05-05 12:21:40.825 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
+[ERROR] 2025-05-06 15:05:03.836 [main] PackageRelationshipCollection - Cannot convert mailto:!@#$%!!! in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at java.net.URI$Parser.fail(URI.java:2995) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3123) ~[?:?]
@@ -171,7 +171,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286) ~[poi-ooxml-5.2.3.jar:5.2.3]
 	at com.Utility.ExcelReader.getSheet(ExcelReader.java:23) ~[classes/:?]
 	at com.Utility.ExcelReader.getdata(ExcelReader.java:29) ~[classes/:?]
-	at com.test.GroupLoans.AllScenarios_GroupLoans_GroupLoanCollection_CASH.gettestdate(AllScenarios_GroupLoans_GroupLoanCollection_CASH.java:92) ~[test-classes/:?]
+	at com.test.AccountOpening.AllScenarios_AccOpn_Account_Search_Edit_button.gettestdate(AllScenarios_AccOpn_Account_Search_Edit_button.java:86) ~[test-classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
@@ -202,44 +202,124 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%!!!
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
-[INFO ] 2025-05-05 12:21:42.034 [main] Log - GroupLoans_GroupLoanCollection_CASH
-[INFO ] 2025-05-05 12:21:48.329 [main] Log - Driver has initialized successfully for firefoxbrowser
-[INFO ] 2025-05-05 12:21:50.599 [main] Log - Title is displayed : BeaconPro - Login
-[INFO ] 2025-05-05 12:21:52.920 [main] Log - PC Registration
-[INFO ] 2025-05-05 12:21:54.099 [main] Log - Step:01 - Enter User Name in Name field.
-[INFO ] 2025-05-05 12:21:55.180 [main] Log - Step:03 - Enter PC Name in Name field.
-[INFO ] 2025-05-05 12:22:04.028 [main] Log - Step:03 - Select a Branch Name from the Dropdown.
-[INFO ] 2025-05-05 12:22:08.391 [main] Log - Step:04 - Click on Submit Button.
-[INFO ] 2025-05-05 12:22:10.620 [main] Log - Expected Result: PC Registered Successfully!
-[INFO ] 2025-05-05 12:22:10.727 [main] Log - Valid Login
-[INFO ] 2025-05-05 12:22:11.803 [main] Log - Step:01 - Enetered valid User Name
-[INFO ] 2025-05-05 12:22:12.890 [main] Log - Step:02 - Enetered valid Password
-[INFO ] 2025-05-05 12:22:22.281 [main] Log - Step:03 - Click on Login Button
-[INFO ] 2025-05-05 12:22:23.379 [main] Log - Expected Result: User is logged in successfully and dashboard visible
-[INFO ] 2025-05-05 12:22:23.540 [main] Log - Navigation to Group Loan collection page.
-[INFO ] 2025-05-05 12:22:27.874 [main] Log - 1. Navigate to Group Loans section.
-[INFO ] 2025-05-05 12:22:33.461 [main] Log - 2. Open Group Loan collection page.
-[INFO ] 2025-05-05 12:22:34.567 [main] Log - Expected Result: Group Loan collection page opened
-[INFO ] 2025-05-05 12:22:34.625 [main] Log - Center Dropdown Selections - Basic Functionality
-[INFO ] 2025-05-05 12:22:37.007 [main] Log -  Select a Center from Center dropdown
-[INFO ] 2025-05-05 12:22:37.261 [main] Log - Expected Result: Centre is selected from dropdown 
-[INFO ] 2025-05-05 12:22:37.320 [main] Log - Group Dropdown Selections - Basic Functionality
-[INFO ] 2025-05-05 12:22:39.706 [main] Log - Select a Group from Group dropdown.
-[INFO ] 2025-05-05 12:22:39.897 [main] Log - Expected Result: Group is selected from dropdown 
-[INFO ] 2025-05-05 12:22:39.956 [main] Log - GO Button Functionality
-[INFO ] 2025-05-05 12:22:44.315 [main] Log - 1. Click on the Go button.
-[INFO ] 2025-05-05 12:22:45.490 [main] Log - Expected Result: Applications are listed in a grid
-[INFO ] 2025-05-05 12:22:45.589 [main] Log - Select and Load Loan Collection Details
-[INFO ] 2025-05-05 12:22:49.939 [main] Log - 1. Click on the 'Select' button against the last group listed
-[INFO ] 2025-05-05 12:22:51.078 [main] Log - Expected Result: Loan Collection Details are loaded with 'No.Of Inst' header visible
-[INFO ] 2025-05-05 12:22:51.147 [main] Log - Select and Load Loan Collection Details
-[INFO ] 2025-05-05 12:22:52.252 [main] Log - 1. Enter 'No.Of Inst' as 1 in the loan collection grid for one account
-[INFO ] 2025-05-05 12:22:52.330 [main] Log - 2. Press TAB
-[INFO ] 2025-05-05 12:22:53.614 [main] Log - ERROR
-[INFO ] 2025-05-05 12:22:53.685 [main] Log - Amount Entry
-[INFO ] 2025-05-05 12:22:56.843 [main] Log - Exception org.openqa.selenium.ElementClickInterceptedException: Element <input id="ctl00_ctl00_CPH1_PRDCNT_glcCustomer_ctrl1_txtAmountPaid" class="txnInputs decimals" name="ctl00$ctl00$CPH1$PRDCNT$glcCustomer$ctrl1$txtAmountPaid" type="text"> is not clickable at point (883,413) because another element <div id="FloatingwarningMessageEnteraValidInstallmentNo" class="FloatingErrorMessage"> obscures it
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SPCLTLAP-0350', ip: '192.168.1.6', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 138.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250430203103, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17896, moz:profile: C:\Users\SANOOP~1.KUZ\AppDa..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 5c1706f4-f6ce-4fc5-8fbe-81025d72e7b8
+[INFO ] 2025-05-06 15:05:05.059 [main] Log - *** Running test method AccountSearchEditbutton...
+[INFO ] 2025-05-06 15:05:12.465 [main] Log - Driver has initialized successfully for firefoxbrowser
+[INFO ] 2025-05-06 15:05:14.257 [main] Log - Title is displayed : BeaconPro - Login
+[INFO ] 2025-05-06 15:05:16.635 [main] Log - PC Registration
+[INFO ] 2025-05-06 15:05:17.737 [main] Log - Step:01 - Enter User Name in Name field.
+[INFO ] 2025-05-06 15:05:18.835 [main] Log - Step:03 - Enter PC Name in Name field.
+[INFO ] 2025-05-06 15:05:27.666 [main] Log - Step:03 - Select a Branch Name from the Dropdown.
+[INFO ] 2025-05-06 15:05:32.046 [main] Log - Step:04 - Click on Submit Button.
+[INFO ] 2025-05-06 15:06:13.454 [main] Log - Expected Result: PC Registered Successfully!
+[INFO ] 2025-05-06 15:06:13.591 [main] Log - Valid Login
+[INFO ] 2025-05-06 15:06:14.675 [main] Log - Step:01 - Enetered valid User Name
+[INFO ] 2025-05-06 15:06:15.756 [main] Log - Step:02 - Enetered valid Password
+[INFO ] 2025-05-06 15:06:25.734 [main] Log - Step:03 - Click on Login Button
+[INFO ] 2025-05-06 15:06:26.848 [main] Log - Expected Result: User is logged in successfully and dashboard visible
+[INFO ] 2025-05-06 15:06:26.935 [main] Log - Navigate to Account Search Window
+[INFO ] 2025-05-06 15:06:31.257 [main] Log - Clicked on Account Opening Tab
+[INFO ] 2025-05-06 15:06:35.589 [main] Log - Clicked on Search Tab
+[INFO ] 2025-05-06 15:06:40.383 [main] Log - Clicked on Account Search Tab
+[INFO ] 2025-05-06 15:06:40.448 [main] Log - Select Group, Subgroup, and Product
+[INFO ] 2025-05-06 15:06:42.960 [main] Log - Step:01 -  Choose 'Loan' for Group Dropdown.
+[INFO ] 2025-05-06 15:06:45.356 [main] Log - Step:01 -  Choose 'OTHER LOANS' for Sub Group Dropdown.
+[INFO ] 2025-05-06 15:06:54.133 [main] Log - Step:01 -  Choose 'PERSONAL LOAN WEEKLY ' for Product Dropdown.
+[INFO ] 2025-05-06 15:06:54.135 [main] Log - Enter an alphabet in the name field.
+[INFO ] 2025-05-06 15:07:02.659 [main] Log - Step:01 - Enter a valid Account Name in the input field.
+[INFO ] 2025-05-06 15:07:07.005 [main] Log - Clicked on Search Button
+[INFO ] 2025-05-06 15:07:12.339 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[1]
+[INFO ] 2025-05-06 15:07:12.341 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:12.385 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[2]
+[INFO ] 2025-05-06 15:07:12.385 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:12.427 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[3]
+[INFO ] 2025-05-06 15:07:12.427 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:12.481 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[4]
+[INFO ] 2025-05-06 15:07:12.481 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:12.553 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[5]
+[INFO ] 2025-05-06 15:07:12.553 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:12.637 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[6]
+[INFO ] 2025-05-06 15:07:12.637 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:12.713 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[7]
+[INFO ] 2025-05-06 15:07:12.713 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:12.764 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[8]
+[INFO ] 2025-05-06 15:07:12.764 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:12.836 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[9]
+[INFO ] 2025-05-06 15:07:12.836 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:12.893 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[10]
+[INFO ] 2025-05-06 15:07:12.893 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:12.938 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[11]
+[INFO ] 2025-05-06 15:07:12.938 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:13.018 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[12]
+[INFO ] 2025-05-06 15:07:13.019 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:13.066 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[13]
+[INFO ] 2025-05-06 15:07:13.066 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:13.150 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[14]
+[INFO ] 2025-05-06 15:07:13.150 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:13.197 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[15]
+[INFO ] 2025-05-06 15:07:13.197 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:13.259 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[16]
+[INFO ] 2025-05-06 15:07:13.259 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:13.329 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[17]
+[INFO ] 2025-05-06 15:07:13.329 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:13.417 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[18]
+[INFO ] 2025-05-06 15:07:13.417 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:13.482 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[19]
+[INFO ] 2025-05-06 15:07:13.482 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:13.548 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[6]//span)[20]
+[INFO ] 2025-05-06 15:07:13.548 [main] Log - All accounts with account holder names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:17.967 [main] Log - Clicked on Clear Button
+[INFO ] 2025-05-06 15:07:18.095 [main] Log - Select Group, Subgroup, and Product
+[INFO ] 2025-05-06 15:07:20.487 [main] Log - Step:01 -  Choose 'Loan' for Group Dropdown.
+[INFO ] 2025-05-06 15:07:22.853 [main] Log - Step:01 -  Choose 'OTHER LOANS' for Sub Group Dropdown.
+[INFO ] 2025-05-06 15:07:31.582 [main] Log - Step:01 -  Choose 'PERSONAL LOAN WEEKLY ' for Product Dropdown.
+[INFO ] 2025-05-06 15:07:31.584 [main] Log - Enter an alphabet in the House Name field.
+[INFO ] 2025-05-06 15:07:40.126 [main] Log - Step:01 - Enter a valid Account House Name in the input field.
+[INFO ] 2025-05-06 15:07:44.460 [main] Log - Clicked on Search Button
+[INFO ] 2025-05-06 15:07:44.577 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[1]
+[INFO ] 2025-05-06 15:07:44.577 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:44.623 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[2]
+[INFO ] 2025-05-06 15:07:44.623 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:44.670 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[3]
+[INFO ] 2025-05-06 15:07:44.670 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:44.716 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[4]
+[INFO ] 2025-05-06 15:07:44.716 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:44.765 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[5]
+[INFO ] 2025-05-06 15:07:44.765 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:44.816 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[6]
+[INFO ] 2025-05-06 15:07:44.816 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:44.856 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[7]
+[INFO ] 2025-05-06 15:07:44.856 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:44.905 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[8]
+[INFO ] 2025-05-06 15:07:44.905 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:44.954 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[9]
+[INFO ] 2025-05-06 15:07:44.954 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.001 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[10]
+[INFO ] 2025-05-06 15:07:45.001 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.049 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[11]
+[INFO ] 2025-05-06 15:07:45.049 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.097 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[12]
+[INFO ] 2025-05-06 15:07:45.097 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.147 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[13]
+[INFO ] 2025-05-06 15:07:45.147 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.195 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[14]
+[INFO ] 2025-05-06 15:07:45.195 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.241 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[15]
+[INFO ] 2025-05-06 15:07:45.241 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.288 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[16]
+[INFO ] 2025-05-06 15:07:45.288 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.337 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[17]
+[INFO ] 2025-05-06 15:07:45.337 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.385 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[18]
+[INFO ] 2025-05-06 15:07:45.385 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.432 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[19]
+[INFO ] 2025-05-06 15:07:45.432 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:45.480 [main] Log - System able to found the element :By.xpath: (//table[@id='tblAccountList']//tbody//tr//td[7]//span)[20]
+[INFO ] 2025-05-06 15:07:45.480 [main] Log - All accounts with account holder house names containing the given alphabet should be listed.
+[INFO ] 2025-05-06 15:07:49.926 [main] Log - Clicked on Clear Button
+[INFO ] 2025-05-06 15:07:50.031 [main] Log - Enter Loan Account Number
+[INFO ] 2025-05-06 15:07:50.675 [main] Log - Enter an Valid Account no in the field.
+[INFO ] 2025-05-06 15:07:59.235 [main] Log - Step:01 - Enter a valid Account No in the input field.
+[INFO ] 2025-05-06 15:08:03.593 [main] Log - Clicked on Search Button
+[INFO ] 2025-05-06 15:08:03.593 [main] Log - Logout
+[INFO ] 2025-05-06 15:08:13.661 [main] Log - Step:01 -  Click on 'Signout'
+[INFO ] 2025-05-06 15:08:14.771 [main] Log - Expected Result: User is logged out successfully, login screen is displayed.
