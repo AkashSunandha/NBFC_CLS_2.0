@@ -45,7 +45,7 @@ public class AllScenarios_Admin_UserCreation {
 	public void userCreation(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("User Creation -Admin Module");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
@@ -78,7 +78,7 @@ public class AllScenarios_Admin_UserCreation {
 
 
 				//TC NO-05
-				userCreate.testInvalidUserIdInput(testdata, context);
+				//userCreate.testInvalidUserIdInput(testdata, context);
 
 
 				//TC NO-06

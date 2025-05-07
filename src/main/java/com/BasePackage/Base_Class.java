@@ -173,6 +173,16 @@ public class Base_Class {
 		selWeekDayDropDown.selectByVisibleText(value);
 	}
 	
+	public static void selectbyValue(String value,By element) throws InterruptedException {
+		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		Select selWeekDayDropDown = new Select(driver.findElement(element));
+		//selWeekDayDropDown.selectByVisibleText(value);
+		selWeekDayDropDown.selectByValue(value);
+		//selWeekDayDropDown.selectByVisibleText(value);
+	}
+	
 	/* public static void select(String value,By element) throws  {
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);

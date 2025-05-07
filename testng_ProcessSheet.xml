@@ -3,7 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.test.user.Recovery.AllScenarios_ProcessSheet_AccountsTab"/>
+    
+      <class name="com.test.Customer.AllScenarios_Cust_QuickCustomer"/>
+      <class name="com.test.Customer.AllScenarios_Cust_NewCustomer"/>
+      <class name="com.test.Customer.AllScenarios_Cust_CustRating"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

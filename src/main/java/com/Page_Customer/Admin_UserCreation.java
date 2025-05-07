@@ -32,6 +32,7 @@ public class Admin_UserCreation extends Base_Class {
 
 	public boolean signOut() throws InterruptedException {
 		click(puc.admin_signOutBtn);
+		driver.quit();
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Admin SignedOut");
 				Log.info("Expected Result: Admin SignedOut");
 		return true;
@@ -41,11 +42,11 @@ public class Admin_UserCreation extends Base_Class {
 	public void adminLogin(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		ExtentTestManager.startTest("TC No. - 02 --> Login with Admin User");
 		//String loginUserName = testdata.get("loginUserName").toString();
-		String loginUserName=configloader().getProperty("adminUser");
+		String loginUserName=configloader().getProperty("AdminUserName");
 		input(custSearch.loginUserName, loginUserName);
 		
 		//String loginValidPassword = testdata.get("loginValidPassword").toString();
-		String loginValidPassword=configloader().getProperty("adminPassword");
+		String loginValidPassword=configloader().getProperty("AdminPassword");
 		input(custSearch.loginPasswrd, loginValidPassword);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1-> Enter admin credentials (username and password)");
@@ -101,27 +102,27 @@ public class Admin_UserCreation extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter alphabets in User ID field");
 		Log.info("Step-1: Enter alphabets in User ID field");
 
-//		String name = testdata.get("name").toString();				
-//		input(puc.name, name);
-//
-//		String group = testdata.get("group").toString();	
-//
-//		String branch = testdata.get("branch").toString();	
-//
-//		String machineID = testdata.get("machineID").toString();
-//
-//		String mobile = testdata.get("mobile").toString();
-//
-//		String emailID = testdata.get("emailID").toString();
-//
-//
-//		select(group,puc.group_dropdown);
-//		select(branch,puc.branch_dropdown);
-//		select(machineID,puc.machineID_dropdown);
-//		input(puc.mobile,mobile);
-//		input(puc.emailID,emailID);
-//		click(puc.level_checkBoxes1);
-//		click(puc.level_checkBoxes);
+		String name = testdata.get("name").toString();				
+		input(puc.name, name);
+
+		String group = testdata.get("group").toString();	
+
+		String branch = testdata.get("branch").toString();	
+
+		String machineID = testdata.get("machineID").toString();
+
+		String mobile = testdata.get("mobile").toString();
+
+		String emailID = testdata.get("emailID").toString();
+
+
+		select(group,puc.group_dropdown);
+     	select(branch,puc.branch_dropdown);
+     	selectbyValue(machineID,puc.machineID_dropdown);
+		input(puc.mobile,mobile);
+		input(puc.emailID,emailID);
+		click(puc.level_checkBoxes1);
+		click(puc.level_checkBoxes);
 		
 		click(puc.level_checkBoxes3);
 		click(puc.saveBtn);
