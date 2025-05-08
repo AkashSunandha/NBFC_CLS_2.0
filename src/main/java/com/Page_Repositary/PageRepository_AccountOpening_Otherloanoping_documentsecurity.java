@@ -17,7 +17,7 @@ public class PageRepository_AccountOpening_Otherloanoping_documentsecurity {
 	
 	public By custID_textbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LAI_txtCoCustID_txt\"]");
 	
-	
+	public By collapsemenu=By.xpath("//*[@id=\"imgCollapseAll\"]");
 	//*[@id="PopQuick1_txtCustID"]
 	
 	public By childSearchBtn=By.xpath("//input[@id='PopQuick1_btnSearch']");

@@ -226,6 +226,7 @@ public class AllScenarios_Otherloanoping_documentsecurity_Transfer {
 				Thread.sleep(5000);
 				personalLoan.signOut();
 				
+				personalLoan.Windowclose();
 				
 				// EndTest
 				ExtentTestManager.endTest();

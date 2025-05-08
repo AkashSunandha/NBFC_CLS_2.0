@@ -326,7 +326,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	//TC-19 (3)
 	public void testSROfficeField() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 19 --> Validate SR Office dropdown");
-		select("1",loanOpen.srOfficeDropdown);
+		selectbyValue("1",loanOpen.srOfficeDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select SR Office option from drop down");
 		Log.info("Step-1:   Select SR Office option from drop down");
@@ -561,7 +561,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	public void testDistrictDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 34 --> Validate district dropdown");
 
-		select("89",loanOpen.district_dropdown);
+		selectbyValue("89",loanOpen.district_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Able to select option in district dropdown");
 		Log.info("Expected Result: Able to select option in district dropdown");
 
@@ -573,7 +573,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	public void testPostDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 35 --> Validate post dropdown");
 
-		select("13406",loanOpen.post_dropdown);
+		selectbyValue("13406",loanOpen.post_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Able to select option in post dropdown");
 		Log.info("Expected Result: Able to select option in post dropdown");
 
@@ -598,7 +598,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	//TC-33 (2)
 	public void testSelectRelation() throws InterruptedException  {
 		ExtentTestManager.startTest("TC No. - 33 --> Select relation");
-		select("15",loanOpen.relation_dropdown);
+		selectbyValue("15",loanOpen.relation_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select relation from the drop down ");
 		Log.info("Step-1:  Select relation from the drop down ");
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Relation are selected successfully from the drop down");
@@ -672,7 +672,7 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 	public void testSelectTransactionMode() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 42 --> Select Transaction Mode");
 		click(loanOpen.transMode);
-		select("1",loanOpen.transModeDropdown);
+		selectbyValue("1",loanOpen.transModeDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select transaction mode as cash.");
 		Log.info("Step-1:  Select transaction mode as cash.");
 
@@ -734,13 +734,13 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 
 		ExtentTestManager.startTest("TC No. - 44 --> Login to LMS as another User");
 		//String loginUserName1 = testdata.get("loginUserName1").toString();
-		String loginUserName1=configloader().getProperty("UserName1");
+		String loginUserName1=configloader().getProperty("UserName2");
 		input(loanOpen.loginUserName, loginUserName1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
 		Log.info("Step-1: Enter valid username.");
 
 		//String loginValidPassword1 = testdata.get("loginValidPassword1").toString();
-		String loginValidPassword1=configloader().getProperty("Password1");
+		String loginValidPassword1=configloader().getProperty("Password2");
 		input(loanOpen.loginPasswrd, loginValidPassword1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Enter valid password.");
 		Log.info("Step-2: Enter valid password.");
@@ -753,6 +753,13 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 				input(loanOpen.loginUserName, loginUserName1);
 				input(loanOpen.loginPasswrd, loginValidPassword1);
 				click(loanOpen.loginButton);
+				Thread.sleep(5000);
+				if(ElementDisplayed(loanOpen.collapsemenu)){
+					
+					click(loanOpen.collapsemenu);
+				}else {
+					Log.info("Menu Collapsed");
+				}
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Login is successfull");
 				Log.info("Expected Result: Login is successfull");
 			}else {
@@ -890,6 +897,12 @@ public class AccountOpening_Otherloanoping_documentsecurity extends Base_Class{
 
 	public void testCloseMessagePopup() throws InterruptedException {
 		click(loanOpen.closeIcon);
+	}
+	
+	public void Windowclose() {
+	
+		driver.quit();
+		
 	}
 
 	//	//TC-53 (1)
