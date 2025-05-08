@@ -46,13 +46,13 @@ public class Customer_QuickCustomer extends Base_Class{
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
 
 	
-	public String spPAN = "GenerateNextPAN";
+	public String spPAN = "EXEC GenerateNextPAN"; 
 	public String clmnNamPAN = "generated_pan";
 	
-	public String spAadhaar = "GenerateNextAadharNumber";
+	public String spAadhaar = "EXEC GenerateNextAadharNumber";
 	public String clmnNamAadhaar = "generated_aadhar_number";
 	
-	public String spMobileNum = "GenerateNextMobileNumber";
+	public String spMobileNum = "EXEC GenerateNextMobileNumber";
 	public String clmnNamMobileNum = "generated_mobile_number";
 	
 	
@@ -74,7 +74,7 @@ public class Customer_QuickCustomer extends Base_Class{
 	             ResultSet resultSet = statement.executeQuery(query)) {
 	        	
 	        	if (resultSet.next()) {
-	        		value = resultSet.getString(columnName); // Get the first Cust_ID
+	        		value = resultSet.getString(columnName); // DB column name
 	                System.out.println("Generated Unique ID: " + value);
 	            } else {
 	                System.out.println("Unique ID not generated.");
@@ -165,7 +165,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		Log.info("Expected Result: Salutation can be selected from dropdown.");
 		
 		ExtentTestManager.endTest();
-		
+		 
 		//Numerical Entry in 'First Name' Field
 		ExtentTestManager.startTest("Numerical Entry in 'First Name' Field");
 		Log.info("Numerical Entry in 'First Name' Field");
@@ -3274,7 +3274,7 @@ public void emptyCheckAvailabilityPopup() throws InterruptedException {
     		driver.switchTo().window(mainWindowHandle);
     		
     		ScrollUntilElementVisible(quickCustRepo.saveBtn);
-    		if(ElementEnableOrDisable(quickCustRepo.saveBtn)==true) {
+    		if(checkElementEnableOrDisable(quickCustRepo.saveBtn)==true) {
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: 'Save' button should be enabled.");
             	Log.info("Expected Result: 'Save' button should be enabled.");
     		}else {

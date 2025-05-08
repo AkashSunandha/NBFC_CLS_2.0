@@ -27,17 +27,9 @@ public class Customer_NewCustomer extends Base_Class{
 	PageRepositary_Cust_NewCustomer newCustRepo = new PageRepositary_Cust_NewCustomer();
 	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
-	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
+	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();	
 	String transIdCash;
 	String transIdTransfer;
-//	String spPAN = "GenerateNextPAN";
-//	String clmnNamPAN = "generated_pan";
-//	
-//	String spAadhaar = "GenerateNextAadharNumber";
-//	String clmnNamAadhaar = "generated_aadhar_number";
-//	
-//	String spMobileNum = "GenerateNextMobileNumber";
-//	String clmnNamMobileNum = "generated_mobile_number";
 	
 	
 	public void openNewCustomerWindow() throws InterruptedException {
@@ -986,7 +978,7 @@ public class Customer_NewCustomer extends Base_Class{
 		ExtentTestManager.startTest("Verify Previous Button Disabled");
 		Log.info("Verify Previous Button Disabled");
 		
-		boolean value = ElementEnableOrDisable(newCustRepo.previousBtn);
+		boolean value = checkElementEnableOrDisable(newCustRepo.previousBtn);
 		
 		if(value==false) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Button is disabled.");
@@ -1005,7 +997,7 @@ public class Customer_NewCustomer extends Base_Class{
 		ExtentTestManager.startTest("Verify Check Availability Button Enabled");
 		Log.info("Verify Check Availability Button Enabled");
 		
-		boolean value1 = ElementEnableOrDisable(newCustRepo.checkAvailabilityBtn);
+		boolean value1 = checkElementEnableOrDisable(newCustRepo.checkAvailabilityBtn);
 		
 		if(value1==true) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Button is enabled.");
@@ -1024,7 +1016,7 @@ public class Customer_NewCustomer extends Base_Class{
 		ExtentTestManager.startTest("Verify Save and Proceed Button Disabled Initially");
 		Log.info("Verify Save and Proceed Button Disabled Initially");
 		
-		boolean value2 = ElementEnableOrDisable(newCustRepo.saveAndProceedBtn);
+		boolean value2 = checkElementEnableOrDisable(newCustRepo.saveAndProceedBtn);
 		
 		if(value2==false) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Button is disabled initially.");
@@ -1075,7 +1067,7 @@ public class Customer_NewCustomer extends Base_Class{
 	    		ExtentTestManager.startTest("Enable Save and Proceed Button on No Matches");
 	    		Log.info("Enable Save and Proceed Button on No Matches");
 	    		
-	    		boolean value3 = ElementEnableOrDisable(newCustRepo.saveAndProceedBtn);
+	    		boolean value3 = checkElementEnableOrDisable(newCustRepo.saveAndProceedBtn);
 	    		
 	    		if(value3==true) {
 	    			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Button is enabled if no matches found.");
@@ -1738,8 +1730,8 @@ public class Customer_NewCustomer extends Base_Class{
 		Log.info("Verify Buttons in Address Tab");
 		
 		ScrollUntilElementVisible(newCustRepo.prmPreviousBtn);
-		boolean previousBtnValue = ElementEnableOrDisable(newCustRepo.prmPreviousBtn);
-		boolean saveAndProceedBtnValue = ElementEnableOrDisable(newCustRepo.prmSaveAndProceedBtn);
+		boolean previousBtnValue = checkElementEnableOrDisable(newCustRepo.prmPreviousBtn);
+		boolean saveAndProceedBtnValue = checkElementEnableOrDisable(newCustRepo.prmSaveAndProceedBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Locate Previous and Save and Proceed buttons & Verify both are enabled.");
 		Log.info("Step:01 - Locate Previous and Save and Proceed buttons & Verify both are enabled.");
 		

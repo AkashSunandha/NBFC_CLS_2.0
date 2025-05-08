@@ -25,7 +25,7 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		input(goaldLoanRepo.transIdTxtBox,transId);
 		click(goaldLoanRepo.goBtn);
 	}
-	
+	 
 	public void openGoaldLoanWindow() throws InterruptedException {
 		
 		ExtentTestManager.startTest("Access Gold Loan Opening Window");

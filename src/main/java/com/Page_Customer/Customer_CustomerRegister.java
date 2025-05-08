@@ -15,7 +15,7 @@ import com.extentReports.ExtentTestManager;
 
 public class Customer_CustomerRegister extends Base_Class{
 	PageRepositary_Cust_CustRegister custRgstr = new PageRepositary_Cust_CustRegister();
-	ScreenShot sc = new ScreenShot(null);
+	ScreenShot sc = new ScreenShot(null); 
 	
 	
 //Customer Register Window

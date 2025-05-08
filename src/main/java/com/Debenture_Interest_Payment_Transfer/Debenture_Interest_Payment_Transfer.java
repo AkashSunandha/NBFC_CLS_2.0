@@ -1,5 +1,4 @@
 package com.Debenture_Interest_Payment_Transfer;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,7 +6,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 
-import org.openqa.selenium.By;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -25,7 +23,6 @@ import com.extentReports.ExtentTestManager;
 
 public class Debenture_Interest_Payment_Transfer extends Base_Class {
 
-	private static final By By = null;
 	PageRepositary_OLTransaction_Cash_Transfer OLtrans = new PageRepositary_OLTransaction_Cash_Transfer();
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
@@ -43,7 +40,7 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 	String mainWindowHandleParent;
 	String mainWindowHandlechild;
 
-	public String sp = "EXEC GetSpDebAcNo '102','90067',1 ";
+	public String sp = "GetSpMultipleFDAccountNo 102,14003,1";
 	public String columnName = "Acno";
 
 	public void fetchWithTransId(String transId) throws InterruptedException {
@@ -63,12 +60,8 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 		ExtentTestManager.startTest("Navigate to Debenture interest payment");
 		Log.info("Navigate to Debenture interest payment");
 
-		// ScrollUntilElementVisible(Debenture.clickondebenture);
-
+		ScrollUntilElementVisible(Debenture.clickondebenture);
 		click(Debenture.clickondebenture);
-
-		ScrollUntilElementVisible(Debenture.clickdebpayment);
-
 		click(Debenture.clickdebpayment);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Debenture Debenture Interest Payment. ");
 		Log.info("Step:01 - Navigate to Debenture Debenture Interest Payment.");
@@ -88,7 +81,7 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 
 		ExtentTestManager.startTest("Verify Dropdown for Debenture Issue");
 		Log.info("Verify Dropdown for Debenture Issue");
-		select("ISSUE-DEB TRAIL TRANSFER-65", Debenture.Issuetype);
+		select("ISSUE-DEB TRAIL TRANSFER", Debenture.Issuetype);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select ' Issue Type' options from the dropdown..");
 		Log.info("Step:01 -Select ' Issue Type' options from the dropdown..");
 		ExtentTestManager.getTest().log(Status.PASS, "appropriate values load according to selection.");
@@ -96,7 +89,7 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 
 		ExtentTestManager.startTest("Verify Dropdown for Debenture Series");
 		Log.info("Verify Dropdown for Debenture Series");
-		select("SERIES-ISSUE-DEB TRAIL TRANSFER-65-SERIES-2062", Debenture.Series);
+		select("SERIES-ISSUE-DEB TRAIL TRANSFER", Debenture.Issuetype);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select 'Debenture series options from the dropdown.");
 		Log.info("Step:01 -Select 'Debenture series options from the dropdown.");
 		ExtentTestManager.getTest().log(Status.PASS, "appropriate values load according to selection.");
@@ -167,15 +160,11 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 
 	}
 
-	public void verifyDurationValueEntry(Map<Object, Object> testdata, ITestContext context)
-			throws InterruptedException {
+	public void verifyDurationValueEntry() throws InterruptedException {
 
 		ExtentTestManager.startTest("Debenture duration");
 		Log.info("Debenture duration");
-
-		String Duration = testdata.get("Duration").toString();
-		input(Debenture.duration, Duration);
-
+		click(Debenture.duration);
 		ExtentTestManager.getTest().log(Status.PASS,
 				"Step:01-  Enter a valid duration value into the 'duration' field. then click tab");
 		Log.info("Step:01 -Enter a valid duration value into the 'duration' field. then click tab.");
@@ -190,19 +179,13 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 
 		ExtentTestManager.startTest("Post Debit Transaction");
 		Log.info("Debit Transaction Posted");
-		click(Debenture.clickpost);
-		click(Debenture.clickpost);
-		
-		
-
+		click(OLtrans.Clickpostdeb);
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Click on the POST DEBIT button ");
 		Log.info("Step: 1 -Click on the POST DEBIT button.");
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Auto posting popup window will be display .");
 		Log.info("Expected Result:Auto posting popup window will be display .");
 		ExtentTestManager.endTest();
-	}
 
-	public void verifyPostCreditPopupDisplay22() throws InterruptedException {
 		ExtentTestManager.startTest("Search Account Number");
 		Log.info("Searched for Account Number");
 		mainWindowHandle = driver.getWindowHandle();
@@ -237,7 +220,6 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 				popupAppeared1 = true;
 			}
 		}
-		click(FDintrest.clickonsearch);
 
 		select("Demand Investment", FDintrest.group);
 		select("INV-DEMAND-CA", FDintrest.product);
@@ -269,6 +251,8 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 				"Expected Result:Amount and details is added in the grid in the auto posting popup window.");
 		Log.info("Expected Result:Amount and details is added in the grid in the auto posting popup window  .");
 		ExtentTestManager.endTest();
+		
+		
 
 		ExtentTestManager.startTest("Add Transaction Amount");
 		Log.info("Transaction Amount Added");
@@ -280,26 +264,6 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 				"Expected Result:Details is added and auto posting popu window closes .");
 		Log.info("Expected Result:Details is added and auto posting popu window closes .");
 
-	}
-
-	public void managerauthorisation1() throws InterruptedException {
-
-		ExtentTestManager.startTest("Manager authorization");
-		Log.info("Manager authorization");
-
-		click(FDintrest.clickonauth);
-
-		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the authoirze & Cancel module from the taskbar ");
-		Log.info("Step:01 - Click the authoirze & Cancel module from the taskbar ");
-
-		ScrollUntilElementVisible(FDintrest.clickonauth);
-		Thread.sleep(5000);
-		click(FDintrest.clickonmanger);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:02 -Click Manager authorisation Submodule ");
-		Log.info("Step:02 - Click Manager authorisation Submodule");
-
-		ExtentTestManager.getTest().log(Status.PASS, "Manager authorization window will be display");
-		Log.info("Manager authorization window will be display");
 	}
 
 	public void printButtonTest() throws InterruptedException {

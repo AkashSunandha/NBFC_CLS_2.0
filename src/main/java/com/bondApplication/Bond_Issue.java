@@ -21,6 +21,8 @@ import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
+
+
 public class Bond_Issue extends Base_Class {
 
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
@@ -276,7 +278,7 @@ public class Bond_Issue extends Base_Class {
 		// Output the number of <tr> tags
 		System.out.println("Number of rows in the table: " + rows.size());
 
-		int lastRowCount = rows.size() - 1;
+		int lastRowCount = rows.size() - 5;
 		System.out.println("lastRow: " + lastRowCount);
 
 		String xpath = "//*[@id='ctl00_ctl00_CPH1_PRDCNT_lstBondIssue_ctrl" + lastRowCount + "_btnView']";

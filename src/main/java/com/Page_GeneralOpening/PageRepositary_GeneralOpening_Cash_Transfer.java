@@ -1,3 +1,4 @@
+
 package com.Page_GeneralOpening;
 
 import org.openqa.selenium.By;
@@ -8,9 +9,9 @@ public class PageRepositary_GeneralOpening_Cash_Transfer {
 
 	public By AccOpeningTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div");
 	public By GeneralOpenTab = By
-			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[4]/div");
+			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[5]/ul/li[4]/div");
 	public By Suspenseliability = By
-			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[4]/ul/li[1]/div");
+			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[5]/ul/li[4]/ul/li[1]/div");
 	public By Suspliability = By.xpath("//a[text()='SUSPENSE LIABILITY  (30001)']");
 	public By custnameevisi = By.xpath(
 			"/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[8]/table/tbody/tr[2]/td/table/tbody/tr[2]/td[1]");
@@ -149,20 +150,5 @@ public class PageRepositary_GeneralOpening_Cash_Transfer {
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-//	public By variable = By.xpath("");
-}
 
-	
+}

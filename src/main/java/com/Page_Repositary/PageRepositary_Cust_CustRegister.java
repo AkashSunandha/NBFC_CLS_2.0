@@ -2,14 +2,14 @@ package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
-public class PageRepositary_Cust_CustRegister {
+public class PageRepositary_Cust_CustRegister { 
 	//PC Registration
 	public By formName = By.xpath("//*[@id='Username']");
 	public By formBranchName = By.xpath("//select[@id='ddlBranches']/option[text()='TRIVANDRUM']");
 	public By formComputerName = By.xpath("//*[@id=\"MacName\"]");
 	public By formSubmitBtn = By.xpath("/html/body/div[2]/div[11]/div/button/span");
 	
-	//Login Module
+	//Login Module 
 	public By loginUserName = By.xpath("//*[@id=\"txtUserName_txt\"]");
 	public By loginPasswrd = By.xpath("//*[@id=\"txtPassword_txt\"]");
 	public By loginButton = By.xpath("//*[@id=\"imgbtnSubmit\"]");
@@ -17,8 +17,8 @@ public class PageRepositary_Cust_CustRegister {
 	public By logoutOk = By.xpath("/html/body/div[1]/div/div[2]/div/form/div[11]/div[3]/div/button[1]");
 
 	//Customer Register Window
-	public By cust = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/div");
-	public By custRegister = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/ul/li[5]");
+	public By cust = By.xpath("//ul[@id='CreateMenu']//a[text()='Customer']/preceding-sibling::div");
+	public By custRegister = By.xpath("//a[text()='Customer Register ']");
 	public By custIDTxtBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_txtCustomerId_txt\"]");
 	public By custSrchBtn = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[2]/table/tbody/tr/td[3]/a/img");
 	public By custShareChkBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_ucProductGroup_0\"]");

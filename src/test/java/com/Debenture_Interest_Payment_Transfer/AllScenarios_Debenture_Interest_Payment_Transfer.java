@@ -79,27 +79,17 @@ public class AllScenarios_Debenture_Interest_Payment_Transfer {
 				
 				Deb.verifyAccountNumberEntry();
 				
-				Deb.verifyDurationValueEntry(testdata, context);
+				Deb.verifyDurationValueEntry();
 				
 				Deb.verifyPostCreditPopupDisplay(testdata, context);
 				
-				FD.searchAccountNumber(testdata, context);
-
-				FD.selectAccountNumber(testdata, context);
-
-				FD.addTransactionAmount1();
-
-				FD.addTransactionAmount();
-
-				FD.submitTransactionWindow();
-
-				
+				Deb.printButtonTest();
 				
 				suspense.logoutApplication1();
 
 				Closuretrans.AnotherUSer(testdata, context);
 
-				Deb.managerauthorisation1();
+				FD.managerauthorisation1();
 
 				FD.UserLoggedIntransfer();
 
@@ -140,6 +130,3 @@ public class AllScenarios_Debenture_Interest_Payment_Transfer {
 	}
 
 }
-
-
-

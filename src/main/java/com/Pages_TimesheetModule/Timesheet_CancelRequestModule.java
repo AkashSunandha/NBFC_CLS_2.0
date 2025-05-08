@@ -273,9 +273,9 @@ public class Timesheet_CancelRequestModule extends Base_Class
 	
 	
 	public void SubmitPreviousWeekTimeSheetOnDifferentCondition(String projectName,String moduleName) {
-		Boolean SaveAndSubmit = ElementEnableOrDisable(saveandSubmit); 
-		Boolean SaveWithoutSubmit = ElementEnableOrDisable(saveWithoutSubmit);
-		Boolean RequestAndCancel = ElementEnableOrDisable(RequestCancled);
+		Boolean SaveAndSubmit = checkElementEnableOrDisable(saveandSubmit); 
+		Boolean SaveWithoutSubmit = checkElementEnableOrDisable(saveWithoutSubmit);
+		Boolean RequestAndCancel = checkElementEnableOrDisable(RequestCancled);
 		Boolean SaveAndSubmitDisable = CheckElementDisable(saveandSubmit); 
 		Boolean SaveWithoutSubmitDisable = CheckElementDisable(saveWithoutSubmit);
 		Boolean RequestAndCancelDisable = CheckElementDisable(RequestCancled);	
@@ -389,7 +389,7 @@ public class Timesheet_CancelRequestModule extends Base_Class
 	
 	
 	public void ValidateRequestCancel(String projectName, String moduleName) {
-		if (ElementEnableOrDisable(RequestCancled)) {
+		if (checkElementEnableOrDisable(RequestCancled)) {
 			Log.info("Timesheet found already filled");
 			for(int i=0;i<2;i++) {	
 			 try {

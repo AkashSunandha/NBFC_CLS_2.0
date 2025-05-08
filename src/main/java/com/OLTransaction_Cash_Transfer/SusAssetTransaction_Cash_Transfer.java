@@ -1,3 +1,4 @@
+
 package com.OLTransaction_Cash_Transfer;
 
 import java.io.IOException;
@@ -233,7 +234,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User navigates to summary page");
 		Log.info("Expected Result: User navigates to summary page");
 		ExtentTestManager.endTest();
-
+		AcceptAlert();
 		transId = driver.findElement(Suspenseasset.transIDD).getText();
 
 	}
@@ -774,7 +775,7 @@ public void submitTransactionWindow() throws InterruptedException {
 	ExtentTestManager.startTest("Submit in Transaction Window");
 	Log.info("Submitted Transaction Window");
 
-
+	ScrollUntilElementVisible(Suspenseasset.submitpos);
 	click(Suspenseasset.submitpos);
 	ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Click Submit button.");
 	Log.info("Step: 1 - Click Submit button.");
@@ -930,4 +931,3 @@ public void managerAuthorization() {
 	ExtentTestManager.endTest();
 }
 }
-

@@ -26,7 +26,7 @@ public class TestListener implements  ITestListener {
 		ExtentTestManager.endTest();
 		ExtentManager.getInstance().flush();
 		Log.info("*** Test Suite " + context.getName() + " ending ***");
-	}
+	} 
 
 	public void onTestStart(ITestResult result) {
 		System.out.println(("*** Running test method " + result.getMethod().getMethodName() + "..."));

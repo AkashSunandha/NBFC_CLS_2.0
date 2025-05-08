@@ -1,12 +1,13 @@
+
 package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
 public class PageRepositary_Bond_Application {
 
-	public By bond = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[3]/div");
+	public By bond = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[21]/div");
 	public By bondapplication = By
-			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[3]/ul/li[1]/a");
+			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[21]/ul/li[1]/a");
 
 	public By sellectproduct = By
 			.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstBondAccountInfo_ctrl0_BondAccountInfo1_ddlProduct_ddl\"]");
@@ -21,7 +22,7 @@ public class PageRepositary_Bond_Application {
 
 	public By popupsearch = By.xpath("//*[@id=\"PopQuick1_btnSearch\"]");
 
-	public By select = By.xpath("//*[@id=\"PopQuick1_lst_ctrl0_linkSelect\"]");
+	public By select = By.xpath("//*[@id=\"PopQuick1_lst_ctrl8_linkSelect\"]");
 
 	public By clickadd = By.xpath("//input[contains(@id, 'btnAddCustomer')]");
 
@@ -91,22 +92,6 @@ public class PageRepositary_Bond_Application {
 	
 	public By go = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnGo\"]");
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }

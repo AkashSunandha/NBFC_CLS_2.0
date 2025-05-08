@@ -143,5 +143,3 @@ public class AllScenario_OL_Transaction_Closure_Cash_Transfer {
 	}
 
 }
-
-

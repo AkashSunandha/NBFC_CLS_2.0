@@ -2,10 +2,10 @@ package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
-public class PageRepositary_Cust_NewCustomer {
+public class PageRepositary_Cust_NewCustomer { 
 
-	public By customerTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/div");
-	public By newCustomerTab = By.xpath("//a[text()='New Customer (CUST)']");
+	public By customerTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Customer']/preceding-sibling::div");
+	public By newCustomerTab = By.xpath("//a[text()='New Customer (CUST)']"); 
 	
 	//Personal Details
 	public By pdStartDateTxtBox = By.xpath("//*[@id=\"ctl00_CPHFrame_lstMaster_ctrl0_ctl00_CM1_txtStartDate_txt\"]");

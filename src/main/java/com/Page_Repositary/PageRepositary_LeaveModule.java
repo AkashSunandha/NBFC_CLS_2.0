@@ -2,7 +2,7 @@ package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
-public class PageRepositary_LeaveModule 
+public class PageRepositary_LeaveModule   
 {
 	public By LeaveSection= By.xpath("//span[text()='Leave']/parent::div");
 	public By myLeaveSection=By.xpath("//span[text()='Leave']/parent::a");

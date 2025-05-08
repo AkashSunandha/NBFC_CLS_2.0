@@ -18,7 +18,7 @@ public class ExtentManager{
 	    private static String reportFileLocation =  reportFilepath + reportFileName;
 	  
 	    public static ExtentReports getInstance() {
-	        if (extent == null)
+	        if (extent == null) 
 	            createInstance();
 	        return extent;
 	    }
@@ -39,7 +39,7 @@ public class ExtentManager{
 	        //Set environment details
 			extent.setSystemInfo("OS", "Windows");
 			extent.setSystemInfo("AUT", "QA");
-			extent.setSystemInfo("Author", "Linita Shivalkar");
+			extent.setSystemInfo("Author", "Asif Alam");
 	 
 	        return extent;
 	    }

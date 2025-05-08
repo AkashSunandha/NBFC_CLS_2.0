@@ -33,7 +33,7 @@ public class AllScenarios_Cust_QuickCustomer extends Base_Class{
 		screenShot = new com.Utility.ScreenShot(null);
 		Base_Class = new Base_Class();
 	}
-	
+	 
 	@Test(dataProvider = "TestData")
 	public void quickCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {

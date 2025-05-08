@@ -2,10 +2,10 @@ package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
-public class PageRepositary_Cust_QuickCustomer {
-	//Quick Customer
+public class PageRepositary_Cust_QuickCustomer { 
+	//Quick Customer 
 	public By currentDate = By.xpath("//*[@id=\"ctl00_lblHeaderDate\"]");
-	public By customerTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[1]/div");
+	public By customerTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Customer']/preceding-sibling::div");
 	public By quickCustomerTab = By.xpath("//a[text()='Quick Customer ']");
 	public By quickCustomerWindowTitle = By.xpath("//*[@id=\"ctl00_MasterCaption\"]");
 	

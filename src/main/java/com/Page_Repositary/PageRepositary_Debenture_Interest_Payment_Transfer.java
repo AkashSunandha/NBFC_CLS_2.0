@@ -1,10 +1,11 @@
+
 package com.Page_Repositary;
 
 import org.openqa.selenium.By;
 
 public class PageRepositary_Debenture_Interest_Payment_Transfer {
 
-	public By clickondebenture = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[20]/div");
+	public By clickondebenture = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[20]/a");
 	public By clickdebpayment = By
 			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[20]/ul/li[7]/a");
 	public By debtype = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucDebentureAccInfo_ddlDebentureType_ddl\"]");
@@ -24,8 +25,4 @@ public class PageRepositary_Debenture_Interest_Payment_Transfer {
 	public By selectpostdebit = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucDebentureApprovinginfo_btnAutoPost\"]");
 	
 	public By submmit= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]");
-	
-	public By clickpost = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucDebentureApprovinginfo_btnAutoPost\"]");
 }
-
-

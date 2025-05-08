@@ -14,7 +14,7 @@ static ExtentReports extent = ExtentManager.getInstance();
 public static ExtentTest getTest() {
 	return (ExtentTest) extentTestMap.get((int) (long) (Thread.currentThread().getId()));
 }
-
+ 
 public static void endTest() {
 	extent.flush();
 }
