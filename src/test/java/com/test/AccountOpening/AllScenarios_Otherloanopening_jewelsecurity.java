@@ -191,6 +191,8 @@ public class AllScenarios_Otherloanopening_jewelsecurity {
 					
 					Thread.sleep(5000);
 					personalLoan.signOut();
+					
+					personalLoan.windowclose();
 
 					
 					// EndTest

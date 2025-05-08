@@ -207,6 +207,7 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					Thread.sleep(5000);
 					personalLoan.signOut();
 
+					personalLoan.Windowclose();
 					
 					// EndTest
 					ExtentTestManager.endTest();
