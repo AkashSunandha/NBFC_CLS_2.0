@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.user.TicketModule.AllScenarios_Ticket_Dashboard">
+      <class name="com.test.Customer.AllScenarios_Cust_CustRating">
         <methods>
-          <include name="RUNALL" invocation-numbers="0"/>
           <include name="reference"/>
+          <include name="customerRating" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.user.TicketModule.AllScenarios_Ticket_Dashboard -->
+      </class> <!-- com.test.Customer.AllScenarios_Cust_CustRating -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

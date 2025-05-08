@@ -101,3 +101,4 @@ public class AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER {
 		return objectarry;
 	}
 }
+

@@ -776,6 +776,7 @@ public void submitTransactionWindow() throws InterruptedException {
 	Log.info("Submitted Transaction Window");
 
 	ScrollUntilElementVisible(Suspenseasset.submitpos);
+
 	click(Suspenseasset.submitpos);
 	ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Click Submit button.");
 	Log.info("Step: 1 - Click Submit button.");

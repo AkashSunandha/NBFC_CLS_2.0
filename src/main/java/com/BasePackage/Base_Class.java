@@ -1,7 +1,9 @@
 
 package com.BasePackage;
 
+
 import java.io.File;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.CallableStatement;
@@ -23,11 +25,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -115,12 +122,7 @@ public class Base_Class {
 			ExtentTestManager.getTest().log(Status.PASS, "Firefox Driver & Application Launched successfully.");
 			break;
 			
-			
-//		case "FIREFOX":
-//
-//			WebDriverManager.firefoxdriver().setup();
-//			driver = new FirefoxDriver();			
-//			break;
+		
 
 		default:
 			System.err.println("The Driver is not defined");
@@ -175,6 +177,16 @@ public class Base_Class {
 		//selWeekDayDropDown.selectByVisibleText(value);
 		//selWeekDayDropDown.selectByValue(value);
 		selWeekDayDropDown.selectByVisibleText(value);
+	}
+	
+	public static void selectbyValue(String value,By element) throws InterruptedException {
+		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		Select selWeekDayDropDown = new Select(driver.findElement(element));
+		//selWeekDayDropDown.selectByVisibleText(value);
+		selWeekDayDropDown.selectByValue(value);
+		//selWeekDayDropDown.selectByVisibleText(value);
 	}
 	
 	/* public static void select(String value,By element) throws  {

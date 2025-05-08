@@ -324,7 +324,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void testSelectRegdToFromDropdown() throws InterruptedException {
 
 		ExtentTestManager.startTest("TC No. - 26 --> Select Regd To from Dropdown");
-		select("3",institutionalCust.RegdTo_dropdown);
+		selectbyValue("3",institutionalCust.RegdTo_dropdown);
 		//click(institutionalCust.RegdTo_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:Select an option from 'Regd To' dropdown.");
 		Log.info("Step 1:Select an option from 'Regd To' dropdown.");
@@ -882,7 +882,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void testCmrScoreDropdownPresenceAndSelect() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 87 --> CMR Score Dropdown");
 
-		select("2", institutionalCust.CMR_Score_dropdown);
+		selectbyValue("2", institutionalCust.CMR_Score_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Check presence of CMR Score Dropdown.");
 		Log.info("Step 1:  Check presence of CMR Score Dropdown.");
@@ -1119,7 +1119,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Verify 'Institution sector' dropdown presence.");
 		Log.info("Step 1:   Verify 'Institution sector' dropdown presence.");
 
-		select("2", institutionalCust.Institution_Sector_dropdown);
+		selectbyValue("2", institutionalCust.Institution_Sector_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Dropdown is present.");
 		Log.info("Expected Result: Dropdown is present.");
@@ -1233,7 +1233,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void testStateDropdownFunctionality() throws InterruptedException {
 
 		ExtentTestManager.startTest("TC No. - 111 --> Official Section: State Dropdown Functionality");
-		select("1", institutionalCust.state_dropdown);
+		selectbyValue("1", institutionalCust.state_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on State dropdown");
 		Log.info("Step 1: Click on State dropdown");
@@ -1253,7 +1253,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void testDistrictDropdownFunctionality() throws InterruptedException {
 
 		ExtentTestManager.startTest("TC No. - 112 --> Official Section: District Dropdown Functionality");
-		select("17", institutionalCust.district_dropdown);
+		selectbyValue("17", institutionalCust.district_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on District dropdown");
 		Log.info("Step 1: Click on District dropdown");
@@ -1272,7 +1272,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void testPostDropdownFunctionality() throws InterruptedException {
 
 		ExtentTestManager.startTest("TC No. - 113 --> Official Section: Post Dropdown Functionality");
-		select("447", institutionalCust.post_dropdown);
+		selectbyValue("447", institutionalCust.post_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click on Post dropdown");
 		Log.info("Step 1:  Click on Post dropdown");
@@ -1474,7 +1474,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void regional_testSelectStateFromDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 139 --> Regional Section: State Dropdown Functionality");
 
-		select("2", institutionalCust.regional_state_dropdown);
+		selectbyValue("2", institutionalCust.regional_state_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click on State dropdown");
 		Log.info("Step 1:  Click on State dropdown");
@@ -1493,7 +1493,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-140(2)
 	public void regional_testDistrictDropdownFunctionality() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 140 --> Regional Section: District Dropdown Functionality");
-		select("208", institutionalCust.regional_district_dropdown);
+		selectbyValue("208", institutionalCust.regional_district_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click on District dropdown");
 		Log.info("Step 1:  Click on District dropdown");
 
@@ -1511,7 +1511,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void regional_testPostDropdownFunctionality() throws InterruptedException {
 
 		ExtentTestManager.startTest("TC No. - 141 --> Regional Section: Post Dropdown Functionality");
-		select("13568",institutionalCust.regional_post_dropdown);
+		selectbyValue("13568",institutionalCust.regional_post_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click on Post dropdown");
 		Log.info("Step 1:  Click on Post dropdown");
 
@@ -1809,7 +1809,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void testRelIDdropdown() throws InterruptedException {
 
 		ExtentTestManager.startTest("TC No. - 169 --> Rel_ID' Dropdown Interaction");
-		select("2",institutionalCust.introducer_relIdDropdown);
+		selectbyValue("2",institutionalCust.introducer_relIdDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click 'Rel_ID' dropdown.");
 		Log.info("Step 1: Click 'Rel_ID' dropdown.");
@@ -1895,7 +1895,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	public void testIdentityTypeDropdown() throws InterruptedException {
 
 		ExtentTestManager.startTest("TC No. - 177 --> Interact with 'Identity Type' Dropdown");
-		select("12",institutionalCust.identityTypeDDropdown);
+		selectbyValue("12",institutionalCust.identityTypeDDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on the 'Identity Type' dropdown.");
 		Log.info("Step 1: Click on the 'Identity Type' dropdown.");
@@ -2077,7 +2077,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-191 (2)
 	public void testAreaDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 191 --> Select Item from 'Area' Drop Down ");
-		select("1",institutionalCust.areaDropdown);
+		selectbyValue("1",institutionalCust.areaDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on 'Area' drop down.");
 		Log.info("Step 1: Click on 'Area' drop down.");
@@ -2094,7 +2094,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-194 (2)
 	public void testAmshamDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 194 --> Select Item from 'Amsham' Drop Down");
-		select("12",institutionalCust.amshamDropdown);
+		selectbyValue("12",institutionalCust.amshamDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click on 'Amsham' drop down.");
 		Log.info("Step 1:  Click on 'Amsham' drop down.");
@@ -2110,7 +2110,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-197 (2)
 	public void testDeshamDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 197 --> Select Item from 'Desham' Drop Down");
-		select("180",institutionalCust.deshamDropdown);
+		selectbyValue("180",institutionalCust.deshamDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click on 'Desham' drop down.");
 		Log.info("Step 1:  Click on 'Amsham' drop down.");
@@ -2127,7 +2127,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-200 (2)
 	public void testVillageDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 200 --> Select Item from 'Village' Drop Down");
-		select("135",institutionalCust.villageDropdown);
+		selectbyValue("135",institutionalCust.villageDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Village' drop down.");
 		Log.info("Step 1:   Click on 'Village' drop down.");
@@ -2165,7 +2165,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-206 (2)
 	public void testPanchayathDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 206 --> Select Item from 'Panchayath' Drop Down");
-		select("2",institutionalCust.panchayath_dropdown);
+		selectbyValue("2",institutionalCust.panchayath_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Panchayath' drop down.");
 		Log.info("Step 1:   Click on 'Panchayath' drop down.");
@@ -2182,7 +2182,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-209 (2)
 	public void testMunicipalityDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 209 --> Select Item from 'Municipality' Drop Down");
-		select("2",institutionalCust.municipalityDropdown);
+		selectbyValue("2",institutionalCust.municipalityDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Municipality' drop down.");
 		Log.info("Step 1:   Click on 'Municipality' drop down.");
@@ -2200,7 +2200,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-212 (2)
 	public void testCorporationDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 212 --> Select Item from 'Corporation' Drop Down");
-		select("2",institutionalCust.corporationDropdown);
+		selectbyValue("2",institutionalCust.corporationDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:    Click on 'Corporation' drop down.");
 		Log.info("Step 1:    Click on 'Corporation' drop down.");
@@ -2218,7 +2218,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-215 (2)
 	public void testAssemblyConstiDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 215 --> Select Item from 'Assembly Constituency' Drop Down");
-		select("23",institutionalCust.assemblyConstiDropdown);
+		selectbyValue("23",institutionalCust.assemblyConstiDropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Assembly Constituency' drop down.");
 		Log.info("Step 1:   Click on 'Assembly Constituency' drop down.");
@@ -2236,7 +2236,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-218 (2)
 	public void testTalukDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 218 --> Select Item from 'Taluk' Drop Down");
-		select("16",institutionalCust.talukDropdown);
+		selectbyValue("16",institutionalCust.talukDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Taluk' drop down.");
 		Log.info("Step 1:   Click on 'Taluk' drop down.");
 
@@ -2283,7 +2283,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-225 (2)
 	public void testLandTypeDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 225 --> Select Item from 'Land Type' Drop Down");
-		select("Owned",institutionalCust.landType_dropdown);
+		selectbyValue("Owned",institutionalCust.landType_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:    Click on 'Land Type' drop down.");
 		Log.info("Step 1:    Click on 'Land Type' drop down.");
@@ -2335,7 +2335,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-232 (2)
 	public void testUnitDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 232 --> Select Item from 'Unit' Drop Down");
-		select("1",institutionalCust.unitDropdown);
+		selectbyValue("1",institutionalCust.unitDropdown);
 
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Click on 'Unit' drop down.");
@@ -2425,7 +2425,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-245 (2)
 	public void testStateDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 245 --> Select State from Dropdown");
-		select("KERALA",institutionalCust.bank_state_dropdown);
+		selectbyValue("KERALA",institutionalCust.bank_state_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select a state from the list");
 		Log.info("Step 1: Select a state from the list");
 
@@ -2438,7 +2438,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-248 (2)
 	public void testBankIdDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 248 --> Select BankID from Dropdown");
-		select("2",institutionalCust.bankId_dropdown);
+		selectbyValue("2",institutionalCust.bankId_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select a BankID from the list");
 		Log.info("Step 1: Select a BankID from the list");
@@ -2452,7 +2452,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-251 (2)
 	public void testBranchIdDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 251 --> Select BranchID from Dropdown");
-		select("CALICUT(KOZHICODE)",institutionalCust.branchId_dropdown);
+		selectbyValue("CALICUT(KOZHICODE)",institutionalCust.branchId_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select a BranchID from the list");
 		Log.info("Step 1: Select a BranchID from the list");
@@ -2555,7 +2555,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-263 (2)
 	public void testBankAccIdDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 263 --> Select BankAccID from Dropdown");
-		select("5",institutionalCust.bankAccId_dropdown);
+		selectbyValue("5",institutionalCust.bankAccId_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Select a BankAccID from the list");
 		Log.info("Step 1: Select a BankAccID from the list");
@@ -2750,7 +2750,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-287 (2)
 	public void testRiskIdDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 287 --> Verify Selection from 'RiskID' Dropdown");
-		select("3",institutionalCust.riskId_dropdown);
+		selectbyValue("3",institutionalCust.riskId_dropdown);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1: Click on the 'RiskID' dropdown.");
 		Log.info("Step 1: Click 'Proceed' button");
@@ -2849,7 +2849,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-305 (2)
 	public void testselectPhotoFromDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 305 --> Select Photo from Dropdown");
-		select("1",institutionalCust.document_dropdown_one);
+		selectbyValue("1",institutionalCust.document_dropdown_one);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Select 'Photo' from dropdown");
 		Log.info("Step 1:  Select 'Photo' from dropdown");
@@ -2895,7 +2895,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-309 (2)
 	public void testselectSignFromDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 309 --> Select Sign from Dropdown");
-		select("2",institutionalCust.document_dropdown_one);
+		selectbyValue("2",institutionalCust.document_dropdown_one);
 
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Select 'Sign' from dropdown");
@@ -2908,10 +2908,10 @@ public class Customer_InstitutionalCust extends Base_Class {
 	}
 
 	//TC-310 (2)
-	public void testUploadSign() {
+	public void testUploadSign() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 310 --> Upload Sign in Supported Format");
 		UploadFile(institutionalCust.selectDoc_browse, ".\\src\\test\\resources\\e-sign.pdf");
-
+		Thread.sleep(5000);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Click 'browse' button");
 		Log.info("Step 1:  Click 'browse' button");
 
@@ -2942,7 +2942,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-312 (2)
 	public void testselectGeneralFromDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 312 --> Select General from Dropdown");
-		select("3",institutionalCust.document_dropdown_one);
+		selectbyValue("3",institutionalCust.document_dropdown_one);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:  Select 'General' from dropdown");
 		Log.info("Step 1:  Select 'General' from dropdown");
@@ -2956,7 +2956,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 	//TC-313 (2)
 	public void testDocumentNameDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 313 --> Verify Document Name Dropdown");
-		select("15",institutionalCust.document_dropdown_two);
+		selectbyValue("15",institutionalCust.document_dropdown_two);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1:   Check if the list of document names is present in dropdown");
 		Log.info("Step 1:   Check if the list of document names is present in dropdown");
@@ -3008,8 +3008,8 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 		click(institutionalCust.final_OKBtn);
 		driver.switchTo().defaultContent();
-		transactionID=driver.findElement(institutionalCust.transactionID).getText();
-		System.out.println(transactionID);
+		//transactionID=driver.findElement(institutionalCust.transactionID).getText();
+		//System.out.println(transactionID);
 		ExtentTestManager.endTest();
 	}
 
@@ -3019,12 +3019,12 @@ public class Customer_InstitutionalCust extends Base_Class {
 
 		ExtentTestManager.startTest("TC No. - 324 --> Login to LMS as another User");
 		//String loginUserName1 = testdata.get("loginUserName1").toString();
-        String loginUserName1=configloader().getProperty("UserName1");
+        String loginUserName1=configloader().getProperty("UserName2");
 		input(institutionalCust.loginUserName, loginUserName1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
 		Log.info("Step-1: Enter valid username.");
 
-		 String loginValidPassword1=configloader().getProperty("Password1");
+		 String loginValidPassword1=configloader().getProperty("Password2");
 		//String loginValidPassword1 = testdata.get("loginValidPassword1").toString();
 		input(institutionalCust.loginPasswrd, loginValidPassword1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Enter valid password.");
@@ -3098,7 +3098,7 @@ public class Customer_InstitutionalCust extends Base_Class {
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on Others tab");
 		Log.info("Step-1: Click on Others tab ");
-		input(institutionalCust.transactionID_textbox,transactionID);
+		//input(institutionalCust.transactionID_textbox,transactionID);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Others tab load");
 		Log.info("Expected Result: Others tab load");
@@ -3147,6 +3147,11 @@ public class Customer_InstitutionalCust extends Base_Class {
 		Log.info("Expected Result: User is signed out successfully");
 		ExtentTestManager.endTest();
 		return true;
+	}
+	
+	public void CloseWindow()
+	{
+		driver.quit();
 	}
 
 	public void closePop() throws InterruptedException {

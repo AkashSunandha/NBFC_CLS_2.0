@@ -1,3 +1,4 @@
+
 package com.test.Transaction;
 
 import java.io.IOException;
@@ -95,3 +96,4 @@ public class AllScenarios_Transaction_LoanCollectionTransfer {
 	}
 	
 }
+

@@ -1,3 +1,4 @@
+
 package com.Page_Repositary;
 
 import org.openqa.selenium.By;
@@ -45,3 +46,4 @@ public class PageRepositary_AccOpr_MembMang_MembMang_Loan {
 //	public By variable = By.xpath("");
 //	public By variable = By.xpath("");
 }
+

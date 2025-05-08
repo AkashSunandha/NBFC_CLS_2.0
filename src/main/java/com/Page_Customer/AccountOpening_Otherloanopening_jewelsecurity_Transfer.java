@@ -400,7 +400,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 	public void testDistrictDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 25 --> Validate district dropdown");
 
-		select("89",loanOpen.district_dropdown);
+		selectbyValue("89",loanOpen.district_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Able to select option in district dropdown");
 		Log.info("Expected Result: Able to select option in district dropdown");
 
@@ -412,7 +412,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 	public void testPostDropdown() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 26 --> Validate post dropdown");
 
-		select("13406",loanOpen.post_dropdown);
+		selectbyValue("13406",loanOpen.post_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Able to select option in post dropdown");
 		Log.info("Expected Result: Able to select option in post dropdown");
 
@@ -472,7 +472,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 	//TC-24 (2)
 	public void testSelectRelation() throws InterruptedException  {
 		ExtentTestManager.startTest("TC No. - 24 --> Select relation");
-		select("15",loanOpen.relation_dropdown);
+		selectbyValue("15",loanOpen.relation_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select relation from the drop down ");
 		Log.info("Step-1:  Select relation from the drop down ");
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Relation are selected successfully from the drop down");
@@ -544,7 +544,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 	public void testSelectTransactionMode1() throws InterruptedException {
 		ExtentTestManager.startTest("TC No. - 34 --> Select Transaction Mode");
 		click(loanOpen.transMode);
-		select("2",loanOpen.transModeDropdown);
+		selectbyValue("2",loanOpen.transModeDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select transaction mode as cash.");
 		Log.info("Step-1:  Select transaction mode as cash.");
 
@@ -576,7 +576,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 				driver.switchTo().window(window);
 			}
 		}
-		select("2",loanOpen.transactionBased);
+		selectbyValue("2",loanOpen.transactionBased);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Give transaction based as \"GL Code\"");
 		Log.info("Step-1:   Give transaction based as \"GL Code\"");
 
@@ -688,12 +688,14 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 		signOut();
 		ExtentTestManager.startTest("TC No. - 41 --> Login to LMS as another User");
-		String loginUserName1 = testdata.get("loginUserName1").toString();
+		//String loginUserName1 = testdata.get("loginUserName1").toString();
+		String loginUserName1=configloader().getProperty("UserName2");
 		input(loanOpen.loginUserName, loginUserName1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter valid username.");
 		Log.info("Step-1: Enter valid username.");
 
-		String loginValidPassword1 = testdata.get("loginValidPassword1").toString();
+		//String loginValidPassword1 = testdata.get("loginValidPassword1").toString();
+		String loginValidPassword1=configloader().getProperty("Password2");
 		input(loanOpen.loginPasswrd, loginValidPassword1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-2: Enter valid password.");
 		Log.info("Step-2: Enter valid password.");
@@ -807,6 +809,11 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 		click(loanOpen.closeIcon);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Message popup is closed");
 		Log.info("Expected Result: Message popup is closed");
+	}
+	
+	public void Windowclose() {
+		
+		driver.close();
 	}
 
 

@@ -1,3 +1,4 @@
+
 package com.test.GroupLoans;
 
 import java.io.IOException;
@@ -99,3 +100,4 @@ public class AllScenarios_GroupLoans_GroupLoanPayment_CASH {
 	}
 	
 }
+

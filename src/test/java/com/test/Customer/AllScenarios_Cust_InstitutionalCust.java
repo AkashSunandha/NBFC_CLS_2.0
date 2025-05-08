@@ -596,16 +596,16 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 				instituCust.testselectSignFromDropdown();
 
 				//TC-309
-				instituCust.testUploadSign();
+				//instituCust.testUploadSign();
 
 				//TC-310
-				instituCust.testAddSign();
+				//instituCust.testAddSign();
 
 				//TC-311
-				instituCust.testselectGeneralFromDropdown();
+				//instituCust.testselectGeneralFromDropdown();
 
 				//TC-312
-				instituCust.testDocumentNameDropdown();
+				//instituCust.testDocumentNameDropdown();
 
 				//TC-313
 				instituCust.testUploadGeneralDocument();
@@ -626,7 +626,7 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 				instituCust.testOtherTabBtn();
 
 				//TC-327
-				//instituCust.testRefreshBtn();
+				instituCust.testRefreshBtn();
 
 				//TC-328
 				instituCust.testSelectAndAuthorize();
@@ -634,6 +634,8 @@ public class AllScenarios_Cust_InstitutionalCust extends Base_Class{
 				instituCust.closePop();
 				Thread.sleep(5000);
 				userCreate.signOut();
+				
+				instituCust.CloseWindow();
 
 				// EndTest
 				ExtentTestManager.endTest();

@@ -1,3 +1,4 @@
+
 package com.test.Transaction;
 
 import java.io.IOException;
@@ -102,3 +103,4 @@ public class AllScenarios_OtherLoanTransaction_Charges_CASH {
 	}
 	
 }
+

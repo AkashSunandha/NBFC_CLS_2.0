@@ -27,7 +27,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>${testng.version}</version>
-			<scope>test</scope>
+			<scope>compile</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
@@ -107,11 +107,6 @@
 		    <version>12.8.1.jre11</version>
 		</dependency>
 
-	<dependency>
-		<groupId>com.speridian</groupId>
-		<artifactId>Husqvarna</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
 	</dependencies>
 
 	<build>
@@ -149,4 +144,3 @@
 	</reporting>
 
 </project>
-
