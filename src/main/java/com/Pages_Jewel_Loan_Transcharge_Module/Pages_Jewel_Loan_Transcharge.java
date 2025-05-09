@@ -25,9 +25,9 @@ public class Pages_Jewel_Loan_Transcharge
 		
 		//Jewel Gold Loan Renewal
 		
-		public By ProcessingandPosting = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[12]/div");
-		public By ChargePosting = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[12]/ul/li[1]/div");
-		public By LoanChargePosting = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[12]/ul/li[1]/ul/li/a");
+		public By ProcessingandPosting = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[11]/div");
+		public By ChargePosting = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[11]/ul/li[1]/div");
+		public By LoanChargePosting = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[11]/ul/li[1]/ul/li/a");
 		public By Branch = By.xpath("//select[@id ='ctl00_CPH1_ddlBranch_ddl']");
 		public By TrnDate = By.xpath("//input[@id ='ctl00_CPH1_dtTransDate_txt']");
 		public By PostingDate = By.xpath("//input[@id ='ctl00_CPH1_dtPostingDate_txt']");
@@ -45,8 +45,8 @@ public class Pages_Jewel_Loan_Transcharge
 		public By SaveDetails  = By.xpath("//input[@id ='ctl00_CPH1_btnSave']");
 		public By LoanChargesPopup = By.xpath("//div[@id ='FloatingErrorMessageBoxTop']");
 		public By ClosePopup = By.xpath("//img[@id ='closetop']");
-		public By Transaction = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/div");
-		public By Transactions = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/ul/li[4]/a");
+		public By Transaction = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div");
+		public By Transactions = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/ul/li[4]/a");
 		public By TransactionsBranch = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlBranch']");
 		public By ProductGroup = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlProductGroup']");
 		public By ProdName	 = By.xpath("//select[@id ='ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlProduct_ddl']");
@@ -65,7 +65,7 @@ public class Pages_Jewel_Loan_Transcharge
 		public By TotCredDebit = By.xpath("//input[@id = 'txtTotalCrDr_txt']");
 		
 		//Authorization
-		public By AuthorizeCancel = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[@class='submenu']/ul[@id='CreateMenu']/li[10]/div[1]");
+		public By AuthorizeCancel = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[9]/div");
 		public By CashAuthorisation = By.xpath("//a[normalize-space()='Cashier Authorisation (CAAU)']");
 		public By Refresh = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnRefresh']");
 		public By TransactionIDField = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt']");

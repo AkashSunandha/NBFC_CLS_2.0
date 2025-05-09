@@ -54,6 +54,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}
 	public void ClickonAuthorize_And_Cancel_Tab() throws InterruptedException {
 
+		ScrollUntilElementVisible(InvestmentTransaction.Authorize_And_Cancel_Tab);
 		click(InvestmentTransaction.Authorize_And_Cancel_Tab);
 		ExtentTestManager.startTest("Open Authorize_And_Cancel_Tab Module");
 		Log.info("Open Authorize_And_Cancel_Tab Module");

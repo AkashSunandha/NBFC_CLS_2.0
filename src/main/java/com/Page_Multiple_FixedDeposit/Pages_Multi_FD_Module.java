@@ -25,8 +25,8 @@ public class Pages_Multi_FD_Module
 		
 		//Account Opening sub module
 		
-		public By AccOpening = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[contains(@class,'submenu')]/ul[@id='CreateMenu']/li[6]/div[1]");
-		public By DepositOpening = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[contains(@class,'submenu')]/ul[@id='CreateMenu']/li[6]/ul[1]/li[1]/div[1]");
+		public By AccOpening = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[5]/div");
+		public By DepositOpening = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[5]/ul/li[1]/div");
 		public By FixedDeposit = By.xpath("//li[contains(@class,'open')]//li[contains(@class,'open')]//div[contains(@class,'last symbol-close')]");
 		public By FixedType2Years = By.xpath("//a[contains(text(),'DEBUNTURE FIXED TYPE 2 YRS')]");
 
@@ -92,7 +92,7 @@ public class Pages_Multi_FD_Module
 		public By GoBTN = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnGo']");
 		public By SummaryPage = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[3]/table[1]");
 		public By IntrestNextButton = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnNext']");
-		public By AuthorizeCancel = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[@class='submenu']/ul[@id='CreateMenu']/li[10]/div[1]");
+		public By AuthorizeCancel = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[9]/div");
 		public By ManagerAuthorization = By.xpath("//a[normalize-space()='Manager Authorisation (MNAU)']");
 		public By Transfer = By.xpath("//span[@id = '__tab_ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpTransfer']");
 		public By Refresh = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnRefresh']");

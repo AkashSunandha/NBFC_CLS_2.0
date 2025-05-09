@@ -1323,13 +1323,13 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 	Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 	
 			//String loginNewUserName = testdata.get("LoginNewUserName").toString();
-			String UserName1 = configloader().getProperty("UserName1");
+			String UserName1 = configloader().getProperty("UserName2");
 			input(multifd.loginUserName, UserName1);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
 			Log.info("Step:01 - Enetered valid User Name");
 			
 			//String loginNewValidPassword = testdata.get("LoginNewPassword").toString();
-			String Password1 = configloader().getProperty("Password1");
+			String Password1 = configloader().getProperty("Password2");
 			input(multifd.loginPasswrd, Password1);
 			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");
 			Log.info("Step:02 - Enter valid Password");

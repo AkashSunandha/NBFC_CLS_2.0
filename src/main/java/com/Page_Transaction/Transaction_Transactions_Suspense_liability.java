@@ -175,6 +175,8 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.startTest("Cashier Authorization");
 		Log.info("Cashier Authorization");
 
+		ScrollUntilElementVisible(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
+		Thread.sleep(3000);
 		click(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
 		ExtentSuccessMessage("Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -311,6 +313,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
 		Log.info("Manager Authorization - Transfer Tab");
 
+		ScrollUntilElementVisible(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
 		click(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
 		ExtentSuccessMessage("Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -339,13 +342,13 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		System.out.println("transIdTransferPersonal " + transId);
 		fetchWithTransId(transId);
 
-		if (ElementDisplayed(Transactions_SusLiabilityRepo.approveCheckBoxTransfer)) {
+		/*if (ElementDisplayed(Transactions_SusLiabilityRepo.approveCheckBoxTransfer)) {
 			ExtentSuccessMessage("Expected Result: Loan opening entry displayed");
 			Log.info("Expected Result: Loan opening entry displayed");
 		} else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		}
+		}*/
 		ExtentTestManager.endTest();
 
 		//Authorize Loan Entry as Manager

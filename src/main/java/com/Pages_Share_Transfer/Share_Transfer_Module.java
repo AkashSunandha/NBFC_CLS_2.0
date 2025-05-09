@@ -428,10 +428,10 @@ public boolean ManagerLoginforAuthorization() throws InterruptedException, IOExc
 	ExtentTestManager.startTest("TC:12 - Manager Login for Authorization");
 	Log.info("TC:12 - Manager Login for Authorization");
 		
-	String UserName1 = configloader().getProperty("UserName1");
+	String UserName1 = configloader().getProperty("UserName2");
 	input(sharetransfer.loginUserName, UserName1);
 				
-	String Password1 = configloader().getProperty("Password1");
+	String Password1 = configloader().getProperty("Password2");
 	input(sharetransfer.loginPasswrd, Password1);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter manager credentials `<manager_username>` and `<manager_password>`");
 	Log.info("Step:01 - Enter manager credentials `<manager_username>` and `<manager_password>`");

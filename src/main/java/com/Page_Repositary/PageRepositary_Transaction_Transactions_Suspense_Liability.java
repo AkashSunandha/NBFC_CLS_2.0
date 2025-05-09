@@ -6,7 +6,7 @@ import com.BasePackage.Base_Class;
 
 public class PageRepositary_Transaction_Transactions_Suspense_Liability extends Base_Class{
 
-	public By transactionTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/div");
+	public By transactionTab = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div");
 	public By transactionsTab = By.xpath("//*[text()='Transactions ']");
 
 	//Account info

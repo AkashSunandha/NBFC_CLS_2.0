@@ -25,7 +25,7 @@ public class GL_Account_Transaction
 		
 		//GL Acc Transaction
 	
-		public By Transaction = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/div");
+		public By Transaction = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[6]/div");
 		public By GLTransactions = By.xpath("//a[normalize-space()='GL A/c Transaction']");
 		public By GLAccInfo = By.xpath("//div[@id='ctl00_ctl00_CPH1_PRDCNT_UPGLTransaction']//div[@class='iframebox']");
 		public By Date = By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_GLTransactionAccInfo_dtDate_txt']");
@@ -51,7 +51,7 @@ public class GL_Account_Transaction
 		public By TransCashID = By.xpath("//span[@id ='ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID']");
 		
 		//Authorization
-		public By AuthorizeCancel = By.xpath("//body/form[@id='aspnetForm']/div[@id='divBody']/div[@id='navAlpha']/div/div/div[@id='outmost']/div[@id='scWrapper']/div[@id='scMenu']/div[@id='divGlossyMenuContent']/div[@class='submenu']/ul[@id='CreateMenu']/li[10]/div[1]");
+		public By AuthorizeCancel = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[9]/div");
 		public By CashAuthorisation = By.xpath("//a[normalize-space()='Cashier Authorisation (CAAU)']");
 		public By Refresh = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnRefresh']");
 		public By TransactionIDField = By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt']");

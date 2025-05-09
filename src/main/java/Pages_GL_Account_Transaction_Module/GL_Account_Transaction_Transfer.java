@@ -867,10 +867,10 @@ public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedExcept
 	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Open the NBFc application.");
 	Log.info("Step 1: Open the NBFc application.");
 		
-	String UserName1 = configloader().getProperty("UserName1");
+	String UserName1 = configloader().getProperty("UserName2");
 	input(GLTransaction.loginUserName, UserName1);
 				
-	String Password1 = configloader().getProperty("Password1");
+	String Password1 = configloader().getProperty("Password2");
 	input(GLTransaction.loginPasswrd, Password1);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter username and password.");
 	Log.info("Step:02 - Enter username and password.");

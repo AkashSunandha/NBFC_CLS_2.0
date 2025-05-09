@@ -1455,6 +1455,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 	ExtentTestManager.getTest().log(Status.PASS, "Step 1: Give the amount in 'Amount' field");
 	Log.info("Step 1: Give the amount in 'Amount' field");
 	
+	Thread.sleep(5000);
 	WebElement amountField = driver.findElement(multifd.AmountTrans);
 	String EnterAmountText = testdata.get("GL_Amount").toString();
 	input(multifd.AmountTrans, EnterAmountText);
@@ -1642,13 +1643,13 @@ public boolean AddOperatorBtn() throws InterruptedException {
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
 	Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 	
-	String UserName1 = configloader().getProperty("UserName1");
+	String UserName1 = configloader().getProperty("UserName2");
 	//String loginNewUserName = testdata.get("LoginNewUserName").toString();
 	input(multifd.loginUserName, UserName1);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
 	Log.info("Step:01 - Enetered valid User Name");
 			
-	String Password1 = configloader().getProperty("Password1");
+	String Password1 = configloader().getProperty("Password2");
 	//String loginNewValidPassword = testdata.get("LoginNewPassword").toString();
 	input(multifd.loginPasswrd, Password1);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");

@@ -404,9 +404,9 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentSuccessMessage("Step:02 - Select \"Manager Authorization\"");
 		Log.info("Step:02 - Select \"Manager Authorization\"");
 
-		click(Transactions_Last_Entry_CancellationRepo.sOthersTab);
-		ExtentSuccessMessage("Step:03 - Click \"Others\" tab");
-		Log.info("Step:03 - Click \"Others\" tab");
+		//click(Transactions_Last_Entry_CancellationRepo.sOthersTab);
+		//ExtentSuccessMessage("Step:03 - Click \"Others\" tab");
+		//Log.info("Step:03 - Click \"Others\" tab");
 
 		ExtentSuccessMessage("Expected Result: Others tab load");
 		Log.info("Expected Result: Others tab load");

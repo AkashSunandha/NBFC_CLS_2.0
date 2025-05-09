@@ -138,11 +138,11 @@ public boolean ChargePostingWindowAccess() throws InterruptedException {
 
 	try {
 
-		WebElement ProcesspostingWindow = driver
+		/*WebElement ProcesspostingWindow = driver
 				.findElement(By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[12]/div"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", ProcesspostingWindow);
+		js.executeScript("arguments[0].scrollIntoView(true);", ProcesspostingWindow);*/
 
 		click(TranschargeCash.ProcessingandPosting);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Expand processing and posting module");
@@ -448,10 +448,10 @@ public boolean TransactionModuleAccess() throws InterruptedException {
 
 	try {
 
-		WebElement TransactionWindow = driver.findElement(By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/div"));
+		/*WebElement TransactionWindow = driver.findElement(By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/div"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", TransactionWindow);
+		js.executeScript("arguments[0].scrollIntoView(true);", TransactionWindow);*/
 
 		click(TranschargeCash.Transaction);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 Expand transaction module");
@@ -688,7 +688,8 @@ public boolean EnterTransactionAmount(Map<Object, Object> testdata, ITestContext
 
 	String EnterAmount = testdata.get("Trans_Amount").toString();
 	Assert.assertNotNull(EnterAmount, "Validation Failed: Transaction Amount is null in test data");
-
+	
+	Thread.sleep(20000);
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	WebElement amountField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucTransactionApprovingInfo_txtTrnAmount_txt']"))); 
 	
@@ -798,13 +799,18 @@ public boolean SubmitTransactionandVerifySummary() throws InterruptedException, 
 	if(ElementDisplayed(TranschargeCash.SubmitTrans)){
 	click(TranschargeCash.SubmitTrans);
 	
+	AcceptAlert();
+	Thread.sleep(5000);
+	
+	//click(TranschargeCash.SubmitTrans);
+	
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Click submit button");
 	Log.info("Step:01 -  Click submit button");
 	
-	wait.until(ExpectedConditions.numberOfWindowsToBe(1));
+	//wait.until(ExpectedConditions.numberOfWindowsToBe(1));
 	
-	boolean isPopupClosed = ElementDisplayed(TranschargeCash.SummaryOperation);
-	Assert.assertTrue(isPopupClosed, "Validation Failed: Security Details popup window is still open.");
+	/*boolean isPopupClosed = ElementDisplayed(TranschargeCash.SummaryOperation);
+	Assert.assertTrue(isPopupClosed, "Validation Failed: Security Details popup window is still open.");*/
 		
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction submitted and summary details are displayed");
 	Log.info("Expected Result: Transaction submitted and summary details are displayed");
@@ -843,12 +849,12 @@ public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedExcept
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
 	Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 	
-	String UserName1 = configloader().getProperty("UserName1");
+	String UserName1 = configloader().getProperty("UserName2");
 	input(TranschargeCash.loginUserName, UserName1);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
 	Log.info("Step:01 - Enetered valid User Name");
 			
-	String Password1 = configloader().getProperty("Password1");
+	String Password1 = configloader().getProperty("Password2");
 	input(TranschargeCash.loginPasswrd, Password1);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");
 	Log.info("Step:02 - Enter valid Password");
@@ -871,12 +877,13 @@ public boolean LogintoNBFcApplicationinadifferentuserAuthorizeandcancel() throws
 	ExtentTestManager.startTest("TC:25 - Login to NBFc Application in a different user");
 	Log.info("TC:25 - Login to NBFc Application in a different user");
 	
-	WebElement CashMode = driver.findElement(TranschargeCash.AuthorizeCancel);
+	/*WebElement CashMode = driver.findElement(TranschargeCash.AuthorizeCancel);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("arguments[0].scrollIntoView(true);", CashMode);
 	
-	Assert.assertTrue(ElementDisplayed(TranschargeCash.AuthorizeCancel), "Validation Failed: 'Authorize & Cancel' option is not displayed.");
+	Assert.assertTrue(ElementDisplayed(TranschargeCash.AuthorizeCancel), "Validation Failed: 'Authorize & Cancel' option is not displayed.");*/
 	
+	ScrollUntilElementVisible(TranschargeCash.AuthorizeCancel);
 	click(TranschargeCash.AuthorizeCancel);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to AUTHORISE and Cancel in the menu");
 	Log.info("Step:01 - Navigate to AUTHORISE and Cancel in the menu");

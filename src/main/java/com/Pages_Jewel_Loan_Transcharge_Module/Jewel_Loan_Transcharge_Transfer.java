@@ -1076,14 +1076,15 @@ public boolean PostDebitSubmitAccountClosure() throws InterruptedException {
 	ExtentTestManager.startTest("TC:32 - POST DEBIT popup is present");
 	Log.info("TC:32 - POST DEBIT popup is present");
 	
-	WebDriverWait wait = new WebDriverWait(driver, 20);
+	/*WebDriverWait wait = new WebDriverWait(driver, 20);
 	WebElement SubmitDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_btnSubmit']")));
 	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	js.executeScript("arguments[0].scrollIntoView(true);", SubmitDetails);
+	js.executeScript("arguments[0].scrollIntoView(true);", SubmitDetails);*/
 	
 	if(ElementDisplayed(LoanTranscharge.SubmitButon)){
 	click(LoanTranscharge.SubmitButon);
+	AcceptAlert();
 	
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on the SUBMIT button in the transaction window");
 	Log.info("Step:01 - Click on the SUBMIT button in the transaction window");
@@ -1131,12 +1132,12 @@ public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedExcept
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
 	Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 		
-	String UserName1 = configloader().getProperty("UserName1");
+	String UserName1 = configloader().getProperty("UserName2");
 	input(LoanTranscharge.loginUserName, UserName1);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
 	Log.info("Step:01 - Enetered valid User Name");
 				
-	String Password1 = configloader().getProperty("Password1");
+	String Password1 = configloader().getProperty("Password2");
 	input(LoanTranscharge.loginPasswrd, Password1);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");
 	Log.info("Step:02 - Enter valid Password");

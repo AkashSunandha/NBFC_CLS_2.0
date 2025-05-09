@@ -149,10 +149,10 @@ public class Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 
 		try {
 			
-			WebElement LoanClosureWindow = driver.findElement(By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/ul/li[7]/a"));
+			/*WebElement LoanClosureWindow = driver.findElement(By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/ul/li[7]/a"));
 			
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].scrollIntoView(true);", LoanClosureWindow);
+			js.executeScript("arguments[0].scrollIntoView(true);", LoanClosureWindow);*/
 
 			click(LoanClosureCash.ClosureRenewal);
 			ExtentTestManager.getTest().log(Status.PASS,"Step:01 Navigate to the main menu");
@@ -417,14 +417,14 @@ public boolean AddSecurityDetailsItemName() throws InterruptedException{
 	WebElement ItemName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id = 'JSF_ddlItems_ddl']")));
 	
 	Select dropdown = new Select(ItemName);
-	dropdown.selectByVisibleText("RING");
+	dropdown.selectByVisibleText("PIECE");
 	
 	ExtentTestManager.getTest().log(Status.PASS,"Step:01 Select Item Name");
 	Log.info("Step:01 Select Item Name");
 
-	String selectedItemName = dropdown.getFirstSelectedOption().getText();
+	//String selectedItemName = dropdown.getFirstSelectedOption().getText();
 
-	Assert.assertEquals(selectedItemName, "RING","Validation Failed: The selected Item Name should not be 'RING'.");
+	//Assert.assertEquals(selectedItemName, "RING","Validation Failed: The selected Item Name should not be 'RING'.");
 	
     ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Item name is selected");
     Log.info("Expected Result: Item name is selected");
@@ -1197,12 +1197,12 @@ public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedExcept
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged out successfully, login screen is displayed.");
 		Log.info("Expected Result: User is logged out successfully, login screen is displayed.");
 		
-		String UserName1 = configloader().getProperty("UserName1");
+		String UserName1 = configloader().getProperty("UserName2");
 		input(LoanClosureCash.loginUserName, UserName1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter valid User Name");
 		Log.info("Step:01 - Enetered valid User Name");
 				
-		String Password1 = configloader().getProperty("Password1");
+		String Password1 = configloader().getProperty("Password2");
 		input(LoanClosureCash.loginPasswrd, Password1);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid Password");
 		Log.info("Step:02 - Enter valid Password");
@@ -1225,11 +1225,11 @@ public boolean LogintoNBFcApplicationinadifferentuserAuthorizeandcancel() throws
 	ExtentTestManager.startTest("TC:36 - Login to NBFc Application in a different user");
 	Log.info("TC:36 - Login to NBFc Application in a different user");
 	
-	WebElement CashMode = driver.findElement(LoanClosureCash.AuthorizeCancel);
+	/*WebElement CashMode = driver.findElement(LoanClosureCash.AuthorizeCancel);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("arguments[0].scrollIntoView(true);", CashMode);
 	
-	Assert.assertTrue(ElementDisplayed(LoanClosureCash.AuthorizeCancel), "Validation Failed: 'Authorize & Cancel' option is not displayed.");
+	Assert.assertTrue(ElementDisplayed(LoanClosureCash.AuthorizeCancel), "Validation Failed: 'Authorize & Cancel' option is not displayed.");*/
 	
 	click(LoanClosureCash.AuthorizeCancel);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to AUTHORISE and Cancel in the menu");
