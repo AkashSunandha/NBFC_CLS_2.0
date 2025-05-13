@@ -252,7 +252,7 @@ public class Multiple_FD_Intrest_Payment_Cash_and_Transfer extends Base_Class {
 click(FDintrest.accnumber);
 clear(FDintrest.accnumber);
 
-//		String valueAccNum = generateUniqueCode(sp, columnName);
+		//String valueAccNum = generateUniqueCode(sp, columnName);
 
 		String AccNum = secondRowValue.substring(secondRowValue.length() - 3);
 		input(FDintrest.accnumber, AccNum);

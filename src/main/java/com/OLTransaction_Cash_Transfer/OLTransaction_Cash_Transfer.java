@@ -254,10 +254,10 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	public void AnotherUSer(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException, IOException {
-		String UserName = configloader().getProperty("UserName1");
+		String UserName = configloader().getProperty("UserName2");
 		input(custSearch.loginUserName, UserName);
 
-		String Password = configloader().getProperty("Password1");
+		String Password = configloader().getProperty("Password2");
 		input(custSearch.loginPasswrd, Password);
 
 		click(custSearch.loginButton);
@@ -288,6 +288,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.startTest("cashier authorization");
 		Log.info("cashier authorization");
 
+		ScrollUntilElementVisible(JewelClosure.authandcancel);
 		click(JewelClosure.authandcancel);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -.Click the authoirze & Cancel module from the taskbar");
 		Log.info("Step:01 -.Click the authoirze & Cancel module from the taskbar");
@@ -643,7 +644,8 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.startTest("Transactions Window Navigation");
 		Log.info("Transactions Window Navigation");
 
-		// click(OLtrans.ClickTransaction);
+		Thread.sleep(5000);
+		//click(OLtrans.ClickTransaction);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Navigate through Path: Transaction: Transactions.");
 		Log.info("Step:01 -  Navigate through Path: Transaction: Transactions.");
 

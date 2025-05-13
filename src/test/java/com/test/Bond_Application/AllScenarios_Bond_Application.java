@@ -105,7 +105,7 @@ public class AllScenarios_Bond_Application {
 				
 				bonapp.ManagerAuthorizationRefresh();
 				
-				bonapp.AuthorizeapplicationEntry(testdata, context);
+				//bonapp.AuthorizeapplicationEntry(testdata, context);
 
 				bonapp.logoutApplication2();
 				

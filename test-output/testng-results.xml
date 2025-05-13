@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-09T22:42:37 IST" name="Default suite" finished-at="2025-05-09T22:46:38 IST" duration-ms="240805">
+  <suite started-at="2025-05-13T14:58:54 IST" name="Default suite" finished-at="2025-05-13T15:02:37 IST" duration-ms="222958">
     <groups>
     </groups>
-    <test started-at="2025-05-09T22:42:37 IST" name="Default test" finished-at="2025-05-09T22:46:38 IST" duration-ms="240805">
-      <class name="GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer">
-        <test-method is-config="true" signature="reference()[pri:0, instance:GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer@7e22550a]" started-at="2025-05-09T22:42:37 IST" name="reference" finished-at="2025-05-09T22:42:37 IST" duration-ms="11" status="PASS">
+    <test started-at="2025-05-13T14:58:54 IST" name="Default test" finished-at="2025-05-13T15:02:37 IST" duration-ms="222958">
+      <class name="com.Debenture_Interest_Payment_Transfer.AllScenarios_Debenture_Interest_Payment_Transfer">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.Debenture_Interest_Payment_Transfer.AllScenarios_Debenture_Interest_Payment_Transfer@45905bff]" started-at="2025-05-13T14:58:54 IST" name="reference" finished-at="2025-05-13T14:58:54 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="Loan_Closure_Cash(java.util.Map,org.testng.ITestContext)[pri:0, instance:GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer@7e22550a]" started-at="2025-05-09T22:42:39 IST" name="Loan_Closure_Cash" data-provider="TestData" finished-at="2025-05-09T22:46:38 IST" duration-ms="239458" status="PASS">
+        <test-method signature="newCustomer(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.Debenture_Interest_Payment_Transfer.AllScenarios_Debenture_Interest_Payment_Transfer@45905bff]" started-at="2025-05-13T14:58:56 IST" name="newCustomer" data-provider="TestData" finished-at="2025-05-13T15:02:37 IST" duration-ms="221086" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{=, Particulars=Test, Party_Name=Test, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=GL_Acc_Transaction_Transfer, Trans_Amount=1000.00}]]>
+                <![CDATA[{CustID=102000000001, customerName=A, DematAccNo=923914143, NomineeName=I, NoofUnit=20, pcRegFormName=qwerty, pcRegFormPcName=zxcvb, Run=Yes, TestScenario=Debenture_Interest_Payment_Transfer}]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@47e4d9d0]]>
+                <![CDATA[org.testng.TestRunner@213860b8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Loan_Closure_Cash -->
-      </class> <!-- GL_Account_Transaction_Module.AllScenarios_GL_Account_Transaction_Transfer -->
+        </test-method> <!-- newCustomer -->
+      </class> <!-- com.Debenture_Interest_Payment_Transfer.AllScenarios_Debenture_Interest_Payment_Transfer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

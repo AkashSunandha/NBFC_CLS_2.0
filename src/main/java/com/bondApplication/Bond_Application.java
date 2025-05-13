@@ -3,6 +3,7 @@ package com.bondApplication;
 import java.io.IOException;
 import java.util.Map;
 
+import org.openqa.selenium.Keys;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -28,6 +29,8 @@ public class Bond_Application extends Base_Class {
 	String mainWindowHandle;
 	String Display;
 
+	public String TransactionId;
+	
 	public String sp = "GetSpMultipleFDAccountNo 102,14003,1";
 	public String columnName = "Acno";
 
@@ -46,6 +49,7 @@ public class Bond_Application extends Base_Class {
 		ExtentTestManager.startTest("Verify product selection");
 		Log.info("Verify product selection");
 
+		ScrollUntilElementVisible(Bond.bond);
 		click(Bond.bond);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a product from 'Product ' dropdown");
 		Log.info("Step:01 - Select a product from 'Product ' dropdown");
@@ -432,7 +436,14 @@ public class Bond_Application extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:03 -Select Month from the list. ");
 		Log.info("Step:03 -Select Month from the list. ");
 
-		click(Bond.clickcustomer);
+		select("TRIVANDRUM", Bond.branchchoose);
+		//click(Bond.clickcustomer);
+		select("SUSPENSE LIABILITY", Bond.prod);
+		
+		input(Bond.acno ,"34");
+		
+		click(Bond.clickonaddd);
+		Thread.sleep(10000);
 		click(Bond.clickonaddd);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:04 -Click on the Add Button. ");
 		Log.info("Step:04 -Click on the Add Button. ");
@@ -545,7 +556,7 @@ public class Bond_Application extends Base_Class {
 		Log.info("Expected Result:	Transaction is saved and confirmed message displayed.");
 		ExtentTestManager.endTest();
 
-		// transId = driver.findElement(Suspenseasset.transIDD).getText();
+		 transId = driver.findElement(Suspenseasset.transIDD).getText();
 
 	}
 
@@ -569,10 +580,10 @@ public class Bond_Application extends Base_Class {
 		ExtentTestManager.startTest("Login with Another User");
 		Log.info("Login with Another User");
 
-		String UserName = configloader().getProperty("UserName1");
+		String UserName = configloader().getProperty("UserName2");
 		input(custSearch.loginUserName, UserName);
 
-		String Password = configloader().getProperty("Password1");
+		String Password = configloader().getProperty("Password2");
 		input(custSearch.loginPasswrd, Password);
 
 		click(custSearch.loginButton);
@@ -585,7 +596,7 @@ public class Bond_Application extends Base_Class {
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
 
-		String flag = "vinusha";
+		/*String flag = "vinusha";
 
 		if (!userName.equalsIgnoreCase(flag)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
@@ -593,12 +604,33 @@ public class Bond_Application extends Base_Class {
 		} else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		}
+		}*/
 
 		ExtentTestManager.endTest();
 
 		click(Bond.clickauthorize);
 		
+		click(Bond.cashauth);
+		
+		click(Bond.refresh);
+		
+		String trans = transId. toString();
+		
+		input(Bond.cashierTransactionIds ,trans);
+		
+		Thread.sleep(1000);
+		
+		click(Bond.go);
+		
+		click(Bond.cashierCheckBox);
+		
+		//click  authorize button
+		
+		Thread.sleep(1000);
+		
+		click(Bond.cashierAuthorizeBtn);
+		
+		Thread.sleep(1000);
 		
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 -Click the authoirze & Cancel module from the taskbar");
 		Log.info("Step: 1 -Click the authoirze & Cancel module from the taskbar");
@@ -616,11 +648,27 @@ public class Bond_Application extends Base_Class {
 		ExtentTestManager.startTest("Manager Authorization Refresh");
 		Log.info("Manager Authorization Refresh");
 		
-		click(Bond.others);
+		//click(Bond.others);
 		
 		
 		
 		click(Bond.refresh);
+		
+	    String trans = transId. toString();
+		
+		input(Bond.cashierTransactionIds ,trans);
+		
+		Thread.sleep(1000);
+		
+		click(Bond.go);
+		
+		click(Bond.ManagerAuth);
+		
+		//click  authorize button
+		
+		Thread.sleep(1000);
+		
+		click(Bond.ManagerAuthorizeBtn);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 - Clicked the Refresh tab again.");
 		Log.info("Step: 01 - Clicked the Refresh tab again.");
@@ -637,8 +685,8 @@ public class Bond_Application extends Base_Class {
 		ExtentTestManager.startTest("Authorize application Entry");
 		Log.info("Authorize application Entry");
 		
-		String MakerID = testdata.get("MakerID").toString();
-		input(Bond.makerid, MakerID);
+		//String MakerID = testdata.get("MakerID").toString();
+		//input(Bond.makerid, MakerID);
 		
 		click(Bond.go);
 		

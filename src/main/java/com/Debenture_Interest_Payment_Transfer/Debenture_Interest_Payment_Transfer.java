@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -40,8 +42,8 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 	String mainWindowHandleParent;
 	String mainWindowHandlechild;
 
-	public String sp = "GetSpMultipleFDAccountNo 102,14003,1";
-	public String columnName = "Acno";
+	public String sp = "exec GetSpDebAcNo 102,90067,1";
+	public String columnName = "AcNO";
 
 	public void fetchWithTransId(String transId) throws InterruptedException {
 		input(goaldLoanRepo.transIdTxtBox, transId);
@@ -60,6 +62,7 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 		ExtentTestManager.startTest("Navigate to Debenture interest payment");
 		Log.info("Navigate to Debenture interest payment");
 
+		Thread.sleep(5000);
 		ScrollUntilElementVisible(Debenture.clickondebenture);
 		click(Debenture.clickondebenture);
 		click(Debenture.clickdebpayment);
@@ -81,7 +84,7 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 
 		ExtentTestManager.startTest("Verify Dropdown for Debenture Issue");
 		Log.info("Verify Dropdown for Debenture Issue");
-		select("ISSUE-DEB TRAIL TRANSFER", Debenture.Issuetype);
+		select("ISSUE-DEB TRAIL TRANSFER-67", Debenture.Issuetype);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select ' Issue Type' options from the dropdown..");
 		Log.info("Step:01 -Select ' Issue Type' options from the dropdown..");
 		ExtentTestManager.getTest().log(Status.PASS, "appropriate values load according to selection.");
@@ -89,7 +92,7 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 
 		ExtentTestManager.startTest("Verify Dropdown for Debenture Series");
 		Log.info("Verify Dropdown for Debenture Series");
-		select("SERIES-ISSUE-DEB TRAIL TRANSFER", Debenture.Issuetype);
+		select("SERIES-ISSUE-DEB TRAIL TRANSFER-67-SERIES-2065", Debenture.Series);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select 'Debenture series options from the dropdown.");
 		Log.info("Step:01 -Select 'Debenture series options from the dropdown.");
 		ExtentTestManager.getTest().log(Status.PASS, "appropriate values load according to selection.");
@@ -165,6 +168,7 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 		ExtentTestManager.startTest("Debenture duration");
 		Log.info("Debenture duration");
 		click(Debenture.duration);
+		input(Debenture.duration,"1");
 		ExtentTestManager.getTest().log(Status.PASS,
 				"Step:01-  Enter a valid duration value into the 'duration' field. then click tab");
 		Log.info("Step:01 -Enter a valid duration value into the 'duration' field. then click tab.");
@@ -179,7 +183,9 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 
 		ExtentTestManager.startTest("Post Debit Transaction");
 		Log.info("Debit Transaction Posted");
-		click(OLtrans.Clickpostdeb);
+		click(Debenture.selectpostdebit);
+		Thread.sleep(5000);
+		click(Debenture.selectpostdebit);
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Click on the POST DEBIT button ");
 		Log.info("Step: 1 -Click on the POST DEBIT button.");
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result:Auto posting popup window will be display .");
@@ -221,11 +227,20 @@ public class Debenture_Interest_Payment_Transfer extends Base_Class {
 			}
 		}
 
-		select("Demand Investment", FDintrest.group);
-		select("INV-DEMAND-CA", FDintrest.product);
+		
+		//select("Demand Investment", FDintrest.group);
+		//select("INV-DEMAND-CA", FDintrest.product);
 		select("TRIVANDRUM", FDintrest.branch);
-		click(FDintrest.clicksearch);
-		click(FDintrest.select);
+		input(Debenture.postdebAcno,"23");
+		WebElement AccountNumber = driver.findElement(Debenture.PostdebAmnt);
+		String EnterAccountNumber = testdata.get("AccountNumber").toString();
+		//String Amnt = Amount.getAttribute("value");
+		input(Debenture.PostdebAmnt,EnterAccountNumber);
+		click(Debenture.PostDebAdd);
+		Thread.sleep(5000);
+		click(Debenture.PostDebSubmit);
+		//click(FDintrest.clicksearch);
+		//click(FDintrest.select);
 
 		driver.switchTo().window(mainWindowHandlechild);
 

@@ -7,9 +7,9 @@ public class PageRepositary_Jewel_Loan_Closure_Cash_Transfer {
 
 	
 	public By OpenClosureandrenewal = By
-			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/div");
+			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/div");
 	public By Clickonclosure = By
-			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[8]/ul/li[7]/a");
+			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[7]/ul/li[7]/a");
 	public By selectproduct = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlProductGroup\"]");
 	public By productname = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_ddlProduct_ddl\"]");
 	public By StoreAccun = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucTransactionAccInfo_txtAcNo_txt\"]");

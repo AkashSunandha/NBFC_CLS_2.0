@@ -14,6 +14,8 @@ public class PageRepositary_Cust_CustSearch {
 	public By formBranchNameKochi = By.xpath("//option[text()='KOCHI']");
 	public By formComputerName = By.xpath("//*[@id=\"MacName\"]");
 	public By formSubmitBtn = By.xpath("/html/body/div[2]/div[11]/div/button/span");
+	public By Collapse = By.xpath("//*[@id=\"imgCollapseAll\"]");
+	
 	
 	//Login Module
 	public By loginUserName = By.xpath("//*[@id=\"txtUserName_txt\"]");

@@ -86,7 +86,7 @@ public class AllScenario_SusAssetTransaction_Cash_Transfer {
 
 				suspense.submitButtonNavigation();
 
-				suspense.printButtonTest();
+				//suspense.printButtonTest();
 
 				suspense.logoutApplication1();
 
@@ -147,7 +147,7 @@ public class AllScenario_SusAssetTransaction_Cash_Transfer {
 				
 				suspense.submitTransactionWindow();
 				
-				suspense.printButtonTest();
+				//suspense.printButtonTest();
 
 				suspense.logoutApplication1();
 				

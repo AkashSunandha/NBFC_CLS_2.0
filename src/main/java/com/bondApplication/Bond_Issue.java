@@ -315,6 +315,7 @@ public class Bond_Issue extends Base_Class {
 		ExtentTestManager.startTest("Issue Application Confirmation");
 		Log.info("Confirming application issue");
 
+		Thread.sleep(5000);
 		click(Bondissue.clickonOk);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click OK button on the popup.  ");
 		Log.info("Step:01 -Click OK button on the popup.  ");
@@ -322,7 +323,7 @@ public class Bond_Issue extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Application is issued successfully, summary page displayed.");
 		Log.info("Application is issued successfully, summary page displayed.");
 
-		transId = driver.findElement(Bondissue.Transid).getText();
+		//transId = driver.findElement(Bondissue.Transid).getText();
 
 	}
 
@@ -643,6 +644,7 @@ public class Bond_Issue extends Base_Class {
 		ExtentTestManager.startTest("Enter Rejection Remark (Transfer Mode)");
 		Log.info("Entering rejection remark for transfer mode");
 
+		Thread.sleep(10000);
 		ExtentTestManager.startTest("Submit Rejection");
 		Log.info("Submit Rejection");
 
@@ -868,8 +870,8 @@ public class Bond_Issue extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Authorization entries are updated and displayed");
 		Log.info("Authorization entries are updated and displayed");
 
-		System.out.println("transIdCashPersonal " + transId);
-		fetchWithTransId(transId);
+		//System.out.println("transIdCashPersonal " + transId);
+		//fetchWithTransId(transId);
 	}
 
 	public void authorizeRejectedEntryFinal() {

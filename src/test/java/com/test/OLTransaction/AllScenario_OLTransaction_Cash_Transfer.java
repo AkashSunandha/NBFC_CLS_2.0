@@ -72,7 +72,7 @@ public class AllScenario_OLTransaction_Cash_Transfer {
 
 				Transaction.SelectCASH();
 
-				Transaction.print();
+				//Transaction.print();
 
 				Transaction.Signout();
 

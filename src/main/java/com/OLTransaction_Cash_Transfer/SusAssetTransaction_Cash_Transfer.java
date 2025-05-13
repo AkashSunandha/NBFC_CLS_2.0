@@ -230,6 +230,8 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 		click(OLtrans.submittrans);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:1- Click Submit Button.");
 		Log.info("Step:1 - Click Submit Button.");
+		
+		AcceptAlert();
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User navigates to summary page");
 		Log.info("Expected Result: User navigates to summary page");
@@ -324,6 +326,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.startTest("User is logged in");
 		Log.info("User is logged in");
 
+		ScrollUntilElementVisible(JewelClosure.authandcancel);
 		click(JewelClosure.authandcancel);
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 - Navigated to Cashier Authorization submodule.");
 		Log.info("Step: 01 - Navigated to Cashier Authorization submodule.");
@@ -780,6 +783,8 @@ public void submitTransactionWindow() throws InterruptedException {
 	ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Click Submit button.");
 	Log.info("Step: 1 - Click Submit button.");
 
+	AcceptAlert();
+	
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User navigates to the summary page.");
 	Log.info("Expected Result: User navigates to the summary page.");
 	

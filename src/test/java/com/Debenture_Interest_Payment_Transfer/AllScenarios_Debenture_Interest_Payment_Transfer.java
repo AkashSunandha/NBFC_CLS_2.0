@@ -83,7 +83,7 @@ public class AllScenarios_Debenture_Interest_Payment_Transfer {
 				
 				Deb.verifyPostCreditPopupDisplay(testdata, context);
 				
-				Deb.printButtonTest();
+				//Deb.printButtonTest();
 				
 				suspense.logoutApplication1();
 

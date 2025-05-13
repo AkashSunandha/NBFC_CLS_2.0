@@ -184,10 +184,10 @@ public class General_Opening_cash_transfer extends Base_Class {
 	}
 
 	public void Cashier(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {
-		String UserName = configloader().getProperty("UserName1");
+		String UserName = configloader().getProperty("UserName2");
 		input(custSearch.loginUserName, UserName);
 
-		String Password = configloader().getProperty("Password1");
+		String Password = configloader().getProperty("Password2");
 		input(custSearch.loginPasswrd, Password);
 
 		click(custSearch.loginButton);
@@ -503,9 +503,9 @@ public class General_Opening_cash_transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Log out");
 		Log.info("Step:01 - Log out");
 
-		String UserName = configloader().getProperty("UserName1");
+		String UserName = configloader().getProperty("UserName2");
 		input(custSearch.loginUserName, UserName);
-		String Password = configloader().getProperty("Password1");
+		String Password = configloader().getProperty("Password2");
 		input(custSearch.loginPasswrd, Password);
 		click(custSearch.loginButton);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");

@@ -226,7 +226,7 @@ public class Customer_CustomerSearch extends Base_Class{
 		Log.info("Valid Login");
 			
 
-			
+					Thread.sleep(5000);
 					String UserName = configloader().getProperty("UserName");
 					input(custSearch.loginUserName,UserName );
 					ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Eneter valid User Name");

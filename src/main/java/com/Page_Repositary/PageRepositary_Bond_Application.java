@@ -5,10 +5,18 @@ import org.openqa.selenium.By;
 
 public class PageRepositary_Bond_Application {
 
-	public By bond = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[3]/div");
+	public By bond = By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[21]/div");
 	public By bondapplication = By
-			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[3]/ul/li[1]/a");
+			.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[21]/ul/li[1]/a");
+	
+	public By branchchoose = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_TC1_TabPanel3_lstBondInternalAccountInfo_ctrl0_ucBondInternalAccountInfo_ddlIntBranch\"]");
 
+	public By prod =By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_TC1_TabPanel3_lstBondInternalAccountInfo_ctrl0_ucBondInternalAccountInfo_ddlFromProduct_ddl\"]");
+	
+	public By outside=By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div/div/table[4]/tbody/tr/td/div/div[2]/div[3]/table/tbody/tr[2]/td/div/table/tbody/tr[5]/td"); 
+	
+	public By acno = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_TC1_TabPanel3_lstBondInternalAccountInfo_ctrl0_ucBondInternalAccountInfo_txtStandAcNoF_txt\"]");
+	
 	public By sellectproduct = By
 			.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstBondAccountInfo_ctrl0_BondAccountInfo1_ddlProduct_ddl\"]");
 
@@ -74,9 +82,11 @@ public class PageRepositary_Bond_Application {
 	
 	public By logout= By.xpath("/html/body/form/div[3]/div[2]/a[6]/strong");
 	
-	public By clickauthorize= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/div");
+	public By cashauth= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[9]/ul/li[8]/a");
 	
-	public By managertab= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[10]/ul/li[7]/a");
+	public By clickauthorize= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[9]/div");
+	
+	public By managertab= By.xpath("/html/body/form/div[7]/div[1]/div/div/div/div/div/div/div/ul/li[9]/ul/li[7]/a");
 	
 	public By makerid= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_txtMakerID_txt\"]");
 	
@@ -91,6 +101,20 @@ public class PageRepositary_Bond_Application {
 	public By refresh= By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnRefresh\"]");
 	
 	public By go = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnGo\"]");
+	
+	public By cashierTransactionIds =  By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_txtTransID_txt\"]");
+	
+	public By cashierCheckBox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_ucAB_lvwBatchDetails_ctrl0_chkSelect\"]");
+	public By cashierAuthorizeBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnSubmit\"]");
+	
+	public By ManagerAuth = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_tbMgr_tpCash_ucMACashier_lvwBatchDetails_ctrl0_chkSelect\"]");
+	
+	public By ManagerAuthorizeBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnOtherPass\"]");
+	
+	
+	
+	
+	
 	
 
 	
