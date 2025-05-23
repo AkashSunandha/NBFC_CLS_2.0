@@ -3,12 +3,18 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.Customer.AllScenarios_Cust_CustRating">
+      <class name="com.test.Transaction.AllScenarios_Transaction_Transaction_Cancellation_Transfer">
         <methods>
+          <include name="newCustomer" invocation-numbers="0"/>
           <include name="reference"/>
-          <include name="customerRating" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.Customer.AllScenarios_Cust_CustRating -->
+      </class> <!-- com.test.Transaction.AllScenarios_Transaction_Transaction_Cancellation_Transfer -->
+      <class name="com.test.Transaction.AllScenarios_Transaction_Transaction_Cancellation_Cash">
+        <methods>
+          <include name="newCustomer" invocation-numbers="0"/>
+          <include name="reference"/>
+        </methods>
+      </class> <!-- com.test.Transaction.AllScenarios_Transaction_Transaction_Cancellation_Cash -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

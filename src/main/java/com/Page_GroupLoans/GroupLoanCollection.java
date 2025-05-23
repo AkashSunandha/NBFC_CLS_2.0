@@ -3,7 +3,9 @@ package com.Page_GroupLoans;
 import java.io.IOException;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestContext;
 
@@ -20,6 +22,7 @@ import com.extentReports.ExtentTestManager;
 public class GroupLoanCollection extends Base_Class{
 
 	String transId;
+	By lastSelectXPath;
 
 	PageRepositary_GroupLoans_GroupLoanCollection grpLoanCollRepo = new PageRepositary_GroupLoans_GroupLoanCollection();
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
@@ -35,7 +38,7 @@ public class GroupLoanCollection extends Base_Class{
 	public void groupLoanCollection() throws InterruptedException {
 		
 		//Navigation to Group Loan collection page.
-		ExtentTestManager.startTest("Navigation to Group Loan collection page.");
+		ExtentTestManager.startTest("Navigation to Group Loan collection page.").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Navigation to Group Loan collection page.");
 		
 		click(grpLoanCollRepo.groupLoansTab);
@@ -62,7 +65,7 @@ public class GroupLoanCollection extends Base_Class{
 	public void groupInfo() throws InterruptedException {
 
 		//Center Dropdown Selections - Basic Functionality
-		ExtentTestManager.startTest("Center Dropdown Selections - Basic Functionality");
+		ExtentTestManager.startTest("Center Dropdown Selections - Basic Functionality").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Center Dropdown Selections - Basic Functionality");
 			
 		select("14 - GUARANTOR",grpLoanCollRepo.giCentreDropdown);
@@ -84,7 +87,7 @@ public class GroupLoanCollection extends Base_Class{
 		
 
 		//Group Dropdown Selections - Basic Functionality
-		ExtentTestManager.startTest("Group Dropdown Selections - Basic Functionality");
+		ExtentTestManager.startTest("Group Dropdown Selections - Basic Functionality").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Group Dropdown Selections - Basic Functionality");
 			
 		select("25 - GUARANTOR 3",grpLoanCollRepo.giGroupDropdown);
@@ -106,7 +109,7 @@ public class GroupLoanCollection extends Base_Class{
 		
 		
 //		GO Button Functionality
-		ExtentTestManager.startTest("GO Button Functionality");
+		ExtentTestManager.startTest("GO Button Functionality").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("GO Button Functionality");
 					
 		click(grpLoanCollRepo.giGoBtn);
@@ -132,8 +135,8 @@ public class GroupLoanCollection extends Base_Class{
 	public void loanDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
 		
-//		Select and Load Loan Collection Details
-		ExtentTestManager.startTest("Select and Load Loan Collection Details");
+/*//		Select and Load Loan Collection Details
+		ExtentTestManager.startTest("Select and Load Loan Collection Details").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Select and Load Loan Collection Details");
 					
 		click(grpLoanCollRepo.giSelect);
@@ -150,12 +153,53 @@ public class GroupLoanCollection extends Base_Class{
 			Log.info("ERROR");
 		}
 			
+		ExtentTestManager.endTest();*/
+		
+//		Select and Load Loan Collection Details
+		ExtentTestManager.startTest("Select and Load Loan Collection Details").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
+		Log.info("Select and Load Loan Collection Details");
+		
+		//Table xpath/id
+	       WebElement table = driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_gdvApplication\"]"));
+	       
+	        // Find all <tr> elements in the table
+	        java.util.List<WebElement> rows = table.findElements(By.tagName("tr"));
+	 	        
+	        // Output the number of <tr> tags
+	        System.out.println("Number of rows in the table: " + rows.size());
+	        int lastRow = rows.size()-1;
+	        System.out.println("lastRow: " + lastRow);
+	        	        
+	        if(lastRow<10) {
+			String xpath = "//td[*[@id='ctl00_ctl00_CPH1_PRDCNT_gdvApplication_ctl0"+ lastRow +"_LoanAmount']]//following-sibling::td//a[text()='Select']";
+			lastSelectXPath = By.xpath(xpath);
+	        }else {
+				String xpath = "//td[*[@id='ctl00_ctl00_CPH1_PRDCNT_gdvApplication_ctl0"+ lastRow +"_LoanAmount']]//following-sibling::td//a[text()='Select']";
+				lastSelectXPath = By.xpath(xpath);
+	        }
+	        
+		ScrollUntilElementVisible(lastSelectXPath);
+		click(lastSelectXPath);
+//		click(grpLoanCollRepo.giSelect);
+		ExtentTestManager.getTest().log(Status.PASS, "1. Click on the 'Select' button against the last group listed");
+		Log.info("1. Click on the 'Select' button against the last group listed");
+			
+		waitUntilElementDisappear(grpLoanCollRepo.loader);
+ 
+		if(ElementDisplayed(grpLoanCollRepo.ldNumOfIntHeader)) {
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: " + "Loan Collection Details are loaded with 'No.Of Inst' header visible");
+			Log.info("Expected Result: " + "Loan Collection Details are loaded with 'No.Of Inst' header visible");
+		}else {
+			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+			Log.info("ERROR");
+		}
+			
 		ExtentTestManager.endTest();
 		
 
 		
-//		 Select and Load Loan Collection Details
-		ExtentTestManager.startTest("Select and Load Loan Collection Details");
+//		Select and Load Loan Collection Details
+		ExtentTestManager.startTest("Select and Load Loan Collection Details").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Select and Load Loan Collection Details");
 		
 		clear(grpLoanCollRepo.ldNumOfIntTxtBox);
@@ -170,7 +214,7 @@ public class GroupLoanCollection extends Base_Class{
 		Log.info("2. Press TAB");
 		
 		waitUntilElementDisappear(grpLoanCollRepo.loader);
- 
+
 		String amtValue = driver.findElement(grpLoanCollRepo.ldAmtToBePaidTxtBox1).getAttribute("value");
 		double ldAmtToBePaid = Double.parseDouble(amtValue);
 		System.out.println("ldAmtToBePaid: " + ldAmtToBePaid);
@@ -188,7 +232,7 @@ public class GroupLoanCollection extends Base_Class{
 
 		
 //		Amount Entry
-		ExtentTestManager.startTest("Amount Entry");
+		ExtentTestManager.startTest("Amount Entry").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Amount Entry");
 		
 		ScrollUntilElementVisible(grpLoanCollRepo.ldAmtToBePaidTxtBox2);
@@ -222,7 +266,7 @@ public class GroupLoanCollection extends Base_Class{
 	public void transModeCash() throws InterruptedException {
 		
 		//Transaction Mode Selection
-		ExtentTestManager.startTest("Transaction Mode Selection");
+		ExtentTestManager.startTest("Transaction Mode Selection").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Transaction Mode Selection");
 			
 		select("CASH",grpLoanCollRepo.ldTransModeDropdown);
@@ -247,7 +291,7 @@ public class GroupLoanCollection extends Base_Class{
 	public void transModeTransfer() throws InterruptedException {
 		
 		//Transaction Mode Selection
-		ExtentTestManager.startTest("Transaction Mode Selection");
+		ExtentTestManager.startTest("Transaction Mode Selection").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Transaction Mode Selection");
 			
 		select("TRANSFER",grpLoanCollRepo.ldTransModeDropdown);
@@ -273,7 +317,7 @@ public class GroupLoanCollection extends Base_Class{
 
 
 //		Complete Entry and Submit
-		ExtentTestManager.startTest("Complete Entry and Submit");
+		ExtentTestManager.startTest("Complete Entry and Submit").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Complete Entry and Submit");
 		
 		String particulars = testdata.get("particulars").toString();
@@ -305,7 +349,7 @@ public class GroupLoanCollection extends Base_Class{
 	public void authorizeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -338,7 +382,7 @@ public class GroupLoanCollection extends Base_Class{
 		
 		
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentTestManager.startTest("Cashier Authorization").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Cashier Authorization");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -378,7 +422,7 @@ public class GroupLoanCollection extends Base_Class{
 		
 		
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		ExtentTestManager.startTest("Manager Authorization - Cash Tab").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Manager Authorization - Cash Tab");
 		
 		click(goaldLoanRepo.managerAuthoTab);
@@ -398,7 +442,7 @@ public class GroupLoanCollection extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -422,7 +466,7 @@ public class GroupLoanCollection extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		
@@ -451,7 +495,7 @@ public class GroupLoanCollection extends Base_Class{
 	
 	public void postCreditPopUpEntry() throws InterruptedException {
 		//Post credit button functionality
-				ExtentTestManager.startTest("Post credit button functionality");
+				ExtentTestManager.startTest("Post credit button functionality").assignCategory("Microfinance concept-GroupLoanCollection-Transfer");
 				Log.info("Post credit button functionality");
 				
 				click(grpLoanCollRepo.ldPostDebitBtn);
@@ -481,7 +525,7 @@ public class GroupLoanCollection extends Base_Class{
 
 						
 						//Transaction based selection.
-						ExtentTestManager.startTest("Transaction based selection.");
+						ExtentTestManager.startTest("Transaction based selection.").assignCategory("Microfinance concept-GroupLoanCollection-Transfer");
 						Log.info("Transaction based selection.");
 						
 						select("GL Code",depositLoanRepo.oiTransBasedDropdown);
@@ -501,7 +545,7 @@ public class GroupLoanCollection extends Base_Class{
 						
 						
 						//GL Name selection.
-						ExtentTestManager.startTest("GL Name selection.");
+						ExtentTestManager.startTest("GL Name selection.").assignCategory("Microfinance concept-GroupLoanCollection-Transfer");
 						Log.info("GL Name selection.");
 						
 						click(depositLoanRepo.oiGLNameTxtBox);
@@ -524,7 +568,7 @@ public class GroupLoanCollection extends Base_Class{
 
 						
 						//Add button functionality
-						ExtentTestManager.startTest("Add button functionality");
+						ExtentTestManager.startTest("Add button functionality").assignCategory("Microfinance concept-GroupLoanCollection-Transfer");
 						Log.info("Add button functionality");
 						
 						String amntValue = driver.findElement(depositLoanRepo.oiBalanceAmtTxtBox).getAttribute("value");
@@ -553,7 +597,7 @@ public class GroupLoanCollection extends Base_Class{
 						
 						
 						//Submit button functionality
-						ExtentTestManager.startTest("Submit button functionality");
+						ExtentTestManager.startTest("Submit button functionality").assignCategory("Microfinance concept-GroupLoanCollection-Transfer");
 						Log.info("Submit button functionality");
 						
 						click(depositLoanRepo.oiSubmitBtn);
@@ -582,7 +626,7 @@ public class GroupLoanCollection extends Base_Class{
 	public void authorizeTransfer() throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Microfinance concept-GroupLoanCollection-Transfer");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut); 
@@ -615,7 +659,7 @@ public class GroupLoanCollection extends Base_Class{
 		
 		
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("Microfinance concept-GroupLoanCollection-Transfer");
 		Log.info("Manager Authorization - Transfer Tab");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -639,7 +683,7 @@ public class GroupLoanCollection extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Microfinance concept-GroupLoanCollection-Transfer");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -662,7 +706,7 @@ public class GroupLoanCollection extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Microfinance concept-GroupLoanCollection-Transfer");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		click(goaldLoanRepo.approveCheckBoxTransfer);

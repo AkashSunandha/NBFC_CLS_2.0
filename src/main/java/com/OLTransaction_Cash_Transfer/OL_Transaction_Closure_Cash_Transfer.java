@@ -53,7 +53,7 @@ String Actualusername;
 	}
 
 	public void Closure() throws InterruptedException {
-		ExtentTestManager.startTest("Navigate to  Navigate Other Loan Closure Window");
+		ExtentTestManager.startTest("Navigate to  Navigate Other Loan Closure Window").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Navigate to Jewel Loan Closure Window");
 
 		click(JewelClosure.OpenClosureandrenewal);
@@ -69,7 +69,7 @@ String Actualusername;
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Product Group and Name");
+		ExtentTestManager.startTest("Select Product Group and Name").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Select Product Group and Name");
 
 		select("OTHER LOANS", JewelClosure.selectproduct);
@@ -89,7 +89,7 @@ String Actualusername;
 
 	public String generateUniqueCode(String query, String columnName) throws ClassNotFoundException {
 
-		ExtentTestManager.startTest("Enter Loan Account Number");
+		ExtentTestManager.startTest("Enter Loan Account Number").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Enter Loan Account Number");
 
 		{
@@ -147,7 +147,7 @@ String Actualusername;
 
 		try {
 
-			ExtentTestManager.startTest("Warning Validation Popup window");
+			ExtentTestManager.startTest("Warning Validation Popup window").assignCategory("OtherLoanClosure-Cash&Transfer");
 			Log.info("Warning Validation Popup window");
 
 			click(JewelClosure.ClickNo);
@@ -177,7 +177,7 @@ String Actualusername;
 	}
 
 	public void Cash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
-		ExtentTestManager.startTest("Select Cash as Transmode and Submit");
+		ExtentTestManager.startTest("Select Cash as Transmode and Submit").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Select Cash as Transmode and Submit");
 
 		select("CASH", JewelClosure.Selectcash);
@@ -214,7 +214,7 @@ String Actualusername;
 
 	public void Signout() throws InterruptedException {
 
-		ExtentTestManager.startTest("Logout in application");
+		ExtentTestManager.startTest("Logout in application").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Logout in application");
 
 		click(JewelClosure.Singout);
@@ -327,7 +327,7 @@ String Actualusername;
 
 			ExtentTestManager.endTest();
 
-			ExtentTestManager.startTest("User is logged in");
+			ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 			Log.info("User is logged in");
 
 			click(JewelClosure.clickrefresh);
@@ -343,7 +343,7 @@ String Actualusername;
 
 			ExtentTestManager.endTest();
 
-			ExtentTestManager.startTest("User is logged in");
+			ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 			Log.info("User is logged in");
 
 			click(JewelClosure.checkbox);
@@ -356,7 +356,7 @@ String Actualusername;
 
 			ExtentTestManager.endTest();
 
-			ExtentTestManager.startTest("User is on Cashier authorisation window");
+			ExtentTestManager.startTest("User is on Cashier authorisation window").assignCategory("OtherLoanClosure-Cash&Transfer");
 			Log.info("User is on Cashier authorisation window");
 
 			click(JewelClosure.clickauths);
@@ -373,7 +373,7 @@ String Actualusername;
 
 	public void Manager() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		// ScrollUntilElementVisible(JewelClosure.scrolldownside);
@@ -387,7 +387,7 @@ String Actualusername;
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.cashtab);
@@ -399,7 +399,7 @@ String Actualusername;
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.refreshtab);
@@ -415,7 +415,7 @@ String Actualusername;
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkboxman);
@@ -428,7 +428,7 @@ String Actualusername;
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is on Manager authorisation window");
+		ExtentTestManager.startTest("User is on Manager authorisation window").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is on Manager authorisation window");
 
 		click(JewelClosure.clickauth);
@@ -448,7 +448,7 @@ String Actualusername;
 
 	public void ClosurerenewalTrasnfer() throws InterruptedException {
 
-		ExtentTestManager.startTest("Navigate to Other Loan Closure Window");
+		ExtentTestManager.startTest("Navigate to Other Loan Closure Window").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Navigate to Other Loan Closure Window");
 
 		click(JewelClosure.Clickonclosure);
@@ -460,7 +460,7 @@ String Actualusername;
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Product Group and Name");
+		ExtentTestManager.startTest("Select Product Group and Name").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Select Product Group and Name");
 
 		select("Jewel Loan", JewelClosure.selectproduct);
@@ -487,7 +487,7 @@ String Actualusername;
 			Log.info("ERROR");
 		}
 
-		ExtentTestManager.startTest("Select Transmode Transfer and Post Debit");
+		ExtentTestManager.startTest("Select Transmode Transfer and Post Debit").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Select Transmode Transfer and Post Debit");
 
 		select("TRANSFER", JewelClosure.selecttransfer);
@@ -498,7 +498,7 @@ String Actualusername;
 		Log.info("Expected Result:POST DEBITbutton will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Post Debit");
+		ExtentTestManager.startTest("Select Post Debit").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Select Post Debit");
 
 		click(JewelClosure.clickPD);
@@ -524,7 +524,7 @@ String Actualusername;
 			}
 		}
 
-		ExtentTestManager.startTest("Search Account number");
+		ExtentTestManager.startTest("Search Account number").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Search Account number");
 
 		select("Demand Investment", JewelClosure.produgroup);
@@ -540,7 +540,7 @@ String Actualusername;
 		Log.info("Expected Result:Possible to select the product group and product name ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Account Number");
+		ExtentTestManager.startTest("Select Account Number").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Search Account Number");
 
 		String AccountNumber = testdata.get("AccountNumber").toString();
@@ -552,7 +552,7 @@ String Actualusername;
 		Log.info("Expected Result:Given account number details will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Add Transaction Amount");
+		ExtentTestManager.startTest("Add Transaction Amount").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Add Transaction Amount");
 
 		Display = driver.findElement(JewelClosure.dispname).getAttribute("value");
@@ -572,7 +572,7 @@ String Actualusername;
 		Log.info("Expected Result: Amount and details is added in the grid in the auto posting popup window");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Submit POST DEBIT Action");
+		ExtentTestManager.startTest("Submit POST DEBIT Action").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Submit POST DEBIT Action");
 
 		click(JewelClosure.clickSubmit);
@@ -585,7 +585,7 @@ String Actualusername;
 		Log.info("Expected Result: Auto posting popu window will be close");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Navigate to Summary Page - SWIFT_CODE");
+		ExtentTestManager.startTest("Navigate to Summary Page - SWIFT_CODE").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Navigate to Summary Page - SWIFT_CODE");
 
 		click(JewelClosure.submitpostD);
@@ -602,7 +602,7 @@ String Actualusername;
 
 	public void ManagerAuth() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		// ScrollUntilElementVisible(JewelClosure.scrolldownside);
@@ -615,7 +615,7 @@ String Actualusername;
 		Log.info("Expected Result:Manager authorization window will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.Transfertab);
@@ -626,7 +626,7 @@ String Actualusername;
 		Log.info("Expected Result: Transfer tab will be display");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.refreshtab);
@@ -641,7 +641,7 @@ String Actualusername;
 		Log.info("Expected Result:Closure entry will be diaply after clicking the refresh button ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkboxtrue);
@@ -653,7 +653,7 @@ String Actualusername;
 		Log.info("Expected Result:Possible to select the closure entry and selected entry is hghlighted ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is on Manager authorisation window");
+		ExtentTestManager.startTest("User is on Manager authorisation window").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is on Manager authorisation window");
 
 		click(JewelClosure.clickauth);
@@ -672,7 +672,7 @@ String Actualusername;
 
 	public void ClosurerenewalTrasnfer1() throws InterruptedException {
 
-		ExtentTestManager.startTest("Navigate to Jewel Loan Closure Window");
+		ExtentTestManager.startTest("Navigate to Jewel Loan Closure Window").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Navigate to Jewel Loan Closure Window");
 
 		click(JewelClosure.Clickonclosure);
@@ -684,7 +684,7 @@ String Actualusername;
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Product Group and Name");
+		ExtentTestManager.startTest("Select Product Group and Name").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Select Product Group and Name");
 
 		select("OTHER LOANS", JewelClosure.selectproduct);
@@ -703,7 +703,7 @@ String Actualusername;
 
 	public void Transfer1(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("Verify Closure Amount Display");
+		ExtentTestManager.startTest("Verify Closure Amount Display").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Verify Closure Amount Display");
 
 		if (ElementDisplayed(JewelClosure.cloamtdisplay)) {
@@ -718,7 +718,7 @@ String Actualusername;
 		Log.info("Expected Result: Loan account details are correctly displayed");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Transmode Transfer and Post Debit");
+		ExtentTestManager.startTest("Select Transmode Transfer and Post Debit").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Select Transmode Transfer and Post Debit");
 
 		select("TRANSFER", JewelClosure.selecttransfer);
@@ -729,7 +729,7 @@ String Actualusername;
 		Log.info("Expected Result:POST DEBITbutton will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Post Debit");
+		ExtentTestManager.startTest("Select Post Debit").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Select Post Debit");
 
 		click(JewelClosure.clickPD);
@@ -755,7 +755,7 @@ String Actualusername;
 			}
 		}
 
-		ExtentTestManager.startTest("Search Account number");
+		ExtentTestManager.startTest("Search Account number").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Search Account number");
 
 		select("Demand Investment", JewelClosure.produgroup);
@@ -771,7 +771,7 @@ String Actualusername;
 		Log.info("Expected Result:Possible to select the product group and product name ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Account Number");
+		ExtentTestManager.startTest("Select Account Number").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Search Account Number");
 
 		String AccountNumber = testdata.get("AccountNumber").toString();
@@ -783,7 +783,7 @@ String Actualusername;
 		Log.info("Expected Result:Given account number details will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Add Transaction Amount");
+		ExtentTestManager.startTest("Add Transaction Amount").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Add Transaction Amount");
 
 		Display = driver.findElement(JewelClosure.dispname).getAttribute("value");
@@ -803,7 +803,7 @@ String Actualusername;
 		Log.info("Expected Result: Amount and details is added in the grid in the auto posting popup window");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Submit POST DEBIT Action");
+		ExtentTestManager.startTest("Submit POST DEBIT Action").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Submit POST DEBIT Action");
 
 		click(JewelClosure.clickSubmit);
@@ -816,7 +816,7 @@ String Actualusername;
 		Log.info("Expected Result: Auto posting popu window will be close");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Navigate to Summary Page - SWIFT_CODE");
+		ExtentTestManager.startTest("Navigate to Summary Page - SWIFT_CODE").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Navigate to Summary Page - SWIFT_CODE");
 
 		click(JewelClosure.submitpostD);
@@ -833,7 +833,7 @@ String Actualusername;
 
 	public void ManagerAuth1() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		// ScrollUntilElementVisible(JewelClosure.scrolldownside);
@@ -846,7 +846,7 @@ String Actualusername;
 		Log.info("Expected Result:Manager authorization window will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.Transfertab);
@@ -857,7 +857,7 @@ String Actualusername;
 		Log.info("Expected Result: Transfer tab will be display");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.refreshtab);
@@ -872,7 +872,7 @@ String Actualusername;
 		Log.info("Expected Result:Closure entry will be diaply after clicking the refresh button ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkboxtrue);
@@ -884,7 +884,7 @@ String Actualusername;
 		Log.info("Expected Result:Possible to select the closure entry and selected entry is hghlighted ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is on Manager authorisation window");
+		ExtentTestManager.startTest("User is on Manager authorisation window").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("User is on Manager authorisation window");
 
 		click(JewelClosure.clickauth);
@@ -908,7 +908,7 @@ String Actualusername;
 
 	public void Signout1() throws InterruptedException {
 
-		ExtentTestManager.startTest("Logout in application");
+		ExtentTestManager.startTest("Logout in application").assignCategory("OtherLoanClosure-Cash&Transfer");
 		Log.info("Logout in application");
 
 		click(JewelClosure.Singout);

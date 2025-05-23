@@ -72,7 +72,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	public void Navigate_GL_AC_Bulk_Transaction() throws InterruptedException {
 
 		//Open Transaction Module
-		ExtentTestManager.startTest("Navigate to Transactions >> GL A/c Bulk Transaction.");
+		ExtentTestManager.startTest("Navigate to Transactions >> GL A/c Bulk Transaction.").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Navigate to Transactions >> GL A/c Bulk Transaction.");
 
 		click(transaction_GL_AC_BulkRepo.transactionTab);
@@ -97,7 +97,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	public void EnterTransactionAmount(Map < Object, Object > testdata) throws InterruptedException {
 		//Enter Transaction Amount
-		ExtentTestManager.startTest("Enter Transaction Amount");
+		ExtentTestManager.startTest("Enter Transaction Amount").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Enter Transaction Amount");
 
 		String transAmt = testdata.get("amount").toString();
@@ -111,7 +111,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	public void GLccountinfo(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 		//Select Branch
-		//		ExtentTestManager.startTest("Select Branch");
+		ExtentTestManager.startTest("Select Branch").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Select Branch");
 
 		select("TRIVANDRUM", transaction_GL_AC_BulkRepo.aiBranchDropdown);
@@ -149,7 +149,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	}
 	public void GLccountinfoDebit(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 		//Select Branch
-		ExtentTestManager.startTest("Select Branch");
+		ExtentTestManager.startTest("Select Branch").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Select Branch");
 
 		select("TRIVANDRUM", transaction_GL_AC_BulkRepo.aiBranchDropdown);
@@ -165,7 +165,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Account Type");
+		ExtentTestManager.startTest("Select Account Type").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Select Account Type");
 
 		select("Accounts", transaction_GL_AC_BulkRepo.aiAccountTypeDropdown);
@@ -188,7 +188,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	public void SelectTranscationType(String Value) throws InterruptedException {
 		//Select Transaction Type
-		//		ExtentTestManager.startTest("Select Transaction Type");
+		ExtentTestManager.startTest("Select Transaction Type").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Select Transaction Type");
 
 		select(Value, transaction_GL_AC_BulkRepo.aiTransactionTypeDropdown);
@@ -202,7 +202,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	}
 	public void SearchAccountpopup() throws InterruptedException {
 		//		Accountpopup
-		ExtentTestManager.startTest("Search Account popup");
+		ExtentTestManager.startTest("Search Account popup").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Search Account popup");
 
 		click(transaction_GL_AC_BulkRepo.Accountpopup);
@@ -255,7 +255,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	public void SelectGroupName() throws InterruptedException {
 
-		ExtentTestManager.startTest("Select Transaction Type");
+		ExtentTestManager.startTest("Select Transaction Type").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Select Transaction Type");
 
 		select("Suspense Asset", transaction_GL_AC_BulkRepo.AccountsearchGroupNameDropdown);
@@ -270,7 +270,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	}
 
 	public void SelectProductName() throws InterruptedException {
-		ExtentTestManager.startTest("Select Product Name");
+		ExtentTestManager.startTest("Select Product Name").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Select Product Name");
 
 		select("SUSPENSE ASSET", transaction_GL_AC_BulkRepo.AccountsearchProductNameDropdown);
@@ -285,7 +285,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	}
 
 	public void SelectBranch() throws InterruptedException {
-		//		ExtentTestManager.startTest("Select Branch");
+		ExtentTestManager.startTest("Select Branch").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Select Branch");
 
 		select("TRIVANDRUM", transaction_GL_AC_BulkRepo.AccountsearchBranchDropdown);
@@ -301,7 +301,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	public void ClickOnCashier_Authorization() throws InterruptedException {
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentTestManager.startTest("Cashier Authorization").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Cashier Authorization");
 
 		click(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
@@ -366,7 +366,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	public void authorizeCash(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Login with Another User");
 
 		click(custSearch.custSignOut);
@@ -435,7 +435,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Authorize Loan Entry as Manager");
 
 		click(Transactions_SusLiabilityRepo.ApproveCheckBoxOthers);
@@ -494,7 +494,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	public void authorizeTransfer(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Login with Another User");
 
 		click(custSearch.custSignOut);
@@ -519,7 +519,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Manager Authorization - Transfer Tab");
 
 		click(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
@@ -540,7 +540,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Refresh Loan Opening Entry");
 
 		click(Transactions_SusLiabilityRepo.refreshBtn);
@@ -560,7 +560,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Authorize Loan Entry as Manager");
 
 		click(Transactions_SusLiabilityRepo.approveCheckBoxTransfer);
@@ -587,7 +587,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	public void transModeCash() throws InterruptedException {
 
 		//Select Transaction Mode
-		ExtentTestManager.startTest("Select Transaction Mode");
+		ExtentTestManager.startTest("Select Transaction Mode").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Select Transaction Mode");
 
 		select("CASH", transaction_GL_AC_BulkRepo.TransactionModeDD);
@@ -625,7 +625,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 
 		//Submit Transaction
-		ExtentTestManager.startTest("Submit Transaction");
+		ExtentTestManager.startTest("Submit Transaction").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Submit Transaction");
 
 		click(transaction_GL_AC_BulkRepo.SubmitTrans);
@@ -650,7 +650,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	public void transModeTransfer() throws InterruptedException {
 		//Select Transaction Mode
-		ExtentTestManager.startTest("Select Transaction Mode");
+		ExtentTestManager.startTest("Select Transaction Mode").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Select Transaction Mode");
 
 		select("TRANSFER", transaction_GL_AC_BulkRepo.TransactionModeDD);
@@ -663,7 +663,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Enter Part Name
-		ExtentTestManager.startTest("Enter Part Name");
+		ExtentTestManager.startTest("Enter Part Name").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Enter Part Name");
 
 		String PartyName = "Automationtest";
@@ -675,7 +675,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 
 		//Enter Part Name
-		ExtentTestManager.startTest("Enter Remarks");
+		ExtentTestManager.startTest("Enter Remarks").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Enter Remarks");
 
 		String Remarks = "Automation_Remarks";
@@ -688,7 +688,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 
 		//Submit Transaction
-		ExtentTestManager.startTest("Submit Transaction");
+		ExtentTestManager.startTest("Submit Transaction").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Submit Transaction");
 
 		click(transaction_GL_AC_BulkRepo.SubmitTrans);
@@ -714,7 +714,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	public String generateUniqueCode(String query, String columnName) throws ClassNotFoundException {
 
-		ExtentTestManager.startTest("Enter Loan Account Number");
+		ExtentTestManager.startTest("Enter Loan Account Number").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Enter Loan Account Number");
 
 		{
@@ -762,7 +762,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Enter Loan Account Number");
+		ExtentTestManager.startTest("Enter Loan Account Number").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Enter Loan Account Number");
 
 		click(Transactions_SusLiabilityRepo.clickGo);
@@ -776,7 +776,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 		try {
 
-			ExtentTestManager.startTest("Warning Validation Popup window");
+			ExtentTestManager.startTest("Warning Validation Popup window").assignCategory("Transaction Cancellation -Cash");
 			Log.info("Warning Validation Popup window");
 
 			click(Transactions_SusLiabilityRepo.ClickNo);
@@ -793,7 +793,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 		}
 
-		ExtentTestManager.startTest("Verify Closure Amount Display");
+		ExtentTestManager.startTest("Verify Closure Amount Display").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Verify Closure Amount Display");
 
 		ScrollUntilElementVisible(Transactions_SusLiabilityRepo.scrolldown);
@@ -814,7 +814,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 
 	public void postCreditPopUpEntry(Map < Object, Object > testdata) throws InterruptedException {
 		InvestmentTransaction.ClickonPostDebitButton();
-		ExtentTestManager.startTest("Post credit button functionality");
+		ExtentTestManager.startTest("Post credit button functionality").assignCategory("Transaction Cancellation -Cash");
 		//Navigate to Pop Up Window
 		String mainWindowHandle = driver.getWindowHandle();
 		boolean popupAppeared = false;
@@ -849,7 +849,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 	public void authorizeOthers(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Login with Another User");
 
 		click(custSearch.custSignOut);
@@ -871,7 +871,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		click(Transactions_Last_Entry_CancellationRepo.CollapseAll);
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Manager Authorization - Transfer Tab");
 
 		click(Transactions_Last_Entry_CancellationRepo.autorizeAndCancelTab);
@@ -892,7 +892,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Refresh Loan Opening Entry");
 
 		click(Transactions_Last_Entry_CancellationRepo.refreshBtn);
@@ -912,7 +912,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Authorize Loan Entry as Manager");
 
 		click(Transactions_Last_Entry_CancellationRepo.approveCheckBoxTransfer);
@@ -960,7 +960,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.endTest();
 		click(Transactions_Last_Entry_CancellationRepo.CollapseAll);
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentTestManager.startTest("Cashier Authorization").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Cashier Authorization");
 
 		click(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
@@ -987,7 +987,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Refresh Loan Opening Entry");
 
 		click(Transactions_SusLiabilityRepo.refreshBtn);
@@ -1008,7 +1008,7 @@ public class Transaction_GL_AC_Bulk_Transaction extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Transaction Cancellation -Cash");
 		Log.info("Authorize Loan Entry as Manager");
 
 		click(Transactions_SusLiabilityRepo.ApproveCheckBoxOthers);

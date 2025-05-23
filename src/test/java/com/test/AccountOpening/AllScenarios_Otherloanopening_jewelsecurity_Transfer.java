@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -34,7 +35,7 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 
 		AccountOpening_Otherloanopening_jewelsecurity_Transfer personalLoan = new AccountOpening_Otherloanopening_jewelsecurity_Transfer();
 
-		@BeforeSuite
+		@BeforeClass
 		public void reference() {
 			ExcelReader = new com.Utility.ExcelReader("Otherloanopeningjewelsecurity-T");
 			log = new Log();
@@ -48,7 +49,7 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 		public void loanOpeningModule(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 			try {
 				if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-					ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+					ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("Other Loan Opening Transfer -Jewel Security");
 					Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 					context.setAttribute("fileName", "Login");
 
@@ -58,7 +59,6 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					Log.info("Step-1: Launch NBFC application.");
 
 					Base_Class.SetUp();
-					custSrchMthds.pcRegistration(testdata, context);
 					ExtentTestManager.endTest();
 					Thread.sleep(2000);
 
@@ -72,7 +72,13 @@ public class AllScenarios_Otherloanopening_jewelsecurity_Transfer {
 					//custSrchMthds.pcRegistration(testdata, context);
 
                     //TC-02
-					personalLoan.userLogin(testdata, context);
+					//personalLoan.userLogin(testdata, context);
+					
+					//PC Registration
+					custSrchMthds.pcRegistration(testdata, context);
+
+                    //TC-02
+					custSrchMthds.userLoginValidPaswrd(testdata, context);
 					
 					//TC-03
 					personalLoan.testSelectActiveLoanProduct();

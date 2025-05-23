@@ -83,7 +83,7 @@ public class Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 	
 	public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context)
 			throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC:01 - Login to NBFC Application");
+		ExtentTestManager.startTest("TC:01 - Login to NBFC Application").assignCategory("GoldLoanRenewal-TRANSFER");
 		Log.info("TC_01 - Login to NBFC Application");
 
 		String UserName = configloader().getProperty("UserName");
@@ -144,7 +144,7 @@ public class Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 	}
 
 	public boolean OpenAccountClosureWindow() throws InterruptedException {
-		ExtentTestManager.startTest("TC:02 - Open Account Closure Window");
+		ExtentTestManager.startTest("TC:02 - Open Account Closure Window").assignCategory("GoldLoanRenewal-TRANSFER");
 		Log.info("TC:02 - Open Account Closure Window");
 
 		try {
@@ -182,7 +182,7 @@ public class Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 	}
 	public boolean SelectJewelLoanProductGroup() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:03 - Select Jewel Loan Product Group");
+	ExtentTestManager.startTest("TC:03 - Select Jewel Loan Product Group").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:03 - Select Jewel Loan Product Group");
 
 	click(LoanClosureCash.TopUp);
@@ -213,7 +213,7 @@ public class Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 }
 	public boolean SelectProductNamefromDropdown() throws InterruptedException {
 		
-		ExtentTestManager.startTest("TC:04 - Select Product Name from Dropdown");
+		ExtentTestManager.startTest("TC:04 - Select Product Name from Dropdown").assignCategory("GoldLoanRenewal-TRANSFER");
 		Log.info("TC:04 - Select Product Name from Dropdown");
 
 
@@ -241,7 +241,7 @@ public class Jewel_Gold_Loan_Renewal_Transfer extends Base_Class {
 	}
 public boolean EnterLoanAccountNumber() throws InterruptedException, ClassNotFoundException {
 		
-		ExtentTestManager.startTest("TC:05 - Enter Loan Account Number");
+		ExtentTestManager.startTest("TC:05 - Enter Loan Account Number").assignCategory("GoldLoanRenewal-TRANSFER");
 		Log.info("TC:05 - Enter Loan Account Number");
 		
 		String AccountNum = generateAccountNumber();
@@ -277,7 +277,7 @@ public boolean EnterLoanAccountNumber() throws InterruptedException, ClassNotFou
 
 public boolean DisplayLoanAccountDetails() throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:06 - Display Loan Account Details");
+	ExtentTestManager.startTest("TC:06 - Display Loan Account Details").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:06 - Display Loan Account Details");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -325,7 +325,7 @@ public boolean DisplayLoanAccountDetails() throws InterruptedException {
 
 public boolean ExpandRenewalSection() throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:07 - Expand Renewal Section");
+	ExtentTestManager.startTest("TC:07 - Expand Renewal Section").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:07 - Expand Renewal Section");
 
 	//WebElement RenewAccountCheckbox = driver.findElement(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_lstTransApprovingInfo_ctrl0_ucLoanClosure_chkRenewLoanAccount']"));
@@ -351,7 +351,7 @@ public boolean ExpandRenewalSection() throws InterruptedException {
 
 public boolean OpenSecurityDetailsPopup() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:08 - Open Security Details Popup");
+	ExtentTestManager.startTest("TC:08 - Open Security Details Popup").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:08 - Open Security Details Popup");
 	
 	click(LoanClosureCash.SecurityDetails);
@@ -381,7 +381,7 @@ public boolean OpenSecurityDetailsPopup() throws InterruptedException{
 
 public boolean AddSecurityDetails() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:09 - Add Security Details");
+	ExtentTestManager.startTest("TC:09 - Add Security Details").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:09 - Add Security Details");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -409,7 +409,7 @@ public boolean AddSecurityDetails() throws InterruptedException{
 
 public boolean AddSecurityDetailsItemName() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:10 - Add Security Details Item Name");
+	ExtentTestManager.startTest("TC:10 - Add Security Details Item Name").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:10 - Add Security Details Item Name");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -436,7 +436,7 @@ public boolean AddSecurityDetailsItemName() throws InterruptedException{
 
 public boolean AddSecurityDetailsItemDescription(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:11 - Add Security Details Item Description");
+	ExtentTestManager.startTest("TC:11 - Add Security Details Item Description").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:11 - Add Security Details Item Description");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -463,7 +463,7 @@ public boolean AddSecurityDetailsItemDescription(Map<Object, Object> testdata, I
 
 public boolean AddSecurityDetailsItemQuantity(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:12 - Add Security Details Item Quantity");
+	ExtentTestManager.startTest("TC:12 - Add Security Details Item Quantity").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:12 - Add Security Details Item Quantity");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -490,7 +490,7 @@ public boolean AddSecurityDetailsItemQuantity(Map<Object, Object> testdata, ITes
 
 public boolean AddSecurityDetailsStoneWeight(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:13 - Add Security Details Stone Weight");
+	ExtentTestManager.startTest("TC:13 - Add Security Details Stone Weight").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:13 - Add Security Details Stone Weight");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -517,7 +517,7 @@ public boolean AddSecurityDetailsStoneWeight(Map<Object, Object> testdata, ITest
 
 public boolean AddSecurityDetailsTickPurityCheckbox(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:14 - Add Security Details Tick Purity Checkbox");
+	ExtentTestManager.startTest("TC:14 - Add Security Details Tick Purity Checkbox").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:14 - Add Security Details Tick Purity Checkbox");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -543,7 +543,7 @@ public boolean AddSecurityDetailsTickPurityCheckbox(Map<Object, Object> testdata
 
 public boolean AddSecurityDetailsItemWeight(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:15 - Add Security Details Item Weight");
+	ExtentTestManager.startTest("TC:15 - Add Security Details Item Weight").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:15 - Add Security Details Item Weight");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -570,7 +570,7 @@ public boolean AddSecurityDetailsItemWeight(Map<Object, Object> testdata, ITestC
 
 public boolean AddSecurityDetailsDirtWeight(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:16 - Add Security Details Dirt Weight");
+	ExtentTestManager.startTest("TC:16 - Add Security Details Dirt Weight").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:16 - Add Security Details Dirt Weight");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -597,7 +597,7 @@ public boolean AddSecurityDetailsDirtWeight(Map<Object, Object> testdata, ITestC
 
 public boolean AddSecurityDetailsEnterPurity(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:17 - Add Security Details Enter Purity");
+	ExtentTestManager.startTest("TC:17 - Add Security Details Enter Purity").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:17 - Add Security Details Enter Purity");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -624,7 +624,7 @@ public boolean AddSecurityDetailsEnterPurity(Map<Object, Object> testdata, ITest
 
 public boolean AddSecurityDetailsAdd(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:18 - Add Security Details Add");
+	ExtentTestManager.startTest("TC:18 - Add Security Details Add").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:18 - Add Security Details Add");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -656,7 +656,7 @@ public boolean AddSecurityDetailsAdd(Map<Object, Object> testdata, ITestContext 
 
 public boolean CloseSecurityDetailsPopup(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:19 - Close Security Details Popup");
+	ExtentTestManager.startTest("TC:19 - Close Security Details Popup").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:19 - Close Security Details Popup");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -688,7 +688,7 @@ public boolean CloseSecurityDetailsPopup(Map<Object, Object> testdata, ITestCont
 
 public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, StaleElementReferenceException{
 	
-	ExtentTestManager.startTest("TC:20 - Close Security Details Popup Submit");
+	ExtentTestManager.startTest("TC:20 - Close Security Details Popup Submit").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:20 - Close Security Details Popup Submit");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -718,7 +718,7 @@ public boolean CloseSecurityDetailsPopupSubmit(Map<Object, Object> testdata, ITe
 
 public boolean EnterSanctionedAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 	
-	ExtentTestManager.startTest("TC:21 - Enter Sanctioned Amount");
+	ExtentTestManager.startTest("TC:21 - Enter Sanctioned Amount").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:21 - Enter Sanctioned Amount");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -763,7 +763,7 @@ public boolean EnterSanctionedAmount(Map<Object, Object> testdata, ITestContext 
 	
 public boolean GetValuewithCashTransactionMode() throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:22 - Get Value with Cash Transaction Mode");
+	ExtentTestManager.startTest("TC:22 - Get Value with Cash Transaction Mode").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:22 - Get Value with Cash Transaction Mode");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -800,7 +800,7 @@ public boolean GetValuewithCashTransactionMode() throws InterruptedException {
 
 public boolean GetValuewithCashTransactionMode(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-		ExtentTestManager.startTest("TC:23 - Get Value with Cash Transaction Mode");
+		ExtentTestManager.startTest("TC:23 - Get Value with Cash Transaction Mode").assignCategory("GoldLoanRenewal-TRANSFER");
 		Log.info("TC:23 - Get Value with Cash Transaction Mode");
 		
 		WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -843,7 +843,7 @@ public boolean GetValuewithCashTransactionMode(Map<Object, Object> testdata, ITe
 
 public boolean EnterRemarksandSelectClosureType(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:24 - Enter Remarks and Select Closure Type");
+	ExtentTestManager.startTest("TC:24 - Enter Remarks and Select Closure Type").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:24 - Enter Remarks and Select Closure Type");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -868,7 +868,7 @@ public boolean EnterRemarksandSelectClosureType(Map<Object, Object> testdata, IT
 
 public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, TimeoutException{
 	
-	ExtentTestManager.startTest("TC:25 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:25 - POST DEBIT popup is present").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:25 - POST DEBIT popup is present");
 	
 	WebElement PostDebitTab = driver.findElement(LoanClosureCash.PostDebit);
@@ -902,7 +902,7 @@ public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContex
 
 	public boolean PostDebitpopupispresent(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:26 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:26 - POST DEBIT popup is present").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:26 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -927,7 +927,7 @@ public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContex
 
 public boolean PostDebitPopUpProductGroupDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:27 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:27 - POST DEBIT popup is present").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:27 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -954,7 +954,7 @@ public boolean PostDebitPopUpProductGroupDropdown(Map<Object, Object> testdata, 
 
 public boolean PostDebitPopUpProductNameDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:28 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:28 - POST DEBIT popup is present").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:28 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -980,7 +980,7 @@ public boolean PostDebitPopUpProductNameDropdown(Map<Object, Object> testdata, I
 
 	public boolean PostDebitPopUpBranchDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:29 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:29 - POST DEBIT popup is present").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:29 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -1006,7 +1006,7 @@ public boolean PostDebitPopUpProductNameDropdown(Map<Object, Object> testdata, I
 
 	public boolean PostDebitPopUpAccountNumber(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:30 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:30 - POST DEBIT popup is present").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:30 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -1041,7 +1041,7 @@ public boolean PostDebitPopUpProductNameDropdown(Map<Object, Object> testdata, I
 	
 public boolean PostDebitPopUpEnterAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
-	ExtentTestManager.startTest("TC:31 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:31 - POST DEBIT popup is present").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:31 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -1086,7 +1086,7 @@ public boolean PostDebitPopUpEnterAmount(Map<Object, Object> testdata, ITestCont
 		
 public boolean PostDebitPopUpAddDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:32 - POST DEBIT popup is present");
+		ExtentTestManager.startTest("TC:32 - POST DEBIT popup is present").assignCategory("GoldLoanRenewal-TRANSFER");
 		Log.info("TC:32 - POST DEBIT popup is present");
 		
 		WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -1109,7 +1109,7 @@ public boolean PostDebitPopUpAddDetails(Map<Object, Object> testdata, ITestConte
 
 public boolean PostDebitPopUpSubmitDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, TimeoutException{
 	
-	ExtentTestManager.startTest("TC:33 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:33 - POST DEBIT popup is present").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:33 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -1139,7 +1139,7 @@ public boolean PostDebitPopUpSubmitDetails(Map<Object, Object> testdata, ITestCo
 	
 public boolean PostDebitSubmitAccountClosure() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:34 - Submit Account Closure");
+	ExtentTestManager.startTest("TC:34 - Submit Account Closure").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:34 - Submit Account Closure");
 	
 	
@@ -1181,10 +1181,10 @@ public boolean PostDebitSubmitAccountClosure() throws InterruptedException {
 
 public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedException, IOException{
 	
-		ExtentTestManager.startTest("TC:35 - Login to NBFc Application in a different user");
+		ExtentTestManager.startTest("TC:35 - Login to NBFc Application in a different user").assignCategory("GoldLoanRenewal-TRANSFER");
 		Log.info("TC:35 - Login to NBFc Application in a different user");
 		
-		ExtentTestManager.startTest("Logout");
+		ExtentTestManager.startTest("Logout").assignCategory("GoldLoanRenewal-TRANSFER");
 		Log.info("Logout");
 		
 		Thread.sleep(2000);
@@ -1222,7 +1222,7 @@ public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedExcept
 
 public boolean LogintoNBFcApplicationinadifferentuserAuthorizeandcancel() throws InterruptedException, IOException{
 	
-	ExtentTestManager.startTest("TC:36 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:36 - Login to NBFc Application in a different user").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:36 - Login to NBFc Application in a different user");
 	
 	/*WebElement CashMode = driver.findElement(LoanClosureCash.AuthorizeCancel);
@@ -1251,7 +1251,7 @@ return true;
 
 public boolean ManagerAuthorisationTransfer() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:37 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:37 - Login to NBFc Application in a different user").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:37 - Login to NBFc Application in a different user");
 	
 	click(LoanClosureCash.TransferTab);
@@ -1274,7 +1274,7 @@ public boolean ManagerAuthorisationTransfer() throws InterruptedException{
 
 public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:38 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:38 - Login to NBFc Application in a different user").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:38 - Login to NBFc Application in a different user");
 	
 	click(LoanClosureCash.Refresh);
@@ -1296,7 +1296,7 @@ public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 
 public boolean SelectManagerTransferTransaction() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:39 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:39 - Login to NBFc Application in a different user").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:39 - Login to NBFc Application in a different user");
 	
 	System.out.println("transIdTransferLoan "+transIdTransferLoan);
@@ -1321,7 +1321,7 @@ public boolean SelectManagerTransferTransaction() throws InterruptedException{
 
 public boolean ManagerTransferAuthorization() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:40 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:40 - Login to NBFc Application in a different user").assignCategory("GoldLoanRenewal-TRANSFER");
 	Log.info("TC:40 - Login to NBFc Application in a different user");
 	
 	if(ElementDisplayed(LoanClosureCash.ManagerAuthorize)) {

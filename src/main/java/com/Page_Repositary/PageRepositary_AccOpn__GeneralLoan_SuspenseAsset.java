@@ -24,5 +24,8 @@ public class PageRepositary_AccOpn__GeneralLoan_SuspenseAsset {
 	public By summaryTransId = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstSummary_ctrl0_lbllstTransID\"]");
 	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
 	public By paiPostCreditBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstOtherInfo_ctrl0_ucOtherInfoForm_btnAutoPost\"]");
+	public By custID_textbox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstProAccInfo_ctrl0_ucProductAccInfo_txtCustomerId_txt\"]");
+	
+	
 
 }

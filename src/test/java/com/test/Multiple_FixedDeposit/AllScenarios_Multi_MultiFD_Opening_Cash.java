@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -30,7 +31,7 @@ public class AllScenarios_Multi_MultiFD_Opening_Cash extends Base_Class {
 	Customer_MultipleFD_Opening_Cash multifdCash = new Customer_MultipleFD_Opening_Cash();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("Multiple_FD_Cash");
 		log = new Log();
@@ -44,7 +45,7 @@ public class AllScenarios_Multi_MultiFD_Opening_Cash extends Base_Class {
 			throws ClassNotFoundException, InterruptedException, IOException {
 		try {
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes")) {
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("MultiplFDOPening-Cash");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 //				ExtentTestManager.endTest();
@@ -56,9 +57,11 @@ public class AllScenarios_Multi_MultiFD_Opening_Cash extends Base_Class {
 
 				// PC Registration
 				custSrchMthds.pcRegistration(testdata, context);
+				
+				custSrchMthds.userLoginValidPaswrd(testdata, context);
 
 				// TC_01 ---> Login to NBFC Application
-				multifdCash.userLoginValidPaswrd(testdata, context);
+				//multifdCash.userLoginValidPaswrd(testdata, context);
 
 				// TC_02 ----> Access Deposit Opening Window
 				multifdCash.DepositOpeningWindow();

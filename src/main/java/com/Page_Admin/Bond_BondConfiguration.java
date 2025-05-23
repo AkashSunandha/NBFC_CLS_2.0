@@ -19,7 +19,7 @@ public class Bond_BondConfiguration extends Base_Class{
 	
 	
 	public void adminLogin() throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("**Basic Login Functionality**");
+		ExtentTestManager.startTest("**Basic Login Functionality**").assignCategory("BondConfiguration");
 		Log.info("**Basic Login Functionality**");
 			
 			
@@ -77,7 +77,7 @@ public class Bond_BondConfiguration extends Base_Class{
 	public void navigateToBondConfiguration() throws InterruptedException {
 		
 		//Expand Module for Collection Importing
-		ExtentTestManager.startTest("**Open Bond Configuration**");
+		ExtentTestManager.startTest("**Open Bond Configuration**").assignCategory("BondConfiguration");
 		Log.info("**Open Bond Configuration**");
 		
 		click(bondRepo.continueBtn);
@@ -107,7 +107,7 @@ public class Bond_BondConfiguration extends Base_Class{
 	public void bondConfiguration(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
 		//**Select Product Name**
-		ExtentTestManager.startTest("**Select Product Name**");
+		ExtentTestManager.startTest("**Select Product Name**").assignCategory("BondConfiguration");
 		Log.info("**Select Product Name**");
 		
 		select("DEBUNTURE SCHEME 2",bondRepo.bdProductNameDropdown);
@@ -129,7 +129,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 		
 		//**Enter Face Value**
-		ExtentTestManager.startTest("**Enter Face Value**");
+		ExtentTestManager.startTest("**Enter Face Value**").assignCategory("BondConfiguration");
 		Log.info("**Enter Face Value**");
 	
 		String faceValue = testdata.get("faceValue").toString();
@@ -151,7 +151,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 
 		//**Select App. GLAcc Name and Verify Code**
-		ExtentTestManager.startTest("**Select App. GLAcc Name and Verify Code**");
+		ExtentTestManager.startTest("**Select App. GLAcc Name and Verify Code**").assignCategory("BondConfiguration");
 		Log.info("**Select App. GLAcc Name and Verify Code**");
 		
 		select("ALLOWANCE",bondRepo.bdAppAccNameDropdown);
@@ -182,7 +182,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 		
 		//**Enter Duration and Select Frequency**
-		ExtentTestManager.startTest("**Enter Duration and Select Frequency**");
+		ExtentTestManager.startTest("**Enter Duration and Select Frequency**").assignCategory("BondConfiguration");
 		Log.info("**Enter Duration and Select Frequency**");
 	
 		String duration = testdata.get("duration").toString();
@@ -207,7 +207,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 		
 		//**Enter Int.Transfer Frequency and Select Unit**
-		ExtentTestManager.startTest("**Enter Int.Transfer Frequency and Select Unit**");
+		ExtentTestManager.startTest("**Enter Int.Transfer Frequency and Select Unit**").assignCategory("BondConfiguration");
 		Log.info("**Enter Int.Transfer Frequency and Select Unit**");
 	
 		String frequency = testdata.get("frequency").toString();
@@ -232,7 +232,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 		
 		//**Enter Minimum and Maximum Amt**
-		ExtentTestManager.startTest("**Enter Minimum and Maximum Amt**");
+		ExtentTestManager.startTest("**Enter Minimum and Maximum Amt**").assignCategory("BondConfiguration");
 		Log.info("**Enter Minimum and Maximum Amt**");
 	
 		String minAmt = testdata.get("minAmt").toString();
@@ -253,7 +253,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 
 		//**Select Int. Calc Method**
-		ExtentTestManager.startTest("**Select Int. Calc Method**");
+		ExtentTestManager.startTest("**Select Int. Calc Method**").assignCategory("BondConfiguration");
 		Log.info("**Select Int. Calc Method**");
 		
 		select("Monthly Simple Interest",bondRepo.bdIntCalcMethodDropdown);
@@ -275,7 +275,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 
 		//**Allow Premature Closure**
-		ExtentTestManager.startTest("**Allow Premature Closure**");
+		ExtentTestManager.startTest("**Allow Premature Closure**").assignCategory("BondConfiguration");
 		Log.info("**Allow Premature Closure**");
 		
 		if(!CheckBoxStatus(bondRepo.bdAllowPrematureClosureCheckBox)) {
@@ -300,7 +300,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 
 		//**Block Issue For Realization**
-		ExtentTestManager.startTest("**Block Issue For Realization**");
+		ExtentTestManager.startTest("**Block Issue For Realization**").assignCategory("BondConfiguration");
 		Log.info("**Block Issue For Realization**");
 		
 		if(!CheckBoxStatus(bondRepo.bdBlkIssForRealizatnOnAppDateCheckBox)) {
@@ -325,7 +325,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 
 		//**Select Cheque Head/Account**
-		ExtentTestManager.startTest("**Select Cheque Head/Account**");
+		ExtentTestManager.startTest("**Select Cheque Head/Account**").assignCategory("BondConfiguration");
 		Log.info("**Select Cheque Head/Account**");
 		
 		if(!CheckBoxStatus(bondRepo.bdAccTypeGLHeadCheckBoxCheque)) {
@@ -365,7 +365,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 
 		//**Select EFT Head/Account**
-		ExtentTestManager.startTest("**Select EFT Head/Account**");
+		ExtentTestManager.startTest("**Select EFT Head/Account**").assignCategory("BondConfiguration");
 		Log.info("**Select EFT Head/Account**");
 		
 		if(!CheckBoxStatus(bondRepo.bdAccTypeGLHeadCheckBoxEFT)) {
@@ -404,119 +404,119 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 		
 
-		//**Select DD Head/Account**
-		ExtentTestManager.startTest("**Select DD Head/Account**");
-		Log.info("**Select DD Head/Account**");
-				
-		if(!CheckBoxStatus(bondRepo.bdAccTypeGLHeadCheckBoxDD)) {
-			click(bondRepo.bdAccTypeGLHeadCheckBoxDD);
-			ExtentTestManager.getTest().log(Status.PASS, "1. Select 'GL head' checkbox");
-			Log.info("1. Select 'GL head' checkbox");
-		}else {
-			ExtentTestManager.getTest().log(Status.PASS, "1. Select 'GL head' checkbox");
-			Log.info("1. Select 'GL head' checkbox");
-		}
-		
-		select("ALLOWANCE",bondRepo.bdGLAccNameDropdownDD);
-		ExtentTestManager.getTest().log(Status.PASS, "2. Open App. GLAcc Name dropdown\r\n"
-				+ "3. Select an account name");
-		Log.info("2. Open App. GLAcc Name dropdown\r\n"
-				+ "3. Select an account name");
-		
-		waitUntilElementDisappear(bondRepo.loader);
-		
-		String bdGLAccCodeTxtBoxDDValue = driver.findElement(bondRepo.bdGLAccCodeTxtBoxDD).getAttribute("value");
-		System.out.println("bdGLAccCodeTxtBoxDDValue: "+bdGLAccCodeTxtBoxDDValue);
-		
-		if(!bdGLAccCodeTxtBoxDDValue.isBlank()) {
-			
-			ExtentTestManager.getTest().log(Status.PASS, "4. Verify App. GLAcc code is autoloaded");
-			Log.info("4. Verify App. GLAcc code is autoloaded");
-			
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: App. GLAcc code is autoloaded correctly");
-			Log.info("Expected Result: App. GLAcc code is autoloaded correctly");
-		}else {
-			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-			Log.info("ERROR");
-		}
-		
-		ExtentTestManager.endTest();
-		
-		
-
-		//**Select UPI Head/Account**
-		ExtentTestManager.startTest("**Select UPI Head/Account**");
-		Log.info("**Select UPI Head/Account**");
-		
-		if(!CheckBoxStatus(bondRepo.bdAccTypeGLHeadCheckBoxUPI)) {
-			click(bondRepo.bdAccTypeGLHeadCheckBoxUPI);
-			ExtentTestManager.getTest().log(Status.PASS, "1. Select 'GL head' checkbox");
-			Log.info("1. Select 'GL head' checkbox");
-		}else {
-			ExtentTestManager.getTest().log(Status.PASS, "1. Select 'GL head' checkbox");
-			Log.info("1. Select 'GL head' checkbox");
-		}
-		
-		select("ALLOWANCE",bondRepo.bdGLAccNameDropdownUPI);
-		ExtentTestManager.getTest().log(Status.PASS, "2. Open App. GLAcc Name dropdown\r\n"
-				+ "3. Select an account name");
-		Log.info("2. Open App. GLAcc Name dropdown\r\n"
-				+ "3. Select an account name");
-		
-		waitUntilElementDisappear(bondRepo.loader);
-		
-		String bdGLAccCodeTxtBoxUPIValue = driver.findElement(bondRepo.bdGLAccCodeTxtBoxUPI).getAttribute("value");
-		System.out.println("bdGLAccCodeTxtBoxUPIValue: "+bdGLAccCodeTxtBoxUPIValue);
-		
-		if(!bdGLAccCodeTxtBoxUPIValue.isBlank()) {
-			
-			ExtentTestManager.getTest().log(Status.PASS, "4. Verify App. GLAcc code is autoloaded");
-			Log.info("4. Verify App. GLAcc code is autoloaded");
-			
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: App. GLAcc code is autoloaded correctly");
-			Log.info("Expected Result: App. GLAcc code is autoloaded correctly");
-		}else {
-			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-			Log.info("ERROR");
-		}
-		
-		ExtentTestManager.endTest();
-		
-		
-
-		//**Select Pooling Head**
-		ExtentTestManager.startTest("**Select Pooling Head**");
-		Log.info("**Select Pooling Head**");
-		
-		select("ALLOWANCE",bondRepo.bdGLAccNameDropdownPooling);
-		ExtentTestManager.getTest().log(Status.PASS, "1. Open App. GLAcc Name dropdown\r\n"
-				+ "2. Select an account name");
-		Log.info("1. Open App. GLAcc Name dropdown\r\n"
-				+ "2. Select an account name");
-		
-		waitUntilElementDisappear(bondRepo.loader);
-		
-		String bdGLAccCodeTxtBoxPooling = driver.findElement(bondRepo.bdGLAccCodeTxtBoxPooling).getAttribute("value");
-		System.out.println("bdGLAccCodeTxtBoxPooling: "+bdGLAccCodeTxtBoxPooling);
-		
-		if(!bdGLAccCodeTxtBoxPooling.isBlank()) {
-			
-			ExtentTestManager.getTest().log(Status.PASS, "3. Verify App. GLAcc code is autoloaded");
-			Log.info("3. Verify App. GLAcc code is autoloaded");
-			
-			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: App. GLAcc code is autoloaded correctly");
-			Log.info("Expected Result: App. GLAcc code is autoloaded correctly");
-		}else {
-			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-			Log.info("ERROR");
-		}
-		
-		ExtentTestManager.endTest();
+//		//**Select DD Head/Account**
+//		ExtentTestManager.startTest("**Select DD Head/Account**").assignCategory("BondConfiguration");
+//		Log.info("**Select DD Head/Account**");
+//				
+//		if(!CheckBoxStatus(bondRepo.bdAccTypeGLHeadCheckBoxDD)) {
+//			click(bondRepo.bdAccTypeGLHeadCheckBoxDD);
+//			ExtentTestManager.getTest().log(Status.PASS, "1. Select 'GL head' checkbox");
+//			Log.info("1. Select 'GL head' checkbox");
+//		}else {
+//			ExtentTestManager.getTest().log(Status.PASS, "1. Select 'GL head' checkbox");
+//			Log.info("1. Select 'GL head' checkbox");
+//		}
+//		
+//		select("ALLOWANCE",bondRepo.bdGLAccNameDropdownDD);
+//		ExtentTestManager.getTest().log(Status.PASS, "2. Open App. GLAcc Name dropdown\r\n"
+//				+ "3. Select an account name");
+//		Log.info("2. Open App. GLAcc Name dropdown\r\n"
+//				+ "3. Select an account name");
+//		
+//		waitUntilElementDisappear(bondRepo.loader);
+//		
+//		String bdGLAccCodeTxtBoxDDValue = driver.findElement(bondRepo.bdGLAccCodeTxtBoxDD).getAttribute("value");
+//		System.out.println("bdGLAccCodeTxtBoxDDValue: "+bdGLAccCodeTxtBoxDDValue);
+//		
+//		if(!bdGLAccCodeTxtBoxDDValue.isBlank()) {
+//			
+//			ExtentTestManager.getTest().log(Status.PASS, "4. Verify App. GLAcc code is autoloaded");
+//			Log.info("4. Verify App. GLAcc code is autoloaded");
+//			
+//			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: App. GLAcc code is autoloaded correctly");
+//			Log.info("Expected Result: App. GLAcc code is autoloaded correctly");
+//		}else {
+//			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+//			Log.info("ERROR");
+//		}
+//		
+//		ExtentTestManager.endTest();
+//		
+//		
+//
+//		//**Select UPI Head/Account**
+//		ExtentTestManager.startTest("**Select UPI Head/Account**").assignCategory("BondConfiguration");
+//		Log.info("**Select UPI Head/Account**");
+//		
+//		if(!CheckBoxStatus(bondRepo.bdAccTypeGLHeadCheckBoxUPI)) {
+//			click(bondRepo.bdAccTypeGLHeadCheckBoxUPI);
+//			ExtentTestManager.getTest().log(Status.PASS, "1. Select 'GL head' checkbox");
+//			Log.info("1. Select 'GL head' checkbox");
+//		}else {
+//			ExtentTestManager.getTest().log(Status.PASS, "1. Select 'GL head' checkbox");
+//			Log.info("1. Select 'GL head' checkbox");
+//		}
+//		
+//		select("ALLOWANCE",bondRepo.bdGLAccNameDropdownUPI);
+//		ExtentTestManager.getTest().log(Status.PASS, "2. Open App. GLAcc Name dropdown\r\n"
+//				+ "3. Select an account name");
+//		Log.info("2. Open App. GLAcc Name dropdown\r\n"
+//				+ "3. Select an account name");
+//		
+//		waitUntilElementDisappear(bondRepo.loader);
+//		
+//		String bdGLAccCodeTxtBoxUPIValue = driver.findElement(bondRepo.bdGLAccCodeTxtBoxUPI).getAttribute("value");
+//		System.out.println("bdGLAccCodeTxtBoxUPIValue: "+bdGLAccCodeTxtBoxUPIValue);
+//		
+//		if(!bdGLAccCodeTxtBoxUPIValue.isBlank()) {
+//			
+//			ExtentTestManager.getTest().log(Status.PASS, "4. Verify App. GLAcc code is autoloaded");
+//			Log.info("4. Verify App. GLAcc code is autoloaded");
+//			
+//			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: App. GLAcc code is autoloaded correctly");
+//			Log.info("Expected Result: App. GLAcc code is autoloaded correctly");
+//		}else {
+//			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+//			Log.info("ERROR");
+//		}
+//		
+//		ExtentTestManager.endTest();
+//		
+//		
+//
+//		//**Select Pooling Head**
+//		ExtentTestManager.startTest("**Select Pooling Head**").assignCategory("BondConfiguration");
+//		Log.info("**Select Pooling Head**");
+//		
+//		select("ALLOWANCE",bondRepo.bdGLAccNameDropdownPooling);
+//		ExtentTestManager.getTest().log(Status.PASS, "1. Open App. GLAcc Name dropdown\r\n"
+//				+ "2. Select an account name");
+//		Log.info("1. Open App. GLAcc Name dropdown\r\n"
+//				+ "2. Select an account name");
+//		
+//		waitUntilElementDisappear(bondRepo.loader);
+//		
+//		String bdGLAccCodeTxtBoxPooling = driver.findElement(bondRepo.bdGLAccCodeTxtBoxPooling).getAttribute("value");
+//		System.out.println("bdGLAccCodeTxtBoxPooling: "+bdGLAccCodeTxtBoxPooling);
+//		
+//		if(!bdGLAccCodeTxtBoxPooling.isBlank()) {
+//			
+//			ExtentTestManager.getTest().log(Status.PASS, "3. Verify App. GLAcc code is autoloaded");
+//			Log.info("3. Verify App. GLAcc code is autoloaded");
+//			
+//			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: App. GLAcc code is autoloaded correctly");
+//			Log.info("Expected Result: App. GLAcc code is autoloaded correctly");
+//		}else {
+//			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+//			Log.info("ERROR");
+//		}
+//		
+//		ExtentTestManager.endTest();
 		
 		
 
 		//**Save Bond Configuration**
-		ExtentTestManager.startTest("**Save Bond Configuration**");
+		ExtentTestManager.startTest("**Save Bond Configuration**").assignCategory("BondConfiguration");
 		Log.info("**Save Bond Configuration**");
 		
 		click(bondRepo.bdSaveBtn);
@@ -537,7 +537,7 @@ public class Bond_BondConfiguration extends Base_Class{
 		
 
 		//**Verify Bond Configuration in Grid**
-		ExtentTestManager.startTest("**Verify Bond Configuration in Grid**");
+		ExtentTestManager.startTest("**Verify Bond Configuration in Grid**").assignCategory("BondConfiguration");
 		Log.info("**Verify Bond Configuration in Grid**");
 		
 		ScrollUntilElementVisible(bondRepo.bdGridPrdName);

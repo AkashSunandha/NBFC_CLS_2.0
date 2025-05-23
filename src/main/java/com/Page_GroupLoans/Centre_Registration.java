@@ -26,6 +26,7 @@ public class Centre_Registration extends Base_Class{
 	
 		
 	//Navigate to General Opening
+	ExtentTestManager.startTest("Navigate to General Opening").assignCategory("Centre_Registration");
 	Log.info("Navigate to General Opening");
 	
 	click(grploansrepo.grp_loans);
@@ -42,7 +43,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 	
 	//Select Branch
-	ExtentTestManager.startTest("Select Branch");
+	ExtentTestManager.startTest("Select Branch").assignCategory("Centre_Registration");
 	Log.info("Select Branch");
 	
 	select("HEAD OFFICE", grploansrepo.branch_dropdown);
@@ -52,7 +53,7 @@ public class Centre_Registration extends Base_Class{
     ExtentTestManager.endTest();
 	
 	 //Select District 
-    ExtentTestManager.startTest("Select district");
+    ExtentTestManager.startTest("Select district").assignCategory("Centre_Registration");
 	Log.info("Select district"); 
 	 
 	select("Tumkur",grploansrepo.district); 
@@ -64,7 +65,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest(); 
 	
 	 //Street Name Field Enable & Enter Street name 
-	ExtentTestManager.startTest("Street Name Field Enable"); 
+	ExtentTestManager.startTest("Street Name Field Enable").assignCategory("Centre_Registration"); 
 	Log.info("Street Name Field Enable"); 
 	 
 	
@@ -77,7 +78,7 @@ public class Centre_Registration extends Base_Class{
 	waitTillLoaderDisappear(grploansrepo.loader);
 	
 	 //Taluk Field Enabled and Selectable
-	ExtentTestManager.startTest("Taluk Field Enabled and Selectable");
+	ExtentTestManager.startTest("Taluk Field Enabled and Selectable").assignCategory("Centre_Registration");
 	Log.info("Taluk Field Enabled and Selectablee");
 	 
     input(grploansrepo.taluk,"Mavelikkara"); 
@@ -89,7 +90,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 	 
 	 //Panchayath Field Enabled and Selectable
-	ExtentTestManager.startTest("Panchayath Field Enabled and Selectable");
+	ExtentTestManager.startTest("Panchayath Field Enabled and Selectable").assignCategory("Centre_Registration");
     Log.info("Panchayath Field Enabled and Selectable");
 	 
 	input(grploansrepo.pachayath,"AANAAD");
@@ -101,7 +102,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 	
 	 //Centre Name Field Enabled
-	ExtentTestManager.startTest("Panchayath Field Enabled and Selectable");
+	ExtentTestManager.startTest("Panchayath Field Enabled and Selectable").assignCategory("Centre_Registration");
 	Log.info("Panchayath Field Enabled and Selectable");
 		 
 	String CentrName = testdata.get("CentrName").toString();
@@ -114,7 +115,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 		
 	//Meeting day
-	ExtentTestManager.startTest("Meeting Day Field Enabled and Selectable");
+	ExtentTestManager.startTest("Meeting Day Field Enabled and Selectable").assignCategory("Centre_Registration");
 	Log.info("Meeting Day Field Enabled and Selectable");
 			 
 	input(grploansrepo.meeting_day,"THUESDAY");
@@ -126,7 +127,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 	
 	//Distance from Branch to Centre Field Enabled
-	ExtentTestManager.startTest("Distance from Branch to Centre Field Enabled");
+	ExtentTestManager.startTest("Distance from Branch to Centre Field Enabled").assignCategory("Centre_Registration");
 	Log.info("Distance from Branch to Centre Field Enabled");
 			
 	String DisfromBranch = testdata.get("DisfromBranch").toString();
@@ -139,7 +140,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
      
 	//Village Field Enabled and Selectable
-	ExtentTestManager.startTest("Village Field Enabled and Selectable");
+	ExtentTestManager.startTest("Village Field Enabled and Selectable").assignCategory("Centre_Registration");
 	Log.info("Village Field Enabled and Selectable");
 				 
 	input(grploansrepo.villagefield,"ANJUR");
@@ -151,7 +152,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 	
 	//Block Field Enabled Enter block
-	ExtentTestManager.startTest("Block Field Enabled Enter block");
+	ExtentTestManager.startTest("Block Field Enabled Enter block").assignCategory("Centre_Registration");
 	Log.info("Block Field Enabled Enter block");
 			
 	String BlockFld = testdata.get("BlockFld").toString();
@@ -164,7 +165,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 	
 	//LandMark Field Enabled Enter Landmark
-	ExtentTestManager.startTest("LandMark Field Enabled Enter Landmark");
+	ExtentTestManager.startTest("LandMark Field Enabled Enter Landmark").assignCategory("Centre_Registration");
 	Log.info("Block Field Enabled Enter block");
 	
 	String LandMark = testdata.get("LandMark").toString();
@@ -178,7 +179,7 @@ public class Centre_Registration extends Base_Class{
 	
 		
 	//Post Office Field Enabled and Selectable
-	ExtentTestManager.startTest("Post Office Field Enabled and Selectable");
+	ExtentTestManager.startTest("Post Office Field Enabled and Selectable").assignCategory("Centre_Registration");
 	Log.info("Post Office Field Enabled and Selectable");
 									 
 	input(grploansrepo.pofield,"Roppa B.O");
@@ -190,7 +191,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 	
 //	//PINCODE Field Auto-Populated
-//	ExtentTestManager.startTest("PINCODE Field Auto-Populated");
+//	ExtentTestManager.startTest("PINCODE Field Auto-Populated").assignCategory("Centre_Registration concept-CentreGroup  registration");
 //	Log.info("PINCODE Field Auto-Populated");
 //										 
 //	click(grploansrepo.pofield);
@@ -202,7 +203,7 @@ public class Centre_Registration extends Base_Class{
 //	ExtentTestManager.endTest();
 	
 	//Field Officer Field Enabled and Selectable
-	ExtentTestManager.startTest("Field Officer Field Enabled and Selectable");
+	ExtentTestManager.startTest("Field Officer Field Enabled and Selectable").assignCategory("Centre_Registration");
 	Log.info("Field Officer Field Enabled and Selectable");
 										 
 	input(grploansrepo.fofficer,"SANTHOSH");
@@ -214,7 +215,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 		
 	//Enter meeting time
-	ExtentTestManager.startTest("Post Office Field Enabled and Selectable");
+	ExtentTestManager.startTest("Post Office Field Enabled and Selectable").assignCategory("Centre_Registration");
 	Log.info("Post Office Field Enabled and Selectable");
 	
 	String Meeting_Time= testdata.get("Meeting_Time").toString();
@@ -235,7 +236,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 	
 	//Save Centre Registration
-	ExtentTestManager.startTest("Save Centre Registration");
+	ExtentTestManager.startTest("Save Centre Registration").assignCategory("Centre_Registration");
 	Log.info("Save Centre Registration");
 											 
 	click(grploansrepo.save);
@@ -245,7 +246,7 @@ public class Centre_Registration extends Base_Class{
 	ExtentTestManager.endTest();
 	
 	//logout
-	ExtentTestManager.startTest("Save Centre Registration");
+	ExtentTestManager.startTest("Save Centre Registration").assignCategory("Centre_Registration");
 	Log.info("Save Centre Registration");
 											 
 	click(grploansrepo.updated);

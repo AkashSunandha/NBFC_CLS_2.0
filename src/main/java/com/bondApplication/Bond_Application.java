@@ -3,7 +3,9 @@ package com.bondApplication;
 import java.io.IOException;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -46,7 +48,7 @@ public class Bond_Application extends Base_Class {
 
 	public void BondApplicationWindowNavigation() throws InterruptedException {
 
-		ExtentTestManager.startTest("Verify product selection");
+		ExtentTestManager.startTest("Verify product selection").assignCategory("BondApplication");
 		Log.info("Verify product selection");
 
 		ScrollUntilElementVisible(Bond.bond);
@@ -54,6 +56,7 @@ public class Bond_Application extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select a product from 'Product ' dropdown");
 		Log.info("Step:01 - Select a product from 'Product ' dropdown");
 
+		ScrollUntilElementVisible(Bond.bondapplication);
 		click(Bond.bondapplication);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01-Navigate to Bond section ");
 		Log.info("Step:01- Naviagte to Bond section");
@@ -68,7 +71,7 @@ public class Bond_Application extends Base_Class {
 
 	public void Verifyproductselection() throws InterruptedException {
 
-		ExtentTestManager.startTest("Verify product selection");
+		ExtentTestManager.startTest("Verify product selection").assignCategory("BondApplication");
 		Log.info("Verify product selection");
 
 		select("DEBUNTURE SCHEME 1", Bond.sellectproduct);
@@ -83,7 +86,7 @@ public class Bond_Application extends Base_Class {
 
 	public void NatureFieldDropdownselection() throws InterruptedException {
 
-		ExtentTestManager.startTest("Nature Field Dropdown selection");
+		ExtentTestManager.startTest("Nature Field Dropdown selection").assignCategory("BondApplication");
 		Log.info("Nature Field Dropdown selection");
 
 		select("Single", Bond.Naturefield);
@@ -98,7 +101,7 @@ public class Bond_Application extends Base_Class {
 
 	public void CustomerSearchPopupVerification(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
-		ExtentTestManager.startTest("Customer Search Popup verification");
+		ExtentTestManager.startTest("Customer Search Popup verification").assignCategory("BondApplication");
 		Log.info("Customer Search Popup verification");
 
 		click(Bond.clickonsearch);
@@ -119,7 +122,7 @@ public class Bond_Application extends Base_Class {
 				driver.manage().window().maximize();
 				popupAppeared = true;
 
-				ExtentTestManager.startTest(" Customer Search Functionality()");
+				ExtentTestManager.startTest(" Customer Search Functionality()").assignCategory("BondApplication");
 				Log.info(" Customer Search Functionality()");
 
 				String Name = testdata.get("Name").toString();
@@ -145,7 +148,7 @@ public class Bond_Application extends Base_Class {
 
 		// public void CustomerSelectionVerification() throws InterruptedException {
 
-		ExtentTestManager.startTest("Customer Selection Verification");
+		ExtentTestManager.startTest("Customer Selection Verification").assignCategory("BondApplication");
 		Log.info("Customer Selection Verification");
 
 		click(Bond.select);
@@ -179,7 +182,7 @@ public class Bond_Application extends Base_Class {
 
 	public void FaceValueFieldValidation() {
 
-		ExtentTestManager.startTest("Face Value Field Validation");
+		ExtentTestManager.startTest("Face Value Field Validation").assignCategory("BondApplication");
 		Log.info("Face Value Field Validation");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter digits in 'Face Value'.");
@@ -195,7 +198,7 @@ public class Bond_Application extends Base_Class {
 	public void NoofUnitFieldValidation(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
 
-		ExtentTestManager.startTest("No. of Unit Field Validation");
+		ExtentTestManager.startTest("No. of Unit Field Validation").assignCategory("BondApplication");
 		Log.info("No. of Unit Field Validation");
 
 		clear(Bond.noofunits);
@@ -214,7 +217,7 @@ public class Bond_Application extends Base_Class {
 
 	public void DurationFieldAutoloadVerification() throws InterruptedException {
 
-		ExtentTestManager.startTest("Duration Field Auto-load Verification");
+		ExtentTestManager.startTest("Duration Field Auto-load Verification").assignCategory("BondApplication");
 		Log.info("Duration Field Auto-load Verification");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Check the 'Duration' field.");
@@ -237,7 +240,7 @@ public class Bond_Application extends Base_Class {
 
 	public void GetValueButtonFunctionality() throws InterruptedException {
 
-		ExtentTestManager.startTest("Get Value Button Functionality");
+		ExtentTestManager.startTest("Get Value Button Functionality").assignCategory("BondApplication");
 		Log.info("Get Value Button Functionality");
 
 		click(Bond.getvaluebutton);
@@ -275,7 +278,7 @@ public class Bond_Application extends Base_Class {
 
 	public void FillNomineeDetailsTab() throws InterruptedException {
 
-		ExtentTestManager.startTest("Fill Nominee Details Tab");
+		ExtentTestManager.startTest("Fill Nominee Details Tab").assignCategory("BondApplication");
 		Log.info("Fill Nominee Details Tab");
 
 		click(Bond.clickonnominee);
@@ -291,7 +294,7 @@ public class Bond_Application extends Base_Class {
 
 	public void FillNomineeDetailsTab2() throws InterruptedException {
 
-		ExtentTestManager.startTest("Fill Nominee Details Tab");
+		ExtentTestManager.startTest("Fill Nominee Details Tab").assignCategory("BondApplication");
 		Log.info("Fill Nominee Details Tab");
 
 		click(Bond.searchcust);
@@ -306,7 +309,7 @@ public class Bond_Application extends Base_Class {
 
 	public void FillNomineeDetailsTab3(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("Fill Nominee Details Tab");
+		ExtentTestManager.startTest("Fill Nominee Details Tab").assignCategory("BondApplication");
 		Log.info("Fill Nominee Details Tab");
 
 		String mainWindowHandle = driver.getWindowHandle();
@@ -317,7 +320,7 @@ public class Bond_Application extends Base_Class {
 				driver.manage().window().maximize();
 				popupAppeared = true;
 
-				ExtentTestManager.startTest(" Customer Search Functionality()");
+				ExtentTestManager.startTest(" Customer Search Functionality()").assignCategory("BondApplication");
 				Log.info(" Customer Search Functionality()");
 
 				String Name = testdata.get("Name").toString();
@@ -352,7 +355,7 @@ public class Bond_Application extends Base_Class {
 		Log.info("Expected Result:Customers will be display against the given details");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Fill Nominee Details Tab");
+		ExtentTestManager.startTest("Fill Nominee Details Tab").assignCategory("BondApplication");
 		Log.info("Fill Nominee Details Tab");
 
 		click(Bond.select);
@@ -371,7 +374,7 @@ public class Bond_Application extends Base_Class {
 
 	public void FillNomineeDetailsTab33() throws InterruptedException {
 
-		ExtentTestManager.startTest("Fill Nominee Details Tab");
+		ExtentTestManager.startTest("Fill Nominee Details Tab").assignCategory("BondApplication");
 		Log.info("Fill Nominee Details Tab");
 
 		select("FRIEND", Bond.selectt);
@@ -386,7 +389,7 @@ public class Bond_Application extends Base_Class {
 
 	public void FillNomineeDetailsTab5() throws InterruptedException {
 
-		ExtentTestManager.startTest("Fill Nominee Details Tab");
+		ExtentTestManager.startTest("Fill Nominee Details Tab").assignCategory("BondApplication");
 		Log.info("Fill Nominee Details Tab");
 
 		click(Bond.clickonadd);
@@ -401,7 +404,7 @@ public class Bond_Application extends Base_Class {
 
 	public void NavigatetoInterestTransferTab() throws InterruptedException {
 
-		ExtentTestManager.startTest("Navigate to Interest Transfer Tab.");
+		ExtentTestManager.startTest("Navigate to Interest Transfer Tab.").assignCategory("BondApplication");
 		Log.info("Navigate to Interest Transfer Tab.");
 
 		click(Bond.clickintrest);
@@ -419,7 +422,7 @@ public class Bond_Application extends Base_Class {
 	public void Fillinteresttransferdetails(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
 
-		ExtentTestManager.startTest("Fill interest transfer details.");
+		ExtentTestManager.startTest("Fill interest transfer details.").assignCategory("BondApplication");
 		Log.info("Fill interest transfer details.");
 
 		clear(Bond.frequence);
@@ -456,7 +459,7 @@ public class Bond_Application extends Base_Class {
 
 	public void navigatetoDocumentsTab() throws InterruptedException {
 
-		ExtentTestManager.startTest("navigate to Documents Tab.");
+		ExtentTestManager.startTest("navigate to Documents Tab.").assignCategory("BondApplication");
 		Log.info("navigate to Documents Tab.");
 
 		click(Bond.clickdocumnt);
@@ -479,7 +482,7 @@ public class Bond_Application extends Base_Class {
 
 	public void navigatetoDocumentsTab2() {
 
-		ExtentTestManager.startTest("navigate to Documents Tab.");
+		ExtentTestManager.startTest("navigate to Documents Tab.").assignCategory("BondApplication");
 		Log.info("navigate to Documents Tab.");
 
 		UploadFile(Bond.browser, ".\\src\\test\\resources\\sample.pdf");
@@ -497,7 +500,7 @@ public class Bond_Application extends Base_Class {
 
 	public void navigatetoDocumentsTab3() {
 
-		ExtentTestManager.startTest("navigate to Documents Tab.");
+		ExtentTestManager.startTest("navigate to Documents Tab.").assignCategory("BondApplication");
 		Log.info("navigate to Documents Tab.");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -ENter Remarks. ");
@@ -514,7 +517,7 @@ public class Bond_Application extends Base_Class {
 
 	public void TransactionAmountAutoloadVerification() {
 
-		ExtentTestManager.startTest("Transaction Amount Auto-load Verification");
+		ExtentTestManager.startTest("Transaction Amount Auto-load Verification").assignCategory("BondApplication");
 		Log.info("Transaction Amount Auto-load Verification.");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -Check 'Transaction Amount' field.. ");
@@ -529,7 +532,7 @@ public class Bond_Application extends Base_Class {
 
 	public void PaymentModeSelection() throws InterruptedException {
 
-		ExtentTestManager.startTest("Payment Mode Selectionn");
+		ExtentTestManager.startTest("Payment Mode Selectionn").assignCategory("BondApplication");
 		Log.info("Payment Mode Selection.");
 
 		select("Cash", Bond.clickcASH);
@@ -544,7 +547,7 @@ public class Bond_Application extends Base_Class {
 
 	public void SaveAllButtonFunctionalitywithPaymentMode() throws InterruptedException {
 
-		ExtentTestManager.startTest("Save All Button Functionality with Payment Mode");
+		ExtentTestManager.startTest("Save All Button Functionality with Payment Mode").assignCategory("BondApplication");
 		Log.info("Save All Button Functionality with Payment Mode.");
 
 		click(Bond.clicksave);
@@ -561,7 +564,7 @@ public class Bond_Application extends Base_Class {
 	}
 
 	public void logoutApplication1() throws InterruptedException {
-		ExtentTestManager.startTest("Logout in application");
+		ExtentTestManager.startTest("Logout in application").assignCategory("BondApplication");
 		Log.info("Logged out from application.");
 
 		// click(JewelClosure.close);
@@ -577,7 +580,7 @@ public class Bond_Application extends Base_Class {
 
 	public void ManagerLoginforAuthorization() throws InterruptedException, IOException {
 		
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("BondApplication");
 		Log.info("Login with Another User");
 
 		String UserName = configloader().getProperty("UserName2");
@@ -588,10 +591,44 @@ public class Bond_Application extends Base_Class {
 
 		click(custSearch.loginButton);
 
-		
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		
+		
 
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
@@ -608,6 +645,7 @@ public class Bond_Application extends Base_Class {
 
 		ExtentTestManager.endTest();
 
+		ScrollUntilElementVisible(Bond.clickauthorize);
 		click(Bond.clickauthorize);
 		
 		click(Bond.cashauth);
@@ -645,7 +683,7 @@ public class Bond_Application extends Base_Class {
 	}
 
 	public void ManagerAuthorizationRefresh() throws InterruptedException, IOException {
-		ExtentTestManager.startTest("Manager Authorization Refresh");
+		ExtentTestManager.startTest("Manager Authorization Refresh").assignCategory("BondApplication");
 		Log.info("Manager Authorization Refresh");
 		
 		//click(Bond.others);
@@ -682,7 +720,7 @@ public class Bond_Application extends Base_Class {
 	}
 
 	public void AuthorizeapplicationEntry(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
-		ExtentTestManager.startTest("Authorize application Entry");
+		ExtentTestManager.startTest("Authorize application Entry").assignCategory("BondApplication");
 		Log.info("Authorize application Entry");
 		
 		//String MakerID = testdata.get("MakerID").toString();
@@ -706,7 +744,7 @@ public class Bond_Application extends Base_Class {
 	}
 	
 	public void logoutApplication2() throws InterruptedException {
-		ExtentTestManager.startTest("Logout in application");
+		ExtentTestManager.startTest("Logout in application").assignCategory("BondApplication");
 		Log.info("Logged out from application.");
 
 		click(Bond.close);

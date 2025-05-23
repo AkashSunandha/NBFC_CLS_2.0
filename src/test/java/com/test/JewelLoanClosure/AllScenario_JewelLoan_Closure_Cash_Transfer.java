@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -37,7 +38,7 @@ public class AllScenario_JewelLoan_Closure_Cash_Transfer {
 	JewelLoan_Closure_Cash_Transfer JLoanClosure = new JewelLoan_Closure_Cash_Transfer();
 	
 
-	@BeforeSuite
+	@BeforeClass
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("JewelClosure");
 		log = new Log();
@@ -51,7 +52,7 @@ public class AllScenario_JewelLoan_Closure_Cash_Transfer {
 			throws ClassNotFoundException, InterruptedException, IOException {
 		try {
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes")) {
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("GoldLoanClosure-Cash&Transfer");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 

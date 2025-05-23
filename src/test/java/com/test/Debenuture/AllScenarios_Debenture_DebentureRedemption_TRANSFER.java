@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -27,7 +28,7 @@ public class AllScenarios_Debenture_DebentureRedemption_TRANSFER {
 	DebentureRedemption debRedmMths = new DebentureRedemption();
 	
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() { 
 		ExcelReader = new com.Utility.ExcelReader("DebentureRedemption");
 		log = new Log();
@@ -41,12 +42,12 @@ public class AllScenarios_Debenture_DebentureRedemption_TRANSFER {
 	public void debentureRedemption_TRANSFER(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString()+"_TRANSFER");
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()+"_TRANSFER").assignCategory("DebentureRedemption_Transfer");
 				Log.info("Debenture_DebentureRedemption_TRANSFER");
 				context.setAttribute("fileName", "Login");
 
 				//TC No. - 01 --> Application launch
-				ExtentTestManager.startTest("Application launch");
+				ExtentTestManager.startTest("Application launch").assignCategory("DebentureRedemption_Transfer");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 				Thread.sleep(2000);

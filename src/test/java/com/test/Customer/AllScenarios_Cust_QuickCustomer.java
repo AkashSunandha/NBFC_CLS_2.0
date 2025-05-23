@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -25,7 +26,7 @@ public class AllScenarios_Cust_QuickCustomer extends Base_Class{
 	Customer_QuickCustomer quickCustomerAllMthds = new Customer_QuickCustomer();
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 
-	@BeforeSuite
+	@BeforeClass
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("Customer_QuickCustomer");
 		log = new Log();
@@ -38,12 +39,12 @@ public class AllScenarios_Cust_QuickCustomer extends Base_Class{
 	public void quickCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("QuickCustomer");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
 				//TC No. - 01 --> Application launch
-				ExtentTestManager.startTest("Application launch");
+				ExtentTestManager.startTest("Application launch").assignCategory("QuickCustomer");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 				Thread.sleep(2000);

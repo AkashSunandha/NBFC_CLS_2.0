@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -28,7 +29,7 @@ public class AllScenarios_GroupLoans_GroupLoanCollection_CASH {
 	GroupLoanCollection grpLoanCollMths = new GroupLoanCollection();
 	
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() { 
 		ExcelReader = new com.Utility.ExcelReader("GroupLoanCollection");
 		log = new Log();
@@ -42,12 +43,12 @@ public class AllScenarios_GroupLoans_GroupLoanCollection_CASH {
 	public void groupLoanCollection_CASH(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("GroupLoans_GroupLoanCollection_CASH");
+				ExtentTestManager.startTest("GroupLoans_GroupLoanCollection_CASH").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 				Log.info("GroupLoans_GroupLoanCollection_CASH");
 				context.setAttribute("fileName", "Login");
 
 				//TC No. - 01 --> Application launch
-				ExtentTestManager.startTest("Application launch");
+				ExtentTestManager.startTest("Application launch").assignCategory("Microfinance concept-GroupLoanCollection-Cash");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 				Thread.sleep(2000);

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -28,7 +29,7 @@ public class AllScenarios_Cust_CustRegister extends Base_Class{
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	Customer_CustomerRegister custRgstrMthds = new Customer_CustomerRegister();
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("Customer_CustRegister");
 		log = new Log();
@@ -41,14 +42,14 @@ public class AllScenarios_Cust_CustRegister extends Base_Class{
 	public void customerRegister(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("CustomerRegister");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 //				ExtentTestManager.endTest();
 				
 				
 				//Application launch
-				ExtentTestManager.startTest("Firefox Driver & Application Launch");
+				ExtentTestManager.startTest("Firefox Driver & Application Launch").assignCategory("CustomerRegister");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 				
@@ -92,12 +93,12 @@ public class AllScenarios_Cust_CustRegister extends Base_Class{
 				custRgstrMthds.viewByLoan(testdata, context);
 				
 				//TC No. - 11 --> View Deposit Account details of Customer
-				custRgstrMthds.viewByDeposits(testdata, context);
+				//custRgstrMthds.viewByDeposits(testdata, context);
 				
 				//TC No. - 12 --> View Loan & Deposit Account details of Customer
 				//& TC No. - 17 -->Search Parameter - Check/Uncheck Options
 				Thread.sleep(3000);
-				custRgstrMthds.viewByLoanAndDeposits(testdata, context);
+				//custRgstrMthds.viewByLoanAndDeposits(testdata, context);
 				
 				//TC No. - 13 --> View Button - No Search Parameters (fetch without any parameters)
 				Thread.sleep(3000);

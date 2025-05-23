@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -28,7 +29,7 @@ public class AllScenarios_GroupLoans_GroupLoanCollection_TRANSFER {
 	GroupLoanCollection grpLoanCollMths = new GroupLoanCollection();
 	
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() { 
 		ExcelReader = new com.Utility.ExcelReader("GroupLoanCollection");
 		log = new Log();

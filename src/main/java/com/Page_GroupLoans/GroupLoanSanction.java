@@ -19,7 +19,7 @@ public class GroupLoanSanction extends Base_Class{
 	public void groupLoanSanction() throws InterruptedException {
 		
 		//Navigation of  group loan agreement page  
-		ExtentTestManager.startTest("Navigation of  group loan agreement page ");
+		ExtentTestManager.startTest("Navigation of  group loan agreement page ").assignCategory("Microfinance concept-GroupLoanSanction");
 		Log.info("Navigation of  group loan agreement page ");
 		
 		click(grpLoanSactRepo.groupLoansTab);
@@ -47,7 +47,7 @@ public class GroupLoanSanction extends Base_Class{
 		
 		
 		//Select Trivandrum Branch 
-		ExtentTestManager.startTest("Select Trivandrum Branch");
+		ExtentTestManager.startTest("Select Trivandrum Branch").assignCategory("Microfinance concept-GroupLoanSanction");
 		Log.info("Select Trivandrum Branch");
 		
 		select("TRIVANDRUM",grpLoanSactRepo.gdBranchDropdown);
@@ -69,7 +69,7 @@ public class GroupLoanSanction extends Base_Class{
 		
 		
 		//Select Center from Dropdown
-		ExtentTestManager.startTest("Select Center from Dropdown");
+		ExtentTestManager.startTest("Select Center from Dropdown").assignCategory("Microfinance concept-GroupLoanSanction");
 		Log.info("Select Center from Dropdown");
 		
 		select("14 - GUARANTOR",grpLoanSactRepo.gdCentreDropdown);
@@ -93,7 +93,7 @@ public class GroupLoanSanction extends Base_Class{
 		
 		
 		//Select Group from Drop down
-		ExtentTestManager.startTest("Select Group from Dropdown");
+		ExtentTestManager.startTest("Select Group from Dropdown").assignCategory("Microfinance concept-GroupLoanSanction");
 		Log.info("Select Group from Dropdown");
 		
 		select("25 - GUARANTOR 3",grpLoanSactRepo.gdGroupDropdown);
@@ -117,7 +117,7 @@ public class GroupLoanSanction extends Base_Class{
 		
 		
 //		Applications Listed after Clicking GO
-		ExtentTestManager.startTest("Applications Listed after Clicking GO");
+		ExtentTestManager.startTest("Applications Listed after Clicking GO").assignCategory("Microfinance concept-GroupLoanSanction");
 		Log.info("Applications Listed after Clicking GO");
 				
 		click(grpLoanSactRepo.gdGoBtn);
@@ -139,7 +139,7 @@ public class GroupLoanSanction extends Base_Class{
 		
 		
 		//Display Application Details
-		ExtentTestManager.startTest("Display Application Details");
+		ExtentTestManager.startTest("Display Application Details").assignCategory("Microfinance concept-GroupLoanSanction");
 		Log.info("Display Application Details");
 				
 		
@@ -191,7 +191,7 @@ public class GroupLoanSanction extends Base_Class{
 		
 		
 		//Sanction Application
-		ExtentTestManager.startTest("Sanction Application");
+		ExtentTestManager.startTest("Sanction Application").assignCategory("Microfinance concept-GroupLoanSanction");
 		Log.info("Sanction Application");
 				
 		click(grpLoanSactRepo.sanctionBtn);

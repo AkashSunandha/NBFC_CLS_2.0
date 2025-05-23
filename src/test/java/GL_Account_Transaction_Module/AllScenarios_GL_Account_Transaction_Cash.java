@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -35,7 +36,7 @@ public class AllScenarios_GL_Account_Transaction_Cash extends Base_Class {
 	Jewel_Loan_Transcharge_Cash loantranscharge = new Jewel_Loan_Transcharge_Cash();
 	GL_Account_Transaction_Cash GLTransaction = new GL_Account_Transaction_Cash();
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("GL_Acc_Trans_Cash");
 		log = new Log();
@@ -49,7 +50,7 @@ public class AllScenarios_GL_Account_Transaction_Cash extends Base_Class {
 			throws ClassNotFoundException, InterruptedException, IOException {
 		try {
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes")) {
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("GeneralAccountTransactionCash");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
@@ -62,7 +63,7 @@ public class AllScenarios_GL_Account_Transaction_Cash extends Base_Class {
 				custSrchMthds.pcRegistration(testdata, context);
 
 				// TC_01 ---> Login to NBFC Application
-				GLTransaction.userLoginValidPaswrd(testdata, context);
+				custSrchMthds.userLoginValidPaswrd(testdata, context);
 				
 				//TC_02 ---> LaunchGLAccountTransactionModule
 				GLTransaction.LaunchGLAccountTransactionModule();

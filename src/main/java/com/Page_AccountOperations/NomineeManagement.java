@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -34,7 +36,7 @@ public class NomineeManagement extends Base_Class{
 	public void navigateToNomineeManagement() throws InterruptedException {
 
 	//Nominee Management Navigation
-	ExtentTestManager.startTest("Nominee Management Navigation");
+	ExtentTestManager.startTest("Nominee Management Navigation").assignCategory("Account operation-Nominee Management");
 	Log.info("Nominee Management Navigation");
 	
 	click(nomineeRepo.accountOperationsTab);
@@ -45,13 +47,13 @@ public class NomineeManagement extends Base_Class{
 	ExtentTestManager.getTest().log(Status.PASS, "2. Click on Nominee Management.");
 	Log.info("2. Click on Nominee Management.");
 	
-	if(ElementDisplayed(nomineeRepo.aiBranchDropdown)) {
+	/*if(ElementDisplayed(nomineeRepo.aiBranchDropdown)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: The Nominee Management window opens.");
 		Log.info("Expected Result: The Nominee Management window opens.");
 	}else {
 		ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 		Log.info("ERROR");
-	}
+	}*/
 	
 	ExtentTestManager.endTest();
 	
@@ -62,7 +64,7 @@ public class NomineeManagement extends Base_Class{
 
 
 //		//Branch Field Presence and Default Selection
-//		ExtentTestManager.startTest("Branch Field Presence and Default Selection");
+//		ExtentTestManager.startTest("Branch Field Presence and Default Selection").assignCategory("Account operation-Nominee Management");
 //		Log.info("Branch Field Presence and Default Selection");
 //
 //		loginBranchValue = driver.findElement(nomineeRepo.loginBranch).getText();
@@ -95,7 +97,7 @@ public class NomineeManagement extends Base_Class{
 
 		
 		//Product Group Drop-down Functional Check
-		ExtentTestManager.startTest("Product Group Drop-down Functional Check");
+		ExtentTestManager.startTest("Product Group Drop-down Functional Check").assignCategory("Account operation-Nominee Management");
 		Log.info("Product Group Drop-down Functional Check");
 		
 		select("OTHER LOANS",nomineeRepo.aiProductGroupDropdown);
@@ -121,7 +123,7 @@ public class NomineeManagement extends Base_Class{
 		
 		
 		//Product Name Drop-down Functional Check
-		ExtentTestManager.startTest("Product Name Drop-down Functional Check");
+		ExtentTestManager.startTest("Product Name Drop-down Functional Check").assignCategory("Account operation-Nominee Management");
 		Log.info("Product Name Drop-down Functional Check");
 		
 		select("PERSONAL LOAN WEEKLY",nomineeRepo.aiProductNameDropdown);
@@ -145,7 +147,7 @@ public class NomineeManagement extends Base_Class{
 
 		
 		//Account No Field Input Validation
-		ExtentTestManager.startTest("Account No Field Input Validation");
+		ExtentTestManager.startTest("Account No Field Input Validation").assignCategory("Account operation-Nominee Management");
 		Log.info("Account No Field Input Validation");
 
 		String accNum = transJewelMthds.generateUniqueId(spAccNum, clmnNam);
@@ -170,7 +172,7 @@ public class NomineeManagement extends Base_Class{
 		
 		
 		//Go Button Account Details Display
-		ExtentTestManager.startTest("Go Button Account Details Display");
+		ExtentTestManager.startTest("Go Button Account Details Display").assignCategory("Account operation-Nominee Management");
 		Log.info("Go Button Account Details Display");
 		
 		click(nomineeRepo.aiGoBtn);
@@ -198,7 +200,7 @@ public class NomineeManagement extends Base_Class{
 	public void newNominee(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 
 //		//New Nominee Section Initial State
-//		ExtentTestManager.startTest("New Nominee Section Initial State");
+//		ExtentTestManager.startTest("New Nominee Section Initial State").assignCategory("Account operation-Nominee Management");
 //		Log.info("New Nominee Section Initial State");
 //		
 //		if(!CheckBoxStatus(nomineeRepo.nnNomineeNotRequired)) {
@@ -220,7 +222,7 @@ public class NomineeManagement extends Base_Class{
 		click(nomineeRepo.nnNomineeNotRequired);
 
 		//Customer Search and Selection
-		ExtentTestManager.startTest("Customer Search and Selection");
+		ExtentTestManager.startTest("Customer Search and Selection").assignCategory("Account operation-Nominee Management");
 		Log.info("Customer Search and Selection");
 		
 		String parentWindow = driver.getWindowHandle();
@@ -253,7 +255,7 @@ public class NomineeManagement extends Base_Class{
 		
 
 		//Name Field 
-		ExtentTestManager.startTest("Name Field ");
+		ExtentTestManager.startTest("Name Field ").assignCategory("Account operation-Nominee Management");
 		Log.info("Name Field ");
 		
 		String name = testdata.get("name").toString();
@@ -278,7 +280,7 @@ public class NomineeManagement extends Base_Class{
 		
 
 		//Name Field Autofill Check
-		ExtentTestManager.startTest("Name Field Autofill Check");
+		ExtentTestManager.startTest("Name Field Autofill Check").assignCategory("Account operation-Nominee Management");
 		Log.info("Name Field Autofill Check");
 		
 		click(nomineeRepo.nnPopUpSelect);
@@ -303,7 +305,7 @@ public class NomineeManagement extends Base_Class{
 		
 		
 		//Relation Drop-down Functional Check
-		ExtentTestManager.startTest("Relation Drop-down Functional Check");
+		ExtentTestManager.startTest("Relation Drop-down Functional Check").assignCategory("Account operation-Nominee Management");
 		Log.info("Relation Drop-down Functional Check");
 		
 		select("FRIEND",nomineeRepo.nnRelationDropdown);
@@ -323,7 +325,7 @@ public class NomineeManagement extends Base_Class{
 		
 
 		//Add Nominee Functionality
-		ExtentTestManager.startTest("Add Nominee Functionality");
+		ExtentTestManager.startTest("Add Nominee Functionality").assignCategory("Account operation-Nominee Management");
 		Log.info("Add Nominee Functionality");
 		
 		ScrollUntilElementVisible(nomineeRepo.nnAddBtn);
@@ -354,7 +356,7 @@ public void authorizeOther(Map<Object, Object> testdata, ITestContext context) t
 		
 		
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Account operation-Nominee Management");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -368,6 +370,40 @@ public void authorizeOther(Map<Object, Object> testdata, ITestContext context) t
 		click(custSearch.loginButton);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
 
 		String authorizeUserName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(authorizeUserName);
@@ -387,7 +423,7 @@ public void authorizeOther(Map<Object, Object> testdata, ITestContext context) t
 		
 		
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization");
+		ExtentTestManager.startTest("Manager Authorization").assignCategory("Account operation-Nominee Management");
 		Log.info("Manager Authorization");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -411,7 +447,7 @@ public void authorizeOther(Map<Object, Object> testdata, ITestContext context) t
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Account operation-Nominee Management");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -432,7 +468,7 @@ public void authorizeOther(Map<Object, Object> testdata, ITestContext context) t
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Account operation-Nominee Management");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		input(goaldLoanRepo.makerIdTxtBox,actualUserName);

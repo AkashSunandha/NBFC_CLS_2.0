@@ -8,6 +8,9 @@ public class PageRepositary_AccOpn_ShareOpn_AClassShare {
 	public By shareOpnTab = By.xpath("//ul[@id='CreateMenu']//a[text()='Share Opening']/preceding-sibling::div");
 	public By AClassShareTab = By.xpath("//ul[@id='CreateMenu']//a[text()='A Class Share (ACOPS)']/preceding-sibling::div");
 	public By aClassShare = By.xpath("//a[text()='A CLASS SHARE  (1001)']");
+	public By custID_textbox = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_lstProAccInfo_ctrl0_ucProductAccInfo_txtCustomerId_txt\"]");
+	
+	
 	
 //	Share Acc Info
 	

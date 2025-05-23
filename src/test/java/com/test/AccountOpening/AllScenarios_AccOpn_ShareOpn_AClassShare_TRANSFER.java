@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -28,7 +29,7 @@ public class AllScenarios_AccOpn_ShareOpn_AClassShare_TRANSFER {
 	ShareOpening_AClassShare shareOpnMthds = new ShareOpening_AClassShare();
 	GeneralOpening_SuspenseAsset suspenseAsset = new GeneralOpening_SuspenseAsset();
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() { 
 		ExcelReader = new com.Utility.ExcelReader("ShareOpn_AClassShare");
 		log = new Log();

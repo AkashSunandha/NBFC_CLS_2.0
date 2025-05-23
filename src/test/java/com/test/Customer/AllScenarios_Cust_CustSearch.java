@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -37,7 +38,7 @@ public class AllScenarios_Cust_CustSearch extends Base_Class{
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 
 
-	@BeforeSuite
+	@BeforeClass
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("Customer_CustSearch");
 		log = new Log();
@@ -51,12 +52,12 @@ public class AllScenarios_Cust_CustSearch extends Base_Class{
 		
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("CustomerSearch");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
 				//TC No. - 01 --> Application launch
-				ExtentTestManager.startTest("Application launch");
+				ExtentTestManager.startTest("Application launch").assignCategory("CustomerSearch");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 				

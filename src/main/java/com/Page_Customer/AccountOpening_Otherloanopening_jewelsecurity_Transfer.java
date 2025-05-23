@@ -72,7 +72,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-03 (4)
 	public void testSelectActiveLoanProduct() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 03 --> Select Active Loan Product");
+		ExtentTestManager.startTest("TC No. - 03 --> Select Active Loan Product").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.accountOpening);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on account openong tab");
 		Log.info("Step-1: Click on account openong tab");
@@ -92,7 +92,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	
 	public void testAddCustomer1(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 04 --> Add Customer from Search");
+		ExtentTestManager.startTest("TC No. - 04 --> Add Customer from Search").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String parentWindow=driver.getWindowHandle();
 		click(loanOpen.customerSearchIcon);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Open customer search popup.");
@@ -124,7 +124,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-04 (4)
 	public void testAddCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException   {
-		ExtentTestManager.startTest("TC No. - 04 --> Add Customer from Search");
+		ExtentTestManager.startTest("TC No. - 04 --> Add Customer from Search").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String custID=generateUniqueId(query, columnName);
 		//String custID = testdata.get("custID").toString();
 		input(loanOpen.custID_textbox, custID);
@@ -178,7 +178,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-05 (1)
 	public void testResolutionNoField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 05 --> Enter Resolution No");
+		ExtentTestManager.startTest("TC No. - 05 --> Enter Resolution No").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String resolutionNo = testdata.get("resolutionNo").toString();
 		input(loanOpen.resolutionNo, resolutionNo);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Resolution No");
@@ -190,7 +190,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-06 (2)
 	public void testResolutionDateField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 06 --> Enter Resolution Date");
+		ExtentTestManager.startTest("TC No. - 06 --> Enter Resolution Date").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String resolutionDate = testdata.get("resolutionDate").toString();
 		click(loanOpen.resolutionDate);
 		input(loanOpen.resolutionDate, resolutionDate);
@@ -207,7 +207,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-08 (1)
 	public void testEquiMortRegNoField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 08 --> Enter Equitable Mort Reg.No");
+		ExtentTestManager.startTest("TC No. - 08 --> Enter Equitable Mort Reg.No").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String equitableMortRegNo = testdata.get("equitableMortRegNo").toString();
 		input(loanOpen.equitableMort, equitableMortRegNo);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Enter Equitable Mort Reg.No");
@@ -219,7 +219,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-09 (2)
 	public void testSelectEMRDate(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 09 --> Select EMR Date");
+		ExtentTestManager.startTest("TC No. - 09 --> Select EMR Date").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String emrDate = testdata.get("emrDate").toString();
 		click(loanOpen.emrDate);
 		input(loanOpen.emrDate, emrDate);
@@ -232,7 +232,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-10 (1)
 	public void testAgentCode(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 10 --> Agent code are entered successfully.");
+		ExtentTestManager.startTest("TC No. - 10 --> Agent code are entered successfully.").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String agentCode = testdata.get("agentCode").toString();
 		input(loanOpen.agentCode, agentCode);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter Agent Code.");
@@ -244,7 +244,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-11 (1)
 	public void testDSACode(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 11 --> Enter DSA codes");
+		ExtentTestManager.startTest("TC No. - 11 --> Enter DSA codes").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String dsaCode = testdata.get("dsaCode").toString();
 		input(loanOpen.dsaCode, dsaCode);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter DSA Code.");
@@ -257,7 +257,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-12 
 	public void testAreaField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 12 --> Enter Area");
+		ExtentTestManager.startTest("TC No. - 12 --> Enter Area").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String area = testdata.get("area").toString();
 		//input(loanOpen.area, area);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Area are entered successfully.");
@@ -267,7 +267,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-13 (1)
 	public void testRemarksField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 13 --> Give Remarks");
+		ExtentTestManager.startTest("TC No. - 13 --> Give Remarks").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String remark = testdata.get("remark").toString();
 		input(loanOpen.remark, remark);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Give Remarks in \"Remarks\" field");
@@ -279,7 +279,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-14 (1)
 	public void testNextBtnFunctionality1() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 14 --> Next Button Functionality");
+		ExtentTestManager.startTest("TC No. - 14 --> Next Button Functionality").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.nextBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: .Click the next button after giving all details");
 		Log.info("Step-1:  .Click the next button after giving all details");
@@ -291,7 +291,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-16 (1)
 	public void testItemQtyField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 16 --> Enter Item Qty");
+		ExtentTestManager.startTest("TC No. - 16 --> Enter Item Qty").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String itemQty = testdata.get("itemQty").toString();
 		input(loanOpen.itemQty, itemQty);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter Item Qty");
@@ -304,7 +304,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-17 (2)
 	public void testIemWeight(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 17 --> Enter Item Weight");
+		ExtentTestManager.startTest("TC No. - 17 --> Enter Item Weight").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.itemWeight);
 		String itemWeight = testdata.get("itemWeight").toString();
 		input(loanOpen.itemWeight, itemWeight);
@@ -318,7 +318,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-18 (1)
 	public void testEnterPurity(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException   {
-		ExtentTestManager.startTest("TC No. - 18 --> Enter Purity ");
+		ExtentTestManager.startTest("TC No. - 18 --> Enter Purity ").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String purity = testdata.get("purity").toString();
 		input(loanOpen.purity, purity);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Enter Purity as 22");
@@ -330,7 +330,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-19 (2)
 	public void testAddBtnFunctionality() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 19 --> Add Button functionality");
+		ExtentTestManager.startTest("TC No. - 19 --> Add Button functionality").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.addBtn_jewels);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click add button");
 		Log.info("Step-1: Click add button");
@@ -345,7 +345,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-20 (1)
 	public void testNextBtnFunctionality2() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 20 --> Next Button Functionality");
+		ExtentTestManager.startTest("TC No. - 20 --> Next Button Functionality").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.nextBtn);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click the next button after giving all details in jewel tab");
@@ -359,7 +359,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-21 (1)
 	public void testCheckboxFunctioanlity() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 21 --> Checkbox functionality");
+		ExtentTestManager.startTest("TC No. - 21 --> Checkbox functionality").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.nomineeNotRequired_checkbox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Untick \"Nominee not required\"");
 		Log.info("Step-1: Untick \"Nominee not required\"");
@@ -372,7 +372,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-22(1)
 	public void testAadharNo() throws ClassNotFoundException, InterruptedException {
-		ExtentTestManager.startTest("TC No. - 22 --> Validate aadhar no");
+		ExtentTestManager.startTest("TC No. - 22 --> Validate aadhar no").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String aadharNo = generateUniqueId(spAadhaar,clmnNamAadhaar);
 		input(loanOpen.aadharNo, aadharNo);
 
@@ -384,7 +384,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-23(1)
 	public void testNameInNominee(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. -23 --> Validate nominee name field");
+		ExtentTestManager.startTest("TC No. -23 --> Validate nominee name field").assignCategory("Other Loan Opening Transfer -Jewel Security");
 
 		String nameInNominee = testdata.get("nameInNominee").toString();
 		input(loanOpen.nameInNominee, nameInNominee);
@@ -398,7 +398,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-25(2)
 	public void testDistrictDropdown() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 25 --> Validate district dropdown");
+		ExtentTestManager.startTest("TC No. - 25 --> Validate district dropdown").assignCategory("Other Loan Opening Transfer -Jewel Security");
 
 		selectbyValue("89",loanOpen.district_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Able to select option in district dropdown");
@@ -410,7 +410,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-26(2)
 	public void testPostDropdown() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 26 --> Validate post dropdown");
+		ExtentTestManager.startTest("TC No. - 26 --> Validate post dropdown").assignCategory("Other Loan Opening Transfer -Jewel Security");
 
 		selectbyValue("13406",loanOpen.post_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Able to select option in post dropdown");
@@ -421,7 +421,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-28(2)
 	public void testDOBField(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 28 --> Validate post dropdown");
+		ExtentTestManager.startTest("TC No. - 28 --> Validate post dropdown").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.dob_textbox);
 		String dob = testdata.get("dob").toString();
 		input(loanOpen.dob_textbox, dob);
@@ -471,7 +471,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-24 (2)
 	public void testSelectRelation() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 24 --> Select relation");
+		ExtentTestManager.startTest("TC No. - 24 --> Select relation").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		selectbyValue("15",loanOpen.relation_dropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select relation from the drop down ");
 		Log.info("Step-1:  Select relation from the drop down ");
@@ -483,7 +483,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-29 (2)
 	public void testAddBtnFunctionality2() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 29 --> Add Button functionality");
+		ExtentTestManager.startTest("TC No. - 29 --> Add Button functionality").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.addBtn_nominee);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Click add button");
 		Log.info("Step-1:  Click add button");
@@ -504,7 +504,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-30 (1)
 	public void testNextBtnFunctionality3() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 30 --> Next Button Functionality");
+		ExtentTestManager.startTest("TC No. - 30 --> Next Button Functionality").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.nextBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Click the next button after giving all details in nominee tab");
 		Log.info("Step-1:  Click the next button after giving all details in nominee tab");
@@ -516,7 +516,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-31 (1)
 	public void testSanctionAmount(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 31 -->  Enter sanction amount.");
+		ExtentTestManager.startTest("TC No. - 31 -->  Enter sanction amount.").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String sanctioned = testdata.get("sanctioned").toString();
 		input(loanOpen.sanctioned, sanctioned);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Enter sanction amount.");
@@ -529,7 +529,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-32 (2)
 	public void testGetValueBtn() throws InterruptedException  {
-		ExtentTestManager.startTest("TC No. - 32 --> Validate get value button");
+		ExtentTestManager.startTest("TC No. - 32 --> Validate get value button").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.getValuesBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Click get values button");
 		Log.info("Step-1:  Click get values button");
@@ -542,7 +542,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-34 (2)
 	public void testSelectTransactionMode1() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 34 --> Select Transaction Mode");
+		ExtentTestManager.startTest("TC No. - 34 --> Select Transaction Mode").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.transMode);
 		selectbyValue("2",loanOpen.transModeDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select transaction mode as cash.");
@@ -556,7 +556,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-35 (3)
 	public void testPostCredit() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 35 --> Validate post credit button");
+		ExtentTestManager.startTest("TC No. - 35 --> Validate post credit button").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		parentWindow=driver.getWindowHandle();
 		click(loanOpen.postCreditBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:  Select Post credit button");
@@ -570,7 +570,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-36 (4)
 	public void testTransactionBased(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 36 --> Validate transaction based field");
+		ExtentTestManager.startTest("TC No. - 36 --> Validate transaction based field").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		for (String window : allWindows) {
 			if(!window.equalsIgnoreCase(parentWindow)) {
 				driver.switchTo().window(window);
@@ -590,7 +590,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-37 (3)
 	public void testGLName(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 37 --> Validate GL name field");
+		ExtentTestManager.startTest("TC No. - 37 --> Validate GL name field").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String glName = testdata.get("glName").toString();
 		input(loanOpen.glName, glName);
 		driver.findElement(loanOpen.glName).sendKeys(Keys.DOWN);
@@ -605,7 +605,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-38 (4)
 	public void testAmount(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC No. - 38 --> Validate amount field");
+		ExtentTestManager.startTest("TC No. - 38 --> Validate amount field").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		String amount = testdata.get("amount").toString();
 
 		click(loanOpen.amountInTransfer);
@@ -627,7 +627,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-39 (2)
 	public void testSubmit() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 39 --> Validate submit button");
+		ExtentTestManager.startTest("TC No. - 39 --> Validate submit button").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.submitInTransfer);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1:   Click submit button after adding the details in the auto posting popup window");
 		Log.info("Step-1:   Click submit button after adding the details in the auto posting popup window");
@@ -640,7 +640,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-40 (5)
 	public void testSaveBtnFunc() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 40 --> Select Transaction Mode");
+		ExtentTestManager.startTest("TC No. - 40 --> Select Transaction Mode").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		click(loanOpen.saveBtn);
 		try {
 			click(loanOpen.yesBtnInTransfer);
@@ -687,7 +687,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 
 		signOut();
-		ExtentTestManager.startTest("TC No. - 41 --> Login to LMS as another User");
+		ExtentTestManager.startTest("TC No. - 41 --> Login to LMS as another User").assignCategory("Other Loan Opening Transfer -Jewel Security");
 		//String loginUserName1 = testdata.get("loginUserName1").toString();
 		String loginUserName1=configloader().getProperty("UserName2");
 		input(loanOpen.loginUserName, loginUserName1);
@@ -748,7 +748,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-42 (4)
 	public void testManagerAuthorization(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC No. - 42 --> Manager Authorization");
+		ExtentTestManager.startTest("TC No. - 42 --> Manager Authorization").assignCategory("Other Loan Opening Transfer -Jewel Security");
 
 		click(loanOpen.authorizeAndCancel);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on authorize and cancel tab");
@@ -774,7 +774,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-43 (1)
 	public void testRefreshBtn() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 43 --> Validate refresh button in manager authorization page");
+		ExtentTestManager.startTest("TC No. - 43 --> Validate refresh button in manager authorization page").assignCategory("Other Loan Opening Transfer -Jewel Security");
 
 		click(loanOpen.refreshBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on refresh button");
@@ -788,7 +788,7 @@ public class AccountOpening_Otherloanopening_jewelsecurity_Transfer extends Base
 
 	//TC-44 (2)
 	public void testSelectAndAuthorize() throws InterruptedException {
-		ExtentTestManager.startTest("TC No. - 44 --> Select and authorize the customer in manager authorization page");
+		ExtentTestManager.startTest("TC No. - 44 --> Select and authorize the customer in manager authorization page").assignCategory("Other Loan Opening Transfer -Jewel Security");
 
 		click(loanOpen.transfer_checkbox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step-1: Click on checkbox");

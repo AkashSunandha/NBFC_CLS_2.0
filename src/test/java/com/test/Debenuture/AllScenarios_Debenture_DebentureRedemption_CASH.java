@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -28,7 +29,7 @@ public class AllScenarios_Debenture_DebentureRedemption_CASH {
 	DebentureRedemption debRedmMths = new DebentureRedemption();
 	
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() { 
 		ExcelReader = new com.Utility.ExcelReader("DebentureRedemption");
 		log = new Log();
@@ -42,12 +43,12 @@ public class AllScenarios_Debenture_DebentureRedemption_CASH {
 	public void debentureRedemption_CASH(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString()+"_CASH");
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()+"_CASH").assignCategory("DebentureRedemption_CASH");
 				Log.info("Debenture_DebentureRedemption_CASH");
 				context.setAttribute("fileName", "Login");
 
 				//TC No. - 01 --> Application launch
-				ExtentTestManager.startTest("Application launch");
+				ExtentTestManager.startTest("Application launch").assignCategory("DebentureRedemption_CASH");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 				Thread.sleep(2000);

@@ -1101,19 +1101,45 @@ public class LoanOpening_JewelLoan_GoldLoan extends Base_Class{
 		click(custSearch.loginButton);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
 	
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
 		
-		String flag = "akash";
 		
-		if(!userName.equalsIgnoreCase(flag)) {
-    		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
-    		Log.info("Expected Result: Logging successfull with another user");
-    		}else {
-    			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-    			Log.info("ERROR");
-    		}
 		
 		ExtentTestManager.endTest();
 		

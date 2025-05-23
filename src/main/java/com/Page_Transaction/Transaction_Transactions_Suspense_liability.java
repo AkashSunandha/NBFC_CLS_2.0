@@ -52,7 +52,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 	public void transactionsSusliability() throws InterruptedException {
 
 		//Open Transaction Module
-		ExtentTestManager.startTest("Open Transaction Module");
+		ExtentTestManager.startTest("Open Transaction Module").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Open Transaction Module");
 
 		click(Transactions_SusLiabilityRepo.transactionTab);
@@ -77,7 +77,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 	public void EnterTransactionAmount(Map < Object, Object > testdata) throws InterruptedException {
 		//Enter Transaction Amount
-		ExtentTestManager.startTest("Enter Transaction Amount");
+		ExtentTestManager.startTest("Enter Transaction Amount").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Enter Transaction Amount");
 
 		String transAmt = testdata.get("amount").toString();
@@ -91,7 +91,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 	public void susliabilityaccountinfo(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 		//Select Branch
-		ExtentTestManager.startTest("Select Branch");
+		ExtentTestManager.startTest("Select Branch").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Select Branch");
 
 		select("TRIVANDRUM", Transactions_SusLiabilityRepo.aiBranchDropdowm);
@@ -104,7 +104,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Select Product Group
-		ExtentTestManager.startTest("Select Product Group");
+		ExtentTestManager.startTest("Select Product Group").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Select Product Group");
 
 		select("Suspense Liability", Transactions_SusLiabilityRepo.aiProductGroupDropdowm);
@@ -117,7 +117,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Select Product Name
-		ExtentTestManager.startTest("Select Product Name");
+		ExtentTestManager.startTest("Select Product Name").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Select Product Name");
 
 		select("SUSPENSE LIABILITY", Transactions_SusLiabilityRepo.aiProdcutNameDropdowm);
@@ -130,7 +130,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Select Transaction Type
-		ExtentTestManager.startTest("Select Transaction Type");
+		ExtentTestManager.startTest("Select Transaction Type").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Select Transaction Type");
 
 		select("Credit", Transactions_SusLiabilityRepo.aiTransTypeDropdwon);
@@ -151,7 +151,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 	public void authorizeCash(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Login with Another User");
 
 		click(custSearch.custSignOut);
@@ -172,7 +172,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentTestManager.startTest("Cashier Authorization").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Cashier Authorization");
 
 		ScrollUntilElementVisible(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
@@ -212,7 +212,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		ExtentTestManager.startTest("Manager Authorization - Cash Tab").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Manager Authorization - Cash Tab");
 
 		click(Transactions_SusLiabilityRepo.managerAuthoTab);
@@ -229,7 +229,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Refresh Loan Opening Entry");
 
 		click(Transactions_SusLiabilityRepo.refreshBtn);
@@ -250,7 +250,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Authorize Loan Entry as Manager");
 
 		click(Transactions_SusLiabilityRepo.approveCheckBox);
@@ -279,7 +279,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 	public void authorizeTransfer(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Login with Another User");
 
 		click(custSearch.custSignOut);
@@ -310,7 +310,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Manager Authorization - Transfer Tab");
 
 		ScrollUntilElementVisible(Transactions_SusLiabilityRepo.autorizeAndCancelTab);
@@ -332,7 +332,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Refresh Loan Opening Entry");
 
 		click(Transactions_SusLiabilityRepo.refreshBtn);
@@ -352,7 +352,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Authorize Loan Entry as Manager");
 
 		click(Transactions_SusLiabilityRepo.approveCheckBoxTransfer);
@@ -379,7 +379,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 	public void transModeCash() throws InterruptedException {
 
 		//Select Transaction Mode
-		ExtentTestManager.startTest("Select Transaction Mode");
+		ExtentTestManager.startTest("Select Transaction Mode").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Select Transaction Mode");
 
 		select("CASH", Transactions_SusLiabilityRepo.tdTransModeDropdown);
@@ -392,7 +392,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Submit Transaction
-		ExtentTestManager.startTest("Submit Transaction");
+		ExtentTestManager.startTest("Submit Transaction").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Submit Transaction");
 
 		click(Transactions_SusLiabilityRepo.submitBtn);
@@ -418,7 +418,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 	public void transModeTransfer(Map < Object, Object > testdata, ITestContext context) throws InterruptedException {
 
 		//Select Transaction Mode
-		ExtentTestManager.startTest("Select Transaction Mode");
+		ExtentTestManager.startTest("Select Transaction Mode").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Select Transaction Mode");
 
 		select("TRANSFER", Transactions_SusLiabilityRepo.tdTransModeDropdown);
@@ -431,7 +431,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Enter Remark 
-		ExtentTestManager.startTest("Enter Remark ");
+		ExtentTestManager.startTest("Enter Remark ").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Enter Remark ");
 
 		String reamrk = testdata.get("remark").toString();
@@ -447,7 +447,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 		postCreditPopUpEntry(testdata);
 
 		//Submit Transaction
-		ExtentTestManager.startTest("Submit Transaction");
+		ExtentTestManager.startTest("Submit Transaction").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Submit Transaction");
 
 		click(Transactions_SusLiabilityRepo.submitBtn);
@@ -471,7 +471,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 	public String generateUniqueCode(String query, String columnName) throws ClassNotFoundException {
 
-		ExtentTestManager.startTest("Enter Loan Account Number");
+		ExtentTestManager.startTest("Enter Loan Account Number").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Enter Loan Account Number");
 
 		{
@@ -519,7 +519,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Enter Loan Account Number");
+		ExtentTestManager.startTest("Enter Loan Account Number").assignCategory("Suspense Liability Transction -Cash");
 		Log.info("Enter Loan Account Number");
 
 		click(Transactions_SusLiabilityRepo.clickGo);
@@ -533,7 +533,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 		try {
 
-			ExtentTestManager.startTest("Warning Validation Popup window");
+			ExtentTestManager.startTest("Warning Validation Popup window").assignCategory("Suspense Liability Transction -Cash");
 			Log.info("Warning Validation Popup window");
 
 			click(Transactions_SusLiabilityRepo.ClickNo);
@@ -571,7 +571,7 @@ public class Transaction_Transactions_Suspense_liability extends Base_Class {
 
 	public void postCreditPopUpEntry(Map < Object, Object > testdata) throws InterruptedException {
 		InvestmentTransaction.ClickonPostDebitButton();
-		ExtentTestManager.startTest("Post credit button functionality");
+		ExtentTestManager.startTest("Post credit button functionality").assignCategory("Suspense Liability Transction -Cash");
 		//Navigate to Pop Up Window
 		String mainWindowHandle = driver.getWindowHandle();
 		boolean popupAppeared = false;

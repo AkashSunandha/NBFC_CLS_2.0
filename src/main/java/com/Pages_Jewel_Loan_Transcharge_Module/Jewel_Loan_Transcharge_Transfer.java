@@ -94,7 +94,7 @@ public static  String generateAccountNumber() throws ClassNotFoundException {
 }	
 	
 public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context)throws ClassNotFoundException, InterruptedException, IOException {
-	ExtentTestManager.startTest("TC:01 - Login Functionality");
+	ExtentTestManager.startTest("TC:01 - Login Functionality").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC_01 - Login Functionality");
 
 	String UserName = configloader().getProperty("UserName");
@@ -148,7 +148,7 @@ public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext c
 }
 
 public boolean ChargePostingWindowAccess() throws InterruptedException {
-	ExtentTestManager.startTest("TC:02 - Charge Posting Window Access");
+	ExtentTestManager.startTest("TC:02 - Charge Posting Window Access").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:02 - Charge Posting Window Access");
 
 	try {
@@ -188,7 +188,7 @@ public boolean ChargePostingWindowAccess() throws InterruptedException {
 
 public boolean BranchAutoloadinChargePosting()throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:03 - Branch Autoload in Charge Posting");
+	ExtentTestManager.startTest("TC:03 - Branch Autoload in Charge Posting").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:03 - Branch Autoload in Charge Posting");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -211,7 +211,7 @@ public boolean BranchAutoloadinChargePosting()throws InterruptedException {
 
 public boolean TransactionandPostingDatesVerification()throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:04 - Transaction and Posting Dates Verification");
+	ExtentTestManager.startTest("TC:04 - Transaction and Posting Dates Verification").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:04 - Transaction and Posting Dates Verification");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -241,7 +241,7 @@ public boolean TransactionandPostingDatesVerification()throws InterruptedExcepti
 
 public boolean SelectJewelLoanGroup() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:05 - Select Jewel Loan Group");
+	ExtentTestManager.startTest("TC:05 - Select Jewel Loan Group").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:05 - Select Jewel Loan Group");
 
 	click(LoanTranscharge.LoanGroup);
@@ -270,7 +270,7 @@ public boolean SelectJewelLoanGroup() throws InterruptedException {
 
 public boolean SelectGoldLoanProduct() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:06 - Select Gold Loan Product");
+	ExtentTestManager.startTest("TC:06 - Select Gold Loan Product").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:06 - Select Gold Loan Product");
 
 	click(LoanTranscharge.ProductName);
@@ -298,7 +298,7 @@ public boolean SelectGoldLoanProduct() throws InterruptedException {
 
 public boolean AccountNumberEntryandAutoloadVerification() throws InterruptedException, ClassNotFoundException {
 	
-	ExtentTestManager.startTest("TC:07 - Account Number Entry and Auto-load Verification");
+	ExtentTestManager.startTest("TC:07 - Account Number Entry and Auto-load Verification").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:07 - Account Number Entry and Auto-load Verification");
 	
 	String AccountNum = generateAccountNumber();
@@ -353,7 +353,7 @@ public boolean AccountNumberEntryandAutoloadVerification() throws InterruptedExc
 
 public boolean SelectMiscChargeType() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:08 - Select Misc Charge Type");
+	ExtentTestManager.startTest("TC:08 - Select Misc Charge Type").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:08 - Select Misc Charge Type");
 
 	click(LoanTranscharge.ChargeType);
@@ -381,7 +381,7 @@ public boolean SelectMiscChargeType() throws InterruptedException {
 
 public boolean EnterChargeAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:09 - Enter Charge Amount");
+	ExtentTestManager.startTest("TC:09 - Enter Charge Amount").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:09 - Enter Charge Amount");
 
 	String EnterAmount = testdata.get("Amount").toString();
@@ -410,7 +410,7 @@ public boolean EnterChargeAmount(Map<Object, Object> testdata, ITestContext cont
 
 public boolean AddChargeandVerifyinGrid()throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:10 - Add Charge and Verify in Grid");
+	ExtentTestManager.startTest("TC:10 - Add Charge and Verify in Grid").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:10 - Add Charge and Verify in Grid");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -433,7 +433,7 @@ public boolean AddChargeandVerifyinGrid()throws InterruptedException {
 
 public boolean SaveChargeandSuccessfulMessageDisplay()throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:11 - Save Charge and Successful Message Display");
+	ExtentTestManager.startTest("TC:11 - Save Charge and Successful Message Display").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:11 - Save Charge and Successful Message Display");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -456,7 +456,7 @@ public boolean SaveChargeandSuccessfulMessageDisplay()throws InterruptedExceptio
 }
 
 public boolean TransactionModuleAccess() throws InterruptedException {
-	ExtentTestManager.startTest("TC:12 - Transaction Module Access");
+	ExtentTestManager.startTest("TC:12 - Transaction Module Access").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:12 - Transaction Module Access");
 
 	try {
@@ -494,7 +494,7 @@ public boolean TransactionModuleAccess() throws InterruptedException {
 
 public boolean BranchAutoloadinTransactionModule()throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:13 - Branch Autoload in Transaction Module");
+	ExtentTestManager.startTest("TC:13 - Branch Autoload in Transaction Module").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:13 - Branch Autoload in Transaction Module");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -517,7 +517,7 @@ public boolean BranchAutoloadinTransactionModule()throws InterruptedException {
 
 public boolean SelectJewelLoanGroupinTransaction() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:14 - Select Jewel Loan Group in Transaction");
+	ExtentTestManager.startTest("TC:14 - Select Jewel Loan Group in Transaction").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:14 - Select Jewel Loan Group in Transaction");
 
 	click(LoanTranscharge.ProductGroup);
@@ -546,7 +546,7 @@ public boolean SelectJewelLoanGroupinTransaction() throws InterruptedException {
 
 public boolean SelectGoldLoanProductinTransaction() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:15 - Select Gold Loan Product in Transaction");
+	ExtentTestManager.startTest("TC:15 - Select Gold Loan Product in Transaction").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:15 - Select Gold Loan Product in Transaction");
 
 	click(LoanTranscharge.ProdName);
@@ -574,7 +574,7 @@ public boolean SelectGoldLoanProductinTransaction() throws InterruptedException 
 
 public boolean EnterAccountNumberinTransaction() throws InterruptedException, ClassNotFoundException {
 	
-	ExtentTestManager.startTest("TC:16 - Enter Account Number in Transaction");
+	ExtentTestManager.startTest("TC:16 - Enter Account Number in Transaction").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:16 - Enter Account Number in Transaction");
 	
 	String AccountNum = generateAccountNumber();
@@ -610,7 +610,7 @@ public boolean EnterAccountNumberinTransaction() throws InterruptedException, Cl
 
 public boolean SelectTransactionTypeCredit() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:17 - Select Transaction Type Credit");
+	ExtentTestManager.startTest("TC:17 - Select Transaction Type Credit").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:17 - Select Transaction Type Credit");
 
 	click(LoanTranscharge.TransType);
@@ -638,7 +638,7 @@ public boolean SelectTransactionTypeCredit() throws InterruptedException {
 
 public boolean OpenAccountTransactions()throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:18 - Open Account Transactions");
+	ExtentTestManager.startTest("TC:18 - Open Account Transactions").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:18 - Open Account Transactions");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -672,7 +672,7 @@ public boolean OpenAccountTransactions()throws InterruptedException {
 
 public boolean VerifyMiscChargeinTransaction()throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:19 - Verify Misc Charge in Transaction");
+	ExtentTestManager.startTest("TC:19 - Verify Misc Charge in Transaction").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:19 - Verify Misc Charge in Transaction");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -695,7 +695,7 @@ public boolean VerifyMiscChargeinTransaction()throws InterruptedException {
 
 public boolean EnterTransactionAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, StaleElementReferenceException {
 
-	ExtentTestManager.startTest("TC:20 - Enter Transaction Amount");
+	ExtentTestManager.startTest("TC:20 - Enter Transaction Amount").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:20 - Enter Transaction Amount");
 
 	String EnterAmount = testdata.get("Trans_Amount").toString();
@@ -748,7 +748,7 @@ public boolean EnterTransactionAmount(Map<Object, Object> testdata, ITestContext
 
 public boolean Postdebittransaction(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:21 - Post debit transaction");
+	ExtentTestManager.startTest("TC:21 - Post debit transaction").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:21 - Post debit transaction");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -778,7 +778,7 @@ public boolean Postdebittransaction(Map<Object, Object> testdata, ITestContext c
 
 public boolean EnterRemarkforTransaction(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:22 - Enter Remark for Transaction");
+	ExtentTestManager.startTest("TC:22 - Enter Remark for Transaction").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:22 - Enter Remark for Transaction");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -803,7 +803,7 @@ public boolean EnterRemarkforTransaction(Map<Object, Object> testdata, ITestCont
 
 public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, TimeoutException{
 	
-	ExtentTestManager.startTest("TC:23 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:23 - POST DEBIT popup is present").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:23 - POST DEBIT popup is present");
 	
 	WebElement PostDebitTab = driver.findElement(LoanTranscharge.PostDebit);
@@ -837,7 +837,7 @@ public boolean POSTDEBITpopupispresent(Map<Object, Object> testdata, ITestContex
 
 public boolean PostDebitpopupispresent(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:24 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:24 - POST DEBIT popup is present").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:24 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -862,7 +862,7 @@ public boolean PostDebitpopupispresent(Map<Object, Object> testdata, ITestContex
 
 public boolean PostDebitPopUpProductGroupDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:25 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:25 - POST DEBIT popup is present").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:25 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -888,7 +888,7 @@ public boolean PostDebitPopUpProductGroupDropdown(Map<Object, Object> testdata, 
 
 public boolean PostDebitPopUpProductNameDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:26 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:26 - POST DEBIT popup is present").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:26 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -913,7 +913,7 @@ public boolean PostDebitPopUpProductNameDropdown(Map<Object, Object> testdata, I
 
 public boolean PostDebitPopUpBranchDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:27 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:27 - POST DEBIT popup is present").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:27 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -940,7 +940,7 @@ public boolean PostDebitPopUpBranchDropdown(Map<Object, Object> testdata, ITestC
 
 public boolean PostDebitPopUpAccountNumber(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:28 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:28 - POST DEBIT popup is present").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:28 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -975,7 +975,7 @@ public boolean PostDebitPopUpAccountNumber(Map<Object, Object> testdata, ITestCo
 
 public boolean PostDebitPopUpEnterAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
     
-    ExtentTestManager.startTest("TC:29 - POST DEBIT popup is present");
+    ExtentTestManager.startTest("TC:29 - POST DEBIT popup is present").assignCategory("JewelLoanTransaction-Charge-Transfer");
     Log.info("TC:29 - POST DEBIT popup is present");
 
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -1019,7 +1019,7 @@ public boolean PostDebitPopUpEnterAmount(Map<Object, Object> testdata, ITestCont
 
 public boolean PostDebitPopUpAddDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
-	ExtentTestManager.startTest("TC:30 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:30 - POST DEBIT popup is present").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:30 - POST DEBIT popup is present");
 		
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -1042,7 +1042,7 @@ public boolean PostDebitPopUpAddDetails(Map<Object, Object> testdata, ITestConte
 
 public boolean PostDebitPopUpSubmitDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, TimeoutException{
 	
-	ExtentTestManager.startTest("TC:31 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:31 - POST DEBIT popup is present").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:31 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -1073,7 +1073,7 @@ public boolean PostDebitPopUpSubmitDetails(Map<Object, Object> testdata, ITestCo
 
 public boolean PostDebitSubmitAccountClosure() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:32 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:32 - POST DEBIT popup is present").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:32 - POST DEBIT popup is present");
 	
 	/*WebDriverWait wait = new WebDriverWait(driver, 20);
@@ -1115,10 +1115,10 @@ public boolean PostDebitSubmitAccountClosure() throws InterruptedException {
 
 public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedException, IOException{
 	
-	ExtentTestManager.startTest("TC:33 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:33 - Login to NBFc Application in a different user").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:33 - Login to NBFc Application in a different user");
 		
-	ExtentTestManager.startTest("Logout");
+	ExtentTestManager.startTest("Logout").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("Logout");
 		
 	Thread.sleep(2000);
@@ -1157,7 +1157,7 @@ public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedExcept
 
 public boolean LogintoNBFcApplicationinadifferentuserAuthorizeandcancel() throws InterruptedException, IOException{
 	
-	ExtentTestManager.startTest("TC:34 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:34 - Login to NBFc Application in a different user").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:34 - Login to NBFc Application in a different user");
 	
 	WebElement CashMode = driver.findElement(LoanTranscharge.AuthorizeCancel);
@@ -1186,7 +1186,7 @@ return true;
 
 public boolean ManagerAuthorisationTransfer() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:35 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:35 - Login to NBFc Application in a different user").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:35 - Login to NBFc Application in a different user");
 	
 	click(LoanTranscharge.TransferTab);
@@ -1209,7 +1209,7 @@ public boolean ManagerAuthorisationTransfer() throws InterruptedException{
 
 public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:36 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:36 - Login to NBFc Application in a different user").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:36 - Login to NBFc Application in a different user");
 	
 	click(LoanTranscharge.Refresh);
@@ -1231,7 +1231,7 @@ public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 
 public boolean SelectManagerTransferTransaction() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:37 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:37 - Login to NBFc Application in a different user").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:37 - Login to NBFc Application in a different user");
 	
 	System.out.println("transIdTransferLoan "+transIdTransferLoan);
@@ -1256,7 +1256,7 @@ public boolean SelectManagerTransferTransaction() throws InterruptedException{
 
 public boolean ManagerTransferAuthorization() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:38 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:38 - Login to NBFc Application in a different user").assignCategory("JewelLoanTransaction-Charge-Transfer");
 	Log.info("TC:38 - Login to NBFc Application in a different user");
 	
 	if(ElementDisplayed(LoanTranscharge.ManagerAuthorize)) {

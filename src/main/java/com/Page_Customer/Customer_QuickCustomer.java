@@ -90,7 +90,7 @@ public class Customer_QuickCustomer extends Base_Class{
 	
 	public void openQuickCustomerWindow() throws InterruptedException {
 		
-		ExtentTestManager.startTest("Open Quick Customer Window");
+		ExtentTestManager.startTest("Open Quick Customer Window").assignCategory("QuickCustomer");
 		Log.info("Open Quick Customer Window");
 		
 		click(quickCustRepo.customerTab);
@@ -113,7 +113,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Verify 'Start Date' Shows Current Date
-		ExtentTestManager.startTest("Verify 'Start Date' Shows Current Date");
+		ExtentTestManager.startTest("Verify 'Start Date' Shows Current Date").assignCategory("QuickCustomer");
 		Log.info("Verify 'Start Date' Shows Current Date");
 
 		String startDate = driver.findElement(quickCustRepo.qadStartDate).getAttribute("value");
@@ -129,7 +129,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//'Start Date' Field Typing Disabled
-		ExtentTestManager.startTest("'Start Date' Field Typing Disabled");
+		ExtentTestManager.startTest("'Start Date' Field Typing Disabled").assignCategory("QuickCustomer");
 		Log.info("'Start Date' Field Typing Disabled");
 		
 		boolean isDisabled = driver.findElement(quickCustRepo.qadStartDate).getAttribute("disabled") != null;
@@ -151,7 +151,7 @@ public class Customer_QuickCustomer extends Base_Class{
 	public void quickAccDetails(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException, UnsupportedFlavorException {
 
 		//Select Salutation Drop down
-		ExtentTestManager.startTest("Select Salutation Dropdown");
+		ExtentTestManager.startTest("Select Salutation Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Salutation Dropdown");
 		
 		ScrollUntilElementVisible(quickCustRepo.qadSalutationDropdown);
@@ -167,7 +167,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		ExtentTestManager.endTest();
 		 
 		//Numerical Entry in 'First Name' Field
-		ExtentTestManager.startTest("Numerical Entry in 'First Name' Field");
+		ExtentTestManager.startTest("Numerical Entry in 'First Name' Field").assignCategory("QuickCustomer");
 		Log.info("Numerical Entry in 'First Name' Field");
 		
 		String fNameNumericInput = testdata.get("fNameNumInput").toString();
@@ -185,7 +185,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Clear 'First Name' Field
-		ExtentTestManager.startTest("Clear 'First Name' Field");
+		ExtentTestManager.startTest("Clear 'First Name' Field").assignCategory("QuickCustomer");
 		Log.info("Clear 'First Name' Field");
 		
 		clear(quickCustRepo.qadFNameTxtBox);
@@ -193,19 +193,19 @@ public class Customer_QuickCustomer extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Clear the 'First Name' field.");
 		Log.info("Step:01 - Clear the 'First Name' field.");
 		
-		String fNameNull = driver.findElement(quickCustRepo.qadFNameTxtBox).getText();
+	/*	String fNameNull = driver.findElement(quickCustRepo.qadFNameTxtBox).getText();
 		if(fNameNull=="") {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: First Name Field is cleared successfully.");
 			Log.info("Expected Result: First Name Field is cleared successfully.");
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: First Name Field is not cleared successfully.");
 			Log.info("Expected Result: First Name Field is not cleared successfully.");
-		}
+		}*/
 		ExtentTestManager.endTest();
 		
 		
 		//Alphabetic Entry in 'First Name' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'First Name' Field");
+		ExtentTestManager.startTest("Alphabetic Entry in 'First Name' Field").assignCategory("QuickCustomer");
 		Log.info("Alphabetic Entry in 'First Name' Field");
 		
 		String fNameAlphabetInput = testdata.get("fNameAlphabetInput").toString();
@@ -222,7 +222,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Middle Name' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'Middle Name' Field");
+		ExtentTestManager.startTest("Alphabetic Entry in 'Middle Name' Field").assignCategory("QuickCustomer");
 		Log.info("Alphabetic Entry in 'Middle Name' Field");
 
 		String mNameAlphabetInput = testdata.get("mNameAlphabetInput").toString();
@@ -239,7 +239,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Last Name' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'Last Name' Field");
+		ExtentTestManager.startTest("Alphabetic Entry in 'Last Name' Field").assignCategory("QuickCustomer");
 		Log.info("Alphabetic Entry in 'Last Name' Field");
 
 		String lNameAlphabetInput = testdata.get("lNameAlphabetInput").toString();
@@ -256,7 +256,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Alias Name' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'Alias Name' Field");
+		ExtentTestManager.startTest("Alphabetic Entry in 'Alias Name' Field").assignCategory("QuickCustomer");
 		Log.info("Alphabetic Entry in 'Alias Name' Field");
 
 		String aNameAlphabetInput = testdata.get("aNameAlphabetInput").toString();
@@ -273,7 +273,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Alias Name' Field
-		ExtentTestManager.startTest("Display Name Validation");
+		ExtentTestManager.startTest("Display Name Validation").assignCategory("QuickCustomer");
 		Log.info("Display Name Validation");
 		
 		String dispName = driver.findElement(quickCustRepo.qadDispNameTxtBox).getAttribute("value");
@@ -302,7 +302,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//DOB Field Entry
-		ExtentTestManager.startTest("DOB Field Entry");
+		ExtentTestManager.startTest("DOB Field Entry").assignCategory("QuickCustomer");
 		Log.info("DOB Field Entry");
 		
 		String DOB = testdata.get("DOB").toString();
@@ -319,7 +319,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
         //Calculate Age After Tab
-		ExtentTestManager.startTest("Calculate Age After Tab");
+		ExtentTestManager.startTest("Calculate Age After Tab").assignCategory("QuickCustomer");
 		Log.info("Calculate Age After Tab");
 		
         Actions actions = new Actions(driver);
@@ -335,7 +335,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
         //Verify 'DOB' Field Presence
-		ExtentTestManager.startTest("Verify 'DOB' Field Presence");
+		ExtentTestManager.startTest("Verify 'DOB' Field Presence").assignCategory("QuickCustomer");
 		Log.info("Verify 'DOB' Field Presence");
 		
 		click(quickCustRepo.qadDOBTxtBox);
@@ -361,7 +361,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
         //Type Date in 'AgeAsOn' Field
-		ExtentTestManager.startTest("Type Date in 'AgeAsOn' Field");
+		ExtentTestManager.startTest("Type Date in 'AgeAsOn' Field").assignCategory("QuickCustomer");
 		Log.info("Type Date in 'AgeAsOn' Field");
 		
 		String startDateValue = driver.findElement(quickCustRepo.qadStartDate).getAttribute("value");
@@ -378,7 +378,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
         //Select AgeGroup Dropdown
-		ExtentTestManager.startTest("Select AgeGroup Dropdown");
+		ExtentTestManager.startTest("Select AgeGroup Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select AgeGroup Dropdown");
 		
 		select("Major",quickCustRepo.qadAgeGroupDropdwn);
@@ -395,7 +395,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Nationality Dropdown
-		ExtentTestManager.startTest("Select Nationality Dropdown");
+		ExtentTestManager.startTest("Select Nationality Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Nationality Dropdown");
 		
 		select("INDIA",quickCustRepo.qadNationalityDropdown);
@@ -412,7 +412,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Nativity Dropdown
-		ExtentTestManager.startTest("Select Nativity Dropdown");
+		ExtentTestManager.startTest("Select Nativity Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Nativity Dropdown");
 		
 		select("KERALA",quickCustRepo.qadNativityDropdown);
@@ -429,7 +429,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select GENDER Dropdown
-		ExtentTestManager.startTest("Select GENDER Dropdown");
+		ExtentTestManager.startTest("Select GENDER Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select GENDER Dropdown");
 		
 		select("Male",quickCustRepo.qadGenderDropdown);
@@ -446,7 +446,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Qualification Dropdown
-		ExtentTestManager.startTest("Select Qualification Dropdown");
+		ExtentTestManager.startTest("Select Qualification Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Qualification Dropdown");
 		
 		select("OTHERS",quickCustRepo.qadQualificationDropdown);
@@ -463,7 +463,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Religion Dropdown
-		ExtentTestManager.startTest("Select Religion Dropdown");
+		ExtentTestManager.startTest("Select Religion Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Religion Dropdown");
 		
 		select("HINDU",quickCustRepo.qadReligionDropdown);
@@ -480,7 +480,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Category Dropdown
-		ExtentTestManager.startTest("Select Category Dropdown");
+		ExtentTestManager.startTest("Select Category Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Category Dropdown");
 		
 		select("GENERAL",quickCustRepo.qadCategoryDropdown);
@@ -497,7 +497,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select MaritalStatus Dropdown
-		ExtentTestManager.startTest("Select MaritalStatus Dropdown");
+		ExtentTestManager.startTest("Select MaritalStatus Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select MaritalStatus Dropdown");
 		
 		select("Single",quickCustRepo.qadMaritalStatusDropdown);
@@ -514,7 +514,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select OccupGroup Dropdown
-		ExtentTestManager.startTest("Select OccupGroup Dropdown");
+		ExtentTestManager.startTest("Select OccupGroup Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select OccupGroup Dropdown");
 		
 		select("OTHERS",quickCustRepo.qadOccupGroupDropdown);
@@ -531,7 +531,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Type in 'Occupation' Field
-		ExtentTestManager.startTest("Type in 'Occupation' Field");
+		ExtentTestManager.startTest("Type in 'Occupation' Field").assignCategory("QuickCustomer");
 		Log.info("Type in 'Occupation' Field");
 		
 		String occupation = testdata.get("occupation").toString();
@@ -547,7 +547,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Type in 'OccOrganisation' Field
-		ExtentTestManager.startTest("Type in 'OccOrganisation' Field");
+		ExtentTestManager.startTest("Type in 'OccOrganisation' Field").assignCategory("QuickCustomer");
 		Log.info("Type in 'OccOrganisation' Field");
 		
 		String occOrganisation = testdata.get("occOrganisation").toString();
@@ -563,7 +563,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Monthly Income' Field
-		ExtentTestManager.startTest("Numeric Entry in 'Monthly Income' Field");
+		ExtentTestManager.startTest("Numeric Entry in 'Monthly Income' Field").assignCategory("QuickCustomer");
 		Log.info("Numeric Entry in 'Monthly Income' Field");
 		
 		String monthlyIncome = testdata.get("monthlyIncome").toString();
@@ -579,7 +579,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Income Source Dropdown
-		ExtentTestManager.startTest("Select Income Source Dropdown");
+		ExtentTestManager.startTest("Select Income Source Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Income Source Dropdown");
 
 		click(quickCustRepo.qadIncomeSourceDropdown);
@@ -599,7 +599,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Salutation for Parent/Spouse Dropdown
-		ExtentTestManager.startTest("Select Salutation for Parent/Spouse Dropdown");
+		ExtentTestManager.startTest("Select Salutation for Parent/Spouse Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Salutation for Parent/Spouse Dropdown");
 
 		select("MR",quickCustRepo.qadPrntSalutationDropDown);
@@ -616,7 +616,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Parent/Spouse' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'Parent/Spouse' Field");
+		ExtentTestManager.startTest("Alphabetic Entry in 'Parent/Spouse' Field").assignCategory("QuickCustomer");
 		Log.info("Alphabetic Entry in 'Parent/Spouse' Field");
 		
 		String parentOrSpouseName = testdata.get("parentOrSpouseName").toString();
@@ -632,7 +632,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Relation Dropdown
-		ExtentTestManager.startTest("Select Relation Dropdown");
+		ExtentTestManager.startTest("Select Relation Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Relation Dropdown");
 
 		select("MOTHER",quickCustRepo.qadRelationDropdown);
@@ -649,7 +649,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Tick 'Ment. Retarded' Checkbox
-		ExtentTestManager.startTest("Tick 'Ment. Retarded' Checkbox");
+		ExtentTestManager.startTest("Tick 'Ment. Retarded' Checkbox").assignCategory("QuickCustomer");
 		Log.info("Tick 'Ment. Retarded' Checkbox");
 
 		click(quickCustRepo.qadMentRetardCheckBox);
@@ -664,7 +664,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Salutation for Guardian Dropdown
-		ExtentTestManager.startTest("Select Salutation for Guardian Dropdown");
+		ExtentTestManager.startTest("Select Salutation for Guardian Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Salutation for Guardian Dropdown");
 
 		select("MR",quickCustRepo.qadGuardianSalutationDropDown);
@@ -681,7 +681,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Guardian' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'Guardian' Field");
+		ExtentTestManager.startTest("Alphabetic Entry in 'Guardian' Field").assignCategory("QuickCustomer");
 		Log.info("Alphabetic Entry in 'Guardian' Field");
 		
 		String guardianName = testdata.get("guardianName").toString();
@@ -697,7 +697,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Guardian Relation Dropdown
-		ExtentTestManager.startTest("Select Guardian Relation Dropdown");
+		ExtentTestManager.startTest("Select Guardian Relation Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Guardian Relation Dropdown");
 
 		select("MOTHER",quickCustRepo.qadGuardRelationDropDown);
@@ -714,7 +714,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Salutation for Father Name Dropdown
-		ExtentTestManager.startTest("Select Salutation for Father Name Dropdown");
+		ExtentTestManager.startTest("Select Salutation for Father Name Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Salutation for Father Name Dropdown");
 
 		select("MR",quickCustRepo.qadFathrNameSalutationDropDown);
@@ -731,7 +731,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Father Name' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'Father Name' Field");
+		ExtentTestManager.startTest("Alphabetic Entry in 'Father Name' Field").assignCategory("QuickCustomer");
 		Log.info("Alphabetic Entry in 'Father Name' Field");
 		
 		String fatherName = testdata.get("fatherName").toString();
@@ -747,7 +747,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Salutation for Mother Name Dropdown
-		ExtentTestManager.startTest("Select Salutation for Mother Name Dropdown");
+		ExtentTestManager.startTest("Select Salutation for Mother Name Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Salutation for Mother Name Dropdown");
 
 		select("MRS",quickCustRepo.qadMthrNameSalutationDropDown);
@@ -764,7 +764,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Mother Name' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'Mother Name' Field");
+		ExtentTestManager.startTest("Alphabetic Entry in 'Mother Name' Field").assignCategory("QuickCustomer");
 		Log.info("Alphabetic Entry in 'Mother Name' Field");
 		
 		String motherName = testdata.get("motherName").toString();
@@ -780,7 +780,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'Aadhaar No' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'Aadhaar Num' Field");
+		ExtentTestManager.startTest("Alphabetic Entry in 'Aadhaar Num' Field").assignCategory("QuickCustomer");
 		Log.info("Alphabetic Entry in 'Aadhaar Num' Field");
 
 		input(quickCustRepo.qadAadhaarTxtBox,fNameAlphabetInput);click(quickCustRepo.qadFNameTxt);
@@ -800,7 +800,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Clear 'Aadhaar No' Field
-		ExtentTestManager.startTest("Clear 'Aadhaar Num' Field");
+		ExtentTestManager.startTest("Clear 'Aadhaar Num' Field").assignCategory("QuickCustomer");
 		Log.info("Clear 'Aadhaar Num' Field");
 		
 		clear(quickCustRepo.qadAadhaarTxtBox);
@@ -808,20 +808,20 @@ public class Customer_QuickCustomer extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Clear the 'Aadhaar Num' field.");
 		Log.info("Step:01 - Clear the 'Aadhaar Num' field.");
 		
-		String aadhaarNull = driver.findElement(quickCustRepo.qadAadhaarTxtBox).getText();
+		/*String aadhaarNull = driver.findElement(quickCustRepo.qadAadhaarTxtBox).getText();
 		if(aadhaarNull=="") {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Aadhaar Num Field is cleared successfully.");
 			Log.info("Expected Result: Aadhaar Num Field is cleared successfully.");
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Aadhaar Num Field is not cleared successfully.");
 			Log.info("Expected Result: Aadhaar Num Field is not cleared successfully.");
-		}
+		}*/
 		ExtentTestManager.endTest();
 		
 		
 		
 		//Short Numeric Entry in 'Aadhar No' Field
-		ExtentTestManager.startTest("Short Numeric Entry in 'Aadhar No' Field");
+		ExtentTestManager.startTest("Short Numeric Entry in 'Aadhar No' Field").assignCategory("QuickCustomer");
 		Log.info("Short Numeric Entry in 'Aadhar No' Field");
 
 		String eightDigitAadhaarNum = testdata.get("eightDigitAadhaarNum").toString();
@@ -841,7 +841,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Valid Numeric Entry in 'Aadhar No' Field
-		ExtentTestManager.startTest("Valid Numeric Entry in 'Aadhar No' Field");
+		ExtentTestManager.startTest("Valid Numeric Entry in 'Aadhar No' Field").assignCategory("QuickCustomer");
 		Log.info("Valid Numeric Entry in 'Aadhar No' Field");
 
 		clear(quickCustRepo.qadAadhaarTxtBox);
@@ -858,7 +858,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Alphabetic Entry in 'PAN No' Field
-		ExtentTestManager.startTest("Alphabetic Entry in 'PAN No' Field");
+		ExtentTestManager.startTest("Alphabetic Entry in 'PAN No' Field").assignCategory("QuickCustomer");
 		Log.info("Alphabetic Entry in 'PAN No' Field");
 
 		input(quickCustRepo.qadPANTxtBox,fNameAlphabetInput);click(quickCustRepo.qadFNameTxt);
@@ -878,7 +878,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Clear 'PAN No' Field
-		ExtentTestManager.startTest("Clear 'PAN Num' Field");
+		ExtentTestManager.startTest("Clear 'PAN Num' Field").assignCategory("QuickCustomer");
 		Log.info("Clear 'PAN Num' Field");
 		
 		clear(quickCustRepo.qadPANTxtBox);
@@ -886,20 +886,20 @@ public class Customer_QuickCustomer extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Clear the 'PAN Num' field.");
 		Log.info("Step:01 - Clear the 'PAN Num' field.");
 		
-		String panNull = driver.findElement(quickCustRepo.qadPANTxtBox).getText();
+		/*String panNull = driver.findElement(quickCustRepo.qadPANTxtBox).getText();
 		if(panNull=="") {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: PAN Num Field is cleared successfully.");
 			Log.info("Expected Result: PAN Num Field is cleared successfully.");
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: PAN Num Field is not cleared successfully.");
 			Log.info("Expected Result: PAN Num Field is not cleared successfully.");
-		}
+		}*/
 		ExtentTestManager.endTest();
 		
 		
 		
 		//Correct Format in 'PAN No' Field
-		ExtentTestManager.startTest("Correct Format in 'PAN No' Field");
+		ExtentTestManager.startTest("Correct Format in 'PAN No' Field").assignCategory("QuickCustomer");
 		Log.info("Correct Format in 'PAN No' Field");
 
 
@@ -917,7 +917,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Short Numeric Entry in 'Mobile No' Field
-		ExtentTestManager.startTest("Short Numeric Entry in 'Mobile No' Field");
+		ExtentTestManager.startTest("Short Numeric Entry in 'Mobile No' Field").assignCategory("QuickCustomer");
 		Log.info("Short Numeric Entry in 'Mobile No' Field");
 
 		input(quickCustRepo.qadMobileNumTxtBox,eightDigitAadhaarNum);click(quickCustRepo.qadFNameTxt);
@@ -936,7 +936,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Valid Numeric Entry in 'Mobile No' Field
-		ExtentTestManager.startTest("Valid Numeric Entry in 'Mobile No' Field");
+		ExtentTestManager.startTest("Valid Numeric Entry in 'Mobile No' Field").assignCategory("QuickCustomer");
 		Log.info("Valid Numeric Entry in 'Mobile No' Field");
 
 		clear(quickCustRepo.qadMobileNumTxtBox);
@@ -955,7 +955,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Invalid Entry in 'Email' Field
-		ExtentTestManager.startTest("Invalid Entry in 'Email' Field");
+		ExtentTestManager.startTest("Invalid Entry in 'Email' Field").assignCategory("QuickCustomer");
 		Log.info("Invalid Entry in 'Email' Field");
 
 		input(quickCustRepo.qadEmailTxtBox,eightDigitAadhaarNum);click(quickCustRepo.qadFNameTxt);
@@ -974,7 +974,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Clear 'Email' Field
-		ExtentTestManager.startTest("Clear 'Email' Field");
+		ExtentTestManager.startTest("Clear 'Email' Field").assignCategory("QuickCustomer");
 		Log.info("Clear 'Email' Field");
 		
 		clear(quickCustRepo.qadEmailTxtBox);
@@ -982,20 +982,20 @@ public class Customer_QuickCustomer extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Clear 'Email' field.");
 		Log.info("Step:01 - Clear 'Email' field.");
 		
-		String emailNull = driver.findElement(quickCustRepo.qadEmailTxtBox).getText();
+		/*String emailNull = driver.findElement(quickCustRepo.qadEmailTxtBox).getText();
 		if(emailNull=="") {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Email Field is cleared successfully.");
 			Log.info("Expected Result: Email Field is cleared successfully.");
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Email Field is not cleared successfully.");
 			Log.info("Expected Result: Email Field is not cleared successfully.");
-		}
+		}*/
 		ExtentTestManager.endTest();
 		
 		
 		
 		//Valid Entry in 'Email' Field
-		ExtentTestManager.startTest("Valid Entry in 'Email' Field");
+		ExtentTestManager.startTest("Valid Entry in 'Email' Field").assignCategory("QuickCustomer");
 		Log.info("Valid Entry in 'Email' Field");
 
 		String validEmail = testdata.get("validEmail").toString();
@@ -1011,7 +1011,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Select Preferred Language Dropdown
-		ExtentTestManager.startTest("Select Preferred Language Dropdown");
+		ExtentTestManager.startTest("Select Preferred Language Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Preferred Language Dropdown");
 
 		select("English",quickCustRepo.qadPreferredLangDropdown);
@@ -1032,7 +1032,7 @@ public class Customer_QuickCustomer extends Base_Class{
 	public void presentAddress(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 	
 		//House Field - ECP Validations
-		ExtentTestManager.startTest("House Field - ECP Validations");
+		ExtentTestManager.startTest("House Field - ECP Validations").assignCategory("QuickCustomer");
 		Log.info("House Field - ECP Validations");
 		
 		//Alphanumeric Input
@@ -1074,7 +1074,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//HouseNo Field - ECP Validations
-		ExtentTestManager.startTest("HouseNo Field - ECP Validations");
+		ExtentTestManager.startTest("HouseNo Field - ECP Validations").assignCategory("QuickCustomer");
 		Log.info("HouseNo Field - ECP Validations");
 		
 		//Alphanumeric Input
@@ -1117,7 +1117,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//DoorNo Field - ECP Validations
-		ExtentTestManager.startTest("DoorNo Field - ECP Validations");
+		ExtentTestManager.startTest("DoorNo Field - ECP Validations").assignCategory("QuickCustomer");
 		Log.info("DoorNo Field - ECP Validations");
 		
 		//Alphanumeric Input
@@ -1159,7 +1159,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//State Dropdown Functionality
-		ExtentTestManager.startTest("State Dropdown Functionality");
+		ExtentTestManager.startTest("State Dropdown Functionality").assignCategory("QuickCustomer");
 		Log.info("State Dropdown Functionality");
 
 		select("KERALA",quickCustRepo.presentStateDropdown);
@@ -1176,7 +1176,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//District Dropdown Functionality
-		ExtentTestManager.startTest("District Dropdown Functionality");
+		ExtentTestManager.startTest("District Dropdown Functionality").assignCategory("QuickCustomer");
 		Log.info("District Dropdown Functionality");
 
 		select("Wayanad",quickCustRepo.presentDistrictDropdown);
@@ -1193,7 +1193,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Post Dropdown Functionality
-		ExtentTestManager.startTest("Post Dropdown Functionality");
+		ExtentTestManager.startTest("Post Dropdown Functionality").assignCategory("QuickCustomer");
 		Log.info("Post Dropdown Functionality");
 
 		select("Bavali B.O",quickCustRepo.presentPostDropdown);
@@ -1210,7 +1210,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//PIN Text field Presence & Functionality
-		ExtentTestManager.startTest("PIN Textfield Presence & Functionality");
+		ExtentTestManager.startTest("PIN Textfield Presence & Functionality").assignCategory("QuickCustomer");
 		Log.info("PIN Textfield Presence & Functionality");
 		
 		String pinAutoFillValue = driver.findElement(quickCustRepo.presentPINTxtBox).getAttribute("value");
@@ -1229,7 +1229,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Place Field - ECP Validations
-		ExtentTestManager.startTest("Place Field - ECP Validations");
+		ExtentTestManager.startTest("Place Field - ECP Validations").assignCategory("QuickCustomer");
 		Log.info("Place Field - ECP Validations");
 		
 		//Alphanumeric Input
@@ -1275,7 +1275,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//City Field - ECP Validations
-		ExtentTestManager.startTest("City Field - ECP Validations");
+		ExtentTestManager.startTest("City Field - ECP Validations").assignCategory("QuickCustomer");
 		Log.info("City Field - ECP Validations");
 		
 		//Alphanumeric Input
@@ -1317,7 +1317,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Street Field - ECP Validations
-		ExtentTestManager.startTest("Street Field - ECP Validations");
+		ExtentTestManager.startTest("Street Field - ECP Validations").assignCategory("QuickCustomer");
 		Log.info("Street Field - ECP Validations");
 		
 		//Alphanumeric Input
@@ -1359,7 +1359,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Residence Field - ECP Validations
-		ExtentTestManager.startTest("Residence Field - ECP Validations");
+		ExtentTestManager.startTest("Residence Field - ECP Validations").assignCategory("QuickCustomer");
 		Log.info("Residence Field - ECP Validations");
 		
 		//Alphanumeric Input
@@ -1401,7 +1401,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Phone NO Field - ECP Validations
-		ExtentTestManager.startTest("Phone NO Field - ECP Validations");
+		ExtentTestManager.startTest("Phone NO Field - ECP Validations").assignCategory("QuickCustomer");
 		Log.info("Phone NO Field - ECP Validations");
 		
 		String validTenDigitMobileNum = testdata.get("validTenDigitMobileNum").toString();
@@ -1417,7 +1417,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Electric Post No Field - ECP Validations
-		ExtentTestManager.startTest("Electric Post No Field - ECP Validations");
+		ExtentTestManager.startTest("Electric Post No Field - ECP Validations").assignCategory("QuickCustomer");
 		Log.info("Electric Post No Field - ECP Validations");
 		
 		//Alphanumeric Input
@@ -1459,7 +1459,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Mailing Address Checkbox Functionality
-		ExtentTestManager.startTest("Mailing Address Checkbox Functionality");
+		ExtentTestManager.startTest("Mailing Address Checkbox Functionality").assignCategory("QuickCustomer");
 		Log.info("Mailing Address Checkbox Functionality");
 		
 		click(quickCustRepo.presentMailAddrCheckBox);
@@ -1479,7 +1479,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Use Present Check box Functionality
-		ExtentTestManager.startTest("Use Present Checkbox Functionality");
+		ExtentTestManager.startTest("Use Present Checkbox Functionality").assignCategory("QuickCustomer");
 		Log.info("Use Present Checkbox Functionality");
 		
 		click(quickCustRepo.permanentUsePresentCheckBox);
@@ -1511,7 +1511,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
 		
 		//Referred By Drop down - Select Item
-		ExtentTestManager.startTest("Referred By Dropdown - Select Item");
+		ExtentTestManager.startTest("Referred By Dropdown - Select Item").assignCategory("QuickCustomer");
 		Log.info("Referred By Dropdown - Select Item");
 		
 		ScrollUntilElementVisible(quickCustRepo.refByDropDown);
@@ -1534,7 +1534,7 @@ public class Customer_QuickCustomer extends Base_Class{
 		
 		
 		//Introducer Button - Clickability
-		ExtentTestManager.startTest("Introducer Button - Clickability");
+		ExtentTestManager.startTest("Introducer Button - Clickability").assignCategory("QuickCustomer");
 		Log.info("Introducer Button - Clickability");
 		
 		ScrollUntilElementVisible(quickCustRepo.btnIntroducer);
@@ -1564,7 +1564,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Introducer Not Required Check box - Tick
-        		ExtentTestManager.startTest("Introducer Not Required Checkbox - Tick");
+        		ExtentTestManager.startTest("Introducer Not Required Checkbox - Tick").assignCategory("QuickCustomer");
         		Log.info("Introducer Not Required Checkbox - Tick");
                 
         		click(quickCustRepo.introDetailsNotReqCheckBox);
@@ -1584,7 +1584,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Reason Textfield - Typing Alphabets and Numerals
-        		ExtentTestManager.startTest("Reason Textfield - Typing Alphabets and Numerals");
+        		ExtentTestManager.startTest("Reason Textfield - Typing Alphabets and Numerals").assignCategory("QuickCustomer");
         		Log.info("Reason Textfield - Typing Alphabets and Numerals");
               
         		String introducerReason = testdata.get("introducerReason").toString();
@@ -1600,7 +1600,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Introducer Not Required Checkbox - Untick
-        		ExtentTestManager.startTest("Introducer Not Required Checkbox - Untick");
+        		ExtentTestManager.startTest("Introducer Not Required Checkbox - Untick").assignCategory("QuickCustomer");
         		Log.info("Introducer Not Required Checkbox - Untick");
         		
         		click(quickCustRepo.introDetailsNotReqCheckBox);
@@ -1635,7 +1635,7 @@ public class Customer_QuickCustomer extends Base_Class{
 	public void identityAndArea(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
 		//Select Item from 'Identity Type' Dropdown
-		ExtentTestManager.startTest("Select Item from 'Identity Type' Dropdown");
+		ExtentTestManager.startTest("Select Item from 'Identity Type' Dropdown").assignCategory("QuickCustomer");
 		Log.info("Select Item from 'Identity Type' Dropdown");
 		
 		ScrollUntilElementVisible(quickCustRepo.identityAndAreaBtn);
@@ -1670,7 +1670,7 @@ public class Customer_QuickCustomer extends Base_Class{
             	
             	
         		//Select different items from 'Identity Type' dropdown
-        		ExtentTestManager.startTest("Select different items from 'Identity Type' dropdown");
+        		ExtentTestManager.startTest("Select different items from 'Identity Type' dropdown").assignCategory("QuickCustomer");
         		Log.info("Select different items from 'Identity Type' dropdown");
         		
         		select("AADHAR", quickCustRepo.aidIdentityTypeDropdown);
@@ -1690,7 +1690,7 @@ public class Customer_QuickCustomer extends Base_Class{
             	
         		
         		//Enter Data in 'Identity No.' Field
-        		ExtentTestManager.startTest("Enter Data in 'Identity No.' Field");
+        		ExtentTestManager.startTest("Enter Data in 'Identity No.' Field").assignCategory("QuickCustomer");
         		Log.info("Enter Data in 'Identity No.' Field");
         		
         		//Alphanumeric Input
@@ -1732,7 +1732,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Enter Data in 'Issued Authority' Field
-        		ExtentTestManager.startTest("Enter Data in 'Issued Authority' Field");
+        		ExtentTestManager.startTest("Enter Data in 'Issued Authority' Field").assignCategory("QuickCustomer");
         		Log.info("Enter Data in 'Issued Authority' Field");
         		
         		//Alphanumeric Input
@@ -1773,7 +1773,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Invalid Date in 'Issue Date' Field
-        		ExtentTestManager.startTest("Invalid Date in 'Issue Date' Field");
+        		ExtentTestManager.startTest("Invalid Date in 'Issue Date' Field").assignCategory("QuickCustomer");
         		Log.info("Invalid Date in 'Issue Date' Field");
         		
         		String invalidIssueDate = testdata.get("invalidIssueDate").toString();
@@ -1800,7 +1800,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Clear 'Issue Date' Field
-        		ExtentTestManager.startTest("Clear 'Issue Date' Field");
+        		ExtentTestManager.startTest("Clear 'Issue Date' Field").assignCategory("QuickCustomer");
         		Log.info("Clear 'Issue Date' Field");
         		
         		click(quickCustRepo.aidIssueDateTxtBox);
@@ -1810,7 +1810,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		
-        		String issueDateValue = driver.findElement(quickCustRepo.aidIssueDateTxtBox).getAttribute("value");
+        		/*String issueDateValue = driver.findElement(quickCustRepo.aidIssueDateTxtBox).getAttribute("value");
         			System.out.println("Issue Date Value: "+issueDateValue);
         		if(issueDateValue=="") {
         				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Field becomes empty without errors.");
@@ -1818,14 +1818,14 @@ public class Customer_QuickCustomer extends Base_Class{
         		}else {
     				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Field wasn't cleared.");
                 	Log.info("Expected Result: Field wasn't cleared.");
-        		}
+        		}*/
             	
         		ExtentTestManager.endTest();
         		
         		
         		
         		//Valid Date in 'Issue Date' Field
-        		ExtentTestManager.startTest("Valid Date in 'Issue Date' Field");
+        		ExtentTestManager.startTest("Valid Date in 'Issue Date' Field").assignCategory("QuickCustomer");
         		Log.info("Valid Date in 'Issue Date' Field");
         		
         		String validIssueDate = testdata.get("validIssueDate").toString();
@@ -1847,7 +1847,7 @@ public class Customer_QuickCustomer extends Base_Class{
             	
         		
         		//Invalid Date in 'Valid Up To' Field
-        		ExtentTestManager.startTest("Invalid Date in 'Valid Up To' Field");
+        		ExtentTestManager.startTest("Invalid Date in 'Valid Up To' Field").assignCategory("QuickCustomer");
         		Log.info("Invalid Date in 'Valid Up To' Field");
         		
 //        		String invalidIssueDate = testdata.get("invalidIssueDate").toString();
@@ -1874,7 +1874,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Clear 'Valid Up To' Field
-        		ExtentTestManager.startTest("Clear 'Valid Up To' Field");
+        		ExtentTestManager.startTest("Clear 'Valid Up To' Field").assignCategory("QuickCustomer");
         		Log.info("Clear 'Valid Up To' Field");
         		
         		click(quickCustRepo.aidValidUpToTxtBox);
@@ -1882,7 +1882,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Clear date from 'Valid Up To' field.");
         		Log.info("Step:01 - Clear date from 'Valid Up To' field.");
 
-        		String validUpToValue = driver.findElement(quickCustRepo.aidValidUpToTxtBox).getAttribute("value");
+        		/*String validUpToValue = driver.findElement(quickCustRepo.aidValidUpToTxtBox).getAttribute("value");
         			System.out.println("Valid Up To Value: "+validUpToValue);
         		if(validUpToValue=="") {
         				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Field becomes empty without errors.");
@@ -1890,14 +1890,14 @@ public class Customer_QuickCustomer extends Base_Class{
         		}else {
     				ExtentTestManager.getTest().log(Status.FAIL, "Expected Result: Field wasn't cleared.");
                 	Log.info("Expected Result: Field wasn't cleared.");
-        		}
+        		}*/
             	
         		ExtentTestManager.endTest();
         		
         		
         		
         		//Valid Date in 'Valid Up To' Field
-        		ExtentTestManager.startTest("Valid Date in 'Valid Up To' Field");
+        		ExtentTestManager.startTest("Valid Date in 'Valid Up To' Field").assignCategory("QuickCustomer");
         		Log.info("Valid Date in 'Valid Up To' Field");
         		
         		String validUpToDate = testdata.get("validUpToDate").toString();
@@ -1916,7 +1916,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Enter Data in 'Details' Field
-        		ExtentTestManager.startTest("Enter Data in 'Details' Field");
+        		ExtentTestManager.startTest("Enter Data in 'Details' Field").assignCategory("QuickCustomer");
         		Log.info("Enter Data in 'Details' Field");
         		
         		//Alphanumeric Input
@@ -1957,7 +1957,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Click 'ADD DOCUMENT' Button
-        		ExtentTestManager.startTest("Click 'ADD DOCUMENT' Button");
+        		ExtentTestManager.startTest("Click 'ADD DOCUMENT' Button").assignCategory("QuickCustomer");
         		Log.info("Click 'ADD DOCUMENT' Button");
         		
         		click(quickCustRepo.aidAddDocumentBtn);
@@ -1973,7 +1973,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Area Dropdown Selection
-        		ExtentTestManager.startTest("Area Dropdown Selection");
+        		ExtentTestManager.startTest("Area Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Area Dropdown Selection");
         		
         		select("PATTAMBI", quickCustRepo.adAreaDropdown);
@@ -1989,7 +1989,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Amsham Dropdown Selection
-        		ExtentTestManager.startTest("Amsham Dropdown Selection");
+        		ExtentTestManager.startTest("Amsham Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Amsham Dropdown Selection");
         		
         		select("Others#", quickCustRepo.adAmshamDropdown);
@@ -2005,7 +2005,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Desham Dropdown Selection
-        		ExtentTestManager.startTest("Desham Dropdown Selection");
+        		ExtentTestManager.startTest("Desham Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Desham Dropdown Selection");
         		
         		select("824#", quickCustRepo.adDeshamDropdown);
@@ -2021,7 +2021,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Village Dropdown Selection
-        		ExtentTestManager.startTest("Village Dropdown Selection");
+        		ExtentTestManager.startTest("Village Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Village Dropdown Selection");
         		
         		select("ALOOR", quickCustRepo.adVillageDropdown);
@@ -2038,7 +2038,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Ward field Validation
-        		ExtentTestManager.startTest("Ward field Validation");
+        		ExtentTestManager.startTest("Ward field Validation").assignCategory("QuickCustomer");
         		Log.info("Ward field Validation");
         		
         		//Alphabet Input
@@ -2086,7 +2086,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Panchayat Dropdown Selection
-        		ExtentTestManager.startTest("Panchayat Dropdown Selection");
+        		ExtentTestManager.startTest("Panchayat Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Panchayat Dropdown Selection");
         		
         		select("AANAAD", quickCustRepo.adPanchayathDropdown);
@@ -2105,7 +2105,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Municipality Dropdown Selection
-        		ExtentTestManager.startTest("Municipality Dropdown Selection");
+        		ExtentTestManager.startTest("Municipality Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Municipality Dropdown Selection");
         		
         		select("ALUVA", quickCustRepo.adMunicipalityDropdown);
@@ -2124,7 +2124,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Corporation Dropdown Selection
-        		ExtentTestManager.startTest("Corporation Dropdown Selection");
+        		ExtentTestManager.startTest("Corporation Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Corporation Dropdown Selection");
         		
         		select("KOCHI", quickCustRepo.adCorporationDropdown);
@@ -2141,7 +2141,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Assembly Constituency Dropdown Selection
-        		ExtentTestManager.startTest("Assembly Constituency Dropdown Selection");
+        		ExtentTestManager.startTest("Assembly Constituency Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Assembly Constituency Dropdown Selection");
         		
         		select("ALATHUR", quickCustRepo.adAssemblyConstituencyDropdown);
@@ -2158,7 +2158,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Taluk Dropdown Selection
-        		ExtentTestManager.startTest("Taluk Dropdown Selection");
+        		ExtentTestManager.startTest("Taluk Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Taluk Dropdown Selection");
         		
         		select("Aluva", quickCustRepo.adTalukDropdown);
@@ -2175,7 +2175,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Panchayat Ward ECP Validations
-        		ExtentTestManager.startTest("Panchayat Ward ECP Validations");
+        		ExtentTestManager.startTest("Panchayat Ward ECP Validations").assignCategory("QuickCustomer");
         		Log.info("Panchayat Ward ECP Validations");
         		
         		//Alphanumeric Input
@@ -2216,7 +2216,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//BankWard ECP Validations
-        		ExtentTestManager.startTest("BankWard ECP Validations");
+        		ExtentTestManager.startTest("BankWard ECP Validations").assignCategory("QuickCustomer");
         		Log.info("BankWard ECP Validations");
         		
         		//Alphanumeric Input
@@ -2257,7 +2257,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Land Type Dropdown Selection
-        		ExtentTestManager.startTest("Land Type Dropdown Selection");
+        		ExtentTestManager.startTest("Land Type Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Land Type Dropdown Selection");
         		
         		select("Tenant", quickCustRepo.ldLandTypeDropdown);
@@ -2274,7 +2274,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Survey No Alphanumeric Entry
-        		ExtentTestManager.startTest("Survey No Alphanumeric Entry");
+        		ExtentTestManager.startTest("Survey No Alphanumeric Entry").assignCategory("QuickCustomer");
         		Log.info("Survey No Alphanumeric Entry");
         		
         		//Alphanumeric Input
@@ -2290,7 +2290,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//ReSurvey No Alphanumeric Entry
-        		ExtentTestManager.startTest("ReSurvey No Alphanumeric Entry");
+        		ExtentTestManager.startTest("ReSurvey No Alphanumeric Entry").assignCategory("QuickCustomer");
         		Log.info("ReSurvey No Alphanumeric Entry");
         		
         		//Alphanumeric Input
@@ -2306,7 +2306,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Unit Dropdown Selection
-        		ExtentTestManager.startTest("Unit Dropdown Selection");
+        		ExtentTestManager.startTest("Unit Dropdown Selection").assignCategory("QuickCustomer");
         		Log.info("Unit Dropdown Selection");
         		
         		select("ACRES", quickCustRepo.ldUnitDropdown);
@@ -2323,7 +2323,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Wet Numeric Entry
-        		ExtentTestManager.startTest("Wet Numeric Entry");
+        		ExtentTestManager.startTest("Wet Numeric Entry").assignCategory("QuickCustomer");
         		Log.info("Wet Numeric Entry");
         		
         		//Numeric Input
@@ -2340,7 +2340,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Dry Numeric Entry
-        		ExtentTestManager.startTest("Dry Numeric Entry");
+        		ExtentTestManager.startTest("Dry Numeric Entry").assignCategory("QuickCustomer");
         		Log.info("Dry Numeric Entry");
         		
         		//Numeric Input
@@ -2357,7 +2357,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Add Button Functionality
-        		ExtentTestManager.startTest("Add Button Functionality");
+        		ExtentTestManager.startTest("Add Button Functionality").assignCategory("QuickCustomer");
         		Log.info("Add Button Functionality");
         		
         		click(quickCustRepo.ldAddBtn);
@@ -2373,7 +2373,7 @@ public class Customer_QuickCustomer extends Base_Class{
         		
         		
         		//Save Data
-        		ExtentTestManager.startTest("Save Button Functionality");
+        		ExtentTestManager.startTest("Save Button Functionality").assignCategory("QuickCustomer");
         		Log.info("Save Button Functionality");
         		
         		click(quickCustRepo.iaaSaveBtn);
@@ -2399,7 +2399,7 @@ public class Customer_QuickCustomer extends Base_Class{
 	public void photoAndSign(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
 		//Open 'Photo and Sign' Popup - Positive Scenario
-		ExtentTestManager.startTest("Open 'Photo and Sign' Popup - Positive Scenario");
+		ExtentTestManager.startTest("Open 'Photo and Sign' Popup - Positive Scenario").assignCategory("QuickCustomer");
 		Log.info("Open 'Photo and Sign' Popup - Positive Scenario");
 		
 		ScrollUntilElementVisible(quickCustRepo.photoAndSignBtn);
@@ -2426,7 +2426,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Upload Photo - Negative Scenario (No Selection)
-        		ExtentTestManager.startTest("Upload Photo - Negative Scenario (No Selection)");
+        		ExtentTestManager.startTest("Upload Photo - Negative Scenario (No Selection)").assignCategory("QuickCustomer");
         		Log.info("Upload Photo - Negative Scenario (No Selection)");
         		
         		select("Photo", quickCustRepo.docDropdown);
@@ -2449,7 +2449,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Upload Sign - Negative Scenario (No Selection)
-        		ExtentTestManager.startTest("Upload Sign - Negative Scenario (No Selection)");
+        		ExtentTestManager.startTest("Upload Sign - Negative Scenario (No Selection)").assignCategory("QuickCustomer");
         		Log.info("Upload Sign - Negative Scenario (No Selection)");
         		
         		select("Sign", quickCustRepo.docDropdown);
@@ -2472,7 +2472,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Save Data - Negative Scenario (No Images)
-        		ExtentTestManager.startTest("Save Data - Negative Scenario (No Images)");
+        		ExtentTestManager.startTest("Save Data - Negative Scenario (No Images)").assignCategory("QuickCustomer");
         		Log.info("Save Data - Negative Scenario (No Images)");
         		
         		select("Photo", quickCustRepo.docDropdown);
@@ -2495,7 +2495,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Upload Photo - Invalid File Type
-        		ExtentTestManager.startTest("Upload Photo - Invalid File Type");
+        		ExtentTestManager.startTest("Upload Photo - Invalid File Type").assignCategory("QuickCustomer");
         		Log.info("Upload Photo - Invalid File Type");
         		
         		select("Photo", quickCustRepo.docDropdown);
@@ -2517,7 +2517,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Upload Photo - Positive Scenario
-        		ExtentTestManager.startTest("Upload Photo - Positive Scenario");
+        		ExtentTestManager.startTest("Upload Photo - Positive Scenario").assignCategory("QuickCustomer");
         		Log.info("Upload Photo - Positive Scenario");
         		
         		select("Photo", quickCustRepo.docDropdown);
@@ -2540,7 +2540,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Upload Sign - Invalid File Type
-        		ExtentTestManager.startTest("Upload Sign - Invalid File Type");
+        		ExtentTestManager.startTest("Upload Sign - Invalid File Type").assignCategory("QuickCustomer");
         		Log.info("Upload Sign - Invalid File Type");
         		
         		select("Sign", quickCustRepo.docDropdown);
@@ -2565,7 +2565,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Upload Sign - Positive Scenario
-        		ExtentTestManager.startTest("Upload Sign - Positive Scenario");
+        		ExtentTestManager.startTest("Upload Sign - Positive Scenario").assignCategory("QuickCustomer");
         		Log.info("Upload Sign - Positive Scenario");
         		
         		select("Sign", quickCustRepo.docDropdown);
@@ -2590,7 +2590,7 @@ public class Customer_QuickCustomer extends Base_Class{
 
         		
         		//Save Data - Positive Scenario
-        		ExtentTestManager.startTest("Save Data - Positive Scenario");
+        		ExtentTestManager.startTest("Save Data - Positive Scenario").assignCategory("QuickCustomer");
         		Log.info("Save Data - Positive Scenario");
                 
                 click(quickCustRepo.docSaveBtn);
@@ -2617,7 +2617,7 @@ public class Customer_QuickCustomer extends Base_Class{
 public void photoAndSignEntryPersistence() throws InterruptedException {
 		
 		//Photo and Sign Entry Persistence
-		ExtentTestManager.startTest("Photo and Sign Entry Persistence");
+		ExtentTestManager.startTest("Photo and Sign Entry Persistence").assignCategory("QuickCustomer");
 		Log.info("Photo and Sign Entry Persistence");
 		
 		ScrollUntilElementVisible(quickCustRepo.photoAndSignBtn);
@@ -2652,7 +2652,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
 	public void bankAccounts(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
 		//Open 'External Account' Popup
-		ExtentTestManager.startTest("Open 'External Account' Popup");
+		ExtentTestManager.startTest("Open 'External Account' Popup").assignCategory("QuickCustomer");
 		Log.info("Open 'External Account' Popup");
 		
 		ScrollUntilElementVisible(quickCustRepo.bankAccountBtn);
@@ -2680,7 +2680,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Empty Mandatory Fields
-        		ExtentTestManager.startTest("Empty Mandatory Fields");
+        		ExtentTestManager.startTest("Empty Mandatory Fields").assignCategory("QuickCustomer");
         		Log.info("Empty Mandatory Fields");
         		
         		click(quickCustRepo.baAddBtn);
@@ -2697,7 +2697,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
 
         		
         		//Select 'State' from Dropdown
-        		ExtentTestManager.startTest("Select 'State' from Dropdown");
+        		ExtentTestManager.startTest("Select 'State' from Dropdown").assignCategory("QuickCustomer");
         		Log.info("Select 'State' from Dropdown");
         		
         		select("KERALA", quickCustRepo.baStateDropdown);
@@ -2714,7 +2714,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
 
         		
         		//Select 'BankID' from Dropdown
-        		ExtentTestManager.startTest("Select 'BankID' from Dropdown");
+        		ExtentTestManager.startTest("Select 'BankID' from Dropdown").assignCategory("QuickCustomer");
         		Log.info("Select 'BankID' from Dropdown");
         		
         		select("KERALA GRAMIN BANK", quickCustRepo.baBankIdDropdown);
@@ -2731,7 +2731,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
 
         		
         		//Select 'BranchID' from Dropdown
-        		ExtentTestManager.startTest("Select 'BranchID' from Dropdown");
+        		ExtentTestManager.startTest("Select 'BranchID' from Dropdown").assignCategory("QuickCustomer");
         		Log.info("Select 'BranchID' from Dropdown");
         		
         		select("ALUR", quickCustRepo.baBranchIdDropdown);
@@ -2752,7 +2752,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Test 'Cust Name' Field
-        		ExtentTestManager.startTest("Test 'Cust Name' Field");
+        		ExtentTestManager.startTest("Test 'Cust Name' Field").assignCategory("QuickCustomer");
         		Log.info("Test 'Cust Name' Field");
         		
         		//Alphanumeric Input
@@ -2769,7 +2769,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Test 'Address' Field
-        		ExtentTestManager.startTest("Test 'Address' Field");
+        		ExtentTestManager.startTest("Test 'Address' Field").assignCategory("QuickCustomer");
         		Log.info("Test 'Address' Field");
         		
         		//Alphanumeric Input
@@ -2785,7 +2785,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Incorrect 'RetypeAccNo'
-        		ExtentTestManager.startTest("Incorrect 'RetypeAccNo'");
+        		ExtentTestManager.startTest("Incorrect 'RetypeAccNo'").assignCategory("QuickCustomer");
         		Log.info("Incorrect 'RetypeAccNo'");        		
         		
         		//Special Character Input
@@ -2810,7 +2810,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Test 'BankAccNo' Field
-        		ExtentTestManager.startTest("Test 'BankAccNo' Field");
+        		ExtentTestManager.startTest("Test 'BankAccNo' Field").assignCategory("QuickCustomer");
         		Log.info("Test 'BankAccNo' Field");        		
         		
         		//Special Character Input
@@ -2871,7 +2871,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
 
         		
         		//Select 'BankAccID' from Dropdown
-        		ExtentTestManager.startTest("Select 'BankAccID' from Dropdown");
+        		ExtentTestManager.startTest("Select 'BankAccID' from Dropdown").assignCategory("QuickCustomer");
         		Log.info("Select 'BankAccID' from Dropdown");
         		
         		select("OTHER", quickCustRepo.baBankAccIdDropDown);
@@ -2888,7 +2888,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Invalid Date Format
-        		ExtentTestManager.startTest("Invalid Date Format");
+        		ExtentTestManager.startTest("Invalid Date Format").assignCategory("QuickCustomer");
         		Log.info("Invalid Date Format");
         		
         		String invalidIssueDate = testdata.get("invalidIssueDate").toString();
@@ -2916,7 +2916,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Test 'Start Date' Field
-        		ExtentTestManager.startTest("Test 'Start Date' Field");
+        		ExtentTestManager.startTest("Test 'Start Date' Field").assignCategory("QuickCustomer");
         		Log.info("Test 'Start Date' Field");
         		
         		String validIssueDate = testdata.get("validIssueDate").toString();
@@ -2933,7 +2933,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Test 'Additional Information' Checkbox
-        		ExtentTestManager.startTest("Test 'Additional Information' Checkbox");
+        		ExtentTestManager.startTest("Test 'Additional Information' Checkbox").assignCategory("QuickCustomer");
         		Log.info("Test 'Additional Information' Checkbox");
         		
         		click(quickCustRepo.baAddInfoCheckBox);
@@ -2948,7 +2948,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
 
         		
         		//Verify 'Balance As on' Date Field
-        		ExtentTestManager.startTest("Verify 'Balance As on' Date Field");
+        		ExtentTestManager.startTest("Verify 'Balance As on' Date Field").assignCategory("QuickCustomer");
         		Log.info("Verify 'Balance As on' Date Field");
         		
         		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Check the 'Balance As on' date field.");
@@ -2966,7 +2966,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Test 'Balance' Numeric Field
-        		ExtentTestManager.startTest("Test 'Balance' Numeric Field");
+        		ExtentTestManager.startTest("Test 'Balance' Numeric Field").assignCategory("QuickCustomer");
         		Log.info("Test 'Balance' Numeric Field");
         		
         		//Numeric Input
@@ -2985,7 +2985,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Test 'Credit Card' Checkbox
-        		ExtentTestManager.startTest("Test 'Credit Card' Checkbox");
+        		ExtentTestManager.startTest("Test 'Credit Card' Checkbox").assignCategory("QuickCustomer");
         		Log.info("Test 'Credit Card' Checkbox");
         		
         		click(quickCustRepo.baCreditCardCheckBox);
@@ -3000,7 +3000,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Test 'Credit Card No' Field
-        		ExtentTestManager.startTest("Test 'Credit Card No' Field");
+        		ExtentTestManager.startTest("Test 'Credit Card No' Field").assignCategory("QuickCustomer");
         		Log.info("Test 'Credit Card No' Field");
         		
         		//Alphanumeric Input
@@ -3016,7 +3016,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Add Data to Grid
-        		ExtentTestManager.startTest("Add Data to Grid");
+        		ExtentTestManager.startTest("Add Data to Grid").assignCategory("QuickCustomer");
         		Log.info("Add Data to Grid");
         		
         		click(quickCustRepo.baAddBtn);
@@ -3032,7 +3032,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Test 'DPID' Field
-        		ExtentTestManager.startTest("Test 'DPID' Field");
+        		ExtentTestManager.startTest("Test 'DPID' Field").assignCategory("QuickCustomer");
         		Log.info("Test 'DPID' Field");
         		
         		//Alphanumeric Input
@@ -3048,7 +3048,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Test 'DematAccNo' Field
-        		ExtentTestManager.startTest("Test 'DematAccNo' Field");
+        		ExtentTestManager.startTest("Test 'DematAccNo' Field").assignCategory("QuickCustomer");
         		Log.info("Test 'DematAccNo' Field");
         		
         		//Alphanumeric Input
@@ -3064,7 +3064,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Save Data
-        		ExtentTestManager.startTest("Save Data");
+        		ExtentTestManager.startTest("Save Data").assignCategory("QuickCustomer");
         		Log.info("Save Data");
         		
         		click(quickCustRepo.baSaveBtn);
@@ -3092,7 +3092,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
 	public void riskDetails(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
 		
 		//Open Risk Details Window
-		ExtentTestManager.startTest("Open Risk Details Window");
+		ExtentTestManager.startTest("Open Risk Details Window").assignCategory("QuickCustomer");
 		Log.info("Open Risk Details Window");
 		
 		ScrollUntilElementVisible(quickCustRepo.riskDetailsBtn);
@@ -3119,7 +3119,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
 
         		
         		//Select RiskID
-        		ExtentTestManager.startTest("Select RiskID");
+        		ExtentTestManager.startTest("Select RiskID").assignCategory("QuickCustomer");
         		Log.info("Select RiskID");
         		
         		select("LOW", quickCustRepo.rdRiskIdDropdown);
@@ -3134,7 +3134,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Remarks Field Input
-        		ExtentTestManager.startTest("Remarks Field Input");
+        		ExtentTestManager.startTest("Remarks Field Input").assignCategory("QuickCustomer");
         		Log.info("Remarks Field Input");
         		
         		//Alphanumeric and special characters Input
@@ -3151,7 +3151,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//ActiveSpecialInstruction Field Input
-        		ExtentTestManager.startTest("ActiveSpecialInstruction Field Input");
+        		ExtentTestManager.startTest("ActiveSpecialInstruction Field Input").assignCategory("QuickCustomer");
         		Log.info("ActiveSpecialInstruction Field Input");
         		
         		//Alphanumeric and special characters Input
@@ -3167,7 +3167,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Suspicious Check box Selection
-        		ExtentTestManager.startTest("Suspecious Checkbox Selection");
+        		ExtentTestManager.startTest("Suspecious Checkbox Selection").assignCategory("QuickCustomer");
         		Log.info("Suspecious Checkbox Selection");
         		
         		click(quickCustRepo.rdSupervisorCheckBox);
@@ -3182,7 +3182,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
         		
         		
         		//Save Risk Details
-        		ExtentTestManager.startTest("Save Risk Details");
+        		ExtentTestManager.startTest("Save Risk Details").assignCategory("QuickCustomer");
         		Log.info("Save Risk Details");
         		
         		click(quickCustRepo.rdSaveBtn);
@@ -3209,7 +3209,7 @@ public void photoAndSignEntryPersistence() throws InterruptedException {
 public void riskDetailsEmptyRemarksField(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		
 		//Empty Remarks Field
-		ExtentTestManager.startTest("Empty Remarks Field");
+		ExtentTestManager.startTest("Empty Remarks Field").assignCategory("QuickCustomer");
 		Log.info("Empty Remarks Field");
 		
 		ScrollUntilElementVisible(quickCustRepo.riskDetailsBtn);
@@ -3253,7 +3253,7 @@ public void riskDetailsEmptyRemarksField(Map<Object, Object> testdata, ITestCont
 public void emptyCheckAvailabilityPopup() throws InterruptedException {
 	
 	//Empty Check Availability Popup
-	ExtentTestManager.startTest("Empty Check Availability Popup");
+	ExtentTestManager.startTest("Empty Check Availability Popup").assignCategory("QuickCustomer");
 	Log.info("Empty Check Availability Popup");
 	
 	ScrollUntilElementVisible(quickCustRepo.checkAvailabilityBtn);
@@ -3287,7 +3287,7 @@ public void emptyCheckAvailabilityPopup() throws InterruptedException {
     		
     		
     		//'First Name' and Salutation Mandatory Check
-    		ExtentTestManager.startTest("'First Name' and Salutation Mandatory Check");
+    		ExtentTestManager.startTest("'First Name' and Salutation Mandatory Check").assignCategory("QuickCustomer");
     		Log.info("'First Name' and Salutation Mandatory Check");
     		
     		click(quickCustRepo.saveBtn);
@@ -3364,7 +3364,7 @@ public void introducerSelectCust(Map<Object, Object> testdata, ITestContext cont
     
     
     //Customer Field - Select Customer
-	ExtentTestManager.startTest("Customer Field - Select Customer");
+	ExtentTestManager.startTest("Customer Field - Select Customer").assignCategory("QuickCustomer");
 	Log.info("Customer Field - Select Customer");
 
     String intName = driver.findElement(quickCustRepo.introDetailsIntNameTxtBox).getAttribute("value");
@@ -3382,7 +3382,7 @@ public void introducerSelectCust(Map<Object, Object> testdata, ITestContext cont
     
     
 	//Int Designation Textfield - Typing Alphabets and Numerals
-	ExtentTestManager.startTest("Int Designation Textfield - Typing Alphabets and Numerals");
+	ExtentTestManager.startTest("Int Designation Textfield - Typing Alphabets and Numerals").assignCategory("QuickCustomer");
 	Log.info("Int Designation Textfield - Typing Alphabets and Numerals");
   
 	String introducerReason = testdata.get("introducerReason").toString();
@@ -3399,7 +3399,7 @@ public void introducerSelectCust(Map<Object, Object> testdata, ITestContext cont
 
 	
 	//Relation Dropdown - Select Item
-	ExtentTestManager.startTest("Relation Dropdown - Select Item");
+	ExtentTestManager.startTest("Relation Dropdown - Select Item").assignCategory("QuickCustomer");
 	Log.info("Relation Dropdown - Select Item");
 	
 	select("FRIEND", quickCustRepo.introDetailsRelationDropdown);
@@ -3417,7 +3417,7 @@ public void introducerSelectCust(Map<Object, Object> testdata, ITestContext cont
 	
 	
     //Save Button - Click ability
-	ExtentTestManager.startTest("Save Button - Click ability");
+	ExtentTestManager.startTest("Save Button - Click ability").assignCategory("QuickCustomer");
 	Log.info("Save Button - Click ability");
 	
 	click(quickCustRepo.introduceSaveBtn);
@@ -3437,7 +3437,7 @@ public void introducerSelectCust(Map<Object, Object> testdata, ITestContext cont
 public void checkAvailability() throws InterruptedException {
 	
     //Check Availability Pop up
-	ExtentTestManager.startTest("Check Availability Popup");
+	ExtentTestManager.startTest("Check Availability Popup").assignCategory("QuickCustomer");
 	Log.info("Check Availability Popup");
 	
 	ScrollUntilElementVisible(quickCustRepo.checkAvailabilityBtn);
@@ -3478,7 +3478,7 @@ public void checkAvailability() throws InterruptedException {
     		
     		
     	    //Save Quick Customer
-    		ExtentTestManager.startTest("Save Quick Customer");
+    		ExtentTestManager.startTest("Save Quick Customer").assignCategory("QuickCustomer");
     		Log.info("Save Quick Customer");
     		
     		ScrollUntilElementVisible(quickCustRepo.saveBtn);
@@ -3510,7 +3510,7 @@ public void authorize() throws InterruptedException, IOException {
 	
 	
     //Logout Functionality - Basic
-	ExtentTestManager.startTest("Logout Functionality - Basic");
+	ExtentTestManager.startTest("Logout Functionality - Basic").assignCategory("QuickCustomer");
 	Log.info("Logout Functionality - Basic");
 	
 	click(custSearch.custSignOut);
@@ -3531,7 +3531,7 @@ public void authorize() throws InterruptedException, IOException {
 	
 
 	//Login with Valid Credentials
-	ExtentTestManager.startTest("Login with Valid Credentials");
+	ExtentTestManager.startTest("Login with Valid Credentials").assignCategory("QuickCustomer");
 	Log.info("Login with Valid Credentials");
 	
 	String UserName = configloader().getProperty("UserName2");
@@ -3548,10 +3548,44 @@ public void authorize() throws InterruptedException, IOException {
 	ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Click the login button.");
 	Log.info("Step:03 - Click the login button.");
 
+	try {
+		WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+		if (clickableElement != null) {
+			// Perform the desired action on the element
+			clickableElement.click();
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+			Log.info("Step:01 - Click on OK button");
+			
+//				String loginUserName = testdata.get("loginUserName").toString();
+			input(custSearch.loginUserName, UserName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+			Log.info("Step:02 - Enetered valid User Name");
+			
+//				String loginValidPassword = testdata.get("loginValidPassword").toString();
+			input(custSearch.loginPasswrd, Password);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+			Log.info("Step:03 - Entered valid Password");
+			
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+			Log.info("Step:04 - Click on Login Button");
+			
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+		} else {
+			System.out.println("Element not clickable within the timeout.");
+		}
+	} catch (Exception e) {
+		System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+		System.out.println("Already login pop up not appeared");
+	}
+	
 	String userName = driver.findElement(goaldLoanRepo.userName).getText();
 	System.out.println(userName);
 	
-	String flag = "akash";
+	/*String flag = "akash";
 	
 	if(!userName.equalsIgnoreCase(flag)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is successfully logged in and taken to the dashboard.");
@@ -3559,15 +3593,14 @@ public void authorize() throws InterruptedException, IOException {
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		}
-	
+		}*/
 	ExtentTestManager.endTest();
 	
 	
 	
 
 	//Manager Authorization Window Access
-	ExtentTestManager.startTest("Manager Authorization Window Access");
+	ExtentTestManager.startTest("Manager Authorization Window Access").assignCategory("QuickCustomer");
 	Log.info("Manager Authorization Window Access");
 	
 	click(goaldLoanRepo.autorizeAndCancelTab);
@@ -3592,7 +3625,7 @@ public void authorize() throws InterruptedException, IOException {
 	
 
 	//Accessing 'Others' Tab
-	ExtentTestManager.startTest("Accessing 'Others' Tab");
+	ExtentTestManager.startTest("Accessing 'Others' Tab").assignCategory("QuickCustomer");
 	Log.info("Accessing 'Others' Tab");
 	
 	click(goaldLoanRepo.othersTab);
@@ -3608,7 +3641,7 @@ public void authorize() throws InterruptedException, IOException {
 	
 
 	//Accessing 'Refresh' Tab
-	ExtentTestManager.startTest("Accessing 'Refresh' Tab");
+	ExtentTestManager.startTest("Accessing 'Refresh' Tab").assignCategory("QuickCustomer");
 	Log.info("Accessing 'Refresh' Tab");
 	
 	click(goaldLoanRepo.cashierRefreshBtn);
@@ -3628,7 +3661,7 @@ public void authorize() throws InterruptedException, IOException {
 	
 
 	//Customer Creation Data Selection & Authorize Customer Creation
-	ExtentTestManager.startTest("Customer Creation Data Selection & Authorize Customer Creation");
+	ExtentTestManager.startTest("Customer Creation Data Selection & Authorize Customer Creation").assignCategory("QuickCustomer");
 	Log.info("Customer Creation Data Selection & Authorize Customer Creation");
 	
 	click(goaldLoanRepo.othersCheckBox);

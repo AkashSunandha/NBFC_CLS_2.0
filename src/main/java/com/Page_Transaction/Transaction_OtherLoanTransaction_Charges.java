@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.Map;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -39,7 +41,7 @@ public class Transaction_OtherLoanTransaction_Charges extends Base_Class{
 	public void navigateToLoanChargePosting() throws InterruptedException {
 		
 		//Charge Posting Window Access
-		ExtentTestManager.startTest("Charge Posting Window Access");
+		ExtentTestManager.startTest("Charge Posting Window Access").assignCategory("OL Transaction(Charges)-Cash");
 		Log.info("Charge Posting Window Access");
 		
 		click(loanChargPostingrepo.processingPostingTab);
@@ -69,7 +71,7 @@ public void loanChargePosting(Map<Object, Object> testdata, ITestContext context
 
 	
 	//Branch Auto load in Charge Posting
-	ExtentTestManager.startTest("Branch Auto load in Charge Posting");
+	ExtentTestManager.startTest("Branch Auto load in Charge Posting").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Branch Auto load in Charge Posting");
 
 	loginBranchValue = driver.findElement(loanChargPostingrepo.loginBranch).getText();
@@ -91,7 +93,7 @@ public void loanChargePosting(Map<Object, Object> testdata, ITestContext context
 
 	
 	//Transaction and Posting Dates Verification
-	ExtentTestManager.startTest("Transaction and Posting Dates Verification");
+	ExtentTestManager.startTest("Transaction and Posting Dates Verification").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Transaction and Posting Dates Verification");
 	
 	String currentTransDateValue = driver.findElement(loanChargPostingrepo.lcpcurrentTransDate).getText();
@@ -122,7 +124,7 @@ public void loanChargePosting(Map<Object, Object> testdata, ITestContext context
 
 	
 	//Select Loan Group
-	ExtentTestManager.startTest("Select Loan Group");
+	ExtentTestManager.startTest("Select Loan Group").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Select Loan Group");
 	
 	select("OTHER LOANS",loanChargPostingrepo.lcpLoanGroupDropdown);
@@ -137,7 +139,7 @@ public void loanChargePosting(Map<Object, Object> testdata, ITestContext context
 
 	
 	//Select Product Name
-	ExtentTestManager.startTest("Select Product Name");
+	ExtentTestManager.startTest("Select Product Name").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Select Product Name");
 	
 	select("PERSONAL LOAN WEEKLY",loanChargPostingrepo.lcpProductNameDropdown);
@@ -152,7 +154,7 @@ public void loanChargePosting(Map<Object, Object> testdata, ITestContext context
 
 	
 	//Account Number Entry and Auto-load Verification
-	ExtentTestManager.startTest("Account Number Entry and Auto-load Verification");
+	ExtentTestManager.startTest("Account Number Entry and Auto-load Verification").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Account Number Entry and Auto-load Verification");
 
 	String accNum = transJewelMthds.generateUniqueId(spAccNum, clmnNam);
@@ -195,7 +197,7 @@ public void loanChargePosting(Map<Object, Object> testdata, ITestContext context
 
 	
 	//Select Notice Charge Type
-	ExtentTestManager.startTest("Select Notice Charge Type");
+	ExtentTestManager.startTest("Select Notice Charge Type").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Select Notice Charge Type");
 	
 	select("Notice",loanChargPostingrepo.lcpChargeTypeDropdown);
@@ -210,7 +212,7 @@ public void loanChargePosting(Map<Object, Object> testdata, ITestContext context
 
 	
 	//Enter Charge Amount
-	ExtentTestManager.startTest("Enter Charge Amount");
+	ExtentTestManager.startTest("Enter Charge Amount").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Enter Charge Amount");
 
 	amt = testdata.get("amount").toString();
@@ -226,7 +228,7 @@ public void loanChargePosting(Map<Object, Object> testdata, ITestContext context
 	
 	
 	//Add Charge and Verify in Grid
-	ExtentTestManager.startTest("Add Charge and Verify in Grid");
+	ExtentTestManager.startTest("Add Charge and Verify in Grid").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Add Charge and Verify in Grid");
 	
 	click(loanChargPostingrepo.lcpAddBtn);
@@ -253,7 +255,7 @@ public void loanChargePosting(Map<Object, Object> testdata, ITestContext context
 	
 	
 	//Save Charge and Successful Message Display
-	ExtentTestManager.startTest("Save Charge and Successful Message Display");
+	ExtentTestManager.startTest("Save Charge and Successful Message Display").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Save Charge and Successful Message Display");
 	
 	click(loanChargPostingrepo.lcpSaveBtn);
@@ -282,7 +284,7 @@ public void transaction(Map<Object, Object> testdata, ITestContext context) thro
 	transJewelMthds.transactionsJewel();
 	
 	//Branch Auto load in Transaction Module
-	ExtentTestManager.startTest("Branch Auto load in Transaction Module");
+	ExtentTestManager.startTest("Branch Auto load in Transaction Module").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Branch Auto load in Transaction Module");
 
 //	String loginBranchValue = driver.findElement(loanChargPostingrepo.loginBranch).getText();
@@ -304,7 +306,7 @@ public void transaction(Map<Object, Object> testdata, ITestContext context) thro
 	
 	
 	//Select Loan Group
-			ExtentTestManager.startTest("Select Loan Group");
+			ExtentTestManager.startTest("Select Loan Group").assignCategory("OL Transaction(Charges)-Cash");
 			Log.info("Select Loan Group");
 			
 			select("OTHER LOANS",transJewelRepo.aiProductGroupDropdowm);
@@ -319,7 +321,7 @@ public void transaction(Map<Object, Object> testdata, ITestContext context) thro
 			
 			
 			//Select Product Name
-			ExtentTestManager.startTest("Select Product Name");
+			ExtentTestManager.startTest("Select Product Name").assignCategory("OL Transaction(Charges)-Cash");
 			Log.info("Select Product Name");
 			
 			select("PERSONAL LOAN WEEKLY",transJewelRepo.aiProdcutNameDropdowm);
@@ -334,7 +336,7 @@ public void transaction(Map<Object, Object> testdata, ITestContext context) thro
 			
 			
 			//Enter Account Number in Transaction
-			ExtentTestManager.startTest("Enter Account Number in Transaction");
+			ExtentTestManager.startTest("Enter Account Number in Transaction").assignCategory("OL Transaction(Charges)-Cash");
 			Log.info("Enter Account Number in Transaction");
 						
 			input(transJewelRepo.aiAccNumTxtBox, last4DigitsOfAccNum);
@@ -349,7 +351,7 @@ public void transaction(Map<Object, Object> testdata, ITestContext context) thro
 			
 			
 			//Select Transaction Type
-			ExtentTestManager.startTest("Select Transaction Type");
+			ExtentTestManager.startTest("Select Transaction Type").assignCategory("OL Transaction(Charges)-Cash");
 			Log.info("Select Transaction Type");
 			
 			select("Credit",transJewelRepo.aiTransTypeDropdwon);
@@ -365,7 +367,7 @@ public void transaction(Map<Object, Object> testdata, ITestContext context) thro
 			
 			
 			//Open Account Transactions
-			ExtentTestManager.startTest("Open Account Transactions");
+			ExtentTestManager.startTest("Open Account Transactions").assignCategory("OL Transaction(Charges)-Cash");
 			Log.info("Open Account Transactions");
 			
 			click(transJewelRepo.aiGoBtn);
@@ -396,7 +398,7 @@ public void transaction(Map<Object, Object> testdata, ITestContext context) thro
 			
 			
 			//Verify Notice Charge in Transaction
-			ExtentTestManager.startTest("Verify Notice Charge in Transaction");
+			ExtentTestManager.startTest("Verify Notice Charge in Transaction").assignCategory("OL Transaction(Charges)-Cash");
 			Log.info("Verify Notice Charge in Transaction");
 
 			String noticeTxtBox1Value = driver.findElement(loanChargPostingrepo.noticeTxtBox1).getAttribute("value");
@@ -417,7 +419,7 @@ public void transaction(Map<Object, Object> testdata, ITestContext context) thro
 			
 			
 			//Enter Transaction Amount
-			ExtentTestManager.startTest("Enter Transaction Amount");
+			ExtentTestManager.startTest("Enter Transaction Amount").assignCategory("OL Transaction(Charges)-Cash");
 			Log.info("Enter Transaction Amount");
 			
 			String transAmt = testdata.get("amount").toString();
@@ -443,7 +445,7 @@ public void selectTransModeAsCash() throws InterruptedException{
 	
 	
 	//Select Transaction Mode
-	ExtentTestManager.startTest("Select Transaction Mode");
+	ExtentTestManager.startTest("Select Transaction Mode").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Select Transaction Mode");
 	
 	select("CASH",transJewelRepo.tdTransModeDropdown);
@@ -462,7 +464,7 @@ public void selectTransModeAsTransfer() throws InterruptedException{
 	
 	
 	//Select Transaction Mode
-	ExtentTestManager.startTest("Select Transaction Mode");
+	ExtentTestManager.startTest("Select Transaction Mode").assignCategory("OL Transaction(Charges)-Transfer");
 	Log.info("Select Transaction Mode");
 	
 	select("TRANSFER",transJewelRepo.tdTransModeDropdown);
@@ -479,7 +481,7 @@ public void selectTransModeAsTransfer() throws InterruptedException{
 
 public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 	//Post credit button functionality
-			ExtentTestManager.startTest("Post credit button functionality");
+			ExtentTestManager.startTest("Post credit button functionality").assignCategory("OL Transaction(Charges)-Transfer");
 			Log.info("Post credit button functionality");
 			
 			click(transJewelRepo.tdPostDebitBtn);
@@ -509,7 +511,7 @@ public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext cont
 
 					
 					//Select Transaction Based
-					ExtentTestManager.startTest("Select Transaction Based");
+					ExtentTestManager.startTest("Select Transaction Based").assignCategory("OL Transaction(Charges)-Transfer");
 					Log.info("Select Transaction Based");
 					
 					select("Account",depositLoanRepo.oiTransBasedDropdown);
@@ -524,7 +526,7 @@ public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext cont
 
 					
 					//Select Product Group.
-					ExtentTestManager.startTest("Select Product Group");
+					ExtentTestManager.startTest("Select Product Group").assignCategory("OL Transaction(Charges)-Transfer");
 					Log.info("Select Product Group");
 					
 					select("Demand Investment",depositLoanRepo.productGroupDropdown);
@@ -539,7 +541,7 @@ public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext cont
 
 					
 					//Select Product Name
-					ExtentTestManager.startTest("Select Product Name");
+					ExtentTestManager.startTest("Select Product Name").assignCategory("OL Transaction(Charges)-Transfer");
 					Log.info("Select Product Name");
 					
 					select("INV-DEMAND-CA",depositLoanRepo.productNameDropdown);
@@ -554,7 +556,7 @@ public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext cont
 
 					
 					//Select Branch
-					ExtentTestManager.startTest("Select Branch");
+					ExtentTestManager.startTest("Select Branch").assignCategory("OL Transaction(Charges)-Transfer");
 					Log.info("Select Branch");
 					
 					select("TRIVANDRUM",depositLoanRepo.branchDropdown);
@@ -569,7 +571,7 @@ public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext cont
 
 						
 						//Select Account
-						ExtentTestManager.startTest("Select Account");
+						ExtentTestManager.startTest("Select Account").assignCategory("OL Transaction(Charges)-Transfer");
 						Log.info("Select Account");						
 						
 						String accNum = testdata.get("accNum").toString();
@@ -594,7 +596,7 @@ public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext cont
 
 						
 						//Enter Amount
-						ExtentTestManager.startTest("Enter Amount");
+						ExtentTestManager.startTest("Enter Amount").assignCategory("OL Transaction(Charges)-Transfer");
 						Log.info("Enter Amount");						
 						
 						String amount = testdata.get("amount").toString();
@@ -611,7 +613,7 @@ public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext cont
 
 					
 					//Add button functionality
-					ExtentTestManager.startTest("Add button functionality");
+					ExtentTestManager.startTest("Add button functionality").assignCategory("OL Transaction(Charges)-Transfer");
 					Log.info("Add button functionality");
 
 					click(depositLoanRepo.addBtn);
@@ -631,7 +633,7 @@ public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext cont
 					
 					
 					//Submit button functionality
-					ExtentTestManager.startTest("Submit button functionality");
+					ExtentTestManager.startTest("Submit button functionality").assignCategory("OL Transaction(Charges)-Transfer");
 					Log.info("Submit button functionality");
 					
 					click(depositLoanRepo.submitBtn);
@@ -659,7 +661,7 @@ public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext cont
 public void submitTrans(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 	
 	//Enter Remark 
-	ExtentTestManager.startTest("Enter Remark ");
+	ExtentTestManager.startTest("Enter Remark ").assignCategory("OL Transaction(Charges)-Transfer");
 	Log.info("Enter Remark ");
 	
 	String reamrk = testdata.get("remark").toString();
@@ -675,7 +677,7 @@ public void submitTrans(Map<Object, Object> testdata, ITestContext context) thro
 	
 	
 	//Submit Transaction
-	ExtentTestManager.startTest("Submit Transaction");
+	ExtentTestManager.startTest("Submit Transaction").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Submit Transaction");
 	
 	click(transJewelRepo.submitBtn);
@@ -704,7 +706,7 @@ public void submitTrans(Map<Object, Object> testdata, ITestContext context) thro
 
 public void authorizeCash() throws InterruptedException, IOException {
 	//Login with Another User
-	ExtentTestManager.startTest("Login with Another User");
+	ExtentTestManager.startTest("Login with Another User").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Login with Another User");
 	
 	click(custSearch.custSignOut);
@@ -718,6 +720,40 @@ public void authorizeCash() throws InterruptedException, IOException {
 	click(custSearch.loginButton);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 	Log.info("Step:02 - Log in with another user for authorization");
+	
+	try {
+		WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+		if (clickableElement != null) {
+			// Perform the desired action on the element
+			clickableElement.click();
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+			Log.info("Step:01 - Click on OK button");
+			
+//				String loginUserName = testdata.get("loginUserName").toString();
+			input(custSearch.loginUserName, UserName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+			Log.info("Step:02 - Enetered valid User Name");
+			
+//				String loginValidPassword = testdata.get("loginValidPassword").toString();
+			input(custSearch.loginPasswrd, Password);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+			Log.info("Step:03 - Entered valid Password");
+			
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+			Log.info("Step:04 - Click on Login Button");
+			
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+		} else {
+			System.out.println("Element not clickable within the timeout.");
+		}
+	} catch (Exception e) {
+		System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+		System.out.println("Already login pop up not appeared");
+	}
 
 	String authorizeUserName = driver.findElement(goaldLoanRepo.userName).getText();
 	System.out.println(authorizeUserName);
@@ -736,9 +772,10 @@ public void authorizeCash() throws InterruptedException, IOException {
 	
 	
 	//Navigate to Cashier Authorization
-	ExtentTestManager.startTest("Navigate to Cashier Authorization");
+	ExtentTestManager.startTest("Navigate to Cashier Authorization").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Navigate to Cashier Authorization");
 	
+	ScrollUntilElementVisible(goaldLoanRepo.autorizeAndCancelTab);
 	click(goaldLoanRepo.autorizeAndCancelTab);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
 	Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -760,7 +797,7 @@ public void authorizeCash() throws InterruptedException, IOException {
 	
 	
 	//Refresh button functionality
-	ExtentTestManager.startTest("Refresh button functionality");
+	ExtentTestManager.startTest("Refresh button functionality").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Refresh button functionality");
 	
 	click(goaldLoanRepo.cashierRefreshBtn);
@@ -780,7 +817,7 @@ public void authorizeCash() throws InterruptedException, IOException {
 	
 	
 	//Select the transaction to authorize
-	ExtentTestManager.startTest("Select the transaction to authorize");
+	ExtentTestManager.startTest("Select the transaction to authorize").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Select the transaction to authorize");
 	
 	transJewelMthds.fetchWithTransId(transId);
@@ -797,7 +834,7 @@ public void authorizeCash() throws InterruptedException, IOException {
 	
 	
 	//Authorize the transaction
-	ExtentTestManager.startTest("Authorize the transaction");
+	ExtentTestManager.startTest("Authorize the transaction").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Authorize the transaction");
 	
 	click(goaldLoanRepo.cashierAuthorizeBtn);
@@ -818,7 +855,7 @@ public void authorizeCash() throws InterruptedException, IOException {
 	
 	
 	//Manager Authorization - Cash Tab
-	ExtentTestManager.startTest("Manager Authorization");
+	ExtentTestManager.startTest("Manager Authorization").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Manager Authorization");
 	
 	click(goaldLoanRepo.managerAuthoTab);
@@ -838,7 +875,7 @@ public void authorizeCash() throws InterruptedException, IOException {
 	
 
 	//Refresh Loan Opening Entry
-	ExtentTestManager.startTest("Refresh Loan Opening Entry");
+	ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Refresh Loan Opening Entry");
 	
 	click(goaldLoanRepo.refreshBtn);
@@ -860,7 +897,7 @@ public void authorizeCash() throws InterruptedException, IOException {
 	
 
 	//Authorize Loan Entry as Manager
-	ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+	ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("OL Transaction(Charges)-Cash");
 	Log.info("Authorize Loan Entry as Manager");
 	
 	
@@ -888,7 +925,7 @@ public void authorizeCash() throws InterruptedException, IOException {
 public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 	//Login with Another User
-	ExtentTestManager.startTest("Login with Another User");
+	ExtentTestManager.startTest("Login with Another User").assignCategory("OL Transaction(Charges)-Transfer");
 	Log.info("Login with Another User");
 	
 	click(custSearch.custSignOut); 
@@ -902,6 +939,40 @@ public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context
 	click(custSearch.loginButton);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 	Log.info("Step:02 - Log in with another user for authorization");
+	
+	try {
+		WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+		if (clickableElement != null) {
+			// Perform the desired action on the element
+			clickableElement.click();
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+			Log.info("Step:01 - Click on OK button");
+			
+//				String loginUserName = testdata.get("loginUserName").toString();
+			input(custSearch.loginUserName, UserName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+			Log.info("Step:02 - Enetered valid User Name");
+			
+//				String loginValidPassword = testdata.get("loginValidPassword").toString();
+			input(custSearch.loginPasswrd, Password);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+			Log.info("Step:03 - Entered valid Password");
+			
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+			Log.info("Step:04 - Click on Login Button");
+			
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+		} else {
+			System.out.println("Element not clickable within the timeout.");
+		}
+	} catch (Exception e) {
+		System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+		System.out.println("Already login pop up not appeared");
+	}
 
 	String authorizeUserName = driver.findElement(goaldLoanRepo.userName).getText();
 	System.out.println(authorizeUserName);
@@ -921,9 +992,10 @@ public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context
 	
 
 	//Manager Authorization - Transfer Tab
-	ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+	ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("OL Transaction(Charges)-Transfer");
 	Log.info("Manager Authorization - Transfer Tab");
 	
+	ScrollUntilElementVisible(goaldLoanRepo.autorizeAndCancelTab);
 	click(goaldLoanRepo.autorizeAndCancelTab);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
 	Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -945,7 +1017,7 @@ public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context
 	
 
 	//Refresh Loan Opening Entry
-	ExtentTestManager.startTest("Refresh Loan Opening Entry");
+	ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("OL Transaction(Charges)-Transfer");
 	Log.info("Refresh Loan Opening Entry");
 	
 	click(goaldLoanRepo.refreshBtn);
@@ -968,7 +1040,7 @@ public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context
 	
 
 	//Authorize Loan Entry as Manager
-	ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+	ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("OL Transaction(Charges)-Transfer");
 	Log.info("Authorize Loan Entry as Manager");
 	
 	click(goaldLoanRepo.approveCheckBoxTransfer);

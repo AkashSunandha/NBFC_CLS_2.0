@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import com.BasePackage.Base_Class;
 
 public class PageRepositary_ClosureAndRenewals_FD_Closure extends Base_Class{
-/////////////////////////////////////////////
+
 	public By ClosureAndRenewalsTab = By.xpath("(//*[@id='CreateMenu']//li[@class=' close']//*[text()='Closure & Renewals']//parent::li//div)[1]");
 	
 	public By Term_Deposit_ClosureTab=By.xpath("//*[text()='Term Deposit Closure']");

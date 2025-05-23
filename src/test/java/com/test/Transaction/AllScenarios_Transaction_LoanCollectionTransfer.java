@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -29,7 +30,7 @@ public class AllScenarios_Transaction_LoanCollectionTransfer {
 	com.Page_Customer.Customer_CustomerSearch custSrchMthds = new com.Page_Customer.Customer_CustomerSearch();
 	Transaction_LoanCollectionTransfer collTransferMthds = new Transaction_LoanCollectionTransfer();
 	AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER collectionImportingTRANSFERMthds = new AllSceanrios_Others_DataSharing_CollectionImporting_TRANSFER();
-	@BeforeSuite
+	@BeforeClass
 	public void reference() { 
 		ExcelReader = new com.Utility.ExcelReader("LoanCollectionTransfer");
 		log = new Log();
@@ -43,12 +44,12 @@ public class AllScenarios_Transaction_LoanCollectionTransfer {
 	public void loanCollectionTransfer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("Loan Collection Transfer");
+				ExtentTestManager.startTest("Loan Collection Transfer").assignCategory("Loan Collection Transfer");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
 				//TC No. - 01 --> Application launch
-				ExtentTestManager.startTest("Application launch");
+				ExtentTestManager.startTest("Application launch").assignCategory("Loan Collection Transfer");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 				Thread.sleep(2000);

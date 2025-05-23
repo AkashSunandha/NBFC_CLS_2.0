@@ -19,7 +19,7 @@ public class CentreGroupRegistration extends Base_Class{
 	public void navigateToCentreGroupRegistration() throws InterruptedException {
 		
 		//Navigate to Centre Group Registration page
-		ExtentTestManager.startTest("Navigate to Centre Group Registration page");
+		ExtentTestManager.startTest("Navigate to Centre Group Registration page").assignCategory("Microfinance concept-CentreGroup  registration");
 		Log.info("Navigate to Centre Group Registration page");
 		
 		click(grpRegRepo.groupLoansTab);
@@ -45,7 +45,7 @@ public class CentreGroupRegistration extends Base_Class{
 
 	
 	//Select Branch from Drop down
-	ExtentTestManager.startTest("Select Branch from Drop down");
+	ExtentTestManager.startTest("Select Branch from Drop down").assignCategory("Microfinance concept-CentreGroup  registration");
 	Log.info("Select Branch from Drop down");
 	
 	select("TRIVANDRUM",grpRegRepo.grBranchDropdown);
@@ -69,7 +69,7 @@ public class CentreGroupRegistration extends Base_Class{
 	
 
 	//Select Centre from Dropdown
-	ExtentTestManager.startTest("Select Centre from Dropdown");
+	ExtentTestManager.startTest("Select Centre from Dropdown").assignCategory("Microfinance concept-CentreGroup  registration");
 	Log.info("Select Centre from Dropdown");
 	
 	select("centre3",grpRegRepo.grCentreDropdown);
@@ -93,7 +93,7 @@ public class CentreGroupRegistration extends Base_Class{
 	
 
 	//Auto-load Fields upon Centre Selection
-	ExtentTestManager.startTest("Auto-load Fields upon Centre Selection");
+	ExtentTestManager.startTest("Auto-load Fields upon Centre Selection").assignCategory("Microfinance concept-CentreGroup  registration");
 	Log.info("Auto-load Fields upon Centre Selection");
 	
 	String grGroupNameTxtBox = driver.findElement(grpRegRepo.grGroupNameTxtBox).getAttribute("value");
@@ -173,7 +173,7 @@ public class CentreGroupRegistration extends Base_Class{
 	
 
 	//Enter Group Name
-	ExtentTestManager.startTest("Enter Group Name");
+	ExtentTestManager.startTest("Enter Group Name").assignCategory("Microfinance concept-CentreGroup  registration");
 	Log.info("Enter Group Name");
 	
 	String groupName = testdata.get("groupName").toString();
@@ -199,7 +199,7 @@ public class CentreGroupRegistration extends Base_Class{
 		
 
 		//Customer Search Popup Display
-		ExtentTestManager.startTest("Customer Search Popup Display");
+		ExtentTestManager.startTest("Customer Search Popup Display").assignCategory("Microfinance concept-CentreGroup  registration");
 		Log.info("Customer Search Popup Display");
 		
 		click(grpRegRepo.gmCustIdSrchIcon);
@@ -230,7 +230,7 @@ public class CentreGroupRegistration extends Base_Class{
 		
 
 		//Search with Random Letter
-		ExtentTestManager.startTest("Search with Random Letter");
+		ExtentTestManager.startTest("Search with Random Letter").assignCategory("Microfinance concept-CentreGroup  registration");
 		Log.info("Search with Random Letter");
 		
 		String custName = testdata.get("custName").toString();
@@ -256,7 +256,7 @@ public class CentreGroupRegistration extends Base_Class{
 		
 
 		//Select Customer from List
-		ExtentTestManager.startTest("Select Customer from List");
+		ExtentTestManager.startTest("Select Customer from List").assignCategory("Microfinance concept-CentreGroup  registration");
 		Log.info("Select Customer from List");
 
 		click(grpRegRepo.popUpWndSelect);
@@ -281,7 +281,7 @@ public class CentreGroupRegistration extends Base_Class{
 		
 
 		//Select Unique Role from Dropdown
-		ExtentTestManager.startTest("Select Unique Role from Dropdown");
+		ExtentTestManager.startTest("Select Unique Role from Dropdown").assignCategory("Microfinance concept-CentreGroup  registration");
 		Log.info("Select Unique Role from Dropdown");
 		
 		select("Ordinary Member 10",grpRegRepo.gmRolesDropdown);
@@ -303,7 +303,7 @@ public class CentreGroupRegistration extends Base_Class{
 		
 
 		//Add Customer Details
-		ExtentTestManager.startTest("Add Customer Details");
+		ExtentTestManager.startTest("Add Customer Details").assignCategory("Microfinance concept-CentreGroup  registration");
 		Log.info("Add Customer Details");
 		
 		click(grpRegRepo.gmAddBtn);
@@ -329,7 +329,7 @@ public class CentreGroupRegistration extends Base_Class{
 		
 		
 		//Save Group Details
-		ExtentTestManager.startTest("Save Group Details");
+		ExtentTestManager.startTest("Save Group Details").assignCategory("Microfinance concept-CentreGroup  registration");
 		Log.info("Save Group Details");
 		
 		click(grpRegRepo.gmSaveBtn);
@@ -357,7 +357,7 @@ public class CentreGroupRegistration extends Base_Class{
 	
 	public void addAnotherCustomer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		//Add another customer with different role 
-		ExtentTestManager.startTest("Add another customer with different role ");
+		ExtentTestManager.startTest("Add another customer with different role ").assignCategory("Microfinance concept-CentreGroup  registration");
 		Log.info("Add another customer with different role ");
 				
 				click(grpRegRepo.gmCustIdSrchIcon);

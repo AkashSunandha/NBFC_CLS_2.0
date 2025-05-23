@@ -10,7 +10,10 @@ public class PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan {
 	public By depositLoan = By.xpath("//a[text()='DEPOSIT LOAN  (22001)']");
 	public By nextBtn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_btnNext\"]");
 	public By currentBranch = By.xpath("//*[@id=\"ctl00_ctl00_lblBranch\"]"); 
- 
+	public By custID_textbox=By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LAI_txtCoCustID_txt\"]");
+	
+
+	
 //	Account Info
 	
 	public By aiCustSrchIcon = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div[8]/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]/table/tbody/tr/td[2]/a/img");
@@ -76,7 +79,7 @@ public class PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan {
 	public By oiAddBtn = By.xpath("//*[@id=\"btnAddGLAcHead\"]");
 	public By oiSubmitBtn = By.xpath("//*[@id=\"btnSubmit\"]");//	public By variable = By.xpath("");
 	public By oiAutoPostingGrid = By.xpath("//*[@id=\"tblContra\"]");
-//	public By variable = By.xpath("");
+	public By loader =By.xpath("//div[@id=\"progressdiv\"]");
 	public By oiBatchOpenPopUp = By.xpath("/html/body/div[2]/div[11]/div/button[1]/span");
 	public By errorPopUpCloseIcon = By.xpath("//*[@id=\"closetop\"]");
 	

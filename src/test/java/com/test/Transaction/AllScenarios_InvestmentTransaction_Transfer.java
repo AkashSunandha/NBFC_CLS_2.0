@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -32,7 +33,7 @@ public class AllScenarios_InvestmentTransaction_Transfer extends Base_Class{
 	InvestmentTransaction_Cash_Transfer InvstTransaction =new InvestmentTransaction_Cash_Transfer();
 	Transaction_Transactions_Jewel transJewel = new Transaction_Transactions_Jewel();
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("InvestmentTransaction");
 		log = new Log();

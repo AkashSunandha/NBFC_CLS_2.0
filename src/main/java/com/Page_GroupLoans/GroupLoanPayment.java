@@ -39,7 +39,7 @@ public class GroupLoanPayment extends Base_Class{
 	public void groupLoanPayment() throws InterruptedException {
 		
 		//Navigation of  group loan Payment page
-		ExtentTestManager.startTest("Navigation of  group loan Payment page");
+		ExtentTestManager.startTest("Navigation of  group loan Payment page").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 		Log.info("Navigation of  group loan Payment page");
 		
 		click(grpLoanPayRepo.groupLoansTab);
@@ -66,7 +66,7 @@ public class GroupLoanPayment extends Base_Class{
 	public void groupInfo() throws InterruptedException {
 		
 			//Centre Selection
-			ExtentTestManager.startTest("Centre Selection");
+			ExtentTestManager.startTest("Centre Selection").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 			Log.info("Centre Selection");
 				
 			select("14 - GUARANTOR",grpLoanPayRepo.giCentreDropdown);
@@ -90,7 +90,7 @@ public class GroupLoanPayment extends Base_Class{
 				
 				
 			//Group Selection
-			ExtentTestManager.startTest("Group Selection");
+			ExtentTestManager.startTest("Group Selection").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 			Log.info("Group Selection");
 				
 			select("25 - GUARANTOR 3",grpLoanPayRepo.GiGroupDropdown);
@@ -116,7 +116,7 @@ public class GroupLoanPayment extends Base_Class{
 				
 				
 //			GO Button Functionality
-			ExtentTestManager.startTest("GO Button Functionality");
+			ExtentTestManager.startTest("GO Button Functionality").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 			Log.info("GO Button Functionality");
 						
 			click(grpLoanPayRepo.giGoBtn);
@@ -142,7 +142,7 @@ public class GroupLoanPayment extends Base_Class{
 	public void applicationList() throws InterruptedException {
 		
 //		Loan Details Loading
-		ExtentTestManager.startTest("Loan Details Loading");
+		ExtentTestManager.startTest("Loan Details Loading").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 		Log.info("Loan Details Loading");
 
 	       WebElement table = driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_gdvApplication\"]"));
@@ -159,7 +159,7 @@ public class GroupLoanPayment extends Base_Class{
 			String xpath = "//td[*[@id='ctl00_ctl00_CPH1_PRDCNT_gdvApplication_ctl0"+ lastRow +"_lblLoanAmt']]//following-sibling::td//a[text()='Select']";
 			lastSelectXPath = By.xpath(xpath);
 	        }else {
-				String xpath = "//td[*[@id='ctl00_ctl00_CPH1_PRDCNT_gdvApplication_ctl0"+ lastRow +"_lblLoanAmt']]//following-sibling::td//a[text()='Select']";
+				String xpath = "//td[*[@id='ctl00_ctl00_CPH1_PRDCNT_gdvApplication_ctl"+ lastRow +"_lblLoanAmt']]//following-sibling::td//a[text()='Select']";
 				lastSelectXPath = By.xpath(xpath);
 	        }
 			
@@ -183,7 +183,7 @@ public class GroupLoanPayment extends Base_Class{
 		
 		
 //		Checkbox Selection
-		ExtentTestManager.startTest("Checkbox Selection");
+		ExtentTestManager.startTest("Checkbox Selection").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 		Log.info("Checkbox Selection");
 		
 		ScrollUntilElementVisible(grpLoanPayRepo.saveBtn);
@@ -229,7 +229,7 @@ public class GroupLoanPayment extends Base_Class{
 	public void transModeCash() throws InterruptedException {
 	
 		//Transaction Mode Selection
-		ExtentTestManager.startTest("Transaction Mode Selection");
+		ExtentTestManager.startTest("Transaction Mode Selection").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 		Log.info("Transaction Mode Selection");
 			
 		select("CASH",grpLoanPayRepo.ldTransModeDropdown);
@@ -254,7 +254,7 @@ public class GroupLoanPayment extends Base_Class{
 	public void transModeTransfer() throws InterruptedException {
 		
 		//Transaction Mode Selection
-		ExtentTestManager.startTest("Transaction Mode Selection");
+		ExtentTestManager.startTest("Transaction Mode Selection").assignCategory("Microfinance concept-GroupLoanPayment-Transfer");
 		Log.info("Transaction Mode Selection");
 			
 		select("TRANSFER",grpLoanPayRepo.ldTransModeDropdown);
@@ -279,7 +279,7 @@ public class GroupLoanPayment extends Base_Class{
 	
 	public void postCreditPopUpEntry() throws InterruptedException {
 		//Post credit button functionality
-				ExtentTestManager.startTest("Post credit button functionality");
+				ExtentTestManager.startTest("Post credit button functionality").assignCategory("Microfinance concept-GroupLoanPayment-Transfer");
 				Log.info("Post credit button functionality");
 				
 				click(grpLoanPayRepo.postCreditBtn);
@@ -309,7 +309,7 @@ public class GroupLoanPayment extends Base_Class{
 
 						
 						//Transaction based selection.
-						ExtentTestManager.startTest("Transaction based selection.");
+						ExtentTestManager.startTest("Transaction based selection.").assignCategory("Microfinance concept-GroupLoanPayment-Transfer");
 						Log.info("Transaction based selection.");
 						
 						select("GL Code",depositLoanRepo.oiTransBasedDropdown);
@@ -329,7 +329,7 @@ public class GroupLoanPayment extends Base_Class{
 						
 						
 						//GL Name selection.
-						ExtentTestManager.startTest("GL Name selection.");
+						ExtentTestManager.startTest("GL Name selection.").assignCategory("Microfinance concept-GroupLoanPayment-Transfer");
 						Log.info("GL Name selection.");
 						
 						click(depositLoanRepo.oiGLNameTxtBox);
@@ -352,7 +352,7 @@ public class GroupLoanPayment extends Base_Class{
 
 						
 						//Add button functionality
-						ExtentTestManager.startTest("Add button functionality");
+						ExtentTestManager.startTest("Add button functionality").assignCategory("Microfinance concept-GroupLoanPayment-Transfer");
 						Log.info("Add button functionality");
 						
 						String amntValue = driver.findElement(depositLoanRepo.oiBalanceAmtTxtBox).getAttribute("value");
@@ -381,7 +381,7 @@ public class GroupLoanPayment extends Base_Class{
 						
 						
 						//Submit button functionality
-						ExtentTestManager.startTest("Submit button functionality");
+						ExtentTestManager.startTest("Submit button functionality").assignCategory("Microfinance concept-GroupLoanPayment-Transfer");
 						Log.info("Submit button functionality");
 						
 						click(depositLoanRepo.oiSubmitBtn);
@@ -410,7 +410,7 @@ public class GroupLoanPayment extends Base_Class{
 	public void clickSaveBtn() throws InterruptedException {
 		
 //		Save Button Functionality
-		ExtentTestManager.startTest("Save Button Functionality");
+		ExtentTestManager.startTest("Save Button Functionality").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 		Log.info("Save Button Functionality");
 				
 		click(grpLoanPayRepo.saveBtn);
@@ -438,7 +438,7 @@ public class GroupLoanPayment extends Base_Class{
 	public void authorizeCash() throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -471,7 +471,7 @@ public class GroupLoanPayment extends Base_Class{
 		
 
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		ExtentTestManager.startTest("Manager Authorization - Cash Tab").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 		Log.info("Manager Authorization - Cash Tab");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -495,7 +495,7 @@ public class GroupLoanPayment extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -519,7 +519,7 @@ public class GroupLoanPayment extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		
@@ -540,7 +540,7 @@ public class GroupLoanPayment extends Base_Class{
 		
 
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentTestManager.startTest("Cashier Authorization").assignCategory("Microfinance concept-GroupLoanPayment-Cash");
 		Log.info("Cashier Authorization");
 		 
 
@@ -585,7 +585,7 @@ public class GroupLoanPayment extends Base_Class{
 	public void authorizeTransfer() throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Microfinance concept-GroupLoanPayment-Transfer");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut); 
@@ -619,7 +619,7 @@ public class GroupLoanPayment extends Base_Class{
 		
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("Microfinance concept-GroupLoanPayment-Transfer");
 		Log.info("Manager Authorization - Transfer Tab");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -643,7 +643,7 @@ public class GroupLoanPayment extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Microfinance concept-GroupLoanPayment-Transfer");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -666,7 +666,7 @@ public class GroupLoanPayment extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Microfinance concept-GroupLoanPayment-Transfer");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		click(goaldLoanRepo.approveCheckBoxTransfer);

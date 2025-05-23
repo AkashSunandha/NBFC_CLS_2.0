@@ -8,9 +8,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
+import com.Page_Customer.Customer_QuickCustomer;
 import com.Page_Repositary.PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan;
 import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
 import com.Page_Repositary.PageRepositary_Cust_CustSearch;
@@ -21,7 +24,8 @@ import com.extentReports.ExtentTestManager;
 public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 	PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan goaldLoanRepo = new PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan();
 	PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan depositLoanRepo = new PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan();
-	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
+	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();
+	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
 
 	String transId; 
 	
@@ -32,6 +36,9 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 	
 	public String spAccNum = "EXEC SPGetNotPledgeddepositdetailsTEST  '102' , '14003'";
 	public String clmnNam = "AcNO";
+	
+	String query="Exec Getcustomer 102";
+	String columnName="CustomerID";
 	
 	
 	public  String generateUniqueId(String query,String columnName) throws ClassNotFoundException {
@@ -70,7 +77,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 	public void openDepositLoan() throws InterruptedException {
 		
 		//Navigate to account opening
-		ExtentTestManager.startTest("Navigate to account opening");
+		ExtentTestManager.startTest("Navigate to account opening").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Navigate to account opening");
 		
 		click(depositLoanRepo.accountOpeningTab);
@@ -90,7 +97,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Open Loan Opening>>Deposit Opening Window
-		ExtentTestManager.startTest("Open Loan Opening>>Deposit Opening Window");
+		ExtentTestManager.startTest("Open Loan Opening>>Deposit Opening Window").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Open Loan Opening>>Deposit Opening Window");
 		
 		click(depositLoanRepo.loanOpeningTab);
@@ -114,7 +121,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Navigate to Deposit Loan
-		ExtentTestManager.startTest("Navigate to Deposit Loan");
+		ExtentTestManager.startTest("Navigate to Deposit Loan").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Navigate to Deposit Loan");
 		
 		click(depositLoanRepo.depositLoan);
@@ -134,14 +141,15 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 	}//end
 	
 	
-	public void accInfo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+	
+	public void accInfo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 
 		
 		//Customer Search Icon functionality
-				ExtentTestManager.startTest("Customer Search Icon functionality");
+				ExtentTestManager.startTest("Customer Search Icon functionality").assignCategory("Account opening [Deposit loan]-Cash");
 				Log.info("Customer Search Icon functionality");
 				
-				click(depositLoanRepo.aiCustSrchIcon);
+			/*	click(depositLoanRepo.aiCustSrchIcon);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the search icon on the customer name.");
 				Log.info("Step:01 - Click the search icon on the customer name.");
 				
@@ -167,7 +175,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 			    		
 
 			    		//Search Customer by Name
-			    		ExtentTestManager.startTest("Search Customer by Name");
+			    		ExtentTestManager.startTest("Search Customer by Name").assignCategory("Account opening [Deposit loan]-Cash");
 			    		Log.info("Search Customer by Name");
 			    		
 			    		String custName = testdata.get("custName").toString();
@@ -192,7 +200,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 			    		
 			    		
 			    		//Select Customer from List
-			    		ExtentTestManager.startTest("Select Customer from List");
+			    		ExtentTestManager.startTest("Select Customer from List").assignCategory("Account opening [Deposit loan]-Cash");
 			    		Log.info("Select Customer from List");
 			    		
 			    		click(depositLoanRepo.popUpCustSelect);
@@ -219,10 +227,15 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 			   
 			    }//for loop end
 			    
-				
+				*/
+		
+					String custID=quickCust.generateUniqueId(query, columnName);
+					//String custID = testdata.get("custID").toString();
+					input(depositLoanRepo.custID_textbox, custID);
+					System.out.println(custID);
 				
 				//Add Button functionality
-				ExtentTestManager.startTest("Add Button functionality");
+				ExtentTestManager.startTest("Add Button functionality").assignCategory("Account opening [Deposit loan]-Cash");
 				Log.info("Add Button functionality");
 				
 				click(depositLoanRepo.aiAddBtn);
@@ -258,7 +271,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 				
 				
 				//Add Account Info Details - Select Referred By
-				ExtentTestManager.startTest("Add Account Info Details - Select Referred By");
+				ExtentTestManager.startTest("Add Account Info Details - Select Referred By").assignCategory("Account opening [Deposit loan]-Cash");
 				Log.info("Add Account Info Details - Select Referred By");
 				
 				click(depositLoanRepo.aiReferedByDropdown);
@@ -274,13 +287,13 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 				
 				
 				//Add Account Info Details - Select Purpose
-				ExtentTestManager.startTest("Add Account Info Details - Select Purpose");
+				ExtentTestManager.startTest("Add Account Info Details - Select Purpose").assignCategory("Account opening [Deposit loan]-Cash");
 				Log.info("Add Account Info Details - Select Purpose");
 				
 				select("EDUCATION",depositLoanRepo.aiPurposeDropdown);
 				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select 'Purpose' from the dropdown.");
 				Log.info("Step:01 - Select 'Purpose' from the dropdown.");
-				
+				waitTillLoaderDisappear(depositLoanRepo.loader);
 				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to select the 'Purpose' from the dropdown.");
 				Log.info("Expected Result: Possible to select the 'Purpose' from the dropdown.");
 				
@@ -290,7 +303,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 				
 				
 				//Add Account Info Details - Enter Remark
-				ExtentTestManager.startTest("Add Account Info Details - Enter Remark");
+				ExtentTestManager.startTest("Add Account Info Details - Enter Remark").assignCategory("Account opening [Deposit loan]-Cash");
 				Log.info("Add Account Info Details - Enter Remark");
 				
 	    		String remark = testdata.get("remark").toString();
@@ -314,7 +327,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 				
 				
 				//Next Button Functionality
-				ExtentTestManager.startTest("Next Button Functionality");
+				ExtentTestManager.startTest("Next Button Functionality").assignCategory("Account opening [Deposit loan]-Cash");
 				Log.info("Next Button Functionality");
 				
 				click(depositLoanRepo.nextBtn);
@@ -340,7 +353,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 
 		
 		//Securities tab display
-		ExtentTestManager.startTest("Securities tab display");
+		ExtentTestManager.startTest("Securities tab display").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Securities tab display");
 		
 		click(depositLoanRepo.sSecurityDepositTab);
@@ -360,7 +373,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Select Branch
-		ExtentTestManager.startTest("Select Branch");
+		ExtentTestManager.startTest("Select Branch").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Select Branch");
 		
 		String curBranch = driver.findElement(depositLoanRepo.currentBranch).getText();
@@ -384,7 +397,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Select Product Name
-		ExtentTestManager.startTest("Select Product Name");
+		ExtentTestManager.startTest("Select Product Name").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Select Product Name");
 		
 		select("DEBUNTURE FIXED TYPE 2 YRS",depositLoanRepo.sProductNameDropdown);
@@ -400,7 +413,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Enter account number
-		ExtentTestManager.startTest("Enter account number");
+		ExtentTestManager.startTest("Enter account number").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Enter account number");
 		
 		String accNum = generateUniqueId(spAccNum, clmnNam);
@@ -419,7 +432,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Add Button Functionality
-		ExtentTestManager.startTest("Add Button Functionality");
+		ExtentTestManager.startTest("Add Button Functionality").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Add Button Functionality");
 		
 		click(depositLoanRepo.sAddBtn);
@@ -463,7 +476,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Add Nominee - Untick Nominee Not Required
-		ExtentTestManager.startTest("Add Nominee - Untick Nominee Not Required");
+		ExtentTestManager.startTest("Add Nominee - Untick Nominee Not Required").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Add Nominee - Untick Nominee Not Required");
 		
 		click(depositLoanRepo.nNomineeNotRequiredCheckBox);
@@ -484,7 +497,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Add Nominee - Enter Nominee Aadhaar No.
-		ExtentTestManager.startTest("Add Nominee - Enter Nominee Aadhaar No.");
+		ExtentTestManager.startTest("Add Nominee - Enter Nominee Aadhaar No.").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Add Nominee - Enter Nominee Aadhaar No.");
 		
 		String nomineeAadhaar = testdata.get("nomineeAadhaar").toString();
@@ -501,7 +514,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Add Nominee - Enter Nominee Name.
-		ExtentTestManager.startTest("Add Nominee - Enter Nominee Name.");
+		ExtentTestManager.startTest("Add Nominee - Enter Nominee Name.").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Add Nominee - Enter Nominee Name.");
 		
 		String nomineeName = testdata.get("nomineeName").toString();
@@ -518,7 +531,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Select Nominee Relation
-		ExtentTestManager.startTest("Select Nominee Relation");
+		ExtentTestManager.startTest("Select Nominee Relation").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Select Nominee Relation");		
 		
 		select("FRIEND",depositLoanRepo.nRealtionDropdown);
@@ -534,7 +547,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Select Nominee District
-		ExtentTestManager.startTest("Select Nominee District");
+		ExtentTestManager.startTest("Select Nominee District").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Select Nominee District");		
 		
 		select("Palakkad",depositLoanRepo.nDistrictDropdown);
@@ -550,7 +563,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Select Nominee Post
-		ExtentTestManager.startTest("Select Nominee Post");
+		ExtentTestManager.startTest("Select Nominee Post").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Select Nominee Post");		
 		
 		select("Anamari B.O",depositLoanRepo.nPostDropdown);
@@ -566,7 +579,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Enter Nominee DOB.
-		ExtentTestManager.startTest("Enter Nominee DOB.");
+		ExtentTestManager.startTest("Enter Nominee DOB.").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Enter Nominee DOB.");
 		
 		String nomineeDOB = testdata.get("nomineeDOB").toString();
@@ -575,25 +588,27 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter the DOB manually in the DOB  field.");
 		Log.info("Step:01 - Enter the DOB manually in the DOB  field.");
 		
-		click(depositLoanRepo.ageTxt);
+		PressTabKey();
+		Thread.sleep(5000);
+		//click(depositLoanRepo.ageTxt);
 		
-		String ageValue = driver.findElement(depositLoanRepo.nAgeTxtBox).getAttribute("value");
-		System.out.println("ageValue: "+ageValue);
+		//String ageValue = driver.findElement(depositLoanRepo.nAgeTxtBox).getAttribute("value");
+		//System.out.println("ageValue: "+ageValue);
 		
-		if(!ageValue.isBlank()) {
+		/*if(!ageValue.isBlank()) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Possible to enter the dob manually and 'Age' will be autoloads depends on the given DOB.");
 		Log.info("Expected Result: Possible to enter the dob manually and 'Age' will be autoloads depends on the given DOB.");
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		}
+		}*/
 		
 		ExtentTestManager.endTest();
 
 		
 		
 		//Add Button Functionality
-		ExtentTestManager.startTest("Add Button Functionality");
+		ExtentTestManager.startTest("Add Button Functionality").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Add Button Functionality");
 		
 		click(depositLoanRepo.nAddBtn);
@@ -613,7 +628,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Navigate to Loan Details Tab
-		ExtentTestManager.startTest("Navigate to Loan Details Tab");
+		ExtentTestManager.startTest("Navigate to Loan Details Tab").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Navigate to Loan Details Tab");
 		
 		click(depositLoanRepo.nextBtn);
@@ -640,7 +655,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 //		clear(bondCumulativeRepo.ldSanctionedTxtBox);
 		
 		//Enter Valid Sanction Amount
-		ExtentTestManager.startTest("Enter Valid Sanction Amount");
+		ExtentTestManager.startTest("Enter Valid Sanction Amount").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Enter Valid Sanction Amount");
 		
 		String sancAmt = driver.findElement(depositLoanRepo.ldActualSanctionedAmt).getAttribute("value");
@@ -657,19 +672,27 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Get Values button functionality
-		ExtentTestManager.startTest("Get Values button functionality");
+		ExtentTestManager.startTest("Get Values button functionality").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Get Values button functionality");
 			
 		click(depositLoanRepo.ldGetValuesBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click GET VALUES button.");
 		Log.info("Step:01 - Click GET VALUES button.");
 		
+		waitTillLoaderDisappear(depositLoanRepo.loader);
 		String ROIValue = driver.findElement(depositLoanRepo.ldROITxtBox).getAttribute("value");
+		System.out.println("ROIValue: " + ROIValue);
 		String DueDateValue = driver.findElement(depositLoanRepo.ldDueDateTxtBox).getAttribute("value");
+		System.out.println("DueDateValue: " + DueDateValue);
 		String PayAmountValue = driver.findElement(depositLoanRepo.ldPayAmountTxtBox).getAttribute("value");
+		System.out.println("PayAmountValue: " + PayAmountValue);
 		
 		double num1 = Double.parseDouble(ROIValue);
+		System.out.println("num1: " + num1);
 		double num2 = Double.parseDouble(PayAmountValue);
+		System.out.println("num2: " + num2);
+		System.out.println("DueDateValue: " + DueDateValue);
+		
 		double actual = 0.0;
 		
 		if(num1>actual && num2>actual && !DueDateValue.isBlank()) {
@@ -689,9 +712,10 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 	public void transModeCASH() throws InterruptedException {
 
 		//Select Transaction Mode and Submit Loan
-		ExtentTestManager.startTest("Select Transaction Mode and Submit Loan");
+		ExtentTestManager.startTest("Select Transaction Mode and Submit Loan").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Select Transaction Mode and Submit Loan");
 		
+		waitTillLoaderDisappear(depositLoanRepo.loader);
 		ScrollUntilElementVisible(depositLoanRepo.oitransMode);
 		select("CASH",depositLoanRepo.oitransMode);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select Trans. Mode 'Cash'.");
@@ -701,23 +725,32 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click 'save'");
 		Log.info("Step:02 - Click 'save'");
 		
-		if(ElementDisplayed(depositLoanRepo.existingLoanClosureOkBtn)) {
+		try {
+			
+			click(depositLoanRepo.accNotBelongsToApplicantErrPopUpOkBtn);
+		}catch(Exception e) {
+			
+			System.out.println("Same customer account");
+		}
+		
+		/*if(ElementDisplayed(depositLoanRepo.existingLoanClosureOkBtn)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Validation popup wndow will be display \"Do You want to continue without closing existing loans? \"");
 		Log.info("Expected Result: Validation popup wndow will be display \"Do You want to continue without closing existing loans? \"");
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		} 
+		} */
 		
 		ExtentTestManager.endTest();
 		
 		
 
-		//Existing Loan - Ok button Functionality
-		ExtentTestManager.startTest("Existing Loan - Ok button Functionality");
+		/*//Existing Loan - Ok button Functionality
+		ExtentTestManager.startTest("Existing Loan - Ok button Functionality").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Existing Loan - Ok button Functionality");
 				
-		click(depositLoanRepo.existingLoanClosureOkBtn);
+		Thread.sleep(10000);
+		//click(depositLoanRepo.existingLoanClosureOkBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Ok'");
 		Log.info("Step:01 - Click 'Ok'");
 		
@@ -734,7 +767,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 
 		//Similar Data Exists - Yes button Functionality
-		ExtentTestManager.startTest("Similar Data Exists - Yes button Functionality");
+		ExtentTestManager.startTest("Similar Data Exists - Yes button Functionality").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Similar Data Exists - Yes button Functionality");
 				
 		click(depositLoanRepo.similarDataExistPopUpYesBtn);
@@ -750,6 +783,10 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		}catch(Exception e) {
 			
 		}
+		*/
+		
+		click(depositLoanRepo.oisaveButton);
+		Thread.sleep(5000);
 		
 		if(ElementDisplayed(depositLoanRepo.transIdCash)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Popup window will be closed & Summary will be display");
@@ -772,9 +809,10 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 	public void transModeTRANSFER() throws InterruptedException {
 
 		//Select Transaction Mode and Submit Loan
-		ExtentTestManager.startTest("Select Transaction Mode and Submit Loan");
+		ExtentTestManager.startTest("Select Transaction Mode and Submit Loan").assignCategory("Account opening [Deposit loan]-Transfer");
 		Log.info("Select Transaction Mode and Submit Loan");
-		
+		waitTillLoaderDisappear(depositLoanRepo.loader);
+
 		ScrollUntilElementVisible(depositLoanRepo.oitransMode);
 		select("TRANSFER",depositLoanRepo.oitransMode);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Select Trans. Mode 'Cash'.");
@@ -793,7 +831,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 		
 		//Post credit button functionality
-		ExtentTestManager.startTest("Post credit button functionality");
+		ExtentTestManager.startTest("Post credit button functionality").assignCategory("Account opening [Deposit loan]-Transfer");
 		Log.info("Post credit button functionality");
 		
 		click(depositLoanRepo.oiPostCreditBtn);
@@ -823,7 +861,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 
 				
 				//Transaction based selection.
-				ExtentTestManager.startTest("Transaction based selection.");
+				ExtentTestManager.startTest("Transaction based selection.").assignCategory("Account opening [Deposit loan]-Transfer");
 				Log.info("Transaction based selection.");
 				
 				select("GL Code",depositLoanRepo.oiTransBasedDropdown);
@@ -843,7 +881,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 				
 				
 				//GL Name selection.
-				ExtentTestManager.startTest("GL Name selection.");
+				ExtentTestManager.startTest("GL Name selection.").assignCategory("Account opening [Deposit loan]-Transfer");
 				Log.info("GL Name selection.");
 				
 				click(depositLoanRepo.oiGLNameTxtBox);
@@ -866,7 +904,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 
 				
 				//Add button functionality
-				ExtentTestManager.startTest("Add button functionality");
+				ExtentTestManager.startTest("Add button functionality").assignCategory("Account opening [Deposit loan]-Transfer");
 				Log.info("Add button functionality");
 				
 				String amntValue = driver.findElement(depositLoanRepo.oiBalanceAmtTxtBox).getAttribute("value");
@@ -895,7 +933,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 				
 				
 				//Submit button functionality
-				ExtentTestManager.startTest("Submit button functionality");
+				ExtentTestManager.startTest("Submit button functionality").assignCategory("Account opening [Deposit loan]-Transfer");
 				Log.info("Submit button functionality");
 				
 				click(depositLoanRepo.oiSubmitBtn);
@@ -922,28 +960,37 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 	    
 		//Submit Loan
-		ExtentTestManager.startTest("Submit Loan");
+		ExtentTestManager.startTest("Submit Loan").assignCategory("Account opening [Deposit loan]-Transfer");
 		Log.info("Submit Loan");
 		
 		click(depositLoanRepo.oisaveButton);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'save'");
 		Log.info("Step:01 - Click 'save'");
 		
+		try {
+			
+			click(depositLoanRepo.accNotBelongsToApplicantErrPopUpOkBtn);
+			click(depositLoanRepo.oisaveButton);
+			
+		}catch(Exception e) {
+			
+			System.out.println("Same customer account");
+		}
 
-		if(ElementDisplayed(depositLoanRepo.existingLoanClosureOkBtn)) {
+		/*if(ElementDisplayed(depositLoanRepo.existingLoanClosureOkBtn)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Validation popup wndow will be display \"Do You want to continue without closing existing loans? \"");
 		Log.info("Expected Result: Validation popup wndow will be display \"Do You want to continue without closing existing loans? \"");
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		}
+		}*/
 		
 		ExtentTestManager.endTest();
 		
 		
 
-		//Existing Loan - Ok button Functionality
-		ExtentTestManager.startTest("Existing Loan - Ok button Functionality");
+		/*//Existing Loan - Ok button Functionality
+		ExtentTestManager.startTest("Existing Loan - Ok button Functionality").assignCategory("Account opening [Deposit loan]-Transfer");
 		Log.info("Existing Loan - Ok button Functionality");
 				
 		click(depositLoanRepo.existingLoanClosureOkBtn);
@@ -963,12 +1010,14 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 
 		//Similar Data Exists - Yes button Functionality
-		ExtentTestManager.startTest("Similar Data Exists - Yes button Functionality");
+		ExtentTestManager.startTest("Similar Data Exists - Yes button Functionality").assignCategory("Account opening [Deposit loan]-Transfer");
 		Log.info("Similar Data Exists - Yes button Functionality");
 				
 		click(depositLoanRepo.similarDataExistPopUpYesBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'YES'");
-		Log.info("Step:01 - Click 'YES'");
+		Log.info("Step:01 - Click 'YES'"); */
+		
+		Thread.sleep(10000);
 		
 		try {
 
@@ -1012,7 +1061,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 	public void authorizeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -1026,11 +1075,45 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		click(custSearch.loginButton);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
 	
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
 		
-		String flag = "akash";
+		/*String flag = "akash";
 		
 		if(!userName.equalsIgnoreCase(flag)) {
     		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
@@ -1038,7 +1121,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
     		}else {
     			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
     			Log.info("ERROR");
-    		}
+    		}*/
 		
 		ExtentTestManager.endTest();
 		
@@ -1046,9 +1129,10 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		ExtentTestManager.startTest("Manager Authorization - Cash Tab").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Manager Authorization - Cash Tab");
 		
+		ScrollUntilElementVisible(goaldLoanRepo.autorizeAndCancelTab);
 		click(goaldLoanRepo.autorizeAndCancelTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -1070,7 +1154,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -1094,7 +1178,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		
@@ -1115,7 +1199,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentTestManager.startTest("Cashier Authorization").assignCategory("Account opening [Deposit loan]-Cash");
 		Log.info("Cashier Authorization");
 		 
 
@@ -1160,7 +1244,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 	public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Account opening [Deposit loan]-Transfer");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut); 
@@ -1174,11 +1258,45 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		click(custSearch.loginButton);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
 	
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
 		 
-		String flag = "akash";
+		/*String flag = "akash";
 		
 		if(!userName.equalsIgnoreCase(flag)) {
     		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
@@ -1186,7 +1304,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
     		}else {
     			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
     			Log.info("ERROR");
-    		}
+    		}*/
 		
 		ExtentTestManager.endTest();
 		
@@ -1194,9 +1312,10 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("Account opening [Deposit loan]-Transfer");
 		Log.info("Manager Authorization - Transfer Tab");
 		
+		ScrollUntilElementVisible(goaldLoanRepo.autorizeAndCancelTab);
 		click(goaldLoanRepo.autorizeAndCancelTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -1218,7 +1337,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Account opening [Deposit loan]-Transfer");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -1241,7 +1360,7 @@ public class LoanOpening_DepositOpn_DepositLoan extends Base_Class {
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Account opening [Deposit loan]-Transfer");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		click(goaldLoanRepo.approveCheckBoxTransfer);

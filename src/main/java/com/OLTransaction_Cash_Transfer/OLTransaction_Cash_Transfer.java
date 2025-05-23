@@ -48,7 +48,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	public void Transactionwindow() throws InterruptedException {
 
-		ExtentTestManager.startTest("Transactions Window Navigation");
+		ExtentTestManager.startTest("Transactions Window Navigation").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Transactions Window Navigation");
 
 		click(OLtrans.ClickTransaction);
@@ -63,7 +63,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Navigate through Path: Transaction: Transactions.");
 		Log.info("Step:01 -  Navigate through Path: Transaction: Transactions.");
 
-		ExtentTestManager.startTest("Select Product Group and Name");
+		ExtentTestManager.startTest("Select Product Group and Name").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Select Product Group and Name");
 
 		select("OTHER LOANS", OLtrans.productgroup);
@@ -82,7 +82,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	public String generateUniqueCode(String query, String columnName) throws ClassNotFoundException {
 
-		ExtentTestManager.startTest("Enter  Account Number");
+		ExtentTestManager.startTest("Enter  Account Number").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Enter  Account Number");
 
 		{
@@ -129,7 +129,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Account number is entered correctly...");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Transaction Type CREDIT");
+		ExtentTestManager.startTest("Select Transaction Type CREDIT").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Select Transaction Type CREDIT");
 
 		select("Credit", OLtrans.selectcredit);
@@ -140,7 +140,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:'CREDIT' transaction type is selected...");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("GO Button Interaction");
+		ExtentTestManager.startTest("GO Button Interaction").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("GO Button Interaction");
 
 		click(OLtrans.clickGoo);
@@ -151,7 +151,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Transaction details are loaded successfully.");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Enter Transaction Amount");
+		ExtentTestManager.startTest("Enter Transaction Amount").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Enter Transaction Amount");
 
 		click(OLtrans.transamount);
@@ -168,7 +168,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	public void SelectCASH() throws InterruptedException {
 
-		ExtentTestManager.startTest("Select Transmode CASH");
+		ExtentTestManager.startTest("Select Transmode CASH").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Select Transmode CASH");
 
 		select("CASH", OLtrans.selectcash);
@@ -182,7 +182,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		ScrollUntilElementVisible(OLtrans.scrolldwn);
 
 
-		ExtentTestManager.startTest("Submit Transaction");
+		ExtentTestManager.startTest("Submit Transaction").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Submit Transaction");
 		
 		click(OLtrans.submittrans);
@@ -195,7 +195,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.endTest();
 
 
-		ExtentTestManager.startTest("Submit Transaction");
+		ExtentTestManager.startTest("Submit Transaction").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Submit Transaction");
 
 		AcceptAlert();
@@ -211,7 +211,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void print() throws InterruptedException {
-		ExtentTestManager.startTest("Print Voucher");
+		ExtentTestManager.startTest("Print Voucher").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Print Voucher");
 
 		click(OLtrans.clickprint);
@@ -262,7 +262,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		click(custSearch.loginButton);
 
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Login with Another User");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
@@ -285,7 +285,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void Cashier() throws InterruptedException {
-		ExtentTestManager.startTest("cashier authorization");
+		ExtentTestManager.startTest("cashier authorization").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("cashier authorization");
 
 		ScrollUntilElementVisible(JewelClosure.authandcancel);
@@ -302,7 +302,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("cashier authorization");
+		ExtentTestManager.startTest("cashier authorization").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("cashier authorization");
 
 		click(JewelClosure.clickrefresh);
@@ -318,7 +318,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("cashier authorization");
+		ExtentTestManager.startTest("cashier authorization").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("cashier authorization");
 
 		click(JewelClosure.checkbox);
@@ -331,7 +331,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is on Cashier authorisation window");
+		ExtentTestManager.startTest("User is on Cashier authorisation window").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("User is on Cashier authorisation window");
 
 		click(JewelClosure.clickauths);
@@ -348,7 +348,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	public void Manager() throws InterruptedException {
 
-		ExtentTestManager.startTest("Manager authorization");
+		ExtentTestManager.startTest("Manager authorization").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Manager authorization");
 
 		// ScrollUntilElementVisible(JewelClosure.scrolldownside);
@@ -370,7 +370,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.refreshtab);
@@ -386,7 +386,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkboxman);
@@ -399,7 +399,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.clickauth);
@@ -417,7 +417,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	public void Signout() throws InterruptedException {
 
-		ExtentTestManager.startTest("Logout in application");
+		ExtentTestManager.startTest("Logout in application").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Logout in application");
 
 		click(JewelClosure.Singout);
@@ -432,7 +432,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 	
 	public void Signout1() throws InterruptedException {
 
-		ExtentTestManager.startTest("Logout in application");
+		ExtentTestManager.startTest("Logout in application").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Logout in application");
 
 		click(JewelClosure.Singout);
@@ -452,7 +452,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	public void SelectTransfer() throws InterruptedException {
 
-		ExtentTestManager.startTest("Select Transmode Transfer");
+		ExtentTestManager.startTest("Select Transmode Transfer").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Select Transmode Transfer");
 
 		select("TRANSFER", OLtrans.selectcash);
@@ -466,7 +466,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 		ScrollUntilElementVisible(OLtrans.scrolldwn);
 
-		ExtentTestManager.startTest("POST DEBIT Interaction");
+		ExtentTestManager.startTest("POST DEBIT Interaction").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("POST DEBIT Interaction");
 
 		click(OLtrans.Clickpostdeb);
@@ -493,7 +493,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 			}
 		}
 
-		ExtentTestManager.startTest("Select Product Group and Name");
+		ExtentTestManager.startTest("Select Product Group and Name").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Search Account number");
 
 		select("Demand Investment", JewelClosure.produgroup);
@@ -509,7 +509,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Possible to select the product group and product name ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Account Number");
+		ExtentTestManager.startTest("Select Account Number").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Search Account Number");
 
 		String AccountNumber = testdata.get("AccountNumber").toString();
@@ -521,7 +521,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Given account number details will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Add Transaction Amount");
+		ExtentTestManager.startTest("Add Transaction Amount").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Add Transaction Amount");
 
 		Display = driver.findElement(JewelClosure.dispname).getAttribute("value");
@@ -541,7 +541,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result: Amount and details is added in the grid in the auto posting popup window");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Submit POST DEBIT Action");
+		ExtentTestManager.startTest("Submit POST DEBIT Action").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Submit POST DEBIT Action");
 
 		click(JewelClosure.clickSubmit);
@@ -554,7 +554,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result: Auto posting popu window will be close");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Navigate to Summary Page - SWIFT_CODE");
+		ExtentTestManager.startTest("Navigate to Summary Page - SWIFT_CODE").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Navigate to Summary Page - SWIFT_CODE");
 
 		click(JewelClosure.submitpostD);
@@ -573,7 +573,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	public void ManagerAuth() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		// ScrollUntilElementVisible(JewelClosure.scrolldownside);
@@ -586,7 +586,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Manager authorization window will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.Transfertab);
@@ -597,7 +597,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result: Transfer tab will be display");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.refreshtab);
@@ -612,7 +612,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Closure entry will be diaply after clicking the refresh button ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkboxtrue);
@@ -624,7 +624,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Possible to select the closure entry and selected entry is hghlighted ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is on Manager authorisation window");
+		ExtentTestManager.startTest("User is on Manager authorisation window").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("User is on Manager authorisation window");
 
 		click(JewelClosure.clickauth);
@@ -641,7 +641,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 
 	public void Transactionwindow2() throws InterruptedException {
 
-		ExtentTestManager.startTest("Transactions Window Navigation");
+		ExtentTestManager.startTest("Transactions Window Navigation").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Transactions Window Navigation");
 
 		Thread.sleep(5000);
@@ -657,7 +657,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Navigate through Path: Transaction: Transactions.");
 		Log.info("Step:01 -  Navigate through Path: Transaction: Transactions.");
 
-		ExtentTestManager.startTest("Select Product Group and Name");
+		ExtentTestManager.startTest("Select Product Group and Name").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Select Product Group and Name");
 
 		select("OTHER LOANS", OLtrans.productgroup);
@@ -675,7 +675,7 @@ public class OLTransaction_Cash_Transfer extends Base_Class {
 	}
 	public void Signout2() throws InterruptedException {
 
-		ExtentTestManager.startTest("Logout in application");
+		ExtentTestManager.startTest("Logout in application").assignCategory("OtherLoanTransaction-Cash&Transfer");
 		Log.info("Logout in application");
 
 		click(JewelClosure.Singout);

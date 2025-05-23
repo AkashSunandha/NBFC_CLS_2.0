@@ -27,6 +27,7 @@ public class PageRepositary_GroupLoans_GroupLoanCollection {
 	public By giSelect = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_gdvApplication\"]//tr[2]//td//a[text()='Select']");
 
 	
+	
 
 //	Loan Details
 

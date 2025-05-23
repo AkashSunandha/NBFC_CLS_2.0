@@ -4,9 +4,11 @@
   <test thread-count="5" name="Test">
     <classes>
     
-      <class name="com.test.Customer.AllScenarios_Cust_CustRating"/>
-      <class name="com.test.Customer.AllScenarios_Cust_InstitutionalCust"/>
-      <class name="com.test.Customer.AllScenarios_Cust_InstitutionalCust"/>
+      <class name="com.test.GeneralOpening.AllScenario_GeneralOpen_Cash_Transfer"/>
+	<class name="com.test.SusAssetTransaction_Cash_Transfer.AllScenario_SusAssetTransaction_Cash_Transfer"/>
+	<class name="com.test.JewelLoanClosure.AllScenario_JewelLoan_Closure_Cash_Transfer"/>
+
+    
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

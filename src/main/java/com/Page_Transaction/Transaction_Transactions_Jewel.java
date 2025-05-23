@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 //import org.testng.internal.TestMethodWithDataProviderMethodWorker;
@@ -76,7 +77,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	public void transactionsJewel() throws InterruptedException {
 		
 		//Open Transaction Module
-		ExtentTestManager.startTest("Open Transaction Module");
+		ExtentTestManager.startTest("Open Transaction Module").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Open Transaction Module");
 		
 		click(transJewelRepo.transactionTab);
@@ -103,7 +104,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	public void accountInfo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 		
 		//Select Branch
-		ExtentTestManager.startTest("Select Branch");
+		ExtentTestManager.startTest("Select Branch").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Select Branch");
 		
 		select("TRIVANDRUM",transJewelRepo.aiBranchDropdowm);
@@ -118,7 +119,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Select Product Group
-		ExtentTestManager.startTest("Select Product Group");
+		ExtentTestManager.startTest("Select Product Group").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Select Product Group");
 		
 		select("Jewel Loan",transJewelRepo.aiProductGroupDropdowm);
@@ -133,7 +134,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Select Product Name
-		ExtentTestManager.startTest("Select Product Name");
+		ExtentTestManager.startTest("Select Product Name").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Select Product Name");
 		
 		select("GOLD LOAN",transJewelRepo.aiProdcutNameDropdowm);
@@ -149,7 +150,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Enter account number
-		ExtentTestManager.startTest("Enter account number");
+		ExtentTestManager.startTest("Enter account number").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Enter account number");
 		
 		String accNum = generateUniqueId(spAccNum, clmnNam);
@@ -167,7 +168,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Select Transaction Type
-		ExtentTestManager.startTest("Select Transaction Type");
+		ExtentTestManager.startTest("Select Transaction Type").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Select Transaction Type");
 		
 		select("Credit",transJewelRepo.aiTransTypeDropdwon);
@@ -182,7 +183,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Transaction Window Display
-		ExtentTestManager.startTest("Transaction Window Display");
+		ExtentTestManager.startTest("Transaction Window Display").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Transaction Window Display");
 		
 		click(transJewelRepo.aiGoBtn);
@@ -208,7 +209,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Verify Principal Log Details
-		ExtentTestManager.startTest("Verify Principal Log Details");
+		ExtentTestManager.startTest("Verify Principal Log Details").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Verify Principal Log Details");
 		
 		//Navigate to Child Window
@@ -275,14 +276,14 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 //		//Verify Interest Log Details
-//		ExtentTestManager.startTest("Verify Interest Log Details");
+//		ExtentTestManager.startTest("Verify Interest Log Details").assignCategory("Jewel Loan Transaction-Cash");
 //		Log.info("Verify Interest Log Details");
 //		
 //		//Navigate to Child Window
 //		String parent_Window = driver.getWindowHandle();
 //		String interestAmt = driver.findElement(transJewelRepo.interest1TxtBox).getAttribute("value");
 //		System.out.println("interestAmt: "+interestAmt);
-////		ScrollUntilElementVisible(transJewelRepo.interestLogBtn);
+//		ScrollUntilElementVisible(transJewelRepo.interestLogBtn);
 //		click(transJewelRepo.interestLogBtn);
 //		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click and view interest log details.");
 //		Log.info("Step:01 - Click and view interest log details.");
@@ -318,7 +319,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Enter Transaction Amount
-		ExtentTestManager.startTest("Enter Transaction Amount");
+		ExtentTestManager.startTest("Enter Transaction Amount").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Enter Transaction Amount");
 		
 		String transAmt = testdata.get("amount").toString();
@@ -338,7 +339,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Verify Interest and Principal Amount
-		ExtentTestManager.startTest("Verify Interest and Principal Amount");
+		ExtentTestManager.startTest("Verify Interest and Principal Amount").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Verify Interest and Principal Amount");
 		
 		String currentAmt = driver.findElement(transJewelRepo.currentTxtBox).getAttribute("value");
@@ -397,7 +398,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	public void authorizeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -412,6 +413,40 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
 	
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
+		
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
 		
@@ -430,9 +465,10 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentTestManager.startTest("Cashier Authorization").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Cashier Authorization");
 		
+		ScrollUntilElementVisible(goaldLoanRepo.autorizeAndCancelTab);
 		click(goaldLoanRepo.autorizeAndCancelTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -470,7 +506,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		ExtentTestManager.startTest("Manager Authorization - Cash Tab").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Manager Authorization - Cash Tab");
 		
 		click(goaldLoanRepo.managerAuthoTab);
@@ -490,7 +526,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -514,7 +550,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Jewel Loan Transaction-Cash");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		
@@ -549,7 +585,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Jewel Loan Transaction-Transfer");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut); 
@@ -563,6 +599,40 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		click(custSearch.loginButton);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
 	
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
@@ -583,9 +653,10 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("Jewel Loan Transaction-Transfer");
 		Log.info("Manager Authorization - Transfer Tab");
 		
+		ScrollUntilElementVisible(goaldLoanRepo.autorizeAndCancelTab);
 		click(goaldLoanRepo.autorizeAndCancelTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -607,7 +678,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Jewel Loan Transaction-Transfer");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -630,7 +701,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Jewel Loan Transaction-Transfer");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		click(goaldLoanRepo.approveCheckBoxTransfer);
@@ -658,7 +729,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	public void transModeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		
 		//Select Transaction Mode
-		ExtentTestManager.startTest("Select Transaction Mode");
+		ExtentTestManager.startTest("Select Transaction Mode").assignCategory("Jewel Loan Transaction-Transfer");
 		Log.info("Select Transaction Mode");
 		
 		select("CASH",transJewelRepo.tdTransModeDropdown);
@@ -673,7 +744,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Enter Remark 
-		ExtentTestManager.startTest("Enter Remark ");
+		ExtentTestManager.startTest("Enter Remark ").assignCategory("Jewel Loan Transaction-Transfer");
 		Log.info("Enter Remark ");
 		
 		String reamrk = testdata.get("remark").toString();
@@ -689,12 +760,20 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Submit Transaction
-		ExtentTestManager.startTest("Submit Transaction");
+		ExtentTestManager.startTest("Submit Transaction").assignCategory("Jewel Loan Transaction-Transfer");
 		Log.info("Submit Transaction");
 		
 		click(transJewelRepo.submitBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the 'Submit' button.");
 		Log.info("Step:01 - Click the 'Submit' button.");
+		
+		try {
+			AcceptAlert();
+            System.out.println("Alert accepted.");
+        } catch (NoAlertPresentException e) {
+            // No alert is present, so continue
+            System.out.println("No alert present. Continuing...");
+        }
 		
 		if(ElementDisplayed(transJewelRepo.summaryTransId)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction should be successful and  summary is displayed with correct details.");
@@ -715,7 +794,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	public void transModeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		
 		//Select Transaction Mode
-		ExtentTestManager.startTest("Select Transaction Mode");
+		ExtentTestManager.startTest("Select Transaction Mode").assignCategory("Jewel Loan Transaction-Transfer");
 		Log.info("Select Transaction Mode");
 		
 		select("TRANSFER",transJewelRepo.tdTransModeDropdown);
@@ -729,7 +808,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Enter Remark 
-		ExtentTestManager.startTest("Enter Remark ");
+		ExtentTestManager.startTest("Enter Remark ").assignCategory("Jewel Loan Transaction-Transfer");
 		Log.info("Enter Remark ");
 		
 		String reamrk = testdata.get("remark").toString();
@@ -748,12 +827,18 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 		
 		
 		//Submit Transaction
-		ExtentTestManager.startTest("Submit Transaction");
+		ExtentTestManager.startTest("Submit Transaction").assignCategory("Jewel Loan Transaction-Transfer");
 		Log.info("Submit Transaction");
 		
 		click(transJewelRepo.submitBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the 'Submit' button.");
 		Log.info("Step:01 - Click the 'Submit' button.");
+		
+		try {
+			AcceptAlert();
+		}catch(Exception e) {
+			
+		}
 		
 		if(ElementDisplayed(transJewelRepo.summaryTransId)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Transaction should be successful and  summary is displayed with correct details.");
@@ -773,7 +858,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	
 	public void postCreditPopUpEntry(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 		//Post credit button functionality
-				ExtentTestManager.startTest("Post credit button functionality");
+				ExtentTestManager.startTest("Post credit button functionality").assignCategory("Jewel Loan Transaction-Transfer");
 				Log.info("Post credit button functionality");
 				
 				click(transJewelRepo.tdPostDebitBtn);
@@ -803,7 +888,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 
 						
 						//Transaction based selection.
-						ExtentTestManager.startTest("Transaction based selection.");
+						ExtentTestManager.startTest("Transaction based selection.").assignCategory("Jewel Loan Transaction-Transfer");
 						Log.info("Transaction based selection.");
 						
 						select("Account",depositLoanRepo.oiTransBasedDropdown);
@@ -818,7 +903,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 
 						
 						//Select Product Group.
-						ExtentTestManager.startTest("Select Product Group");
+						ExtentTestManager.startTest("Select Product Group").assignCategory("Jewel Loan Transaction-Transfer");
 						Log.info("Select Product Group");
 						
 						select("Demand Investment",depositLoanRepo.productGroupDropdown);
@@ -833,7 +918,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 
 						
 						//Select Product Name
-						ExtentTestManager.startTest("Select Product Name");
+						ExtentTestManager.startTest("Select Product Name").assignCategory("Jewel Loan Transaction-Transfer");
 						Log.info("Select Product Name");
 						
 						select("INV-DEMAND-CA",depositLoanRepo.productNameDropdown);
@@ -848,7 +933,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 
 						
 						//Select Branch
-						ExtentTestManager.startTest("Select Branch");
+						ExtentTestManager.startTest("Select Branch").assignCategory("Jewel Loan Transaction-Transfer");
 						Log.info("Select Branch");
 						
 						select("TRIVANDRUM",depositLoanRepo.branchDropdown);
@@ -863,7 +948,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	
 							
 							//Select Account
-							ExtentTestManager.startTest("Select Account");
+							ExtentTestManager.startTest("Select Account").assignCategory("Jewel Loan Transaction-Transfer");
 							Log.info("Select Account");						
 							
 							String accNum = testdata.get("accNum").toString();
@@ -888,7 +973,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 	
 							
 							//Enter Amount
-							ExtentTestManager.startTest("Enter Amount");
+							ExtentTestManager.startTest("Enter Amount").assignCategory("Jewel Loan Transaction-Transfer");
 							Log.info("Enter Amount");						
 							
 							String amount = testdata.get("amount").toString();
@@ -905,7 +990,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 
 						
 						//Add button functionality
-						ExtentTestManager.startTest("Add button functionality");
+						ExtentTestManager.startTest("Add button functionality").assignCategory("Jewel Loan Transaction-Transfer");
 						Log.info("Add button functionality");
 
 						click(depositLoanRepo.addBtn);
@@ -925,7 +1010,7 @@ public class Transaction_Transactions_Jewel extends Base_Class{
 						
 						
 						//Submit button functionality
-						ExtentTestManager.startTest("Submit button functionality");
+						ExtentTestManager.startTest("Submit button functionality").assignCategory("Jewel Loan Transaction-Transfer");
 						Log.info("Submit button functionality");
 						
 						click(depositLoanRepo.submitBtn);

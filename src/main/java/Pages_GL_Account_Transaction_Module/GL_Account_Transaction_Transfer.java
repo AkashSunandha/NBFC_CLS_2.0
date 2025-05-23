@@ -83,7 +83,7 @@ public static  String generateAccountNumber() throws ClassNotFoundException {
 	
 
 public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context)throws ClassNotFoundException, InterruptedException, IOException {
-	ExtentTestManager.startTest("TC:01 - Login Functionality");
+	ExtentTestManager.startTest("TC:01 - Login Functionality").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC_01 - Login Functionality");
 
 	String UserName = configloader().getProperty("UserName");
@@ -135,7 +135,7 @@ public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext c
 }
 
 public boolean LaunchGLAccountTransactionModule() throws InterruptedException {
-	ExtentTestManager.startTest("TC:02 - Launch GL Account Transaction Module");
+	ExtentTestManager.startTest("TC:02 - Launch GL Account Transaction Module").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:02 - Launch GL Account Transaction Module");
 
 	try {
@@ -197,7 +197,7 @@ public boolean DefaultDateCheck()throws InterruptedException {
 
 public boolean DefaultBranchCheck()throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:04 - Default Branch Check");
+	ExtentTestManager.startTest("TC:04 - Default Branch Check").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:04 - Default Branch Check");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -220,7 +220,7 @@ public boolean DefaultBranchCheck()throws InterruptedException {
 
 public boolean GLAccNameDropdownOptions() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:05 - GL Acc. Name Dropdown Options");
+	ExtentTestManager.startTest("TC:05 - GL Acc. Name Dropdown Options").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:05 - GL Acc. Name Dropdown Options");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -250,7 +250,7 @@ public boolean GLAccNameDropdownOptions() throws InterruptedException{
 
 public boolean GLAccNametoCodeMapping() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:06 - GL Acc. Name to Code Mapping");
+	ExtentTestManager.startTest("TC:06 - GL Acc. Name to Code Mapping").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:06 - GL Acc. Name to Code Mapping");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -273,7 +273,7 @@ public boolean GLAccNametoCodeMapping() throws InterruptedException{
 
 public boolean TransTypeDropdownOptions() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:07 - Trans Type Dropdown Options");
+	ExtentTestManager.startTest("TC:07 - Trans Type Dropdown Options").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:07 - Trans Type Dropdown Options");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -311,7 +311,7 @@ public boolean TransTypeDropdownOptions() throws InterruptedException{
 
 public boolean GoButtonActionwithValidGLAccCode()throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:08 - Go Button Action with Valid GL Acc. Code");
+	ExtentTestManager.startTest("TC:08 - Go Button Action with Valid GL Acc. Code").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:08 - Go Button Action with Valid GL Acc. Code");
 
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -335,7 +335,7 @@ public boolean GoButtonActionwithValidGLAccCode()throws InterruptedException {
 
 public boolean DisplayEntryonCheckboxClick() throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:09 - Display Entry on Checkbox Click");
+	ExtentTestManager.startTest("TC:09 - Display Entry on Checkbox Click").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:09 - Display Entry on Checkbox Click");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -361,7 +361,7 @@ public boolean DisplayEntryonCheckboxClick() throws InterruptedException {
 
 public boolean NetPayableandRecoveryCalculation(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, StaleElementReferenceException, TimeoutException {
 
-	ExtentTestManager.startTest("TC:10 - Net Payable and Recovery Calculation");
+	ExtentTestManager.startTest("TC:10 - Net Payable and Recovery Calculation").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:10 - Net Payable and Recovery Calculation");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -410,7 +410,7 @@ public boolean NetPayableandRecoveryCalculation(Map<Object, Object> testdata, IT
 
 public boolean FieldPresenceBelowNetPayable()throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:11 - Field Presence Below Net Payable");
+	ExtentTestManager.startTest("TC:11 - Field Presence Below Net Payable").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:11 - Field Presence Below Net Payable");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -443,7 +443,7 @@ public boolean FieldPresenceBelowNetPayable()throws InterruptedException {
 
 public boolean TrnsmodeDropdownValidation() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:12 - Trnsmode Dropdown Validation");
+	ExtentTestManager.startTest("TC:12 - Trnsmode Dropdown Validation").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:12 - Trnsmode Dropdown Validation");
 	
 	ScrollUntilElementVisible(GLTransaction.TransMode);
@@ -461,7 +461,7 @@ public boolean TrnsmodeDropdownValidation() throws InterruptedException{
 
 public boolean GLTransactionCreditandCash() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:13 - GL Transaction - Credit and Cash");
+	ExtentTestManager.startTest("TC:13 - GL Transaction - Credit and Cash").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:13 - GL Transaction - Credit and Cash");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -485,7 +485,7 @@ public boolean GLTransactionCreditandCash() throws InterruptedException{
 
 public boolean PartynameParticularsInputValidation(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:14 - Party name, Particulars Input Validation");
+	ExtentTestManager.startTest("TC:14 - Party name, Particulars Input Validation").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:14 - Party name, Particulars Input Validation");
 	
 	ScrollUntilElementVisible(GLTransaction.PartyName);
@@ -516,7 +516,7 @@ public boolean PartynameParticularsInputValidation(Map<Object, Object> testdata,
 
 public boolean AppManagerFieldEditRestriction() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:15 - App. Manager Field Edit Restriction");
+	ExtentTestManager.startTest("TC:15 - App. Manager Field Edit Restriction").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:15 - App. Manager Field Edit Restriction");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -549,7 +549,7 @@ public boolean AppManagerFieldEditRestriction() throws InterruptedException{
 
 public boolean POSTDEBITpopupispresent() throws InterruptedException, TimeoutException{
 	
-	ExtentTestManager.startTest("TC:16 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:16 - POST DEBIT popup is present").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:16 - POST DEBIT popup is present");
 	
 	WebElement PostDebitTab = driver.findElement(GLTransaction.PostDebit);
@@ -583,7 +583,7 @@ public boolean POSTDEBITpopupispresent() throws InterruptedException, TimeoutExc
 
 public boolean PostDebitpopupispresent() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:17 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:17 - POST DEBIT popup is present").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:17 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -634,7 +634,7 @@ public boolean PostDebitPopUpProductGroupDropdown() throws InterruptedException{
 
 public boolean PostDebitPopUpProductNameDropdown() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:19 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:19 - POST DEBIT popup is present").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:19 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -659,7 +659,7 @@ public boolean PostDebitPopUpProductNameDropdown() throws InterruptedException{
 
 public boolean PostDebitPopUpBranchDropdown() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:20 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:20 - POST DEBIT popup is present").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:20 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -686,7 +686,7 @@ public boolean PostDebitPopUpBranchDropdown() throws InterruptedException{
 
 public boolean PostDebitPopUpAccountNumber(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:21 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:21 - POST DEBIT popup is present").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:21 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -716,7 +716,7 @@ public boolean PostDebitPopUpAccountNumber(Map<Object, Object> testdata, ITestCo
 
 public boolean PostDebitPopUpEnterAmount() throws InterruptedException {
     
-    ExtentTestManager.startTest("TC:22 - POST DEBIT popup is present");
+    ExtentTestManager.startTest("TC:22 - POST DEBIT popup is present").assignCategory("GeneralAccountTransaction-Transfer");
     Log.info("TC:22 - POST DEBIT popup is present");
 
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -760,7 +760,7 @@ public boolean PostDebitPopUpEnterAmount() throws InterruptedException {
 
 public boolean PostDebitPopUpAddDetails() throws InterruptedException{
 		
-	ExtentTestManager.startTest("TC:23 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:23 - POST DEBIT popup is present").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:23 - POST DEBIT popup is present");
 		
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -783,7 +783,7 @@ public boolean PostDebitPopUpAddDetails() throws InterruptedException{
 
 public boolean PostDebitPopUpSubmitDetails() throws InterruptedException, TimeoutException{
 	
-	ExtentTestManager.startTest("TC:24 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:24 - POST DEBIT popup is present").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:24 - POST DEBIT popup is present");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -814,7 +814,7 @@ public boolean PostDebitPopUpSubmitDetails() throws InterruptedException, Timeou
 
 public boolean PostDebitPopUpSubmitDetailsSubmitsummary() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:25 - POST DEBIT popup is present");
+	ExtentTestManager.startTest("TC:25 - POST DEBIT popup is present").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:25 - POST DEBIT popup is present");
 	
 	ScrollUntilElementVisible(GLTransaction.Submitbutton);
@@ -852,10 +852,10 @@ public boolean PostDebitPopUpSubmitDetailsSubmitsummary() throws InterruptedExce
 
 public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedException, IOException{
 	
-	ExtentTestManager.startTest("TC:26 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:26 - Login to NBFc Application in a different user").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:26 - Login to NBFc Application in a different user");
 		
-	ExtentTestManager.startTest("Logout");
+	ExtentTestManager.startTest("Logout").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("Logout");
 		
 	Thread.sleep(2000);
@@ -891,7 +891,7 @@ public boolean LogintoNBFcApplicationinadifferentuser() throws InterruptedExcept
 
 public boolean LogintoNBFcApplicationinadifferentuserAuthorizeandcancel() throws InterruptedException, IOException{
 	
-	ExtentTestManager.startTest("TC:27 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:27 - Login to NBFc Application in a different user").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:27 - Login to NBFc Application in a different user");
 	
 	ScrollUntilElementVisible(GLTransaction.AuthorizeCancel);
@@ -916,7 +916,7 @@ public boolean LogintoNBFcApplicationinadifferentuserAuthorizeandcancel() throws
 
 public boolean ManagerAuthorisationTransfer() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:28 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:28 - Login to NBFc Application in a different user").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:28 - Login to NBFc Application in a different user");
 	
 	click(GLTransaction.TransferTab);
@@ -940,7 +940,7 @@ public boolean ManagerAuthorisationTransfer() throws InterruptedException{
 
 public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:29 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:29 - Login to NBFc Application in a different user").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:29 - Login to NBFc Application in a different user");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -962,7 +962,7 @@ public boolean ManagerAuthorisationRefresh() throws InterruptedException{
 
 public boolean SelectManagerTransferTransaction() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:30 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:30 - Login to NBFc Application in a different user").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:30 - Login to NBFc Application in a different user");
 	
 	System.out.println("transIdGLtransTransfer "+transIdGLtransTransfer);
@@ -987,7 +987,7 @@ public boolean SelectManagerTransferTransaction() throws InterruptedException{
 
 public boolean ManagerTransferAuthorization() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:31 - Login to NBFc Application in a different user");
+	ExtentTestManager.startTest("TC:31 - Login to NBFc Application in a different user").assignCategory("GeneralAccountTransaction-Transfer");
 	Log.info("TC:31 - Login to NBFc Application in a different user");
 	
 	if(ElementDisplayed(GLTransaction.ManagerAuthorize)) {

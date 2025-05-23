@@ -56,7 +56,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 
 		ScrollUntilElementVisible(InvestmentTransaction.Authorize_And_Cancel_Tab);
 		click(InvestmentTransaction.Authorize_And_Cancel_Tab);
-		ExtentTestManager.startTest("Open Authorize_And_Cancel_Tab Module");
+		ExtentTestManager.startTest("Open Authorize_And_Cancel_Tab Module").assignCategory("Investment Transction -Cash");
 		Log.info("Open Authorize_And_Cancel_Tab Module");
 	}
 
@@ -81,7 +81,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}
 
 	public void SelectProductGroup() throws InterruptedException {
-		ExtentTestManager.startTest("Select Product Group");
+		ExtentTestManager.startTest("Select Product Group").assignCategory("Investment Transction -Cash");
 		Log.info("Select Product Group");
 		select("Demand Investment",InvestmentTransaction.ProductGroupDD);
 		ExtentSuccessMessage( "Step:01 -  Choose 'Demand Investment' for product group.");
@@ -94,7 +94,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}
 
 	public void SelectProductName() throws InterruptedException {
-		ExtentTestManager.startTest("Select Product Name");
+		ExtentTestManager.startTest("Select Product Name").assignCategory("Investment Transction -Cash");
 		Log.info("Select Product Group");
 		select("INV-DEMAND-CA",InvestmentTransaction.ProductNameDD);
 		ExtentSuccessMessage( "Step:01 -  Choose 'INV-DEMAND-CA' for product Name.");
@@ -104,7 +104,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 
 
 	public void SelectBankDD() throws InterruptedException {
-		ExtentTestManager.startTest("Select Bank");
+		ExtentTestManager.startTest("Select Bank").assignCategory("Investment Transction -Cash");
 		Log.info("Select Bank");
 		select("HDFC BANK - HDFC",InvestmentTransaction.SelectBankDD);
 		ExtentSuccessMessage( "Step:01 -  Choose 'HDFC BANK - HDFC' for Select Bank.");
@@ -113,7 +113,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		//		Thread.sleep(3000);
 	}
 	public void SelectBranchDD() throws InterruptedException {
-		ExtentTestManager.startTest("Select Branch");
+		ExtentTestManager.startTest("Select Branch").assignCategory("Investment Transction -Cash");
 		Log.info("Select Branch");
 		//		Thread.sleep(5000);
 		click(InvestmentTransaction.ProductName);
@@ -123,14 +123,14 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		ExtentTestManager.endTest();
 	}
 	public void ClickonFirstTransactionfromgrid() throws InterruptedException {
-		ExtentTestManager.startTest("Check an account from the accounts list.");
+		ExtentTestManager.startTest("Check an account from the accounts list.").assignCategory("Investment Transction -Cash");
 		click(InvestmentTransaction.SelectGridFirstrow);
 		ExtentSuccessMessage( "Step:01 -  Click on First Transaction from grid");
 		Log.info("Step:01 -  Click on First Transaction from grid");
 		ExtentTestManager.endTest();
 	}
 	public void SelectTransactionTypeDD() throws InterruptedException {
-		ExtentTestManager.startTest("Select Transaction Type");
+		ExtentTestManager.startTest("Select Transaction Type").assignCategory("Investment Transction -Cash");
 		Log.info("Select Transaction Type");
 		select("Credit",InvestmentTransaction.SelectTransactionTypeDD);
 		ExtentSuccessMessage( "Step:01 -  Choose 'Credit' for Select Transaction Type.");
@@ -139,7 +139,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}
 	public void SelectTransactionModeDD(String Value) throws InterruptedException {
 		//		Thread.sleep(3000);
-		ExtentTestManager.startTest("Select Transaction Mode");
+		ExtentTestManager.startTest("Select Transaction Mode").assignCategory("Investment Transction -Cash");
 		Log.info("Select Transaction Mode");
 		select(Value,InvestmentTransaction.TransactionModeDD);
 		ExtentSuccessMessage( "Step:01 -  Choose '"+Value+"' for Select Transaction Mode.");
@@ -148,14 +148,14 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}
 
 	public void ClickonGoButton() throws InterruptedException {
-		ExtentTestManager.startTest("Go Button");
+		ExtentTestManager.startTest("Go Button").assignCategory("Investment Transction -Cash");
 		click(InvestmentTransaction.GoButton);
 		ExtentSuccessMessage( "Step:01 -  Click on Go Button");
 		Log.info("Step:01 -  Click on Go Button");
 		ExtentTestManager.endTest();
 	}
 	public void ClickonSubmit_TransactionButton() throws InterruptedException {
-		ExtentTestManager.startTest("Submit Transaction Button");
+		ExtentTestManager.startTest("Submit Transaction Button").assignCategory("Investment Transction -Cash");
 		click(InvestmentTransaction.SubmitTrans);
 		ExtentSuccessMessage( "Step:01 -  Click on Submit Transaction Button");
 		Log.info("Step:01 -  Click on Submit Transaction Button");
@@ -169,7 +169,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}
 	public void EnterTransactionAmount (Map<Object, Object> testdata) throws InterruptedException {
 		//Enter Transaction Amount
-		ExtentTestManager.startTest("Enter Transaction Amount");
+		ExtentTestManager.startTest("Enter Transaction Amount").assignCategory("Investment Transction -Cash");
 		Log.info("Enter Transaction Amount");
 
 		String transAmt = testdata.get("amount").toString();
@@ -182,13 +182,13 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}
 	public void ClickonRefresh() throws InterruptedException {
 		click(InvestmentTransaction.Refresh);
-		ExtentTestManager.startTest("Open Refresh Grid");
+		ExtentTestManager.startTest("Open Refresh Grid").assignCategory("Investment Transction -Cash");
 		Log.info("Open Refresh Grid");
 	}
 
 	public void EnterTransID (String Value) throws InterruptedException {
 		//Enter Transaction ID
-		ExtentTestManager.startTest("Enter Trans ID");
+		ExtentTestManager.startTest("Enter Trans ID").assignCategory("Investment Transction -Cash");
 		Log.info("Enter Trans ID");
 		input(InvestmentTransaction.EnterTransID, Value);
 		ExtentSuccessMessage( "Step:01 - Enter a valid Trans ID  in the input field.");
@@ -197,7 +197,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}
 
 	public boolean AuthuserLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("Valid Login");
+		ExtentTestManager.startTest("Valid Login").assignCategory("Investment Transction -Cash");
 		Log.info("Valid Login");
 
 
@@ -260,7 +260,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}
 
 	public boolean logout() throws InterruptedException {
-		ExtentTestManager.startTest("Logout");
+		ExtentTestManager.startTest("Logout").assignCategory("Investment Transction -Cash");
 		Log.info("Logout");
 
 		Thread.sleep(4000);
@@ -277,14 +277,14 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		return true;
 	}
 	public void ClickonTransactionCheckboxfromgrid() throws InterruptedException {
-		ExtentTestManager.startTest("Transaction Check Box");
+		ExtentTestManager.startTest("Transaction Check Box").assignCategory("Investment Transction -Cash");
 		click(InvestmentTransaction.Transcheckbox);
 		ExtentSuccessMessage( "Step:01 -  Click on Transaction check box from grid");
 		Log.info("Step:01 -  Click on Transaction check box from grid");
 		ExtentTestManager.endTest();
 	}
 	public void ClickonAuthorizeButton() throws InterruptedException {
-		ExtentTestManager.startTest("Authorize Button");
+		ExtentTestManager.startTest("Authorize Button").assignCategory("Investment Transction -Cash");
 		click(InvestmentTransaction.AuthorizeButton);
 		ExtentSuccessMessage("Step:01 -  Click on Authorize Button");
 		Log.info("Step:01 -  Click on Authorize Button");
@@ -313,7 +313,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 
 
 	public void ClickonPostDebitButton() throws InterruptedException {
-		ExtentTestManager.startTest("POstDebit Button");
+		ExtentTestManager.startTest("POstDebit Button").assignCategory("Investment Transction -Cash");
 		click(InvestmentTransaction.POstDebit);
 		ExtentSuccessMessage( "Step:01 -  Click on POst Debit Button");
 		Log.info("Step:01 -  Click on POst Debit Button");
@@ -331,7 +331,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}	
 
 	public void ClickonAddButton() throws InterruptedException {
-		ExtentTestManager.startTest("Add Button");
+		ExtentTestManager.startTest("Add Button").assignCategory("Investment Transction -Cash");
 		click(InvestmentTransaction.AddButton);
 		ExtentSuccessMessage( "Step:01 -  Click on Add Button");
 		Log.info("Step:01 -  Click on Add Button");
@@ -339,7 +339,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}	
 
 	public void SelectGL_NAMEDropdown() throws InterruptedException {
-		ExtentTestManager.startTest("Select GL_NAME Dropdown");
+		ExtentTestManager.startTest("Select GL_NAME Dropdown").assignCategory("Investment Transction -Cash");
 		Log.info("Select Transaction Based Dropdown");
 		click(InvestmentTransaction.GL_NAME);
 		Thread.sleep(2000);
@@ -349,7 +349,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		ExtentTestManager.endTest();	
 	}
 	public void SelectTransactionBasedDropdown() throws InterruptedException {
-		ExtentTestManager.startTest("Select Transaction Based Dropdown");
+		ExtentTestManager.startTest("Select Transaction Based Dropdown").assignCategory("Investment Transction -Cash");
 		Log.info("Select Transaction Based Dropdown");
 		select("GL Code",InvestmentTransaction.TransactionBasedDD);
 		ExtentSuccessMessage( "Step:01 -  Choose 'GL Code' for Transaction Based DD");
@@ -359,7 +359,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 
 	public void EnterAmount (Map<Object, Object> testdata) throws InterruptedException {
 		//Enter Transaction Amount
-		ExtentTestManager.startTest("Enter Amount");
+		ExtentTestManager.startTest("Enter Amount").assignCategory("Investment Transction -Cash");
 		Log.info("Enter Amount");
 
 		String transAmt = testdata.get("amount").toString();
@@ -371,7 +371,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 		ExtentTestManager.endTest();
 	}
 	public void postCreditPopUpEntry(Map<Object, Object> testdata) throws InterruptedException {
-		ExtentTestManager.startTest("Post credit button functionality");
+		ExtentTestManager.startTest("Post credit button functionality").assignCategory("Investment Transction -Cash");
 		//Navigate to Pop Up Window
 		String mainWindowHandle = driver.getWindowHandle();
 		boolean popupAppeared = false;
@@ -406,7 +406,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}
 
 	public void ClickonTransferTab() throws InterruptedException {
-		ExtentTestManager.startTest("Transfer Tab");
+		ExtentTestManager.startTest("Transfer Tab").assignCategory("Investment Transction -Cash");
 		click(InvestmentTransaction.TransferTab);
 		ExtentSuccessMessage( "Step:01 -  Click on Transfer Tab");
 		Log.info("Step:01 -  Click on Transfer Tab");
@@ -414,7 +414,7 @@ public class InvestmentTransaction_Cash_Transfer extends Base_Class{
 	}	
 
 
-	////////////////////////////////////////////////////////////////////
+
 
 
 

@@ -26,7 +26,7 @@ public class GroupLoanApplication extends Base_Class{
 	public void navigateToGroupLoanApplication() throws InterruptedException {
 		
 		//Navigation of  group loan application page 
-		ExtentTestManager.startTest("Navigation of  group loan application page ");
+		ExtentTestManager.startTest("Navigation of  group loan application page ").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Navigation of  group loan application page ");
 		
 		click(grpLoanAppRegRepo.groupLoansTab);
@@ -52,7 +52,7 @@ public class GroupLoanApplication extends Base_Class{
 
 		
 		//Select Trivandrum Branch
-		ExtentTestManager.startTest("Select Trivandrum Branch");
+		ExtentTestManager.startTest("Select Trivandrum Branch").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Select Trivandrum Branch");
 		
 		select("TRIVANDRUM",grpLoanAppRegRepo.giBranchDropdown);
@@ -76,7 +76,7 @@ public class GroupLoanApplication extends Base_Class{
 		
 		
 		//Select Centre Created Earlier
-		ExtentTestManager.startTest("Select Centre Created Earlier");
+		ExtentTestManager.startTest("Select Centre Created Earlier").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Select Centre Created Earlier");
 		
 		select("14 - GUARANTOR",grpLoanAppRegRepo.giCentreDropdown);
@@ -100,7 +100,7 @@ public class GroupLoanApplication extends Base_Class{
 		
 		
 		//Click Go Button
-		ExtentTestManager.startTest("Click Go Button");
+		ExtentTestManager.startTest("Click Go Button").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Click Go Button");
 				
 		click(grpLoanAppRegRepo.giGoBtn);
@@ -122,7 +122,7 @@ public class GroupLoanApplication extends Base_Class{
 		
 		
 		//Select Group to Show Customer Details
-		ExtentTestManager.startTest("Select Group to Show Customer Details");
+		ExtentTestManager.startTest("Select Group to Show Customer Details").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Select Group to Show Customer Details");
 				
 		click(grpLoanAppRegRepo.giSelect);
@@ -147,7 +147,7 @@ public class GroupLoanApplication extends Base_Class{
 	public void customerDetails(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
 		//Select Product from Product Name Dropdown
-		ExtentTestManager.startTest("Select Product from Product Name Dropdown");
+		ExtentTestManager.startTest("Select Product from Product Name Dropdown").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Select Product from Product Name Dropdown");
 		
         WebElement table = driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_gdvCustomer\"]"));
@@ -186,7 +186,7 @@ public class GroupLoanApplication extends Base_Class{
 		
 		
 		//Check Auto-load of Loan Amount
-		ExtentTestManager.startTest("Check Auto-load of Loan Amount");
+		ExtentTestManager.startTest("Check Auto-load of Loan Amount").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Check Auto-load of Loan Amount");
 		
 		String defaultLoan = driver.findElement(grpLoanAppRegRepo.cdLoanAmountTxtBox).getAttribute("value");
@@ -211,7 +211,7 @@ public class GroupLoanApplication extends Base_Class{
 		
 		
 		//Manually Change Loan Amount to 25000
-		ExtentTestManager.startTest("Manually Change Loan Amount to 25000");
+		ExtentTestManager.startTest("Manually Change Loan Amount to 25000").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Manually Change Loan Amount to 25000");
 		
 		clear(grpLoanAppRegRepo.cdLoanAmountTxtBox);
@@ -232,7 +232,7 @@ public class GroupLoanApplication extends Base_Class{
 		
 		
 		//Select Purpose from Dropdown
-		ExtentTestManager.startTest("Select Purpose from Dropdown");
+		ExtentTestManager.startTest("Select Purpose from Dropdown").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Select Purpose from Dropdown");
 		
 		select("BUSINESS",grpLoanAppRegRepo.cdPurposeDropdown);
@@ -250,7 +250,7 @@ public class GroupLoanApplication extends Base_Class{
 		
 		
 		//Validate Popup on Selecting Purpose
-		ExtentTestManager.startTest("Validate Popup on Selecting Purpose");
+		ExtentTestManager.startTest("Validate Popup on Selecting Purpose").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Validate Popup on Selecting Purpose");
 		
 		// Try to handle the alert
@@ -286,7 +286,7 @@ public class GroupLoanApplication extends Base_Class{
 		
 		
 		//Confirm Purpose Change for All
-		ExtentTestManager.startTest("Confirm Purpose Change for All");
+		ExtentTestManager.startTest("Confirm Purpose Change for All").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Confirm Purpose Change for All");
 		
 		AcceptAlert();
@@ -301,7 +301,7 @@ public class GroupLoanApplication extends Base_Class{
 		
 		
 		//Verify the Ticking of  the  Guarantor Field
-		ExtentTestManager.startTest("Verify the Ticking of  the  Guarantor Field");
+		ExtentTestManager.startTest("Verify the Ticking of  the  Guarantor Field").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Verify the Ticking of  the  Guarantor Field");
 		
 		ScrollUntilElementVisible(grpLoanAppRegRepo.cdIsGuarantorCheckBox);
@@ -318,7 +318,7 @@ public class GroupLoanApplication extends Base_Class{
 		
 		
 		//Click Save to Confirm Group Loan application
-		ExtentTestManager.startTest("Click Save to Confirm Group Loan application");
+		ExtentTestManager.startTest("Click Save to Confirm Group Loan application").assignCategory("Microfinance concept-GroupLoanApplication");
 		Log.info("Click Save to Confirm Group Loan application");
 		
 		ScrollUntilElementVisible(grpLoanAppRegRepo.cdSaveBtn);

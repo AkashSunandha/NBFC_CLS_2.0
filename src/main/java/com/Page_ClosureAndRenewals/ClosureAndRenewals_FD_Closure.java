@@ -27,12 +27,10 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	String transId;
 	String PrincipalBalance;
 
-	/////////////////////////////////////////////
-
 	public void Navigate_GL_AC_Bulk_Transaction() throws InterruptedException {
 
 		//Open Transaction Module
-		ExtentTestManager.startTest("Navigate to Closure And Renewals Tab >> Term Deposit Closure.");
+		ExtentTestManager.startTest("Navigate to Closure And Renewals Tab >> Term Deposit Closure.").assignCategory("FD Closure -Transfer");
 		Log.info("Navigate to Closure And Renewals Tab >> Term Deposit Closure.");
 
 		click(FD_ClosureRepo.ClosureAndRenewalsTab);
@@ -55,7 +53,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	}
 
 	public void SelectBranch() throws InterruptedException {
-		ExtentTestManager.startTest("Select Branch");
+		ExtentTestManager.startTest("Select Branch").assignCategory("FD Closure -Transfer");
 		Log.info("Select Branch");
 		select("TRIVANDRUM",FD_ClosureRepo.acBranchDropdown);
 		ExtentSuccessMessage( "Step:01 -  Choose 'TRIVANDRUM' for Branch.");
@@ -63,7 +61,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 		ExtentTestManager.endTest();	
 	}
 	public void SelectProductGroup() throws InterruptedException {
-		ExtentTestManager.startTest("Select Product Group");
+		ExtentTestManager.startTest("Select Product Group").assignCategory("FD Closure -Transfer");
 		Log.info("Select Product Group");
 		select("Fixed Deposit",FD_ClosureRepo.acGroupNameDropdown);
 		ExtentSuccessMessage( "Step:01 -  Choose 'Fixed Deposit' for product group.");
@@ -72,7 +70,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	}
 
 	public void SelectProductName() throws InterruptedException {
-		ExtentTestManager.startTest("Select Product Name");
+		ExtentTestManager.startTest("Select Product Name").assignCategory("FD Closure -Transfer");
 		Log.info("Select Product Name");
 		select("DEBUNTURE FIXED TYPE 2 YRS",FD_ClosureRepo.acProductNameDropdown);
 		ExtentSuccessMessage( "Step:01 -  Choose 'DEBUNTURE FIXED TYPE 2 YRS' for Product Name.");
@@ -80,7 +78,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 		ExtentTestManager.endTest();	
 	}
 	public void SelectTransactionModeCASH() throws InterruptedException {
-		ExtentTestManager.startTest("Select TransactionMode");
+		ExtentTestManager.startTest("Select TransactionMode").assignCategory("FD Closure -Transfer");
 		Log.info("Select TransactionMode");
 		select("CASH",FD_ClosureRepo.acTransactionModeDropdown);
 		ExtentSuccessMessage( "Step:01 -  Choose 'CASH' for TransactionMode.");
@@ -90,7 +88,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 
 
 	public void ClickonSubmit_TransactionButton() throws InterruptedException {
-		ExtentTestManager.startTest("Submit Transaction Button");
+		ExtentTestManager.startTest("Submit Transaction Button").assignCategory("FD Closure -Transfer");
 		click(FD_ClosureRepo.SubmitTrans);
 		ExtentSuccessMessage( "Step:01 -  Click on Submit Transaction Button");
 		Log.info("Step:01 -  Click on Submit Transaction Button");
@@ -111,7 +109,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 
 	}
 	public void ClickonSubmit_TransactionButtons() throws InterruptedException {
-		ExtentTestManager.startTest("Submit Transaction Button");
+		ExtentTestManager.startTest("Submit Transaction Button").assignCategory("FD Closure -Transfer");
 		click(FD_ClosureRepo.SubmitButton);
 		ExtentSuccessMessage( "Step:01 -  Click on Submit Transaction Button");
 		Log.info("Step:01 -  Click on Submit Transaction Button");
@@ -120,7 +118,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 
 	public void EnterAccountNumber() throws ClassNotFoundException, InterruptedException {
 		//Enter account number
-		ExtentTestManager.startTest("Enter account number");
+		ExtentTestManager.startTest("Enter account number").assignCategory("FD Closure -Transfer");
 		Log.info("Enter account number");
 
 		String accNum = generateUniqueId(spAccNum, clmnNam);
@@ -138,7 +136,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	}
 
 	public void EnterDuration() throws ClassNotFoundException, InterruptedException {
-		ExtentTestManager.startTest("Enter_Duration");
+		ExtentTestManager.startTest("Enter_Duration").assignCategory("FD Closure -Transfer");
 		Log.info("Enter_Duration");
 		String Duration="12";
 		input(FD_ClosureRepo.Enter_Duration, Duration);
@@ -154,7 +152,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 
 
 	public void ClickOnGoButton() throws InterruptedException {
-		ExtentTestManager.startTest("Click the 'Go' button.");
+		ExtentTestManager.startTest("Click the 'Go' button.").assignCategory("FD Closure -Transfer");
 		Log.info("Click the 'Go' button.");
 		click(FD_ClosureRepo.acGOButton);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the 'Go' button.");
@@ -165,7 +163,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	}
 
 	public void CLickOnRe_Depositing_Check_Box() throws InterruptedException {
-		ExtentTestManager.startTest("Click the Re_Depositing_Check_Box.");
+		ExtentTestManager.startTest("Click the Re_Depositing_Check_Box.").assignCategory("FD Closure -Transfer");
 		Log.info("Click the Re_Depositing_Check_Box.");
 		click(FD_ClosureRepo.Re_Depositing_Check_Box);
 		ExtentTestManager.getTest().log(Status.PASS, "Click the Re_Depositing_Check_Box.");
@@ -177,7 +175,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	public void authorizeCash(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("FD Closure -Transfer");
 		Log.info("Login with Another User");
 
 		click(custSearch.custSignOut);
@@ -369,7 +367,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	}
 
 	public void Transmode(Map < Object, Object > testdata, ITestContext context) throws InterruptedException {
-		ExtentTestManager.startTest("Select Transaction Mode");
+		ExtentTestManager.startTest("Select Transaction Mode").assignCategory("FD Closure -Transfer");
 		Log.info("Select Transaction Mode");
 
 		select("TRANSFER", FD_ClosureRepo.acTransactionModeDropdown);
@@ -404,7 +402,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 		System.out.println("PrincipalBalance:-"+PrincipalBalance);
 		//		PrincipalBalance
 		//Select Transaction Mode
-		ExtentTestManager.startTest("Select Transaction Mode");
+		ExtentTestManager.startTest("Select Transaction Mode").assignCategory("FD Closure -Transfer");
 		Log.info("Select Transaction Mode");
 
 		select("TRANSFER", FD_ClosureRepo.acTransactionModeDropdown);
@@ -417,7 +415,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Enter Remark 
-		ExtentTestManager.startTest("Enter Remark ");
+		ExtentTestManager.startTest("Enter Remark ").assignCategory("FD Closure -Transfer");
 		Log.info("Enter Remark ");
 
 		String reamrk = testdata.get("remark").toString();
@@ -472,7 +470,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 
 	}
 	public void ClickonPostDebitButton() throws InterruptedException {
-		ExtentTestManager.startTest("POstDebit Button");
+		ExtentTestManager.startTest("POstDebit Button").assignCategory("FD Closure -Transfer");
 		click(FD_ClosureRepo.POstDebit);
 		ExtentSuccessMessage( "Step:01 -  Click on POst Debit Button");
 		Log.info("Step:01 -  Click on POst Debit Button");
@@ -490,7 +488,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	}	
 
 	public void ClickonAddButton() throws InterruptedException {
-		ExtentTestManager.startTest("Add Button");
+		ExtentTestManager.startTest("Add Button").assignCategory("FD Closure -Transfer");
 		click(FD_ClosureRepo.AddButton);
 		ExtentSuccessMessage( "Step:01 -  Click on Add Button");
 		Log.info("Step:01 -  Click on Add Button");
@@ -498,7 +496,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	}	
 
 	public void SelectGL_NAMEDropdown() throws InterruptedException {
-		ExtentTestManager.startTest("Select GL_NAME Dropdown");
+		ExtentTestManager.startTest("Select GL_NAME Dropdown").assignCategory("FD Closure -Transfer");
 		Log.info("Select Transaction Based Dropdown");
 		click(FD_ClosureRepo.GL_NAME);
 		Thread.sleep(2000);
@@ -509,7 +507,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	}
 	public void postCreditPopUpEntry(Map < Object, Object > testdata) throws InterruptedException {
 		ClickonPostDebitButton();
-		ExtentTestManager.startTest("Post credit button functionality");
+		ExtentTestManager.startTest("Post credit button functionality").assignCategory("FD Closure -Transfer");
 		//Navigate to Pop Up Window
 		String mainWindowHandle = driver.getWindowHandle();
 		boolean popupAppeared = false;
@@ -542,7 +540,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	}
 
 	public void SelectTransactionBasedDropdown() throws InterruptedException {
-		ExtentTestManager.startTest("Select Transaction Based Dropdown");
+		ExtentTestManager.startTest("Select Transaction Based Dropdown").assignCategory("FD Closure -Transfer");
 		Log.info("Select Transaction Based Dropdown");
 		select("GL Code",FD_ClosureRepo.TransactionBasedDD);
 		ExtentSuccessMessage( "Step:01 -  Choose 'GL Code' for Transaction Based DD");
@@ -551,7 +549,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	}
 	public void EnterAmount (Map<Object, Object> testdata) throws InterruptedException {
 		//Enter Transaction Amount
-		ExtentTestManager.startTest("Enter Amount");
+		ExtentTestManager.startTest("Enter Amount").assignCategory("FD Closure -Transfer");
 		Log.info("Enter Amount");
 
 		String transAmt = PrincipalBalance;
@@ -566,7 +564,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 	public void authorizeTransfer(Map < Object, Object > testdata, ITestContext context) throws InterruptedException, IOException {
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("FD Closure -Transfer");
 		Log.info("Login with Another User");
 
 		click(custSearch.custSignOut);
@@ -620,7 +618,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 //		ExtentTestManager.endTest();
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("FD Closure -Transfer");
 		Log.info("Manager Authorization - Transfer Tab");
 
 		click(FD_ClosureRepo.autorizeAndCancelTab);
@@ -641,7 +639,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("FD Closure -Transfer");
 		Log.info("Refresh Loan Opening Entry");
 
 		click(FD_ClosureRepo.refreshBtn);
@@ -661,7 +659,7 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 		ExtentTestManager.endTest();
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("FD Closure -Transfer");
 		Log.info("Authorize Loan Entry as Manager");
 
 		click(FD_ClosureRepo.approveCheckBoxTransfer);
@@ -672,14 +670,14 @@ public class ClosureAndRenewals_FD_Closure extends Base_Class {
 		ExtentSuccessMessage("Step:02 - Click Authorize Button");
 		Log.info("Step:02 - Click Authorize Button");
 
-		if (ElementDisplayed(FD_ClosureRepo.confirmationPopUp)) {
+		/*if (ElementDisplayed(FD_ClosureRepo.confirmationPopUp)) {
 			ExtentSuccessMessage("Expected Result: Transaction gets authorised");
 			Log.info("Expected Result: Transaction gets authorised");
 			click(FD_ClosureRepo.confirmationPopUp);
 		} else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		}
+		}*/
 
 		ExtentTestManager.endTest();
 

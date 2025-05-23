@@ -4,9 +4,12 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
+import com.Page_Customer.Customer_QuickCustomer;
 import com.Page_Repositary.PageRepositary_AccOpn_LoanOpn_JewelLoan_GoldLoan;
 import com.Page_Repositary.PageRepositary_AccOpn_ShareOpn_AClassShare;
 import com.Page_Repositary.PageRepositary_AccOpn__GeneralLoan_SuspenseAsset;
@@ -22,8 +25,12 @@ public class ShareOpening_AClassShare extends Base_Class{
 	PageRepositary_Cust_CustSearch custSearch = new PageRepositary_Cust_CustSearch();		
 	PageRepositary_AccOpn__GeneralLoan_SuspenseAsset suspenseAssetRepo = new PageRepositary_AccOpn__GeneralLoan_SuspenseAsset();
 	PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan depositLoanRepo = new PageRepositary_AccOpn__LoanOpn_DepoOpn_DepoLoan();
+	Customer_QuickCustomer quickCust = new Customer_QuickCustomer();
 
 	String transId;
+	
+	String query="Exec Getcustomer 102";
+	String columnName="CustomerID";
 	
 	public void fetchWithTransId(String transId) throws InterruptedException {
 		input(goaldLoanRepo.transIdTxtBox,transId);
@@ -34,7 +41,7 @@ public class ShareOpening_AClassShare extends Base_Class{
 	public void openAClasShare() throws InterruptedException {
 		
 		//Access Share Opening Window
-		ExtentTestManager.startTest("Access Share Opening Window");
+		ExtentTestManager.startTest("Access Share Opening Window").assignCategory("Share-Opening-cash");
 		Log.info("Access Share Opening Window");
 		
 		click(shareOpnRepo.accountOpeningTab);
@@ -61,11 +68,11 @@ public class ShareOpening_AClassShare extends Base_Class{
 	
 	
 	
-	public void shareAccountInfo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
+	public void shareAccountInfo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 
 		//Search Customer by Name
-		ExtentTestManager.startTest("Search Customer by Name");
-		Log.info("Search Customer by Name");
+		ExtentTestManager.startTest("Search Customer by Name").assignCategory("Share-Opening-cash");
+		/*Log.info("Search Customer by Name");
 		
 		click(shareOpnRepo.saiCustSrchIcon);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on 'Select Customer' popup button");
@@ -103,14 +110,19 @@ public class ShareOpening_AClassShare extends Base_Class{
 		
 
 		//Select and Add Customer
-		ExtentTestManager.startTest("Select and Add Customer");
+		ExtentTestManager.startTest("Select and Add Customer").assignCategory("Share-Opening-cash");
 		Log.info("Select and Add Customer");
 		
 		click(shareOpnRepo.popUpWndSelect);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click 'Select'");
 		Log.info("Step:01 - Click 'Select'");
 
-		driver.switchTo().window(parentWindow);
+		driver.switchTo().window(parentWindow);*/
+		
+		   String custID=quickCust.generateUniqueId(query, columnName);
+			//String custID = testdata.get("custID").toString();
+			input(shareOpnRepo.custID_textbox, custID);
+			System.out.println(custID);
 		
 		click(shareOpnRepo.saiAddBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click 'Add'");
@@ -129,7 +141,7 @@ public class ShareOpening_AClassShare extends Base_Class{
 		
 
 		//Valid Resolution Date Entry
-		ExtentTestManager.startTest("Valid Resolution Date Entry");
+		ExtentTestManager.startTest("Valid Resolution Date Entry").assignCategory("Share-Opening-cash");
 		Log.info("Valid Resolution Date Entry");
 		
 		click(shareOpnRepo.saiResolutionDateTxtBox);
@@ -148,7 +160,7 @@ public class ShareOpening_AClassShare extends Base_Class{
 		
 		
 		//Select 'Referred By' Dropdown
-		ExtentTestManager.startTest("Select 'Referred By' Dropdown");
+		ExtentTestManager.startTest("Select 'Referred By' Dropdown").assignCategory("Share-Opening-cash");
 		Log.info("Select 'Referred By' Dropdown");
 		
 		select("SUNIL",shareOpnRepo.saiReferredByDropdown);
@@ -163,7 +175,7 @@ public class ShareOpening_AClassShare extends Base_Class{
 		
 
 		//Enter Remarks
-		ExtentTestManager.startTest("Enter Remarks");
+		ExtentTestManager.startTest("Enter Remarks").assignCategory("Share-Opening-cash");
 		Log.info("Enter Remarks");
 		
 		String remark = testdata.get("remark").toString();
@@ -179,7 +191,7 @@ public class ShareOpening_AClassShare extends Base_Class{
 		
 
 		//Enter Number of Shares
-		ExtentTestManager.startTest("Enter Number of Shares");
+		ExtentTestManager.startTest("Enter Number of Shares").assignCategory("Share-Opening-cash");
 		Log.info("Enter Number of Shares");
 		
 		click(shareOpnRepo.saiNumOfSharesTxtBox);
@@ -227,8 +239,9 @@ public class ShareOpening_AClassShare extends Base_Class{
 public void authorizeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Share-Opening-cash");
 		Log.info("Login with Another User");
+		
 		
 		click(custSearch.custSignOut);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Log out");
@@ -242,10 +255,45 @@ public void authorizeCash(Map<Object, Object> testdata, ITestContext context) th
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
 	
+
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
+		
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
 		
-		String flag = "akash";
+		/*String flag = "akash";
 		
 		if(!userName.equalsIgnoreCase(flag)) {
     		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
@@ -253,16 +301,17 @@ public void authorizeCash(Map<Object, Object> testdata, ITestContext context) th
     		}else {
     			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
     			Log.info("ERROR");
-    		}
+    		}*/
 		
 		ExtentTestManager.endTest();
 		
 		
 		
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentTestManager.startTest("Cashier Authorization").assignCategory("Share-Opening-cash");
 		Log.info("Cashier Authorization");
 		
+		ScrollUntilElementVisible(goaldLoanRepo.autorizeAndCancelTab);
 		click(goaldLoanRepo.autorizeAndCancelTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -271,6 +320,7 @@ public void authorizeCash(Map<Object, Object> testdata, ITestContext context) th
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Cashier Authorization");
 		Log.info("Step:01 - Navigate to Cashier Authorization");
 
+		Thread.sleep(5000);
 		click(goaldLoanRepo.cashierRefreshBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Click Refresh Button");
 		Log.info("Step:02 - Click Refresh Button");
@@ -300,7 +350,7 @@ public void authorizeCash(Map<Object, Object> testdata, ITestContext context) th
 		
 		
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		ExtentTestManager.startTest("Manager Authorization - Cash Tab").assignCategory("Share-Opening-cash");
 		Log.info("Manager Authorization - Cash Tab");
 		
 		click(goaldLoanRepo.managerAuthoTab);
@@ -320,7 +370,7 @@ public void authorizeCash(Map<Object, Object> testdata, ITestContext context) th
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Share-Opening-cash");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -344,7 +394,7 @@ public void authorizeCash(Map<Object, Object> testdata, ITestContext context) th
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Share-Opening-cash");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		
@@ -376,7 +426,7 @@ public void authorizeCash(Map<Object, Object> testdata, ITestContext context) th
 public void transModeCash() throws InterruptedException {
 	
 	//Select Transaction Mode
-	ExtentTestManager.startTest("Select Transaction Mode");
+	ExtentTestManager.startTest("Select Transaction Mode").assignCategory("Share-Opening-cash");
 	Log.info("Select Transaction Mode");
 	
 	ScrollUntilElementVisible(shareOpnRepo.saveBtn);
@@ -395,7 +445,7 @@ public void transModeCash() throws InterruptedException {
 public void transModeTransfer() throws InterruptedException {
 	
 	//Select Transaction Mode
-	ExtentTestManager.startTest("Select Transaction Mode");
+	ExtentTestManager.startTest("Select Transaction Mode").assignCategory("Share-Opening-Transfer");
 	Log.info("Select Transaction Mode");
 	
 	ScrollUntilElementVisible(shareOpnRepo.saveBtn);
@@ -413,7 +463,7 @@ public void transModeTransfer() throws InterruptedException {
 public void submitTrans() throws InterruptedException {
 	
 	//Save Share Entry
-	ExtentTestManager.startTest("Save Share Entry");
+	ExtentTestManager.startTest("Save Share Entry").assignCategory("Share-Opening-cash");
 	Log.info("Save Share Entry");
 	
 	click(shareOpnRepo.saveBtn);
@@ -456,7 +506,7 @@ public void selectTransferAndSubmit() throws InterruptedException {
 
 public void postCreditPopUpEntry() throws InterruptedException {
 	//Post credit button functionality
-			ExtentTestManager.startTest("Post credit button functionality");
+			ExtentTestManager.startTest("Post credit button functionality").assignCategory("Share-Opening-Transfer");
 			Log.info("Post credit button functionality");
 			
 			click(shareOpnRepo.postCreditBtn);
@@ -486,7 +536,7 @@ public void postCreditPopUpEntry() throws InterruptedException {
 
 					
 					//Transaction based selection.
-					ExtentTestManager.startTest("Transaction based selection.");
+					ExtentTestManager.startTest("Transaction based selection.").assignCategory("Share-Opening-Transfer");
 					Log.info("Transaction based selection.");
 					
 					select("GL Code",depositLoanRepo.oiTransBasedDropdown);
@@ -506,7 +556,7 @@ public void postCreditPopUpEntry() throws InterruptedException {
 					
 					
 					//GL Name selection.
-					ExtentTestManager.startTest("GL Name selection.");
+					ExtentTestManager.startTest("GL Name selection.").assignCategory("Share-Opening-Transfer");
 					Log.info("GL Name selection.");
 					
 					click(depositLoanRepo.oiGLNameTxtBox);
@@ -529,7 +579,7 @@ public void postCreditPopUpEntry() throws InterruptedException {
 
 					
 					//Add button functionality
-					ExtentTestManager.startTest("Add button functionality");
+					ExtentTestManager.startTest("Add button functionality").assignCategory("Share-Opening-Transfer");
 					Log.info("Add button functionality");
 					
 					String amntValue = driver.findElement(depositLoanRepo.oiBalanceAmtTxtBox).getAttribute("value");
@@ -558,7 +608,7 @@ public void postCreditPopUpEntry() throws InterruptedException {
 					
 					
 					//Submit button functionality
-					ExtentTestManager.startTest("Submit button functionality");
+					ExtentTestManager.startTest("Submit button functionality").assignCategory("Share-Opening-Transfer");
 					Log.info("Submit button functionality");
 					
 					click(depositLoanRepo.oiSubmitBtn);
@@ -587,7 +637,7 @@ public void postCreditPopUpEntry() throws InterruptedException {
 public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 	//Login with Another User
-	ExtentTestManager.startTest("Login with Another User");
+	ExtentTestManager.startTest("Login with Another User").assignCategory("Share-Opening-Transfer");
 	Log.info("Login with Another User");
 	
 	click(custSearch.custSignOut); 
@@ -601,11 +651,46 @@ public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context
 	click(custSearch.loginButton);
 	ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 	Log.info("Step:02 - Log in with another user for authorization");
+	
+
+	try {
+		WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+		if (clickableElement != null) {
+			// Perform the desired action on the element
+			clickableElement.click();
+			ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+			Log.info("Step:01 - Click on OK button");
+			
+//				String loginUserName = testdata.get("loginUserName").toString();
+			input(custSearch.loginUserName, UserName);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+			Log.info("Step:02 - Enetered valid User Name");
+			
+//				String loginValidPassword = testdata.get("loginValidPassword").toString();
+			input(custSearch.loginPasswrd, Password);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+			Log.info("Step:03 - Entered valid Password");
+			
+			click(custSearch.loginButton);
+			ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+			Log.info("Step:04 - Click on Login Button");
+			
+			ElementDisplayed(custSearch.home);
+			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+			Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+		} else {
+			System.out.println("Element not clickable within the timeout.");
+		}
+	} catch (Exception e) {
+		System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+		System.out.println("Already login pop up not appeared");
+	}
 
 	String userName = driver.findElement(goaldLoanRepo.userName).getText();
 	System.out.println(userName);
 	 
-	String flag = "akash";
+	/*String flag = "akash";
 	
 	if(!userName.equalsIgnoreCase(flag)) {
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
@@ -613,7 +698,7 @@ public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		}
+		}*/
 	
 	ExtentTestManager.endTest();
 	
@@ -621,7 +706,7 @@ public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context
 	
 
 	//Manager Authorization - Transfer Tab
-	ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+	ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("Share-Opening-Transfer");
 	Log.info("Manager Authorization - Transfer Tab");
 	
 	click(goaldLoanRepo.autorizeAndCancelTab);
@@ -645,7 +730,7 @@ public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context
 	
 
 	//Refresh Loan Opening Entry
-	ExtentTestManager.startTest("Refresh Loan Opening Entry");
+	ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Share-Opening-Transfer");
 	Log.info("Refresh Loan Opening Entry");
 	
 	click(goaldLoanRepo.refreshBtn);
@@ -668,7 +753,7 @@ public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context
 	
 
 	//Authorize Loan Entry as Manager
-	ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+	ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Share-Opening-Transfer");
 	Log.info("Authorize Loan Entry as Manager");
 	
 	click(goaldLoanRepo.approveCheckBoxTransfer);

@@ -82,7 +82,7 @@ public static  String generateAccountNumber() throws ClassNotFoundException {
 	
 
 public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context)throws ClassNotFoundException, InterruptedException, IOException {
-	ExtentTestManager.startTest("TC:01 - Login Functionality");
+	ExtentTestManager.startTest("TC:01 - Login Functionality").assignCategory("ShareTransfer");
 	Log.info("TC_01 - Login Functionality");
 
 	String UserName = configloader().getProperty("UserName");
@@ -134,7 +134,7 @@ public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext c
 }
 
 public boolean AccessShareTransferWindow() throws InterruptedException {
-	ExtentTestManager.startTest("TC:02 - Access Share Transfer Window");
+	ExtentTestManager.startTest("TC:02 - Access Share Transfer Window").assignCategory("ShareTransfer");
 	Log.info("TC:02 - Access Share Transfer Window");
 
 		ScrollUntilElementVisible(sharetransfer.Transaction);
@@ -159,7 +159,7 @@ public boolean AccessShareTransferWindow() throws InterruptedException {
 
 public boolean Selectionbranchfromdropdown()throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:03 - Selection branch from drop down");
+	ExtentTestManager.startTest("TC:03 - Selection branch from drop down").assignCategory("ShareTransfer");
 	Log.info("TC:03 - Selection branch from drop down");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -187,7 +187,7 @@ public boolean Selectionbranchfromdropdown()throws InterruptedException {
 
 public boolean Productgroupselection() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:04 - Product group selection");
+	ExtentTestManager.startTest("TC:04 - Product group selection").assignCategory("ShareTransfer");
 	Log.info("TC:04 - Product group selection");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -214,7 +214,7 @@ public boolean Productgroupselection() throws InterruptedException{
 
 public boolean ProductNameselection() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:05 - Product Name selection");
+	ExtentTestManager.startTest("TC:05 - Product Name selection").assignCategory("ShareTransfer");
 	Log.info("TC:05 - Product Name selection");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -241,7 +241,7 @@ public boolean ProductNameselection() throws InterruptedException{
 
 public boolean VerifyClickonGOAfterEnteringAccountNo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, StaleElementReferenceException, TimeoutException {
 
-	ExtentTestManager.startTest("TC:06 - Verify Click on 'GO' After Entering Account No");
+	ExtentTestManager.startTest("TC:06 - Verify Click on 'GO' After Entering Account No").assignCategory("ShareTransfer");
 	Log.info("TC:06 - Verify Click on 'GO' After Entering Account No");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -275,7 +275,7 @@ public boolean VerifyClickonGOAfterEnteringAccountNo(Map<Object, Object> testdat
 
 public boolean VerifyClickonGOAfterEnteringAccountNoinTransferTo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, StaleElementReferenceException, TimeoutException {
 
-	ExtentTestManager.startTest("TC:07 - Verify Click on 'GO' After Entering Account No in 'Transfer To'");
+	ExtentTestManager.startTest("TC:07 - Verify Click on 'GO' After Entering Account No in 'Transfer To'").assignCategory("ShareTransfer");
 	Log.info("TC:07 - Verify Click on 'GO' After Entering Account No in 'Transfer To'");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -309,7 +309,7 @@ public boolean VerifyClickonGOAfterEnteringAccountNoinTransferTo(Map<Object, Obj
 
 public boolean VerifyShareValueAutoload() throws InterruptedException {
 
-	ExtentTestManager.startTest("TC:08 - Verify 'Share Value' Autoload");
+	ExtentTestManager.startTest("TC:08 - Verify 'Share Value' Autoload").assignCategory("ShareTransfer");
 	Log.info("TC:08 - Verify 'Share Value' Autoload");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -338,7 +338,7 @@ public boolean VerifyShareValueAutoload() throws InterruptedException {
 
 public boolean VerifyShareAmountAutoloadonNoofSharesEntry(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, StaleElementReferenceException, TimeoutException {
 
-	ExtentTestManager.startTest("TC:09 - Verify 'Share Amount' Autoload on 'No. of Shares' Entry");
+	ExtentTestManager.startTest("TC:09 - Verify 'Share Amount' Autoload on 'No. of Shares' Entry").assignCategory("ShareTransfer");
 	Log.info("TC:09 - Verify 'Share Amount' Autoload on 'No. of Shares' Entry");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -371,7 +371,7 @@ public boolean VerifyShareAmountAutoloadonNoofSharesEntry(Map<Object, Object> te
 
 public boolean VerifyTransactionSuccessonSubmit() throws InterruptedException {
 	
-	ExtentTestManager.startTest("TC:10 - Verify Transaction Success on Submit");
+	ExtentTestManager.startTest("TC:10 - Verify Transaction Success on Submit").assignCategory("ShareTransfer");
 	Log.info("TC:10 - Verify Transaction Success on Submit");
 	
 	ScrollUntilElementVisible(sharetransfer.Submitbtn);
@@ -405,7 +405,7 @@ public boolean VerifyTransactionSuccessonSubmit() throws InterruptedException {
 
 public boolean Logout() throws InterruptedException, IOException{
 	
-	ExtentTestManager.startTest("TC:11 - Logout");
+	ExtentTestManager.startTest("TC:11 - Logout").assignCategory("ShareTransfer");
 	Log.info("TC:11 - Logout");
 		
 	Thread.sleep(2000);
@@ -425,7 +425,7 @@ public boolean Logout() throws InterruptedException, IOException{
 
 public boolean ManagerLoginforAuthorization() throws InterruptedException, IOException{
 	
-	ExtentTestManager.startTest("TC:12 - Manager Login for Authorization");
+	ExtentTestManager.startTest("TC:12 - Manager Login for Authorization").assignCategory("ShareTransfer");
 	Log.info("TC:12 - Manager Login for Authorization");
 		
 	String UserName1 = configloader().getProperty("UserName2");
@@ -452,7 +452,7 @@ public boolean ManagerLoginforAuthorization() throws InterruptedException, IOExc
 
 public boolean ManagerAuthorizationRefresh() throws InterruptedException, IOException{
 	
-	ExtentTestManager.startTest("TC:13 - Manager Authorization Refresh");
+	ExtentTestManager.startTest("TC:13 - Manager Authorization Refresh").assignCategory("ShareTransfer");
 	Log.info("TC:13 - Manager Authorization Refresh");
 	
     WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -491,7 +491,7 @@ public boolean ManagerAuthorizationRefresh() throws InterruptedException, IOExce
 
 public boolean AuthorizeShareEntry() throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:14 - Authorize Share Entry");
+	ExtentTestManager.startTest("TC:14 - Authorize Share Entry").assignCategory("ShareTransfer");
 	Log.info("TC:14 - Authorize Share Entry");
 	
 	System.out.println("transIdShareTransfer "+transIdShareTransfer);

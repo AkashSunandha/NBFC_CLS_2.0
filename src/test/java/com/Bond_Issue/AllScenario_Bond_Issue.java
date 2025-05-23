@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -44,7 +45,7 @@ public class AllScenario_Bond_Issue {
 	Multiple_FD_Intrest_Payment_Cash_and_Transfer FD = new Multiple_FD_Intrest_Payment_Cash_and_Transfer();
 	Bond_Issue Issue = new Bond_Issue();
 
-	@BeforeSuite
+	@BeforeClass
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("Bondissue");
 		log = new Log();
@@ -58,7 +59,7 @@ public class AllScenario_Bond_Issue {
 			throws ClassNotFoundException, InterruptedException, IOException {
 		try {
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes")) {
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("BondIssue");
 				Log.info(" Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 

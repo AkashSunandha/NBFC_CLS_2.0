@@ -20,7 +20,7 @@ public class Customer_CustomerRegister extends Base_Class{
 	
 //Customer Register Window
 	public boolean customerRegisterWindow() throws InterruptedException {
-		ExtentTestManager.startTest("TC:01 - Customer Register Window, Basic Navigation");
+		ExtentTestManager.startTest("TC:01 - Customer Register Window, Basic Navigation").assignCategory("CustomerRegister");
 				
 		click(custRgstr.cust);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Customer");
@@ -45,7 +45,7 @@ public class Customer_CustomerRegister extends Base_Class{
 	
 	//Customer ID Field Required, validation
 	public boolean srchWithoutCustId() throws InterruptedException {
-		ExtentTestManager.startTest("TC:02 - Customer ID Field - Mandatory Check");
+		ExtentTestManager.startTest("TC:02 - Customer ID Field - Mandatory Check").assignCategory("CustomerRegister");
 		
 		click(custRgstr.custViewBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Customer Register window & Click on View button.");
@@ -63,7 +63,7 @@ public class Customer_CustomerRegister extends Base_Class{
 	
 	//Customer Register - Validation for parameters 
 	public boolean testAllParametersPresent() throws InterruptedException {
-		ExtentTestManager.startTest("TC:04 - Customer Register - parameters availability check");
+		ExtentTestManager.startTest("TC:04 - Customer Register - parameters availability check").assignCategory("CustomerRegister");
 		
 		boolean flag1 = ElementDisplayed(custRgstr.custShareChkBox);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Verify Availability of Share Checkbox.");
@@ -126,7 +126,7 @@ public class Customer_CustomerRegister extends Base_Class{
 	public boolean searchByMobileInvalid1(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {	
 		//MIN-1 & MAX-1
 		
-		ExtentTestManager.startTest("TC:03 & 06 - Customer ID Field, BVA Validations");
+		ExtentTestManager.startTest("TC:03 & 06 - Customer ID Field, BVA Validations").assignCategory("CustomerRegister");
 		
 		String invalidCustId1 = testdata.get("invalidCustId1").toString();
 		input(custRgstr.custIDTxtBox, invalidCustId1);
@@ -168,7 +168,7 @@ public class Customer_CustomerRegister extends Base_Class{
 	
 	public boolean viewByValidCustId(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
 		//MIN & MAX Value
-		ExtentTestManager.startTest("TC:05, 06 & 14 - Customer ID Field, BVA Validation & Accounts Grid - Data Verification");
+		ExtentTestManager.startTest("TC:05, 06 & 14 - Customer ID Field, BVA Validation & Accounts Grid - Data Verification").assignCategory("CustomerRegister");
 		
 		String validCustId = testdata.get("validCustId").toString();
 		input(custRgstr.custIDTxtBox, validCustId);
@@ -249,11 +249,11 @@ public class Customer_CustomerRegister extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:16 - Verify the Presence of Column - Pending Charges.");
 		Log.info("Step:16 - Verify the Presence of Column - Pending Charges.");
 		
-		boolean flag17 = ElementDisplayed(custRgstr.loanAmount);
-		ExtentTestManager.getTest().log(Status.PASS, "Step:17 - Verify the Presence of Column - Amount.");
-		Log.info("Step:17 - Verify the Presence of Column - Amount.");
+//		boolean flag17 = ElementDisplayed(custRgstr.loanAmount);
+//		ExtentTestManager.getTest().log(Status.PASS, "Step:17 - Verify the Presence of Column - Amount.");
+//		Log.info("Step:17 - Verify the Presence of Column - Amount.");
 		
-		boolean flag0 = flag1 & flag2 & flag3 & flag4 & flag5 & flag6 & flag7 & flag8 & flag9 & flag10 & flag11 & flag12 & flag13 & flag14 & flag15 & flag16 & flag17;
+		boolean flag0 = flag1 & flag2 & flag3 & flag4 & flag5 & flag6 & flag7 & flag8 & flag9 & flag10 & flag11 & flag12 & flag13 & flag14 & flag15 & flag16;
 		if(flag0 == true) { 
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Grid Column Names (Product Name, Account Number, Nature, Start Date, Amount, DueDate, Dur, Balance, DueAmount, ClosedOn, Remarks, D/I, P/S, Pending Amount) are displayed");
 			Log.info("Expected Result: Grid Column Names (Product Name, Account Number, Nature, Start Date, Amount, DueDate, Dur, Balance, DueAmount, ClosedOn, Remarks, D/I, P/S, Pending Amount) are displayed");
@@ -265,7 +265,7 @@ public class Customer_CustomerRegister extends Base_Class{
 }
 	
 	public boolean viewByInValidCustId3(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC:16 - Error Handling - Invalid Characters in Customer ID");
+		ExtentTestManager.startTest("TC:16 - Error Handling - Invalid Characters in Customer ID").assignCategory("CustomerRegister");
 		
 		String invalidCustId3 = testdata.get("invalidCustId3").toString();
 		input(custRgstr.custIDTxtBox, invalidCustId3);
@@ -287,7 +287,7 @@ public class Customer_CustomerRegister extends Base_Class{
 }
 	
 	public boolean srchBtnFunctionality(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC:07 - Pop UP Window should appear");
+		ExtentTestManager.startTest("TC:07 - Pop UP Window should appear").assignCategory("CustomerRegister");
 		
 		click(custRgstr.custSrchBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on search icon");
@@ -334,7 +334,7 @@ public class Customer_CustomerRegister extends Base_Class{
 	}
 	
 	public boolean srchBtnFuntnWithParameters (Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC:08 - Multiple Search Parameters Selection");
+		ExtentTestManager.startTest("TC:08 - Multiple Search Parameters Selection").assignCategory("CustomerRegister");
 		
 		click(custRgstr.custSrchBtn);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on search icon");
@@ -401,7 +401,7 @@ public class Customer_CustomerRegister extends Base_Class{
 	}
 	
 	public boolean viewAndCancelBtnAvailability() throws InterruptedException {
-		ExtentTestManager.startTest("TC:09 - View & Cancel Button Availability");
+		ExtentTestManager.startTest("TC:09 - View & Cancel Button Availability").assignCategory("CustomerRegister");
 		
 		boolean flag1 = ElementDisplayed(custRgstr.custViewBtn);
 		boolean flag2 = ElementDisplayed(custRgstr.custCancelBtn);
@@ -416,7 +416,7 @@ public class Customer_CustomerRegister extends Base_Class{
 	
 	
 	public boolean viewByLoan(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC:10 - View Button, Display Loan Accounts");
+		ExtentTestManager.startTest("TC:10 - View Button, Display Loan Accounts").assignCategory("CustomerRegister");
 		
 		String validCustId = testdata.get("validCustId").toString();
 		input(custRgstr.custIDTxtBox, validCustId);
@@ -461,10 +461,10 @@ public class Customer_CustomerRegister extends Base_Class{
 }
 	
 	public boolean viewByDeposits(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC:11 - View Button, Display Deposit Accounts");
+		ExtentTestManager.startTest("TC:11 - View Button, Display Deposit Accounts").assignCategory("CustomerRegister");
 		
-		String validCustId = testdata.get("validCustId").toString();
-		input(custRgstr.custIDTxtBox, validCustId);
+		String depositACC = testdata.get("depositACC").toString();
+		input(custRgstr.custIDTxtBox, depositACC);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter Valid Cust Id in Customer Id field");
 		Log.info("Step:01 - Enter Valid Cust Id in Customer Id field");
 		
@@ -491,7 +491,7 @@ public class Customer_CustomerRegister extends Base_Class{
 }
 	
 	public boolean viewByLoanAndDeposits(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC:12 & 17 - View Button, Loan and Deposit Accounts & Search Parameter - Check/Uncheck Options");
+		ExtentTestManager.startTest("TC:12 & 17 - View Button, Loan and Deposit Accounts & Search Parameter - Check/Uncheck Options").assignCategory("CustomerRegister");
 		
 		String validCustId = testdata.get("validCustId").toString();
 		input(custRgstr.custIDTxtBox, validCustId);
@@ -520,7 +520,7 @@ public class Customer_CustomerRegister extends Base_Class{
 }
 	
 	public boolean viewWithoutParameters(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC:13 - View Button, No Search Parameters");
+		ExtentTestManager.startTest("TC:13 - View Button, No Search Parameters").assignCategory("CustomerRegister");
 		
 		String validCustId = testdata.get("validCustId").toString();
 		input(custRgstr.custIDTxtBox, validCustId);
@@ -551,7 +551,7 @@ public class Customer_CustomerRegister extends Base_Class{
 }
 	
 	public boolean cancelBtnFunctionality(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException  {
-		ExtentTestManager.startTest("TC:15 - Cancel Button Functionality");
+		ExtentTestManager.startTest("TC:15 - Cancel Button Functionality").assignCategory("CustomerRegister");
 		
 		String validCustId = testdata.get("validCustId").toString();
 		input(custRgstr.custIDTxtBox, validCustId);

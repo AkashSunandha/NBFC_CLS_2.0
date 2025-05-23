@@ -45,7 +45,7 @@ public class AllScenarios_InvestmentTransaction_Cash extends Base_Class{
 	public void customerRegister(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("Investment_Transaction-Cash");
+				ExtentTestManager.startTest("Investment_Transaction-Cash").assignCategory("Investment Transction -Cash");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 //				ExtentTestManager.endTest();

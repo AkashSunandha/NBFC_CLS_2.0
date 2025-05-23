@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -27,7 +28,7 @@ public class AllScenarios_OtherLoanTransaction_Charges_TRANSFER {
 	Transaction_OtherLoanTransaction_Charges loanChrgMths = new Transaction_OtherLoanTransaction_Charges();
 	
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() { 
 		ExcelReader = new com.Utility.ExcelReader("LoanChargePosting");
 		log = new Log();
@@ -41,12 +42,12 @@ public class AllScenarios_OtherLoanTransaction_Charges_TRANSFER {
 	public void loanChargePosting(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("OtherLoanTransaction_Charges_TRANSFER");
+				ExtentTestManager.startTest("OtherLoanTransaction_Charges_TRANSFER").assignCategory("OL Transaction(Charges)-Transfer");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
 				//TC No. - 01 --> Application launch
-				ExtentTestManager.startTest("Application launch");
+				ExtentTestManager.startTest("Application launch").assignCategory("OL Transaction(Charges)-Transfer");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 				Thread.sleep(2000);

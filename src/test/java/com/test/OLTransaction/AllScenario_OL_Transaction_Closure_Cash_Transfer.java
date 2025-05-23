@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.commons.collections4.Closure;
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -41,7 +42,7 @@ public class AllScenario_OL_Transaction_Closure_Cash_Transfer {
 	OLTransaction_Cash_Transfer Transaction = new OLTransaction_Cash_Transfer();
 	OL_Transaction_Closure_Cash_Transfer Closuretrans = new OL_Transaction_Closure_Cash_Transfer();
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("TransactionClosure");
 		log = new Log();
@@ -55,7 +56,7 @@ public class AllScenario_OL_Transaction_Closure_Cash_Transfer {
 			throws ClassNotFoundException, InterruptedException, IOException {
 		try {
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes")) {
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("OtherLoanClosure-Cash&Transfer");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 

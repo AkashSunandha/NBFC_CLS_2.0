@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -27,7 +28,7 @@ public class AllScenarios_AccOpn_ShareOpn_AClassShare_CASH {
 	ShareOpening_AClassShare shareOpnMthds = new ShareOpening_AClassShare();
 	
 	
-	@BeforeSuite
+	@BeforeClass
 	public void reference() { 
 		ExcelReader = new com.Utility.ExcelReader("ShareOpn_AClassShare");
 		log = new Log();
@@ -41,12 +42,12 @@ public class AllScenarios_AccOpn_ShareOpn_AClassShare_CASH {
 	public void newCustomer(Map<Object, Object> testdata, ITestContext context) throws ClassNotFoundException, InterruptedException, IOException{
 		try {
 			if(testdata.get("Run").toString().equalsIgnoreCase("Yes")){
-				ExtentTestManager.startTest("AccountOpening_ShareOpening_AClassShare_CASH");
+				ExtentTestManager.startTest("AccountOpening_ShareOpening_AClassShare_CASH").assignCategory("Share-Opening-cash");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 
 				//TC No. - 01 --> Application launch
-				ExtentTestManager.startTest("Application launch");
+				ExtentTestManager.startTest("Application launch").assignCategory("Share-Opening-cash");
 				Base_Class.SetUp();
 				ExtentTestManager.endTest();
 				Thread.sleep(2000);

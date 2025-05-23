@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -29,7 +30,7 @@ public class AllScenario_GeneralOpen_Cash_Transfer {
 	Customer_NewCustomer newCustMths = new Customer_NewCustomer();
 	General_Opening_cash_transfer generalOpening = new General_Opening_cash_transfer();
 
-	@BeforeSuite
+	@BeforeClass
 	public void reference() {
 		ExcelReader = new com.Utility.ExcelReader("GeneralOpening");
 		log = new Log();
@@ -43,7 +44,7 @@ public class AllScenario_GeneralOpen_Cash_Transfer {
 			throws ClassNotFoundException, InterruptedException, IOException {
 		try {
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes")) {
-				ExtentTestManager.startTest(testdata.get("TestScenario").toString());
+				ExtentTestManager.startTest(testdata.get("TestScenario").toString()).assignCategory("GeneralOpening-Cash/Transfer");
 				Log.info("*** Running test method " + testdata.get("TestScenario").toString() + "...");
 				context.setAttribute("fileName", "Login");
 

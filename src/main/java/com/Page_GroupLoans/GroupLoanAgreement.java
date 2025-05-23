@@ -18,7 +18,7 @@ public class GroupLoanAgreement extends Base_Class{
 	public void groupLoanAgreement() throws InterruptedException {
 		
 		//Navigation of  group loan agreement page  
-		ExtentTestManager.startTest("Navigation of  group loan agreement page ");
+		ExtentTestManager.startTest("Navigation of  group loan agreement page ").assignCategory("Microfinance concept-GroupLoanagreement");
 		Log.info("Navigation of  group loan agreement page ");
 		
 		click(grpLoanAgrRegRepo.groupLoansTab);
@@ -46,7 +46,7 @@ public void groupInfo() throws InterruptedException {
 
 		
 		//Select Trivandrum from Branch Dropdown
-		ExtentTestManager.startTest("Select Trivandrum from Branch Dropdown");
+		ExtentTestManager.startTest("Select Trivandrum from Branch Dropdown").assignCategory("Microfinance concept-GroupLoanagreement");
 		Log.info("Select Trivandrum from Branch Dropdown");
 		
 		select("TRIVANDRUM",grpLoanAgrRegRepo.giBranchDropdown);
@@ -68,7 +68,7 @@ public void groupInfo() throws InterruptedException {
 		
 		
 		//Select a Centre from Dropdown
-		ExtentTestManager.startTest("Select a Centre from Dropdown");
+		ExtentTestManager.startTest("Select a Centre from Dropdown").assignCategory("Microfinance concept-GroupLoanagreement");
 		Log.info("Select a Centre from Dropdown");
 		
 		select("14 - GUARANTOR",grpLoanAgrRegRepo.giCentreNameDropdown);
@@ -92,7 +92,7 @@ public void groupInfo() throws InterruptedException {
 		
 		
 		//Select Group from Group Name Dropdown
-		ExtentTestManager.startTest("Select Group from Group Name Dropdown");
+		ExtentTestManager.startTest("Select Group from Group Name Dropdown").assignCategory("Microfinance concept-GroupLoanagreement");
 		Log.info("Select Group from Group Name Dropdown");
 		
 		select("25 - GUARANTOR 3",grpLoanAgrRegRepo.giGroupNameDropdown);
@@ -116,7 +116,7 @@ public void groupInfo() throws InterruptedException {
 		
 		
 		//Click Go Button to View Application Details
-		ExtentTestManager.startTest("Click Go Button to View Application Details");
+		ExtentTestManager.startTest("Click Go Button to View Application Details").assignCategory("Microfinance concept-GroupLoanagreement");
 		Log.info("Click Go Button to View Application Details");
 				
 		click(grpLoanAgrRegRepo.giGoBtn);
@@ -138,7 +138,7 @@ public void groupInfo() throws InterruptedException {
 		
 		
 		//Click 'Select' to View Customer List
-		ExtentTestManager.startTest("Click 'Select' to View Customer List");
+		ExtentTestManager.startTest("Click 'Select' to View Customer List").assignCategory("Microfinance concept-GroupLoanagreement");
 		Log.info("Click 'Select' to View Customer List");
 		
 	       WebElement table = driver.findElement(By.xpath("//*[@id=\"tblLoanAgreement\"]"));
@@ -185,51 +185,51 @@ public void groupInfo() throws InterruptedException {
 		ExtentTestManager.endTest();
 		
 		
-		
-        //Click Print Agreement to Generate PDF
-        ExtentTestManager.startTest("Click Print Agreement to Generate PDF");
-        Log.info("Click Print Agreement to Generate PDF");
-        
-        click(grpLoanAgrRegRepo.alPrintAgreementBtn);
-        ExtentTestManager.getTest().log(Status.PASS, "1. Click on 'Print Agreement' button.");
-        Log.info("1. Click on 'Print Agreement' button.");
-        
-        //Navigate to Pop Up Window
-     String mainWindowHandle = driver.getWindowHandle();
-     boolean popupAppeared = false;
-     for (String handle : driver.getWindowHandles()) {
-         if (!handle.equals(mainWindowHandle)) {
-             driver.switchTo().window(handle);
-             driver.manage().window().maximize();
-             popupAppeared = true;
-          
-             String currentUrl = driver.getCurrentUrl();
-             System.out.println("currentUrl: "+currentUrl);
-             
-             if (currentUrl.endsWith(".pdf")) {
-     			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: " + "PDF page is generated with agreement details.");
-    			Log.info("Expected Result: " + "PDF page is generated with agreement details.");                   
-             }else {
-                     ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-                     Log.info("ERROR");
-              }
-               
-               ExtentTestManager.endTest();
-               
-               driver.close();
-               driver.switchTo().window(mainWindowHandle);
-               
-             break;  
-             
-         }
-    
-     }//for loop end
+//			THROWING CONFIGURATION ERROR
+//        //Click Print Agreement to Generate PDF
+//        ExtentTestManager.startTest("Click Print Agreement to Generate PDF").assignCategory("Microfinance concept-GroupLoanagreement");
+//        Log.info("Click Print Agreement to Generate PDF");
+//        
+//        click(grpLoanAgrRegRepo.alPrintAgreementBtn);
+//        ExtentTestManager.getTest().log(Status.PASS, "1. Click on 'Print Agreement' button.");
+//        Log.info("1. Click on 'Print Agreement' button.");
+//        
+//        //Navigate to Pop Up Window
+//     String mainWindowHandle = driver.getWindowHandle();
+//     boolean popupAppeared = false;
+//     for (String handle : driver.getWindowHandles()) {
+//         if (!handle.equals(mainWindowHandle)) {
+//             driver.switchTo().window(handle);
+//             driver.manage().window().maximize();
+//             popupAppeared = true;
+//          
+//             String currentUrl = driver.getCurrentUrl();
+//             System.out.println("currentUrl: "+currentUrl);
+//             
+//             if (currentUrl.endsWith(".pdf")) {
+//     			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: " + "PDF page is generated with agreement details.");
+//    			Log.info("Expected Result: " + "PDF page is generated with agreement details.");                   
+//             }else {
+//                     ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+//                     Log.info("ERROR");
+//              }
+//               
+//               ExtentTestManager.endTest();
+//               
+//               driver.close();
+//               driver.switchTo().window(mainWindowHandle);
+//               
+//             break;  
+//             
+//         }
+//    
+//     }//for loop end
 
 		
 		
 		
      //Click Save to Confirm Group Loan Agreement
-     ExtentTestManager.startTest("Click Save to Confirm Group Loan Agreement");
+     ExtentTestManager.startTest("Click Save to Confirm Group Loan Agreement").assignCategory("Microfinance concept-GroupLoanagreement");
      Log.info("Click Save to Confirm Group Loan Agreement");
      
 		click(grpLoanAgrRegRepo.alSubmitBtn);

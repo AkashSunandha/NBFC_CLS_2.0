@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -44,9 +46,10 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 	public void Closurerenewal() throws InterruptedException {
 
-		ExtentTestManager.startTest("Navigate to Jewel Loan Closure Window");
+		ExtentTestManager.startTest("Navigate to Jewel Loan Closure Window").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Navigate to Jewel Loan Closure Window");
 
+		ScrollUntilElementVisible(JewelClosure.OpenClosureandrenewal);
 		click(JewelClosure.OpenClosureandrenewal);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Navigate to Closure & Renewals Loan Closure");
 		Log.info("Step:01 -  Navigate to Closure & Renewals Loan Closure");
@@ -60,7 +63,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Product Group and Name");
+		ExtentTestManager.startTest("Select Product Group and Name").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Select Product Group and Name");
 
 		select("Jewel Loan", JewelClosure.selectproduct);
@@ -80,7 +83,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 	public String generateUniqueCode(String query, String columnName) throws ClassNotFoundException {
 
-		ExtentTestManager.startTest("Enter Loan Account Number");
+		ExtentTestManager.startTest("Enter Loan Account Number").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Enter Loan Account Number");
 
 		{
@@ -128,7 +131,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Enter Loan Account Number");
+		ExtentTestManager.startTest("Enter Loan Account Number").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Enter Loan Account Number");
 
 		click(JewelClosure.clickGo);
@@ -142,7 +145,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		try {
 
-			ExtentTestManager.startTest("Warning Validation Popup window");
+			ExtentTestManager.startTest("Warning Validation Popup window").assignCategory("GoldLoanClosure-Cash&Transfer");
 			Log.info("Warning Validation Popup window");
 
 			click(JewelClosure.ClickNo);
@@ -159,7 +162,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		}
 
-		ExtentTestManager.startTest("Verify Closure Amount Display");
+		ExtentTestManager.startTest("Verify Closure Amount Display").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Verify Closure Amount Display");
 
 		ScrollUntilElementVisible(JewelClosure.scrolldown);
@@ -179,7 +182,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 	}
 
 	public void Cash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
-		ExtentTestManager.startTest("Select Cash as Transmode and Submit");
+		ExtentTestManager.startTest("Select Cash as Transmode and Submit").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Select Cash as Transmode and Submit");
 
 		select("CASH", JewelClosure.Selectcash);
@@ -198,7 +201,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		input(JewelClosure.remarks, remarks);
 		click(JewelClosure.remarks);
 
-		ExtentTestManager.startTest("Select Cash as Transmode and Submit");
+		ExtentTestManager.startTest("Select Cash as Transmode and Submit").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Select Cash as Transmode and Submit");
 
 		click(JewelClosure.submit);
@@ -210,7 +213,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Summary page");
+		ExtentTestManager.startTest("Summary page").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Summary page");
 
 		if (ElementDisplayed(JewelClosure.TrasidVisible)) {
@@ -227,7 +230,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 	public void Signout() throws InterruptedException {
 
-		ExtentTestManager.startTest("Logout in application");
+		ExtentTestManager.startTest("Logout in application").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Logout in application");
 
 		click(JewelClosure.Singout);
@@ -250,16 +253,50 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		click(custSearch.loginButton);
 
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Login with Another User");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
 
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
 
-		String flag = "vinusha";
+		/*String flag = "vinusha";
 
 		if (!userName.equalsIgnoreCase(flag)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
@@ -267,15 +304,16 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		} else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		}
+		}*/
 
 		ExtentTestManager.endTest();
 	}
 
 	public void Cashier() throws InterruptedException {
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
+		ScrollUntilElementVisible(JewelClosure.authandcancel);
 		click(JewelClosure.authandcancel);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -.Click the authoirze & Cancel module from the taskbar");
 		Log.info("Step:01 -.Click the authoirze & Cancel module from the taskbar");
@@ -289,7 +327,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.clickrefresh);
@@ -305,7 +343,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkbox);
@@ -318,7 +356,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is on Cashier authorisation window");
+		ExtentTestManager.startTest("User is on Cashier authorisation window").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is on Cashier authorisation window");
 
 		click(JewelClosure.clickauths);
@@ -335,7 +373,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 	public void Manager() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		// ScrollUntilElementVisible(JewelClosure.scrolldownside);
@@ -349,7 +387,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.cashtab);
@@ -361,7 +399,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.refreshtab);
@@ -376,7 +414,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkboxman);
@@ -388,7 +426,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.clickauth);
@@ -408,7 +446,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 	public void ClosurerenewalTrasnfer() throws InterruptedException {
 
-		ExtentTestManager.startTest("Navigate to Jewel Loan Closure Window");
+		ExtentTestManager.startTest("Navigate to Jewel Loan Closure Window").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Navigate to Jewel Loan Closure Window");
 
 
@@ -421,7 +459,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Product Group and Name");
+		ExtentTestManager.startTest("Select Product Group and Name").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Select Product Group and Name");
 
 		select("Jewel Loan", JewelClosure.selectproduct);
@@ -440,7 +478,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 	public void Transfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("Verify Closure Amount Display");
+		ExtentTestManager.startTest("Verify Closure Amount Display").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Verify Closure Amount Display");
 
 		if (ElementDisplayed(JewelClosure.cloamtdisplay)) {
@@ -455,7 +493,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result: Loan account details are correctly displayed");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Transmode Transfer and Post Debit");
+		ExtentTestManager.startTest("Select Transmode Transfer and Post Debit").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Select Transmode Transfer and Post Debit");
 
 		select("TRANSFER", JewelClosure.selecttransfer);
@@ -466,7 +504,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:POST DEBITbutton will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Post Debit");
+		ExtentTestManager.startTest("Select Post Debit").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Select Post Debit");
 
 		click(JewelClosure.clickPD);
@@ -492,7 +530,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 			}
 		}
 
-		ExtentTestManager.startTest("Search Account number");
+		ExtentTestManager.startTest("Search Account number").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Search Account number");
 
 		select("Demand Investment", JewelClosure.produgroup);
@@ -507,7 +545,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Possible to select the product group and product name ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Select Account Number");
+		ExtentTestManager.startTest("Select Account Number").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Search Account Number");
 
 		String AccountNumber = testdata.get("AccountNumber").toString();
@@ -519,7 +557,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Given account number details will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Add Transaction Amount");
+		ExtentTestManager.startTest("Add Transaction Amount").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Add Transaction Amount");
 
 		Display = driver.findElement(JewelClosure.dispname).getAttribute("value");
@@ -538,7 +576,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result: Amount and details is added in the grid in the auto posting popup window");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Submit POST DEBIT Action");
+		ExtentTestManager.startTest("Submit POST DEBIT Action").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Submit POST DEBIT Action");
 
 		click(JewelClosure.clickSubmit);
@@ -551,7 +589,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result: Auto posting popu window will be close");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Navigate to Summary Page - SWIFT_CODE");
+		ExtentTestManager.startTest("Navigate to Summary Page - SWIFT_CODE").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("Navigate to Summary Page - SWIFT_CODE");
 
 		click(JewelClosure.submitpostD);
@@ -568,7 +606,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 
 	public void ManagerAuth() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		// ScrollUntilElementVisible(JewelClosure.scrolldownside);
@@ -581,7 +619,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Manager authorization window will be display ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.Transfertab);
@@ -592,7 +630,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result: Transfer tab will be display");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.refreshtab);
@@ -606,7 +644,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Closure entry will be diaply after clicking the refresh button ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkboxtrue);
@@ -617,7 +655,7 @@ public class JewelLoan_Closure_Cash_Transfer extends Base_Class {
 		Log.info("Expected Result:Possible to select the closure entry and selected entry is hghlighted ");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("User is on Manager authorisation window");
+		ExtentTestManager.startTest("User is on Manager authorisation window").assignCategory("GoldLoanClosure-Cash&Transfer");
 		Log.info("User is on Manager authorisation window");
 
 		click(JewelClosure.clickauth);

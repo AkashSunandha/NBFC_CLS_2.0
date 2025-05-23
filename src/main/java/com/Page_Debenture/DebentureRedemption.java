@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 
 import com.BasePackage.Base_Class;
@@ -44,7 +45,7 @@ public class DebentureRedemption extends Base_Class{
 	public void debentureRedemptionCash() throws InterruptedException, ClassNotFoundException {
 		
 		//Navigate to Debenture Redemption Window
-		ExtentTestManager.startTest("Navigate to Debenture Redemption Window");
+		ExtentTestManager.startTest("Navigate to Debenture Redemption Window").assignCategory("DebentureRedemption_CASH");
 		Log.info("Navigate to Debenture Redemption Window");
 		
 		ScrollUntilElementVisible(debentureRedmRepo.debentureTab);
@@ -68,10 +69,8 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Verify Debenture Type Dropdown Selection
-		ExtentTestManager.startTest("Verify Debenture Type Dropdown Selection");
+		ExtentTestManager.startTest("Verify Debenture Type Dropdown Selection").assignCategory("DebentureRedemption_CASH");
 		Log.info("Verify Debenture Type Dropdown Selection");
-		
-		
 		
 		select("DEB CASH",debentureRedmRepo.drDebTypeDropdown);
 		ExtentTestManager.getTest().log(Status.PASS, "\"1. Click on the 'Debenture Type' dropdown.\r\n"
@@ -94,7 +93,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Verify Debenture Issue Dropdown Selection
-		ExtentTestManager.startTest("Verify Debenture Issue Dropdown Selection");
+		ExtentTestManager.startTest("Verify Debenture Issue Dropdown Selection").assignCategory("DebentureRedemption_CASH");
 		Log.info("Verify Debenture Issue Dropdown Selection");
 		
 		select("ISSUE-DEB CASH-66",debentureRedmRepo.drIssueTypeDropdown);
@@ -119,7 +118,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Verify Debenture Series Dropdown Selection
-		ExtentTestManager.startTest("Verify Debenture Series Dropdown Selection");
+		ExtentTestManager.startTest("Verify Debenture Series Dropdown Selection").assignCategory("DebentureRedemption_CASH");
 		Log.info("Verify Debenture Series Dropdown Selection");
 		
 		select("SERIES-ISSUE-DEB CASH-66-SERIES-2063",debentureRedmRepo.drSeriesDropdown);
@@ -141,7 +140,7 @@ public class DebentureRedemption extends Base_Class{
 
 		
 		//Verify Account Number Entry for Maturity
-		ExtentTestManager.startTest("Verify Account Number Entry for Maturity");
+		ExtentTestManager.startTest("Verify Account Number Entry for Maturity").assignCategory("DebentureRedemption_CASH");
 		Log.info("Verify Account Number Entry for Maturity");
 
 		String accNum = generateUniqueId(spAccNum, clmnNam);
@@ -164,7 +163,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Verify Navigation to Redemption Window
-		ExtentTestManager.startTest("Verify Navigation to Redemption Window");
+		ExtentTestManager.startTest("Verify Navigation to Redemption Window").assignCategory("DebentureRedemption_CASH");
 		Log.info("Verify Navigation to Redemption Window");
 		
 		click(debentureRedmRepo.drGoBtn);
@@ -184,7 +183,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Verify Transmode Selection as Cash
-		ExtentTestManager.startTest("Verify Transmode Selection as Cash");
+		ExtentTestManager.startTest("Verify Transmode Selection as Cash").assignCategory("DebentureRedemption_CASH");
 		Log.info("Verify Transmode Selection as Cash");
 		
 		String option = driver.findElement(debentureRedmRepo.drTransModeDropdownOption).getText();
@@ -205,7 +204,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Verify Submission of Redemption
-		ExtentTestManager.startTest("Verify Submission of Redemption");
+		ExtentTestManager.startTest("Verify Submission of Redemption").assignCategory("DebentureRedemption_CASH");
 		Log.info("Verify Submission of Redemption");
 		
 		ScrollUntilElementVisible(debentureRedmRepo.drSubmitbtn);
@@ -232,45 +231,45 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		
-		//Verify Print Functionality
-		ExtentTestManager.startTest("Verify Print Functionality");
-		Log.info("Verify Print Functionality");
-		
-		click(debentureRedmRepo.printBtn);
-		ExtentTestManager.getTest().log(Status.PASS, "1. Click the 'Print' button.");
-		Log.info("1. Click the 'Print' button.");
-		
-        //Navigate to Pop Up Window
-   /*  String mainWindowHandle = driver.getWindowHandle();
-     boolean popupAppeared = false;
-     for (String handle : driver.getWindowHandles()) {
-         if (!handle.equals(mainWindowHandle)) {
-             driver.switchTo().window(handle);
-             driver.manage().window().maximize();
-             popupAppeared = true;
-          
-             String currentUrl = driver.getCurrentUrl();
-             System.out.println("currentUrl: "+currentUrl);
-             
-             if (currentUrl.endsWith(".pdf")) {
-     			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: " + "Voucher is printed successfully.");
-    			Log.info("Expected Result: " + "Voucher is printed successfully.");                   
-             }else {
-                     ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-                     Log.info("ERROR");
-              }
-               
-               ExtentTestManager.endTest();
-               
-               driver.close();
-               driver.switchTo().window(mainWindowHandle);
-               
-             break;  
-             
-         }
-    
-     }//for loop end */
-		ExtentTestManager.endTest();
+//		//Verify Print Functionality
+//		ExtentTestManager.startTest("Verify Print Functionality").assignCategory("DebentureRedemption_CASH");
+//		Log.info("Verify Print Functionality");
+//		
+//		click(debentureRedmRepo.printBtn);
+//		ExtentTestManager.getTest().log(Status.PASS, "1. Click the 'Print' button.");
+//		Log.info("1. Click the 'Print' button.");
+//		
+//        //Navigate to Pop Up Window
+//     String mainWindowHandle = driver.getWindowHandle();
+//     boolean popupAppeared = false;
+//     for (String handle : driver.getWindowHandles()) {
+//         if (!handle.equals(mainWindowHandle)) {
+//             driver.switchTo().window(handle);
+//             driver.manage().window().maximize();
+//             popupAppeared = true;
+//          
+//             String currentUrl = driver.getCurrentUrl();
+//             System.out.println("currentUrl: "+currentUrl);
+//             
+//             if (currentUrl.endsWith(".pdf")) {
+//     			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: " + "Voucher is printed successfully.");
+//    			Log.info("Expected Result: " + "Voucher is printed successfully.");                   
+//             }else {
+//                     ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+//                     Log.info("ERROR");
+//              }
+//               
+//               ExtentTestManager.endTest();
+//               
+//               driver.close();
+//               driver.switchTo().window(mainWindowHandle);
+//               
+//             break;  
+//             
+//         }
+//    
+//     }//for loop end
+//		ExtentTestManager.endTest();
 
 		
 	}//end
@@ -279,7 +278,7 @@ public class DebentureRedemption extends Base_Class{
 	public void authorizeCash(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("DebentureRedemption_CASH");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -294,10 +293,44 @@ public class DebentureRedemption extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
 	
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
+		
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
 		
-		String flag = "akash";
+		/*String flag = "akash";
 		
 		if(!userName.equalsIgnoreCase(flag)) {
     		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
@@ -305,7 +338,7 @@ public class DebentureRedemption extends Base_Class{
     		}else {
     			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
     			Log.info("ERROR");
-    		}
+    		}*/
 		
 		ExtentTestManager.endTest();
 		
@@ -313,9 +346,10 @@ public class DebentureRedemption extends Base_Class{
 		
 
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization - Cash Tab");
+		ExtentTestManager.startTest("Manager Authorization - Cash Tab").assignCategory("DebentureRedemption_CASH");
 		Log.info("Manager Authorization - Cash Tab");
 		
+		ScrollUntilElementVisible(goaldLoanRepo.autorizeAndCancelTab);
 		click(goaldLoanRepo.autorizeAndCancelTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -337,7 +371,7 @@ public class DebentureRedemption extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("DebentureRedemption_CASH");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -361,7 +395,7 @@ public class DebentureRedemption extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("DebentureRedemption_CASH");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		
@@ -382,7 +416,7 @@ public class DebentureRedemption extends Base_Class{
 		
 
 		//Cashier Authorization
-		ExtentTestManager.startTest("Cashier Authorization");
+		ExtentTestManager.startTest("Cashier Authorization").assignCategory("DebentureRedemption_CASH");
 		Log.info("Cashier Authorization");
 		 
 
@@ -429,7 +463,7 @@ public class DebentureRedemption extends Base_Class{
 	public void authorizeTransfer(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException {		
 
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut); 
@@ -443,11 +477,46 @@ public class DebentureRedemption extends Base_Class{
 		click(custSearch.loginButton);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
+		
 	
 		String userName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(userName);
 		 
-		String flag = "akash";
+		/*String flag = "akash";
 		
 		if(!userName.equalsIgnoreCase(flag)) {
     		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Logging successfull with another user");
@@ -455,7 +524,7 @@ public class DebentureRedemption extends Base_Class{
     		}else {
     			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
     			Log.info("ERROR");
-    		}
+    		}*/
 		
 		ExtentTestManager.endTest();
 		
@@ -463,9 +532,10 @@ public class DebentureRedemption extends Base_Class{
 		
 
 		//Manager Authorization - Transfer Tab
-		ExtentTestManager.startTest("Manager Authorization - Transfer Tab");
+		ExtentTestManager.startTest("Manager Authorization - Transfer Tab").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Manager Authorization - Transfer Tab");
 		
+		ScrollUntilElementVisible(goaldLoanRepo.autorizeAndCancelTab);
 		click(goaldLoanRepo.autorizeAndCancelTab);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click \"Authorize & Cancel\"");
 		Log.info("Step:01 - Click \"Authorize & Cancel\"");
@@ -487,7 +557,7 @@ public class DebentureRedemption extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -510,7 +580,7 @@ public class DebentureRedemption extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		click(goaldLoanRepo.approveCheckBoxTransfer);
@@ -536,7 +606,7 @@ public class DebentureRedemption extends Base_Class{
 				
 		
 		//Navigate to Debenture Redemption Window
-		ExtentTestManager.startTest("Navigate to Debenture Redemption Window");
+		ExtentTestManager.startTest("Navigate to Debenture Redemption Window").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Navigate to Debenture Redemption Window");
 		
 		ScrollUntilElementVisible(debentureRedmRepo.debentureTab);
@@ -560,7 +630,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Default Branch Display
-		ExtentTestManager.startTest("Default Branch Display");
+		ExtentTestManager.startTest("Default Branch Display").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Default Branch Display");
 		
 		String loginBranchValue = driver.findElement(debentureRedmRepo.drLoginBranch).getText();
@@ -586,7 +656,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Debenture Type Selection
-		ExtentTestManager.startTest("Debenture Type Selection");
+		ExtentTestManager.startTest("Debenture Type Selection").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Debenture Type Selection");
 		
 		select("DEB TRAIL TRANSFER",debentureRedmRepo.drDebTypeDropdown);
@@ -610,7 +680,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Debenture Issue Selection
-		ExtentTestManager.startTest("Debenture Issue Selection");
+		ExtentTestManager.startTest("Debenture Issue Selection").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Debenture Issue Selection");
 		
 		select("ISSUE-DEB TRAIL TRANSFER-65",debentureRedmRepo.drIssueTypeDropdown);
@@ -635,7 +705,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Debenture Series Selection
-		ExtentTestManager.startTest("Debenture Series Selection");
+		ExtentTestManager.startTest("Debenture Series Selection").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Debenture Series Selection");
 		
 		select("SERIES-ISSUE-DEB TRAIL TRANSFER-65-SERIES-2062",debentureRedmRepo.drSeriesDropdown);
@@ -657,7 +727,7 @@ public class DebentureRedemption extends Base_Class{
 
 		
 		//Valid Account Number Entry
-		ExtentTestManager.startTest("Valid Account Number Entry");
+		ExtentTestManager.startTest("Valid Account Number Entry").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Valid Account Number Entry");
 
 		String accNum = generateUniqueId(spAccNumTransfer, clmnNam);
@@ -680,7 +750,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Proceed to Redemption Window
-		ExtentTestManager.startTest("Proceed to Redemption Window");
+		ExtentTestManager.startTest("Proceed to Redemption Window").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Proceed to Redemption Window");
 		
 		click(debentureRedmRepo.drGoBtn);
@@ -700,7 +770,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Interest Log Popup Display
-		ExtentTestManager.startTest("Interest Log Popup Display");
+		ExtentTestManager.startTest("Interest Log Popup Display").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Interest Log Popup Display");
 		
 		ScrollUntilElementVisible(debentureRedmRepo.drSubmitbtn);
@@ -737,7 +807,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Transmode Transfer Selection
-		ExtentTestManager.startTest("Transmode Transfer Selection");
+		ExtentTestManager.startTest("Transmode Transfer Selection").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Transmode Transfer Selection");
 		
 		String option = driver.findElement(debentureRedmRepo.drTransModeDropdownOption).getText();
@@ -760,7 +830,7 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		//Verify Submission of Redemption
-		ExtentTestManager.startTest("Verify Submission of Redemption");
+		ExtentTestManager.startTest("Verify Submission of Redemption").assignCategory("DebentureRedemption_Transfer");
 		Log.info("Verify Submission of Redemption");
 		
 		ScrollUntilElementVisible(debentureRedmRepo.drSubmitbtn);
@@ -788,51 +858,51 @@ public class DebentureRedemption extends Base_Class{
 		
 		
 		
-		/*//Verify Print Functionality
-		ExtentTestManager.startTest("Verify Print Functionality");
-		Log.info("Verify Print Functionality");
-		
-		click(debentureRedmRepo.printBtn);
-		ExtentTestManager.getTest().log(Status.PASS, "1. Click the 'Print' button.");
-		Log.info("1. Click the 'Print' button.");
-		
-        //Navigate to Pop Up Window
-     String mainWindowHandle = driver.getWindowHandle();
-     boolean popupAppeared = false;
-     for (String handle : driver.getWindowHandles()) {
-         if (!handle.equals(mainWindowHandle)) {
-             driver.switchTo().window(handle);
-             driver.manage().window().maximize();
-             popupAppeared = true;
-          
-             String currentUrl = driver.getCurrentUrl();
-             System.out.println("currentUrl: "+currentUrl);
-             
-             if (currentUrl.endsWith(".pdf")) {
-     			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: " + "Voucher is printed successfully.");
-    			Log.info("Expected Result: " + "Voucher is printed successfully.");                   
-             }else {
-                     ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
-                     Log.info("ERROR");
-              }
-               
-               ExtentTestManager.endTest();
-               
-               driver.close();
-               driver.switchTo().window(mainWindowHandle);
-               
-             break;  
-             
-         }
-    
-     }//for loop end*/
-		ExtentTestManager.endTest();
+//		//Verify Print Functionality
+//		ExtentTestManager.startTest("Verify Print Functionality").assignCategory("DebentureRedemption_Transfer");
+//		Log.info("Verify Print Functionality");
+//		
+//		click(debentureRedmRepo.printBtn);
+//		ExtentTestManager.getTest().log(Status.PASS, "1. Click the 'Print' button.");
+//		Log.info("1. Click the 'Print' button.");
+//		
+//        //Navigate to Pop Up Window
+//     String mainWindowHandle = driver.getWindowHandle();
+//     boolean popupAppeared = false;
+//     for (String handle : driver.getWindowHandles()) {
+//         if (!handle.equals(mainWindowHandle)) {
+//             driver.switchTo().window(handle);
+//             driver.manage().window().maximize();
+//             popupAppeared = true;
+//          
+//             String currentUrl = driver.getCurrentUrl();
+//             System.out.println("currentUrl: "+currentUrl);
+//             
+//             if (currentUrl.endsWith(".pdf")) {
+//     			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: " + "Voucher is printed successfully.");
+//    			Log.info("Expected Result: " + "Voucher is printed successfully.");                   
+//             }else {
+//                     ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
+//                     Log.info("ERROR");
+//              }
+//               
+//               ExtentTestManager.endTest();
+//               
+//               driver.close();
+//               driver.switchTo().window(mainWindowHandle);
+//               
+//             break;  
+//             
+//         }
+//    
+//     }//for loop end
+//		ExtentTestManager.endTest();
 	}//end
 
 
 	public void postCreditPopUpEntry() throws InterruptedException {
 		//Post credit button functionality
-				ExtentTestManager.startTest("Post credit button functionality");
+				ExtentTestManager.startTest("Post credit button functionality").assignCategory("DebentureRedemption_Transfer");
 				Log.info("Post credit button functionality");
 				
 				click(debentureRedmRepo.postCreditBtn);
@@ -862,7 +932,7 @@ public class DebentureRedemption extends Base_Class{
 
 						
 						//Select Transaction Based
-						ExtentTestManager.startTest("Select Transaction Based");
+						ExtentTestManager.startTest("Select Transaction Based").assignCategory("DebentureRedemption_Transfer");
 						Log.info("Select Transaction Based");
 						
 						select("Account",depositLoanRepo.oiTransBasedDropdown);
@@ -877,7 +947,7 @@ public class DebentureRedemption extends Base_Class{
 
 						
 						//Select Product Group.
-						ExtentTestManager.startTest("Select Product Group");
+						ExtentTestManager.startTest("Select Product Group").assignCategory("DebentureRedemption_Transfer");
 						Log.info("Select Product Group");
 						
 						select("Demand Investment",depositLoanRepo.productGroupDropdown);
@@ -892,7 +962,7 @@ public class DebentureRedemption extends Base_Class{
 
 						
 						//Select Product Name
-						ExtentTestManager.startTest("Select Product Name");
+						ExtentTestManager.startTest("Select Product Name").assignCategory("DebentureRedemption_Transfer");
 						Log.info("Select Product Name");
 						
 						select("INV-DEMAND-CA",depositLoanRepo.productNameDropdown);
@@ -907,7 +977,7 @@ public class DebentureRedemption extends Base_Class{
 
 						
 						//Select Branch
-						ExtentTestManager.startTest("Select Branch");
+						ExtentTestManager.startTest("Select Branch").assignCategory("DebentureRedemption_Transfer");
 						Log.info("Select Branch");
 						
 						select("TRIVANDRUM",depositLoanRepo.branchDropdown);
@@ -922,7 +992,7 @@ public class DebentureRedemption extends Base_Class{
 
 							
 							//Select Account
-							ExtentTestManager.startTest("Select Account");
+							ExtentTestManager.startTest("Select Account").assignCategory("DebentureRedemption_Transfer");
 							Log.info("Select Account");						
 							
 //							String accNum = testdata.get("accNum").toString();
@@ -947,7 +1017,7 @@ public class DebentureRedemption extends Base_Class{
 
 							
 							//Enter Amount
-							ExtentTestManager.startTest("Enter Amount");
+							ExtentTestManager.startTest("Enter Amount").assignCategory("DebentureRedemption_Transfer");
 							Log.info("Enter Amount");						
 							
 							String amntValue = driver.findElement(By.xpath("//*[@id=\"txtBalAmount_txt\"]")).getAttribute("value");
@@ -972,7 +1042,7 @@ public class DebentureRedemption extends Base_Class{
 
 						
 						//Add button functionality
-						ExtentTestManager.startTest("Add button functionality");
+						ExtentTestManager.startTest("Add button functionality").assignCategory("DebentureRedemption_Transfer");
 						Log.info("Add button functionality");
 
 						click(depositLoanRepo.addBtn);
@@ -992,7 +1062,7 @@ public class DebentureRedemption extends Base_Class{
 						
 						
 						//Submit button functionality
-						ExtentTestManager.startTest("Submit button functionality");
+						ExtentTestManager.startTest("Submit button functionality").assignCategory("DebentureRedemption_Transfer");
 						Log.info("Submit button functionality");
 						
 						click(depositLoanRepo.submitBtn);

@@ -66,7 +66,7 @@ public class Bond_Issue extends Base_Class {
 	}
 	
 	public void verifyBondIssuePage() throws InterruptedException {
-		ExtentTestManager.startTest("Verify Bond Issue Page");
+		ExtentTestManager.startTest("Verify Bond Issue Page").assignCategory("BondIssue");
 		Log.info("Verifying bond issue page");
 
 		
@@ -86,7 +86,7 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void verifyBondIssuePage1() throws InterruptedException {
-		ExtentTestManager.startTest("Verify Bond Issue Page");
+		ExtentTestManager.startTest("Verify Bond Issue Page").assignCategory("BondIssue");
 		Log.info("Verifying bond issue page");
 
 		// click(Bondissue.clickonBond);
@@ -139,7 +139,7 @@ public class Bond_Issue extends Base_Class {
 //	}
 	public void selectProductAll() throws InterruptedException {
 
-		ExtentTestManager.startTest("Select Product as All");
+		ExtentTestManager.startTest("Select Product as All").assignCategory("BondIssue");
 		Log.info("Selecting product as All");
 
 		// select("DEBUNTURE SCHEME 2", Bondissue.product);
@@ -153,7 +153,7 @@ public class Bond_Issue extends Base_Class {
 
 	public void selectProductAll1() throws InterruptedException {
 
-		ExtentTestManager.startTest("Select Product as All");
+		ExtentTestManager.startTest("Select Product as All").assignCategory("BondIssue");
 		Log.info("Selecting product as All");
 
 		// select("DEBUNTURE SCHEME 2", Bondissue.product);
@@ -169,7 +169,7 @@ public class Bond_Issue extends Base_Class {
 	public void verifyNameFieldFunctionality(Map<Object, Object> testdata, ITestContext contex)
 			throws InterruptedException {
 
-		ExtentTestManager.startTest("Name Field Functionality");
+		ExtentTestManager.startTest("Name Field Functionality").assignCategory("BondIssue");
 		Log.info("Verifying name field functionality");
 
 		String Name = testdata.get("Name").toString();
@@ -188,7 +188,7 @@ public class Bond_Issue extends Base_Class {
 
 	public void verifyApplicationDetailsPopupFunctionality() throws InterruptedException {
 
-		ExtentTestManager.startTest("Application Details Popup Functionality");
+		ExtentTestManager.startTest("Application Details Popup Functionality").assignCategory("BondIssue");
 		Log.info("Verifying application details popup functionality");
 
 		ScrollUntilElementVisible(Bondissue.Scrolldown);
@@ -204,7 +204,7 @@ public class Bond_Issue extends Base_Class {
 
 	public void closeApplicationDetailsPopup() throws InterruptedException {
 
-		ExtentTestManager.startTest("Close Application Details Popup");
+		ExtentTestManager.startTest("Close Application Details Popup").assignCategory("BondIssue");
 		Log.info("Closing application details popup");
 
 		// Navigate to Pop Up Window
@@ -264,7 +264,7 @@ public class Bond_Issue extends Base_Class {
 
 	public void verifyIssueButtonFunctionality() throws InterruptedException {
 
-		ExtentTestManager.startTest("Issue Button Functionality");
+		ExtentTestManager.startTest("Issue Button Functionality").assignCategory("BondIssue");
 		Log.info("Verifying issue button functionality");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Check if Issue button is enabled ");
@@ -312,7 +312,7 @@ public class Bond_Issue extends Base_Class {
 
 	public void confirmIssueApplication() throws InterruptedException {
 
-		ExtentTestManager.startTest("Issue Application Confirmation");
+		ExtentTestManager.startTest("Issue Application Confirmation").assignCategory("BondIssue");
 		Log.info("Confirming application issue");
 
 		Thread.sleep(5000);
@@ -329,7 +329,7 @@ public class Bond_Issue extends Base_Class {
 
 	public void logout() {
 
-		ExtentTestManager.startTest("Logout After Issue");
+		ExtentTestManager.startTest("Logout After Issue").assignCategory("BondIssue");
 		Log.info("Logging out after issuing the application");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:1 - Click Logout Option.");
@@ -343,22 +343,22 @@ public class Bond_Issue extends Base_Class {
 
 	public void loginAsManagerForAuthorization() {
 
-		ExtentTestManager.startTest("Manager Login for Authorization");
+		ExtentTestManager.startTest("Manager Login for Authorization").assignCategory("BondIssue");
 		Log.info("Manager logging in for authorization");
 
 	}
 
 	public void cashierAuthorizationRefresh() throws InterruptedException {
 
-		ExtentTestManager.startTest("Cashier Authorization Refresh");
+		ExtentTestManager.startTest("Cashier Authorization Refresh").assignCategory("BondIssue");
 		Log.info("Refreshing cashier authorization list");
 
-		ExtentTestManager.startTest("Manager authorization");
+		ExtentTestManager.startTest("Manager authorization").assignCategory("BondIssue");
 		Log.info("Manager authorization");
 
 		click(FDintrest.clickonauth);
 
-		ExtentTestManager.startTest("cashier authorization");
+		ExtentTestManager.startTest("cashier authorization").assignCategory("BondIssue");
 		Log.info("cashier authorization");
 
 		click(FDintrest.clickcashier);
@@ -374,7 +374,7 @@ public class Bond_Issue extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the authoirze & Cancel module from the taskbar ");
 		Log.info("Step:01 - Click the authoirze & Cancel module from the taskbar ");
 
-		ExtentTestManager.startTest("cashier authorization");
+		ExtentTestManager.startTest("cashier authorization").assignCategory("BondIssue");
 		Log.info("cashier authorization");
 
 		click(FDintrest.refresh);
@@ -394,7 +394,7 @@ public class Bond_Issue extends Base_Class {
 
 	public void authorizeBondIssueEntry() throws InterruptedException {
 
-		ExtentTestManager.startTest("Authorize Bond Issue Entry");
+		ExtentTestManager.startTest("Authorize Bond Issue Entry").assignCategory("BondIssue");
 		Log.info("Authorizing bond issue entry");
 
 		click(Bondissue.check);
@@ -411,7 +411,7 @@ public class Bond_Issue extends Base_Class {
 
 	public void openManagerAuthorizationModule() throws InterruptedException {
 
-		ExtentTestManager.startTest("Manager Authorization Module");
+		ExtentTestManager.startTest("Manager Authorization Module").assignCategory("BondIssue");
 		Log.info("Verifying manager authorization module");
 
 		click(JewelClosure.managertab);
@@ -443,46 +443,46 @@ public class Bond_Issue extends Base_Class {
 
 	public void logoutAgain() {
 
-		ExtentTestManager.startTest("Logout After Authorization");
+		ExtentTestManager.startTest("Logout After Authorization").assignCategory("BondIssue");
 		Log.info("Logging out after manager authorization");
 
 	}
 
 	public void loginApplicationAgain() {
 
-		ExtentTestManager.startTest("Login for Rejection - Cash Mode");
+		ExtentTestManager.startTest("Login for Rejection - Cash Mode").assignCategory("BondIssue");
 		Log.info("Logging in to perform rejection using cash mode");
 
 	}
 
 	public void verifyBondIssuePageAgain() {
-		ExtentTestManager.startTest("Verify Bond Issue Page Again");
+		ExtentTestManager.startTest("Verify Bond Issue Page Again").assignCategory("BondIssue");
 		Log.info("Verifying bond issue page again");
 
 	}
 
 	public void searchWithBranchStatusProduct() {
 
-		ExtentTestManager.startTest("Search with Branch, Status and Product");
+		ExtentTestManager.startTest("Search with Branch, Status and Product").assignCategory("BondIssue");
 		Log.info("Searching with selected branch, status and product");
 	}
 
 	public void clickRejectButton() {
 
-		ExtentTestManager.startTest("Reject Button Functionality");
+		ExtentTestManager.startTest("Reject Button Functionality").assignCategory("BondIssue");
 		Log.info("Verifying reject button functionality");
 
 	}
 
 	public void enterRejectionRemark() {
 
-		ExtentTestManager.startTest("Enter Rejection Remark");
+		ExtentTestManager.startTest("Enter Rejection Remark").assignCategory("BondIssue");
 		Log.info("Entering rejection remark");
 	}
 
 	public void selectTransactionModeCash() throws InterruptedException {
 
-		ExtentTestManager.startTest("Select Transaction Mode as Cash");
+		ExtentTestManager.startTest("Select Transaction Mode as Cash").assignCategory("BondIssue");
 		Log.info("Selecting transaction mode as Cash");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 -Open dropdown.");
@@ -498,7 +498,7 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void submitRejection() throws InterruptedException {
-		ExtentTestManager.startTest("Submit Rejection (Cash Mode)");
+		ExtentTestManager.startTest("Submit Rejection (Cash Mode)").assignCategory("BondIssue");
 		Log.info("Submitting rejection in cash mode");
 
 		click(Bondissue.clicksubmit);
@@ -514,21 +514,21 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void logoutOnceMore() {
-		ExtentTestManager.startTest("Logout After Cash Rejection");
+		ExtentTestManager.startTest("Logout After Cash Rejection").assignCategory("BondIssue");
 		Log.info("Logging out after cash rejection");
 
 	}
 
 	public void loginAsManagerForAuthorizationAgain() {
 
-		ExtentTestManager.startTest("Manager Login for Cash Rejection Authorization");
+		ExtentTestManager.startTest("Manager Login for Cash Rejection Authorization").assignCategory("BondIssue");
 		Log.info("Manager logging in to authorize cash rejection");
 
 	}
 
 	public void managerauthorisation() throws InterruptedException {
 
-		ExtentTestManager.startTest("Manager authorization");
+		ExtentTestManager.startTest("Manager authorization").assignCategory("BondIssue");
 		Log.info("Manager authorization");
 
 		// click(FDintrest.clickonauth);
@@ -554,7 +554,7 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void logoutApplication1() throws InterruptedException {
-		ExtentTestManager.startTest("Logout in application");
+		ExtentTestManager.startTest("Logout in application").assignCategory("BondIssue");
 		Log.info("Logged out from application.");
 
 		click(JewelClosure.close);
@@ -569,13 +569,13 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void managerAuthorizationRefresh() {
-		ExtentTestManager.startTest("Manager Authorization Refresh (Cash Rejection)");
+		ExtentTestManager.startTest("Manager Authorization Refresh (Cash Rejection)").assignCategory("BondIssue");
 		Log.info("Refreshing manager authorization list for cash rejection");
 
 	}
 
 	public void authorizeRejectedEntry() throws InterruptedException {
-		ExtentTestManager.startTest("Authorize Rejected Entry (Cash Mode)");
+		ExtentTestManager.startTest("Authorize Rejected Entry (Cash Mode)").assignCategory("BondIssue");
 		Log.info("Authorizing rejected entry submitted in cash mode");
 
 		click(Bondissue.clickcheckbox);
@@ -592,31 +592,31 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void logoutFinal() {
-		ExtentTestManager.startTest("Logout After Cash Rejection Authorization");
+		ExtentTestManager.startTest("Logout After Cash Rejection Authorization").assignCategory("BondIssue");
 		Log.info("Logging out after authorizing cash rejection");
 
 	}
 
 	public void loginApplicationThirdTime() {
-		ExtentTestManager.startTest("Login for Rejection - Transfer Mode");
+		ExtentTestManager.startTest("Login for Rejection - Transfer Mode").assignCategory("BondIssue");
 		Log.info("Logging in to perform rejection using transfer mode");
 
 	}
 
 	public void verifyBondIssuePageThirdTime() {
-		ExtentTestManager.startTest("Verify Bond Issue Page Again (Transfer Mode)");
+		ExtentTestManager.startTest("Verify Bond Issue Page Again (Transfer Mode)").assignCategory("BondIssue");
 		Log.info("Verifying bond issue page again for transfer mode");
 
 	}
 
 	public void searchWithBranchStatusProductAgain() {
-		ExtentTestManager.startTest("Search with Branch, Status and Product Again");
+		ExtentTestManager.startTest("Search with Branch, Status and Product Again").assignCategory("BondIssue");
 		Log.info("Searching again with selected branch, status and product");
 
 	}
 
 	public void clickRejectButtonAgain(Map<Object, Object> testdata, ITestContext contex) throws InterruptedException {
-		ExtentTestManager.startTest("Reject Button Functionality (Transfer Mode)");
+		ExtentTestManager.startTest("Reject Button Functionality (Transfer Mode)").assignCategory("BondIssue");
 		Log.info("Verifying reject button functionality in transfer mode");
 
 		click(Bondissue.clickreject);
@@ -627,7 +627,7 @@ public class Bond_Issue extends Base_Class {
 		ExtentTestManager.getTest().log(Status.PASS, "Redirected to Reject page.");
 		Log.info("Redirected to Reject page.");
 
-		ExtentTestManager.startTest("Enter Rejection Remark (Transfer Mode)");
+		ExtentTestManager.startTest("Enter Rejection Remark (Transfer Mode)").assignCategory("BondIssue");
 		Log.info("Entering rejection remark for transfer mode");
 
 		String Reject = testdata.get("Reject").toString();
@@ -641,11 +641,11 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void enterRejectionRemarkAgain() throws InterruptedException {
-		ExtentTestManager.startTest("Enter Rejection Remark (Transfer Mode)");
+		ExtentTestManager.startTest("Enter Rejection Remark (Transfer Mode)").assignCategory("BondIssue");
 		Log.info("Entering rejection remark for transfer mode");
 
 		Thread.sleep(10000);
-		ExtentTestManager.startTest("Submit Rejection");
+		ExtentTestManager.startTest("Submit Rejection").assignCategory("BondIssue");
 		Log.info("Submit Rejection");
 
 		click(Bondissue.clicksubmit);
@@ -660,7 +660,7 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void selectTransactionModeTransfer() throws InterruptedException {
-		ExtentTestManager.startTest("Select Transaction Mode as Transfer");
+		ExtentTestManager.startTest("Select Transaction Mode as Transfer").assignCategory("BondIssue");
 		Log.info("Selecting transaction mode as Transfer");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 -Open dropdown.");
@@ -677,7 +677,7 @@ public class Bond_Issue extends Base_Class {
 
 	public void verifyPostCreditButtonFunctionality(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
-		ExtentTestManager.startTest("Post Credit Button Functionality");
+		ExtentTestManager.startTest("Post Credit Button Functionality").assignCategory("BondIssue");
 		Log.info("Verifying post credit button functionality");
 
 		click(Bondissue.Postdebit);
@@ -689,7 +689,7 @@ public class Bond_Issue extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Search Account Number");
+		ExtentTestManager.startTest("Search Account Number").assignCategory("BondIssue");
 		Log.info("Searched for Account Number");
 
 		mainWindowHandle = driver.getWindowHandle();
@@ -711,7 +711,7 @@ public class Bond_Issue extends Base_Class {
 		Log.info("Expected Result:GL code will be autoloads while selecting the GL Name");
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Add button functionality");
+		ExtentTestManager.startTest("Add button functionality").assignCategory("BondIssue");
 		Log.info("Add button functionality");
 
 		click(Bondissue.clickonglname);
@@ -736,7 +736,7 @@ public class Bond_Issue extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Add Transaction Amount");
+		ExtentTestManager.startTest("Add Transaction Amount").assignCategory("BondIssue");
 		Log.info("Transaction Amount Added");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Enter amount.");
@@ -752,7 +752,7 @@ public class Bond_Issue extends Base_Class {
 
 		ExtentTestManager.endTest();
 
-		ExtentTestManager.startTest("Submit button functionality");
+		ExtentTestManager.startTest("Submit button functionality").assignCategory("BondIssue");
 		Log.info("Submit button functionality");
 
 		click(Bondissue.clickonsubmitt);
@@ -769,7 +769,7 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void selectGLName() {
-		ExtentTestManager.startTest("GL Name Selection");
+		ExtentTestManager.startTest("GL Name Selection").assignCategory("BondIssue");
 		Log.info("Selecting GL name");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 -  Click Post Credit button.");
@@ -781,13 +781,13 @@ public class Bond_Issue extends Base_Class {
 	}
 
 	public void clickAddButton() {
-		ExtentTestManager.startTest("Add Button Functionality");
+		ExtentTestManager.startTest("Add Button Functionality").assignCategory("BondIssue");
 		Log.info("Verifying add button functionality");
 
 	}
 
 	public void clickSubmitButton() throws InterruptedException {
-		ExtentTestManager.startTest("Submit Button Functionality");
+		ExtentTestManager.startTest("Submit Button Functionality").assignCategory("BondIssue");
 		Log.info("Verifying submit button functionality");
 
 		click(Bondissue.clickonsubmut);
@@ -815,14 +815,14 @@ public class Bond_Issue extends Base_Class {
 
 	public void loginAsManagerForFinalAuthorization() {
 
-		ExtentTestManager.startTest("Manager Login for Transfer Rejection Authorization");
+		ExtentTestManager.startTest("Manager Login for Transfer Rejection Authorization").assignCategory("BondIssue");
 		Log.info("Manager logging in to authorize transfer rejection");
 
 	}
 
 	public void managerAuthorizationRefreshFinal1() throws InterruptedException {
 
-		ExtentTestManager.startTest("Manager Authorization Refresh (Transfer Rejection)");
+		ExtentTestManager.startTest("Manager Authorization Refresh (Transfer Rejection)").assignCategory("BondIssue");
 		Log.info("Refreshing manager authorization list for transfer rejection");
 
 		// click(FDintrest.clickonauth);
@@ -849,9 +849,10 @@ public class Bond_Issue extends Base_Class {
 
 	public void managerAuthorizationRefreshFinal() throws InterruptedException {
 
-		ExtentTestManager.startTest("Manager Authorization Refresh (Transfer Rejection)");
+		ExtentTestManager.startTest("Manager Authorization Refresh (Transfer Rejection)").assignCategory("BondIssue");
 		Log.info("Refreshing manager authorization list for transfer rejection");
 
+		ScrollUntilElementVisible(FDintrest.clickonauth);
 		click(FDintrest.clickonauth);
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click the authoirze & Cancel module from the taskbar ");
@@ -876,7 +877,7 @@ public class Bond_Issue extends Base_Class {
 
 	public void authorizeRejectedEntryFinal() {
 
-		ExtentTestManager.startTest("Authorize Rejected Entry (Transfer Mode)");
+		ExtentTestManager.startTest("Authorize Rejected Entry (Transfer Mode)").assignCategory("BondIssue");
 		Log.info("Authorizing rejected entry submitted in transfer mode");
 
 	}

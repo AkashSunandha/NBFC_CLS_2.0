@@ -51,13 +51,13 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void transactionWindowAccess() throws InterruptedException {
 
-		ExtentTestManager.startTest("Transaction Window Access");
+		ExtentTestManager.startTest("Transaction Window Access").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Transaction Window Access started.");
 
+		ScrollUntilElementVisible(OLtrans.ClickTransaction);
 		click(OLtrans.ClickTransaction);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Navigate to Transaction Menu.");
 		Log.info("Step:01 - Navigate to Transaction Menu.");
-
 		click(OLtrans.clickTranswindow);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Select Transactions.");
 		Log.info("Step:02 - Select Transactions.");
@@ -70,7 +70,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void selectSuspenseAssetProductGroup() throws InterruptedException {
 
-		ExtentTestManager.startTest("Select Suspense Asset Product Group");
+		ExtentTestManager.startTest("Select Suspense Asset Product Group").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Selected Suspense Asset Product Group.");
 
 		select("Suspense Asset", OLtrans.productgroup);
@@ -87,7 +87,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void selectSuspenseAssetProductName() throws InterruptedException {
-		ExtentTestManager.startTest("Select Suspense Asset Product Name");
+		ExtentTestManager.startTest("Select Suspense Asset Product Name").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Selected Suspense Asset Product Name.");
 
 		select("SUSPENSE ASSET", OLtrans.productname);
@@ -105,7 +105,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public String generateUniqueCode(String query, String columnName) throws ClassNotFoundException {
 
-		ExtentTestManager.startTest("Enter  Account Number");
+		ExtentTestManager.startTest("Enter  Account Number").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Enter  Account Number");
 
 		{
@@ -140,7 +140,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void enterAccountNumber1() throws InterruptedException, ClassNotFoundException {
-		ExtentTestManager.startTest("Enter Account Number");
+		ExtentTestManager.startTest("Enter Account Number").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Entered Account Number.");
 
 		String valueAccNum = generateUniqueCode(sp, columnName);
@@ -156,7 +156,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void creditSelectionTest() throws InterruptedException {
-		ExtentTestManager.startTest("Credit Selection Test");
+		ExtentTestManager.startTest("Credit Selection Test").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Performed Credit Selection Test.");
 
 		select("Credit", OLtrans.selectcredit);
@@ -170,7 +170,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void goButtonFunctionalityTest() throws InterruptedException {
-		ExtentTestManager.startTest("Go Button Functionality Test");
+		ExtentTestManager.startTest("Go Button Functionality Test").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Tested Go Button Functionality.");
 
 		click(OLtrans.clickGoo);
@@ -185,7 +185,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void enterValidTransactionAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
-		ExtentTestManager.startTest("Enter Valid Transaction Amount");
+		ExtentTestManager.startTest("Enter Valid Transaction Amount").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Entered Valid Transaction Amount.");
 
 		click(OLtrans.transamount);
@@ -204,7 +204,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void selectTransmodeCash() throws InterruptedException {
-		ExtentTestManager.startTest("Selection of Transmode CASH");
+		ExtentTestManager.startTest("Selection of Transmode CASH").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Selected Transmode as CASH.");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:1 - Open Transmode Dropdown.");
@@ -224,25 +224,26 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void submitButtonNavigation() throws InterruptedException {
-		ExtentTestManager.startTest("Submit Button Navigation");
+		ExtentTestManager.startTest("Submit Button Navigation").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Tested Submit Button Navigation.");
 
 		click(OLtrans.submittrans);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:1- Click Submit Button.");
 		Log.info("Step:1 - Click Submit Button.");
 		
-		AcceptAlert();
+		/*AcceptAlert();
 
 		ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User navigates to summary page");
 		Log.info("Expected Result: User navigates to summary page");
-		ExtentTestManager.endTest();
+		ExtentTestManager.endTest();*/
+		Thread.sleep(10000);
 
 		transId = driver.findElement(Suspenseasset.transIDD).getText();
 
 	}
 
 	public void printButtonTest() throws InterruptedException {
-		ExtentTestManager.startTest("Print Button Test");
+		ExtentTestManager.startTest("Print Button Test").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Tested Print Button.");
 
 		click(Suspenseasset.Clickonprint);
@@ -286,7 +287,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void logoutApplication1() throws InterruptedException {
-		ExtentTestManager.startTest("Logout in application");
+		ExtentTestManager.startTest("Logout in application").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Logged out from application.");
         
 		//click(JewelClosure.close);
@@ -306,7 +307,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 // LOGIN WITH DIFFERENMT USER
 
 	public void loginWithDifferentUser11() {
-		ExtentTestManager.startTest("Login with different user");
+		ExtentTestManager.startTest("Login with different user").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Login with different user");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step: 01 - Entered valid username , clicked Login.");
@@ -323,7 +324,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void userLoggedIncashier() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		ScrollUntilElementVisible(JewelClosure.authandcancel);
@@ -342,7 +343,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void userLoggedInrefresh() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.clickrefresh);
@@ -361,7 +362,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void userLoggedIncheckbox() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkbox);
@@ -378,7 +379,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void userOnCashierAuthorisationWindow() throws InterruptedException {
 
-		ExtentTestManager.startTest("userOnCashierAuthorisationWindow");
+		ExtentTestManager.startTest("userOnCashierAuthorisationWindow").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("userOnCashierAuthorisationWindow");
 
 		click(JewelClosure.clickauths);
@@ -393,7 +394,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void userLoggedInmanager() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 		click(JewelClosure.managertab);
 
@@ -408,7 +409,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void userLoggedIncash() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.cashtab);
@@ -424,7 +425,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void userLoggedInrefresh1() throws InterruptedException {
 
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.refreshtab);
@@ -443,7 +444,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void userLoggedInbox() throws InterruptedException {
-		ExtentTestManager.startTest("User is logged in");
+		ExtentTestManager.startTest("User is logged in").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("User is logged in");
 
 		click(JewelClosure.checkboxman);
@@ -463,7 +464,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	{
 
-		ExtentTestManager.startTest("Mangerauthorization");
+		ExtentTestManager.startTest("Mangerauthorization").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Mangerauthorization");
 
 		click(JewelClosure.clickauth);
@@ -480,7 +481,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void LoginvalidCredentials() {
 
-		ExtentTestManager.startTest("LoginCredentials");
+		ExtentTestManager.startTest("LoginCredentials").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Transaction Window Access started.");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 -  Navigate to login page.");
@@ -502,7 +503,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void reopenTransactionsWindow() throws InterruptedException {
-		ExtentTestManager.startTest("Reopen Transactions Window");
+		ExtentTestManager.startTest("Reopen Transactions Window").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Reopened Transactions Window");
 
 		click(OLtrans.clickTranswindow);
@@ -519,7 +520,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void selectProductGroup() throws InterruptedException {
-		ExtentTestManager.startTest("Select Product Group");
+		ExtentTestManager.startTest("Select Product Group").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Product Group Selected");
 		
 		select("Suspense Asset", OLtrans.productgroup);
@@ -536,7 +537,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void selectProductName() throws InterruptedException {
-		ExtentTestManager.startTest("Select Product Name");
+		ExtentTestManager.startTest("Select Product Name").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Product Name Selected");
 
 		select("SUSPENSE ASSET", OLtrans.productname);
@@ -558,7 +559,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 		String AccNum = valueAccNum.substring(valueAccNum.length() - 3);
 		input(OLtrans.transaccount, AccNum);
 
-		ExtentTestManager.startTest("Enter Account Number");
+		ExtentTestManager.startTest("Enter Account Number").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Entered Account Number");
 
 		ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Enter Valid Account Number in Account Number Field.");
@@ -572,7 +573,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void enterAccountNumber() throws InterruptedException {
 
-		ExtentTestManager.startTest("Select Product Group and Name");
+		ExtentTestManager.startTest("Select Product Group and Name").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Search Account number");
 
 		select("Demand Investment", JewelClosure.produgroup);
@@ -591,7 +592,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void selectCreditTransaction() throws InterruptedException {
-		ExtentTestManager.startTest("Select Credit Transaction");
+		ExtentTestManager.startTest("Select Credit Transaction").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Selected Credit Transaction");
 
 		select("Credit", OLtrans.selectcredit);
@@ -606,7 +607,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void enterTransactionAmount1() throws InterruptedException {
-		ExtentTestManager.startTest("Enter Transaction Amount");
+		ExtentTestManager.startTest("Enter Transaction Amount").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Transaction Amount Entered");
 
 		click(OLtrans.clickGoo);
@@ -621,7 +622,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void enterTransactionAmount2(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
-		ExtentTestManager.startTest("Enter Transaction Amount");
+		ExtentTestManager.startTest("Enter Transaction Amount").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Transaction Amount Entered");
 
 		click(OLtrans.transamount);
@@ -640,7 +641,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void transactionWithTransfer() throws InterruptedException {
-		ExtentTestManager.startTest("Transaction with Transfer");
+		ExtentTestManager.startTest("Transaction with Transfer").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Transaction with Transfer initiated");
 
 		select("TRANSFER", OLtrans.selectcash);
@@ -662,7 +663,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 	}
 
 	public void postDebitTransaction() throws InterruptedException {
-		ExtentTestManager.startTest("Post Debit Transaction");
+		ExtentTestManager.startTest("Post Debit Transaction").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Debit Transaction Posted");
 
 		click(OLtrans.Clickpostdeb);
@@ -677,7 +678,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 
 	public void searchAccountNumber(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException, IOException {
-		ExtentTestManager.startTest("Search Account Number");
+		ExtentTestManager.startTest("Search Account Number").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 		Log.info("Searched for Account Number");
 
 		 mainWindowHandle = driver.getWindowHandle();
@@ -710,7 +711,7 @@ public class SusAssetTransaction_Cash_Transfer extends Base_Class {
 public void selectAccountNumber(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
  
  
- ExtentTestManager.startTest("Select Account Number");
+ ExtentTestManager.startTest("Select Account Number").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
  Log.info("Account Number Selected");
  
  String AccountNumber = testdata.get("AccountNumber").toString();
@@ -733,7 +734,7 @@ public void selectAccountNumber(Map<Object, Object> testdata, ITestContext conte
 public void addTransactionAmount1() throws InterruptedException
 
 {
-	ExtentTestManager.startTest("Add Transaction Amount");
+	ExtentTestManager.startTest("Add Transaction Amount").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("Transaction Amount Added");
 
 	ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Enter amount.");
@@ -755,7 +756,7 @@ public void addTransactionAmount1() throws InterruptedException
 public void addTransactionAmount() throws InterruptedException {
 	
 	
-	ExtentTestManager.startTest("Add Transaction Amount");
+	ExtentTestManager.startTest("Add Transaction Amount").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("Transaction Amount Added");
 
 	click(JewelClosure.clickSubmit);
@@ -775,7 +776,7 @@ public void addTransactionAmount() throws InterruptedException {
 }
 
 public void submitTransactionWindow() throws InterruptedException {
-	ExtentTestManager.startTest("Submit in Transaction Window");
+	ExtentTestManager.startTest("Submit in Transaction Window").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("Submitted Transaction Window");
 
 
@@ -783,10 +784,12 @@ public void submitTransactionWindow() throws InterruptedException {
 	ExtentTestManager.getTest().log(Status.PASS, "Step: 1 - Click Submit button.");
 	Log.info("Step: 1 - Click Submit button.");
 
-	AcceptAlert();
+	/*AcceptAlert();
 	
 	ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User navigates to the summary page.");
-	Log.info("Expected Result: User navigates to the summary page.");
+	Log.info("Expected Result: User navigates to the summary page.");*/
+	
+	Thread.sleep(10000);
 	
 	transId = driver.findElement(Suspenseasset.transIDD).getText();
 
@@ -794,7 +797,7 @@ public void submitTransactionWindow() throws InterruptedException {
 }
 
 public void printVoucherAgain() {
-	ExtentTestManager.startTest("Print Voucher Again");
+	ExtentTestManager.startTest("Print Voucher Again").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("Voucher Reprinted");
 
 	ExtentTestManager.getTest().log(Status.PASS, "Step: 1- Click Print button.");
@@ -808,7 +811,7 @@ public void printVoucherAgain() {
 
 public void logoutApplication() throws InterruptedException {
 	
-	ExtentTestManager.startTest("Logout in application");
+	ExtentTestManager.startTest("Logout in application").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("Logged out from application.");
     
 	click(JewelClosure.close);
@@ -827,7 +830,7 @@ public void logoutApplication() throws InterruptedException {
 
 public void logoutApplication3() throws InterruptedException {
 	
-	ExtentTestManager.startTest("Logout in application");
+	ExtentTestManager.startTest("Logout in application").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("Logged out from application.");
     
 	click(JewelClosure.close);
@@ -846,7 +849,7 @@ driver.close();
 // LOGIN ANOTHER USER
 
 public void loginWithDifferentUser() {
-	ExtentTestManager.startTest("Login with different user");
+	ExtentTestManager.startTest("Login with different user").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("Login with different user");
 
 	ExtentTestManager.getTest().log(Status.PASS, "Step: 01 - Entered valid username , clicked Login.");
@@ -862,7 +865,7 @@ public void loginWithDifferentUser() {
 }
 
 public void UserLoggedInsub() throws InterruptedException {
-	ExtentTestManager.startTest("User is Logged In");
+	ExtentTestManager.startTest("User is Logged In").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("User successfully logged in");
 	
 	click(JewelClosure.managertab);
@@ -879,7 +882,7 @@ public void UserLoggedInsub() throws InterruptedException {
 }
 
 public void UserLoggedIntransfer() throws InterruptedException {
-	ExtentTestManager.startTest("User is Logged In");
+	ExtentTestManager.startTest("User is Logged In").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("User successfully logged in");
 
 	click(JewelClosure.Transfertab);
@@ -893,7 +896,7 @@ public void UserLoggedIntransfer() throws InterruptedException {
 }
 
 public void UserLoggedInrefresh() {
-	ExtentTestManager.startTest("User is Logged In");
+	ExtentTestManager.startTest("User is Logged In").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("User successfully logged in");
 
 	ExtentTestManager.getTest().log(Status.PASS, "Step: 1 -1.Click the Refresh tab ");
@@ -907,7 +910,7 @@ public void UserLoggedInrefresh() {
 }
 
 public void UserLoggedInCheckbx1() throws InterruptedException {
-	ExtentTestManager.startTest("User is Logged In");
+	ExtentTestManager.startTest("User is Logged In").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("User successfully logged in");
 
 	click(Suspenseasset.checkboxman);
@@ -924,7 +927,7 @@ public void UserLoggedInCheckbx1() throws InterruptedException {
 }
 
 public void managerAuthorization() {
-	ExtentTestManager.startTest("ManagerAuthorization");
+	ExtentTestManager.startTest("ManagerAuthorization").assignCategory("SuspenseAssetTransaction-Cash&Transfer");
 	Log.info("User is on Manager Authorization window");
 
 	ExtentTestManager.getTest().log(Status.PASS, "Step: 1 -Click Authorise button ");

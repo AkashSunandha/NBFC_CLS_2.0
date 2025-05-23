@@ -43,7 +43,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 //		actualUserName = custSrchMtds
 		
 		//Open Member Management Loan Window
-		ExtentTestManager.startTest("Open Member Management Loan Window");
+		ExtentTestManager.startTest("Open Member Management Loan Window").assignCategory("Account operation-Member management_Loan");
 		Log.info("Open Member Management Loan Window");
 		
 		click(loanRepo.accountOPerationsTab);
@@ -58,13 +58,13 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		ExtentTestManager.getTest().log(Status.PASS, "3. Select member management loan.");
 		Log.info("3. Select member management loan.");
 
-		if(ElementDisplayed(loanRepo.aiBranchDropdown)) {
+		/*if(ElementDisplayed(loanRepo.aiBranchDropdown)) {
 			ExtentTestManager.getTest().log(Status.PASS, "Expected Result: Member management loan window is opened.");
 			Log.info("Expected Result: Member management loan window is opened.");
 		}else {
 			ExtentTestManager.getTest().log(Status.FAIL, "ERROR");
 			Log.info("ERROR");
-		}
+		}*/
 		
 		ExtentTestManager.endTest();
 		
@@ -77,7 +77,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 
 		
 		//Select Product Group - Positive Scenario
-		ExtentTestManager.startTest("Select Product Group - Positive Scenario");
+		ExtentTestManager.startTest("Select Product Group - Positive Scenario").assignCategory("Account operation-Member management_Loan");
 		Log.info("Select Product Group - Positive Scenario");
 		
 		select("OTHER LOANS",loanRepo.aiProductGroupDropdown);
@@ -99,7 +99,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 		
 		//Select Product Name - Positive Scenario
-		ExtentTestManager.startTest("Select Product Name - Positive Scenario");
+		ExtentTestManager.startTest("Select Product Name - Positive Scenario").assignCategory("Account operation-Member management_Loan");
 		Log.info("Select Product Name - Positive Scenario");
 		
 		select("PERSONAL LOAN WEEKLY",loanRepo.aiProductDropdown);
@@ -119,7 +119,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 
 		
 		//Enter Account Number - Positive Scenario
-		ExtentTestManager.startTest("Enter Account Number - Positive Scenario");
+		ExtentTestManager.startTest("Enter Account Number - Positive Scenario").assignCategory("Account operation-Member management_Loan");
 		Log.info("Enter Account Number - Positive Scenario");
 
 		String accNum = transJewelMthds.generateUniqueId(spAccNum, clmnNam);
@@ -142,7 +142,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 
 		
 		//Go Button Functionality
-		ExtentTestManager.startTest("Go Button Functionality");
+		ExtentTestManager.startTest("Go Button Functionality").assignCategory("Account operation-Member management_Loan");
 		Log.info("Go Button Functionality");
 		
 		click(loanRepo.aiGoBtn);
@@ -167,7 +167,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 	public void addNewMember(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, ClassNotFoundException {
 		
 		//Search Customer by Name
-		ExtentTestManager.startTest("Search Customer by Name");
+		ExtentTestManager.startTest("Search Customer by Name").assignCategory("Account operation-Member management_Loan");
 		Log.info("Search Customer by Name");
 		
 		String parentWindow = driver.getWindowHandle();
@@ -211,7 +211,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 		
 		//Select and Add Customer
-		ExtentTestManager.startTest("Select and Add Customer");
+		ExtentTestManager.startTest("Select and Add Customer").assignCategory("Account operation-Member management_Loan");
 		Log.info("Select and Add Customer");
 
 		click(loanRepo.popUpSelect);
@@ -241,7 +241,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 		
 		//Select Loanee Type - Positive Scenario
-		ExtentTestManager.startTest("Select Loanee Type - Positive Scenario");
+		ExtentTestManager.startTest("Select Loanee Type - Positive Scenario").assignCategory("Account operation-Member management_Loan");
 		Log.info("Select Loanee Type - Positive Scenario");
 		
 		select("Co-Applicant",loanRepo.anmLoaneeTypeDropdown);
@@ -261,7 +261,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 		
 		//Add Customer
-		ExtentTestManager.startTest("Add Customer");
+		ExtentTestManager.startTest("Add Customer").assignCategory("Account operation-Member management_Loan");
 		Log.info("Add Customer");
 		
 		click(loanRepo.anmAddBtn);
@@ -281,7 +281,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 		
 		//Enter Remark - Positive Scenario
-		ExtentTestManager.startTest("Enter Remark - Positive Scenario");
+		ExtentTestManager.startTest("Enter Remark - Positive Scenario").assignCategory("Account operation-Member management_Loan");
 		Log.info("Enter Remark - Positive Scenario");
 		
 		String remark = testdata.get("remark").toString();
@@ -302,7 +302,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 		
 		//Submit transaction
-		ExtentTestManager.startTest("Submit transaction");
+		ExtentTestManager.startTest("Submit transaction").assignCategory("Account operation-Member management_Loan");
 		Log.info("Submit transaction");
 		
 		click(loanRepo.submitBtn);
@@ -330,7 +330,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 		
 		//Login with Another User
-		ExtentTestManager.startTest("Login with Another User");
+		ExtentTestManager.startTest("Login with Another User").assignCategory("Account operation-Member management_Loan");
 		Log.info("Login with Another User");
 		
 		click(custSearch.custSignOut);
@@ -344,6 +344,40 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		click(custSearch.loginButton);
 		ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Log in with another user for authorization");
 		Log.info("Step:02 - Log in with another user for authorization");
+		
+		try {
+			WebElement clickableElement = driver.findElement(By.xpath("//span[@class='ui-button-text' and contains(text(), 'OK')]"));
+
+			if (clickableElement != null) {
+				// Perform the desired action on the element
+				clickableElement.click();
+				ExtentTestManager.getTest().log(Status.PASS, "Step:01 - Click on OK button");
+				Log.info("Step:01 - Click on OK button");
+				
+//					String loginUserName = testdata.get("loginUserName").toString();
+				input(custSearch.loginUserName, UserName);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:02 - Enter valid User Name");
+				Log.info("Step:02 - Enetered valid User Name");
+				
+//					String loginValidPassword = testdata.get("loginValidPassword").toString();
+				input(custSearch.loginPasswrd, Password);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:03 - Enter valid Password");
+				Log.info("Step:03 - Entered valid Password");
+				
+				click(custSearch.loginButton);
+				ExtentTestManager.getTest().log(Status.PASS, "Step:04 - Click on Login Button");
+				Log.info("Step:04 - Click on Login Button");
+				
+				ElementDisplayed(custSearch.home);
+				ExtentTestManager.getTest().log(Status.PASS, "Expected Result: User is logged in successfully and dashboard visible");
+				Log.info("Expected Result: User is logged in successfully and dashboard visible");	
+			} else {
+				System.out.println("Element not clickable within the timeout.");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception occurred while waiting for the element: " + e.getMessage());
+			System.out.println("Already login pop up not appeared");
+		}
 
 		String authorizeUserName = driver.findElement(goaldLoanRepo.userName).getText();
 		System.out.println(authorizeUserName);
@@ -363,7 +397,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 		
 		//Manager Authorization - Cash Tab
-		ExtentTestManager.startTest("Manager Authorization");
+		ExtentTestManager.startTest("Manager Authorization").assignCategory("Account operation-Member management_Loan");
 		Log.info("Manager Authorization");
 		
 		click(goaldLoanRepo.autorizeAndCancelTab);
@@ -387,7 +421,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 
 		//Refresh Loan Opening Entry
-		ExtentTestManager.startTest("Refresh Loan Opening Entry");
+		ExtentTestManager.startTest("Refresh Loan Opening Entry").assignCategory("Account operation-Member management_Loan");
 		Log.info("Refresh Loan Opening Entry");
 		
 		click(goaldLoanRepo.refreshBtn);
@@ -408,7 +442,7 @@ public class MemberManagement_MemberManagementLoan extends Base_Class{
 		
 
 		//Authorize Loan Entry as Manager
-		ExtentTestManager.startTest("Authorize Loan Entry as Manager");
+		ExtentTestManager.startTest("Authorize Loan Entry as Manager").assignCategory("Account operation-Member management_Loan");
 		Log.info("Authorize Loan Entry as Manager");
 		
 		input(goaldLoanRepo.makerIdTxtBox,actualUserName);

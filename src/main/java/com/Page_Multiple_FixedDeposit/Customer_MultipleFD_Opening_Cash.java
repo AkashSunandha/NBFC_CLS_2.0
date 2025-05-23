@@ -44,7 +44,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean userLoginValidPaswrd(Map<Object, Object> testdata, ITestContext context)
 			throws ClassNotFoundException, InterruptedException, IOException {
-		ExtentTestManager.startTest("TC:01 - Login to NBFC Application");
+		ExtentTestManager.startTest("TC:01 - Login to NBFC Application").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC_01 - Login to NBFC Application");
 
 		// String loginUserName = testdata.get("loginUserName").toString();
@@ -109,7 +109,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	}
 
 	public boolean DepositOpeningWindow() throws InterruptedException {
-		ExtentTestManager.startTest("TC:02 - Access to Deposit Opening Window");
+		ExtentTestManager.startTest("TC:02 - Access to Deposit Opening Window").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:02 - Access to Deposit Opening Window");
 
 		try {
@@ -144,7 +144,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	public boolean customerSearchandSelectionWindow(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:03 - Customer Search and Selection");
+		ExtentTestManager.startTest("TC:03 - Customer Search and Selection").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:03 - Customer Search and Selection");
 
 		click(multifd.custSrch);
@@ -196,7 +196,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean EnterAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:04 - Enter Amount");
+		ExtentTestManager.startTest("TC:04 - Enter Amount").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:04 - Enter Amount");
 
 		click(multifd.Amount);
@@ -221,7 +221,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean EnterValidDuration(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:05 - Enter Valid Duration");
+		ExtentTestManager.startTest("TC:05 - Enter Valid Duration").assignCategory("MultiplFDOPening-Cash").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:05 - Enter Valid Duration");
 
 		String ValidDuration = testdata.get("Duration").toString();
@@ -251,7 +251,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	}
 
 	public boolean SelectReferral() throws InterruptedException {
-		ExtentTestManager.startTest("TC:06 - Select Referral");
+		ExtentTestManager.startTest("TC:06 - Select Referral").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:06 - Select Referral");
 
 		if (ElementDisplayed(multifd.ReferedBy)) {
@@ -275,7 +275,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean ROIandDueDateCalculation() throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:07 - ROI and Due Date Calculation");
+		ExtentTestManager.startTest("TC:07 - ROI and Due Date Calculation").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:07 - ROI and Due Date Calculation");
 
 		boolean isClicked = false;
@@ -305,7 +305,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean LedgerandFolioNo(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:08 - Ledger & Folio Number Entry");
+		ExtentTestManager.startTest("TC:08 - Ledger & Folio Number Entry").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:08 - Ledger & Folio Number Entry");
 
 		click(multifd.LedgerNum);
@@ -331,7 +331,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean Remark(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:09 - Remark Field Entry");
+		ExtentTestManager.startTest("TC:09 - Remark Field Entry").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:09 - Remark Field Entry");
 
 		click(multifd.Remark);
@@ -353,7 +353,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean clickLienMarkCheckbox() throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:10 - Lien Mark Interaction");
+		ExtentTestManager.startTest("TC:10 - Lien Mark Interaction").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:10 - Lien Mark Interaction");
 
 		try {
@@ -387,7 +387,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean EnterLienAmount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:11 - Lien Mark Interaction");
+		ExtentTestManager.startTest("TC:11 - Lien Mark Interaction").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:11 - Lien Mark Interaction");
 
 		click(multifd.LienAmount);
@@ -413,7 +413,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean EnterLienRemark(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:12 - Lien Mark Interaction");
+		ExtentTestManager.startTest("TC:12 - Lien Mark Interaction").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:12 - Lien Mark Interaction");
 
 		click(multifd.LienRemark);
@@ -435,7 +435,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean NextButtonNavigation() throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:13 - Next Button Navigation");
+		ExtentTestManager.startTest("TC:13 - Next Button Navigation").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:13 - Next Button Navigation");
 
 		WebElement nextButton = driver.findElement(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_btnNext']"));
@@ -462,7 +462,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean NomineeCheckbox() throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:14 - Nominee Tab Display");
+		ExtentTestManager.startTest("TC:14 - Nominee Tab Display").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:14 - Nominee Tab Display");
 
 		try {
@@ -499,7 +499,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean EnterCustomerID() throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:15 - Enter customer ID in customer");
+		ExtentTestManager.startTest("TC:15 - Enter customer ID in customer").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:15 - Enter customer ID in customer");
 
 			click(multifd.SearchIcon);
@@ -531,7 +531,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 
 	public boolean CustomerID(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-			ExtentTestManager.startTest("TC:16 - Enter customer ID in customer");
+			ExtentTestManager.startTest("TC:16 - Enter customer ID in customer").assignCategory("MultiplFDOPening-Cash");
 			Log.info("TC:16 - Enter customer ID in customer");
 
 			click(multifd.SearchIcon);
@@ -575,7 +575,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	public boolean CustomerNomineeSearch(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:17 - Customer Nominee Search");
+		ExtentTestManager.startTest("TC:17 - Customer Nominee Search").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:17 - Customer Nominee Search");
 
 			click(multifd.SearchIcon);
@@ -617,7 +617,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	public boolean MandatoryNameField(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
 		
-		ExtentTestManager.startTest("TC:18 - Mandatory 'Name' Field Validation in Nominee");
+		ExtentTestManager.startTest("TC:18 - Mandatory 'Name' Field Validation in Nominee").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:18 - Mandatory 'Name' Field Validation in Nominee");
 		
 		WebElement NameField = driver.findElement(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomName_txt']"));
@@ -638,7 +638,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	
 	public boolean RelationDropDown() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:19 - Relation Dropdown List Validation");
+		ExtentTestManager.startTest("TC:19 - Relation Dropdown List Validation").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:19 - Relation Dropdown List Validation");
 		
 		if (ElementDisplayed(multifd.RelationDropdown)) {
@@ -665,7 +665,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	
 	public boolean MobileNumberAutoFilled() throws InterruptedException {
 		
-		ExtentTestManager.startTest("TC:20 - Mobile No Auto-fill in Nominee");
+		ExtentTestManager.startTest("TC:20 - Mobile No Auto-fill in Nominee").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:20 - Mobile No Auto-fill in Nominee");
 		
 		WebElement MobileField = driver.findElement(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomMobileNo_txt']"));
@@ -686,7 +686,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	
 	public boolean AddressAutofilled()throws InterruptedException {
 		
-		ExtentTestManager.startTest("TC:21 - Address Auto-fill in Nominee");
+		ExtentTestManager.startTest("TC:21 - Address Auto-fill in Nominee").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:21 - Address Auto-fill in Nominee");
 		
 		WebElement HouseName = driver.findElement(By.xpath("//input[@id ='ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_txtNomHouseName_txt']"));
@@ -719,7 +719,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	
 	public boolean DOBandAgeField() throws InterruptedException {
 			
-		ExtentTestManager.startTest("TC:22 - Date of Birth Details in Nominee");
+		ExtentTestManager.startTest("TC:22 - Date of Birth Details in Nominee").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:22 - Date of Birth Details in Nominee");
 			
 		WebElement DOB = driver.findElement(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpNominee_NF1_dtDOB_txt']"));
@@ -743,7 +743,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	
 	public boolean AddNomineeBtn() throws InterruptedException {
 		
-		ExtentTestManager.startTest("TC:23 - Add Nominee Details");
+		ExtentTestManager.startTest("TC:23 - Add Nominee Details").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:23 - Add Nominee Details");
 		
 		if(ElementDisplayed(multifd.AddNomineeBtn)) {
@@ -768,7 +768,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 		
 	public boolean OperatorTabNavigation () throws InterruptedException {
 		
-		ExtentTestManager.startTest("TC:24 - Operator Tab Navigation");
+		ExtentTestManager.startTest("TC:24 - Operator Tab Navigation").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:24 - Operator Tab Navigation");
 		
 		if(ElementDisplayed(multifd.NextButton)) {
@@ -793,7 +793,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	
 	public boolean OperatorCustomerID() throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:25 - Operator Search and Selection");
+		ExtentTestManager.startTest("TC:25 - Operator Search and Selection").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:25 - Operator Search and Selection");
 
 			click(multifd.OperatorSearchIcon);
@@ -828,7 +828,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	
 	public boolean OperatorCustomerIDSearch(Map<Object, Object> testdata, ITestContext context) throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:26 - Enter customer ID in customer");
+		ExtentTestManager.startTest("TC:26 - Enter customer ID in customer").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:26 - Enter customer ID in customer");
 
 			click(multifd.OperatorSearchIcon);
@@ -872,7 +872,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	public boolean OperatorCustomerIDSelection(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:27 - Customer Nominee Search");
+		ExtentTestManager.startTest("TC:27 - Customer Nominee Search").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:27 - Customer Nominee Search");
 		
 			click(multifd.OperatorSearchIcon);
@@ -915,7 +915,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	public boolean OperatorRelationDesig(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:28 - Operator Relation Entry");
+		ExtentTestManager.startTest("TC:28 - Operator Relation Entry").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:28 - Operator Relation Entry");
 				
 			click(multifd.RelationDesig);
@@ -939,7 +939,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	public boolean OperatorRemarkEntry(Map<Object, Object> testdata, ITestContext context)
 			throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:29 - Operator Remark Entry");
+		ExtentTestManager.startTest("TC:29 - Operator Remark Entry").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:29 - Operator Remark Entry");
 				
 			click(multifd.OperatorRemark);
@@ -961,7 +961,7 @@ public class Customer_MultipleFD_Opening_Cash extends Base_Class {
 	
 public boolean AddOperatorBtn() throws InterruptedException {
 		
-		ExtentTestManager.startTest("TC:30 - Operator Details Addition");
+		ExtentTestManager.startTest("TC:30 - Operator Details Addition").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:30 - Operator Details Addition");
 		
 		if(ElementDisplayed(multifd.OperatorAdd)) {
@@ -986,7 +986,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 		
 	public boolean InterestTransferTabPresence() throws InterruptedException {
 		
-		ExtentTestManager.startTest("TC:31 - Interest Transfer Tab Presence");
+		ExtentTestManager.startTest("TC:31 - Interest Transfer Tab Presence").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:31 - Interest Transfer Tab Presence");
 		
 		if(ElementDisplayed(multifd.OperatorNext)) {
@@ -1011,7 +1011,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 	
 	public boolean InterestTransferRequiredCheckbox() throws InterruptedException {
 
-		ExtentTestManager.startTest("TC:32 - Interest Transfer Requirements");
+		ExtentTestManager.startTest("TC:32 - Interest Transfer Requirements").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:32 - Interest Transfer Requirements");
 
 		try {
@@ -1051,7 +1051,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 	
 	public boolean ProductDropdown(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
-			ExtentTestManager.startTest("TC:33 - Interest Transfer Data Entry");
+			ExtentTestManager.startTest("TC:33 - Interest Transfer Data Entry").assignCategory("MultiplFDOPening-Cash");
 			Log.info("TC:33 - Interest Transfer Data Entry");
 		
 			if (ElementDisplayed(multifd.SelectProduct)) {
@@ -1097,7 +1097,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 
 	public boolean EnterFrequency(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-		ExtentTestManager.startTest("TC:34 - Interest Transfer Data Entry");
+		ExtentTestManager.startTest("TC:34 - Interest Transfer Data Entry").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:34 - Interest Transfer Data Entry");
 	
 			
@@ -1138,7 +1138,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 
 	public boolean OnMaturityTabNavigation() throws InterruptedException {
 	
-		ExtentTestManager.startTest("TC:35 - On Maturity Tab Navigation");
+		ExtentTestManager.startTest("TC:35 - On Maturity Tab Navigation").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:35 - On Maturity Tab Navigation");
 	
 		if(ElementDisplayed(multifd.IntrestNextButton)) {
@@ -1163,7 +1163,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 
 	public boolean MaturityActionSelection() throws InterruptedException {
 	
-		ExtentTestManager.startTest("TC:36 - Maturity Action Selection");
+		ExtentTestManager.startTest("TC:36 - Maturity Action Selection").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:36 - Maturity Action Selection");
 	
 		WebElement KeepSameAccountCheckbox = driver.findElement(By.xpath("//input[@id = 'ctl00_ctl00_CPH1_PRDCNT_TC1_tpAutoRenewal_MATFM_rdbSameAccount']"));
@@ -1192,7 +1192,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 
 	public boolean MultipleAccountCheckbox() throws InterruptedException {
 	
-		ExtentTestManager.startTest("TC:37 - Multiple Account Checkbox");
+		ExtentTestManager.startTest("TC:37 - Multiple Account Checkbox").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:37 - Multiple Account Checkbox");
 	
 		WebElement MultipleAccountCheckbox = driver.findElement(By.xpath("//input[@id ='chkIsMultipleAc']"));
@@ -1222,7 +1222,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 
 	public boolean IsMultipleAccount(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-		ExtentTestManager.startTest("TC:38 - Multiple Account Checkbox");
+		ExtentTestManager.startTest("TC:38 - Multiple Account Checkbox").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:38 - Multiple Account Checkbox");
 	
 	
@@ -1255,7 +1255,7 @@ public boolean AddOperatorBtn() throws InterruptedException {
 
 public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 	
-	ExtentTestManager.startTest("TC:39 - Final Deposit Configuration");
+	ExtentTestManager.startTest("TC:39 - Final Deposit Configuration").assignCategory("MultiplFDOPening-Cash");
 	Log.info("TC:39 - Final Deposit Configuration");
 	
 	WebElement TransMode = driver.findElement(multifd.MutipleAccountText);
@@ -1306,10 +1306,10 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 
 	public boolean CashierAuthorization(Map<Object, Object> testdata, ITestContext context) throws InterruptedException, IOException{
 	
-	ExtentTestManager.startTest("TC:40 - Cashier Authorization");
+	ExtentTestManager.startTest("TC:40 - Cashier Authorization").assignCategory("MultiplFDOPening-Cash");
 	Log.info("TC:40 - Cashier Authorization");
 	
-	ExtentTestManager.startTest("Logout");
+	ExtentTestManager.startTest("Logout").assignCategory("MultiplFDOPening-Cash");
 	Log.info("Logout");
 	
 	Thread.sleep(2000);
@@ -1363,7 +1363,7 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 
 	public boolean CashierAuthorizationRefresh() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:41 - Cashier Authorization");
+		ExtentTestManager.startTest("TC:41 - Cashier Authorization").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:41 - Cashier Authorization");
 		
 		click(multifd.Refresh);
@@ -1383,7 +1383,7 @@ public boolean FinalDepositConfiguration(Map<Object, Object> testdata, ITestCont
 	
 public boolean CashierAuthorizationSelectCheckBox(Map<Object, Object> testdata, ITestContext context) throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:42 - Cashier Authorization");
+		ExtentTestManager.startTest("TC:42 - Cashier Authorization").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:42 - Cashier Authorization");
 		
 		System.out.println("transIdCashPersonal "+transIdCashPersonal);
@@ -1412,7 +1412,7 @@ public boolean CashierAuthorizationSelectCheckBox(Map<Object, Object> testdata, 
 
 	public boolean CashierAuthorizationAuthorize() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:43 - Cashier Authorization");
+		ExtentTestManager.startTest("TC:43 - Cashier Authorization").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:43 - Cashier Authorization");
 		
 		if(ElementDisplayed(multifd.CashAuthorizeBtn)) {
@@ -1435,7 +1435,7 @@ public boolean CashierAuthorizationSelectCheckBox(Map<Object, Object> testdata, 
 	
 	public boolean ManagerAuthorization() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:44 - Manager Authorization");
+		ExtentTestManager.startTest("TC:44 - Manager Authorization").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:44 - Manager Authorization");
 		
 		WebElement ManagerCashMode = driver.findElement(multifd.ManagerAuthorization);
@@ -1459,7 +1459,7 @@ public boolean CashierAuthorizationSelectCheckBox(Map<Object, Object> testdata, 
 	
 	public boolean ManagerAuthorizationRefresh() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:45 - Manager Authorization");
+		ExtentTestManager.startTest("TC:45 - Manager Authorization").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:45 - Manager Authorization");
 		
 		click(multifd.Refresh);
@@ -1479,7 +1479,7 @@ public boolean CashierAuthorizationSelectCheckBox(Map<Object, Object> testdata, 
 	
 	public boolean ManagerAuthorizationSelectCheckBox() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:46 - Manager Authorization");
+		ExtentTestManager.startTest("TC:46 - Manager Authorization").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:46 - Manager Authorization");
 		
 		System.out.println("transIdCashPersonal "+transIdCashPersonal);
@@ -1511,7 +1511,7 @@ public boolean CashierAuthorizationSelectCheckBox(Map<Object, Object> testdata, 
 	
 	public boolean ManagerAuthorizationAuthorize() throws InterruptedException{
 		
-		ExtentTestManager.startTest("TC:47 - Manager Authorization");
+		ExtentTestManager.startTest("TC:47 - Manager Authorization").assignCategory("MultiplFDOPening-Cash");
 		Log.info("TC:47 - Manager Authorization");
 		
 		if(ElementDisplayed(multifd.ManagerAuthorizen)) {

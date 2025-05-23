@@ -41,23 +41,23 @@ public class PageRepositary_Cust_CustRegister {
 	public By custDetailGrid = By.xpath("//*[@id=\"tblCustList\"]");
 	
 	//Loan Grid Column Names
-	public By loanProdName = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'Product Name')]");
-	public By loanAcNum = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'A/C No')]");
-	public By loanNature = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'Nature')]");
-	public By loanStartDate = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'StartDate')]");
-	public By loanDueDate = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'DueDate')]");
-	public By loanDur = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'Dur')]");
-	public By loanBalance = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'Balance')]");
-	public By loanDueAmount = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'DueAmount')]");
-	public By loanClosedOn = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'ClosedOn')]");
-	public By loanRemarks = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'Remarks')]");
-	public By loanDI = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'D/I')]");
-	public By loanPS = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_Div1\"]//tr[@class='GridHeader']/td[contains(text(), 'P/S')]");
-	public By loanPendAmt = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_lstLiabilityInner_TdPendingAmount\"]");
-	public By loanPendDays = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_lstLiabilityInner_TdPendingDays\"]");
-	public By loanFineAmt = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_lstLiabilityInner_lblFineAmount\"]");
-	public By loanPendCharges = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl1_lstLiabilityInner_lblPendingCharges\"]");
-	public By loanAmount = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div/div[2]/div[4]/table/tbody/tr[4]/td/div/table/tbody/tr[1]/td[5]");
+	public By loanProdName = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'Product Name')]");
+	public By loanAcNum = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'A/C No')]");
+	public By loanNature = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'Nature')]");
+	public By loanStartDate = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'StartDate')]");
+	public By loanDueDate = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'DueDate')]");
+	public By loanDur = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'Dur')]");
+	public By loanBalance = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'Balance')]");
+	public By loanDueAmount = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'DueAmount')]");
+	public By loanClosedOn = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'ClosedOn')]");
+	public By loanRemarks = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'Remarks')]");
+	public By loanDI = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'D/I')]");
+	public By loanPS = By.xpath("//*[@id=\"tblLiabilityList\"]//tr[@class='GridHeader']/td[contains(text(), 'P/S')]");
+	public By loanPendAmt = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl0_lstLiabilityInner_lblPendingAmount\"]");
+	public By loanPendDays = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl0_lstLiabilityInner_lblPendingDays\"]");
+	public By loanFineAmt = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl0_lstLiabilityInner_lblFineAmount\"]");
+	public By loanPendCharges = By.xpath("//*[@id=\"ctl00_ctl00_CPH1_PRDCNT_LiabilityCustomerSearch1_lstLiability1_ctrl0_lstLiabilityInner_lblPendingCharges\"]");
+//	public By loanAmount = By.xpath("/html/body/form/div[7]/div[3]/div/div/div[2]/div/div/div[2]/div[4]/table/tbody/tr[4]/td/div/table/tbody/tr[1]/td[5]");
 
 	//Error Window
 	public By errMsg1 = By.xpath("//*[@id=\"ctl00_ctl00_lblErrorMessage\"]");
